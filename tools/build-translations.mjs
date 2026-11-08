@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const root = path.resolve('undo-web-developments');
-const domain = 'undo-web-developments';
+const root = path.resolve('undo-theme');
+const domain = 'undo-theme';
 const fa = {
   '% comments':'% دیدگاه',
   '%s%% of the earlier layout visible':'%s٪ از طرح قبلی دیده می‌شود',
@@ -190,7 +190,7 @@ const files = [];
 function walk(dir) { for (const name of fs.readdirSync(dir)) { const file = path.join(dir, name); if (fs.statSync(file).isDirectory()) walk(file); else if (file.endsWith('.php')) files.push(file); } }
 walk(root);
 const refs = new Map();
-const pattern = /(?:__|_e|esc_html__|esc_html_e|esc_attr__|esc_attr_e)\(\s*'([^']+)'\s*,\s*'undo-web-developments'/g;
+const pattern = /(?:__|_e|esc_html__|esc_html_e|esc_attr__|esc_attr_e)\(\s*'([^']+)'\s*,\s*'undo-theme'/g;
 for (const file of files) {
   const source = fs.readFileSync(file, 'utf8');
   for (const match of source.matchAll(pattern)) {
@@ -206,7 +206,7 @@ const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.2.1',
+  'Project-Id-Version: UNDO Web Developments 0.2.2',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

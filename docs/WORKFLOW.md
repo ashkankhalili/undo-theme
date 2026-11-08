@@ -20,13 +20,13 @@ Reference standards: [required classic theme files](https://developer.wordpress.
 
 ## Source and release boundaries
 
-Keep the theme source in a dedicated Git repository once created. The WordPress theme directory name and ZIP root must stay `undo-web-developments`. Do not include credentials, customer data, build caches, or source screenshots in release ZIPs. Keep theme version, package version, translation catalogs, and changelog synchronized.
+Keep the theme source in a dedicated Git repository once created. The WordPress theme directory name, text domain, and ZIP root must stay `undo-theme`. Do not include credentials, customer data, build caches, or source screenshots in release ZIPs. Keep theme version, package version, translation catalogs, and changelog synchronized.
 
 ## Work on a change
 
 1. Create a branch from the current main or release branch.
 2. Update PHP templates, assets, or settings. Escape all rendered values and sanitize every stored setting.
-3. Add any new English gettext literals to `languages/undo-web-developments.pot` and translate every string in `en_US.po` and `fa_IR.po`; regenerate MO files with `node tools/build-translations.mjs`.
+3. Add any new English gettext literals to `languages/undo-theme.pot` and translate every string in `en_US.po` and `fa_IR.po`; regenerate MO files with `node tools/build-translations.mjs`.
 4. Record the customer-visible change in `CHANGELOG.md`. Document migrations, changed defaults, and any compatibility impact.
 5. Test on WordPress staging in Persian and English: activation, homepage, a normal page and post, search/404, menus, every settings tab save/reload, sidebar widgets, keyboard and mobile navigation, RTL layout, brief download, and Elementor page editing. Verify that ordinary pages scroll naturally without jumping to the footer, while landing-page section navigation remains usable. With Elementor Pro, verify each Theme Builder location and the fallback when no template is assigned.
 6. Run PHP lint on every PHP file, WordPress Theme Check, and an accessibility/browser pass. Test supported WordPress and PHP versions. Do not claim live behavior from a package-only check.

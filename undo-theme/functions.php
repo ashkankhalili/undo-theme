@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.2.1' );
+define( 'UNDO_THEME_VERSION', '0.2.2' );
 require_once get_template_directory() . '/inc/settings.php';
 
 function undo_theme_setup() {
@@ -16,15 +16,15 @@ function undo_theme_setup() {
 add_action( 'after_setup_theme', 'undo_theme_setup' );
 
 function undo_register_menus() {
-    register_nav_menus( array( 'primary' => __( 'Primary menu', 'undo-web-developments' ), 'footer' => __( 'Footer menu', 'undo-web-developments' ) ) );
+    register_nav_menus( array( 'primary' => __( 'Primary menu', 'undo-theme' ), 'footer' => __( 'Footer menu', 'undo-theme' ) ) );
 }
 add_action( 'init', 'undo_register_menus', 2 );
 
 function undo_register_sidebars() {
     register_sidebar( array(
-        'name' => __( 'Primary sidebar', 'undo-web-developments' ),
+        'name' => __( 'Primary sidebar', 'undo-theme' ),
         'id' => 'primary-sidebar',
-        'description' => __( 'Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings.', 'undo-web-developments' ),
+        'description' => __( 'Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings.', 'undo-theme' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget' => '</section>',
         'before_title' => '<h2 class="widget-title">',
@@ -53,7 +53,7 @@ function undo_requested_language() {
 }
 
 function undo_boot_locale() {
-    load_theme_textdomain( 'undo-web-developments', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'undo-theme', get_template_directory() . '/languages' );
     if ( is_admin() || wp_doing_ajax() || wp_doing_cron() ) { return; }
     $language = undo_requested_language();
     if ( isset( $_GET['undo_lang'] ) && ! headers_sent() ) {
@@ -85,25 +85,25 @@ function undo_theme_assets() {
     wp_enqueue_script( 'undo-site', get_theme_file_uri( '/assets/js/theme.js' ), array(), UNDO_THEME_VERSION, true );
     wp_localize_script( 'undo-site', 'undoTheme', array(
         'language' => $language,
-        'menuOpen' => __( 'Open menu', 'undo-web-developments' ),
-        'menuClose' => __( 'Close menu', 'undo-web-developments' ),
-        'comparisonValue' => __( '%s%% of the earlier layout visible', 'undo-web-developments' ),
-        'briefTitle' => __( 'UNDO Web Developments — Project brief', 'undo-web-developments' ),
-        'project' => __( 'Project', 'undo-web-developments' ),
-        'service' => __( 'Service', 'undo-web-developments' ),
-        'startingPoint' => __( 'Starting point', 'undo-web-developments' ),
-        'goal' => __( 'Goal', 'undo-web-developments' ),
-        'untitled' => __( 'Untitled project', 'undo-web-developments' ),
-        'toDiscuss' => __( 'To be discussed', 'undo-web-developments' ),
-        'downloaded' => __( 'Your project brief has been downloaded.', 'undo-web-developments' ),
+        'menuOpen' => __( 'Open menu', 'undo-theme' ),
+        'menuClose' => __( 'Close menu', 'undo-theme' ),
+        'comparisonValue' => __( '%s%% of the earlier layout visible', 'undo-theme' ),
+        'briefTitle' => __( 'UNDO Web Developments — Project brief', 'undo-theme' ),
+        'project' => __( 'Project', 'undo-theme' ),
+        'service' => __( 'Service', 'undo-theme' ),
+        'startingPoint' => __( 'Starting point', 'undo-theme' ),
+        'goal' => __( 'Goal', 'undo-theme' ),
+        'untitled' => __( 'Untitled project', 'undo-theme' ),
+        'toDiscuss' => __( 'To be discussed', 'undo-theme' ),
+        'downloaded' => __( 'Your project brief has been downloaded.', 'undo-theme' ),
         'serviceLabels' => array(
-            'Website' => __( 'Website', 'undo-web-developments' ),
-            'WordPress plugin' => __( 'WordPress plugin', 'undo-web-developments' ),
-            'Mobile app' => __( 'Mobile app', 'undo-web-developments' ),
+            'Website' => __( 'Website', 'undo-theme' ),
+            'WordPress plugin' => __( 'WordPress plugin', 'undo-theme' ),
+            'Mobile app' => __( 'Mobile app', 'undo-theme' ),
         ),
         'stageLabels' => array(
-            'A new project' => __( 'Something new', 'undo-web-developments' ),
-            'A redesign' => __( 'A redesign', 'undo-web-developments' ),
+            'A new project' => __( 'Something new', 'undo-theme' ),
+            'A redesign' => __( 'A redesign', 'undo-theme' ),
         ),
     ) );
     $accent = undo_setting( 'accent_color' );
@@ -119,9 +119,9 @@ add_action( 'elementor/theme/register_locations', 'undo_register_elementor_locat
 
 function undo_nav_fallback( $args ) {
     $items = array(
-        __( 'Services', 'undo-web-developments' ) => '#services',
-        __( 'Approach', 'undo-web-developments' ) => '#approach',
-        __( 'Project planner', 'undo-web-developments' ) => '#project-planner',
+        __( 'Services', 'undo-theme' ) => '#services',
+        __( 'Approach', 'undo-theme' ) => '#approach',
+        __( 'Project planner', 'undo-theme' ) => '#project-planner',
     );
     foreach ( $items as $label => $anchor ) { echo '<a href="' . esc_url( home_url( '/' ) . $anchor ) . '">' . esc_html( $label ) . '</a>'; }
 }

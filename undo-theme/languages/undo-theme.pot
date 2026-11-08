@@ -1,679 +1,679 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.2.1\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: en_US\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.2.2\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:2
 msgid "% comments"
-msgstr "% comments"
+msgstr ""
 
 #: functions.php:90
 msgid "%s%% of the earlier layout visible"
-msgstr "%s%% of the earlier layout visible"
+msgstr ""
 
 #: template-parts/landing.php:36
 msgid "A better site or product should help people understand, decide, and act. The design follows that job."
-msgstr "A better site or product should help people understand, decide, and act. The design follows that job."
+msgstr ""
 
 #: style.css:1
 msgid "A bilingual, RTL-ready agency theme with Elementor support and editable brand settings."
-msgstr "A bilingual, RTL-ready agency theme with Elementor support and editable brand settings."
+msgstr ""
 
 #: functions.php:106 template-parts/landing.php:39
 msgid "A redesign"
-msgstr "A redesign"
+msgstr ""
 
 #: template-parts/landing.php:24
 msgid "A website with purpose."
-msgstr "A website with purpose."
+msgstr ""
 
 #: inc/settings.php:11
 msgid "Accent color"
-msgstr "Accent color"
+msgstr ""
 
 #: inc/settings.php:24
 msgid "Action URL"
-msgstr "Action URL"
+msgstr ""
 
 #: inc/settings.php:23
 msgid "Action label (English)"
-msgstr "Action label (English)"
+msgstr ""
 
 #: inc/settings.php:22
 msgid "Action label (Persian)"
-msgstr "Action label (Persian)"
+msgstr ""
 
 #: template-parts/landing.php:26
 msgid "After"
-msgstr "After"
+msgstr ""
 
 #: functions.php:123 template-parts/landing.php:7
 msgid "Approach"
-msgstr "Approach"
+msgstr ""
 
 #: template-parts/landing.php:26
 msgid "Before"
-msgstr "Before"
+msgstr ""
 
 #: inc/settings.php:45
 msgid "Blog"
-msgstr "Blog"
+msgstr ""
 
 #: inc/settings.php:12
 msgid "Boxed"
-msgstr "Boxed"
+msgstr ""
 
 #: template-parts/landing.php:35
 msgid "Build"
-msgstr "Build"
+msgstr ""
 
 #: template-parts/landing.php:27
 msgid "Built for every screen."
-msgstr "Built for every screen."
+msgstr ""
 
 #: inc/settings.php:52
 msgid "Built-in footer settings. Elementor Theme Builder can replace this template."
-msgstr "Built-in footer settings. Elementor Theme Builder can replace this template."
+msgstr ""
 
 #: inc/settings.php:15
 msgid "Built-in header settings. Elementor Theme Builder can replace this template."
-msgstr "Built-in header settings. Elementor Theme Builder can replace this template."
+msgstr ""
 
 #: inc/settings.php:61
 msgid "Built-in landing page copy. Elementor pages use their own content."
-msgstr "Built-in landing page copy. Elementor pages use their own content."
+msgstr ""
 
 #: template-parts/landing.php:25
 msgid "COMPANY NAME"
-msgstr "COMPANY NAME"
+msgstr ""
 
 #: inc/settings.php:49
 msgid "Card columns"
-msgstr "Card columns"
+msgstr ""
 
 #: functions.php:89
 msgid "Close menu"
-msgstr "Close menu"
+msgstr ""
 
 #: template-parts/landing.php:26
 msgid "Compare earlier and redesigned website concept"
-msgstr "Compare earlier and redesigned website concept"
+msgstr ""
 
 #: inc/settings.php:59
 msgid "Contact email"
-msgstr "Contact email"
+msgstr ""
 
 #: inc/settings.php:13
 msgid "Content width in pixels"
-msgstr "Content width in pixels"
+msgstr ""
 
 #: template-parts/landing.php:34
 msgid "Create new. Redo what exists."
-msgstr "Create new. Redo what exists."
+msgstr ""
 
 #: template-parts/landing.php:31
 msgid "Custom tools that add the features your website and workflow actually need."
-msgstr "Custom tools that add the features your website and workflow actually need."
+msgstr ""
 
 #: template-parts/landing.php:27
 msgid "DESIGN / BUILD / REDO"
-msgstr "DESIGN / BUILD / REDO"
+msgstr ""
 
 #: inc/settings.php:10
 msgid "Default visitor language"
-msgstr "Default visitor language"
+msgstr ""
 
 #: template-parts/landing.php:41
 msgid "Describe the problem or the result you want"
-msgstr "Describe the problem or the result you want"
+msgstr ""
 
 #: template-parts/landing.php:35
 msgid "Design"
-msgstr "Design"
+msgstr ""
 
 #: template-parts/landing.php:35
 msgid "Details that make it last"
-msgstr "Details that make it last"
+msgstr ""
 
 #: template-parts/landing.php:42
 msgid "Download project brief"
-msgstr "Download project brief"
+msgstr ""
 
 #: template-parts/landing.php:23
 msgid "Drag to compare"
-msgstr "Drag to compare"
+msgstr ""
 
 #: inc/settings.php:40
 msgid "End"
-msgstr "End"
+msgstr ""
 
 #: inc/settings.php:10
 msgid "English"
-msgstr "English"
+msgstr ""
 
 #: inc/settings.php:50
 msgid "Excerpt length in words"
-msgstr "Excerpt length in words"
+msgstr ""
 
 #: inc/settings.php:52
 msgid "Footer"
-msgstr "Footer"
+msgstr ""
 
 #: functions.php:19
 msgid "Footer menu"
-msgstr "Footer menu"
+msgstr ""
 
 #: footer.php:9
 msgid "Footer navigation"
-msgstr "Footer navigation"
+msgstr ""
 
 #: inc/settings.php:58
 msgid "Footer slogan (English)"
-msgstr "Footer slogan (English)"
+msgstr ""
 
 #: inc/settings.php:57
 msgid "Footer slogan (Persian)"
-msgstr "Footer slogan (Persian)"
+msgstr ""
 
 #: template-parts/landing.php:27
 msgid "Get started"
-msgstr "Get started"
+msgstr ""
 
 #: functions.php:95
 msgid "Goal"
-msgstr "Goal"
+msgstr ""
 
 #: template-parts/landing.php:35
 msgid "Goals, users, constraints"
-msgstr "Goals, users, constraints"
+msgstr ""
 
 #: template-parts/landing.php:34
 msgid "Good design starts with understanding what needs to change. We map the problem, shape the experience, then build and refine the result."
-msgstr "Good design starts with understanding what needs to change. We map the problem, shape the experience, then build and refine the result."
+msgstr ""
 
 #: template-parts/landing.php:34
 msgid "HOW WE WORK"
-msgstr "HOW WE WORK"
+msgstr ""
 
 #: inc/settings.php:15
 msgid "Header"
-msgstr "Header"
+msgstr ""
 
 #: inc/settings.php:16
 msgid "Header logo"
-msgstr "Header logo"
+msgstr ""
 
 #: inc/settings.php:65
 msgid "Hero description (English)"
-msgstr "Hero description (English)"
+msgstr ""
 
 #: inc/settings.php:63
 msgid "Hero description (Persian)"
-msgstr "Hero description (Persian)"
+msgstr ""
 
 #: inc/settings.php:64
 msgid "Hero title (English)"
-msgstr "Hero title (English)"
+msgstr ""
 
 #: inc/settings.php:62
 msgid "Hero title (Persian)"
-msgstr "Hero title (Persian)"
+msgstr ""
 
 #: template-parts/landing.php:4 template-parts/landing.php:15
 msgid "Home"
-msgstr "Home"
+msgstr ""
 
 #: template-parts/landing.php:25
 msgid "Home  About  Services  Contact"
-msgstr "Home  About  Services  Contact"
+msgstr ""
 
 #: inc/settings.php:61
 msgid "Homepage"
-msgstr "Homepage"
+msgstr ""
 
 #: template-parts/landing.php:23
 msgid "Interactive concept showing a website before and after a redesign"
-msgstr "Interactive concept showing a website before and after a redesign"
+msgstr ""
 
 #: template-parts/landing.php:36
 msgid "Keep what works. Redo what does not."
-msgstr "Keep what works. Redo what does not."
+msgstr ""
 
 #: header.php:25
 msgid "Language"
-msgstr "Language"
+msgstr ""
 
 #: inc/settings.php:9
 msgid "Language, width, and shared colors."
-msgstr "Language, width, and shared colors."
+msgstr ""
 
 #: header.php:24
 msgid "Main navigation"
-msgstr "Main navigation"
+msgstr ""
 
 #: template-parts/landing.php:24
 msgid "Make the first impression count."
-msgstr "Make the first impression count."
+msgstr ""
 
 #: inc/settings.php:17
 msgid "Maximum logo width in pixels"
-msgstr "Maximum logo width in pixels"
+msgstr ""
 
 #: functions.php:102 template-parts/landing.php:38
 msgid "Mobile app"
-msgstr "Mobile app"
+msgstr ""
 
 #: template-parts/landing.php:32
 msgid "Mobile apps"
-msgstr "Mobile apps"
+msgstr ""
 
 #: template-parts/landing.php:32
 msgid "Mobile experiences designed around the people who will use them every day."
-msgstr "Mobile experiences designed around the people who will use them every day."
+msgstr ""
 
 #: header.php:28
 msgid "Mobile navigation"
-msgstr "Mobile navigation"
+msgstr ""
 
 #: template-parts/landing.php:40
 msgid "Name of your project"
-msgstr "Name of your project"
+msgstr ""
 
 #: template-parts/landing.php:30
 msgid "New sites and thoughtful redesigns that communicate clearly and work across every screen."
-msgstr "New sites and thoughtful redesigns that communicate clearly and work across every screen."
+msgstr ""
 
 #: comments.php:2
 msgid "No comments"
-msgstr "No comments"
+msgstr ""
 
 #: archive.php:8 index.php:7 search.php:8
 msgid "No posts found."
-msgstr "No posts found."
+msgstr ""
 
 #: inc/settings.php:35
 msgid "Normal WordPress pages. Elementor pages use their own layout."
-msgstr "Normal WordPress pages. Elementor pages use their own layout."
+msgstr ""
 
 #: comments.php:2
 msgid "One comment"
-msgstr "One comment"
+msgstr ""
 
 #: functions.php:88 header.php:27
 msgid "Open menu"
-msgstr "Open menu"
+msgstr ""
 
 #: template-parts/landing.php:34
 msgid "Our process: understand, design, build, refine"
-msgstr "Our process: understand, design, build, refine"
+msgstr ""
 
 #: template-parts/landing.php:5
 msgid "Overview"
-msgstr "Overview"
+msgstr ""
 
 #: 404.php:3
 msgid "Page not found"
-msgstr "Page not found"
+msgstr ""
 
 #: template-parts/landing.php:13
 msgid "Page sections"
-msgstr "Page sections"
+msgstr ""
 
 #: inc/settings.php:35
 msgid "Pages"
-msgstr "Pages"
+msgstr ""
 
 #: inc/settings.php:10
 msgid "Persian"
-msgstr "Persian"
+msgstr ""
 
 #: header.php:26 template-parts/landing.php:22 template-parts/landing.php:34
 msgid "Plan a project"
-msgstr "Plan a project"
+msgstr ""
 
 #: inc/settings.php:45
 msgid "Post cards in blog, archive, and search results."
-msgstr "Post cards in blog, archive, and search results."
+msgstr ""
 
 #: inc/settings.php:26
 msgid "Post details in the built-in single template."
-msgstr "Post details in the built-in single template."
+msgstr ""
 
 #: functions.php:19
 msgid "Primary menu"
-msgstr "Primary menu"
+msgstr ""
 
 #: functions.php:25 sidebar.php:2
 msgid "Primary sidebar"
-msgstr "Primary sidebar"
+msgstr ""
 
 #: functions.php:92
 msgid "Project"
-msgstr "Project"
+msgstr ""
 
 #: template-parts/landing.php:40
 msgid "Project or business name"
-msgstr "Project or business name"
+msgstr ""
 
 #: functions.php:124 template-parts/landing.php:9
 msgid "Project planner"
-msgstr "Project planner"
+msgstr ""
 
 #: template-parts/landing.php:37
 msgid "Put the essentials in one place. Download your brief when you are done, so it is ready to share when we connect."
-msgstr "Put the essentials in one place. Download your brief when you are done, so it is ready to share when we connect."
+msgstr ""
 
 #: template-parts/landing.php:8
 msgid "Redesign"
-msgstr "Redesign"
+msgstr ""
 
 #: template-parts/landing.php:35
 msgid "Refine"
-msgstr "Refine"
+msgstr ""
 
 #: inc/settings.php:128
 msgid "Remove image"
-msgstr "Remove image"
+msgstr ""
 
 #: 404.php:3
 msgid "Return home"
-msgstr "Return home"
+msgstr ""
 
 #: search.php:5
 msgid "Search results for: %s"
-msgstr "Search results for: %s"
+msgstr ""
 
 #: inc/settings.php:119
 msgid "Select header logo"
-msgstr "Select header logo"
+msgstr ""
 
 #: inc/settings.php:128
 msgid "Select image"
-msgstr "Select image"
+msgstr ""
 
 #: functions.php:93
 msgid "Service"
-msgstr "Service"
+msgstr ""
 
 #: functions.php:122 template-parts/landing.php:6
 msgid "Services"
-msgstr "Services"
+msgstr ""
 
 #: inc/settings.php:21
 msgid "Show action button"
-msgstr "Show action button"
+msgstr ""
 
 #: inc/settings.php:29
 msgid "Show author"
-msgstr "Show author"
+msgstr ""
 
 #: inc/settings.php:47
 msgid "Show card dates"
-msgstr "Show card dates"
+msgstr ""
 
 #: inc/settings.php:46
 msgid "Show card images"
-msgstr "Show card images"
+msgstr ""
 
 #: inc/settings.php:30
 msgid "Show categories"
-msgstr "Show categories"
+msgstr ""
 
 #: inc/settings.php:32
 msgid "Show comments"
-msgstr "Show comments"
+msgstr ""
 
 #: inc/settings.php:55
 msgid "Show contact email"
-msgstr "Show contact email"
+msgstr ""
 
 #: inc/settings.php:56
 msgid "Show copyright"
-msgstr "Show copyright"
+msgstr ""
 
 #: inc/settings.php:28
 msgid "Show date"
-msgstr "Show date"
+msgstr ""
 
 #: inc/settings.php:48
 msgid "Show excerpts"
-msgstr "Show excerpts"
+msgstr ""
 
 #: inc/settings.php:27
 msgid "Show featured image"
-msgstr "Show featured image"
+msgstr ""
 
 #: inc/settings.php:53
 msgid "Show footer brand"
-msgstr "Show footer brand"
+msgstr ""
 
 #: inc/settings.php:54
 msgid "Show footer navigation"
-msgstr "Show footer navigation"
+msgstr ""
 
 #: inc/settings.php:20
 msgid "Show language switcher"
-msgstr "Show language switcher"
+msgstr ""
 
 #: inc/settings.php:19
 msgid "Show main navigation"
-msgstr "Show main navigation"
+msgstr ""
 
 #: inc/settings.php:42
 msgid "Show on archives"
-msgstr "Show on archives"
+msgstr ""
 
 #: inc/settings.php:43
 msgid "Show on search results"
-msgstr "Show on search results"
+msgstr ""
 
 #: inc/settings.php:37
 msgid "Show page sidebar"
-msgstr "Show page sidebar"
+msgstr ""
 
 #: inc/settings.php:36
 msgid "Show page title"
-msgstr "Show page title"
+msgstr ""
 
 #: inc/settings.php:33
 msgid "Show post sidebar"
-msgstr "Show post sidebar"
+msgstr ""
 
 #: inc/settings.php:31
 msgid "Show previous and next posts"
-msgstr "Show previous and next posts"
+msgstr ""
 
 #: inc/settings.php:66
 msgid "Show section navigation"
-msgstr "Show section navigation"
+msgstr ""
 
 #: inc/settings.php:39
 msgid "Sidebar"
-msgstr "Sidebar"
+msgstr ""
 
 #: inc/settings.php:40
 msgid "Sidebar position"
-msgstr "Sidebar position"
+msgstr ""
 
 #: inc/settings.php:41
 msgid "Sidebar width in pixels"
-msgstr "Sidebar width in pixels"
+msgstr ""
 
 #: inc/settings.php:26
 msgid "Single post"
-msgstr "Single post"
+msgstr ""
 
 #: inc/settings.php:12
 msgid "Site width"
-msgstr "Site width"
+msgstr ""
 
 #: header.php:17
 msgid "Skip to content"
-msgstr "Skip to content"
+msgstr ""
 
 #: functions.php:105 template-parts/landing.php:39
 msgid "Something new"
-msgstr "Something new"
+msgstr ""
 
 #: inc/settings.php:40
 msgid "Start"
-msgstr "Start"
+msgstr ""
 
 #: template-parts/landing.php:24
 msgid "Start here"
-msgstr "Start here"
+msgstr ""
 
 #: functions.php:94
 msgid "Starting point"
-msgstr "Starting point"
+msgstr ""
 
 #: inc/settings.php:18
 msgid "Sticky header"
-msgstr "Sticky header"
+msgstr ""
 
 #: template-parts/landing.php:35
 msgid "Structure, content, interface"
-msgstr "Structure, content, interface"
+msgstr ""
 
 #: template-parts/landing.php:37
 msgid "Tell us what you want to make."
-msgstr "Tell us what you want to make."
+msgstr ""
 
 #: 404.php:3
 msgid "The page you requested is unavailable."
-msgstr "The page you requested is unavailable."
+msgstr ""
 
 #: template-parts/landing.php:28
 msgid "The right work for the next version of your business."
-msgstr "The right work for the next version of your business."
+msgstr ""
 
 #: inc/settings.php:39
 msgid "The sidebar appears only where enabled and when widgets are assigned."
-msgstr "The sidebar appears only where enabled and when widgets are assigned."
+msgstr ""
 
 #: inc/settings.php:148
 msgid "Theme settings sections"
-msgstr "Theme settings sections"
+msgstr ""
 
 #: functions.php:97
 msgid "To be discussed"
-msgstr "To be discussed"
+msgstr ""
 
 #: inc/settings.php:112 inc/settings.php:112 inc/settings.php:148
 msgid "UNDO Theme Settings"
-msgstr "UNDO Theme Settings"
+msgstr ""
 
 #: style.css:1
 msgid "UNDO Web Developments"
-msgstr "UNDO Web Developments"
+msgstr ""
 
 #: functions.php:91
 msgid "UNDO Web Developments — Project brief"
-msgstr "UNDO Web Developments — Project brief"
+msgstr ""
 
 #: header.php:20
 msgid "UNDO Web Developments, back to top"
-msgstr "UNDO Web Developments, back to top"
+msgstr ""
 
 #: template-parts/landing.php:21
 msgid "UNDO creates new digital products and redesigns the ones that no longer serve your business. From the first screen to the working code."
-msgstr "UNDO creates new digital products and redesigns the ones that no longer serve your business. From the first screen to the working code."
+msgstr ""
 
 #: template-parts/landing.php:35
 msgid "Understand"
-msgstr "Understand"
+msgstr ""
 
 #: functions.php:96
 msgid "Untitled project"
-msgstr "Untitled project"
+msgstr ""
 
 #: inc/settings.php:119
 msgid "Use this image"
-msgstr "Use this image"
+msgstr ""
 
 #: footer.php:5 template-parts/landing.php:27
 msgid "WE REDO IT FOR YOU."
-msgstr "WE REDO IT FOR YOU."
+msgstr ""
 
 #: template-parts/landing.php:25
 msgid "WELCOME TO OUR WEBSITE"
-msgstr "WELCOME TO OUR WEBSITE"
+msgstr ""
 
 #: template-parts/landing.php:25
 msgid "We provide solutions for your needs"
-msgstr "We provide solutions for your needs"
+msgstr ""
 
 #: footer.php:4 footer.php:8 header.php:22
 msgid "Web Developments"
-msgstr "Web Developments"
+msgstr ""
 
 #: functions.php:100 template-parts/landing.php:38
 msgid "Website"
-msgstr "Website"
+msgstr ""
 
 #: inc/settings.php:9
 msgid "Website layout"
-msgstr "Website layout"
+msgstr ""
 
 #: template-parts/landing.php:30
 msgid "Websites"
-msgstr "Websites"
+msgstr ""
 
 #: template-parts/landing.php:20
 msgid "Websites, plugins & apps made better."
-msgstr "Websites, plugins & apps made better."
+msgstr ""
 
 #: template-parts/landing.php:38
 msgid "What do you need?"
-msgstr "What do you need?"
+msgstr ""
 
 #: template-parts/landing.php:41
 msgid "What should it help you do?"
-msgstr "What should it help you do?"
+msgstr ""
 
 #: template-parts/landing.php:29
 msgid "What we build."
-msgstr "What we build."
+msgstr ""
 
 #: template-parts/landing.php:39
 msgid "Where are you starting?"
-msgstr "Where are you starting?"
+msgstr ""
 
 #: template-parts/landing.php:28
 msgid "Whether the starting point is a blank page or an existing product, UNDO brings design and development together to make it easier to use, easier to manage, and ready to grow."
-msgstr "Whether the starting point is a blank page or an existing product, UNDO brings design and development together to make it easier to use, easier to manage, and ready to grow."
+msgstr ""
 
 #: inc/settings.php:12
 msgid "Wide"
-msgstr "Wide"
+msgstr ""
 
 #: functions.php:27
 msgid "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings."
-msgstr "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings."
+msgstr ""
 
 #: functions.php:101 template-parts/landing.php:38
 msgid "WordPress plugin"
-msgstr "WordPress plugin"
+msgstr ""
 
 #: template-parts/landing.php:31
 msgid "WordPress plugins"
-msgstr "WordPress plugins"
+msgstr ""
 
 #: template-parts/landing.php:24
 msgid "Work  About  Contact"
-msgstr "Work  About  Contact"
+msgstr ""
 
 #: template-parts/landing.php:35
 msgid "Working product"
-msgstr "Working product"
+msgstr ""
 
 #: template-parts/landing.php:37
 msgid "Your answers stay in this browser. The brief downloads to your device."
-msgstr "Your answers stay in this browser. The brief downloads to your device."
+msgstr ""
 
 #: functions.php:98
 msgid "Your project brief has been downloaded."
-msgstr "Your project brief has been downloaded."
+msgstr ""
 
 #: template-parts/landing.php:23
 msgid "new perspective"
-msgstr "new perspective"
+msgstr ""
 

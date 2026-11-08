@@ -3,21 +3,26 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 
 const project = process.cwd();
-const theme = path.join(project, 'undo-web-developments');
-const version = fs.readFileSync(path.join(theme, 'style.css'), 'utf8').match(/^Version:\s*([^\r\n]+)/m)?.[1];
+const theme = path.join(project, 'undo-theme');
+const slug = path.basename(theme);
+const stylesheet = fs.readFileSync(path.join(theme, 'style.css'), 'utf8');
+const version = stylesheet.match(/^Version:\s*([^\r\n]+)/m)?.[1];
+const textDomain = stylesheet.match(/^Text Domain:\s*([^\r\n]+)/m)?.[1];
 const phpVersion = fs.readFileSync(path.join(theme, 'functions.php'), 'utf8').match(/UNDO_THEME_VERSION',\s*'([^']+)'/)?.[1];
-if (!version || version !== phpVersion) throw new Error('Theme version mismatch');
+const stableTag = fs.readFileSync(path.join(theme, 'readme.txt'), 'utf8').match(/^Stable tag:\s*([^\r\n]+)/m)?.[1];
+if (!version || version !== phpVersion || version !== stableTag) throw new Error('Theme version mismatch');
+if (textDomain !== slug) throw new Error(`Theme text domain must match folder: ${slug}`);
 fs.copyFileSync(path.join(project, 'CHANGELOG.md'), path.join(theme, 'CHANGELOG.md'));
 const outputDir = path.join(project, 'dist');
 fs.mkdirSync(outputDir, { recursive: true });
-const output = path.join(outputDir, `undo-web-developments-${version}.zip`);
+const output = path.join(outputDir, `${slug}-${version}.zip`);
 const files = [];
 function walk(dir) {
   for (const name of fs.readdirSync(dir)) {
     if (name.startsWith('.') || name === 'node_modules') continue;
     const absolute = path.join(dir, name);
     if (fs.statSync(absolute).isDirectory()) walk(absolute);
-    else files.push({ name: 'undo-web-developments/' + path.relative(theme, absolute).replaceAll('\\', '/'), data: fs.readFileSync(absolute) });
+    else files.push({ name: slug + '/' + path.relative(theme, absolute).replaceAll('\\', '/'), data: fs.readFileSync(absolute) });
   }
 }
 walk(theme);

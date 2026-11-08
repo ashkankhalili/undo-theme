@@ -1,6 +1,6 @@
 # UNDO premium WordPress theme blueprint
 
-Status: planning document for the existing 0.2.1 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
+Status: planning document for the existing 0.2.2 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
 
 ## 1. Product definition and boundaries
 
@@ -10,7 +10,7 @@ The recommended product consists of two installable packages:
 
 | Package | Owns | Must work without |
 | --- | --- | --- |
-| `undo-web-developments` parent theme | Site shell, template hierarchy, global design tokens, header/footer, blog/page/post layouts, theme options, RTL, translations, Elementor page and Theme Builder fallbacks | Elementor and the addon plugin |
+| `undo-theme` parent theme | Site shell, template hierarchy, global design tokens, header/footer, blog/page/post layouts, theme options, RTL, translations, Elementor page and Theme Builder fallbacks | Elementor and the addon plugin |
 | `undo-elements` addon plugin | UNDO Elementor widgets, interactive project planner, persistent content types or shortcodes if later needed, widget assets and plugin settings | Elementor Pro or the UNDO parent theme; it should show a clear admin notice when Elementor Free is missing |
 
 A starter child theme can be a third *optional* ZIP for customers who need PHP/CSS overrides. Customer content, theme options, licenses, and media stay in the database or a child theme, never in files replaced by a parent-theme update. Do not bundle or impersonate Elementor or Elementor Pro.
@@ -101,7 +101,7 @@ Add more only when a use case cannot be handled well with Elementor's existing w
 | Stage | Deliverable | Exit gate |
 | --- | --- | --- |
 | 0. Product contract | Decisions above, customer personas, supported-version matrix | Scope and distribution agreed |
-| 1. Foundation audit | Fix current 0.2.1 gaps, local WordPress environment, design tokens, option schema | Fresh activation and no PHP warnings |
+| 1. Foundation audit | Fix current 0.2.2 gaps, local WordPress environment, design tokens, option schema | Fresh activation and no PHP warnings |
 | 2. Header | Built-in desktop/mobile header and settings | Keyboard, Persian/English, RTL/LTR, Elementor fallback pass |
 | 3. Single post | Built-in post design, metadata, comments, post navigation | Long-content and Theme Unit Test cases pass |
 | 4. Pages | Standard, full-width, and Elementor page layouts | No duplicate titles; long and mixed-language content pass |
@@ -133,7 +133,7 @@ Build and review each stage independently; do not begin the next visual componen
 
 ## 9. GitHub and customer update workflow
 
-1. Connect the existing local theme repository to a GitHub repository; preserve its history. Add the addon plugin as a separately installable package in the product source, or in a second repository if independent releases become necessary.
+1. Maintain the connected `ashkankhalili/undo-theme` GitHub repository and preserve its history. Add the addon plugin as a separately installable package in the product source, or in a second repository if independent releases become necessary.
 2. Protect the release branch and require code review plus CI checks. Build theme and addon ZIPs from a clean tag; do not use GitHub's generic source ZIP as the customer package.
 3. Keep theme and addon versions explicit. A release record includes compatible WordPress/PHP/Elementor ranges, migrations, changelog, ZIP SHA-256, and rollback instructions.
 4. Choose a public or authenticated update channel. Add stable `Update URI` values and verify manifest/version/package/checksum before exposing an update. Keep credentials and signing keys out of distributed files.
@@ -142,11 +142,11 @@ Build and review each stage independently; do not begin the next visual componen
 
 ## 10. Current status and immediate next work
 
-Implemented in 0.2.1: classic theme skeleton, theme.json, basic templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, and a packaged ZIP. These are a foundation, not a finished premium product.
+Implemented in 0.2.2: classic theme skeleton, theme.json, basic templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, and a packaged ZIP. These are a foundation, not a finished premium product.
 
 Outstanding: live WordPress/Elementor staging install; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks; verified GitHub update channel.
 
-**First execution milestone:** create a local/staging WordPress test install, activate the exact 0.2.1 ZIP, test Persian and English settings and RTL, install Elementor Free/Pro in separate scenarios, and record failures. Then design and build the header as the first polished component.
+**First execution milestone:** create a local/staging WordPress test install, activate the exact 0.2.2 ZIP, test Persian and English settings and RTL, install Elementor Free/Pro in separate scenarios, and record failures. Then design and build the header as the first polished component.
 
 ## Primary references
 

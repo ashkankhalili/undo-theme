@@ -1,2 +1,0 @@
-<?php if ( post_password_required() ) { return; } ?>
-<section id="comments" class="comments-area"><?php if ( have_comments() ) : ?><h2><?php comments_number( esc_html__( 'No comments', 'undo-web-developments' ), esc_html__( 'One comment', 'undo-web-developments' ), esc_html__( '% comments', 'undo-web-developments' ) ); ?></h2><ol class="comment-list"><?php wp_list_comments(); ?></ol><?php the_comments_pagination(); endif; comment_form(); ?></section>

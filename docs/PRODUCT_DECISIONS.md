@@ -5,6 +5,7 @@ Use this log before changing product scope. "Confirmed" comes from the user's in
 | Topic | Status | Current direction | Decision gate |
 | --- | --- | --- | --- |
 | Product identity | Confirmed | UNDO Web Developments premium customer theme | Keep theme folder/text domain stable |
+| Theme slug | Confirmed | `undo-theme` for folder, text domain, and installable ZIP root | Preserve for all customer updates |
 | Source repository | Confirmed | Public `ashkankhalili/undo-theme` repository supplied by owner | Keep credentials and customer data out of source |
 | Online staging | Confirmed | `https://ashkankhalili.ir` is owner-designated WordPress and Elementor test site | Confirm exact installed ZIP and environment versions |
 | Primary language | Confirmed | Persian/fa_IR first; English/en_US fully supported | Verify frontend, admin translation, RTL/LTR |
