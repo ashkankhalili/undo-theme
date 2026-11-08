@@ -4,7 +4,7 @@ The customer update channel is the public `ashkankhalili/undo-theme` GitHub repo
 
 ## One-time bootstrap
 
-The 0.2.2 theme does not contain an updater, so it cannot discover 0.2.3 by itself. Back up the staging database and `wp-content`, then install the exact `undo-theme-0.2.3.zip` from the verified `v0.2.3` GitHub Release once. Keep the `undo-theme` folder name. After that, release 0.2.4 and test its discovery and installation from **Dashboard → Updates** without uploading another ZIP.
+The 0.2.2 theme did not contain an updater, so it could not discover 0.2.3 by itself. The owner installed the verified 0.2.3 release ZIP; the public staging stylesheet now confirms 0.2.3, the `undo-theme` folder, and its GitHub `Update URI`. Version 0.2.4 is the first release for testing discovery and installation from **Dashboard → Updates** without uploading another ZIP.
 
 ## For each later version
 

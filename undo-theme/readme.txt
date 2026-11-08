@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.2.3
+Stable tag: 0.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,6 +16,8 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Elementor is optional. Elementor Pro is needed for Theme Builder location replacement. User-created pages and posts need a multilingual content solution for translation. This package is a pre-release until tested on a WordPress staging site.
 
 == Changelog ==
+= 0.2.4 =
+* Validation release for the first WordPress dashboard update from 0.2.3; no visual or settings changes.
 = 0.2.3 =
 * Added GitHub Releases updates in WordPress Updates, with SHA-256 verification of the installable ZIP.
 = 0.2.2 =

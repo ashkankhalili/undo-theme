@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.2.3' );
+define( 'UNDO_THEME_VERSION', '0.2.4' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/github-updater.php';
 
