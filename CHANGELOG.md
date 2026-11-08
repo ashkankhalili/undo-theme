@@ -4,6 +4,27 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.2.5] - 2026-11-08
+
+### Fixed
+
+- Replaced the GitHub page used by WordPress's update-details popup with a same-site, administrator-only release-notes view. GitHub blocks embedding its pages in the WordPress popup.
+- Displayed the exact latest GitHub Release notes in the popup, with a direct link to the full release. Release-note text is escaped before display.
+
+### Theme information
+
+- Expanded the English and Persian descriptions shown under Appearance → Themes to accurately summarize the current features.
+- Added a maintained feature and limitation list to the theme readme. Future feature releases must update this list and the theme description as needed.
+
+### فارسی
+
+- پنجره جزئیات به‌روزرسانی اکنون یادداشت‌های انتشار را در خود وردپرس نمایش می‌دهد و پیوندی به انتشار گیت‌هاب دارد.
+- توضیح پوسته در بخش نمایش ← پوسته‌ها کامل‌تر شد و قابلیت‌ها و محدودیت‌های فعلی در راهنمای پوسته ثبت شدند.
+
+### Upgrade note
+
+- Sites running 0.2.3 or 0.2.4 still use their installed updater's GitHub iframe link when viewing 0.2.5 details. Install 0.2.5 through WordPress Updates; subsequent update details will use the WordPress-hosted popup. Do not upload a ZIP for routine upgrades.
+
 ## [0.2.4] - 2026-11-08
 
 ### Validation

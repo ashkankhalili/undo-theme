@@ -2,12 +2,12 @@
 
 Target: `https://ashkankhalili.ir` (owner-designated empty WordPress and Elementor test site). This is a pre-release validation environment, not a customer release. Record the exact WordPress, PHP, Elementor, and theme versions before testing.
 
-Public inspection on 2026-11-08 confirms UNDO Web Developments 0.2.3 under the `undo-theme` folder with `Update URI: https://github.com/ashkankhalili/undo-theme`. The owner completed the one-time 0.2.3 bootstrap. The next gate is a 0.2.4 update through WordPress **Dashboard → Updates**, with no ZIP upload. Back up the database and `wp-content` and record current settings, menus, widgets, and Customizer state before using the dashboard update.
+Public inspection on 2026-11-08 confirmed UNDO Web Developments 0.2.3 under the `undo-theme` folder with `Update URI: https://github.com/ashkankhalili/undo-theme`. The owner completed the one-time 0.2.3 bootstrap and supplied screenshots proving WordPress offered 0.2.4 in **Dashboard → Updates** without a ZIP upload. The screenshot also showed that the old version-details popup tried to embed GitHub, which refused the connection. Version 0.2.5 provides a WordPress-hosted details view for later updates. Back up the database and `wp-content` and record current settings, menus, widgets, and Customizer state before using the dashboard update.
 
 ## Entry conditions
 
 1. Push this source repository to `ashkankhalili/undo-theme` and confirm the **Theme checks** workflow passes.
-2. Verify the `v0.2.4` GitHub Release has the exact `undo-theme-0.2.4.zip` and `.sha256` assets, and that their SHA-256 values match.
+2. Verify the current versioned GitHub Release has the exact `undo-theme-X.Y.Z.zip` and `.sha256` assets, and that their SHA-256 values match.
 3. Back up the staging database and `wp-content` before updating. Keep admin access on the owner-designated site only; never send credentials in chat or commit them to Git.
 4. Open **Dashboard → Updates → Check Again**. If the WordPress app connector becomes available, use it for read-back; otherwise share non-secret screenshots or exportable logs.
 
@@ -23,8 +23,9 @@ Public inspection on 2026-11-08 confirms UNDO Web Developments 0.2.3 under the `
 | 6 | Edit a page with Elementor Free; set it as static homepage | Editor loads, frontend renders, header/footer fallback works |
 | 7 | If Elementor Pro is installed, assign and remove each Theme Builder location | Header, footer, single, archive replacements and fallbacks work |
 | 8 | Test keyboard, touch, reduced motion, console, PHP error log, and responsive widths | No blocking accessibility, script, or PHP errors |
-| 9 | Use **Dashboard → Updates → Check Again** | WordPress lists 0.2.4 for `undo-theme` with an update control; record the displayed details |
-| 10 | Install the offered update from the dashboard | Version becomes 0.2.4 without a ZIP upload; settings, content, Elementor pages, and folder remain intact with no PHP errors |
+| 9 | Use **Dashboard → Updates → Check Again** | WordPress lists a newer version for `undo-theme` with an update control; 0.2.4 discovery confirmed by owner screenshot |
+| 10 | Install the offered update from the dashboard | Version becomes 0.2.5 or later without a ZIP upload; settings, content, Elementor pages, and folder remain intact with no PHP errors |
+| 11 | On the next version after 0.2.5, open **View version details** | Same-site popup displays the GitHub Release notes and link; no GitHub iframe error |
 
 Use Persian and English content with long titles, mixed Latin text, and varied images. For multilingual SEO, test a separately chosen content translation plugin and translated URLs; the theme's language cookie only switches built-in strings.
 

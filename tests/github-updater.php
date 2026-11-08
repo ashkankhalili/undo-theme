@@ -10,6 +10,9 @@ class WP_Error {
     public function __construct( $code, $message = '' ) { $this->code = $code; }
 }
 function add_filter( $hook, $callback, $priority = 10, $accepted_args = 1 ) {}
+function add_action( $hook, $callback, $priority = 10, $accepted_args = 1 ) {}
+function admin_url( $path = '' ) { return 'https://staging.example.test/wp-admin/' . $path; }
+function esc_html( $text ) { return htmlspecialchars( $text, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8' ); }
 function __( $message, $domain = 'default' ) { return $message; }
 function is_wp_error( $value ) { return $value instanceof WP_Error; }
 function get_site_transient( $key ) { return $GLOBALS['release_cache']; }
@@ -43,7 +46,7 @@ $asset = array(
     'size' => strlen( $bytes ),
     'digest' => 'sha256:' . $sha256,
 );
-$release = array( 'tag_name' => $tag, 'draft' => false, 'prerelease' => false, 'assets' => array( $asset ) );
+$release = array( 'tag_name' => $tag, 'draft' => false, 'prerelease' => false, 'body' => "### Fixed\n- Popup details <script>alert(1)</script>", 'assets' => array( $asset ) );
 $GLOBALS['release_cache'] = false;
 $GLOBALS['responses'] = array( UNDO_THEME_RELEASE_API => array( 'code' => 200, 'body' => json_encode( $release ) ) );
 
@@ -51,6 +54,11 @@ $unchanged = undo_theme_github_update( false, array( 'UpdateURI' => UNDO_THEME_U
 expect( false === $unchanged, 'Another theme must not receive this update' );
 $update = undo_theme_github_update( false, array( 'UpdateURI' => UNDO_THEME_UPDATE_URI, 'Version' => UNDO_THEME_VERSION ), 'undo-theme', array() );
 expect( is_array( $update ) && $version === $update['version'] && $package === $update['package'], 'New release must appear in WordPress update data' );
+expect( 'https://staging.example.test/wp-admin/admin-ajax.php?action=undo_theme_release_notes&version=' . $version === $update['url'], 'Update details must open on the same WordPress site' );
+expect( $release['body'] === $GLOBALS['release_cache']['notes'], 'Release notes must be cached with the verified release' );
+$rendered = undo_theme_release_notes_html( $release['body'] );
+expect( false !== strpos( $rendered, '<h2 dir="auto">Fixed</h2>' ) && false !== strpos( $rendered, '<ul><li dir="auto">' ), 'Release note headings and bullets must render with mixed-language direction' );
+expect( false === strpos( $rendered, '<script>' ) && false !== strpos( $rendered, '&lt;script&gt;' ), 'GitHub release notes must be escaped' );
 expect( $sha256 === $GLOBALS['release_cache']['sha256'], 'Release digest must be cached' );
 expect( false === undo_theme_github_update( false, array( 'UpdateURI' => UNDO_THEME_UPDATE_URI, 'Version' => $version ), 'undo-theme', array() ), 'Current version must not update itself' );
 

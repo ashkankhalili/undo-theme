@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.2.4\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.2.5\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:2
 msgid "% comments"
@@ -9,13 +9,13 @@ msgstr "% دیدگاه"
 msgid "%s%% of the earlier layout visible"
 msgstr "%s٪ از طرح قبلی دیده می‌شود"
 
+#: style.css:1
+msgid "A Persian-first WordPress theme for creative agencies and studios, with an English visitor interface and dedicated RTL styles. Includes a responsive landing page, blog and page templates, a standalone settings dashboard for layout, header, footer and sidebars, plus Elementor-compatible pages and Theme Builder locations."
+msgstr "پوسته وردپرس فارسی‌محور برای آژانس‌ها و استودیوهای خلاق، با رابط انگلیسی برای بازدیدکنندگان و استایل راست‌چین اختصاصی. شامل صفحه اصلی واکنش‌گرا، قالب‌های وبلاگ و صفحه، پیشخوان مستقل تنظیمات برای چیدمان، سربرگ، پانوشت و نوار کناری، و سازگاری با صفحه‌های المنتور و جایگاه‌های قالب‌ساز آن."
+
 #: template-parts/landing.php:36
 msgid "A better site or product should help people understand, decide, and act. The design follows that job."
 msgstr "یک وب‌سایت یا محصول بهتر باید به مردم کمک کند بفهمند، تصمیم بگیرند و اقدام کنند. طراحی در خدمت همین هدف است."
-
-#: style.css:1
-msgid "A bilingual, RTL-ready agency theme with Elementor support and editable brand settings."
-msgstr "پوسته شرکتی دوزبانه و راست‌چین با پشتیبانی از المنتور و تنظیمات قابل ویرایش برند."
 
 #: functions.php:107 template-parts/landing.php:39
 msgid "A redesign"
@@ -48,6 +48,10 @@ msgstr "بعد"
 #: functions.php:124 template-parts/landing.php:7
 msgid "Approach"
 msgstr "روش کار"
+
+#: inc/github-updater.php:134
+msgid "Back to WordPress Updates"
+msgstr "بازگشت به به‌روزرسانی‌های وردپرس"
 
 #: template-parts/landing.php:26
 msgid "Before"
@@ -289,6 +293,10 @@ msgstr "بدون دیدگاه"
 msgid "No posts found."
 msgstr "نوشته‌ای پیدا نشد."
 
+#: inc/github-updater.php:133
+msgid "No release notes were provided for this version."
+msgstr "برای این نسخه یادداشت انتشار ثبت نشده است."
+
 #: inc/settings.php:35
 msgid "Normal WordPress pages. Elementor pages use their own layout."
 msgstr "صفحه‌های معمولی وردپرس. صفحه‌های المنتور چیدمان خود را دارند."
@@ -369,6 +377,10 @@ msgstr "بازطراحی"
 msgid "Refine"
 msgstr "بهبود"
 
+#: inc/github-updater.php:123
+msgid "Release details are unavailable. Refresh the WordPress Updates screen and try again."
+msgstr "جزئیات انتشار در دسترس نیست. صفحه به‌روزرسانی‌های وردپرس را تازه کنید و دوباره تلاش کنید."
+
 #: inc/settings.php:128
 msgid "Remove image"
 msgstr "حذف تصویر"
@@ -380,6 +392,10 @@ msgstr "بازگشت به خانه"
 #: search.php:5
 msgid "Search results for: %s"
 msgstr "نتایج جست‌وجو برای: %s"
+
+#: inc/github-updater.php:131
+msgid "See what changed before you update. Your theme settings and WordPress content are stored outside the theme files."
+msgstr "پیش از به‌روزرسانی، تغییرات را ببینید. تنظیمات پوسته و محتوای وردپرس بیرون از فایل‌های پوسته ذخیره می‌شوند."
 
 #: inc/settings.php:119
 msgid "Select header logo"
@@ -537,7 +553,7 @@ msgstr "ساختار، محتوا، رابط کاربری"
 msgid "Tell us what you want to make."
 msgstr "از پروژه‌ای که در ذهن دارید بگویید."
 
-#: inc/github-updater.php:107
+#: inc/github-updater.php:152
 msgid "The UNDO theme update failed its checksum check."
 msgstr "بررسی صحت فایل به‌روزرسانی پوسته UNDO ناموفق بود."
 
@@ -556,6 +572,10 @@ msgstr "نوار کناری فقط در بخش‌های فعال و پس از ا
 #: inc/settings.php:148
 msgid "Theme settings sections"
 msgstr "بخش‌های تنظیمات پوسته"
+
+#: inc/github-updater.php:130
+msgid "Theme update"
+msgstr "به‌روزرسانی پوسته"
 
 #: functions.php:98
 msgid "To be discussed"
@@ -581,7 +601,11 @@ msgstr "توسعه وب UNDO، بازگشت به ابتدا"
 msgid "UNDO creates new digital products and redesigns the ones that no longer serve your business. From the first screen to the working code."
 msgstr "UNDO محصولات دیجیتال تازه می‌سازد و آنچه دیگر به کار کسب‌وکار شما نمی‌آید از نو طراحی می‌کند؛ از اولین صفحه تا کد نهایی."
 
-#: inc/github-updater.php:99
+#: inc/github-updater.php:128
+msgid "UNDO theme update details"
+msgstr "جزئیات به‌روزرسانی پوسته UNDO"
+
+#: inc/github-updater.php:144
 msgid "Unable to verify the UNDO theme update package."
 msgstr "اعتبار فایل به‌روزرسانی پوسته UNDO تأیید نشد."
 
@@ -596,6 +620,10 @@ msgstr "پروژه بدون نام"
 #: inc/settings.php:119
 msgid "Use this image"
 msgstr "استفاده از این تصویر"
+
+#: inc/github-updater.php:134
+msgid "View the GitHub release"
+msgstr "مشاهده انتشار در گیت‌هاب"
 
 #: footer.php:5 template-parts/landing.php:27
 msgid "WE REDO IT FOR YOU."
@@ -628,6 +656,10 @@ msgstr "وب‌سایت‌ها"
 #: template-parts/landing.php:20
 msgid "Websites, plugins & apps made better."
 msgstr "وب‌سایت‌ها، افزونه‌ها و اپ‌ها؛ بهتر از قبل."
+
+#: inc/github-updater.php:132
+msgid "What changed"
+msgstr "چه چیزهایی تغییر کرده‌اند"
 
 #: template-parts/landing.php:38
 msgid "What do you need?"
@@ -672,6 +704,10 @@ msgstr "نمونه‌کارها  درباره ما  تماس"
 #: template-parts/landing.php:35
 msgid "Working product"
 msgstr "محصولی که کار می‌کند"
+
+#: inc/github-updater.php:119
+msgid "You are not allowed to view theme update details."
+msgstr "شما مجوز مشاهده جزئیات به‌روزرسانی پوسته را ندارید."
 
 #: template-parts/landing.php:37
 msgid "Your answers stay in this browser. The brief downloads to your device."

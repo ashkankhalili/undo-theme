@@ -12,7 +12,9 @@ const phpVersion = fs.readFileSync(path.join(theme, 'functions.php'), 'utf8').ma
 const stableTag = fs.readFileSync(path.join(theme, 'readme.txt'), 'utf8').match(/^Stable tag:\s*([^\r\n]+)/m)?.[1];
 if (!version || version !== phpVersion || version !== stableTag) throw new Error('Theme version mismatch');
 if (textDomain !== slug) throw new Error(`Theme text domain must match folder: ${slug}`);
-fs.copyFileSync(path.join(project, 'CHANGELOG.md'), path.join(theme, 'CHANGELOG.md'));
+const changelog = fs.readFileSync(path.join(project, 'CHANGELOG.md'));
+const packagedChangelog = path.join(theme, 'CHANGELOG.md');
+if (!fs.existsSync(packagedChangelog) || !fs.readFileSync(packagedChangelog).equals(changelog)) fs.writeFileSync(packagedChangelog, changelog);
 const outputDir = path.join(project, 'dist');
 fs.mkdirSync(outputDir, { recursive: true });
 const output = path.join(outputDir, `${slug}-${version}.zip`);

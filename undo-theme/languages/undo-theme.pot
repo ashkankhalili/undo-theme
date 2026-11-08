@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.2.4\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.2.5\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:2
 msgid "% comments"
@@ -9,12 +9,12 @@ msgstr ""
 msgid "%s%% of the earlier layout visible"
 msgstr ""
 
-#: template-parts/landing.php:36
-msgid "A better site or product should help people understand, decide, and act. The design follows that job."
+#: style.css:1
+msgid "A Persian-first WordPress theme for creative agencies and studios, with an English visitor interface and dedicated RTL styles. Includes a responsive landing page, blog and page templates, a standalone settings dashboard for layout, header, footer and sidebars, plus Elementor-compatible pages and Theme Builder locations."
 msgstr ""
 
-#: style.css:1
-msgid "A bilingual, RTL-ready agency theme with Elementor support and editable brand settings."
+#: template-parts/landing.php:36
+msgid "A better site or product should help people understand, decide, and act. The design follows that job."
 msgstr ""
 
 #: functions.php:107 template-parts/landing.php:39
@@ -47,6 +47,10 @@ msgstr ""
 
 #: functions.php:124 template-parts/landing.php:7
 msgid "Approach"
+msgstr ""
+
+#: inc/github-updater.php:134
+msgid "Back to WordPress Updates"
 msgstr ""
 
 #: template-parts/landing.php:26
@@ -289,6 +293,10 @@ msgstr ""
 msgid "No posts found."
 msgstr ""
 
+#: inc/github-updater.php:133
+msgid "No release notes were provided for this version."
+msgstr ""
+
 #: inc/settings.php:35
 msgid "Normal WordPress pages. Elementor pages use their own layout."
 msgstr ""
@@ -369,6 +377,10 @@ msgstr ""
 msgid "Refine"
 msgstr ""
 
+#: inc/github-updater.php:123
+msgid "Release details are unavailable. Refresh the WordPress Updates screen and try again."
+msgstr ""
+
 #: inc/settings.php:128
 msgid "Remove image"
 msgstr ""
@@ -379,6 +391,10 @@ msgstr ""
 
 #: search.php:5
 msgid "Search results for: %s"
+msgstr ""
+
+#: inc/github-updater.php:131
+msgid "See what changed before you update. Your theme settings and WordPress content are stored outside the theme files."
 msgstr ""
 
 #: inc/settings.php:119
@@ -537,7 +553,7 @@ msgstr ""
 msgid "Tell us what you want to make."
 msgstr ""
 
-#: inc/github-updater.php:107
+#: inc/github-updater.php:152
 msgid "The UNDO theme update failed its checksum check."
 msgstr ""
 
@@ -555,6 +571,10 @@ msgstr ""
 
 #: inc/settings.php:148
 msgid "Theme settings sections"
+msgstr ""
+
+#: inc/github-updater.php:130
+msgid "Theme update"
 msgstr ""
 
 #: functions.php:98
@@ -581,7 +601,11 @@ msgstr ""
 msgid "UNDO creates new digital products and redesigns the ones that no longer serve your business. From the first screen to the working code."
 msgstr ""
 
-#: inc/github-updater.php:99
+#: inc/github-updater.php:128
+msgid "UNDO theme update details"
+msgstr ""
+
+#: inc/github-updater.php:144
 msgid "Unable to verify the UNDO theme update package."
 msgstr ""
 
@@ -595,6 +619,10 @@ msgstr ""
 
 #: inc/settings.php:119
 msgid "Use this image"
+msgstr ""
+
+#: inc/github-updater.php:134
+msgid "View the GitHub release"
 msgstr ""
 
 #: footer.php:5 template-parts/landing.php:27
@@ -627,6 +655,10 @@ msgstr ""
 
 #: template-parts/landing.php:20
 msgid "Websites, plugins & apps made better."
+msgstr ""
+
+#: inc/github-updater.php:132
+msgid "What changed"
 msgstr ""
 
 #: template-parts/landing.php:38
@@ -671,6 +703,10 @@ msgstr ""
 
 #: template-parts/landing.php:35
 msgid "Working product"
+msgstr ""
+
+#: inc/github-updater.php:119
+msgid "You are not allowed to view theme update details."
 msgstr ""
 
 #: template-parts/landing.php:37

@@ -35,14 +35,14 @@ Keep the theme source in a dedicated Git repository once created. The WordPress 
 
 1. Increment `Version` in `style.css` and `UNDO_THEME_VERSION` in `functions.php` together; use semantic versions.
 2. Regenerate and review POT/PO/MO files. Confirm no empty Persian entry and that Persian catalog loads from `languages/fa_IR.mo`.
-3. Update `CHANGELOG.md`, README requirements, and screenshot when the appearance changes.
+3. Update both `CHANGELOG.md` files, README requirements, and screenshot when the appearance changes. For each new feature, revise the theme's `readme.txt` feature list and limitations and the translated `style.css` Description so Appearance → Themes stays accurate. Write release notes that explain the changes; installed versions 0.2.5 and later display them in the WordPress update popup.
 4. Run `node tools/package-theme.mjs`; inspect the ZIP root, file list, and SHA-256. Install that exact ZIP on staging and read back the activated version.
 5. Merge the reviewed change to `main`. The release job runs only after PHP and package checks pass; it creates the `vX.Y.Z` tag and publishes the exact checked ZIP and checksum as GitHub Release assets.
 6. Verify the GitHub Action, tag commit, release asset URL, digest, checksum, and installable ZIP contents. Test the WordPress dashboard upgrade on staging before telling customers the release is available.
 
 ## GitHub update channel
 
-The public GitHub Releases channel, `Update URI`, exact asset matching, and checksum verification start in 0.2.3. Version 0.2.2 needs one final manual ZIP installation to receive the updater. Then test 0.2.3-to-0.2.4 through WordPress Updates without a ZIP upload. Follow [GITHUB_UPDATES.md](GITHUB_UPDATES.md) for the repeatable release and verification sequence. Customer-only updates and license eligibility remain open product decisions; no token or secret is embedded in the theme.
+The public GitHub Releases channel, `Update URI`, exact asset matching, and checksum verification start in 0.2.3. WordPress dashboard discovery of 0.2.4 on staging is confirmed. The 0.2.3 details popup linked to GitHub, which refused iframe embedding; 0.2.5 adds a same-site details view for subsequent updates. Follow [GITHUB_UPDATES.md](GITHUB_UPDATES.md) for the repeatable release and verification sequence. Customer-only updates and license eligibility remain open product decisions; no token or secret is embedded in the theme.
 
 WordPress replaces the theme directory during upgrades, so store customer changes in theme mods/options, a child theme, or content—not edited parent-theme files. Keep the shipped ZIP and update manifest aligned. A customer license server, if added later, needs its own privacy, authentication, and support policy.
 

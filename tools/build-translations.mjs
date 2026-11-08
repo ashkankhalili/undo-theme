@@ -120,7 +120,7 @@ const fa = {
   'Your project brief has been downloaded.':'خلاصه پروژه شما دانلود شد.',
   'new perspective':'نگاه تازه',
   'UNDO Web Developments':'توسعه وب UNDO',
-  'A bilingual, RTL-ready agency theme with Elementor support and editable brand settings.':'پوسته شرکتی دوزبانه و راست‌چین با پشتیبانی از المنتور و تنظیمات قابل ویرایش برند.'
+  'A Persian-first WordPress theme for creative agencies and studios, with an English visitor interface and dedicated RTL styles. Includes a responsive landing page, blog and page templates, a standalone settings dashboard for layout, header, footer and sidebars, plus Elementor-compatible pages and Theme Builder locations.':'پوسته وردپرس فارسی‌محور برای آژانس‌ها و استودیوهای خلاق، با رابط انگلیسی برای بازدیدکنندگان و استایل راست‌چین اختصاصی. شامل صفحه اصلی واکنش‌گرا، قالب‌های وبلاگ و صفحه، پیشخوان مستقل تنظیمات برای چیدمان، سربرگ، پانوشت و نوار کناری، و سازگاری با صفحه‌های المنتور و جایگاه‌های قالب‌ساز آن.'
 };
 
 Object.assign(fa, {
@@ -185,6 +185,15 @@ Object.assign(fa, {
   "Theme settings sections": "بخش‌های تنظیمات پوسته",
   "Website layout": "چیدمان وب‌سایت",
   "Wide": "عریض",
+  "Back to WordPress Updates": "بازگشت به به‌روزرسانی‌های وردپرس",
+  "No release notes were provided for this version.": "برای این نسخه یادداشت انتشار ثبت نشده است.",
+  "Release details are unavailable. Refresh the WordPress Updates screen and try again.": "جزئیات انتشار در دسترس نیست. صفحه به‌روزرسانی‌های وردپرس را تازه کنید و دوباره تلاش کنید.",
+  "See what changed before you update. Your theme settings and WordPress content are stored outside the theme files.": "پیش از به‌روزرسانی، تغییرات را ببینید. تنظیمات پوسته و محتوای وردپرس بیرون از فایل‌های پوسته ذخیره می‌شوند.",
+  "Theme update": "به‌روزرسانی پوسته",
+  "UNDO theme update details": "جزئیات به‌روزرسانی پوسته UNDO",
+  "View the GitHub release": "مشاهده انتشار در گیت‌هاب",
+  "What changed": "چه چیزهایی تغییر کرده‌اند",
+  "You are not allowed to view theme update details.": "شما مجوز مشاهده جزئیات به‌روزرسانی پوسته را ندارید.",
   "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings.": "ابزارک‌هایی که با فعال‌سازی در تنظیمات پوسته UNDO کنار نوشته‌ها، صفحه‌ها یا بایگانی‌ها نمایش داده می‌شوند.",
 });
 
@@ -202,13 +211,13 @@ for (const file of files) {
     refs.get(id).push(`${path.relative(root, file).replaceAll('\\', '/')}:${line}`);
   }
 }
-for (const id of ['UNDO Web Developments', 'A bilingual, RTL-ready agency theme with Elementor support and editable brand settings.']) refs.set(id, ['style.css:1']);
+for (const id of ['UNDO Web Developments', 'A Persian-first WordPress theme for creative agencies and studios, with an English visitor interface and dedicated RTL styles. Includes a responsive landing page, blog and page templates, a standalone settings dashboard for layout, header, footer and sidebars, plus Elementor-compatible pages and Theme Builder locations.']) refs.set(id, ['style.css:1']);
 const ids = [...refs.keys()].sort((a, b) => Buffer.compare(Buffer.from(a), Buffer.from(b)));
 const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.2.4',
+  'Project-Id-Version: UNDO Web Developments 0.2.5',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',
