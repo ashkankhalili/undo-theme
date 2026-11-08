@@ -13,6 +13,7 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ### Build
 
+- Fixed source line endings for reproducible ZIPs across Windows and Linux; binary theme assets keep their original bytes.
 - Added GitHub Actions checks for PHP syntax on 7.4 and 8.3, JavaScript syntax, generated translation catalogs, installable ZIP integrity, and a downloadable pre-release artifact.
 
 ## [0.2.1] - 2026-11-08
