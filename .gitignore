@@ -1,0 +1,5 @@
+dist/
+/undo-web-developments.zip
+node_modules/
+*.log
+.DS_Store

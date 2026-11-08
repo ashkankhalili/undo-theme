@@ -1,0 +1,62 @@
+name: Theme checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  php-lint:
+    name: PHP syntax (${{ matrix.php }})
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['7.4', '8.3']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          tools: none
+          coverage: none
+      - name: Lint theme PHP
+        run: find undo-web-developments -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+
+  package:
+    name: Translation and package integrity
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JavaScript syntax
+        run: |
+          node --check undo-web-developments/assets/js/theme.js
+          node --check undo-web-developments/assets/js/admin-settings.js
+          node --check tools/build-translations.mjs
+          node --check tools/package-theme.mjs
+      - name: Verify translation catalogs are current
+        run: |
+          node tools/build-translations.mjs
+          git diff --exit-code -- undo-web-developments/languages
+      - name: Build installable theme ZIP
+        run: node tools/package-theme.mjs
+      - name: Verify ZIP and checksum
+        run: |
+          cd dist
+          sha256sum -c undo-web-developments-*.zip.sha256
+          unzip -t undo-web-developments-*.zip
+          unzip -Z1 undo-web-developments-*.zip | awk '$0 !~ /^undo-web-developments\// { bad=1; print "Unexpected ZIP path: " $0 } END { exit bad }'
+          unzip -Z1 undo-web-developments-*.zip | grep -Fx 'undo-web-developments/style.css'
+          unzip -Z1 undo-web-developments-*.zip | grep -Fx 'undo-web-developments/functions.php'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: theme-pre-release
+          path: |
+            dist/*.zip
+            dist/*.sha256

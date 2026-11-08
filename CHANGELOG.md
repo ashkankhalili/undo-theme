@@ -1,0 +1,75 @@
+# Changelog
+
+All changes to the customer theme are recorded here. Use a version number in `style.css`, `functions.php`, and the package filename for every release.
+
+## [Unreleased]
+
+### Documentation
+
+- Added the first online staging milestone, including exact CI artifact installation, bilingual and RTL checks, Elementor checks, and a dated test record.
+- Recorded the owner-provided GitHub repository and staging domain in the roadmap and product decisions.
+- Added a premium theme blueprint covering product boundaries, standalone settings, Elementor addon widgets, Persian/English RTL delivery, staged implementation, QA gates, and GitHub customer releases.
+- Added a product decision log and updated the implementation roadmap and development workflow to link the blueprint. No theme runtime behavior changed.
+
+### Build
+
+- Added GitHub Actions checks for PHP syntax on 7.4 and 8.3, JavaScript syntax, generated translation catalogs, installable ZIP integrity, and a downloadable pre-release artifact.
+
+## [0.2.1] - 2026-11-08
+
+### Fixed
+
+- Removed document-wide scroll snapping, which could pull normal pages directly to the footer because it was their only snap target.
+- Limited guided section tracking, wheel handling, keyboard handling, and section motion to the built-in landing page.
+- Applied the same scroll fix to the hosted static preview.
+
+### Verification
+
+- Browser check: a normal page remained at the requested scroll position, with no section motion or scroll snapping.
+- Browser check: the landing page remained at the requested Services position, with no scroll snapping.
+- Live WordPress and Elementor staging behavior remains to be verified.
+
+## [0.2.0] - 2026-11-08
+
+### Changed
+
+- Persian is the default visitor language for new installs; English remains supported. Existing saved choices remain intact.
+- Theme settings now live in one standalone UNDO Theme Settings dashboard with tabs for website layout, header, single posts, pages, sidebar, blog, footer, and homepage.
+- Each tab saves its own fields while retaining settings from other tabs. Values are sanitized and constrained to supported options or ranges.
+- The built-in header, footer, page, post, archive, blog, and search templates now honor the relevant controls. Elementor Theme Builder templates continue to take precedence.
+- Persian typography selectors now match WordPress's `fa-IR` language attribute.
+
+### Added
+
+- Dedicated `rtl.css` and logical-direction layout refinements.
+- Registered widget sidebar with conditional placement in posts, pages, archives, and search.
+- Header logo selection from the WordPress media library and adjustable logo width within the standalone dashboard.
+- Post card controls for image, date, excerpt, excerpt length, and column count.
+- A staged premium-theme development roadmap and expanded test/release gates.
+
+### Migration
+
+- Update the parent theme with the new ZIP. Stored theme options and content remain in the database. The default language changes to Persian only where no visitor or saved theme choice exists.
+
+### Remaining before commercial release
+
+- Live WordPress/Elementor validation, theme review checks, accessibility and browser coverage, asset licensing, and a tested GitHub update channel.
+
+## [0.1.0] - 2026-11-08
+
+### Added
+
+- Initial WordPress classic theme based on the UNDO Web Developments landing design.
+- Responsive default landing page, standard page/post/archive/search/404 templates, and theme screenshot.
+- Elementor-compatible page content and Elementor Pro header, footer, single, and archive locations.
+- Appearance → UNDO Theme Settings with sanitized bilingual hero copy, CTA, colors, contact email, language default, and section rail visibility.
+- English and Persian visitor language switcher with RTL styling and a persistent language choice.
+- POT, en_US PO/MO, and fa_IR PO/MO translation catalogs.
+- Local project brief download in English or Persian.
+- Installation, maintenance, and release workflow documentation.
+
+### Known limits
+
+- Customer-authored content needs a multilingual content plugin for translation and SEO URLs.
+- GitHub-based updates and customer licensing await a repository and release policy.
+- Live WordPress/Elementor activation and Theme Check are pending staging verification.

@@ -1,0 +1,13 @@
+/*
+ * RTL refinements for the UNDO theme.
+ * Main layouts use CSS logical properties; this file corrects visual details.
+ */
+html[dir="rtl"] body{direction:rtl;text-align:start}
+html[dir="rtl"] .skip{left:auto;inset-inline-start:16px}
+html[dir="rtl"] .desktop-nav{margin-inline-start:auto;margin-inline-end:0}
+html[dir="rtl"] .content-layout{direction:rtl}
+html[dir="rtl"] .wp-content :is(blockquote,pre){text-align:start}
+html[dir="rtl"] .wp-content blockquote{border-inline-start:3px solid var(--red);padding-inline-start:1.2em;margin-inline:0}
+html[dir="rtl"] .wp-content .post-navigation .nav-links{direction:rtl}
+html[dir="rtl"] .undo-sidebar :is(input,textarea){direction:rtl;text-align:start}
+html[dir="rtl"] .archive-copy{text-align:start}

@@ -27,4 +27,3 @@ New visitors see Persian unless the default is changed in theme settings. See th
 ## First online milestone
 
 Source repository: `https://github.com/ashkankhalili/undo-theme`. The owner-designated staging site is `https://ashkankhalili.ir`. Follow the [staging milestone](docs/STAGING_MILESTONE.md): pass GitHub checks, install the exact CI-built ZIP, record environment versions and test results, then start the header stage. A GitHub push or passing CI does not by itself validate live WordPress behavior.
-

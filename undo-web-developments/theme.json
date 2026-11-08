@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "layout": { "contentSize": "760px", "wideSize": "1440px" },
+    "color": { "palette": [
+      { "slug": "ink", "color": "#242320", "name": "Ink" },
+      { "slug": "paper", "color": "#f8f6f2", "name": "Paper" },
+      { "slug": "accent", "color": "#b83b30", "name": "UNDO Red" }
+    ] },
+    "typography": { "fluid": true }
+  },
+  "styles": { "color": { "background": "#f8f6f2", "text": "#242320" } }
+}
