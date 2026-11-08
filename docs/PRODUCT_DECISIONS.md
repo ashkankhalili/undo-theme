@@ -18,7 +18,7 @@ Use this log before changing product scope. "Confirmed" comes from the user's in
 | WordPress.org listing | Open | Possible later, not part of first commercial release | Review directory rules and move planner out of theme |
 | WordPress/PHP/Elementor versions | Open | Current theme header is provisional | Set support matrix after live compatibility tests |
 | Multilingual content system | Open | Use a compatible content translation plugin | Choose and test translated URLs, templates, menus, SEO, cache |
-| Customer updates | Open | GitHub-hosted release assets plus a verified WordPress updater | Confirm public/private release and license policy |
+| Customer updates | Confirmed | Public GitHub Release ZIPs appear in WordPress Updates from theme version 0.2.3; an admin installs them | Verify 0.2.3-to-0.2.4 on staging; license-gated downloads remain open |
 | Licensing | Open | Never disable customer content or rendering on license expiry | Define update/support eligibility and renewal terms |
 | Demo import | Working assumption | One Persian demo with an English counterpart; reversible import | Confirm licensed assets and import behavior |
 | Planner data | Open | Move planner to addon; browser-only by default | Choose optional submission/storage/consent design |

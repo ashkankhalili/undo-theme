@@ -90,9 +90,11 @@ const fa = {
   'Structure, content, interface':'ساختار، محتوا، رابط کاربری',
   'Tell us what you want to make.':'از پروژه‌ای که در ذهن دارید بگویید.',
   'The page you requested is unavailable.':'صفحه موردنظر شما در دسترس نیست.',
+  'The UNDO theme update failed its checksum check.':'بررسی صحت فایل به‌روزرسانی پوسته UNDO ناموفق بود.',
   'The right work for the next version of your business.':'کار درست برای نسخه بعدی کسب‌وکار شما.',
   'To be discussed':'در گفت‌وگو مشخص می‌شود',
   'UNDO Theme Settings':'تنظیمات پوسته UNDO',
+  'Unable to verify the UNDO theme update package.':'اعتبار فایل به‌روزرسانی پوسته UNDO تأیید نشد.',
   'UNDO Web Developments — Project brief':'توسعه وب UNDO — خلاصه پروژه',
   'UNDO Web Developments, back to top':'توسعه وب UNDO، بازگشت به ابتدا',
   'UNDO creates new digital products and redesigns the ones that no longer serve your business. From the first screen to the working code.':'UNDO محصولات دیجیتال تازه می‌سازد و آنچه دیگر به کار کسب‌وکار شما نمی‌آید از نو طراحی می‌کند؛ از اولین صفحه تا کد نهایی.',
@@ -206,7 +208,7 @@ const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.2.2',
+  'Project-Id-Version: UNDO Web Developments 0.2.3',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

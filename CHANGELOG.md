@@ -4,6 +4,23 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.2.3] - 2026-11-08
+
+### Added
+
+- Added a GitHub Releases update channel through WordPress's `Update URI` hook. Newer versioned release ZIPs appear in the WordPress update dashboard.
+- Added SHA-256 verification before WordPress installs the downloaded theme ZIP. The updater accepts only the exact `undo-theme` release asset and rejects an invalid or missing checksum.
+- Added PHP checks for update discovery, version handling, release URL validation, checksum fallback, and tampered downloads.
+
+### Build
+
+- Added a GitHub Actions release job that publishes the exact CI-tested ZIP and checksum after PHP and package checks pass, then verifies the release asset digest and tag.
+
+### Upgrade note
+
+- Version 0.2.2 has no updater. Install 0.2.3 once from the GitHub Release ZIP to enable future dashboard updates; verify the 0.2.3-to-0.2.4 update on staging before customer rollout.
+- This is a staging bootstrap release. Customer rollout awaits the live dashboard update test and the remaining premium theme quality gates.
+
 ## [0.2.2] - 2026-11-08
 
 ### Changed

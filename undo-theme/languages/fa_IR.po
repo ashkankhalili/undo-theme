@@ -1,11 +1,11 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.2.2\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.2.3\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:2
 msgid "% comments"
 msgstr "% دیدگاه"
 
-#: functions.php:90
+#: functions.php:91
 msgid "%s%% of the earlier layout visible"
 msgstr "%s٪ از طرح قبلی دیده می‌شود"
 
@@ -17,7 +17,7 @@ msgstr "یک وب‌سایت یا محصول بهتر باید به مردم ک�
 msgid "A bilingual, RTL-ready agency theme with Elementor support and editable brand settings."
 msgstr "پوسته شرکتی دوزبانه و راست‌چین با پشتیبانی از المنتور و تنظیمات قابل ویرایش برند."
 
-#: functions.php:106 template-parts/landing.php:39
+#: functions.php:107 template-parts/landing.php:39
 msgid "A redesign"
 msgstr "بازطراحی"
 
@@ -45,7 +45,7 @@ msgstr "متن دکمه اقدام (فارسی)"
 msgid "After"
 msgstr "بعد"
 
-#: functions.php:123 template-parts/landing.php:7
+#: functions.php:124 template-parts/landing.php:7
 msgid "Approach"
 msgstr "روش کار"
 
@@ -89,7 +89,7 @@ msgstr "نام شرکت"
 msgid "Card columns"
 msgstr "تعداد ستون‌های کارت"
 
-#: functions.php:89
+#: functions.php:90
 msgid "Close menu"
 msgstr "بستن منو"
 
@@ -157,7 +157,7 @@ msgstr "طول خلاصه به واژه"
 msgid "Footer"
 msgstr "پانوشت"
 
-#: functions.php:19
+#: functions.php:20
 msgid "Footer menu"
 msgstr "فهرست پایین صفحه"
 
@@ -177,7 +177,7 @@ msgstr "شعار پایین صفحه (فارسی)"
 msgid "Get started"
 msgstr "شروع کنید"
 
-#: functions.php:95
+#: functions.php:96
 msgid "Goal"
 msgstr "هدف"
 
@@ -257,7 +257,7 @@ msgstr "تأثیر اول را ماندگار کنید."
 msgid "Maximum logo width in pixels"
 msgstr "بیشترین عرض نشان به پیکسل"
 
-#: functions.php:102 template-parts/landing.php:38
+#: functions.php:103 template-parts/landing.php:38
 msgid "Mobile app"
 msgstr "اپلیکیشن موبایل"
 
@@ -297,7 +297,7 @@ msgstr "صفحه‌های معمولی وردپرس. صفحه‌های المن�
 msgid "One comment"
 msgstr "یک دیدگاه"
 
-#: functions.php:88 header.php:27
+#: functions.php:89 header.php:27
 msgid "Open menu"
 msgstr "باز کردن منو"
 
@@ -337,15 +337,15 @@ msgstr "کارت‌های نوشته در وبلاگ، بایگانی و نتا�
 msgid "Post details in the built-in single template."
 msgstr "جزئیات نوشته در قالب داخلی نوشته."
 
-#: functions.php:19
+#: functions.php:20
 msgid "Primary menu"
 msgstr "فهرست اصلی"
 
-#: functions.php:25 sidebar.php:2
+#: functions.php:26 sidebar.php:2
 msgid "Primary sidebar"
 msgstr "نوار کناری اصلی"
 
-#: functions.php:92
+#: functions.php:93
 msgid "Project"
 msgstr "پروژه"
 
@@ -353,7 +353,7 @@ msgstr "پروژه"
 msgid "Project or business name"
 msgstr "نام پروژه یا کسب‌وکار"
 
-#: functions.php:124 template-parts/landing.php:9
+#: functions.php:125 template-parts/landing.php:9
 msgid "Project planner"
 msgstr "برنامه‌ریز پروژه"
 
@@ -389,11 +389,11 @@ msgstr "انتخاب نشان سربرگ"
 msgid "Select image"
 msgstr "انتخاب تصویر"
 
-#: functions.php:93
+#: functions.php:94
 msgid "Service"
 msgstr "خدمت"
 
-#: functions.php:122 template-parts/landing.php:6
+#: functions.php:123 template-parts/landing.php:6
 msgid "Services"
 msgstr "خدمات"
 
@@ -509,7 +509,7 @@ msgstr "عرض وب‌سایت"
 msgid "Skip to content"
 msgstr "رفتن به محتوای اصلی"
 
-#: functions.php:105 template-parts/landing.php:39
+#: functions.php:106 template-parts/landing.php:39
 msgid "Something new"
 msgstr "پروژه‌ای تازه"
 
@@ -521,7 +521,7 @@ msgstr "ابتدای جهت نوشتار"
 msgid "Start here"
 msgstr "از اینجا شروع کنید"
 
-#: functions.php:94
+#: functions.php:95
 msgid "Starting point"
 msgstr "نقطه شروع"
 
@@ -536,6 +536,10 @@ msgstr "ساختار، محتوا، رابط کاربری"
 #: template-parts/landing.php:37
 msgid "Tell us what you want to make."
 msgstr "از پروژه‌ای که در ذهن دارید بگویید."
+
+#: inc/github-updater.php:107
+msgid "The UNDO theme update failed its checksum check."
+msgstr "بررسی صحت فایل به‌روزرسانی پوسته UNDO ناموفق بود."
 
 #: 404.php:3
 msgid "The page you requested is unavailable."
@@ -553,7 +557,7 @@ msgstr "نوار کناری فقط در بخش‌های فعال و پس از ا
 msgid "Theme settings sections"
 msgstr "بخش‌های تنظیمات پوسته"
 
-#: functions.php:97
+#: functions.php:98
 msgid "To be discussed"
 msgstr "در گفت‌وگو مشخص می‌شود"
 
@@ -565,7 +569,7 @@ msgstr "تنظیمات پوسته UNDO"
 msgid "UNDO Web Developments"
 msgstr "توسعه وب UNDO"
 
-#: functions.php:91
+#: functions.php:92
 msgid "UNDO Web Developments — Project brief"
 msgstr "توسعه وب UNDO — خلاصه پروژه"
 
@@ -577,11 +581,15 @@ msgstr "توسعه وب UNDO، بازگشت به ابتدا"
 msgid "UNDO creates new digital products and redesigns the ones that no longer serve your business. From the first screen to the working code."
 msgstr "UNDO محصولات دیجیتال تازه می‌سازد و آنچه دیگر به کار کسب‌وکار شما نمی‌آید از نو طراحی می‌کند؛ از اولین صفحه تا کد نهایی."
 
+#: inc/github-updater.php:99
+msgid "Unable to verify the UNDO theme update package."
+msgstr "اعتبار فایل به‌روزرسانی پوسته UNDO تأیید نشد."
+
 #: template-parts/landing.php:35
 msgid "Understand"
 msgstr "شناخت"
 
-#: functions.php:96
+#: functions.php:97
 msgid "Untitled project"
 msgstr "پروژه بدون نام"
 
@@ -605,7 +613,7 @@ msgstr "برای نیازهای شما راهکار داریم"
 msgid "Web Developments"
 msgstr "توسعه وب"
 
-#: functions.php:100 template-parts/landing.php:38
+#: functions.php:101 template-parts/landing.php:38
 msgid "Website"
 msgstr "وب‌سایت"
 
@@ -645,11 +653,11 @@ msgstr "چه از یک ایده تازه شروع کنید، چه محصولی �
 msgid "Wide"
 msgstr "عریض"
 
-#: functions.php:27
+#: functions.php:28
 msgid "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings."
 msgstr "ابزارک‌هایی که با فعال‌سازی در تنظیمات پوسته UNDO کنار نوشته‌ها، صفحه‌ها یا بایگانی‌ها نمایش داده می‌شوند."
 
-#: functions.php:101 template-parts/landing.php:38
+#: functions.php:102 template-parts/landing.php:38
 msgid "WordPress plugin"
 msgstr "افزونه وردپرس"
 
@@ -669,7 +677,7 @@ msgstr "محصولی که کار می‌کند"
 msgid "Your answers stay in this browser. The brief downloads to your device."
 msgstr "پاسخ‌های شما در همین مرورگر می‌ماند. خلاصه پروژه روی دستگاهتان دانلود می‌شود."
 
-#: functions.php:98
+#: functions.php:99
 msgid "Your project brief has been downloaded."
 msgstr "خلاصه پروژه شما دانلود شد."
 

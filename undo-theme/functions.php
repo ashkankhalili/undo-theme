@@ -1,7 +1,8 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.2.2' );
+define( 'UNDO_THEME_VERSION', '0.2.3' );
 require_once get_template_directory() . '/inc/settings.php';
+require_once get_template_directory() . '/inc/github-updater.php';
 
 function undo_theme_setup() {
     add_theme_support( 'title-tag' );

@@ -24,7 +24,9 @@ jobs:
           tools: none
           coverage: none
       - name: Lint theme PHP
-        run: find undo-theme -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+        run: |
+          find undo-theme tests -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+          php tests/github-updater.php
 
   package:
     name: Translation and package integrity
@@ -54,9 +56,61 @@ jobs:
           unzip -Z1 undo-theme-*.zip | awk '$0 !~ /^undo-theme\// { bad=1; print "Unexpected ZIP path: " $0 } END { exit bad }'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/style.css'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/functions.php'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/inc/github-updater.php'
       - uses: actions/upload-artifact@v4
         with:
           name: theme-pre-release
           path: |
             dist/*.zip
             dist/*.sha256
+
+  release:
+    name: Publish versioned GitHub Release
+    needs: [php-lint, package]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    concurrency:
+      group: undo-theme-release
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: theme-pre-release
+          path: dist
+      - name: Publish exact tested ZIP and checksum
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          version=$(sed -n 's/^Version: //p' undo-theme/style.css | head -1)
+          tag="v${version}"
+          zip="dist/undo-theme-${version}.zip"
+          checksum="${zip}.sha256"
+          test -f "$zip" && test -f "$checksum"
+          (cd dist && sha256sum -c "undo-theme-${version}.zip.sha256")
+
+          current_main=$(gh api "repos/${GITHUB_REPOSITORY}/branches/main" --jq '.commit.sha')
+          if [ "$current_main" != "$GITHUB_SHA" ]; then
+            echo "Skipping superseded main commit $GITHUB_SHA"
+            exit 0
+          fi
+
+          created=0
+          if ! gh release view "$tag" --json tagName >/dev/null 2>&1; then
+            awk -v v="$version" 'index($0, "## [" v "]") == 1 { found=1; next } found && /^## \[/ { exit } found { print }' CHANGELOG.md > dist/release-notes.md
+            test -s dist/release-notes.md
+            gh release create "$tag" "$zip" "$checksum" --target "$GITHUB_SHA" --title "UNDO Theme $tag" --notes-file dist/release-notes.md
+            created=1
+          fi
+
+          expected=$(awk '{ print $1 }' "$checksum")
+          actual=$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${tag}" --jq ".assets[] | select(.name == \"undo-theme-${version}.zip\") | .digest")
+          test "$actual" = "sha256:${expected}"
+          if [ "$created" = 1 ]; then
+            tag_commit=$(gh api "repos/${GITHUB_REPOSITORY}/git/ref/tags/${tag}" --jq '.object.sha')
+            test "$tag_commit" = "$GITHUB_SHA"
+          fi
+          echo "Verified $tag with SHA-256 $expected"

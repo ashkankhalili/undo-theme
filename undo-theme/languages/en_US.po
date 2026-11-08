@@ -1,11 +1,11 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.2.2\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: en_US\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.2.3\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: en_US\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:2
 msgid "% comments"
 msgstr "% comments"
 
-#: functions.php:90
+#: functions.php:91
 msgid "%s%% of the earlier layout visible"
 msgstr "%s%% of the earlier layout visible"
 
@@ -17,7 +17,7 @@ msgstr "A better site or product should help people understand, decide, and act.
 msgid "A bilingual, RTL-ready agency theme with Elementor support and editable brand settings."
 msgstr "A bilingual, RTL-ready agency theme with Elementor support and editable brand settings."
 
-#: functions.php:106 template-parts/landing.php:39
+#: functions.php:107 template-parts/landing.php:39
 msgid "A redesign"
 msgstr "A redesign"
 
@@ -45,7 +45,7 @@ msgstr "Action label (Persian)"
 msgid "After"
 msgstr "After"
 
-#: functions.php:123 template-parts/landing.php:7
+#: functions.php:124 template-parts/landing.php:7
 msgid "Approach"
 msgstr "Approach"
 
@@ -89,7 +89,7 @@ msgstr "COMPANY NAME"
 msgid "Card columns"
 msgstr "Card columns"
 
-#: functions.php:89
+#: functions.php:90
 msgid "Close menu"
 msgstr "Close menu"
 
@@ -157,7 +157,7 @@ msgstr "Excerpt length in words"
 msgid "Footer"
 msgstr "Footer"
 
-#: functions.php:19
+#: functions.php:20
 msgid "Footer menu"
 msgstr "Footer menu"
 
@@ -177,7 +177,7 @@ msgstr "Footer slogan (Persian)"
 msgid "Get started"
 msgstr "Get started"
 
-#: functions.php:95
+#: functions.php:96
 msgid "Goal"
 msgstr "Goal"
 
@@ -257,7 +257,7 @@ msgstr "Make the first impression count."
 msgid "Maximum logo width in pixels"
 msgstr "Maximum logo width in pixels"
 
-#: functions.php:102 template-parts/landing.php:38
+#: functions.php:103 template-parts/landing.php:38
 msgid "Mobile app"
 msgstr "Mobile app"
 
@@ -297,7 +297,7 @@ msgstr "Normal WordPress pages. Elementor pages use their own layout."
 msgid "One comment"
 msgstr "One comment"
 
-#: functions.php:88 header.php:27
+#: functions.php:89 header.php:27
 msgid "Open menu"
 msgstr "Open menu"
 
@@ -337,15 +337,15 @@ msgstr "Post cards in blog, archive, and search results."
 msgid "Post details in the built-in single template."
 msgstr "Post details in the built-in single template."
 
-#: functions.php:19
+#: functions.php:20
 msgid "Primary menu"
 msgstr "Primary menu"
 
-#: functions.php:25 sidebar.php:2
+#: functions.php:26 sidebar.php:2
 msgid "Primary sidebar"
 msgstr "Primary sidebar"
 
-#: functions.php:92
+#: functions.php:93
 msgid "Project"
 msgstr "Project"
 
@@ -353,7 +353,7 @@ msgstr "Project"
 msgid "Project or business name"
 msgstr "Project or business name"
 
-#: functions.php:124 template-parts/landing.php:9
+#: functions.php:125 template-parts/landing.php:9
 msgid "Project planner"
 msgstr "Project planner"
 
@@ -389,11 +389,11 @@ msgstr "Select header logo"
 msgid "Select image"
 msgstr "Select image"
 
-#: functions.php:93
+#: functions.php:94
 msgid "Service"
 msgstr "Service"
 
-#: functions.php:122 template-parts/landing.php:6
+#: functions.php:123 template-parts/landing.php:6
 msgid "Services"
 msgstr "Services"
 
@@ -509,7 +509,7 @@ msgstr "Site width"
 msgid "Skip to content"
 msgstr "Skip to content"
 
-#: functions.php:105 template-parts/landing.php:39
+#: functions.php:106 template-parts/landing.php:39
 msgid "Something new"
 msgstr "Something new"
 
@@ -521,7 +521,7 @@ msgstr "Start"
 msgid "Start here"
 msgstr "Start here"
 
-#: functions.php:94
+#: functions.php:95
 msgid "Starting point"
 msgstr "Starting point"
 
@@ -536,6 +536,10 @@ msgstr "Structure, content, interface"
 #: template-parts/landing.php:37
 msgid "Tell us what you want to make."
 msgstr "Tell us what you want to make."
+
+#: inc/github-updater.php:107
+msgid "The UNDO theme update failed its checksum check."
+msgstr "The UNDO theme update failed its checksum check."
 
 #: 404.php:3
 msgid "The page you requested is unavailable."
@@ -553,7 +557,7 @@ msgstr "The sidebar appears only where enabled and when widgets are assigned."
 msgid "Theme settings sections"
 msgstr "Theme settings sections"
 
-#: functions.php:97
+#: functions.php:98
 msgid "To be discussed"
 msgstr "To be discussed"
 
@@ -565,7 +569,7 @@ msgstr "UNDO Theme Settings"
 msgid "UNDO Web Developments"
 msgstr "UNDO Web Developments"
 
-#: functions.php:91
+#: functions.php:92
 msgid "UNDO Web Developments — Project brief"
 msgstr "UNDO Web Developments — Project brief"
 
@@ -577,11 +581,15 @@ msgstr "UNDO Web Developments, back to top"
 msgid "UNDO creates new digital products and redesigns the ones that no longer serve your business. From the first screen to the working code."
 msgstr "UNDO creates new digital products and redesigns the ones that no longer serve your business. From the first screen to the working code."
 
+#: inc/github-updater.php:99
+msgid "Unable to verify the UNDO theme update package."
+msgstr "Unable to verify the UNDO theme update package."
+
 #: template-parts/landing.php:35
 msgid "Understand"
 msgstr "Understand"
 
-#: functions.php:96
+#: functions.php:97
 msgid "Untitled project"
 msgstr "Untitled project"
 
@@ -605,7 +613,7 @@ msgstr "We provide solutions for your needs"
 msgid "Web Developments"
 msgstr "Web Developments"
 
-#: functions.php:100 template-parts/landing.php:38
+#: functions.php:101 template-parts/landing.php:38
 msgid "Website"
 msgstr "Website"
 
@@ -645,11 +653,11 @@ msgstr "Whether the starting point is a blank page or an existing product, UNDO 
 msgid "Wide"
 msgstr "Wide"
 
-#: functions.php:27
+#: functions.php:28
 msgid "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings."
 msgstr "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings."
 
-#: functions.php:101 template-parts/landing.php:38
+#: functions.php:102 template-parts/landing.php:38
 msgid "WordPress plugin"
 msgstr "WordPress plugin"
 
@@ -669,7 +677,7 @@ msgstr "Working product"
 msgid "Your answers stay in this browser. The brief downloads to your device."
 msgstr "Your answers stay in this browser. The brief downloads to your device."
 
-#: functions.php:98
+#: functions.php:99
 msgid "Your project brief has been downloaded."
 msgstr "Your project brief has been downloaded."
 

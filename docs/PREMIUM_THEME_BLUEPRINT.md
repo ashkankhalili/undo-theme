@@ -1,6 +1,6 @@
 # UNDO premium WordPress theme blueprint
 
-Status: planning document for the existing 0.2.2 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
+Status: planning document for the existing 0.2.3 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
 
 ## 1. Product definition and boundaries
 
@@ -101,7 +101,7 @@ Add more only when a use case cannot be handled well with Elementor's existing w
 | Stage | Deliverable | Exit gate |
 | --- | --- | --- |
 | 0. Product contract | Decisions above, customer personas, supported-version matrix | Scope and distribution agreed |
-| 1. Foundation audit | Fix current 0.2.2 gaps, local WordPress environment, design tokens, option schema | Fresh activation and no PHP warnings |
+| 1. Foundation audit | Fix current 0.2.3 gaps, online WordPress staging, design tokens, option schema | Fresh activation and no PHP warnings |
 | 2. Header | Built-in desktop/mobile header and settings | Keyboard, Persian/English, RTL/LTR, Elementor fallback pass |
 | 3. Single post | Built-in post design, metadata, comments, post navigation | Long-content and Theme Unit Test cases pass |
 | 4. Pages | Standard, full-width, and Elementor page layouts | No duplicate titles; long and mixed-language content pass |
@@ -134,19 +134,19 @@ Build and review each stage independently; do not begin the next visual componen
 ## 9. GitHub and customer update workflow
 
 1. Maintain the connected `ashkankhalili/undo-theme` GitHub repository and preserve its history. Add the addon plugin as a separately installable package in the product source, or in a second repository if independent releases become necessary.
-2. Protect the release branch and require code review plus CI checks. Build theme and addon ZIPs from a clean tag; do not use GitHub's generic source ZIP as the customer package.
+2. Protect the release branch and require code review plus CI checks. For the theme, CI builds the package from the validated `main` commit, then creates its tag and GitHub Release. Addon packaging will need its own release path. Do not use GitHub's generic source ZIP as a customer package.
 3. Keep theme and addon versions explicit. A release record includes compatible WordPress/PHP/Elementor ranges, migrations, changelog, ZIP SHA-256, and rollback instructions.
-4. Choose a public or authenticated update channel. Add stable `Update URI` values and verify manifest/version/package/checksum before exposing an update. Keep credentials and signing keys out of distributed files.
+4. The theme update channel is public GitHub Releases starting in 0.2.3. Keep its `Update URI`, package asset naming, and checksum check stable; test future versions through WordPress Updates. Decide customer-only eligibility separately. Keep credentials and signing keys out of distributed files.
 5. Install the previous version on staging, enter customer-like settings/content, apply the update via WordPress's normal updater, then verify options, pages, widgets, Elementor documents, and license state remain intact.
 6. Publish the exact tested assets, verify the GitHub tag, Action, release URLs, checksum, and downloaded ZIPs. Announce only after this read-back succeeds.
 
 ## 10. Current status and immediate next work
 
-Implemented in 0.2.2: classic theme skeleton, theme.json, basic templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, and a packaged ZIP. These are a foundation, not a finished premium product.
+Implemented in 0.2.3: classic theme skeleton, theme.json, basic templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, and a GitHub Releases updater. These are a foundation, not a finished premium product.
 
-Outstanding: live WordPress/Elementor staging install; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks; verified GitHub update channel.
+Outstanding: live WordPress/Elementor and dashboard-update validation; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks.
 
-**First execution milestone:** create a local/staging WordPress test install, activate the exact 0.2.2 ZIP, test Persian and English settings and RTL, install Elementor Free/Pro in separate scenarios, and record failures. Then design and build the header as the first polished component.
+**First execution milestone:** bootstrap the owner-designated staging site with the exact 0.2.3 Release ZIP, test Persian and English settings and RTL, then verify a later release from the WordPress update dashboard. Record failures before designing the header as the first polished component.
 
 ## Primary references
 

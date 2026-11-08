@@ -1,11 +1,11 @@
 # UNDO Web Developments theme
 
-Version **0.2.2** is an installable classic WordPress theme for the UNDO agency design. Persian is the default visitor language; English remains available. It includes a dedicated RTL stylesheet, normal blog/page templates, a standalone **UNDO Theme Settings** dashboard, and Elementor page/Theme Builder integration.
+Version **0.2.3** is an installable classic WordPress theme for the UNDO agency design. Persian is the default visitor language; English remains available. It includes a dedicated RTL stylesheet, normal blog/page templates, a standalone **UNDO Theme Settings** dashboard, and Elementor page/Theme Builder integration.
 
 ## Install
 
 1. In WordPress, open **Appearance → Themes → Add New → Upload Theme**.
-2. Upload `undo-theme-0.2.2.zip`, install, and activate. On an existing `undo-theme` install, WordPress may offer to replace the current theme; back up the site first.
+2. Upload `undo-theme-0.2.3.zip`, install, and activate. On an existing `undo-theme` install, WordPress may offer to replace the current theme; back up the site first. This is the final manual bootstrap because 0.2.2 has no GitHub updater.
 3. Open **UNDO Theme Settings** in the main admin sidebar. Its tabs cover website layout, header, single posts, pages, sidebar, blog, footer, and homepage. Each tab saves independently without clearing other tabs.
 4. Set the header logo and width in **UNDO Theme Settings → Header** and menus in **Appearance → Menus**.
 5. If using Elementor, install it separately. Edit a page with Elementor and assign it as the static homepage to replace the default landing content. Elementor Pro Theme Builder can replace header, footer, single, and archive locations.
@@ -14,13 +14,19 @@ The language switcher uses `?undo_lang=en` and `?undo_lang=fa` and remembers the
 
 The project planner downloads a text file locally in the browser. It does not submit personal data to the site.
 
+## GitHub updates
+
+The theme uses `Update URI: https://github.com/ashkankhalili/undo-theme` and checks the latest published GitHub Release. When a newer version has the exact `undo-theme-X.Y.Z.zip` asset and a SHA-256 digest or matching `.sha256` asset, WordPress lists it under **Dashboard → Updates**. An administrator starts the update there. The updater verifies the downloaded ZIP checksum before WordPress replaces the theme folder. GitHub's generic source ZIP is never used.
+
+Version 0.2.2 cannot discover GitHub updates because it shipped before this updater. Install 0.2.3 once from its verified release ZIP, then test a later version through the WordPress update dashboard. The public GitHub repository currently means release packages are public; customer license-gated updates are a separate future product decision.
+
 ## Requirements and status
 
 - WordPress 6.2 or later; PHP 7.4 or later.
 - Elementor is optional; Elementor Pro is required for Theme Builder location replacement.
 - This is a **pre-release theme package**. PHP syntax and live WordPress activation must be checked on a WordPress staging install before customer sale.
 - Fonts currently load from Google Fonts. For WordPress.org directory submission or privacy-sensitive customer deployments, self-host licensed font files and run Theme Check.
-- No automatic GitHub updater or license gate is embedded until the distribution and customer update policy are chosen.
+- GitHub Releases update checks are included. Automatic background installation and license-gated downloads are not enabled.
 
 New visitors see Persian unless the default is changed in theme settings. See the [premium theme blueprint](docs/PREMIUM_THEME_BLUEPRINT.md), [product decisions](docs/PRODUCT_DECISIONS.md), [development workflow](docs/WORKFLOW.md), [implementation roadmap](docs/ROADMAP.md), and [changelog](CHANGELOG.md).
 
