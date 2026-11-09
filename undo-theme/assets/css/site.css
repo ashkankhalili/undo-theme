@@ -369,23 +369,19 @@ html[lang^="fa"] .single-header h1,html[lang^="fa"] .single-related-heading h2,h
 @media(max-width:540px){.single-content .post-navigation .nav-links{grid-template-columns:1fr}.single-content .post-navigation .nav-next{border-inline-start:0;border-block-start:1px solid var(--line);padding-inline-start:0;text-align:start}.single-content .post-navigation .nav-previous{padding-inline-end:0}}
 @media(prefers-reduced-motion:reduce){.single-related-image img{transition:none}}
 
-/* Page widths are resolved from the Pages tab or the selected page template. */
-:root{--undo-page-gutter:clamp(20px,4vw,64px)}
-.page-layout{width:min(calc(100% - var(--undo-page-gutter) - var(--undo-page-gutter)),760px);margin-inline:auto;min-width:0}
-.page-layout--reading.has-sidebar{width:min(calc(100% - var(--undo-page-gutter) - var(--undo-page-gutter)),calc(760px + var(--undo-sidebar-width,300px) + 48px))}
-.page-layout--wide{width:min(calc(100% - var(--undo-page-gutter) - var(--undo-page-gutter)),var(--undo-content-width,1440px))}
-.undo-layout-boxed .page-layout--wide{max-width:1100px}
-.page-layout--boxed{width:min(calc(100% - var(--undo-page-gutter) - var(--undo-page-gutter)),var(--undo-content-width,1440px),1100px);padding-inline:clamp(20px,4vw,64px);border:1px solid var(--line);background:var(--white)}
-.page-layout--custom{width:min(calc(100% - var(--undo-page-gutter) - var(--undo-page-gutter)),var(--undo-page-custom-width,1200px))}
-.page-layout--full{width:100%;max-width:none}
-.page-layout--full:not(.page-layout--elementor){padding-inline:var(--undo-page-gutter)}
+/* UNDO templates take their width and logical spacing from the Pages settings. */
+.page-layout{--undo-page-side-space:var(--undo-page-margin-inline,48px);width:min(calc(100% - var(--undo-page-side-space) - var(--undo-page-side-space)),var(--undo-page-width,760px));margin-inline:auto;margin-block:var(--undo-page-margin-top,0px) var(--undo-page-margin-bottom,0px);padding-inline:var(--undo-page-padding-inline,0px);padding-block:var(--undo-page-padding-top,112px) var(--undo-page-padding-bottom,160px);min-width:0;min-height:calc(100svh - 76px)}
+.page-layout--reading.has-sidebar{width:min(calc(100% - var(--undo-page-side-space) - var(--undo-page-side-space)),calc(var(--undo-page-width,760px) + var(--undo-sidebar-width,300px) + 48px))}
+.page-layout--boxed{border:1px solid var(--line);background:var(--white)}
+.page-layout--full{max-width:none}
 .page-layout--elementor .undo-elementor-page{width:100%}
 /* Elementor Full Width can print ordinary WordPress content directly into body. */
 body.elementor-template-full-width{display:flex;flex-direction:column;min-height:100svh}
 body.elementor-template-full-width > :is(.footer,.elementor-location-footer){margin-block-start:auto}
 body.elementor-template-full-width .elementor[data-elementor-type="wp-page"]{min-height:calc(100svh - 76px)}
 .page-content{padding-block:clamp(56px,7.5vw,112px) clamp(90px,10vw,160px)}
-.page-layout>.page-content{max-width:none}
+.page-layout>.page-content{max-width:none;min-height:0;padding-block:0}
+.page-layout .undo-sidebar{padding-block:0}
 .page-article{min-width:0}
 .page-header{border-block-end:1px solid var(--line);margin-block-end:clamp(40px,5vw,76px);padding-block-end:clamp(32px,4vw,56px)}
 .page-header h1{max-width:13ch;margin:0;font-size:clamp(52px,7vw,108px);line-height:1.04;letter-spacing:-.055em;overflow-wrap:anywhere}
@@ -426,4 +422,4 @@ html[dir="rtl"] .page-body .alignfull{transform:translateX(50%)}
 .page-pagination{display:flex;flex-wrap:wrap;gap:12px;padding-block-start:24px;border-block-start:1px solid var(--line)}
 .page-pagination a{min-width:36px;text-align:center}
 html[lang^="fa"] .page-header h1{letter-spacing:0;line-height:1.35}
-@media(max-width:760px){.undo-elementor-page,body.elementor-template-full-width .elementor[data-elementor-type="wp-page"]{min-height:calc(100svh - 66px)}.page-content{padding-block:58px 90px}.page-header h1{font-size:clamp(40px,10vw,62px)}.page-header--compact h1{font-size:clamp(32px,8vw,48px)}.page-body{font-size:16px;line-height:1.9}}
+@media(max-width:760px){.undo-elementor-page,body.elementor-template-full-width .elementor[data-elementor-type="wp-page"]{min-height:calc(100svh - 66px)}.page-content{padding-block:58px 90px}.page-layout{--undo-page-side-space:min(var(--undo-page-margin-inline,48px),20px);padding-inline:min(var(--undo-page-padding-inline,0px),20px);padding-block-start:min(var(--undo-page-padding-top,112px),58px);padding-block-end:min(var(--undo-page-padding-bottom,160px),90px);min-height:calc(100svh - 66px)}.page-layout>.page-content{padding-block:0}.page-header h1{font-size:clamp(40px,10vw,62px)}.page-header--compact h1{font-size:clamp(32px,8vw,48px)}.page-body{font-size:16px;line-height:1.9}}

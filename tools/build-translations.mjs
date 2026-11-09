@@ -120,7 +120,7 @@ const fa = {
   'Your project brief has been downloaded.':'خلاصه پروژه شما دانلود شد.',
   'new perspective':'نگاه تازه',
   'UNDO Web Developments':'توسعه وب UNDO',
-  'A Persian-first WordPress theme for creative agencies and studios, with an English visitor interface and dedicated RTL styles. Includes a responsive landing page, editorial posts, and pages with reading, wide, boxed, full, or custom pixel/percentage layouts. Its standalone settings dashboard controls the header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with verified GitHub dashboard updates.':'پوسته وردپرس فارسی‌محور برای آژانس‌ها و استودیوهای خلاق با رابط انگلیسی و استایل اختصاصی راست‌چین. دارای صفحه اصلی واکنش‌گرا، نوشته‌های خوانا و چیدمان صفحه مناسب مطالعه، عریض، جعبه‌ای، تمام‌عرض یا سفارشی با پیکسل و درصد است. پیشخوان مستقل آن سربرگ، صفحه‌ها، نوشته‌ها، وبلاگ، نوارهای کناری و پانوشت را تنظیم می‌کند. از قالب‌های صفحه و جایگاه‌های قالب‌ساز المنتور و به‌روزرسانی تأییدشده از پیشخوان وردپرس پشتیبانی می‌کند.'
+  'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.':'پوسته وردپرس دوزبانه برای آژانس‌ها و استودیوهای خلاق. زبان آغازین از زبان سایت وردپرس پیروی می‌کند و تغییر زبان فارسی و انگلیسی برای بازدیدکننده و استایل اختصاصی راست‌چین دارد. دارای صفحه اصلی واکنش‌گرا، نوشته‌های خوانا و قالب‌های صفحه مناسب مطالعه، عریض، جعبه‌ای و تمام‌عرض با عرض و فاصله‌های قابل تنظیم است. عرض سفارشی برای هر صفحه جداگانه تعیین می‌شود. پیشخوان مستقل آن چیدمان، سربرگ، صفحه‌ها، نوشته‌ها، وبلاگ، نوارهای کناری و پانوشت را تنظیم می‌کند. از قالب‌های صفحه و جایگاه‌های قالب‌ساز المنتور و به‌روزرسانی از پیشخوان وردپرس پشتیبانی می‌کند.'
 };
 
 Object.assign(fa, {
@@ -147,6 +147,7 @@ Object.assign(fa, {
   "Header": "سربرگ",
   "Homepage": "صفحه اصلی",
   "Language, width, and shared colors.": "زبان، عرض و رنگ‌های مشترک.",
+  "Site width and shared colors. The initial language follows WordPress Site Language.": "عرض وب‌سایت و رنگ‌های مشترک. زبان آغازین از زبان وب‌سایت در تنظیمات وردپرس پیروی می‌کند.",
   "Normal WordPress pages. Elementor pages use their own layout.": "صفحه‌های معمولی وردپرس. صفحه‌های المنتور چیدمان خود را دارند.",
   "Pages": "صفحه‌ها",
   "Persian": "فارسی",
@@ -196,6 +197,22 @@ Object.assign(fa, {
   "Sidebar": "نوار کناری",
   "Sidebar position": "جایگاه نوار کناری",
   "Sidebar width in pixels": "عرض نوار کناری به پیکسل",
+  "Maximum width": "بیشینه عرض",
+  "Minimum side margin in pixels": "کمینه فاصله کناره‌ها به پیکسل",
+  "Top margin in pixels": "فاصله بیرونی بالا به پیکسل",
+  "Bottom margin in pixels": "فاصله بیرونی پایین به پیکسل",
+  "Side padding in pixels": "فاصله درونی کناره‌ها به پیکسل",
+  "Top padding in pixels": "فاصله درونی بالا به پیکسل",
+  "Bottom padding in pixels": "فاصله درونی پایین به پیکسل",
+  "Page display": "نمایش صفحه",
+  "UNDO Reading": "UNDO مناسب مطالعه",
+  "UNDO Wide": "UNDO عریض",
+  "UNDO Boxed": "UNDO کادربندی‌شده",
+  "UNDO Full Width": "UNDO تمام‌عرض",
+  "Set the default page layout, then adjust each UNDO template. Explicit page templates take priority.": "چیدمان پیش‌فرض صفحه را انتخاب کنید و سپس هر قالب UNDO را جداگانه تنظیم کنید. قالب انتخاب‌شده برای هر صفحه اولویت دارد.",
+  "The UNDO Custom Width template uses a width set on each page below the editor.": "عرض قالب UNDO Custom Width برای هر صفحه، در بخش زیر ویرایشگر همان صفحه تعیین می‌شود.",
+  "This width applies only when the page template is UNDO Custom Width. Leave the field blank for 1200px.": "این عرض فقط با قالب UNDO Custom Width اعمال می‌شود. اگر کادر را خالی بگذارید، عرض ۱۲۰۰ پیکسل استفاده می‌شود.",
+  "On screens under 760px, side margins and padding are capped at 20px; top and bottom padding are capped at 58px and 90px.": "در نمایشگرهای کوچک‌تر از ۷۶۰ پیکسل، فاصله کناره‌ها حداکثر ۲۰ پیکسل و فاصله درونی بالا و پایین حداکثر ۵۸ و ۹۰ پیکسل است.",
   "Single post": "تک‌نوشته",
   "Site width": "عرض وب‌سایت",
   "Start": "ابتدای جهت نوشتار",
@@ -255,13 +272,13 @@ for (const file of files) {
     refs.get(id).push(`${path.relative(root, file).replaceAll('\\', '/')}:${line}`);
   }
 }
-for (const id of ['UNDO Web Developments', 'A Persian-first WordPress theme for creative agencies and studios, with an English visitor interface and dedicated RTL styles. Includes a responsive landing page, editorial posts, and pages with reading, wide, boxed, full, or custom pixel/percentage layouts. Its standalone settings dashboard controls the header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with verified GitHub dashboard updates.']) refs.set(id, ['style.css:1']);
+for (const id of ['UNDO Web Developments', 'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.']) refs.set(id, ['style.css:1']);
 const ids = [...refs.keys()].sort((a, b) => Buffer.compare(Buffer.from(a), Buffer.from(b)));
 const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.3.2',
+  'Project-Id-Version: UNDO Web Developments 0.3.3',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

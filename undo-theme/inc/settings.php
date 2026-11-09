@@ -2,12 +2,35 @@
 /** All customer theme choices are stored in one option. */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
+function undo_page_template_presets() {
+    return array(
+        'reading' => array( 'title' => __( 'UNDO Reading', 'undo-theme' ), 'width' => '760px', 'margin_inline' => '48', 'margin_top' => '0', 'margin_bottom' => '0', 'padding_inline' => '0', 'padding_top' => '112', 'padding_bottom' => '160' ),
+        'wide' => array( 'title' => __( 'UNDO Wide', 'undo-theme' ), 'width' => '1440px', 'margin_inline' => '48', 'margin_top' => '0', 'margin_bottom' => '0', 'padding_inline' => '0', 'padding_top' => '112', 'padding_bottom' => '160' ),
+        'boxed' => array( 'title' => __( 'UNDO Boxed', 'undo-theme' ), 'width' => '1100px', 'margin_inline' => '48', 'margin_top' => '0', 'margin_bottom' => '0', 'padding_inline' => '64', 'padding_top' => '112', 'padding_bottom' => '160' ),
+        'full' => array( 'title' => __( 'UNDO Full Width', 'undo-theme' ), 'width' => '100%', 'margin_inline' => '0', 'margin_top' => '0', 'margin_bottom' => '0', 'padding_inline' => '64', 'padding_top' => '112', 'padding_bottom' => '160' ),
+    );
+}
+
+function undo_page_template_fields() {
+    $fields = array();
+    foreach ( undo_page_template_presets() as $mode => $preset ) {
+        $prefix = 'page_' . $mode . '_';
+        $fields[ $prefix . 'width' ] = array( __( 'Maximum width', 'undo-theme' ), 'dimension', $preset['width'] );
+        $fields[ $prefix . 'margin_inline' ] = array( __( 'Minimum side margin in pixels', 'undo-theme' ), 'number', $preset['margin_inline'], array( 0, 160 ) );
+        $fields[ $prefix . 'margin_top' ] = array( __( 'Top margin in pixels', 'undo-theme' ), 'number', $preset['margin_top'], array( 0, 240 ) );
+        $fields[ $prefix . 'margin_bottom' ] = array( __( 'Bottom margin in pixels', 'undo-theme' ), 'number', $preset['margin_bottom'], array( 0, 240 ) );
+        $fields[ $prefix . 'padding_inline' ] = array( __( 'Side padding in pixels', 'undo-theme' ), 'number', $preset['padding_inline'], array( 0, 160 ) );
+        $fields[ $prefix . 'padding_top' ] = array( __( 'Top padding in pixels', 'undo-theme' ), 'number', $preset['padding_top'], array( 0, 240 ) );
+        $fields[ $prefix . 'padding_bottom' ] = array( __( 'Bottom padding in pixels', 'undo-theme' ), 'number', $preset['padding_bottom'], array( 0, 240 ) );
+    }
+    return $fields;
+}
+
 function undo_settings_sections() {
     static $sections = null;
     if ( null !== $sections ) { return $sections; }
     $sections = array(
-        'layout' => array( __( 'Website layout', 'undo-theme' ), __( 'Language, width, and shared colors.', 'undo-theme' ), array(
-            'default_language' => array( __( 'Default visitor language', 'undo-theme' ), 'select', 'fa', array( 'fa' => __( 'Persian', 'undo-theme' ), 'en' => __( 'English', 'undo-theme' ) ) ),
+        'layout' => array( __( 'Website layout', 'undo-theme' ), __( 'Site width and shared colors. The initial language follows WordPress Site Language.', 'undo-theme' ), array(
             'accent_color' => array( __( 'Accent color', 'undo-theme' ), 'color', '#b83b30' ),
             'site_layout' => array( __( 'Site width', 'undo-theme' ), 'select', 'wide', array( 'wide' => __( 'Wide', 'undo-theme' ), 'boxed' => __( 'Boxed', 'undo-theme' ) ) ),
             'content_width' => array( __( 'Content width in pixels', 'undo-theme' ), 'number', '1440', array( 760, 1600 ) ),
@@ -41,15 +64,14 @@ function undo_settings_sections() {
             'single_show_comments' => array( __( 'Show comments', 'undo-theme' ), 'checkbox', '1' ),
             'single_show_sidebar' => array( __( 'Show post sidebar', 'undo-theme' ), 'checkbox', '0' ),
         ) ),
-        'pages' => array( __( 'Pages', 'undo-theme' ), __( 'Normal WordPress pages. Elementor pages use their own layout.', 'undo-theme' ), array(
+        'pages' => array( __( 'Pages', 'undo-theme' ), __( 'Set the default page layout, then adjust each UNDO template. Explicit page templates take priority.', 'undo-theme' ), array_merge( array(
             'page_show_title' => array( __( 'Show page title', 'undo-theme' ), 'checkbox', '1' ),
             'page_title_style' => array( __( 'Page title style', 'undo-theme' ), 'select', 'editorial', array( 'editorial' => __( 'Editorial', 'undo-theme' ), 'compact' => __( 'Compact', 'undo-theme' ) ), 'page_show_title' ),
             'page_show_breadcrumbs' => array( __( 'Show page breadcrumbs', 'undo-theme' ), 'checkbox', '0' ),
             'page_show_featured' => array( __( 'Show page featured image', 'undo-theme' ), 'checkbox', '0' ),
-            'page_content_width' => array( __( 'Default page layout', 'undo-theme' ), 'select', 'reading', array( 'reading' => __( 'Reading', 'undo-theme' ), 'wide' => __( 'Wide', 'undo-theme' ), 'boxed' => __( 'Boxed', 'undo-theme' ), 'full' => __( 'Full width', 'undo-theme' ), 'custom' => __( 'Custom width', 'undo-theme' ) ) ),
-            'page_custom_width' => array( __( 'Custom page width', 'undo-theme' ), 'dimension', '1200px', array(), 'page_content_width:custom' ),
+            'page_content_width' => array( __( 'Default page layout', 'undo-theme' ), 'select', 'reading', array( 'reading' => __( 'Reading', 'undo-theme' ), 'wide' => __( 'Wide', 'undo-theme' ), 'boxed' => __( 'Boxed', 'undo-theme' ), 'full' => __( 'Full width', 'undo-theme' ) ) ),
             'page_show_sidebar' => array( __( 'Show page sidebar', 'undo-theme' ), 'checkbox', '0' ),
-        ) ),
+        ), undo_page_template_fields() ) ),
         'sidebar' => array( __( 'Sidebar', 'undo-theme' ), __( 'The sidebar appears only where enabled and when widgets are assigned.', 'undo-theme' ), array(
             'sidebar_position' => array( __( 'Sidebar position', 'undo-theme' ), 'select', 'end', array( 'start' => __( 'Start', 'undo-theme' ), 'end' => __( 'End', 'undo-theme' ) ) ),
             'sidebar_width' => array( __( 'Sidebar width in pixels', 'undo-theme' ), 'number', '300', array( 220, 420 ) ),
@@ -138,6 +160,7 @@ add_action( 'admin_menu', 'undo_add_settings_page' );
 function undo_settings_assets( $hook ) {
     if ( 'toplevel_page_undo-theme-settings' !== $hook ) { return; }
     wp_enqueue_media();
+    wp_enqueue_style( 'undo-admin-settings', get_theme_file_uri( '/assets/css/admin-settings.css' ), array(), UNDO_THEME_VERSION );
     wp_enqueue_script( 'undo-settings-media', get_theme_file_uri( '/assets/js/admin-settings.js' ), array( 'media-views' ), UNDO_THEME_VERSION, true );
     wp_localize_script( 'undo-settings-media', 'undoSettingsMedia', array( 'title' => __( 'Select header logo', 'undo-theme' ), 'use' => __( 'Use this image', 'undo-theme' ) ) );
 }
@@ -171,16 +194,30 @@ function undo_render_settings_page() {
     $sections = undo_settings_sections();
     $requested = isset( $_GET['tab'] ) && is_string( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : 'layout';
     $active = isset( $sections[ $requested ] ) ? $requested : 'layout';
-    echo '<div class="wrap"><h1>' . esc_html__( 'UNDO Theme Settings', 'undo-theme' ) . '</h1><nav class="nav-tab-wrapper" aria-label="' . esc_attr__( 'Theme settings sections', 'undo-theme' ) . '">';
+    echo '<div class="wrap undo-settings"><header class="undo-settings__header"><span class="undo-settings__brand">UNDO</span><h1>' . esc_html__( 'UNDO Theme Settings', 'undo-theme' ) . '</h1></header><div class="undo-settings__layout"><nav class="undo-settings__nav" aria-label="' . esc_attr__( 'Theme settings sections', 'undo-theme' ) . '">';
     foreach ( $sections as $slug => $section ) {
         $url = add_query_arg( array( 'page' => 'undo-theme-settings', 'tab' => $slug ), admin_url( 'admin.php' ) );
-        echo '<a class="nav-tab' . ( $active === $slug ? ' nav-tab-active' : '' ) . '" href="' . esc_url( $url ) . '"' . ( $active === $slug ? ' aria-current="page"' : '' ) . '>' . esc_html( $section[0] ) . '</a>';
+        echo '<a class="undo-settings__nav-link' . ( $active === $slug ? ' is-active' : '' ) . '" href="' . esc_url( $url ) . '"' . ( $active === $slug ? ' aria-current="page"' : '' ) . '>' . esc_html( $section[0] ) . '</a>';
     }
-    echo '</nav><h2>' . esc_html( $sections[ $active ][0] ) . '</h2><p>' . esc_html( $sections[ $active ][1] ) . '</p><form action="options.php" method="post">';
+    echo '</nav><main class="undo-settings__content"><div class="undo-settings__intro"><h2>' . esc_html( $sections[ $active ][0] ) . '</h2><p>' . esc_html( $sections[ $active ][1] ) . '</p></div><form action="options.php" method="post">';
     settings_fields( 'undo_theme_settings' );
-    echo '<table class="form-table" role="presentation">';
-    foreach ( $sections[ $active ][2] as $key => $field ) { undo_settings_field( $key, $field ); }
-    echo '</table>';
+    if ( 'pages' === $active ) {
+        $template_fields = undo_page_template_fields();
+        $common_fields = array_diff_key( $sections[ $active ][2], $template_fields );
+        echo '<section class="undo-settings__group"><h3>' . esc_html__( 'Page display', 'undo-theme' ) . '</h3><table class="form-table" role="presentation">';
+        foreach ( $common_fields as $key => $field ) { undo_settings_field( $key, $field ); }
+        echo '</table></section><p class="undo-settings__hint">' . esc_html__( 'The UNDO Custom Width template uses a width set on each page below the editor.', 'undo-theme' ) . '</p>';
+        foreach ( undo_page_template_presets() as $mode => $preset ) {
+            echo '<section class="undo-settings__group"><h3>' . esc_html( $preset['title'] ) . '</h3><table class="form-table" role="presentation">';
+            foreach ( $template_fields as $key => $field ) { if ( 0 === strpos( $key, 'page_' . $mode . '_' ) ) { undo_settings_field( $key, $field ); } }
+            echo '</table></section>';
+        }
+        echo '<p class="undo-settings__hint">' . esc_html__( 'On screens under 760px, side margins and padding are capped at 20px; top and bottom padding are capped at 58px and 90px.', 'undo-theme' ) . '</p>';
+    } else {
+        echo '<table class="form-table" role="presentation">';
+        foreach ( $sections[ $active ][2] as $key => $field ) { undo_settings_field( $key, $field ); }
+        echo '</table>';
+    }
     submit_button();
-    echo '</form></div>';
+    echo '</form></main></div></div>';
 }

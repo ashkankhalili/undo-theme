@@ -42,6 +42,7 @@ jobs:
         run: |
           node --check undo-theme/assets/js/theme.js
           node --check undo-theme/assets/js/admin-settings.js
+          node --check undo-theme/assets/js/admin-page-width.js
           node --check tools/build-translations.mjs
           node --check tools/package-theme.mjs
       - name: Verify translation catalogs are current
@@ -66,6 +67,9 @@ jobs:
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-custom-width.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/inc/page-layout.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-parts/page-layout.php'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/assets/css/admin-settings.css'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/assets/css/admin-page-width.css'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/assets/js/admin-page-width.js'
       - uses: actions/upload-artifact@v4
         with:
           name: theme-pre-release

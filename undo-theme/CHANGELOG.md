@@ -4,6 +4,30 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.3.3] - 2026-11-09
+
+### Added
+
+- Added independent width, minimum side margin, top/bottom margin, and side/top/bottom padding controls for UNDO Reading, Wide, Boxed, and Full Width under **UNDO Theme Settings → Pages**. The shipped starting values use the previous nominal template widths; narrow screens cap side spacing to avoid overflow.
+- Replaced horizontal settings tabs with a vertical section sidebar and adjacent content panel that also works in RTL and on small screens.
+- Moved the per-page UNDO Custom Width field below the WordPress page editor. Its panel appears only when the Custom Width template is selected in the page template selector.
+
+### Changed
+
+- The initial visitor language now follows WordPress **Site Language**. An explicit header language-switcher choice still persists in the existing cookie. The former theme-level default-language control has been removed.
+- Custom Width no longer has a global theme setting. A page without its own width uses `1200px`; existing per-page widths remain in post meta. An old saved global Custom Width default resolves safely to Reading until a supported default is selected.
+- UNDO template width and spacing settings apply to ordinary WordPress content and Elementor-built pages using an UNDO template. Elementor Full Width and Canvas retain Elementor's own layout behavior.
+
+### فارسی
+
+- برای قالب‌های «مطالعه»، «عریض»، «جعبه‌ای» و «تمام‌عرض»، تنظیمات مستقل عرض، حاشیه و فاصله داخلی در بخش صفحه‌ها اضافه شد. مقدارهای اولیه نمای قبلی را حفظ می‌کنند و فاصله‌های کناری در موبایل محدود می‌شوند.
+- ناوبری تنظیمات پوسته به نوار عمودی سازگار با راست‌چین تبدیل شد. کادر عرض سفارشی زیر ویرایشگر صفحه قرار گرفت و فقط با انتخاب قالب «عرض سفارشی» نمایش داده می‌شود.
+- زبان آغازین از «زبان سایت» وردپرس خوانده می‌شود؛ انتخاب صریح بازدیدکننده در تغییر‌دهنده زبان همچنان ذخیره می‌شود. تنظیم زبان پیش‌فرض پوسته حذف شد. عرض سفارشی فقط برای هر صفحه تنظیم می‌شود و در صورت خالی بودن، `1200px` خواهد بود.
+
+### Validation
+
+- Local browser fixtures checked template widths and spacing at desktop and mobile sizes, RTL settings navigation, and conditional editor-panel visibility. PHP/CI and exact GitHub release package are checked by the publishing workflow. Live WordPress/Elementor behavior remains a staging test.
+
 ## [0.3.2] - 2026-11-09
 
 ### Fixed

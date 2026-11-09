@@ -1,6 +1,6 @@
 # UNDO premium WordPress theme blueprint
 
-Status: planning document for the 0.3.2 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
+Status: planning document for the 0.3.3 pre-release. No item marked "planned" is implemented merely because it appears here. The initial visitor language follows WordPress Site Language; Persian (fa_IR) and English (en_US) are supported.
 
 ## 1. Product definition and boundaries
 
@@ -91,7 +91,7 @@ Add more only when a use case cannot be handled well with Elementor's existing w
 ## 6. Localization and RTL
 
 - Write interface strings with one stable text domain per package. Generate POT, `fa_IR.po/.mo`, and `en_US.po/.mo`; fail the release build when a required Persian string is missing.
-- Persian is the default front-end language. English is available through the switcher. Admin language follows the WordPress user/site locale.
+- The initial front-end language follows WordPress Site Language. An explicit Persian or English switcher choice persists for that visitor. Admin language follows the WordPress user/site locale.
 - Do not treat the query/cookie switcher as a complete multilingual SEO solution. Choose translated content URLs, canonical/hreflang rules, sitemap behavior, cache variation, and Elementor template translation through a tested multilingual-content integration.
 - Test `lang`, `dir`, `is_rtl()`, icons with direction, sliders, carousels, form fields, dates/numerals, and mixed Persian/English snippets.
 - Use real Persian test content at every stage, not an end-of-project RTL pass.
@@ -142,11 +142,11 @@ Build and review each stage independently; do not begin the next visual componen
 
 ## 10. Current status and immediate next work
 
-Implemented by 0.3.2: classic theme skeleton, theme.json, reading, wide, boxed, full and custom-width page templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, configurable built-in header variants, the single-post reading template with optional related posts, and page breadcrumbs/title/width controls. The dark-header logo fallback and static-header homepage section alignment were corrected after staging QA. These are a foundation, not a finished premium product.
+Implemented by 0.3.3: classic theme skeleton, theme.json, reading, wide, boxed, full and custom-width page templates, a top-level settings page with vertical navigation, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, configurable built-in header variants, the single-post reading template with optional related posts, and page breadcrumbs/title/width controls. The four reusable page templates now have independent width and spacing controls; Custom Width is set per page. The initial language follows WordPress Site Language. The dark-header logo fallback and static-header homepage section alignment were corrected after staging QA. These are a foundation, not a finished premium product.
 
 Outstanding: live WordPress/Elementor and dashboard-update validation; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks.
 
-**Current execution milestone:** the owner reported a 0.3.0 page width mismatch on staging. Install 0.3.2 from WordPress Updates; test all five page templates, global and per-page widths in pixels and percent, Persian and English content, and Elementor's own Full Width and Canvas modes with both plain and Elementor-built content before marking Stage 4 complete. Continue the pending single-post and header option checks.
+**Current execution milestone:** the owner confirmed the 0.3.2 width correction. Install 0.3.3 from WordPress Updates; test all four template settings groups, the conditional per-page Custom Width panel, WordPress Site Language and explicit overrides, Persian and English content, and Elementor's own Full Width and Canvas modes with both plain and Elementor-built content before marking Stage 4 complete. Continue the pending single-post and header option checks.
 
 ## Primary references
 

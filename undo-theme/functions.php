@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.3.2' );
+define( 'UNDO_THEME_VERSION', '0.3.3' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/page-layout.php';
 require_once get_template_directory() . '/inc/github-updater.php';
@@ -46,22 +46,29 @@ function undo_has_sidebar( $setting ) {
     return undo_setting_enabled( $setting ) && is_active_sidebar( 'primary-sidebar' );
 }
 
-function undo_requested_language() {
+function undo_language_override() {
     $query = isset( $_GET['undo_lang'] ) && is_string( $_GET['undo_lang'] ) ? sanitize_key( wp_unslash( $_GET['undo_lang'] ) ) : '';
     if ( in_array( $query, array( 'en', 'fa' ), true ) ) { return $query; }
     $cookie = isset( $_COOKIE['undo_lang'] ) && is_string( $_COOKIE['undo_lang'] ) ? sanitize_key( wp_unslash( $_COOKIE['undo_lang'] ) ) : '';
     if ( in_array( $cookie, array( 'en', 'fa' ), true ) ) { return $cookie; }
-    return undo_setting( 'default_language' );
+    return '';
+}
+
+function undo_requested_language() {
+    $override = undo_language_override();
+    if ( $override ) { return $override; }
+    return 0 === strpos( strtolower( str_replace( '-', '_', get_locale() ) ), 'fa' ) ? 'fa' : 'en';
 }
 
 function undo_boot_locale() {
     load_theme_textdomain( 'undo-theme', get_template_directory() . '/languages' );
     if ( is_admin() || wp_doing_ajax() || wp_doing_cron() ) { return; }
-    $language = undo_requested_language();
+    $override = undo_language_override();
+    if ( ! $override ) { return; }
     if ( isset( $_GET['undo_lang'] ) && ! headers_sent() ) {
-        setcookie( 'undo_lang', $language, array( 'expires' => time() + YEAR_IN_SECONDS, 'path' => COOKIEPATH ? COOKIEPATH : '/', 'secure' => is_ssl(), 'httponly' => true, 'samesite' => 'Lax' ) );
+        setcookie( 'undo_lang', $override, array( 'expires' => time() + YEAR_IN_SECONDS, 'path' => COOKIEPATH ? COOKIEPATH : '/', 'secure' => is_ssl(), 'httponly' => true, 'samesite' => 'Lax' ) );
     }
-    if ( function_exists( 'switch_to_locale' ) ) { switch_to_locale( 'fa' === $language ? 'fa_IR' : 'en_US' ); }
+    if ( function_exists( 'switch_to_locale' ) ) { switch_to_locale( 'fa' === $override ? 'fa_IR' : 'en_US' ); }
 }
 add_action( 'init', 'undo_boot_locale', 1 );
 

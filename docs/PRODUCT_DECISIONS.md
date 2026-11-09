@@ -8,8 +8,8 @@ Use this log before changing product scope. "Confirmed" comes from the user's in
 | Theme slug | Confirmed | `undo-theme` for folder, text domain, and installable ZIP root | Preserve for all customer updates |
 | Source repository | Confirmed | Public `ashkankhalili/undo-theme` repository supplied by owner | Keep credentials and customer data out of source |
 | Online staging | Confirmed | `https://ashkankhalili.ir` is owner-designated WordPress and Elementor test site | Confirm exact installed ZIP and environment versions |
-| Primary language | Confirmed | Persian/fa_IR first; English/en_US fully supported | Verify frontend, admin translation, RTL/LTR |
-| Theme settings | Confirmed | One standalone UNDO Theme Settings dashboard with component tabs | Validate settings persistence and Elementor precedence |
+| Language baseline | Confirmed | Initial visitor language follows WordPress Site Language; Persian/fa_IR and English/en_US are supported through an explicit header switcher | Verify frontend, admin translation, RTL/LTR, and cookie override |
+| Theme settings | Confirmed | One standalone UNDO Theme Settings dashboard with vertical component navigation; reusable page templates have independent width/spacing controls | Validate settings persistence and Elementor precedence |
 | Elementor | Confirmed | Theme-compatible plus UNDO-specific widgets/addons | Build widget code as a separate installable plugin |
 | Theme architecture | Working assumption | Keep current classic PHP theme with theme.json design tokens | Revisit only if a proven Site Editor need appears |
 | Package architecture | Working assumption | Parent theme and `undo-elements` addon are separate ZIPs | Verify independent install/update/rollback |
