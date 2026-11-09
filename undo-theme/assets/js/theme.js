@@ -58,13 +58,13 @@ if(isLandingPage){
   document.body.classList.add('has-section-motion');
 }
 
-const headerHeight=()=>document.querySelector('.site-header')?.getBoundingClientRect().height||76;
+const headerOffset=()=>header&&getComputedStyle(header).position==='sticky'?header.getBoundingClientRect().height:0;
 let movingUntil=0;
 function goToSection(index){
   const target=pageSections[Math.max(0,Math.min(index,pageSections.length-1))];
   if(!target)return;
   movingUntil=performance.now()+690;
-  const top=target.id==='top'?0:window.scrollY+target.getBoundingClientRect().top-headerHeight();
+  const top=target.id==='top'?0:window.scrollY+target.getBoundingClientRect().top-headerOffset();
   window.scrollTo({top,behavior:guidedMotion.matches?'smooth':'instant'});
 }
 
@@ -80,7 +80,7 @@ window.addEventListener('wheel',event=>{
   if(performance.now()<movingUntil){event.preventDefault();wheelConsumed=true;queueWheelReset();return}
   const current=pageSections[activeSectionIndex];
   const rect=current?.getBoundingClientRect();
-  if(rect&&((direction>0&&rect.bottom>innerHeight+4)||(direction<0&&rect.top<headerHeight()-4)))return;
+  if(rect&&((direction>0&&rect.bottom>innerHeight+4)||(direction<0&&rect.top<headerOffset()-4)))return;
   event.preventDefault();
   queueWheelReset();
   if(wheelConsumed||performance.now()<movingUntil)return;
@@ -97,7 +97,7 @@ window.addEventListener('keydown',event=>{
   const up=['ArrowUp','PageUp'].includes(event.key);
   if(!down&&!up&&event.key!=='Home'&&event.key!=='End')return;
   const rect=pageSections[activeSectionIndex]?.getBoundingClientRect();
-  if(rect&&((down&&rect.bottom>innerHeight+4)||(up&&rect.top<headerHeight()-4)))return;
+  if(rect&&((down&&rect.bottom>innerHeight+4)||(up&&rect.top<headerOffset()-4)))return;
   event.preventDefault();
   if(event.repeat||performance.now()<movingUntil)return;
   goToSection(event.key==='Home'?0:event.key==='End'?pageSections.length-1:activeSectionIndex+(down?1:-1));

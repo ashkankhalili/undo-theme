@@ -223,6 +223,7 @@ html[lang^="fa"] .wp-content h1{letter-spacing:0;line-height:1.35}
 .wrap{width:min(calc(100% - 96px),var(--undo-content-width,1440px))}
 .undo-layout-boxed .wrap{max-width:min(var(--undo-content-width,1440px),1100px)}
 .undo-header-static .site-header{position:relative}
+.home.undo-header-static .section,.home.undo-header-static .footer{min-height:100svh}
 
 /* Configurable header: one visual system for the built-in navigation and search. */
 .site-header{--header-bg:rgba(248,246,242,.94);--header-ink:#20201e;--header-line:rgba(32,32,30,.16);--header-panel:#f8f6f2;background:var(--header-bg);color:var(--header-ink);border-color:var(--header-line)}

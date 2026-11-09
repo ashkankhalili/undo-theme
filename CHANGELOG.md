@@ -4,6 +4,21 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.2.9] - 2026-11-09
+
+### Fixed
+
+- Corrected homepage section alignment when **Sticky header** is disabled. Guided wheel and keyboard navigation now subtracts header height only while the header remains sticky. Static-header sections and the footer use the full viewport height after the first screen.
+- Preserved the sticky-header layout and header-aware navigation. Ordinary post and page scrolling is unchanged.
+
+### فارسی
+
+- با غیرفعال‌کردن «سربرگ چسبان»، بخش‌های صفحه اصلی اکنون از بالای صفحه شروع می‌شوند و ارتفاع کامل نمایشگر را می‌گیرند. هنگام جابه‌جایی با چرخ ماوس یا صفحه‌کلید، ارتفاع سربرگ فقط در حالت چسبان کسر می‌شود.
+
+### Staging test
+
+- On installed 0.2.8, browser measurement reproduced the static-header fault: at a 900px viewport the overview section started 76px below the top and was only 824px high. A browser preview of this fix placed static sections at top 0 with 900px height at desktop and top 0 with 844px height at mobile. Sticky-header preview still placed the section at top 76px below its 76px header. Install 0.2.9 through WordPress Updates and recheck the actual saved setting before marking this fixed live.
+
 ## [0.2.8] - 2026-11-09
 
 ### Fixed

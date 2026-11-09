@@ -1,6 +1,6 @@
 # UNDO premium WordPress theme blueprint
 
-Status: planning document for the 0.2.8 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
+Status: planning document for the 0.2.9 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
 
 ## 1. Product definition and boundaries
 
@@ -142,11 +142,11 @@ Build and review each stage independently; do not begin the next visual componen
 
 ## 10. Current status and immediate next work
 
-Implemented by 0.2.8: classic theme skeleton, theme.json, basic templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, configurable built-in header variants, and the single-post reading template with optional related posts. The dark-header logo fallback was corrected after live staging QA. These are a foundation, not a finished premium product.
+Implemented by 0.2.9: classic theme skeleton, theme.json, basic templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, configurable built-in header variants, and the single-post reading template with optional related posts. The dark-header logo fallback and static-header homepage section alignment were corrected after staging QA. These are a foundation, not a finished premium product.
 
 Outstanding: live WordPress/Elementor and dashboard-update validation; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks.
 
-**Current execution milestone:** the owner-designated staging site publicly serves 0.2.7. The new single-post layout rendered in Persian and English without horizontal overflow. Its dark header exposed a low-contrast fallback logo, corrected in 0.2.8. Install 0.2.8 from WordPress Updates, recheck logo contrast, then test related posts, previous/next navigation, comments, sidebar, settings persistence, and Elementor fallback before marking these stages complete.
+**Current execution milestone:** the owner-designated staging site publicly serves 0.2.8. A static-header browser simulation reproduced the owner's exact 76px homepage section offset; 0.2.9 corrects the offset and section height while preserving the sticky layout. Install 0.2.9 from WordPress Updates, recheck both saved header modes, then complete the related posts, settings persistence, and Elementor fallback checks before marking these stages complete.
 
 ## Primary references
 

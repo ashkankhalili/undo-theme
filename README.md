@@ -1,11 +1,11 @@
 # UNDO Web Developments theme
 
-Version **0.2.8** is an installable classic WordPress theme for the UNDO agency design. Persian is the default visitor language; English remains available. It includes dedicated RTL styles, an editorial single-post template, a standalone **UNDO Theme Settings** dashboard, and Elementor page/Theme Builder integration.
+Version **0.2.9** is an installable classic WordPress theme for the UNDO agency design. Persian is the default visitor language; English remains available. It includes dedicated RTL styles, an editorial single-post template, a standalone **UNDO Theme Settings** dashboard, and Elementor page/Theme Builder integration.
 
 ## Install
 
 1. In WordPress, open **Appearance → Themes → Add New → Upload Theme**.
-2. For a new site, upload `undo-theme-0.2.8.zip`, install, and activate. On an existing updater-enabled site, use **Dashboard → Updates** after backing up; do not upload another ZIP.
+2. For a new site, upload `undo-theme-0.2.9.zip`, install, and activate. On an existing updater-enabled site, use **Dashboard → Updates** after backing up; do not upload another ZIP.
 3. Open **UNDO Theme Settings** in the main admin sidebar. Its tabs cover website layout, header, single posts, pages, sidebar, blog, footer, and homepage. Each tab saves independently without clearing other tabs.
 4. Set header logos, light/dark style, centered navigation, search, and mobile action visibility in **UNDO Theme Settings → Header**. Assign menus in **Appearance → Menus**.
 5. Configure metadata, featured media, tags, comments, navigation, sidebar, and category-matched related posts in **UNDO Theme Settings → Single post**. Related posts are off by default.
@@ -19,7 +19,7 @@ The project planner downloads a text file locally in the browser. It does not su
 
 The theme uses `Update URI: https://github.com/ashkankhalili/undo-theme` and checks the latest published GitHub Release. When a newer version has the exact `undo-theme-X.Y.Z.zip` asset and a SHA-256 digest or matching `.sha256` asset, WordPress lists it under **Dashboard → Updates**. An administrator starts the update there. The updater verifies the downloaded ZIP checksum before WordPress replaces the theme folder. GitHub's generic source ZIP is never used.
 
-Version 0.2.2 cannot discover GitHub updates because it shipped before this updater. The staging site completed its one-time 0.2.3 bootstrap, the owner confirmed WordPress offered 0.2.4 in the dashboard, and public inspection now shows 0.2.7 installed. The public GitHub repository means release packages are public; customer license-gated updates are a separate future product decision.
+Version 0.2.2 cannot discover GitHub updates because it shipped before this updater. The staging site completed its one-time 0.2.3 bootstrap, the owner confirmed WordPress offered 0.2.4 in the dashboard, and public inspection now shows 0.2.8 installed. The public GitHub repository means release packages are public; customer license-gated updates are a separate future product decision.
 
 Starting with installed version 0.2.5, **View version details** opens a WordPress-hosted popup containing the latest GitHub Release notes. The owner confirmed that the 0.2.6 popup displayed release notes. The current feature list and limitations are maintained in [the theme readme](undo-theme/readme.txt); expand the Appearance → Themes description as real features are added.
 
@@ -35,4 +35,4 @@ New visitors see Persian unless the default is changed in theme settings. See th
 
 ## First online milestone
 
-Source repository: `https://github.com/ashkankhalili/undo-theme`. The owner-designated staging site is `https://ashkankhalili.ir`. Public inspection shows 0.2.7 installed. Follow the [staging milestone](docs/STAGING_MILESTONE.md): update to 0.2.8 through WordPress, then confirm the dark-header logo fallback. Continue testing the single-post controls in Persian and English. A GitHub push or passing CI does not by itself validate live WordPress behavior.
+Source repository: `https://github.com/ashkankhalili/undo-theme`. The owner-designated staging site is `https://ashkankhalili.ir`. Public inspection shows 0.2.8 installed. Follow the [staging milestone](docs/STAGING_MILESTONE.md): update to 0.2.9 through WordPress, then test homepage section alignment with **Sticky header** both enabled and disabled. A GitHub push or passing CI does not by itself validate live WordPress behavior.

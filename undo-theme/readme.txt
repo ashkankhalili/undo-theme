@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.2.8
+Stable tag: 0.2.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -28,6 +28,9 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.2.9 =
+* Fixed homepage section alignment when the sticky header setting is disabled. Guided scrolling now offsets only a sticky header, and subsequent sections fill the viewport when the header scrolls away.
+* Verified the static-header correction at desktop and mobile widths while preserving sticky-header alignment.
 = 0.2.8 =
 * Fixed dark header readability when the separate light logo is not configured. The primary logo is rendered as a white silhouette until a light logo is supplied.
 * Confirmed the 0.2.7 post template loads in Persian and English at phone and desktop widths without horizontal overflow on staging.
