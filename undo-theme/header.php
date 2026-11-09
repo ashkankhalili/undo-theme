@@ -22,12 +22,14 @@ $header_style = 'dark' === undo_setting( 'header_style' ) ? 'dark' : 'light';
 $has_navigation = undo_setting_enabled( 'header_show_navigation' );
 $has_search = undo_setting_enabled( 'header_show_search' );
 $header_layout = $has_navigation && 'centered' === undo_setting( 'header_layout' ) ? 'centered' : 'standard';
-$logo_id = 'dark' === $header_style ? (int) undo_setting( 'header_logo_light_id' ) : 0;
+$light_logo_id = 'dark' === $header_style ? (int) undo_setting( 'header_logo_light_id' ) : 0;
+$logo_id = $light_logo_id;
 if ( ! $logo_id ) { $logo_id = (int) undo_setting( 'header_logo_id' ); }
 if ( ! $logo_id && has_custom_logo() ) { $logo_id = (int) get_theme_mod( 'custom_logo' ); }
+$fallback_logo = 'dark' === $header_style && ! $light_logo_id && $logo_id;
 $logo_html = $logo_id ? wp_get_attachment_image( $logo_id, 'full', false, array( 'class' => 'brand-image', 'alt' => '' ) ) : '';
 ?>
-<header class="site-header site-header--<?php echo esc_attr( $header_style ); ?> header-layout-<?php echo esc_attr( $header_layout ); ?><?php echo $has_navigation ? '' : ' site-header--no-nav'; ?>"><div class="wrap header-inner">
+<header class="site-header site-header--<?php echo esc_attr( $header_style ); ?> header-layout-<?php echo esc_attr( $header_layout ); ?><?php echo $fallback_logo ? ' site-header--logo-fallback' : ''; ?><?php echo $has_navigation ? '' : ' site-header--no-nav'; ?>"><div class="wrap header-inner">
   <a class="brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php esc_attr_e( 'UNDO Web Developments, back to top', 'undo-theme' ); ?>">
   <?php if ( $logo_html ) : echo wp_kses_post( $logo_html ); else : ?>
   <span class="brand-symbol" aria-hidden="true"><svg><use href="#icon-undo"></use></svg></span><span>UNDO<span class="brand-small"><?php esc_html_e( 'Web Developments', 'undo-theme' ); ?></span></span>

@@ -4,6 +4,21 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.2.8] - 2026-11-09
+
+### Fixed
+
+- Made the primary logo readable on a dark header when a separate light logo has not been selected. The fallback is a white silhouette; the dedicated light logo, when supplied, retains its original colors.
+- The fix follows live staging visual QA of the 0.2.7 single-post layout. The Persian phone and English desktop pages rendered without horizontal overflow, but the existing dark logo had insufficient contrast against the dark header.
+
+### فارسی
+
+- اگر برای سربرگ تیره نشان روشن جداگانه انتخاب نشده باشد، نشان اصلی به‌صورت روشن نمایش داده می‌شود تا خوانا بماند. نشان روشن اختصاصی بدون تغییر رنگ نمایش داده می‌شود.
+
+### Staging test
+
+- Version 0.2.7 is publicly installed. An existing published post rendered the new single-post template with title, date, author, category, featured image and caption, content, comments, and sidebar in RTL/LTR at 390px and 1440px. Related posts were disabled and there was only one published post, so related cards and previous/next navigation could not be checked. The 0.2.8 fallback still requires a live dashboard update and visual recheck.
+
 ## [0.2.7] - 2026-11-09
 
 ### Single-post milestone

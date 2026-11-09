@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.2.7\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.2.8\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
@@ -265,7 +265,7 @@ msgstr ""
 msgid "Keep what works. Redo what does not."
 msgstr ""
 
-#: header.php:38
+#: header.php:40
 msgid "Language"
 msgstr ""
 
@@ -281,7 +281,7 @@ msgstr ""
 msgid "Light logo for dark header"
 msgstr ""
 
-#: header.php:35
+#: header.php:37
 msgid "Main navigation"
 msgstr ""
 
@@ -305,7 +305,7 @@ msgstr ""
 msgid "Mobile experiences designed around the people who will use them every day."
 msgstr ""
 
-#: header.php:44
+#: header.php:46
 msgid "Mobile navigation"
 msgstr ""
 
@@ -345,11 +345,11 @@ msgstr ""
 msgid "One comment"
 msgstr ""
 
-#: functions.php:89 header.php:40
+#: functions.php:89 header.php:42
 msgid "Open menu"
 msgstr ""
 
-#: functions.php:91 header.php:37
+#: functions.php:91 header.php:39
 msgid "Open search"
 msgstr ""
 
@@ -377,7 +377,7 @@ msgstr ""
 msgid "Persian"
 msgstr ""
 
-#: header.php:39 header.php:44 template-parts/landing.php:22 template-parts/landing.php:34
+#: header.php:41 header.php:46 template-parts/landing.php:22 template-parts/landing.php:34
 msgid "Plan a project"
 msgstr ""
 
@@ -457,7 +457,7 @@ msgstr ""
 msgid "Search results for: %s"
 msgstr ""
 
-#: header.php:43
+#: header.php:45
 msgid "Search this site"
 msgstr ""
 
@@ -693,7 +693,7 @@ msgstr ""
 msgid "UNDO Web Developments — Project brief"
 msgstr ""
 
-#: header.php:31
+#: header.php:33
 msgid "UNDO Web Developments, back to top"
 msgstr ""
 
@@ -737,7 +737,7 @@ msgstr ""
 msgid "We provide solutions for your needs"
 msgstr ""
 
-#: footer.php:4 footer.php:8 header.php:33
+#: footer.php:4 footer.php:8 header.php:35
 msgid "Web Developments"
 msgstr ""
 

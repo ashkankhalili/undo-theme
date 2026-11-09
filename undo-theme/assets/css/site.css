@@ -227,6 +227,7 @@ html[lang^="fa"] .wp-content h1{letter-spacing:0;line-height:1.35}
 /* Configurable header: one visual system for the built-in navigation and search. */
 .site-header{--header-bg:rgba(248,246,242,.94);--header-ink:#20201e;--header-line:rgba(32,32,30,.16);--header-panel:#f8f6f2;background:var(--header-bg);color:var(--header-ink);border-color:var(--header-line)}
 .site-header--dark{--header-bg:#20201e;--header-ink:#f8f6f2;--header-line:rgba(248,246,242,.23);--header-panel:#272724}
+.site-header--dark.site-header--logo-fallback .brand-image{filter:brightness(0) invert(1)}
 .site-header .brand{min-width:0;flex-shrink:0}
 .site-header .brand-symbol{border-color:currentColor}
 .site-header .brand-image{max-height:56px;object-fit:contain}

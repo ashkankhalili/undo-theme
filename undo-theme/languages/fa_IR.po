@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.2.7\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.2.8\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
@@ -265,7 +265,7 @@ msgstr "نمونه تعاملی مقایسه وب‌سایت پیش و پس از
 msgid "Keep what works. Redo what does not."
 msgstr "خوب‌ها را نگه دارید. بقیه را از نو بسازید."
 
-#: header.php:38
+#: header.php:40
 msgid "Language"
 msgstr "زبان"
 
@@ -281,7 +281,7 @@ msgstr "روشن"
 msgid "Light logo for dark header"
 msgstr "نشان روشن برای سربرگ تیره"
 
-#: header.php:35
+#: header.php:37
 msgid "Main navigation"
 msgstr "ناوبری اصلی"
 
@@ -305,7 +305,7 @@ msgstr "اپلیکیشن‌های موبایل"
 msgid "Mobile experiences designed around the people who will use them every day."
 msgstr "تجربه‌های موبایلی که با نیاز کسانی طراحی می‌شوند که هر روز از آن‌ها استفاده می‌کنند."
 
-#: header.php:44
+#: header.php:46
 msgid "Mobile navigation"
 msgstr "ناوبری موبایل"
 
@@ -345,11 +345,11 @@ msgstr "صفحه‌های معمولی وردپرس. صفحه‌های المن�
 msgid "One comment"
 msgstr "یک دیدگاه"
 
-#: functions.php:89 header.php:40
+#: functions.php:89 header.php:42
 msgid "Open menu"
 msgstr "باز کردن منو"
 
-#: functions.php:91 header.php:37
+#: functions.php:91 header.php:39
 msgid "Open search"
 msgstr "باز کردن جست‌وجو"
 
@@ -377,7 +377,7 @@ msgstr "صفحه‌ها"
 msgid "Persian"
 msgstr "فارسی"
 
-#: header.php:39 header.php:44 template-parts/landing.php:22 template-parts/landing.php:34
+#: header.php:41 header.php:46 template-parts/landing.php:22 template-parts/landing.php:34
 msgid "Plan a project"
 msgstr "برنامه‌ریزی پروژه"
 
@@ -457,7 +457,7 @@ msgstr "بازگشت به خانه"
 msgid "Search results for: %s"
 msgstr "نتایج جست‌وجو برای: %s"
 
-#: header.php:43
+#: header.php:45
 msgid "Search this site"
 msgstr "جست‌وجو در این وب‌سایت"
 
@@ -693,7 +693,7 @@ msgstr "توسعه وب UNDO"
 msgid "UNDO Web Developments — Project brief"
 msgstr "توسعه وب UNDO — خلاصه پروژه"
 
-#: header.php:31
+#: header.php:33
 msgid "UNDO Web Developments, back to top"
 msgstr "توسعه وب UNDO، بازگشت به ابتدا"
 
@@ -737,7 +737,7 @@ msgstr "به وب‌سایت ما خوش آمدید"
 msgid "We provide solutions for your needs"
 msgstr "برای نیازهای شما راهکار داریم"
 
-#: footer.php:4 footer.php:8 header.php:33
+#: footer.php:4 footer.php:8 header.php:35
 msgid "Web Developments"
 msgstr "توسعه وب"
 
