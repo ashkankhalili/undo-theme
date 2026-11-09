@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.2.6' );
+define( 'UNDO_THEME_VERSION', '0.2.7' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/github-updater.php';
 
@@ -140,4 +140,21 @@ add_filter( 'walker_nav_menu_start_el', 'undo_primary_menu_submenu_toggle', 10, 
 
 function undo_is_elementor_page() {
     return is_singular() && 'builder' === get_post_meta( get_queried_object_id(), '_elementor_edit_mode', true );
+}
+
+function undo_related_posts( $post_id ) {
+    if ( ! undo_setting_enabled( 'single_show_related' ) ) { return array(); }
+    $categories = wp_get_post_categories( $post_id, array( 'fields' => 'ids' ) );
+    if ( is_wp_error( $categories ) || ! is_array( $categories ) || ! $categories ) { return array(); }
+    $count = max( 2, min( 3, (int) undo_setting( 'single_related_count' ) ) );
+    return get_posts( array(
+        'post_type' => 'post',
+        'post_status' => 'publish',
+        'posts_per_page' => $count,
+        'post__not_in' => array( (int) $post_id ),
+        'category__in' => array_map( 'intval', $categories ),
+        'suppress_filters' => false,
+        'ignore_sticky_posts' => true,
+        'no_found_rows' => true,
+    ) );
 }

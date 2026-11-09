@@ -1,6 +1,6 @@
 # UNDO premium WordPress theme blueprint
 
-Status: planning document for the 0.2.6 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
+Status: planning document for the 0.2.7 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
 
 ## 1. Product definition and boundaries
 
@@ -142,11 +142,11 @@ Build and review each stage independently; do not begin the next visual componen
 
 ## 10. Current status and immediate next work
 
-Implemented by 0.2.6: classic theme skeleton, theme.json, basic templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, and configurable built-in header variants. These are a foundation, not a finished premium product.
+Implemented by 0.2.7: classic theme skeleton, theme.json, basic templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, configurable built-in header variants, and the single-post reading template with optional related posts. These are a foundation, not a finished premium product.
 
 Outstanding: live WordPress/Elementor and dashboard-update validation; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks.
 
-**Current execution milestone:** the owner-designated staging site publicly serves 0.2.5. Before updating to 0.2.6, verify the WordPress-hosted release-notes popup. Then install 0.2.6 from WordPress Updates and test header settings, Persian and English, RTL/LTR, mobile navigation, keyboard behavior, and Elementor fallback. Record failures before marking the header stage complete.
+**Current execution milestone:** the owner-designated staging site publicly serves 0.2.6. The 0.2.6 release-notes popup worked in the owner's screenshot, and the default header passed initial public responsive checks. Install 0.2.7 from WordPress Updates and test the single-post settings, Persian and English content, RTL/LTR, comments, sidebar, related posts, and Elementor fallback. Finish checks of the optional header variants before marking the header stage complete.
 
 ## Primary references
 

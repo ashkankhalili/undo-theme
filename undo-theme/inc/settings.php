@@ -30,10 +30,14 @@ function undo_settings_sections() {
         ) ),
         'single' => array( __( 'Single post', 'undo-theme' ), __( 'Post details in the built-in single template.', 'undo-theme' ), array(
             'single_show_featured' => array( __( 'Show featured image', 'undo-theme' ), 'checkbox', '1' ),
+            'single_show_excerpt' => array( __( 'Show manually written excerpt', 'undo-theme' ), 'checkbox', '1' ),
             'single_show_date' => array( __( 'Show date', 'undo-theme' ), 'checkbox', '1' ),
             'single_show_author' => array( __( 'Show author', 'undo-theme' ), 'checkbox', '0' ),
             'single_show_categories' => array( __( 'Show categories', 'undo-theme' ), 'checkbox', '0' ),
+            'single_show_tags' => array( __( 'Show tags', 'undo-theme' ), 'checkbox', '1' ),
             'single_show_navigation' => array( __( 'Show previous and next posts', 'undo-theme' ), 'checkbox', '1' ),
+            'single_show_related' => array( __( 'Show related posts', 'undo-theme' ), 'checkbox', '0' ),
+            'single_related_count' => array( __( 'Related post count', 'undo-theme' ), 'number', '2', array( 2, 3 ), 'single_show_related' ),
             'single_show_comments' => array( __( 'Show comments', 'undo-theme' ), 'checkbox', '1' ),
             'single_show_sidebar' => array( __( 'Show post sidebar', 'undo-theme' ), 'checkbox', '0' ),
         ) ),
@@ -126,7 +130,8 @@ function undo_settings_assets( $hook ) {
 add_action( 'admin_enqueue_scripts', 'undo_settings_assets' );
 function undo_settings_field( $key, $field ) {
     $value = undo_setting( $key );
-    echo '<tr><th scope="row"><label for="undo-' . esc_attr( $key ) . '">' . esc_html( $field[0] ) . '</label></th><td>';
+    $depends = isset( $field[4] ) && is_string( $field[4] ) ? ' data-undo-depends="' . esc_attr( $field[4] ) . '"' : '';
+    echo '<tr' . $depends . '><th scope="row"><label for="undo-' . esc_attr( $key ) . '">' . esc_html( $field[0] ) . '</label></th><td>';
     $name = 'undo_theme_settings[' . esc_attr( $key ) . ']';
     if ( 'media' === $field[1] ) {
         $image = $value ? wp_get_attachment_image( (int) $value, 'medium', false, array( 'style' => 'max-width:220px;max-height:80px;width:auto;height:auto;' ) ) : '';

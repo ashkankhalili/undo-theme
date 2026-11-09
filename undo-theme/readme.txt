@@ -3,17 +3,18 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.2.6
+Stable tag: 0.2.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A Persian-first WordPress theme for creative agencies and studios, with an English visitor interface and dedicated RTL styles. Includes a responsive landing page, blog and page templates, a standalone settings dashboard for layout, header, footer and sidebars, plus Elementor-compatible pages and Theme Builder locations.
+A Persian-first WordPress theme for creative agencies and studios. Includes an English visitor interface, dedicated RTL styles, a responsive landing page, and editorial post layouts with featured images, metadata, related posts and comments. Its standalone settings dashboard controls the header, posts, pages, blog, sidebars and footer. Supports Elementor pages and Theme Builder locations, with GitHub dashboard updates.
 
 == Features ==
 * Persian-first visitor interface, English switcher, compiled translations, and dedicated RTL stylesheet.
 * Responsive UNDO landing page with section navigation and a project brief download.
 * Standalone UNDO Theme Settings page for site layout, language, colors, header, pages, single posts, blog, sidebar, footer, and homepage copy. Header options include light/dark styles, logo variants, centered navigation, search, and mobile action visibility.
 * WordPress menus, widgets, featured images, logo support, and normal post, page, archive, search, and 404 templates.
+* Editorial single-post template with optional manual excerpt, metadata, featured image, tags, related posts, comments, post navigation, and sidebar. Related posts are opt-in and matched by category.
 * Elementor-compatible page layouts and Elementor Pro Theme Builder location support.
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
@@ -27,6 +28,9 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.2.7 =
+* Redesigned the single-post reading layout with responsive typography, featured media, metadata, navigation, related posts, tags, and comments.
+* Added dependent single-post settings and English/Persian translations. Related posts remain off by default.
 = 0.2.6 =
 * Added configurable light/dark header, light logo option, centered navigation, optional search, mobile action, accessible submenu controls, and improved mobile menu behavior.
 * The first update offered to an installed 0.2.5 theme exercises the WordPress-hosted release-notes popup.

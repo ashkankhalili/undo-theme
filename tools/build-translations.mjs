@@ -120,7 +120,7 @@ const fa = {
   'Your project brief has been downloaded.':'خلاصه پروژه شما دانلود شد.',
   'new perspective':'نگاه تازه',
   'UNDO Web Developments':'توسعه وب UNDO',
-  'A Persian-first WordPress theme for creative agencies and studios, with an English visitor interface and dedicated RTL styles. Includes a responsive landing page, blog and page templates, a standalone settings dashboard for layout, header, footer and sidebars, plus Elementor-compatible pages and Theme Builder locations.':'پوسته وردپرس فارسی‌محور برای آژانس‌ها و استودیوهای خلاق، با رابط انگلیسی برای بازدیدکنندگان و استایل راست‌چین اختصاصی. شامل صفحه اصلی واکنش‌گرا، قالب‌های وبلاگ و صفحه، پیشخوان مستقل تنظیمات برای چیدمان، سربرگ، پانوشت و نوار کناری، و سازگاری با صفحه‌های المنتور و جایگاه‌های قالب‌ساز آن.'
+  'A Persian-first WordPress theme for creative agencies and studios. Includes an English visitor interface, dedicated RTL styles, a responsive landing page, and editorial post layouts with featured images, metadata, related posts and comments. Its standalone settings dashboard controls the header, posts, pages, blog, sidebars and footer. Supports Elementor pages and Theme Builder locations, with GitHub dashboard updates.':'پوسته وردپرس فارسی‌محور برای آژانس‌ها و استودیوهای خلاق، با رابط انگلیسی، استایل راست‌چین اختصاصی، صفحه اصلی واکنش‌گرا و چیدمان خوانای نوشته با تصویر شاخص، فراداده، نوشته‌های مرتبط و دیدگاه‌ها. پیشخوان مستقل آن سربرگ، نوشته‌ها، صفحه‌ها، وبلاگ، نوارهای کناری و پانوشت را کنترل می‌کند. از صفحه‌ها و جایگاه‌های قالب‌ساز المنتور و به‌روزرسانی از پیشخوان وردپرس پشتیبانی می‌کند.'
 };
 
 Object.assign(fa, {
@@ -208,6 +208,18 @@ Object.assign(fa, {
   "What changed": "چه چیزهایی تغییر کرده‌اند",
   "You are not allowed to view theme update details.": "شما مجوز مشاهده جزئیات به‌روزرسانی پوسته را ندارید.",
   "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings.": "ابزارک‌هایی که با فعال‌سازی در تنظیمات پوسته UNDO کنار نوشته‌ها، صفحه‌ها یا بایگانی‌ها نمایش داده می‌شوند.",
+  "Show manually written excerpt": "نمایش خلاصه نوشته‌شده",
+  "Show tags": "نمایش برچسب‌ها",
+  "Show related posts": "نمایش نوشته‌های مرتبط",
+  "Related post count": "تعداد نوشته‌های مرتبط",
+  "By %s": "نوشته %s",
+  "Post pages": "صفحه‌های نوشته",
+  "Tags": "برچسب‌ها",
+  "Previous post": "نوشته قبلی",
+  "Next post": "نوشته بعدی",
+  "Post navigation": "ناوبری نوشته‌ها",
+  "More posts": "نوشته‌های بیشتر",
+  "Related posts": "نوشته‌های مرتبط",
 });
 
 const files = [];
@@ -224,13 +236,13 @@ for (const file of files) {
     refs.get(id).push(`${path.relative(root, file).replaceAll('\\', '/')}:${line}`);
   }
 }
-for (const id of ['UNDO Web Developments', 'A Persian-first WordPress theme for creative agencies and studios, with an English visitor interface and dedicated RTL styles. Includes a responsive landing page, blog and page templates, a standalone settings dashboard for layout, header, footer and sidebars, plus Elementor-compatible pages and Theme Builder locations.']) refs.set(id, ['style.css:1']);
+for (const id of ['UNDO Web Developments', 'A Persian-first WordPress theme for creative agencies and studios. Includes an English visitor interface, dedicated RTL styles, a responsive landing page, and editorial post layouts with featured images, metadata, related posts and comments. Its standalone settings dashboard controls the header, posts, pages, blog, sidebars and footer. Supports Elementor pages and Theme Builder locations, with GitHub dashboard updates.']) refs.set(id, ['style.css:1']);
 const ids = [...refs.keys()].sort((a, b) => Buffer.compare(Buffer.from(a), Buffer.from(b)));
 const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.2.6',
+  'Project-Id-Version: UNDO Web Developments 0.2.7',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

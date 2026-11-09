@@ -2,7 +2,7 @@
 
 Read [PREMIUM_THEME_BLUEPRINT.md](PREMIUM_THEME_BLUEPRINT.md) for the full architecture, settings contract, Elementor addon plan, quality gates, and staged implementation order. Track confirmed and open choices in [PRODUCT_DECISIONS.md](PRODUCT_DECISIONS.md). This file is the shorter day-to-day change and release checklist.
 
-The first practical gate is the [online staging milestone](STAGING_MILESTONE.md). Use its exact CI artifact and test record before marking the theme foundation complete.
+The first practical gate is the [online staging milestone](STAGING_MILESTONE.md). Use its exact CI artifact and test record before marking the theme foundation complete. The 0.2.7 single-post milestone follows the 0.2.6 header release; validate its post template on staging before marking Stage 3 complete.
 
 ## Standard premium theme workflow
 
@@ -29,6 +29,7 @@ Keep the theme source in a dedicated Git repository once created. The WordPress 
 3. Add any new English gettext literals to `languages/undo-theme.pot` and translate every string in `en_US.po` and `fa_IR.po`; regenerate MO files with `node tools/build-translations.mjs`.
 4. Record the customer-visible change in `CHANGELOG.md`. Document migrations, changed defaults, and any compatibility impact.
 5. Test on WordPress staging in Persian and English: activation, homepage, a normal page and post, search/404, menus, every settings tab save/reload, sidebar widgets, keyboard and mobile navigation, RTL layout, brief download, and Elementor page editing. Verify that ordinary pages scroll naturally without jumping to the footer, while landing-page section navigation remains usable. With Elementor Pro, verify each Theme Builder location and the fallback when no template is assigned.
+   For a single-post change, include a manual excerpt, image caption, long headings, a block quote and table, tags, comments, category-matched related posts, sidebar widgets, and previous/next navigation. Check both directions and a narrow viewport. Keep unrelated/uncategorized posts out of related results.
 6. Run PHP lint on every PHP file, WordPress Theme Check, and an accessibility/browser pass. Test supported WordPress and PHP versions. Do not claim live behavior from a package-only check.
 
 ## Prepare a release
@@ -42,7 +43,7 @@ Keep the theme source in a dedicated Git repository once created. The WordPress 
 
 ## GitHub update channel
 
-The public GitHub Releases channel, `Update URI`, exact asset matching, and checksum verification start in 0.2.3. WordPress dashboard discovery of 0.2.4 on staging is confirmed. The 0.2.3 details popup linked to GitHub, which refused iframe embedding; 0.2.5 adds a same-site details view for subsequent updates. Follow [GITHUB_UPDATES.md](GITHUB_UPDATES.md) for the repeatable release and verification sequence. Customer-only updates and license eligibility remain open product decisions; no token or secret is embedded in the theme.
+The public GitHub Releases channel, `Update URI`, exact asset matching, and checksum verification start in 0.2.3. WordPress dashboard discovery of 0.2.4 on staging is confirmed. The 0.2.3 details popup linked to GitHub, which refused iframe embedding; 0.2.5 added a same-site details view and the owner confirmed it displayed 0.2.6 release notes. Follow [GITHUB_UPDATES.md](GITHUB_UPDATES.md) for the repeatable release and verification sequence. Customer-only updates and license eligibility remain open product decisions; no token or secret is embedded in the theme.
 
 WordPress replaces the theme directory during upgrades, so store customer changes in theme mods/options, a child theme, or content—not edited parent-theme files. Keep the shipped ZIP and update manifest aligned. A customer license server, if added later, needs its own privacy, authentication, and support policy.
 

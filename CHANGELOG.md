@@ -4,6 +4,25 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.2.7] - 2026-11-09
+
+### Single-post milestone
+
+- Redesigned the built-in single-post template with an editorial title and metadata, optional manually written excerpt, featured media with caption, readable Gutenberg content, tags, previous/next navigation, and comments.
+- Added optional category-matched related posts with a two or three card setting. Related posts are disabled by default. The count setting appears only when related posts are enabled.
+- Added responsive RTL/LTR reading styles, English and Persian translations, and query/settings tests. Elementor Theme Builder can still replace the entire single template.
+- Expanded the Appearance → Themes description and feature readme to reflect the new capabilities.
+
+### فارسی
+
+- قالب تک‌نوشته با عنوان و فراداده، خلاصه دستی، تصویر شاخص و توضیح آن، متن خوانا، برچسب‌ها، ناوبری و دیدگاه‌ها بازطراحی شد.
+- نوشته‌های مرتبط بر اساس دسته‌بندی و با تعداد دو یا سه کارت به‌صورت اختیاری اضافه شدند؛ این قابلیت به‌طور پیش‌فرض خاموش است.
+- استایل واکنش‌گرا برای هر دو جهت نوشتار و ترجمه‌های فارسی و انگلیسی به‌روز شدند.
+
+### Staging test
+
+- The owner confirmed that WordPress displayed the 0.2.6 release notes in its update-details popup and installed 0.2.6. Public read-back confirmed the new stylesheet and Persian/English pages. The light header was checked at mobile and desktop widths with no horizontal overflow; the mobile menu opened and closed with Escape. Dark/centered/search settings and Elementor fallback still need live admin checks. The 0.2.7 single-post options and rendering need a staging update and test post.
+
 ## [0.2.6] - 2026-11-09
 
 ### Header milestone
@@ -21,7 +40,7 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ### Staging test
 
-- Version 0.2.5 is publicly installed on staging. Open the 0.2.6 version-details link before updating to test the WordPress-hosted release-notes popup introduced in 0.2.5. Header settings, responsive menus, RTL/LTR, and Elementor fallback still require live staging confirmation.
+- The owner confirmed the 0.2.6 version-details popup displayed release notes and later installed 0.2.6. Basic public header checks passed; configurable variants and Elementor fallback remain for staging validation.
 
 ## [0.2.5] - 2026-11-08
 

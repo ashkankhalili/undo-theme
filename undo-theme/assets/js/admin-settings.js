@@ -27,3 +27,14 @@ document.querySelectorAll('.undo-media-field').forEach((field) => {
     preview.replaceChildren();
   });
 });
+
+document.querySelectorAll('[data-undo-depends]').forEach((row) => {
+  const controller = document.getElementById(`undo-${row.dataset.undoDepends}`);
+  if (!controller) return;
+  const update = () => {
+    row.hidden = !controller.checked;
+    row.style.display = controller.checked ? '' : 'none';
+  };
+  controller.addEventListener('change', update);
+  update();
+});
