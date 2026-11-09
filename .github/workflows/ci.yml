@@ -27,6 +27,7 @@ jobs:
         run: |
           find undo-theme tests -type f -name '*.php' -print0 | xargs -0 -n1 php -l
           php tests/github-updater.php
+          php tests/header-settings.php
 
   package:
     name: Translation and package integrity

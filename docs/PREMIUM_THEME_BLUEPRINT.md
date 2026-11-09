@@ -1,6 +1,6 @@
 # UNDO premium WordPress theme blueprint
 
-Status: planning document for the existing 0.2.4 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
+Status: planning document for the 0.2.6 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
 
 ## 1. Product definition and boundaries
 
@@ -101,7 +101,7 @@ Add more only when a use case cannot be handled well with Elementor's existing w
 | Stage | Deliverable | Exit gate |
 | --- | --- | --- |
 | 0. Product contract | Decisions above, customer personas, supported-version matrix | Scope and distribution agreed |
-| 1. Foundation audit | Fix current 0.2.4 gaps, online WordPress staging, design tokens, option schema | Fresh activation and no PHP warnings |
+| 1. Foundation audit | Validate current foundation on online WordPress staging, design tokens, and option schema | Fresh activation and no PHP warnings |
 | 2. Header | Built-in desktop/mobile header and settings | Keyboard, Persian/English, RTL/LTR, Elementor fallback pass |
 | 3. Single post | Built-in post design, metadata, comments, post navigation | Long-content and Theme Unit Test cases pass |
 | 4. Pages | Standard, full-width, and Elementor page layouts | No duplicate titles; long and mixed-language content pass |
@@ -142,11 +142,11 @@ Build and review each stage independently; do not begin the next visual componen
 
 ## 10. Current status and immediate next work
 
-Implemented by 0.2.4: classic theme skeleton, theme.json, basic templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, and a GitHub Releases updater. These are a foundation, not a finished premium product.
+Implemented by 0.2.6: classic theme skeleton, theme.json, basic templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, and configurable built-in header variants. These are a foundation, not a finished premium product.
 
 Outstanding: live WordPress/Elementor and dashboard-update validation; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks.
 
-**First execution milestone:** the owner-designated staging site is on 0.2.3; verify the 0.2.4 release from the WordPress update dashboard, then test Persian and English settings and RTL. Record failures before designing the header as the first polished component.
+**Current execution milestone:** the owner-designated staging site publicly serves 0.2.5. Before updating to 0.2.6, verify the WordPress-hosted release-notes popup. Then install 0.2.6 from WordPress Updates and test header settings, Persian and English, RTL/LTR, mobile navigation, keyboard behavior, and Elementor fallback. Record failures before marking the header stage complete.
 
 ## Primary references
 

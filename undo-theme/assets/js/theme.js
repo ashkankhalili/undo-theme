@@ -1,8 +1,19 @@
 const ui=window.undoTheme||{};
-const toggle=document.querySelector('.menu-toggle');
-const mobileNav=document.querySelector('.mobile-nav');
-toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';toggle.setAttribute('aria-expanded',String(!open));toggle.setAttribute('aria-label',open?ui.menuOpen:ui.menuClose);mobileNav.hidden=open});
-mobileNav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileNav.hidden=true;toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label',ui.menuOpen)}));
+const header=document.querySelector('.site-header');
+const toggle=header?.querySelector('.menu-toggle');
+const mobileNav=header?.querySelector('.mobile-nav');
+const searchToggle=header?.querySelector('.header-search-toggle');
+const searchPanel=header?.querySelector('.header-search-panel');
+function setPanel(button,panel,open,closedLabel,openLabel){if(!button||!panel)return;panel.hidden=!open;button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?openLabel:closedLabel)}
+function closeMobile(){setPanel(toggle,mobileNav,false,ui.menuOpen,ui.menuClose)}
+function closeSearch(){setPanel(searchToggle,searchPanel,false,ui.searchOpen,ui.searchClose)}
+toggle?.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')!=='true';closeSearch();setPanel(toggle,mobileNav,open,ui.menuOpen,ui.menuClose);if(open)mobileNav.querySelector('a')?.focus()});
+searchToggle?.addEventListener('click',()=>{const open=searchToggle.getAttribute('aria-expanded')!=='true';closeMobile();setPanel(searchToggle,searchPanel,open,ui.searchOpen,ui.searchClose);if(open)searchPanel.querySelector('input[type="search"]')?.focus()});
+mobileNav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMobile));
+header?.querySelectorAll('.submenu-toggle').forEach((button,index)=>{const submenu=button.nextElementSibling;if(!submenu?.classList.contains('sub-menu'))return;submenu.id=submenu.id||`undo-submenu-${index}`;button.setAttribute('aria-controls',submenu.id);button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));button.parentElement.classList.toggle('is-open',open)})});
+document.addEventListener('pointerdown',event=>{if(header&&!header.contains(event.target)){closeMobile();closeSearch();header.querySelectorAll('.menu-item-has-children.is-open').forEach(item=>{item.classList.remove('is-open');item.querySelector(':scope > .submenu-toggle')?.setAttribute('aria-expanded','false')})}});
+document.addEventListener('keydown',event=>{if(event.key!=='Escape'||!header)return;const active=searchToggle?.getAttribute('aria-expanded')==='true'?searchToggle:toggle?.getAttribute('aria-expanded')==='true'?toggle:null;closeMobile();closeSearch();header.querySelectorAll('.menu-item-has-children.is-open').forEach(item=>{item.classList.remove('is-open');item.querySelector(':scope > .submenu-toggle')?.setAttribute('aria-expanded','false')});active?.focus()});
+window.matchMedia('(min-width: 1200px)').addEventListener('change',event=>{if(event.matches)closeMobile()});
 const comparison=document.querySelector('.comparison-range');
 const comparisonBrowser=document.querySelector('.browser');
 function updateComparison(){if(!comparison||!comparisonBrowser)return;const amount=Number(comparison.value);comparisonBrowser.style.setProperty('--split',`${amount}%`);comparisonBrowser.dataset.compare=amount<=4?'after':amount>=96?'before':'split';comparison.setAttribute('aria-valuetext',String(ui.comparisonValue||'%s%% of the earlier layout visible').replace('%s%%',amount+'%').replace('%s',amount))}

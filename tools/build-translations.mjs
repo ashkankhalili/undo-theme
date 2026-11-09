@@ -185,6 +185,19 @@ Object.assign(fa, {
   "Theme settings sections": "بخش‌های تنظیمات پوسته",
   "Website layout": "چیدمان وب‌سایت",
   "Wide": "عریض",
+  "Centered navigation": "ناوبری وسط‌چین",
+  "Close search": "بستن جست‌وجو",
+  "Dark": "تیره",
+  "Header color style": "سبک رنگ سربرگ",
+  "Header layout": "چیدمان سربرگ",
+  "Light": "روشن",
+  "Light logo for dark header": "نشان روشن برای سربرگ تیره",
+  "Open search": "باز کردن جست‌وجو",
+  "Search this site": "جست‌وجو در این وب‌سایت",
+  "Show action in mobile menu": "نمایش دکمه اقدام در فهرست موبایل",
+  "Show header search": "نمایش جست‌وجو در سربرگ",
+  "Standard": "استاندارد",
+  "Toggle submenu for %s": "باز یا بسته کردن زیرمنوی %s",
   "Back to WordPress Updates": "بازگشت به به‌روزرسانی‌های وردپرس",
   "No release notes were provided for this version.": "برای این نسخه یادداشت انتشار ثبت نشده است.",
   "Release details are unavailable. Refresh the WordPress Updates screen and try again.": "جزئیات انتشار در دسترس نیست. صفحه به‌روزرسانی‌های وردپرس را تازه کنید و دوباره تلاش کنید.",
@@ -217,7 +230,7 @@ const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.2.5',
+  'Project-Id-Version: UNDO Web Developments 0.2.6',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

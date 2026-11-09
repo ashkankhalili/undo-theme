@@ -4,7 +4,7 @@ The customer update channel is the public `ashkankhalili/undo-theme` GitHub repo
 
 ## One-time bootstrap
 
-The 0.2.2 theme did not contain an updater, so it could not discover 0.2.3 by itself. The owner installed the verified 0.2.3 release ZIP. The owner then confirmed that WordPress offered 0.2.4 in **Dashboard → Updates** without another upload. The old update-details link tried to embed GitHub and failed. Version 0.2.5 fixes future update-details links by serving release notes on the WordPress site; the old link remains until 0.2.5 is installed.
+The 0.2.2 theme did not contain an updater, so it could not discover 0.2.3 by itself. The owner installed the verified 0.2.3 release ZIP. The owner then confirmed that WordPress offered 0.2.4 in **Dashboard → Updates** without another upload. The old update-details link tried to embed GitHub and failed. Public staging inspection now shows 0.2.5 installed; the 0.2.6 update is the first opportunity to test the new WordPress-hosted release-notes popup on that site.
 
 ## For each later version
 

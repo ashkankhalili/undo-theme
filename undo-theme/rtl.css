@@ -5,6 +5,7 @@
 html[dir="rtl"] body{direction:rtl;text-align:start}
 html[dir="rtl"] .skip{left:auto;inset-inline-start:16px}
 html[dir="rtl"] .desktop-nav{margin-inline-start:auto;margin-inline-end:0}
+@media(min-width:1200px){html[dir="rtl"] .header-layout-centered .desktop-nav{margin-inline:0}}
 html[dir="rtl"] .content-layout{direction:rtl}
 html[dir="rtl"] .wp-content :is(blockquote,pre){text-align:start}
 html[dir="rtl"] .wp-content blockquote{border-inline-start:3px solid var(--red);padding-inline-start:1.2em;margin-inline:0}

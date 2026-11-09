@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.2.5' );
+define( 'UNDO_THEME_VERSION', '0.2.6' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/github-updater.php';
 
@@ -88,6 +88,8 @@ function undo_theme_assets() {
         'language' => $language,
         'menuOpen' => __( 'Open menu', 'undo-theme' ),
         'menuClose' => __( 'Close menu', 'undo-theme' ),
+        'searchOpen' => __( 'Open search', 'undo-theme' ),
+        'searchClose' => __( 'Close search', 'undo-theme' ),
         'comparisonValue' => __( '%s%% of the earlier layout visible', 'undo-theme' ),
         'briefTitle' => __( 'UNDO Web Developments — Project brief', 'undo-theme' ),
         'project' => __( 'Project', 'undo-theme' ),
@@ -124,8 +126,17 @@ function undo_nav_fallback( $args ) {
         __( 'Approach', 'undo-theme' ) => '#approach',
         __( 'Project planner', 'undo-theme' ) => '#project-planner',
     );
-    foreach ( $items as $label => $anchor ) { echo '<a href="' . esc_url( home_url( '/' ) . $anchor ) . '">' . esc_html( $label ) . '</a>'; }
+    echo '<ul class="nav-list">';
+    foreach ( $items as $label => $anchor ) { echo '<li><a href="' . esc_url( home_url( '/' ) . $anchor ) . '">' . esc_html( $label ) . '</a></li>'; }
+    echo '</ul>';
 }
+
+function undo_primary_menu_submenu_toggle( $output, $item, $depth, $args ) {
+    if ( ! isset( $args->theme_location ) || 'primary' !== $args->theme_location || empty( $item->classes ) || ! in_array( 'menu-item-has-children', (array) $item->classes, true ) ) { return $output; }
+    $label = sprintf( __( 'Toggle submenu for %s', 'undo-theme' ), wp_strip_all_tags( $item->title ) );
+    return $output . '<button class="submenu-toggle" type="button" aria-expanded="false" aria-label="' . esc_attr( $label ) . '"><span aria-hidden="true"></span></button>';
+}
+add_filter( 'walker_nav_menu_start_el', 'undo_primary_menu_submenu_toggle', 10, 4 );
 
 function undo_is_elementor_page() {
     return is_singular() && 'builder' === get_post_meta( get_queried_object_id(), '_elementor_edit_mode', true );

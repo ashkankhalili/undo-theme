@@ -4,6 +4,25 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.2.6] - 2026-11-09
+
+### Header milestone
+
+- Added light and dark header styles, a separate light logo for dark headers, and a centered navigation layout. The existing layout remains the default.
+- Added an optional site search panel and a setting for showing the action button in the mobile menu.
+- Added explicit submenu controls to the primary WordPress menu, improved mobile menu state and Escape/outside-click behavior, and kept the built-in header replaceable by Elementor Theme Builder.
+- Updated the fallback navigation markup, Persian and English catalogues, and RTL header spacing.
+
+### فارسی
+
+- حالت روشن و تیره سربرگ، نشان روشن برای حالت تیره و چیدمان ناوبری وسط‌چین اضافه شد.
+- جست‌وجوی اختیاری، دکمه اقدام در فهرست موبایل و کنترل زیرمنوها به سربرگ افزوده شد.
+- رفتار باز و بسته شدن فهرست موبایل با صفحه‌کلید و کلیک بیرون از فهرست بهبود یافت.
+
+### Staging test
+
+- Version 0.2.5 is publicly installed on staging. Open the 0.2.6 version-details link before updating to test the WordPress-hosted release-notes popup introduced in 0.2.5. Header settings, responsive menus, RTL/LTR, and Elementor fallback still require live staging confirmation.
+
 ## [0.2.5] - 2026-11-08
 
 ### Fixed

@@ -4,9 +4,9 @@ Each stage is complete only after template behavior, Persian and English copy, R
 
 | Stage | Scope | Current status |
 | --- | --- | --- |
-| 0. Source and online staging | GitHub repository, CI and release checks, exact ZIP install and online update test | 0.2.3 bootstrap and 0.2.4 dashboard discovery verified; installation and 0.2.5 details view still need live testing |
-| 1. Foundation | Persian default, language switcher, RTL CSS, standalone settings dashboard, template hooks, translations | Implemented locally in 0.2.5; staging validation pending |
-| 2. Header | Logo variants, navigation hierarchy, mobile menu, search and action options, Elementor header fallback | Next |
+| 0. Source and online staging | GitHub repository, CI and release checks, exact ZIP install and online update test | 0.2.3 bootstrap, 0.2.4 discovery, and public 0.2.5 installation verified; 0.2.6 details popup and update require live testing |
+| 1. Foundation | Persian default, language switcher, RTL CSS, standalone settings dashboard, template hooks, translations | Implemented in 0.2.5; full staging validation pending |
+| 2. Header | Logo variants, navigation hierarchy, mobile menu, search and action options, Elementor header fallback | Implemented in 0.2.6; RTL/LTR, mobile, keyboard, settings, and Elementor staging checks pending |
 | 3. Single post | Metadata, featured media, typography, related/navigation, comments and sidebar | Basic controls implemented; visual design next |
 | 4. Pages | Standard and full-width templates, breadcrumbs, title modes, Elementor canvas compatibility | Basic controls implemented; visual design next |
 | 5. Sidebar | Widget spacing, sticky behavior, layout modes, RTL placement | Basic widget area implemented; visual design next |

@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.2.5
+Stable tag: 0.2.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ A Persian-first WordPress theme for creative agencies and studios, with an Engli
 == Features ==
 * Persian-first visitor interface, English switcher, compiled translations, and dedicated RTL stylesheet.
 * Responsive UNDO landing page with section navigation and a project brief download.
-* Standalone UNDO Theme Settings page for site layout, language, colors, header, pages, single posts, blog, sidebar, footer, and homepage copy.
+* Standalone UNDO Theme Settings page for site layout, language, colors, header, pages, single posts, blog, sidebar, footer, and homepage copy. Header options include light/dark styles, logo variants, centered navigation, search, and mobile action visibility.
 * WordPress menus, widgets, featured images, logo support, and normal post, page, archive, search, and 404 templates.
 * Elementor-compatible page layouts and Elementor Pro Theme Builder location support.
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
@@ -27,6 +27,9 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.2.6 =
+* Added configurable light/dark header, light logo option, centered navigation, optional search, mobile action, accessible submenu controls, and improved mobile menu behavior.
+* The first update offered to an installed 0.2.5 theme exercises the WordPress-hosted release-notes popup.
 = 0.2.5 =
 * Added WordPress-hosted update details with release notes and a direct GitHub Release link.
 * Expanded and translated the description shown in Appearance > Themes; documented the current feature set and limits.
