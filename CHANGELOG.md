@@ -4,6 +4,20 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.3.2] - 2026-11-09
+
+### Fixed
+
+- Elementor Full Width can print ordinary WordPress content directly inside the page body. Its short pages now keep the theme or Elementor Pro footer at the bottom of the viewport, even when the page has never been built with Elementor. Elementor-built Full Width pages retain the height floor added in 0.3.1.
+
+### فارسی
+
+- در قالب «Elementor Full Width»، صفحه‌های کوتاه با محتوای معمول وردپرس نیز پابرگ را پایین نمایشگر نگه می‌دارند؛ این اصلاح برای صفحه‌های ساخته‌شده با المنتور و صفحه‌های معمولی کار می‌کند.
+
+### Validation
+
+- Local browser checks cover both Elementor-built and ordinary-content variants. The published 0.3.1 release stays immutable; 0.3.2 is the dashboard update for complete staging retest.
+
 ## [0.3.1] - 2026-11-09
 
 ### Fixed

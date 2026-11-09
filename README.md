@@ -1,11 +1,11 @@
 # UNDO Web Developments theme
 
-Version **0.3.1** is an installable classic WordPress theme for the UNDO agency design. Persian is the default visitor language; English remains available. It includes dedicated RTL styles, editorial post and page templates, a standalone **UNDO Theme Settings** dashboard, and Elementor page/Theme Builder integration.
+Version **0.3.2** is an installable classic WordPress theme for the UNDO agency design. Persian is the default visitor language; English remains available. It includes dedicated RTL styles, editorial post and page templates, a standalone **UNDO Theme Settings** dashboard, and Elementor page/Theme Builder integration.
 
 ## Install
 
 1. In WordPress, open **Appearance → Themes → Add New → Upload Theme**.
-2. For a new site, upload `undo-theme-0.3.1.zip`, install, and activate. On an existing updater-enabled site, use **Dashboard → Updates** after backing up; do not upload another ZIP.
+2. For a new site, upload `undo-theme-0.3.2.zip`, install, and activate. On an existing updater-enabled site, use **Dashboard → Updates** after backing up; do not upload another ZIP.
 3. Open **UNDO Theme Settings** in the main admin sidebar. Its tabs cover website layout, header, single posts, pages, sidebar, blog, footer, and homepage. Each tab saves independently without clearing other tabs.
 4. Set header logos, light/dark style, centered navigation, search, and mobile action visibility in **UNDO Theme Settings → Header**. Assign menus in **Appearance → Menus**.
 5. Configure metadata, featured media, tags, comments, navigation, sidebar, and category-matched related posts in **UNDO Theme Settings → Single post**. Related posts are off by default.
@@ -36,4 +36,4 @@ New visitors see Persian unless the default is changed in theme settings. See th
 
 ## First online milestone
 
-Source repository: `https://github.com/ashkankhalili/undo-theme`. The owner-designated staging site is `https://ashkankhalili.ir`. The owner tested 0.3.0 and identified a full-width page bug. Follow the [staging milestone](docs/STAGING_MILESTONE.md): update to 0.3.1 through WordPress, then compare the five page layouts, custom widths, RTL/LTR, and Elementor behavior. A GitHub push or passing CI does not by itself validate live WordPress behavior.
+Source repository: `https://github.com/ashkankhalili/undo-theme`. The owner-designated staging site is `https://ashkankhalili.ir`. The owner tested 0.3.0 and identified a full-width page bug. Follow the [staging milestone](docs/STAGING_MILESTONE.md): update to 0.3.2 through WordPress, then compare the five page layouts, custom widths, RTL/LTR, and Elementor behavior. A GitHub push or passing CI does not by itself validate live WordPress behavior.

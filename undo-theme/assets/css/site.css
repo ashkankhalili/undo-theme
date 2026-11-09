@@ -380,6 +380,9 @@ html[lang^="fa"] .single-header h1,html[lang^="fa"] .single-related-heading h2,h
 .page-layout--full{width:100%;max-width:none}
 .page-layout--full:not(.page-layout--elementor){padding-inline:var(--undo-page-gutter)}
 .page-layout--elementor .undo-elementor-page{width:100%}
+/* Elementor Full Width can print ordinary WordPress content directly into body. */
+body.elementor-template-full-width{display:flex;flex-direction:column;min-height:100svh}
+body.elementor-template-full-width > :is(.footer,.elementor-location-footer){margin-block-start:auto}
 body.elementor-template-full-width .elementor[data-elementor-type="wp-page"]{min-height:calc(100svh - 76px)}
 .page-content{padding-block:clamp(56px,7.5vw,112px) clamp(90px,10vw,160px)}
 .page-layout>.page-content{max-width:none}

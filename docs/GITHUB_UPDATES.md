@@ -4,7 +4,7 @@ The customer update channel is the public `ashkankhalili/undo-theme` GitHub repo
 
 ## One-time bootstrap
 
-The 0.2.2 theme did not contain an updater, so it could not discover 0.2.3 by itself. The owner installed the verified 0.2.3 release ZIP. The owner then confirmed that WordPress offered 0.2.4 in **Dashboard → Updates** without another upload. The old update-details link tried to embed GitHub and failed. The owner confirmed that the WordPress-hosted popup displayed 0.2.6 release notes and installed the update; the owner later confirmed the 0.2.9 static-header fix on staging. The owner installed 0.3.0 and reported the page width mismatch; the next dashboard update is 0.3.1.
+The 0.2.2 theme did not contain an updater, so it could not discover 0.2.3 by itself. The owner installed the verified 0.2.3 release ZIP. The owner then confirmed that WordPress offered 0.2.4 in **Dashboard → Updates** without another upload. The old update-details link tried to embed GitHub and failed. The owner confirmed that the WordPress-hosted popup displayed 0.2.6 release notes and installed the update; the owner later confirmed the 0.2.9 static-header fix on staging. The owner installed 0.3.0 and reported the page width mismatch; 0.3.1 corrected the UNDO layouts, and 0.3.2 completes the Elementor Full Width plain-content case. The next dashboard update is 0.3.2.
 
 ## For each later version
 

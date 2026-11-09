@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.3.1
+Stable tag: 0.3.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,8 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.3.2 =
+* Kept the footer below the viewport on Elementor Full Width pages that display ordinary WordPress content as well as Elementor-built content.
 = 0.3.1 =
 * Fixed full-width pages so ordinary content uses the available page width instead of a hidden 760px limit.
 * Added reading, wide, boxed, and custom-width page templates, plus a pixel/percentage width control in the Pages settings tab and page editor.

@@ -1,6 +1,6 @@
 # UNDO premium WordPress theme blueprint
 
-Status: planning document for the 0.3.1 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
+Status: planning document for the 0.3.2 pre-release. No item marked "planned" is implemented merely because it appears here. Persian (fa_IR) is the primary language; English (en_US) is fully supported.
 
 ## 1. Product definition and boundaries
 
@@ -142,11 +142,11 @@ Build and review each stage independently; do not begin the next visual componen
 
 ## 10. Current status and immediate next work
 
-Implemented by 0.3.1: classic theme skeleton, theme.json, reading, wide, boxed, full and custom-width page templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, configurable built-in header variants, the single-post reading template with optional related posts, and page breadcrumbs/title/width controls. The dark-header logo fallback and static-header homepage section alignment were corrected after staging QA. These are a foundation, not a finished premium product.
+Implemented by 0.3.2: classic theme skeleton, theme.json, reading, wide, boxed, full and custom-width page templates, a top-level settings page, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, configurable built-in header variants, the single-post reading template with optional related posts, and page breadcrumbs/title/width controls. The dark-header logo fallback and static-header homepage section alignment were corrected after staging QA. These are a foundation, not a finished premium product.
 
 Outstanding: live WordPress/Elementor and dashboard-update validation; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks.
 
-**Current execution milestone:** the owner reported a 0.3.0 page width mismatch on staging. Install 0.3.1 from WordPress Updates; test all five page templates, global and per-page widths in pixels and percent, Persian and English content, and Elementor's own Full Width and Canvas modes before marking Stage 4 complete. Continue the pending single-post and header option checks.
+**Current execution milestone:** the owner reported a 0.3.0 page width mismatch on staging. Install 0.3.2 from WordPress Updates; test all five page templates, global and per-page widths in pixels and percent, Persian and English content, and Elementor's own Full Width and Canvas modes with both plain and Elementor-built content before marking Stage 4 complete. Continue the pending single-post and header option checks.
 
 ## Primary references
 
