@@ -29,6 +29,14 @@ expect( '0' === $settings['footer_show_brand'], 'Saving the header must preserve
 $settings = undo_sanitize_settings( array( 'header_logo_light_id' => '999' ) );
 expect( '0' === $settings['header_logo_light_id'], 'Header logos must be image attachments' );
 
+expect( '1' === $defaults['page_show_title'] && 'editorial' === $defaults['page_title_style'] && '0' === $defaults['page_show_breadcrumbs'] && '0' === $defaults['page_show_featured'] && 'reading' === $defaults['page_content_width'], 'New page controls must keep optional elements off by default' );
+$GLOBALS['options']['undo_theme_settings'] = array( 'footer_show_brand' => '0', 'header_style' => 'dark' );
+$settings = undo_sanitize_settings( array( 'page_title_style' => 'compact', 'page_show_breadcrumbs' => '1', 'page_show_featured' => '1', 'page_content_width' => 'wide' ) );
+expect( 'compact' === $settings['page_title_style'] && '1' === $settings['page_show_breadcrumbs'] && '1' === $settings['page_show_featured'] && 'wide' === $settings['page_content_width'], 'Page choices must validate and save' );
+expect( 'dark' === $settings['header_style'] && '0' === $settings['footer_show_brand'], 'Saving pages must preserve settings from other tabs' );
+$settings = undo_sanitize_settings( array( 'page_title_style' => 'invalid', 'page_content_width' => 'invalid' ) );
+expect( 'editorial' === $settings['page_title_style'] && 'reading' === $settings['page_content_width'], 'Invalid page select values must fall back to safe defaults' );
+
 ob_start();
 undo_nav_fallback( array() );
 $fallback = ob_get_clean();

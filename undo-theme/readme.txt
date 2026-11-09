@@ -3,11 +3,11 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.2.9
+Stable tag: 0.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A Persian-first WordPress theme for creative agencies and studios. Includes an English visitor interface, dedicated RTL styles, a responsive landing page, and editorial post layouts with featured images, metadata, related posts and comments. Its standalone settings dashboard controls the header, posts, pages, blog, sidebars and footer. Supports Elementor pages and Theme Builder locations, with GitHub dashboard updates.
+A Persian-first WordPress theme for creative agencies and studios, with an English visitor interface and dedicated RTL styles. Includes a responsive landing page, editorial posts, and standard or full-width pages with optional breadcrumbs, featured images, and title styles. Its standalone settings dashboard controls the header, pages, posts, blog, sidebars, and footer. Supports Elementor pages and Theme Builder locations, with verified GitHub dashboard updates.
 
 == Features ==
 * Persian-first visitor interface, English switcher, compiled translations, and dedicated RTL stylesheet.
@@ -15,6 +15,7 @@ A Persian-first WordPress theme for creative agencies and studios. Includes an E
 * Standalone UNDO Theme Settings page for site layout, language, colors, header, pages, single posts, blog, sidebar, footer, and homepage copy. Header options include light/dark styles, logo variants, centered navigation, search, and mobile action visibility.
 * WordPress menus, widgets, featured images, logo support, and normal post, page, archive, search, and 404 templates.
 * Editorial single-post template with optional manual excerpt, metadata, featured image, tags, related posts, comments, post navigation, and sidebar. Related posts are opt-in and matched by category.
+* Standard and UNDO Full Width page templates with optional breadcrumb path, featured image, editorial or compact title, reading or wide content width, and sidebar on standard pages.
 * Elementor-compatible page layouts and Elementor Pro Theme Builder location support.
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
@@ -28,6 +29,10 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.3.0 =
+* Added standard and UNDO Full Width page templates with responsive editorial typography and full-bleed block support.
+* Added page breadcrumbs, featured image, title style, and content width controls in the standalone Pages settings tab, with Persian and English translations.
+* Preserved Elementor-built page canvas behavior and Elementor Pro single location replacement.
 = 0.2.9 =
 * Fixed homepage section alignment when the sticky header setting is disabled. Guided scrolling now offsets only a sticky header, and subsequent sections fill the viewport when the header scrolls away.
 * Verified the static-header correction at desktop and mobile widths while preserving sticky-header alignment.

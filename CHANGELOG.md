@@ -4,6 +4,25 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-09
+
+### Added
+
+- Added an **UNDO Full Width** page template alongside the standard reading template. Standard pages can now use a reading or wide content width; both templates support full-bleed blocks when the sidebar is absent.
+- Added optional page breadcrumbs with the ancestor path, optional featured image, editorial or compact title, and page content width controls under **UNDO Theme Settings → Pages**. Existing page option values are preserved; breadcrumbs and featured images stay off by default.
+- Added responsive, RTL-aware page typography and spacing. Elementor-built pages keep their own canvas, while an assigned Elementor Pro single location continues to replace the built-in page template.
+- Updated the Appearance → Themes description, readme, English/Persian translation catalogs, and staging checklist for the new page controls.
+
+### فارسی
+
+- قالب «UNDO Full Width» برای صفحه‌های تمام‌عرض افزوده شد. صفحه‌های استاندارد می‌توانند عرض مناسب مطالعه یا عریض داشته باشند.
+- مسیر صفحه، تصویر شاخص، سبک عنوان تحریریه‌ای یا فشرده و عرض محتوا از بخش «صفحه‌ها» در تنظیمات مستقل پوسته کنترل می‌شوند.
+- تایپوگرافی و فاصله‌گذاری صفحه‌ها برای فارسی راست‌چین و انگلیسی چپ‌چین بهبود یافت. صفحه‌های ساخته‌شده با المنتور همچنان از چیدمان خودشان استفاده می‌کنند.
+
+### Validation
+
+- Page option defaults, validation, and cross-tab persistence are covered by automated checks. PHP syntax, catalogs, ZIP integrity, and the release digest are checked by GitHub Actions. Live page rendering and Elementor behavior require the 0.3.0 dashboard update on staging.
+
 ## [0.2.9] - 2026-11-09
 
 ### Fixed

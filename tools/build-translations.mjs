@@ -120,7 +120,7 @@ const fa = {
   'Your project brief has been downloaded.':'خلاصه پروژه شما دانلود شد.',
   'new perspective':'نگاه تازه',
   'UNDO Web Developments':'توسعه وب UNDO',
-  'A Persian-first WordPress theme for creative agencies and studios. Includes an English visitor interface, dedicated RTL styles, a responsive landing page, and editorial post layouts with featured images, metadata, related posts and comments. Its standalone settings dashboard controls the header, posts, pages, blog, sidebars and footer. Supports Elementor pages and Theme Builder locations, with GitHub dashboard updates.':'پوسته وردپرس فارسی‌محور برای آژانس‌ها و استودیوهای خلاق، با رابط انگلیسی، استایل راست‌چین اختصاصی، صفحه اصلی واکنش‌گرا و چیدمان خوانای نوشته با تصویر شاخص، فراداده، نوشته‌های مرتبط و دیدگاه‌ها. پیشخوان مستقل آن سربرگ، نوشته‌ها، صفحه‌ها، وبلاگ، نوارهای کناری و پانوشت را کنترل می‌کند. از صفحه‌ها و جایگاه‌های قالب‌ساز المنتور و به‌روزرسانی از پیشخوان وردپرس پشتیبانی می‌کند.'
+  'A Persian-first WordPress theme for creative agencies and studios, with an English visitor interface and dedicated RTL styles. Includes a responsive landing page, editorial posts, and standard or full-width pages with optional breadcrumbs, featured images, and title styles. Its standalone settings dashboard controls the header, pages, posts, blog, sidebars, and footer. Supports Elementor pages and Theme Builder locations, with verified GitHub dashboard updates.':'پوسته وردپرس فارسی‌محور برای آژانس‌ها و استودیوهای خلاق با رابط انگلیسی و استایل اختصاصی راست‌چین. دارای صفحه اصلی واکنش‌گرا، نوشته‌های خوانا و صفحه‌های استاندارد یا تمام‌عرض با مسیر صفحه، تصویر شاخص و سبک عنوان اختیاری است. پیشخوان مستقل آن سربرگ، صفحه‌ها، نوشته‌ها، وبلاگ، نوارهای کناری و پانوشت را تنظیم می‌کند. از صفحه‌ها و جایگاه‌های قالب‌ساز المنتور و به‌روزرسانی تأییدشده از پیشخوان وردپرس پشتیبانی می‌کند.'
 };
 
 Object.assign(fa, {
@@ -172,6 +172,16 @@ Object.assign(fa, {
   "Show on search results": "نمایش در نتایج جست‌وجو",
   "Show page sidebar": "نمایش نوار کناری صفحه",
   "Show page title": "نمایش عنوان صفحه",
+  "Show page breadcrumbs": "نمایش مسیر صفحه",
+  "Show page featured image": "نمایش تصویر شاخص صفحه",
+  "Page content width": "عرض محتوای صفحه",
+  "Page title style": "سبک عنوان صفحه",
+  "Editorial": "تحریریه‌ای",
+  "Compact": "فشرده",
+  "Reading": "مناسب مطالعه",
+  "Page path": "مسیر صفحه",
+  "Page navigation": "ناوبری صفحه",
+  "Untitled page": "صفحه بدون عنوان",
   "Show post sidebar": "نمایش نوار کناری نوشته",
   "Show previous and next posts": "نمایش نوشته‌های قبلی و بعدی",
   "Sidebar": "نوار کناری",
@@ -236,13 +246,13 @@ for (const file of files) {
     refs.get(id).push(`${path.relative(root, file).replaceAll('\\', '/')}:${line}`);
   }
 }
-for (const id of ['UNDO Web Developments', 'A Persian-first WordPress theme for creative agencies and studios. Includes an English visitor interface, dedicated RTL styles, a responsive landing page, and editorial post layouts with featured images, metadata, related posts and comments. Its standalone settings dashboard controls the header, posts, pages, blog, sidebars and footer. Supports Elementor pages and Theme Builder locations, with GitHub dashboard updates.']) refs.set(id, ['style.css:1']);
+for (const id of ['UNDO Web Developments', 'A Persian-first WordPress theme for creative agencies and studios, with an English visitor interface and dedicated RTL styles. Includes a responsive landing page, editorial posts, and standard or full-width pages with optional breadcrumbs, featured images, and title styles. Its standalone settings dashboard controls the header, pages, posts, blog, sidebars, and footer. Supports Elementor pages and Theme Builder locations, with verified GitHub dashboard updates.']) refs.set(id, ['style.css:1']);
 const ids = [...refs.keys()].sort((a, b) => Buffer.compare(Buffer.from(a), Buffer.from(b)));
 const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.2.9',
+  'Project-Id-Version: UNDO Web Developments 0.3.0',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

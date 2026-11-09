@@ -28,6 +28,7 @@ jobs:
           find undo-theme tests -type f -name '*.php' -print0 | xargs -0 -n1 php -l
           php tests/github-updater.php
           php tests/header-settings.php
+          php tests/page-layout.php
 
   package:
     name: Translation and package integrity
@@ -58,6 +59,8 @@ jobs:
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/style.css'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/functions.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/inc/github-updater.php'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-full-width.php'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-parts/page-layout.php'
       - uses: actions/upload-artifact@v4
         with:
           name: theme-pre-release

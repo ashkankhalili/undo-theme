@@ -2,7 +2,7 @@
 
 Read [PREMIUM_THEME_BLUEPRINT.md](PREMIUM_THEME_BLUEPRINT.md) for the full architecture, settings contract, Elementor addon plan, quality gates, and staged implementation order. Track confirmed and open choices in [PRODUCT_DECISIONS.md](PRODUCT_DECISIONS.md). This file is the shorter day-to-day change and release checklist.
 
-The first practical gate is the [online staging milestone](STAGING_MILESTONE.md). Use its exact CI artifact and test record before marking the theme foundation complete. The 0.2.7 single-post milestone follows the 0.2.6 header release; validate its post template on staging before marking Stage 3 complete.
+The first practical gate is the [online staging milestone](STAGING_MILESTONE.md). Use its exact CI artifact and test record before marking the theme foundation complete. The 0.3.0 page milestone follows the 0.2.9 header correction; validate both page templates on staging before marking Stage 4 complete.
 
 ## Standard premium theme workflow
 
@@ -30,6 +30,7 @@ Keep the theme source in a dedicated Git repository once created. The WordPress 
 4. Record the customer-visible change in `CHANGELOG.md`. Document migrations, changed defaults, and any compatibility impact.
 5. Test on WordPress staging in Persian and English: activation, homepage, a normal page and post, search/404, menus, every settings tab save/reload, sidebar widgets, keyboard and mobile navigation, RTL layout, brief download, and Elementor page editing. Verify that ordinary pages scroll naturally without jumping to the footer, while landing-page section navigation remains usable. Test the homepage with **Sticky header** both enabled and disabled: after wheel, keyboard, and rail navigation, a static-header section must begin at the viewport top and fill it; a sticky-header section must begin below the header. With Elementor Pro, verify each Theme Builder location and the fallback when no template is assigned.
    For a single-post change, include a manual excerpt, image caption, long headings, a block quote and table, tags, comments, category-matched related posts, sidebar widgets, and previous/next navigation. Check both directions and a narrow viewport. Keep unrelated/uncategorized posts out of related results.
+   For a page change, test the standard and **UNDO Full Width** templates with each title style, breadcrumbs on a nested page, a featured image, reading/wide widths, optional sidebar, wide/full blocks, and an Elementor-built page. Check RTL/LTR and phone/desktop widths without changing existing customer pages.
 6. Run PHP lint on every PHP file, WordPress Theme Check, and an accessibility/browser pass. Test supported WordPress and PHP versions. Do not claim live behavior from a package-only check.
 
 ## Prepare a release

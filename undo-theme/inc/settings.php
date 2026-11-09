@@ -43,6 +43,10 @@ function undo_settings_sections() {
         ) ),
         'pages' => array( __( 'Pages', 'undo-theme' ), __( 'Normal WordPress pages. Elementor pages use their own layout.', 'undo-theme' ), array(
             'page_show_title' => array( __( 'Show page title', 'undo-theme' ), 'checkbox', '1' ),
+            'page_title_style' => array( __( 'Page title style', 'undo-theme' ), 'select', 'editorial', array( 'editorial' => __( 'Editorial', 'undo-theme' ), 'compact' => __( 'Compact', 'undo-theme' ) ), 'page_show_title' ),
+            'page_show_breadcrumbs' => array( __( 'Show page breadcrumbs', 'undo-theme' ), 'checkbox', '0' ),
+            'page_show_featured' => array( __( 'Show page featured image', 'undo-theme' ), 'checkbox', '0' ),
+            'page_content_width' => array( __( 'Page content width', 'undo-theme' ), 'select', 'reading', array( 'reading' => __( 'Reading', 'undo-theme' ), 'wide' => __( 'Wide', 'undo-theme' ) ) ),
             'page_show_sidebar' => array( __( 'Show page sidebar', 'undo-theme' ), 'checkbox', '0' ),
         ) ),
         'sidebar' => array( __( 'Sidebar', 'undo-theme' ), __( 'The sidebar appears only where enabled and when widgets are assigned.', 'undo-theme' ), array(
