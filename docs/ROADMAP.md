@@ -8,7 +8,7 @@ Each stage is complete only after template behavior, Persian and English copy, R
 | 1. Foundation | Persian default, language switcher, RTL CSS, standalone settings dashboard, template hooks, translations | Implemented in 0.2.5; full staging validation pending |
 | 2. Header | Logo variants, navigation hierarchy, mobile menu, search and action options, Elementor header fallback | Implemented in 0.2.6; dark-logo contrast fixed in 0.2.8; static-header section correction in 0.2.9 confirmed by owner; dedicated light logo and Elementor staging checks pending |
 | 3. Single post | Metadata, featured media, typography, related/navigation, comments and sidebar | Implemented in 0.2.7; live RTL/LTR post, featured media, metadata, excerpt, content blocks, navigation, comments area and sidebar rendered; related/settings, comment submission and Elementor checks pending |
-| 4. Pages | Standard and full-width templates, breadcrumbs, title modes, Elementor canvas compatibility | Implemented in 0.3.0; live standard/full-width, RTL/LTR, settings and Elementor checks pending |
+| 4. Pages | Reading, wide, boxed, full and custom-width templates, breadcrumbs, title modes, Elementor compatibility | 0.3.0 exposed a width bug on staging; 0.3.1 fixes it and adds explicit templates and pixel/percent controls; live retest pending |
 | 5. Sidebar | Widget spacing, sticky behavior, layout modes, RTL placement | Basic widget area implemented; visual design next |
 | 6. Blog | Archive cards, pagination, taxonomy/search states and empty states | Basic controls implemented; visual design next |
 | 7. Footer | Menu columns, contact blocks, legal text and social links | Basic controls implemented; visual design next |

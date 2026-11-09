@@ -1,16 +1,16 @@
 <?php
-/** Shared page renderer for the standard and full-width templates. */
+/** Shared page renderer for all UNDO page templates. */
 if ( function_exists( 'elementor_theme_do_location' ) && elementor_theme_do_location( 'single' ) ) { return; }
-if ( undo_is_elementor_page() ) : ?>
-<main id="main" class="undo-elementor-page"><?php while ( have_posts() ) : the_post(); the_content(); endwhile; ?></main>
-<?php return; endif;
-
-$full_width = ! empty( $args['full_width'] );
-$width = $full_width ? 'full' : ( 'wide' === undo_setting( 'page_content_width' ) ? 'wide' : 'reading' );
-$has_sidebar = ! $full_width && undo_has_sidebar( 'page_show_sidebar' );
+$layout = undo_page_layout_mode( isset( $args['layout'] ) ? $args['layout'] : '' );
+$elementor_page = undo_is_elementor_page();
+$has_sidebar = ! $elementor_page && 'full' !== $layout && undo_has_sidebar( 'page_show_sidebar' );
+$custom_width = 'custom' === $layout ? ' style="--undo-page-custom-width:' . esc_attr( undo_page_custom_width( get_queried_object_id() ) ) . '"' : '';
 $title_style = 'compact' === undo_setting( 'page_title_style' ) ? 'compact' : 'editorial';
 ?>
-<div class="content-layout page-layout page-layout--<?php echo esc_attr( $width ); ?> wrap<?php echo $has_sidebar ? ' has-sidebar sidebar-' . esc_attr( undo_setting( 'sidebar_position' ) ) : ''; ?>">
+<div class="content-layout page-layout page-layout--<?php echo esc_attr( $layout ); ?><?php echo $elementor_page ? ' page-layout--elementor' : ''; ?><?php echo $has_sidebar ? ' has-sidebar sidebar-' . esc_attr( undo_setting( 'sidebar_position' ) ) : ''; ?>"<?php echo $custom_width; ?>>
+<?php if ( $elementor_page ) : ?>
+<main id="main" class="undo-elementor-page"><?php while ( have_posts() ) : the_post(); the_content(); endwhile; ?></main>
+<?php else : ?>
 <main id="main" class="wp-content page-content">
 <?php while ( have_posts() ) : the_post();
     $page_title = get_the_title() ?: __( 'Untitled page', 'undo-theme' );
@@ -37,4 +37,5 @@ $title_style = 'compact' === undo_setting( 'page_title_style' ) ? 'compact' : 'e
 <?php endwhile; ?>
 </main>
 <?php if ( $has_sidebar ) { get_sidebar(); } ?>
+<?php endif; ?>
 </div>

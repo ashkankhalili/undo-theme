@@ -2,7 +2,7 @@
 
 Read [PREMIUM_THEME_BLUEPRINT.md](PREMIUM_THEME_BLUEPRINT.md) for the full architecture, settings contract, Elementor addon plan, quality gates, and staged implementation order. Track confirmed and open choices in [PRODUCT_DECISIONS.md](PRODUCT_DECISIONS.md). This file is the shorter day-to-day change and release checklist.
 
-The first practical gate is the [online staging milestone](STAGING_MILESTONE.md). Use its exact CI artifact and test record before marking the theme foundation complete. The 0.3.0 page milestone follows the 0.2.9 header correction; validate both page templates on staging before marking Stage 4 complete.
+The first practical gate is the [online staging milestone](STAGING_MILESTONE.md). Use its exact CI artifact and test record before marking the theme foundation complete. The owner's 0.3.0 page screenshots exposed a width mismatch. Version 0.3.1 corrects it; validate all five page templates, inherited defaults, Elementor's own Full Width and Canvas modes, and custom widths on staging before marking Stage 4 complete.
 
 ## Standard premium theme workflow
 

@@ -29,11 +29,13 @@ document.querySelectorAll('.undo-media-field').forEach((field) => {
 });
 
 document.querySelectorAll('[data-undo-depends]').forEach((row) => {
-  const controller = document.getElementById(`undo-${row.dataset.undoDepends}`);
+  const [key, expected] = row.dataset.undoDepends.split(':');
+  const controller = document.getElementById(`undo-${key}`);
   if (!controller) return;
   const update = () => {
-    row.hidden = !controller.checked;
-    row.style.display = controller.checked ? '' : 'none';
+    const visible = controller.type === 'checkbox' ? controller.checked : controller.value === expected;
+    row.hidden = !visible;
+    row.style.display = visible ? '' : 'none';
   };
   controller.addEventListener('change', update);
   update();

@@ -2,7 +2,7 @@
 
 Target: `https://ashkankhalili.ir` (owner-designated empty WordPress and Elementor test site). This is a pre-release validation environment, not a customer release. Record the exact WordPress, PHP, Elementor, and theme versions before testing.
 
-Public inspection on 2026-11-09 confirmed UNDO Web Developments 0.2.9 under the `undo-theme` folder. The owner completed the one-time 0.2.3 bootstrap, supplied screenshots proving WordPress offered 0.2.4 without a ZIP upload, confirmed the 0.2.6 update-details popup rendered release notes, and confirmed the 0.2.9 static-header fix on staging. Back up the database and `wp-content` and record current settings, menus, widgets, and Customizer state before using the dashboard update to 0.3.0.
+The owner installed 0.3.0 and supplied screenshots showing that its UNDO Full Width page still constrained ordinary content. Version 0.3.1 fixes that layout and adds explicit page-width templates. Back up the database and `wp-content` and record current settings, menus, widgets, and Customizer state before using the dashboard update to 0.3.1.
 
 ## Entry conditions
 
@@ -15,7 +15,7 @@ Public inspection on 2026-11-09 confirmed UNDO Web Developments 0.2.9 under the 
 
 | Order | Test | Pass evidence |
 | --- | --- | --- |
-| 1 | Confirm the current theme before the dashboard update | `undo-theme` is active at version 0.2.9 with the GitHub Update URI |
+| 1 | Confirm the current theme before the dashboard update | `undo-theme` is active at version 0.3.0 with the GitHub Update URI |
 | 2 | Open homepage and a standard page at desktop and mobile sizes | Content appears; normal pages scroll freely without jumping to footer |
 | 3 | Set Persian as default; switch to English and back | Visible strings change, `lang` and `dir` match, layout mirrors cleanly |
 | 4 | Save one field in every **UNDO Theme Settings** tab, then reload each tab | Values persist and saving one tab does not clear another |
@@ -24,14 +24,14 @@ Public inspection on 2026-11-09 confirmed UNDO Web Developments 0.2.9 under the 
 | 7 | If Elementor Pro is installed, assign and remove each Theme Builder location | Header, footer, single, archive replacements and fallbacks work |
 | 8 | Test keyboard, touch, reduced motion, console, PHP error log, and responsive widths | No blocking accessibility, script, or PHP errors |
 | 9 | Use **Dashboard → Updates → Check Again** | WordPress lists a newer version for `undo-theme` with an update control; 0.2.4 discovery confirmed by owner screenshot |
-| 10 | Before installing 0.3.0, open **View version details** | Same-site popup displays the GitHub Release notes in Persian and English with a GitHub link; no iframe error. The owner already confirmed 0.2.6 notes displayed. |
-| 11 | Install the offered update from the dashboard | Version becomes 0.3.0 without a ZIP upload; settings, content, Elementor pages, and folder remain intact with no PHP errors |
+| 10 | Before installing 0.3.1, open **View version details** | Same-site popup displays the GitHub Release notes in Persian and English with a GitHub link; no iframe error. The owner already confirmed 0.2.6 notes displayed. |
+| 11 | Install the offered update from the dashboard | Version becomes 0.3.1 without a ZIP upload; settings, content, Elementor pages, and folder remain intact with no PHP errors |
 | 12 | Test Header settings and navigation | Light/dark and logo variants, centered layout, search, action, nested desktop/mobile menus, keyboard Escape, RTL/LTR, and Elementor header replacement work |
 | 13 | Test Single post settings and templates | Manual excerpt, date/author/categories/tags, featured image and caption, previous/next, related posts count and category matching, comments, sidebar, long RTL/LTR content, and Elementor single replacement work |
 | 14 | Recheck the dark-header logo fallback | Without a dedicated light logo, the primary logo appears as a readable light silhouette; when a light logo is supplied, it retains its colors |
 | 15 | Recheck static and sticky header section alignment | With sticky off, each later homepage section starts at viewport top and fills the viewport. With sticky on, it starts below the header. Wheel, keyboard and rail navigation remain usable. |
-| 16 | Test standard and UNDO Full Width pages | A new staging page shows each title mode, reading/wide width, optional image and sidebar, and full-bleed blocks without horizontal overflow in Persian/English at phone/desktop widths |
-| 17 | Test page hierarchy and Elementor | A child page shows the Home → parent → current breadcrumb path. An Elementor-built page keeps its own layout; with Elementor Pro, the assigned single template replaces the built-in page layout and its fallback returns when unassigned. |
+| 16 | Test all UNDO page layouts | On the same test page, Default inherits the global mode; Reading is narrow, Wide expands, Boxed has a bounded surface, Full Width uses the viewport with gutters, and Custom Width follows 960px and 80% values. Test the page editor width override and verify no mobile RTL overflow. |
+| 17 | Test page hierarchy and Elementor | A child page shows the Home → parent → current breadcrumb path. Elementor-built pages using an UNDO template follow that template width; Elementor's own Full Width remains viewport wide and a short page keeps the footer below the viewport; Canvas omits theme header/footer. With Elementor Pro, an assigned single location replaces the built-in layout and returns when unassigned. |
 
 Use Persian and English content with long titles, mixed Latin text, and varied images. For multilingual SEO, test a separately chosen content translation plugin and translated URLs; the theme's language cookie only switches built-in strings.
 

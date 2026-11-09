@@ -4,6 +4,29 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-11-09
+
+### Fixed
+
+- Removed the hidden 760px text limit from full-width and wide pages. Global page layouts now visibly change the frontend width for both WordPress content and Elementor-built pages using an UNDO template.
+- Kept short pages built with Elementor Full Width at least one viewport high, so the footer follows the page rather than rising immediately after a few lines of content.
+- Honored a selected UNDO page template on a static front page instead of always showing the built-in landing layout.
+
+### Added
+
+- Added **UNDO Reading**, **UNDO Wide**, **UNDO Boxed**, and **UNDO Custom Width** page templates alongside **UNDO Full Width**. Each is selectable in the WordPress page editor and Elementor page settings.
+- Added a default page layout and a custom width of 320–1920px or 20–100% under **UNDO Theme Settings → Pages**. A page editor width field overrides the global custom width for that page. The theme setting remains the fallback when no UNDO template is selected.
+
+### فارسی
+
+- محدودیت پنهان عرض ۷۶۰ پیکسل از صفحه‌های عریض و تمام‌عرض برداشته شد؛ تنظیم چیدمان اکنون روی محتوای وردپرس و صفحه‌های ساخته‌شده با المنتور که قالب UNDO دارند اثر می‌گذارد.
+- قالب‌های مطالعه، عریض، کادربندی‌شده و عرض سفارشی به انتخاب قالب صفحه افزوده شدند. عرض سفارشی با پیکسل یا درصد از تنظیمات پوسته و برای هر صفحه جداگانه قابل تعیین است.
+- قالب انتخاب‌شده برای صفحه نخست ایستا رعایت می‌شود و صفحه‌های کوتاه Elementor Full Width ارتفاع کافی پیش از پابرگ دارند.
+
+### Validation
+
+- Browser layout measurements covered all five modes, pixel and percentage custom widths, Elementor wrappers, and mobile RTL overflow. PHP lint, behavioral tests, translation catalogs, and ZIP integrity are enforced by GitHub Actions. Live staging retest follows the 0.3.1 dashboard update.
+
 ## [0.3.0] - 2026-11-09
 
 ### Added

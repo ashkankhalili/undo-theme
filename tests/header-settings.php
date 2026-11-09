@@ -36,6 +36,10 @@ expect( 'compact' === $settings['page_title_style'] && '1' === $settings['page_s
 expect( 'dark' === $settings['header_style'] && '0' === $settings['footer_show_brand'], 'Saving pages must preserve settings from other tabs' );
 $settings = undo_sanitize_settings( array( 'page_title_style' => 'invalid', 'page_content_width' => 'invalid' ) );
 expect( 'editorial' === $settings['page_title_style'] && 'reading' === $settings['page_content_width'], 'Invalid page select values must fall back to safe defaults' );
+expect( '1200px' === undo_sanitize_page_dimension( '1200px' ) && '80%' === undo_sanitize_page_dimension( '80%' ), 'Page dimensions must accept safe pixel and percentage values' );
+expect( '' === undo_sanitize_page_dimension( '200vw', '' ) && '' === undo_sanitize_page_dimension( '0%', '' ) && '' === undo_sanitize_page_dimension( 'url(1)', '' ), 'Invalid page dimensions must be rejected' );
+$settings = undo_sanitize_settings( array( 'page_content_width' => 'custom', 'page_custom_width' => '85%' ) );
+expect( 'custom' === $settings['page_content_width'] && '85%' === $settings['page_custom_width'], 'Custom page width settings must validate' );
 
 ob_start();
 undo_nav_fallback( array() );

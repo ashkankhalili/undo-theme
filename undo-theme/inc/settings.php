@@ -46,7 +46,8 @@ function undo_settings_sections() {
             'page_title_style' => array( __( 'Page title style', 'undo-theme' ), 'select', 'editorial', array( 'editorial' => __( 'Editorial', 'undo-theme' ), 'compact' => __( 'Compact', 'undo-theme' ) ), 'page_show_title' ),
             'page_show_breadcrumbs' => array( __( 'Show page breadcrumbs', 'undo-theme' ), 'checkbox', '0' ),
             'page_show_featured' => array( __( 'Show page featured image', 'undo-theme' ), 'checkbox', '0' ),
-            'page_content_width' => array( __( 'Page content width', 'undo-theme' ), 'select', 'reading', array( 'reading' => __( 'Reading', 'undo-theme' ), 'wide' => __( 'Wide', 'undo-theme' ) ) ),
+            'page_content_width' => array( __( 'Default page layout', 'undo-theme' ), 'select', 'reading', array( 'reading' => __( 'Reading', 'undo-theme' ), 'wide' => __( 'Wide', 'undo-theme' ), 'boxed' => __( 'Boxed', 'undo-theme' ), 'full' => __( 'Full width', 'undo-theme' ), 'custom' => __( 'Custom width', 'undo-theme' ) ) ),
+            'page_custom_width' => array( __( 'Custom page width', 'undo-theme' ), 'dimension', '1200px', array(), 'page_content_width:custom' ),
             'page_show_sidebar' => array( __( 'Show page sidebar', 'undo-theme' ), 'checkbox', '0' ),
         ) ),
         'sidebar' => array( __( 'Sidebar', 'undo-theme' ), __( 'The sidebar appears only where enabled and when widgets are assigned.', 'undo-theme' ), array(
@@ -94,6 +95,14 @@ function undo_setting( $key ) {
     return isset( $saved[ $key ] ) ? (string) $saved[ $key ] : ( isset( $defaults[ $key ] ) ? (string) $defaults[ $key ] : '' );
 }
 function undo_setting_enabled( $key ) { return '1' === undo_setting( $key ); }
+function undo_sanitize_page_dimension( $value, $fallback = '1200px' ) {
+    $value = trim( (string) $value );
+    if ( ! preg_match( '/^([0-9]{1,4})(px|%)$/', $value, $match ) ) { return $fallback; }
+    $number = (int) $match[1];
+    if ( 'px' === $match[2] && $number >= 320 && $number <= 1920 ) { return $number . 'px'; }
+    if ( '%' === $match[2] && $number >= 20 && $number <= 100 ) { return $number . '%'; }
+    return $fallback;
+}
 function undo_sanitize_settings( $input ) {
     $input = is_array( $input ) ? $input : array();
     $previous = get_option( 'undo_theme_settings', array() );
@@ -107,6 +116,7 @@ function undo_sanitize_settings( $input ) {
                 case 'color': $clean[ $key ] = sanitize_hex_color( $value ) ?: $field[2]; break;
                 case 'select': $clean[ $key ] = isset( $field[3][ $value ] ) ? $value : $field[2]; break;
                 case 'number': $clean[ $key ] = (string) max( $field[3][0], min( $field[3][1], (int) $value ) ); break;
+                case 'dimension': $clean[ $key ] = undo_sanitize_page_dimension( $value, $field[2] ); break;
                 case 'media': $clean[ $key ] = ctype_digit( $value ) && wp_attachment_is_image( (int) $value ) ? $value : '0'; break;
                 case 'textarea': $clean[ $key ] = sanitize_textarea_field( $value ); break;
                 case 'url': $clean[ $key ] = 0 === strpos( $value, '#' ) ? sanitize_text_field( $value ) : esc_url_raw( $value ); break;
@@ -148,6 +158,8 @@ function undo_settings_field( $key, $field ) {
         echo '</select>';
     } elseif ( 'checkbox' === $field[1] ) {
         echo '<input type="hidden" name="' . $name . '" value="0"><input type="checkbox" id="undo-' . esc_attr( $key ) . '" name="' . $name . '" value="1"' . checked( $value, '1', false ) . '>';
+    } elseif ( 'dimension' === $field[1] ) {
+        echo '<input type="text" id="undo-' . esc_attr( $key ) . '" name="' . $name . '" value="' . esc_attr( $value ) . '" class="regular-text" dir="ltr" pattern="([0-9]{3,4}px|[0-9]{1,3}%)"><p class="description">' . esc_html__( 'Use 320–1920px or 20–100%, for example 1200px or 80%.', 'undo-theme' ) . '</p>';
     } else {
         $extra = 'number' === $field[1] ? ' min="' . esc_attr( $field[3][0] ) . '" max="' . esc_attr( $field[3][1] ) . '"' : '';
         echo '<input type="' . esc_attr( $field[1] ) . '" id="undo-' . esc_attr( $key ) . '" name="' . $name . '" value="' . esc_attr( $value ) . '" class="regular-text" dir="auto"' . $extra . '>';

@@ -215,7 +215,7 @@ html[dir="rtl"] .text-link:hover:after,html[dir="rtl"] .desktop-nav a:hover:afte
 .wp-content .archive-item h2{margin:0 0 12px}
 .wp-content .post-meta{color:var(--muted)}
 .wp-content .page-numbers{display:inline-block;padding:8px 12px}
-.undo-elementor-page{min-height:50svh}
+.undo-elementor-page{display:flow-root;min-height:calc(100svh - 76px)}
 html[lang^="fa"] .wp-content h1{letter-spacing:0;line-height:1.35}
 @media(max-width:760px){.wp-content{min-height:calc(100svh - 66px);padding-block:64px 90px}.language-switcher a{padding:6px 5px;font-size:11px}.footer .nav-list{flex-wrap:wrap;gap:15px}}
 
@@ -369,11 +369,20 @@ html[lang^="fa"] .single-header h1,html[lang^="fa"] .single-related-heading h2,h
 @media(max-width:540px){.single-content .post-navigation .nav-links{grid-template-columns:1fr}.single-content .post-navigation .nav-next{border-inline-start:0;border-block-start:1px solid var(--line);padding-inline-start:0;text-align:start}.single-content .post-navigation .nav-previous{padding-inline-end:0}}
 @media(prefers-reduced-motion:reduce){.single-related-image img{transition:none}}
 
-/* Pages use the same design language as posts, with space for composed blocks. */
+/* Page widths are resolved from the Pages tab or the selected page template. */
+:root{--undo-page-gutter:clamp(20px,4vw,64px)}
+.page-layout{width:min(calc(100% - var(--undo-page-gutter) - var(--undo-page-gutter)),760px);margin-inline:auto;min-width:0}
+.page-layout--reading.has-sidebar{width:min(calc(100% - var(--undo-page-gutter) - var(--undo-page-gutter)),calc(760px + var(--undo-sidebar-width,300px) + 48px))}
+.page-layout--wide{width:min(calc(100% - var(--undo-page-gutter) - var(--undo-page-gutter)),var(--undo-content-width,1440px))}
+.undo-layout-boxed .page-layout--wide{max-width:1100px}
+.page-layout--boxed{width:min(calc(100% - var(--undo-page-gutter) - var(--undo-page-gutter)),var(--undo-content-width,1440px),1100px);padding-inline:clamp(20px,4vw,64px);border:1px solid var(--line);background:var(--white)}
+.page-layout--custom{width:min(calc(100% - var(--undo-page-gutter) - var(--undo-page-gutter)),var(--undo-page-custom-width,1200px))}
+.page-layout--full{width:100%;max-width:none}
+.page-layout--full:not(.page-layout--elementor){padding-inline:var(--undo-page-gutter)}
+.page-layout--elementor .undo-elementor-page{width:100%}
+body.elementor-template-full-width .elementor[data-elementor-type="wp-page"]{min-height:calc(100svh - 76px)}
 .page-content{padding-block:clamp(56px,7.5vw,112px) clamp(90px,10vw,160px)}
 .page-layout>.page-content{max-width:none}
-.page-layout--reading:not(.has-sidebar)>.page-content{max-width:760px}
-.page-layout--wide:not(.has-sidebar)>.page-content{max-width:1120px}
 .page-article{min-width:0}
 .page-header{border-block-end:1px solid var(--line);margin-block-end:clamp(40px,5vw,76px);padding-block-end:clamp(32px,4vw,56px)}
 .page-header h1{max-width:13ch;margin:0;font-size:clamp(52px,7vw,108px);line-height:1.04;letter-spacing:-.055em;overflow-wrap:anywhere}
@@ -391,10 +400,7 @@ html[lang^="fa"] .single-header h1,html[lang^="fa"] .single-related-heading h2,h
 .page-header--path-only .page-breadcrumbs{margin-block-end:0}
 .page-featured{margin:0 0 clamp(40px,6vw,72px)}
 .page-featured img{display:block;width:100%;max-height:680px;object-fit:cover}
-.page-body{max-width:760px;font-size:18px;line-height:1.85;overflow-wrap:break-word}
-.page-layout--reading:not(.has-sidebar) .page-body{max-width:none}
-.page-layout--wide:not(.has-sidebar) .page-body,.page-layout--full .page-body{max-width:none}
-.page-layout:is(.page-layout--wide,.page-layout--full):not(.has-sidebar) .page-body>:is(p,h2,h3,h4,h5,h6,ul,ol,blockquote,pre,table){max-width:760px}
+.page-body{max-width:none;font-size:18px;line-height:1.85;overflow-wrap:anywhere}
 .page-body>:first-child{margin-block-start:0}
 .page-body :is(h2,h3,h4){margin-block:1.6em .55em;line-height:1.25;letter-spacing:-.025em}
 .page-body h2{font-size:clamp(30px,3.3vw,42px)}
@@ -417,4 +423,4 @@ html[dir="rtl"] .page-body .alignfull{transform:translateX(50%)}
 .page-pagination{display:flex;flex-wrap:wrap;gap:12px;padding-block-start:24px;border-block-start:1px solid var(--line)}
 .page-pagination a{min-width:36px;text-align:center}
 html[lang^="fa"] .page-header h1{letter-spacing:0;line-height:1.35}
-@media(max-width:760px){.page-content{padding-block:58px 90px}.page-header h1{font-size:clamp(40px,10vw,62px)}.page-header--compact h1{font-size:clamp(32px,8vw,48px)}.page-body{font-size:16px;line-height:1.9}}
+@media(max-width:760px){.undo-elementor-page,body.elementor-template-full-width .elementor[data-elementor-type="wp-page"]{min-height:calc(100svh - 66px)}.page-content{padding-block:58px 90px}.page-header h1{font-size:clamp(40px,10vw,62px)}.page-header--compact h1{font-size:clamp(32px,8vw,48px)}.page-body{font-size:16px;line-height:1.9}}

@@ -60,6 +60,11 @@ jobs:
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/functions.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/inc/github-updater.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-full-width.php'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-reading.php'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-wide.php'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-boxed.php'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-custom-width.php'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/inc/page-layout.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-parts/page-layout.php'
       - uses: actions/upload-artifact@v4
         with:

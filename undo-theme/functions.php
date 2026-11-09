@@ -1,7 +1,8 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.3.0' );
+define( 'UNDO_THEME_VERSION', '0.3.1' );
 require_once get_template_directory() . '/inc/settings.php';
+require_once get_template_directory() . '/inc/page-layout.php';
 require_once get_template_directory() . '/inc/github-updater.php';
 
 function undo_theme_setup() {
