@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.3.3\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.4.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
@@ -14,8 +14,8 @@ msgid "A better site or product should help people understand, decide, and act. 
 msgstr "یک وب‌سایت یا محصول بهتر باید به مردم کمک کند بفهمند، تصمیم بگیرند و اقدام کنند. طراحی در خدمت همین هدف است."
 
 #: style.css:1
-msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates."
-msgstr "پوسته وردپرس دوزبانه برای آژانس‌ها و استودیوهای خلاق. زبان آغازین از زبان سایت وردپرس پیروی می‌کند و تغییر زبان فارسی و انگلیسی برای بازدیدکننده و استایل اختصاصی راست‌چین دارد. دارای صفحه اصلی واکنش‌گرا، نوشته‌های خوانا و قالب‌های صفحه مناسب مطالعه، عریض، جعبه‌ای و تمام‌عرض با عرض و فاصله‌های قابل تنظیم است. عرض سفارشی برای هر صفحه جداگانه تعیین می‌شود. پیشخوان مستقل آن چیدمان، سربرگ، صفحه‌ها، نوشته‌ها، وبلاگ، نوارهای کناری و پانوشت را تنظیم می‌کند. از قالب‌های صفحه و جایگاه‌های قالب‌ساز المنتور و به‌روزرسانی از پیشخوان وردپرس پشتیبانی می‌کند."
+msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer, including widget styles and optional sticky sidebars. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates."
+msgstr "پوسته وردپرس دوزبانه برای آژانس‌ها و استودیوهای خلاق. زبان آغازین از زبان سایت وردپرس پیروی می‌کند و تغییر زبان فارسی و انگلیسی برای بازدیدکننده و استایل اختصاصی راست‌چین دارد. دارای صفحه اصلی واکنش‌گرا، نوشته‌های خوانا و قالب‌های صفحه مناسب مطالعه، عریض، جعبه‌ای و تمام‌عرض با عرض و فاصله‌های قابل تنظیم است. عرض سفارشی برای هر صفحه جداگانه تعیین می‌شود. پیشخوان مستقل آن چیدمان، سربرگ، صفحه‌ها، نوشته‌ها، وبلاگ، نوارهای کناری و پانوشت را همراه با سبک ابزارک‌ها و نوار کناری چسبان اختیاری تنظیم می‌کند. از قالب‌های صفحه و جایگاه‌های قالب‌ساز المنتور و به‌روزرسانی از پیشخوان وردپرس پشتیبانی می‌کند."
 
 #: functions.php:117 template-parts/landing.php:39
 msgid "A redesign"
@@ -57,7 +57,7 @@ msgstr "بازگشت به به‌روزرسانی‌های وردپرس"
 msgid "Before"
 msgstr "قبل"
 
-#: inc/settings.php:81
+#: inc/settings.php:85
 msgid "Blog"
 msgstr "وبلاگ"
 
@@ -81,7 +81,7 @@ msgstr "ساخت"
 msgid "Built for every screen."
 msgstr "برای هر صفحه‌ای ساخته شده."
 
-#: inc/settings.php:88
+#: inc/settings.php:92
 msgid "Built-in footer settings. Elementor Theme Builder can replace this template."
 msgstr "تنظیمات پانوشت داخلی. قالب‌ساز المنتور می‌تواند این قالب را جایگزین کند."
 
@@ -89,7 +89,7 @@ msgstr "تنظیمات پانوشت داخلی. قالب‌ساز المنتور
 msgid "Built-in header settings. Elementor Theme Builder can replace this template."
 msgstr "تنظیمات سربرگ داخلی. قالب‌ساز المنتور می‌تواند این قالب را جایگزین کند."
 
-#: inc/settings.php:97
+#: inc/settings.php:101
 msgid "Built-in landing page copy. Elementor pages use their own content."
 msgstr "متن صفحه اصلی داخلی. صفحه‌های المنتور محتوای خود را دارند."
 
@@ -101,7 +101,7 @@ msgstr "نوشته %s"
 msgid "COMPANY NAME"
 msgstr "نام شرکت"
 
-#: inc/settings.php:85
+#: inc/settings.php:89
 msgid "Card columns"
 msgstr "تعداد ستون‌های کارت"
 
@@ -125,7 +125,7 @@ msgstr "فشرده"
 msgid "Compare earlier and redesigned website concept"
 msgstr "مقایسه نمونه وب‌سایت پیش و پس از بازطراحی"
 
-#: inc/settings.php:95
+#: inc/settings.php:99
 msgid "Contact email"
 msgstr "ایمیل تماس"
 
@@ -181,11 +181,11 @@ msgstr "تحریریه‌ای"
 msgid "End"
 msgstr "انتهای جهت نوشتار"
 
-#: inc/settings.php:86
+#: inc/settings.php:90
 msgid "Excerpt length in words"
 msgstr "طول خلاصه به واژه"
 
-#: inc/settings.php:88
+#: inc/settings.php:92
 msgid "Footer"
 msgstr "پانوشت"
 
@@ -197,11 +197,11 @@ msgstr "فهرست پایین صفحه"
 msgid "Footer navigation"
 msgstr "ناوبری پایین صفحه"
 
-#: inc/settings.php:94
+#: inc/settings.php:98
 msgid "Footer slogan (English)"
 msgstr "شعار پایین صفحه (انگلیسی)"
 
-#: inc/settings.php:93
+#: inc/settings.php:97
 msgid "Footer slogan (Persian)"
 msgstr "شعار پایین صفحه (فارسی)"
 
@@ -245,19 +245,19 @@ msgstr "چیدمان سربرگ"
 msgid "Header logo"
 msgstr "نشان سربرگ"
 
-#: inc/settings.php:101
+#: inc/settings.php:105
 msgid "Hero description (English)"
 msgstr "توضیح بخش آغازین (انگلیسی)"
 
-#: inc/settings.php:99
+#: inc/settings.php:103
 msgid "Hero description (Persian)"
 msgstr "توضیح بخش آغازین (فارسی)"
 
-#: inc/settings.php:100
+#: inc/settings.php:104
 msgid "Hero title (English)"
 msgstr "عنوان بخش آغازین (انگلیسی)"
 
-#: inc/settings.php:98
+#: inc/settings.php:102
 msgid "Hero title (Persian)"
 msgstr "عنوان بخش آغازین (فارسی)"
 
@@ -269,13 +269,17 @@ msgstr "خانه"
 msgid "Home  About  Services  Contact"
 msgstr "خانه  درباره ما  خدمات  تماس"
 
-#: inc/settings.php:97
+#: inc/settings.php:101
 msgid "Homepage"
 msgstr "صفحه اصلی"
 
 #: template-parts/landing.php:23
 msgid "Interactive concept showing a website before and after a redesign"
 msgstr "نمونه تعاملی مقایسه وب‌سایت پیش و پس از بازطراحی"
+
+#: inc/settings.php:80
+msgid "Keep sidebar visible while scrolling"
+msgstr "ثابت ماندن نوار کناری هنگام پیمایش"
 
 #: template-parts/landing.php:36
 msgid "Keep what works. Redo what does not."
@@ -292,6 +296,10 @@ msgstr "روشن"
 #: inc/settings.php:40
 msgid "Light logo for dark header"
 msgstr "نشان روشن برای سربرگ تیره"
+
+#: inc/settings.php:78
+msgid "Lined"
+msgstr "خط‌دار"
 
 #: header.php:37
 msgid "Main navigation"
@@ -357,7 +365,7 @@ msgstr "نوشته‌ای پیدا نشد."
 msgid "No release notes were provided for this version."
 msgstr "برای این نسخه یادداشت انتشار ثبت نشده است."
 
-#: inc/settings.php:215
+#: inc/settings.php:219
 msgid "On screens under 760px, side margins and padding are capped at 20px; top and bottom padding are capped at 58px and 90px."
 msgstr "در نمایشگرهای کوچک‌تر از ۷۶۰ پیکسل، فاصله کناره‌ها حداکثر ۲۰ پیکسل و فاصله درونی بالا و پایین حداکثر ۵۸ و ۹۰ پیکسل است."
 
@@ -381,7 +389,7 @@ msgstr "روند کار ما: شناخت، طراحی، ساخت و بهبود"
 msgid "Overview"
 msgstr "معرفی"
 
-#: inc/settings.php:207
+#: inc/settings.php:211
 msgid "Page display"
 msgstr "نمایش صفحه"
 
@@ -409,11 +417,15 @@ msgstr "سبک عنوان صفحه"
 msgid "Pages"
 msgstr "صفحه‌ها"
 
+#: inc/settings.php:78
+msgid "Panel"
+msgstr "کادربندی‌شده"
+
 #: header.php:41 header.php:46 template-parts/landing.php:22 template-parts/landing.php:34
 msgid "Plan a project"
 msgstr "برنامه‌ریزی پروژه"
 
-#: inc/settings.php:81
+#: inc/settings.php:85
 msgid "Post cards in blog, archive, and search results."
 msgstr "کارت‌های نوشته در وبلاگ، بایگانی و نتایج جست‌وجو."
 
@@ -437,7 +449,7 @@ msgstr "نوشته قبلی"
 msgid "Primary menu"
 msgstr "فهرست اصلی"
 
-#: functions.php:27 sidebar.php:2
+#: functions.php:27 sidebar.php:7
 msgid "Primary sidebar"
 msgstr "نوار کناری اصلی"
 
@@ -481,7 +493,7 @@ msgstr "نوشته‌های مرتبط"
 msgid "Release details are unavailable. Refresh the WordPress Updates screen and try again."
 msgstr "جزئیات انتشار در دسترس نیست. صفحه به‌روزرسانی‌های وردپرس را تازه کنید و دوباره تلاش کنید."
 
-#: inc/settings.php:175
+#: inc/settings.php:179
 msgid "Remove image"
 msgstr "حذف تصویر"
 
@@ -501,11 +513,11 @@ msgstr "جست‌وجو در این وب‌سایت"
 msgid "See what changed before you update. Your theme settings and WordPress content are stored outside the theme files."
 msgstr "پیش از به‌روزرسانی، تغییرات را ببینید. تنظیمات پوسته و محتوای وردپرس بیرون از فایل‌های پوسته ذخیره می‌شوند."
 
-#: inc/settings.php:165
+#: inc/settings.php:169
 msgid "Select header logo"
 msgstr "انتخاب نشان سربرگ"
 
-#: inc/settings.php:175
+#: inc/settings.php:179
 msgid "Select image"
 msgstr "انتخاب تصویر"
 
@@ -533,11 +545,11 @@ msgstr "نمایش دکمه اقدام در فهرست موبایل"
 msgid "Show author"
 msgstr "نمایش نویسنده"
 
-#: inc/settings.php:83
+#: inc/settings.php:87
 msgid "Show card dates"
 msgstr "نمایش تاریخ کارت‌ها"
 
-#: inc/settings.php:82
+#: inc/settings.php:86
 msgid "Show card images"
 msgstr "نمایش تصویر کارت‌ها"
 
@@ -549,11 +561,11 @@ msgstr "نمایش دسته‌ها"
 msgid "Show comments"
 msgstr "نمایش دیدگاه‌ها"
 
-#: inc/settings.php:91
+#: inc/settings.php:95
 msgid "Show contact email"
 msgstr "نمایش ایمیل تماس"
 
-#: inc/settings.php:92
+#: inc/settings.php:96
 msgid "Show copyright"
 msgstr "نمایش حق نشر"
 
@@ -561,7 +573,7 @@ msgstr "نمایش حق نشر"
 msgid "Show date"
 msgstr "نمایش تاریخ"
 
-#: inc/settings.php:84
+#: inc/settings.php:88
 msgid "Show excerpts"
 msgstr "نمایش خلاصه‌ها"
 
@@ -569,11 +581,11 @@ msgstr "نمایش خلاصه‌ها"
 msgid "Show featured image"
 msgstr "نمایش تصویر شاخص"
 
-#: inc/settings.php:89
+#: inc/settings.php:93
 msgid "Show footer brand"
 msgstr "نمایش برند پانوشت"
 
-#: inc/settings.php:90
+#: inc/settings.php:94
 msgid "Show footer navigation"
 msgstr "نمایش فهرست پانوشت"
 
@@ -593,11 +605,11 @@ msgstr "نمایش فهرست اصلی"
 msgid "Show manually written excerpt"
 msgstr "نمایش خلاصه نوشته‌شده"
 
-#: inc/settings.php:78
+#: inc/settings.php:82
 msgid "Show on archives"
 msgstr "نمایش در بایگانی‌ها"
 
-#: inc/settings.php:79
+#: inc/settings.php:83
 msgid "Show on search results"
 msgstr "نمایش در نتایج جست‌وجو"
 
@@ -629,7 +641,7 @@ msgstr "نمایش نوشته‌های قبلی و بعدی"
 msgid "Show related posts"
 msgstr "نمایش نوشته‌های مرتبط"
 
-#: inc/settings.php:102
+#: inc/settings.php:106
 msgid "Show section navigation"
 msgstr "نمایش ناوبری بخش‌ها"
 
@@ -693,6 +705,10 @@ msgstr "نقطه شروع"
 msgid "Sticky header"
 msgstr "سربرگ چسبان"
 
+#: inc/settings.php:81
+msgid "Sticky sidebar top gap in pixels"
+msgstr "فاصله نوار کناری چسبان از بالای صفحه به پیکسل"
+
 #: template-parts/landing.php:35
 msgid "Structure, content, interface"
 msgstr "ساختار، محتوا، رابط کاربری"
@@ -705,7 +721,7 @@ msgstr "برچسب‌ها"
 msgid "Tell us what you want to make."
 msgstr "از پروژه‌ای که در ذهن دارید بگویید."
 
-#: inc/settings.php:209
+#: inc/settings.php:213
 msgid "The UNDO Custom Width template uses a width set on each page below the editor."
 msgstr "عرض قالب UNDO Custom Width برای هر صفحه، در بخش زیر ویرایشگر همان صفحه تعیین می‌شود."
 
@@ -725,7 +741,7 @@ msgstr "کار درست برای نسخه بعدی کسب‌وکار شما."
 msgid "The sidebar appears only where enabled and when widgets are assigned."
 msgstr "نوار کناری فقط در بخش‌های فعال و پس از افزودن ابزارک نمایش داده می‌شود."
 
-#: inc/settings.php:197
+#: inc/settings.php:201
 msgid "Theme settings sections"
 msgstr "بخش‌های تنظیمات پوسته"
 
@@ -765,7 +781,7 @@ msgstr "UNDO تمام‌عرض"
 msgid "UNDO Reading"
 msgstr "UNDO مناسب مطالعه"
 
-#: inc/settings.php:157 inc/settings.php:157 inc/settings.php:197
+#: inc/settings.php:161 inc/settings.php:161 inc/settings.php:201
 msgid "UNDO Theme Settings"
 msgstr "تنظیمات پوسته UNDO"
 
@@ -813,7 +829,7 @@ msgstr "صفحه بدون عنوان"
 msgid "Untitled project"
 msgstr "پروژه بدون نام"
 
-#: inc/settings.php:185
+#: inc/settings.php:189
 msgid "Use 320–1920px or 20–100%, for example 1200px or 80%."
 msgstr "از ۳۲۰ تا ۱۹۲۰ پیکسل یا ۲۰ تا ۱۰۰ درصد استفاده کنید؛ برای مثال 1200px یا 80%."
 
@@ -821,7 +837,7 @@ msgstr "از ۳۲۰ تا ۱۹۲۰ پیکسل یا ۲۰ تا ۱۰۰ درصد اس
 msgid "Use 320–1920px or 20–100%."
 msgstr "از ۳۲۰ تا ۱۹۲۰ پیکسل یا ۲۰ تا ۱۰۰ درصد استفاده کنید."
 
-#: inc/settings.php:165
+#: inc/settings.php:169
 msgid "Use this image"
 msgstr "استفاده از این تصویر"
 
@@ -888,6 +904,14 @@ msgstr "چه از یک ایده تازه شروع کنید، چه محصولی �
 #: inc/settings.php:35 inc/settings.php:72
 msgid "Wide"
 msgstr "عریض"
+
+#: inc/settings.php:79
+msgid "Widget spacing in pixels"
+msgstr "فاصله ابزارک‌ها به پیکسل"
+
+#: inc/settings.php:78
+msgid "Widget style"
+msgstr "سبک ابزارک‌ها"
 
 #: functions.php:29
 msgid "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings."

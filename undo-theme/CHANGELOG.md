@@ -4,6 +4,23 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-11-09
+
+### Sidebar milestone
+
+- Added **Lined** and **Panel** widget styles, a 16–64px widget spacing control, optional sticky behavior, and a 0–120px sticky top gap under **UNDO Theme Settings → Sidebar**. Existing position, width, archive, and search settings remain available. The default remains lined and nonsticky.
+- Styled classic and block widget headings, lists, links, inputs, and search controls. Logical CSS keeps start/end placement consistent in RTL. On small screens the sidebar follows the main content in document order.
+- Sticky mode accounts for the built-in sticky header and activates only when the widget area fits the viewport. Tall widget areas remain in normal page flow without a nested scroll region. An empty widget area reserves no sidebar markup.
+
+### فارسی
+
+- برای نوار کناری، سبک خط‌دار یا کادربندی‌شده، فاصله قابل تنظیم ابزارک‌ها و حالت چسبان اختیاری با فاصله از بالای صفحه اضافه شد. حالت پیش‌فرض همان سبک خط‌دار و غیرچسبان است.
+- جایگاه ابتدا/انتها در فارسی راست‌چین آینه می‌شود و در نمایشگر کوچک نوار کناری پس از محتوای اصلی قرار می‌گیرد. نوار کناری بلند چسبان نمی‌شود و بخش ابزارک خالی فضایی اشغال نمی‌کند.
+
+### Validation
+
+- Local browser fixtures checked LTR/RTL position, 390px mobile layout, sticky placement below sticky and static headers, and tall-content fallback. PHP tests cover settings validation and empty/widget sidebar markup. GitHub CI checks PHP 7.4/8.3, translations, and the package. Live WordPress staging verification remains pending.
+
 ## [0.3.3] - 2026-11-09
 
 ### Added

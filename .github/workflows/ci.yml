@@ -29,6 +29,7 @@ jobs:
           php tests/github-updater.php
           php tests/header-settings.php
           php tests/page-layout.php
+          php tests/sidebar.php
 
   package:
     name: Translation and package integrity

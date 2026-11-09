@@ -284,10 +284,29 @@ html[lang^="fa"] .wp-content h1{letter-spacing:0;line-height:1.35}
 .content-layout.sidebar-start{grid-template-columns:var(--undo-sidebar-width,300px) minmax(0,1fr)}
 .content-layout.sidebar-start>.wp-content{grid-column:2;grid-row:1}
 .content-layout.sidebar-start>.undo-sidebar{grid-column:1;grid-row:1}
-.undo-sidebar{padding-block:90px 100px;min-width:0}
-.undo-sidebar .widget{border-block-start:1px solid var(--line);padding-block:24px}
-.undo-sidebar .widget-title{font:600 20px/1.4 var(--body);letter-spacing:0;margin-block:0 18px}
-.undo-sidebar :is(input,select,textarea){max-width:100%}
+.undo-sidebar{align-self:stretch;padding-block:90px 100px;min-width:0}
+.undo-sidebar__inner{min-width:0}
+.undo-sidebar--sticky .undo-sidebar__inner.is-sticky-fit{position:sticky;top:calc(var(--undo-sidebar-header-offset,0px) + var(--undo-sidebar-sticky-offset,24px))}
+.undo-sidebar .widget{min-width:0;margin:0;overflow-wrap:anywhere}
+.undo-sidebar--lined .widget{border-block-start:1px solid var(--line);padding-block-start:24px}
+.undo-sidebar--lined .widget+.widget{margin-block-start:var(--undo-sidebar-widget-gap,32px)}
+.undo-sidebar--panel .undo-sidebar__inner{background:var(--white);border:1px solid var(--line);padding:clamp(20px,2.4vw,32px)}
+.undo-sidebar--panel .widget+.widget{border-block-start:1px solid var(--line);margin-block-start:var(--undo-sidebar-widget-gap,32px);padding-block-start:var(--undo-sidebar-widget-gap,32px)}
+.undo-sidebar :is(.widget-title,.wp-block-heading){font:600 clamp(18px,1.5vw,21px)/1.35 var(--display);letter-spacing:-.025em;margin-block:0 18px}
+.undo-sidebar :is(p,li){font-size:14px;line-height:1.65}
+.undo-sidebar p{margin-block:0 16px}
+.undo-sidebar .widget>:last-child{margin-block-end:0}
+.undo-sidebar :is(ul,ol){margin:0;padding:0;list-style:none}
+.undo-sidebar li+li{margin-block-start:12px}
+.undo-sidebar :is(ul,ol) :is(ul,ol){margin-block-start:12px;padding-inline-start:16px;border-inline-start:1px solid var(--line)}
+.undo-sidebar a{text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px;transition:text-decoration-color 160ms ease,color 160ms ease}
+.undo-sidebar a:hover,.undo-sidebar a:focus-visible{text-decoration-color:currentColor}
+.undo-sidebar :is(input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]):not([type="submit"]),select,textarea){max-width:100%;min-width:0;width:100%;border:1px solid var(--line);border-radius:0;background:var(--white);color:var(--ink);padding:11px 12px}
+.undo-sidebar :is(button,input[type="submit"]){min-height:42px;width:auto;border:0;border-radius:0;background:var(--ink);color:var(--white);padding:10px 14px;font-size:13px;font-weight:700;cursor:pointer}
+.undo-sidebar :is(button,input[type="submit"]):hover{background:var(--red)}
+.undo-sidebar :is(.wp-block-search__inside-wrapper,form.search-form){display:flex;align-items:stretch;gap:8px}
+.undo-sidebar :is(.wp-block-search__inside-wrapper,form.search-form) :is(label,input[type="search"]){min-width:0;flex:1}
+.undo-sidebar .wp-block-latest-posts__post-date{display:block;margin-block-start:4px;color:var(--muted);font-size:12px}
 .undo-post-grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:30px}
 .undo-post-grid.columns-2{grid-template-columns:repeat(2,minmax(0,1fr))}
 .undo-post-grid.columns-3{grid-template-columns:repeat(3,minmax(0,1fr))}
@@ -295,7 +314,7 @@ html[lang^="fa"] .wp-content h1{letter-spacing:0;line-height:1.35}
 .archive-image img{width:100%;height:auto;aspect-ratio:1.6;object-fit:cover;display:block}
 .archive-copy>p{margin-block:12px}
 .archive-copy .post-meta{font-size:13px}
-@media(max-width:900px){.content-layout.has-sidebar{display:block}.undo-sidebar{padding-block:0 80px}.undo-post-grid.columns-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.content-layout.has-sidebar{display:block}.undo-sidebar{padding-block:0 80px}.undo-sidebar--sticky .undo-sidebar__inner.is-sticky-fit{position:static}.undo-post-grid.columns-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.wrap{width:calc(100% - 40px)}.undo-post-grid.columns-2,.undo-post-grid.columns-3{grid-template-columns:1fr}}
 
 /* The single post uses logical spacing so the same reading layout works in RTL. */

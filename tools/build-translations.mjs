@@ -120,7 +120,7 @@ const fa = {
   'Your project brief has been downloaded.':'خلاصه پروژه شما دانلود شد.',
   'new perspective':'نگاه تازه',
   'UNDO Web Developments':'توسعه وب UNDO',
-  'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.':'پوسته وردپرس دوزبانه برای آژانس‌ها و استودیوهای خلاق. زبان آغازین از زبان سایت وردپرس پیروی می‌کند و تغییر زبان فارسی و انگلیسی برای بازدیدکننده و استایل اختصاصی راست‌چین دارد. دارای صفحه اصلی واکنش‌گرا، نوشته‌های خوانا و قالب‌های صفحه مناسب مطالعه، عریض، جعبه‌ای و تمام‌عرض با عرض و فاصله‌های قابل تنظیم است. عرض سفارشی برای هر صفحه جداگانه تعیین می‌شود. پیشخوان مستقل آن چیدمان، سربرگ، صفحه‌ها، نوشته‌ها، وبلاگ، نوارهای کناری و پانوشت را تنظیم می‌کند. از قالب‌های صفحه و جایگاه‌های قالب‌ساز المنتور و به‌روزرسانی از پیشخوان وردپرس پشتیبانی می‌کند.'
+  'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer, including widget styles and optional sticky sidebars. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.':'پوسته وردپرس دوزبانه برای آژانس‌ها و استودیوهای خلاق. زبان آغازین از زبان سایت وردپرس پیروی می‌کند و تغییر زبان فارسی و انگلیسی برای بازدیدکننده و استایل اختصاصی راست‌چین دارد. دارای صفحه اصلی واکنش‌گرا، نوشته‌های خوانا و قالب‌های صفحه مناسب مطالعه، عریض، جعبه‌ای و تمام‌عرض با عرض و فاصله‌های قابل تنظیم است. عرض سفارشی برای هر صفحه جداگانه تعیین می‌شود. پیشخوان مستقل آن چیدمان، سربرگ، صفحه‌ها، نوشته‌ها، وبلاگ، نوارهای کناری و پانوشت را همراه با سبک ابزارک‌ها و نوار کناری چسبان اختیاری تنظیم می‌کند. از قالب‌های صفحه و جایگاه‌های قالب‌ساز المنتور و به‌روزرسانی از پیشخوان وردپرس پشتیبانی می‌کند.'
 };
 
 Object.assign(fa, {
@@ -197,6 +197,12 @@ Object.assign(fa, {
   "Sidebar": "نوار کناری",
   "Sidebar position": "جایگاه نوار کناری",
   "Sidebar width in pixels": "عرض نوار کناری به پیکسل",
+  "Widget style": "سبک ابزارک‌ها",
+  "Widget spacing in pixels": "فاصله ابزارک‌ها به پیکسل",
+  "Lined": "خط‌دار",
+  "Panel": "کادربندی‌شده",
+  "Keep sidebar visible while scrolling": "ثابت ماندن نوار کناری هنگام پیمایش",
+  "Sticky sidebar top gap in pixels": "فاصله نوار کناری چسبان از بالای صفحه به پیکسل",
   "Maximum width": "بیشینه عرض",
   "Minimum side margin in pixels": "کمینه فاصله کناره‌ها به پیکسل",
   "Top margin in pixels": "فاصله بیرونی بالا به پیکسل",
@@ -272,13 +278,13 @@ for (const file of files) {
     refs.get(id).push(`${path.relative(root, file).replaceAll('\\', '/')}:${line}`);
   }
 }
-for (const id of ['UNDO Web Developments', 'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.']) refs.set(id, ['style.css:1']);
+for (const id of ['UNDO Web Developments', 'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer, including widget styles and optional sticky sidebars. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.']) refs.set(id, ['style.css:1']);
 const ids = [...refs.keys()].sort((a, b) => Buffer.compare(Buffer.from(a), Buffer.from(b)));
 const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.3.3',
+  'Project-Id-Version: UNDO Web Developments 0.4.0',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

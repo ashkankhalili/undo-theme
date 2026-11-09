@@ -45,6 +45,14 @@ $GLOBALS['options']['undo_theme_settings'] = array( 'footer_show_brand' => '0' )
 $settings = undo_sanitize_settings( array( 'page_wide_width' => '80%', 'page_wide_margin_inline' => '180', 'page_boxed_padding_inline' => '72', 'page_full_padding_top' => '24' ) );
 expect( '80%' === $settings['page_wide_width'] && '160' === $settings['page_wide_margin_inline'] && '72' === $settings['page_boxed_padding_inline'] && '24' === $settings['page_full_padding_top'], 'Template width and spacing controls must validate and clamp' );
 expect( '0' === $settings['footer_show_brand'], 'Saving template controls must preserve other settings tabs' );
+$defaults = undo_setting_defaults();
+expect( 'lined' === $defaults['sidebar_widget_style'] && '32' === $defaults['sidebar_widget_spacing'] && '0' === $defaults['sidebar_sticky'], 'Sidebar design and sticky behavior must preserve existing defaults' );
+$GLOBALS['options']['undo_theme_settings'] = array( 'page_wide_width' => '80%', 'footer_show_brand' => '0' );
+$settings = undo_sanitize_settings( array( 'sidebar_position' => 'start', 'sidebar_width' => '999', 'sidebar_widget_style' => 'panel', 'sidebar_widget_spacing' => '8', 'sidebar_sticky' => '1', 'sidebar_sticky_offset' => '200' ) );
+expect( 'start' === $settings['sidebar_position'] && '420' === $settings['sidebar_width'] && 'panel' === $settings['sidebar_widget_style'] && '16' === $settings['sidebar_widget_spacing'] && '1' === $settings['sidebar_sticky'] && '120' === $settings['sidebar_sticky_offset'], 'Sidebar controls must validate and clamp' );
+expect( '80%' === $settings['page_wide_width'] && '0' === $settings['footer_show_brand'], 'Saving sidebar controls must preserve the new Pages settings and other sections' );
+$settings = undo_sanitize_settings( array( 'sidebar_widget_style' => 'invalid' ) );
+expect( 'lined' === $settings['sidebar_widget_style'], 'Unknown widget styles must fall back to lined' );
 $GLOBALS['site_locale'] = 'fa_IR';
 expect( 'fa' === undo_requested_language(), 'WordPress Persian site language must determine the initial theme language' );
 $GLOBALS['site_locale'] = 'en_US';

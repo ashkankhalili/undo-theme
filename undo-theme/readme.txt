@@ -3,11 +3,11 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.3.3
+Stable tag: 0.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.
+A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer, including widget styles and optional sticky sidebars. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.
 
 == Features ==
 * Initial language follows WordPress Site Language; Persian and English visitor overrides, compiled translations, and dedicated RTL stylesheet are included.
@@ -16,6 +16,7 @@ A bilingual WordPress theme for creative agencies and studios. The initial langu
 * WordPress menus, widgets, featured images, logo support, and normal post, page, archive, search, and 404 templates.
 * Editorial single-post template with optional manual excerpt, metadata, featured image, tags, related posts, comments, post navigation, and sidebar. Related posts are opt-in and matched by category.
 * Reading, wide, boxed, and full-width page templates each have width, margin, and padding controls in Pages settings. The default can be overridden in the WordPress or Elementor page template selector. UNDO Custom Width uses only a per-page pixel/percentage field below the WordPress editor, visible when that template is selected.
+* Configurable start/end widget sidebar with lined or panel styling, adjustable width and spacing, context visibility, and optional sticky behavior that stops when the widget area is too tall. On small screens the sidebar follows the main content.
 * Elementor-compatible page layouts and Elementor Pro Theme Builder location support.
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
@@ -29,6 +30,9 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.4.0 =
+* Added lined and panel sidebar styles, adjustable widget spacing, and optional sticky behavior with a top gap.
+* Sticky mode engages only when the sidebar fits the viewport; tall widgets scroll normally. Start/end placement mirrors in RTL, and empty widget areas reserve no sidebar markup.
 = 0.3.3 =
 * Added width, margin, and padding settings for the Reading, Wide, Boxed, and Full Width page templates, with safe defaults and responsive limits.
 * Moved Custom Width to a conditional per-page panel below the editor; removed its global width setting.

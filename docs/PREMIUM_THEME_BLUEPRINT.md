@@ -1,6 +1,6 @@
 # UNDO premium WordPress theme blueprint
 
-Status: planning document for the 0.3.3 pre-release. No item marked "planned" is implemented merely because it appears here. The initial visitor language follows WordPress Site Language; Persian (fa_IR) and English (en_US) are supported.
+Status: planning document for the 0.4.0 pre-release. No item marked "planned" is implemented merely because it appears here. The initial visitor language follows WordPress Site Language; Persian (fa_IR) and English (en_US) are supported.
 
 ## 1. Product definition and boundaries
 
@@ -142,11 +142,11 @@ Build and review each stage independently; do not begin the next visual componen
 
 ## 10. Current status and immediate next work
 
-Implemented by 0.3.3: classic theme skeleton, theme.json, reading, wide, boxed, full and custom-width page templates, a top-level settings page with vertical navigation, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, configurable built-in header variants, the single-post reading template with optional related posts, and page breadcrumbs/title/width controls. The four reusable page templates now have independent width and spacing controls; Custom Width is set per page. The initial language follows WordPress Site Language. The dark-header logo fallback and static-header homepage section alignment were corrected after staging QA. These are a foundation, not a finished premium product.
+Implemented by 0.4.0: classic theme skeleton, theme.json, reading, wide, boxed, full and custom-width page templates, a top-level settings page with vertical navigation, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, configurable built-in header variants, the single-post reading template with optional related posts, page breadcrumbs/title/width controls, and a widget sidebar with Lined/Panel styles and optional sticky behavior. The four reusable page templates have independent width and spacing controls; Custom Width is set per page. The initial language follows WordPress Site Language. The dark-header logo fallback and static-header homepage section alignment were corrected after staging QA. These are a foundation, not a finished premium product.
 
 Outstanding: live WordPress/Elementor and dashboard-update validation; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks.
 
-**Current execution milestone:** the owner confirmed the 0.3.2 width correction. Install 0.3.3 from WordPress Updates; test all four template settings groups, the conditional per-page Custom Width panel, WordPress Site Language and explicit overrides, Persian and English content, and Elementor's own Full Width and Canvas modes with both plain and Elementor-built content before marking Stage 4 complete. Continue the pending single-post and header option checks.
+**Current execution milestone:** the owner confirmed the 0.3.2 width correction. Install 0.4.0 from WordPress Updates; test the page settings introduced in 0.3.3 and the sidebar styles, spacing, start/end placement, sticky behavior, and responsive flow introduced in 0.4.0. Check WordPress Site Language and explicit overrides, Persian and English content, and Elementor's own Full Width and Canvas modes with both plain and Elementor-built content before marking Stages 4 and 5 complete. Continue the pending single-post and header option checks.
 
 ## Primary references
 

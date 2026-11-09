@@ -1,5 +1,21 @@
 const ui=window.undoTheme||{};
 const header=document.querySelector('.site-header');
+const stickySidebars=[...document.querySelectorAll('.undo-sidebar--sticky')];
+function updateSidebarStickiness(){
+  const headerOffset=header&&getComputedStyle(header).position==='sticky'?Math.max(0,header.getBoundingClientRect().bottom):0;
+  for(const sidebar of stickySidebars){
+    const inner=sidebar.querySelector('.undo-sidebar__inner');
+    if(!inner)continue;
+    const gap=parseFloat(getComputedStyle(sidebar).getPropertyValue('--undo-sidebar-sticky-offset'))||0;
+    sidebar.style.setProperty('--undo-sidebar-header-offset',`${headerOffset}px`);
+    inner.classList.toggle('is-sticky-fit',window.innerWidth>900&&inner.scrollHeight+headerOffset+gap+24<=window.innerHeight);
+  }
+}
+if(stickySidebars.length){
+  window.addEventListener('resize',updateSidebarStickiness);
+  if('ResizeObserver' in window){const observer=new ResizeObserver(updateSidebarStickiness);stickySidebars.forEach(sidebar=>{const inner=sidebar.querySelector('.undo-sidebar__inner');if(inner)observer.observe(inner)})}
+  updateSidebarStickiness();
+}
 const toggle=header?.querySelector('.menu-toggle');
 const mobileNav=header?.querySelector('.mobile-nav');
 const searchToggle=header?.querySelector('.header-search-toggle');

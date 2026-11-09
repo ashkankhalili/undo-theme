@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.3.3\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.4.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
@@ -14,7 +14,7 @@ msgid "A better site or product should help people understand, decide, and act. 
 msgstr ""
 
 #: style.css:1
-msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates."
+msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer, including widget styles and optional sticky sidebars. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates."
 msgstr ""
 
 #: functions.php:117 template-parts/landing.php:39
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Before"
 msgstr ""
 
-#: inc/settings.php:81
+#: inc/settings.php:85
 msgid "Blog"
 msgstr ""
 
@@ -81,7 +81,7 @@ msgstr ""
 msgid "Built for every screen."
 msgstr ""
 
-#: inc/settings.php:88
+#: inc/settings.php:92
 msgid "Built-in footer settings. Elementor Theme Builder can replace this template."
 msgstr ""
 
@@ -89,7 +89,7 @@ msgstr ""
 msgid "Built-in header settings. Elementor Theme Builder can replace this template."
 msgstr ""
 
-#: inc/settings.php:97
+#: inc/settings.php:101
 msgid "Built-in landing page copy. Elementor pages use their own content."
 msgstr ""
 
@@ -101,7 +101,7 @@ msgstr ""
 msgid "COMPANY NAME"
 msgstr ""
 
-#: inc/settings.php:85
+#: inc/settings.php:89
 msgid "Card columns"
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Compare earlier and redesigned website concept"
 msgstr ""
 
-#: inc/settings.php:95
+#: inc/settings.php:99
 msgid "Contact email"
 msgstr ""
 
@@ -181,11 +181,11 @@ msgstr ""
 msgid "End"
 msgstr ""
 
-#: inc/settings.php:86
+#: inc/settings.php:90
 msgid "Excerpt length in words"
 msgstr ""
 
-#: inc/settings.php:88
+#: inc/settings.php:92
 msgid "Footer"
 msgstr ""
 
@@ -197,11 +197,11 @@ msgstr ""
 msgid "Footer navigation"
 msgstr ""
 
-#: inc/settings.php:94
+#: inc/settings.php:98
 msgid "Footer slogan (English)"
 msgstr ""
 
-#: inc/settings.php:93
+#: inc/settings.php:97
 msgid "Footer slogan (Persian)"
 msgstr ""
 
@@ -245,19 +245,19 @@ msgstr ""
 msgid "Header logo"
 msgstr ""
 
-#: inc/settings.php:101
+#: inc/settings.php:105
 msgid "Hero description (English)"
 msgstr ""
 
-#: inc/settings.php:99
+#: inc/settings.php:103
 msgid "Hero description (Persian)"
 msgstr ""
 
-#: inc/settings.php:100
+#: inc/settings.php:104
 msgid "Hero title (English)"
 msgstr ""
 
-#: inc/settings.php:98
+#: inc/settings.php:102
 msgid "Hero title (Persian)"
 msgstr ""
 
@@ -269,12 +269,16 @@ msgstr ""
 msgid "Home  About  Services  Contact"
 msgstr ""
 
-#: inc/settings.php:97
+#: inc/settings.php:101
 msgid "Homepage"
 msgstr ""
 
 #: template-parts/landing.php:23
 msgid "Interactive concept showing a website before and after a redesign"
+msgstr ""
+
+#: inc/settings.php:80
+msgid "Keep sidebar visible while scrolling"
 msgstr ""
 
 #: template-parts/landing.php:36
@@ -291,6 +295,10 @@ msgstr ""
 
 #: inc/settings.php:40
 msgid "Light logo for dark header"
+msgstr ""
+
+#: inc/settings.php:78
+msgid "Lined"
 msgstr ""
 
 #: header.php:37
@@ -357,7 +365,7 @@ msgstr ""
 msgid "No release notes were provided for this version."
 msgstr ""
 
-#: inc/settings.php:215
+#: inc/settings.php:219
 msgid "On screens under 760px, side margins and padding are capped at 20px; top and bottom padding are capped at 58px and 90px."
 msgstr ""
 
@@ -381,7 +389,7 @@ msgstr ""
 msgid "Overview"
 msgstr ""
 
-#: inc/settings.php:207
+#: inc/settings.php:211
 msgid "Page display"
 msgstr ""
 
@@ -409,11 +417,15 @@ msgstr ""
 msgid "Pages"
 msgstr ""
 
+#: inc/settings.php:78
+msgid "Panel"
+msgstr ""
+
 #: header.php:41 header.php:46 template-parts/landing.php:22 template-parts/landing.php:34
 msgid "Plan a project"
 msgstr ""
 
-#: inc/settings.php:81
+#: inc/settings.php:85
 msgid "Post cards in blog, archive, and search results."
 msgstr ""
 
@@ -437,7 +449,7 @@ msgstr ""
 msgid "Primary menu"
 msgstr ""
 
-#: functions.php:27 sidebar.php:2
+#: functions.php:27 sidebar.php:7
 msgid "Primary sidebar"
 msgstr ""
 
@@ -481,7 +493,7 @@ msgstr ""
 msgid "Release details are unavailable. Refresh the WordPress Updates screen and try again."
 msgstr ""
 
-#: inc/settings.php:175
+#: inc/settings.php:179
 msgid "Remove image"
 msgstr ""
 
@@ -501,11 +513,11 @@ msgstr ""
 msgid "See what changed before you update. Your theme settings and WordPress content are stored outside the theme files."
 msgstr ""
 
-#: inc/settings.php:165
+#: inc/settings.php:169
 msgid "Select header logo"
 msgstr ""
 
-#: inc/settings.php:175
+#: inc/settings.php:179
 msgid "Select image"
 msgstr ""
 
@@ -533,11 +545,11 @@ msgstr ""
 msgid "Show author"
 msgstr ""
 
-#: inc/settings.php:83
+#: inc/settings.php:87
 msgid "Show card dates"
 msgstr ""
 
-#: inc/settings.php:82
+#: inc/settings.php:86
 msgid "Show card images"
 msgstr ""
 
@@ -549,11 +561,11 @@ msgstr ""
 msgid "Show comments"
 msgstr ""
 
-#: inc/settings.php:91
+#: inc/settings.php:95
 msgid "Show contact email"
 msgstr ""
 
-#: inc/settings.php:92
+#: inc/settings.php:96
 msgid "Show copyright"
 msgstr ""
 
@@ -561,7 +573,7 @@ msgstr ""
 msgid "Show date"
 msgstr ""
 
-#: inc/settings.php:84
+#: inc/settings.php:88
 msgid "Show excerpts"
 msgstr ""
 
@@ -569,11 +581,11 @@ msgstr ""
 msgid "Show featured image"
 msgstr ""
 
-#: inc/settings.php:89
+#: inc/settings.php:93
 msgid "Show footer brand"
 msgstr ""
 
-#: inc/settings.php:90
+#: inc/settings.php:94
 msgid "Show footer navigation"
 msgstr ""
 
@@ -593,11 +605,11 @@ msgstr ""
 msgid "Show manually written excerpt"
 msgstr ""
 
-#: inc/settings.php:78
+#: inc/settings.php:82
 msgid "Show on archives"
 msgstr ""
 
-#: inc/settings.php:79
+#: inc/settings.php:83
 msgid "Show on search results"
 msgstr ""
 
@@ -629,7 +641,7 @@ msgstr ""
 msgid "Show related posts"
 msgstr ""
 
-#: inc/settings.php:102
+#: inc/settings.php:106
 msgid "Show section navigation"
 msgstr ""
 
@@ -693,6 +705,10 @@ msgstr ""
 msgid "Sticky header"
 msgstr ""
 
+#: inc/settings.php:81
+msgid "Sticky sidebar top gap in pixels"
+msgstr ""
+
 #: template-parts/landing.php:35
 msgid "Structure, content, interface"
 msgstr ""
@@ -705,7 +721,7 @@ msgstr ""
 msgid "Tell us what you want to make."
 msgstr ""
 
-#: inc/settings.php:209
+#: inc/settings.php:213
 msgid "The UNDO Custom Width template uses a width set on each page below the editor."
 msgstr ""
 
@@ -725,7 +741,7 @@ msgstr ""
 msgid "The sidebar appears only where enabled and when widgets are assigned."
 msgstr ""
 
-#: inc/settings.php:197
+#: inc/settings.php:201
 msgid "Theme settings sections"
 msgstr ""
 
@@ -765,7 +781,7 @@ msgstr ""
 msgid "UNDO Reading"
 msgstr ""
 
-#: inc/settings.php:157 inc/settings.php:157 inc/settings.php:197
+#: inc/settings.php:161 inc/settings.php:161 inc/settings.php:201
 msgid "UNDO Theme Settings"
 msgstr ""
 
@@ -813,7 +829,7 @@ msgstr ""
 msgid "Untitled project"
 msgstr ""
 
-#: inc/settings.php:185
+#: inc/settings.php:189
 msgid "Use 320–1920px or 20–100%, for example 1200px or 80%."
 msgstr ""
 
@@ -821,7 +837,7 @@ msgstr ""
 msgid "Use 320–1920px or 20–100%."
 msgstr ""
 
-#: inc/settings.php:165
+#: inc/settings.php:169
 msgid "Use this image"
 msgstr ""
 
@@ -887,6 +903,14 @@ msgstr ""
 
 #: inc/settings.php:35 inc/settings.php:72
 msgid "Wide"
+msgstr ""
+
+#: inc/settings.php:79
+msgid "Widget spacing in pixels"
+msgstr ""
+
+#: inc/settings.php:78
+msgid "Widget style"
 msgstr ""
 
 #: functions.php:29

@@ -75,6 +75,10 @@ function undo_settings_sections() {
         'sidebar' => array( __( 'Sidebar', 'undo-theme' ), __( 'The sidebar appears only where enabled and when widgets are assigned.', 'undo-theme' ), array(
             'sidebar_position' => array( __( 'Sidebar position', 'undo-theme' ), 'select', 'end', array( 'start' => __( 'Start', 'undo-theme' ), 'end' => __( 'End', 'undo-theme' ) ) ),
             'sidebar_width' => array( __( 'Sidebar width in pixels', 'undo-theme' ), 'number', '300', array( 220, 420 ) ),
+            'sidebar_widget_style' => array( __( 'Widget style', 'undo-theme' ), 'select', 'lined', array( 'lined' => __( 'Lined', 'undo-theme' ), 'panel' => __( 'Panel', 'undo-theme' ) ) ),
+            'sidebar_widget_spacing' => array( __( 'Widget spacing in pixels', 'undo-theme' ), 'number', '32', array( 16, 64 ) ),
+            'sidebar_sticky' => array( __( 'Keep sidebar visible while scrolling', 'undo-theme' ), 'checkbox', '0' ),
+            'sidebar_sticky_offset' => array( __( 'Sticky sidebar top gap in pixels', 'undo-theme' ), 'number', '24', array( 0, 120 ), 'sidebar_sticky' ),
             'sidebar_on_archive' => array( __( 'Show on archives', 'undo-theme' ), 'checkbox', '0' ),
             'sidebar_on_search' => array( __( 'Show on search results', 'undo-theme' ), 'checkbox', '0' ),
         ) ),
