@@ -1,5 +1,6 @@
-<article <?php post_class( 'archive-item' ); ?>>
-<?php if ( undo_setting_enabled( 'blog_show_featured' ) && has_post_thumbnail() ) : ?>
+<?php $show_card_image = undo_setting_enabled( 'blog_show_featured' ) && has_post_thumbnail(); ?>
+<article <?php post_class( array( 'archive-item', $show_card_image ? 'has-image' : 'no-image' ) ); ?>>
+<?php if ( $show_card_image ) : ?>
 <a class="archive-image" href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium_large' ); ?></a>
 <?php endif; ?>
 <div class="archive-copy">

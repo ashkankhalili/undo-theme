@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.5.0' );
+define( 'UNDO_THEME_VERSION', '0.6.0' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/page-layout.php';
 require_once get_template_directory() . '/inc/github-updater.php';
@@ -43,7 +43,7 @@ function undo_body_classes( $classes ) {
 add_filter( 'body_class', 'undo_body_classes' );
 
 function undo_has_sidebar( $setting ) {
-    return undo_setting_enabled( $setting ) && is_active_sidebar( 'primary-sidebar' );
+    return 'hidden' !== undo_sidebar_position() && undo_setting_enabled( $setting ) && is_active_sidebar( 'primary-sidebar' );
 }
 
 function undo_language_override() {
@@ -89,6 +89,10 @@ function undo_font_css_family( $choice, $custom_fonts ) {
         'space-grotesk' => '"Space Grotesk",system-ui,sans-serif',
         'vazirmatn' => '"Vazirmatn",system-ui,sans-serif',
         'instrument-serif' => '"Instrument Serif",Georgia,serif',
+        'inter' => '"Inter",system-ui,sans-serif',
+        'manrope' => '"Manrope",system-ui,sans-serif',
+        'playfair-display' => '"Playfair Display",Georgia,serif',
+        'noto-sans-arabic' => '"Noto Sans Arabic",system-ui,sans-serif',
         'system-sans' => 'system-ui,sans-serif',
         'georgia' => 'Georgia,serif',
     );
@@ -121,15 +125,22 @@ function undo_theme_assets() {
         'instrument-serif' => 'family=Instrument+Serif:ital@0;1',
         'space-grotesk' => 'family=Space+Grotesk:wght@400;500;600;700',
         'vazirmatn' => 'family=Vazirmatn:wght@400;500;600;700',
+        'inter' => 'family=Inter:wght@400;500;600;700',
+        'manrope' => 'family=Manrope:wght@400;500;600;700',
+        'playfair-display' => 'family=Playfair+Display:wght@400;500;600;700',
+        'noto-sans-arabic' => 'family=Noto+Sans+Arabic:wght@400;500;600;700',
     );
-    $needed_fonts = 'fa' === $language ? array( 'space-grotesk', 'vazirmatn' ) : array( 'dm-sans', 'instrument-serif', 'space-grotesk' );
+    $load_google = undo_setting_enabled( 'google_fonts_enabled' );
+    $needed_fonts = $load_google ? ( 'fa' === $language ? array( 'space-grotesk', 'vazirmatn' ) : array( 'dm-sans', 'instrument-serif', 'space-grotesk' ) ) : array();
     foreach ( array( 'font_body', 'font_headings', 'font_accent', 'font_navigation', 'font_buttons', 'font_page_title', 'font_post_title', 'font_widget_title', 'font_footer' ) as $role ) {
         $choice = undo_setting( $role );
-        if ( isset( $google_font_queries[ $choice ] ) && ! in_array( $choice, $needed_fonts, true ) ) { $needed_fonts[] = $choice; }
+        if ( $load_google && isset( $google_font_queries[ $choice ] ) && ! in_array( $choice, $needed_fonts, true ) ) { $needed_fonts[] = $choice; }
     }
-    $fonts = 'https://fonts.googleapis.com/css2?' . implode( '&', array_map( function( $family ) use ( $google_font_queries ) { return $google_font_queries[ $family ]; }, $needed_fonts ) ) . '&display=swap';
-    wp_enqueue_style( 'undo-fonts', esc_url_raw( $fonts ), array(), null );
-    wp_enqueue_style( 'undo-site', get_theme_file_uri( '/assets/css/site.css' ), array( 'undo-fonts' ), UNDO_THEME_VERSION );
+    if ( $needed_fonts ) {
+        $fonts = 'https://fonts.googleapis.com/css2?' . implode( '&', array_map( function( $family ) use ( $google_font_queries ) { return $google_font_queries[ $family ]; }, $needed_fonts ) ) . '&display=swap';
+        wp_enqueue_style( 'undo-fonts', esc_url_raw( $fonts ), array(), null );
+    }
+    wp_enqueue_style( 'undo-site', get_theme_file_uri( '/assets/css/site.css' ), $needed_fonts ? array( 'undo-fonts' ) : array(), UNDO_THEME_VERSION );
     wp_enqueue_style( 'undo-theme', get_stylesheet_uri(), array( 'undo-site' ), UNDO_THEME_VERSION );
     wp_enqueue_script( 'undo-site', get_theme_file_uri( '/assets/js/theme.js' ), array(), UNDO_THEME_VERSION, true );
     wp_localize_script( 'undo-site', 'undoTheme', array(
@@ -157,7 +168,7 @@ function undo_theme_assets() {
             'A redesign' => __( 'A redesign', 'undo-theme' ),
         ),
     ) );
-    $width = max( 760, min( 1600, (int) undo_setting( 'content_width' ) ) );
+    $width = undo_sanitize_site_dimension( undo_setting( 'content_width' ) );
     $sidebar_width = max( 220, min( 420, (int) undo_setting( 'sidebar_width' ) ) );
     $logo_width = max( 60, min( 360, (int) undo_setting( 'header_logo_width' ) ) );
     $colors = array(
@@ -165,20 +176,61 @@ function undo_theme_assets() {
         '--undo-header-light-bg' => 'header_light_bg_color', '--undo-header-light-text' => 'header_light_text_color', '--undo-header-dark-bg' => 'header_dark_bg_color', '--undo-header-dark-text' => 'header_dark_text_color',
         '--undo-content-title' => 'content_title_color', '--undo-content-body' => 'content_body_color', '--undo-content-link' => 'content_link_color', '--undo-footer-bg' => 'footer_bg_color', '--undo-footer-text' => 'footer_text_color',
     );
-    $root = ':root{--undo-content-width:' . $width . 'px;--undo-sidebar-width:' . $sidebar_width . 'px;--undo-logo-width:' . $logo_width . 'px;';
+    $root = ':root{--undo-content-width:' . $width . ';--undo-sidebar-width:' . $sidebar_width . 'px;--undo-logo-width:' . $logo_width . 'px;';
     $defaults = undo_setting_defaults();
     foreach ( $colors as $variable => $key ) { $root .= $variable . ':' . ( sanitize_hex_color( undo_setting( $key ) ) ?: $defaults[ $key ] ) . ';'; }
     $root .= '}';
     $custom_fonts = undo_custom_fonts();
     $font_css = undo_theme_custom_font_css( $custom_fonts );
     $font_roles = array( 'font_body' => '--body', 'font_headings' => '--display', 'font_accent' => '--serif', 'font_navigation' => '--undo-font-navigation', 'font_buttons' => '--undo-font-buttons', 'font_page_title' => '--undo-font-page-title', 'font_post_title' => '--undo-font-post-title', 'font_widget_title' => '--undo-font-widget-title', 'font_footer' => '--undo-font-footer' );
-    $chosen = '';
+    $chosen = $load_google ? '' : '--body:system-ui,sans-serif;--display:system-ui,sans-serif;--serif:Georgia,serif;';
     foreach ( $font_roles as $setting => $variable ) {
-        $family = undo_font_css_family( undo_setting( $setting ), $custom_fonts );
+        $choice = undo_setting( $setting );
+        $family = ! $load_google && isset( $google_font_queries[ $choice ] ) ? ( in_array( $choice, array( 'instrument-serif', 'playfair-display' ), true ) ? 'Georgia,serif' : 'system-ui,sans-serif' ) : undo_font_css_family( $choice, $custom_fonts );
         if ( '' !== $family ) { $chosen .= $variable . ':' . $family . ';'; }
     }
     if ( $chosen ) { $font_css .= ':root,html[lang^="fa"]{' . $chosen . '}'; }
+    $font_css .= undo_theme_typography_css();
     wp_add_inline_style( 'undo-site', $font_css . $root );
+}
+function undo_theme_typography_css() {
+    $selectors = array(
+        'body' => 'body',
+        'headings' => '.hero h1,.section h2,.wp-content h1,.wp-content h2,.page-header h1,.single-header h1,.archive-copy h2,.page-body h2,.page-body h3,.single-body h2,.single-body h3,.single-related-heading h2',
+        'accent' => '.hero h1 .outline,.statement h2 span,html[lang^="fa"] .hero h1 .outline,html[lang^="fa"] .statement h2 span',
+        'navigation' => '.site-header .desktop-nav,.site-header .mobile-nav',
+        'buttons' => '.site-header .header-action,.mobile-header-action,.button,.brief-form button,.undo-sidebar button',
+        'page_title' => '.page-header h1',
+        'post_title' => '.single-header h1',
+        'widget_title' => '.undo-sidebar .widget-title,.undo-sidebar .wp-block-heading',
+        'footer' => '.footer',
+    );
+    $css = '';
+    $custom_fonts = undo_custom_fonts();
+    $google_choices = array( 'dm-sans', 'space-grotesk', 'vazirmatn', 'instrument-serif', 'inter', 'manrope', 'playfair-display', 'noto-sans-arabic' );
+    foreach ( $selectors as $role => $selector ) {
+        $prefix = 'font_' . $role . '_';
+        $declarations = '';
+        $choice = undo_setting( 'font_' . $role );
+        if ( 'default' !== $choice ) {
+            $family = ! undo_setting_enabled( 'google_fonts_enabled' ) && in_array( $choice, $google_choices, true ) ? ( in_array( $choice, array( 'instrument-serif', 'playfair-display' ), true ) ? 'Georgia,serif' : 'system-ui,sans-serif' ) : undo_font_css_family( $choice, $custom_fonts );
+            if ( $family ) { $declarations .= 'font-family:' . $family . ';'; }
+        }
+        $size = (int) undo_setting( $prefix . 'size' );
+        if ( $size >= 10 && $size <= 160 ) { $declarations .= 'font-size:' . $size . 'px;'; }
+        $weight = undo_setting( $prefix . 'weight' );
+        if ( in_array( $weight, array( '300', '400', '500', '600', '700', '800' ), true ) ) { $declarations .= 'font-weight:' . $weight . ';'; }
+        $style = undo_setting( $prefix . 'style' );
+        if ( in_array( $style, array( 'normal', 'italic' ), true ) ) { $declarations .= 'font-style:' . $style . ';'; }
+        $line_height = (float) undo_setting( $prefix . 'line_height' );
+        if ( $line_height >= 0.8 && $line_height <= 3 ) { $declarations .= 'line-height:' . $line_height . ';'; }
+        $letter_spacing = (float) undo_setting( $prefix . 'letter_spacing' );
+        if ( $letter_spacing >= -5 && $letter_spacing <= 10 && 0.0 !== $letter_spacing ) { $declarations .= 'letter-spacing:' . $letter_spacing . 'px;'; }
+        $color = sanitize_hex_color( undo_setting( $prefix . 'color' ) );
+        if ( $color ) { $declarations .= 'color:' . $color . ';'; }
+        if ( $declarations ) { $css .= $selector . '{' . $declarations . '}'; }
+    }
+    return $css;
 }
 add_action( 'wp_enqueue_scripts', 'undo_theme_assets' );
 

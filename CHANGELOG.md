@@ -4,6 +4,26 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-11-10
+
+### Layout, blog, and typography
+
+- Website Layout content width now accepts `320–1920px` or `20–100%`. Existing numeric widths keep their pixel meaning when displayed and saved.
+- Sidebar position now offers physical **Left**, **Right**, and **Hidden** choices. Hidden suppresses built-in sidebars on posts, pages, archives, and search. Old logical start/end values are mapped to the same visible side in the current writing direction until saved with the new controls.
+- Added three blog designs for the built-in blog index, archives, and search results: image-and-copy **Editorial list**, image-led **Image grid**, and text-first **Journal grid**. Grid column count remains configurable; layouts adapt to narrow screens and RTL.
+- Typography roles now include family, pixel size, weight, normal/italic style, line height, letter spacing, and optional hex text color. Role groups fold independently to make the page easier to scan.
+- Added a **Load Google Fonts** switch, on by default to preserve existing appearance. The family selector includes the four fonts already used by the theme and four additional curated Google families, alongside system fonts and customer-uploaded WOFF2 fonts. Turning Google loading off removes the external stylesheet request and uses local/system fallbacks for selected Google families; uploaded fonts remain available.
+
+### فارسی
+
+- عرض محتوا اکنون مقدار پیکسلی یا درصدی می‌پذیرد. جایگاه نوار کناری چپ، راست یا پنهان است و مقدارهای قدیمی با جهت قبلی سازگار می‌مانند.
+- سه طرح فهرست تحریریه‌ای، شبکه تصویری و شبکه ژورنالی برای وبلاگ اضافه شد.
+- تنظیمات قلم برای هر بخش شامل اندازه، ضخامت، حالت، ارتفاع خط، فاصله حروف و رنگ است. بارگذاری قلم‌های گوگل را می‌توان خاموش کرد.
+
+### Validation
+
+- Translation catalogs and package are rebuilt; PHP 7.4/8.3 CI, exact GitHub release asset, and staging dashboard upgrade must pass before customer distribution. Verify all blog designs, physical sidebar placement, Google-off network behavior, and typography controls on staging.
+
 ## [0.5.0] - 2026-11-10
 
 ### Settings workspace

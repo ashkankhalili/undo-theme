@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'single' ) ) : ?>
 <?php $has_sidebar = undo_has_sidebar( 'single_show_sidebar' ); ?>
-<div class="content-layout wrap<?php echo $has_sidebar ? ' has-sidebar sidebar-' . esc_attr( undo_setting( 'sidebar_position' ) ) : ''; ?>">
+<div class="content-layout wrap<?php echo $has_sidebar ? ' has-sidebar sidebar-' . esc_attr( undo_sidebar_position() ) : ''; ?>">
 <main id="main" class="wp-content single-content">
 <?php while ( have_posts() ) : the_post(); ?>
 <article <?php post_class( 'single-article' ); ?>>

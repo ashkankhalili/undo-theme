@@ -1,11 +1,11 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.5.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.6.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
 msgstr "% دیدگاه"
 
-#: functions.php:141
+#: functions.php:152
 msgid "%s%% of the earlier layout visible"
 msgstr "%s٪ از طرح قبلی دیده می‌شود"
 
@@ -14,10 +14,10 @@ msgid "A better site or product should help people understand, decide, and act. 
 msgstr "یک وب‌سایت یا محصول بهتر باید به مردم کمک کند بفهمند، تصمیم بگیرند و اقدام کنند. طراحی در خدمت همین هدف است."
 
 #: style.css:1
-msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The full-width, single-save settings dashboard controls layout, colors, typography, uploaded WOFF2 fonts, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates."
-msgstr "پوسته وردپرس دوزبانه برای آژانس‌ها و استودیوهای خلاق. زبان آغازین از زبان سایت وردپرس پیروی می‌کند و تغییر زبان فارسی و انگلیسی برای بازدیدکننده و استایل اختصاصی راست‌چین دارد. دارای صفحه اصلی واکنش‌گرا، نوشته‌های خوانا و قالب‌های صفحه با عرض و فاصله قابل تنظیم است. پیشخوان تنظیمات تمام‌عرض با ذخیره یک‌جای تنظیمات، چیدمان، رنگ‌ها، تایپوگرافی، قلم‌های WOFF2 بارگذاری‌شده، سربرگ، صفحه‌ها، نوشته‌ها، وبلاگ، نوارهای کناری و پانوشت را کنترل می‌کند. از قالب‌های المنتور و به‌روزرسانی از پیشخوان وردپرس پشتیبانی می‌کند."
+msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, three blog layouts, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls pixel or percentage site width, colors, typography, Google and uploaded WOFF2 fonts, header, pages, posts, blog, physical sidebar position or visibility, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates."
+msgstr "پوسته وردپرس دوزبانه برای آژانس‌ها و استودیوهای خلاق با زبان آغازین هماهنگ با زبان سایت وردپرس، تغییر زبان فارسی و انگلیسی و استایل راست‌چین. دارای صفحه اصلی واکنش‌گرا، سه چیدمان وبلاگ، نوشته‌های خوانا و قالب‌های صفحه با عرض و فاصله قابل تنظیم است. پیشخوان تنظیمات با ذخیره یک‌جای تنظیمات، عرض پیکسلی یا درصدی، رنگ‌ها، تایپوگرافی، قلم‌های گوگل و WOFF2، سربرگ، صفحه‌ها، نوشته‌ها، وبلاگ، جایگاه یا پنهان‌سازی نوار کناری و پانوشت را کنترل می‌کند. از قالب‌های المنتور و به‌روزرسانی در پیشخوان وردپرس پشتیبانی می‌کند."
 
-#: functions.php:157 template-parts/landing.php:39
+#: functions.php:168 template-parts/landing.php:39
 msgid "A redesign"
 msgstr "بازطراحی"
 
@@ -25,27 +25,27 @@ msgstr "بازطراحی"
 msgid "A website with purpose."
 msgstr "وب‌سایتی با هدف روشن."
 
-#: inc/settings.php:38
+#: inc/settings.php:62
 msgid "Accent color"
 msgstr "رنگ تأکیدی"
 
-#: inc/settings.php:58
-msgid "Accent serif font"
-msgstr "قلم سریف تأکیدی"
+#: inc/settings.php:32
+msgid "Accent text"
+msgstr "متن تأکیدی"
 
-#: inc/settings.php:80
+#: inc/settings.php:96
 msgid "Action URL"
 msgstr "نشانی دکمه اقدام"
 
-#: inc/settings.php:79
+#: inc/settings.php:95
 msgid "Action label (English)"
 msgstr "متن دکمه اقدام (انگلیسی)"
 
-#: inc/settings.php:78
+#: inc/settings.php:94
 msgid "Action label (Persian)"
 msgstr "متن دکمه اقدام (فارسی)"
 
-#: inc/settings.php:309
+#: inc/settings.php:369
 msgid "Add font family"
 msgstr "افزودن خانواده قلم"
 
@@ -53,13 +53,9 @@ msgstr "افزودن خانواده قلم"
 msgid "After"
 msgstr "بعد"
 
-#: functions.php:191 template-parts/landing.php:7
+#: functions.php:243 template-parts/landing.php:7
 msgid "Approach"
 msgstr "روش کار"
-
-#: inc/settings.php:350
-msgid "Assign fonts"
-msgstr "تخصیص قلم‌ها"
 
 #: inc/github-updater.php:134
 msgid "Back to WordPress Updates"
@@ -69,19 +65,23 @@ msgstr "بازگشت به به‌روزرسانی‌های وردپرس"
 msgid "Before"
 msgstr "قبل"
 
-#: inc/settings.php:113
+#: inc/settings.php:129
 msgid "Blog"
 msgstr "وبلاگ"
 
-#: inc/settings.php:56
-msgid "Body text font"
-msgstr "قلم متن اصلی"
+#: inc/settings.php:130
+msgid "Blog design"
+msgstr "طرح وبلاگ"
 
-#: inc/settings.php:298
+#: inc/settings.php:31
+msgid "Body text"
+msgstr "متن اصلی"
+
+#: inc/settings.php:358
 msgid "Bold WOFF2 (optional)"
 msgstr "قلم ضخیم WOFF2 (اختیاری)"
 
-#: inc/settings.php:43
+#: inc/settings.php:67
 msgid "Border color"
 msgstr "رنگ حاشیه"
 
@@ -93,7 +93,7 @@ msgstr "فاصله بیرونی پایین به پیکسل"
 msgid "Bottom padding in pixels"
 msgstr "فاصله درونی پایین به پیکسل"
 
-#: inc/settings.php:34 inc/settings.php:100
+#: inc/settings.php:58 inc/settings.php:116
 msgid "Boxed"
 msgstr "محدود"
 
@@ -105,21 +105,21 @@ msgstr "ساخت"
 msgid "Built for every screen."
 msgstr "برای هر صفحه‌ای ساخته شده."
 
-#: inc/settings.php:120
+#: inc/settings.php:137
 msgid "Built-in footer settings. Elementor Theme Builder can replace this template."
 msgstr "تنظیمات پانوشت داخلی. قالب‌ساز المنتور می‌تواند این قالب را جایگزین کند."
 
-#: inc/settings.php:66
+#: inc/settings.php:82
 msgid "Built-in header settings. Elementor Theme Builder can replace this template."
 msgstr "تنظیمات سربرگ داخلی. قالب‌ساز المنتور می‌تواند این قالب را جایگزین کند."
 
-#: inc/settings.php:129
+#: inc/settings.php:146
 msgid "Built-in landing page copy. Elementor pages use their own content."
 msgstr "متن صفحه اصلی داخلی. صفحه‌های المنتور محتوای خود را دارند."
 
-#: inc/settings.php:60
-msgid "Buttons font"
-msgstr "قلم دکمه‌ها"
+#: inc/settings.php:33
+msgid "Buttons"
+msgstr "دکمه‌ها"
 
 #: single.php:15
 msgid "By %s"
@@ -129,43 +129,39 @@ msgstr "نوشته %s"
 msgid "COMPANY NAME"
 msgstr "نام شرکت"
 
-#: inc/settings.php:117
-msgid "Card columns"
-msgstr "تعداد ستون‌های کارت"
-
-#: inc/settings.php:71
+#: inc/settings.php:87
 msgid "Centered navigation"
 msgstr "ناوبری وسط‌چین"
 
-#: inc/settings.php:302
+#: inc/settings.php:362
 msgid "Choose WOFF2"
 msgstr "انتخاب WOFF2"
 
-#: inc/settings.php:253
+#: inc/settings.php:298
 msgid "Choose a WOFF2 font file"
 msgstr "انتخاب فایل قلم WOFF2"
 
-#: inc/settings.php:255
+#: inc/settings.php:300
 msgid "Choose a valid WOFF2 file from the Media Library."
 msgstr "یک فایل WOFF2 معتبر از کتابخانه رسانه انتخاب کنید."
 
-#: inc/settings.php:302
+#: inc/settings.php:362
 msgid "Clear"
 msgstr "پاک کردن"
 
-#: functions.php:138
+#: functions.php:149
 msgid "Close menu"
 msgstr "بستن منو"
 
-#: functions.php:140
+#: functions.php:151
 msgid "Close search"
 msgstr "بستن جست‌وجو"
 
-#: inc/settings.php:37
+#: inc/settings.php:61
 msgid "Colors"
 msgstr "رنگ‌ها"
 
-#: inc/settings.php:97
+#: inc/settings.php:113
 msgid "Compact"
 msgstr "فشرده"
 
@@ -173,23 +169,23 @@ msgstr "فشرده"
 msgid "Compare earlier and redesigned website concept"
 msgstr "مقایسه نمونه وب‌سایت پیش و پس از بازطراحی"
 
-#: inc/settings.php:127
+#: inc/settings.php:144
 msgid "Contact email"
 msgstr "ایمیل تماس"
 
-#: inc/settings.php:346
+#: inc/settings.php:411
 msgid "Content colors"
 msgstr "رنگ‌های محتوا"
 
-#: inc/settings.php:35
-msgid "Content width in pixels"
-msgstr "عرض محتوا به پیکسل"
+#: inc/settings.php:59
+msgid "Content width (pixels or percent)"
+msgstr "عرض محتوا (پیکسل یا درصد)"
 
 #: template-parts/landing.php:34
 msgid "Create new. Redo what exists."
 msgstr "از صفر بسازید. موجود را بازطراحی کنید."
 
-#: inc/settings.php:55
+#: inc/settings.php:80
 msgid "Custom font families"
 msgstr "خانواده‌های قلم سفارشی"
 
@@ -201,19 +197,19 @@ msgstr "ابزارهای اختصاصی که قابلیت‌های موردنی�
 msgid "DESIGN / BUILD / REDO"
 msgstr "طراحی / ساخت / بازطراحی"
 
-#: inc/settings.php:70
+#: inc/settings.php:86
 msgid "Dark"
 msgstr "تیره"
 
-#: inc/settings.php:46
+#: inc/settings.php:70
 msgid "Dark header background"
 msgstr "پس‌زمینه سربرگ تیره"
 
-#: inc/settings.php:47
+#: inc/settings.php:71
 msgid "Dark header text"
 msgstr "متن سربرگ تیره"
 
-#: inc/settings.php:100
+#: inc/settings.php:116
 msgid "Default page layout"
 msgstr "چیدمان پیش‌فرض صفحه"
 
@@ -237,37 +233,53 @@ msgstr "دانلود خلاصه پروژه"
 msgid "Drag to compare"
 msgstr "برای مقایسه بکشید"
 
-#: inc/settings.php:97
+#: inc/settings.php:113
 msgid "Editorial"
 msgstr "تحریریه‌ای"
 
-#: inc/settings.php:104
-msgid "End"
-msgstr "انتهای جهت نوشتار"
+#: inc/settings.php:130
+msgid "Editorial list"
+msgstr "فهرست تحریریه‌ای"
 
-#: inc/settings.php:118
+#: inc/settings.php:135
 msgid "Excerpt length in words"
 msgstr "طول خلاصه به واژه"
 
-#: inc/settings.php:297
+#: inc/settings.php:357
 msgid "Family name"
 msgstr "نام خانواده قلم"
 
-#: inc/settings.php:120
+#: inc/settings.php:42
+msgid "Font family"
+msgstr "خانواده قلم"
+
+#: inc/settings.php:43
+msgid "Font size in pixels (0 = theme default)"
+msgstr "اندازه قلم به پیکسل (۰ = پیش‌فرض پوسته)"
+
+#: inc/settings.php:414
+msgid "Font sources"
+msgstr "منابع قلم"
+
+#: inc/settings.php:45
+msgid "Font style"
+msgstr "سبک قلم"
+
+#: inc/settings.php:44
+msgid "Font weight"
+msgstr "ضخامت قلم"
+
+#: inc/settings.php:137
 msgid "Footer"
 msgstr "پانوشت"
 
-#: inc/settings.php:51
+#: inc/settings.php:75
 msgid "Footer background"
 msgstr "پس‌زمینه پانوشت"
 
-#: inc/settings.php:347
+#: inc/settings.php:412
 msgid "Footer colors"
 msgstr "رنگ‌های پانوشت"
-
-#: inc/settings.php:64
-msgid "Footer font"
-msgstr "قلم پانوشت"
 
 #: functions.php:21
 msgid "Footer menu"
@@ -277,19 +289,19 @@ msgstr "فهرست پایین صفحه"
 msgid "Footer navigation"
 msgstr "ناوبری پایین صفحه"
 
-#: inc/settings.php:126
+#: inc/settings.php:143
 msgid "Footer slogan (English)"
 msgstr "شعار پایین صفحه (انگلیسی)"
 
-#: inc/settings.php:125
+#: inc/settings.php:142
 msgid "Footer slogan (Persian)"
 msgstr "شعار پایین صفحه (فارسی)"
 
-#: inc/settings.php:52
+#: inc/settings.php:35 inc/settings.php:76
 msgid "Footer text"
 msgstr "متن پانوشت"
 
-#: inc/settings.php:100
+#: inc/settings.php:116
 msgid "Full width"
 msgstr "تمام‌عرض"
 
@@ -297,7 +309,7 @@ msgstr "تمام‌عرض"
 msgid "Get started"
 msgstr "شروع کنید"
 
-#: functions.php:146
+#: functions.php:157
 msgid "Goal"
 msgstr "هدف"
 
@@ -309,49 +321,65 @@ msgstr "هدف‌ها، کاربران، محدودیت‌ها"
 msgid "Good design starts with understanding what needs to change. We map the problem, shape the experience, then build and refine the result."
 msgstr "طراحی خوب از شناخت چیزی آغاز می‌شود که باید تغییر کند. مسئله را روشن می‌کنیم، تجربه را شکل می‌دهیم و سپس محصول را می‌سازیم و بهبود می‌دهیم."
 
+#: inc/settings.php:322
+msgid "Google Fonts"
+msgstr "قلم‌های گوگل"
+
+#: inc/settings.php:415
+msgid "Google families use system fallbacks when Google Fonts loading is off. Uploaded WOFF2 families remain available."
+msgstr "وقتی بارگذاری قلم‌های گوگل خاموش است، قلم‌های گوگل از قلم‌های سیستم استفاده می‌کنند. قلم‌های WOFF2 بارگذاری‌شده همچنان در دسترس‌اند."
+
+#: inc/settings.php:134
+msgid "Grid columns"
+msgstr "ستون‌های شبکه"
+
 #: template-parts/landing.php:34
 msgid "HOW WE WORK"
 msgstr "روند کار ما"
 
-#: inc/settings.php:66
+#: inc/settings.php:82
 msgid "Header"
 msgstr "سربرگ"
 
-#: inc/settings.php:70
+#: inc/settings.php:86
 msgid "Header color style"
 msgstr "سبک رنگ سربرگ"
 
-#: inc/settings.php:345
+#: inc/settings.php:410
 msgid "Header colors"
 msgstr "رنگ‌های سربرگ"
 
-#: inc/settings.php:71
+#: inc/settings.php:87
 msgid "Header layout"
 msgstr "چیدمان سربرگ"
 
-#: inc/settings.php:67
+#: inc/settings.php:83
 msgid "Header logo"
 msgstr "نشان سربرگ"
 
-#: inc/settings.php:57
-msgid "Headings font"
-msgstr "قلم عنوان‌ها"
+#: inc/settings.php:31
+msgid "Headings"
+msgstr "عنوان‌ها"
 
-#: inc/settings.php:133
+#: inc/settings.php:150
 msgid "Hero description (English)"
 msgstr "توضیح بخش آغازین (انگلیسی)"
 
-#: inc/settings.php:131
+#: inc/settings.php:148
 msgid "Hero description (Persian)"
 msgstr "توضیح بخش آغازین (فارسی)"
 
-#: inc/settings.php:132
+#: inc/settings.php:149
 msgid "Hero title (English)"
 msgstr "عنوان بخش آغازین (انگلیسی)"
 
-#: inc/settings.php:130
+#: inc/settings.php:147
 msgid "Hero title (Persian)"
 msgstr "عنوان بخش آغازین (فارسی)"
+
+#: inc/settings.php:120
+msgid "Hidden"
+msgstr "پنهان"
 
 #: template-parts/landing.php:4 template-parts/landing.php:15 template-parts/page-layout.php:26
 msgid "Home"
@@ -361,15 +389,27 @@ msgstr "خانه"
 msgid "Home  About  Services  Contact"
 msgstr "خانه  درباره ما  خدمات  تماس"
 
-#: inc/settings.php:129
+#: inc/settings.php:146
 msgid "Homepage"
 msgstr "صفحه اصلی"
+
+#: inc/settings.php:130
+msgid "Image grid"
+msgstr "شبکه تصویری"
 
 #: template-parts/landing.php:23
 msgid "Interactive concept showing a website before and after a redesign"
 msgstr "نمونه تعاملی مقایسه وب‌سایت پیش و پس از بازطراحی"
 
-#: inc/settings.php:108
+#: inc/settings.php:45
+msgid "Italic"
+msgstr "مورب"
+
+#: inc/settings.php:130
+msgid "Journal grid"
+msgstr "شبکه ژورنالی"
+
+#: inc/settings.php:124
 msgid "Keep sidebar visible while scrolling"
 msgstr "ثابت ماندن نوار کناری هنگام پیمایش"
 
@@ -381,25 +421,49 @@ msgstr "خوب‌ها را نگه دارید. بقیه را از نو بسازی
 msgid "Language"
 msgstr "زبان"
 
-#: inc/settings.php:70
+#: inc/settings.php:341
+msgid "Leave blank to inherit the theme color."
+msgstr "برای استفاده از رنگ پیش‌فرض پوسته خالی بگذارید."
+
+#: inc/settings.php:120
+msgid "Left"
+msgstr "چپ"
+
+#: inc/settings.php:47
+msgid "Letter spacing in pixels (0 = theme default)"
+msgstr "فاصله حروف به پیکسل (۰ = پیش‌فرض پوسته)"
+
+#: inc/settings.php:86
 msgid "Light"
 msgstr "روشن"
 
-#: inc/settings.php:44
+#: inc/settings.php:68
 msgid "Light header background"
 msgstr "پس‌زمینه سربرگ روشن"
 
-#: inc/settings.php:45
+#: inc/settings.php:69
 msgid "Light header text"
 msgstr "متن سربرگ روشن"
 
-#: inc/settings.php:68
+#: inc/settings.php:84
 msgid "Light logo for dark header"
 msgstr "نشان روشن برای سربرگ تیره"
 
-#: inc/settings.php:106
+#: inc/settings.php:46
+msgid "Line height (0 = theme default)"
+msgstr "ارتفاع خط (۰ = پیش‌فرض پوسته)"
+
+#: inc/settings.php:122
 msgid "Lined"
 msgstr "خط‌دار"
+
+#: inc/settings.php:79
+msgid "Load Google Fonts"
+msgstr "بارگذاری قلم‌های گوگل"
+
+#: inc/settings.php:324
+msgid "Local and system fonts"
+msgstr "قلم‌های محلی و سیستم"
 
 #: header.php:37
 msgid "Main navigation"
@@ -409,7 +473,7 @@ msgstr "ناوبری اصلی"
 msgid "Make the first impression count."
 msgstr "تأثیر اول را ماندگار کنید."
 
-#: inc/settings.php:69
+#: inc/settings.php:85
 msgid "Maximum logo width in pixels"
 msgstr "بیشترین عرض نشان به پیکسل"
 
@@ -421,7 +485,7 @@ msgstr "بیشینه عرض"
 msgid "Minimum side margin in pixels"
 msgstr "کمینه فاصله کناره‌ها به پیکسل"
 
-#: functions.php:153 template-parts/landing.php:38
+#: functions.php:164 template-parts/landing.php:38
 msgid "Mobile app"
 msgstr "اپلیکیشن موبایل"
 
@@ -445,9 +509,9 @@ msgstr "نوشته‌های بیشتر"
 msgid "Name of your project"
 msgstr "نام پروژه شما"
 
-#: inc/settings.php:59
-msgid "Navigation font"
-msgstr "قلم ناوبری"
+#: inc/settings.php:32
+msgid "Navigation"
+msgstr "ناوبری"
 
 #: template-parts/landing.php:30
 msgid "New sites and thoughtful redesigns that communicate clearly and work across every screen."
@@ -461,7 +525,7 @@ msgstr "نوشته بعدی"
 msgid "No comments"
 msgstr "بدون دیدگاه"
 
-#: inc/settings.php:256 inc/settings.php:301
+#: inc/settings.php:301 inc/settings.php:361
 msgid "No file selected"
 msgstr "فایلی انتخاب نشده است"
 
@@ -473,7 +537,11 @@ msgstr "نوشته‌ای پیدا نشد."
 msgid "No release notes were provided for this version."
 msgstr "برای این نسخه یادداشت انتشار ثبت نشده است."
 
-#: inc/settings.php:342
+#: inc/settings.php:45
+msgid "Normal"
+msgstr "معمولی"
+
+#: inc/settings.php:407
 msgid "On screens under 760px, side margins and padding are capped at 20px; top and bottom padding are capped at 58px and 90px."
 msgstr "در نمایشگرهای کوچک‌تر از ۷۶۰ پیکسل، فاصله کناره‌ها حداکثر ۲۰ پیکسل و فاصله درونی بالا و پایین حداکثر ۵۸ و ۹۰ پیکسل است."
 
@@ -481,11 +549,11 @@ msgstr "در نمایشگرهای کوچک‌تر از ۷۶۰ پیکسل، فا�
 msgid "One comment"
 msgstr "یک دیدگاه"
 
-#: functions.php:137 header.php:42
+#: functions.php:148 header.php:42
 msgid "Open menu"
 msgstr "باز کردن منو"
 
-#: functions.php:139 header.php:39
+#: functions.php:150 header.php:39
 msgid "Open search"
 msgstr "باز کردن جست‌وجو"
 
@@ -497,19 +565,19 @@ msgstr "روند کار ما: شناخت، طراحی، ساخت و بهبود"
 msgid "Overview"
 msgstr "معرفی"
 
-#: inc/settings.php:49
+#: inc/settings.php:73
 msgid "Page and post body text"
 msgstr "متن صفحه‌ها و نوشته‌ها"
 
-#: inc/settings.php:50
+#: inc/settings.php:74
 msgid "Page and post links"
 msgstr "پیوندهای صفحه‌ها و نوشته‌ها"
 
-#: inc/settings.php:48
+#: inc/settings.php:72
 msgid "Page and post titles"
 msgstr "عنوان‌های صفحه‌ها و نوشته‌ها"
 
-#: inc/settings.php:335
+#: inc/settings.php:400
 msgid "Page display"
 msgstr "نمایش صفحه"
 
@@ -529,19 +597,19 @@ msgstr "مسیر صفحه"
 msgid "Page sections"
 msgstr "بخش‌های صفحه"
 
-#: inc/settings.php:61
-msgid "Page title font"
-msgstr "قلم عنوان صفحه"
-
-#: inc/settings.php:97
+#: inc/settings.php:113
 msgid "Page title style"
 msgstr "سبک عنوان صفحه"
 
-#: inc/settings.php:95
+#: inc/settings.php:33
+msgid "Page titles"
+msgstr "عنوان صفحه‌ها"
+
+#: inc/settings.php:111
 msgid "Pages"
 msgstr "صفحه‌ها"
 
-#: inc/settings.php:106
+#: inc/settings.php:122
 msgid "Panel"
 msgstr "کادربندی‌شده"
 
@@ -549,11 +617,11 @@ msgstr "کادربندی‌شده"
 msgid "Plan a project"
 msgstr "برنامه‌ریزی پروژه"
 
-#: inc/settings.php:113
+#: inc/settings.php:129
 msgid "Post cards in blog, archive, and search results."
 msgstr "کارت‌های نوشته در وبلاگ، بایگانی و نتایج جست‌وجو."
 
-#: inc/settings.php:82
+#: inc/settings.php:98
 msgid "Post details in the built-in single template."
 msgstr "جزئیات نوشته در قالب داخلی نوشته."
 
@@ -565,9 +633,9 @@ msgstr "ناوبری نوشته‌ها"
 msgid "Post pages"
 msgstr "صفحه‌های نوشته"
 
-#: inc/settings.php:62
-msgid "Post title font"
-msgstr "قلم عنوان نوشته"
+#: inc/settings.php:34
+msgid "Post titles"
+msgstr "عنوان نوشته‌ها"
 
 #: single.php:22
 msgid "Previous post"
@@ -581,11 +649,11 @@ msgstr "فهرست اصلی"
 msgid "Primary sidebar"
 msgstr "نوار کناری اصلی"
 
-#: inc/settings.php:41
+#: inc/settings.php:65
 msgid "Primary text"
 msgstr "متن اصلی"
 
-#: functions.php:143
+#: functions.php:154
 msgid "Project"
 msgstr "پروژه"
 
@@ -593,7 +661,7 @@ msgstr "پروژه"
 msgid "Project or business name"
 msgstr "نام پروژه یا کسب‌وکار"
 
-#: functions.php:192 template-parts/landing.php:9
+#: functions.php:244 template-parts/landing.php:9
 msgid "Project planner"
 msgstr "برنامه‌ریز پروژه"
 
@@ -601,7 +669,7 @@ msgstr "برنامه‌ریز پروژه"
 msgid "Put the essentials in one place. Download your brief when you are done, so it is ready to share when we connect."
 msgstr "اطلاعات اصلی را یک‌جا بنویسید. وقتی تمام شد، خلاصه پروژه را دانلود کنید تا برای گفت‌وگوی بعدی آماده باشد."
 
-#: inc/settings.php:100
+#: inc/settings.php:116
 msgid "Reading"
 msgstr "مناسب مطالعه"
 
@@ -613,11 +681,11 @@ msgstr "بازطراحی"
 msgid "Refine"
 msgstr "بهبود"
 
-#: inc/settings.php:298
+#: inc/settings.php:358
 msgid "Regular WOFF2"
 msgstr "قلم معمولی WOFF2"
 
-#: inc/settings.php:91
+#: inc/settings.php:107
 msgid "Related post count"
 msgstr "تعداد نوشته‌های مرتبط"
 
@@ -629,11 +697,11 @@ msgstr "نوشته‌های مرتبط"
 msgid "Release details are unavailable. Refresh the WordPress Updates screen and try again."
 msgstr "جزئیات انتشار در دسترس نیست. صفحه به‌روزرسانی‌های وردپرس را تازه کنید و دوباره تلاش کنید."
 
-#: inc/settings.php:304
+#: inc/settings.php:364
 msgid "Remove family"
 msgstr "حذف خانواده قلم"
 
-#: inc/settings.php:269
+#: inc/settings.php:316
 msgid "Remove image"
 msgstr "حذف تصویر"
 
@@ -641,7 +709,11 @@ msgstr "حذف تصویر"
 msgid "Return home"
 msgstr "بازگشت به خانه"
 
-#: inc/settings.php:359
+#: inc/settings.php:120
+msgid "Right"
+msgstr "راست"
+
+#: inc/settings.php:429
 msgid "Save all changes"
 msgstr "ذخیره همه تغییرات"
 
@@ -653,7 +725,7 @@ msgstr "نتایج جست‌وجو برای: %s"
 msgid "Search this site"
 msgstr "جست‌وجو در این وب‌سایت"
 
-#: inc/settings.php:42
+#: inc/settings.php:66
 msgid "Secondary text"
 msgstr "متن فرعی"
 
@@ -661,151 +733,155 @@ msgstr "متن فرعی"
 msgid "See what changed before you update. Your theme settings and WordPress content are stored outside the theme files."
 msgstr "پیش از به‌روزرسانی، تغییرات را ببینید. تنظیمات پوسته و محتوای وردپرس بیرون از فایل‌های پوسته ذخیره می‌شوند."
 
-#: inc/settings.php:251
+#: inc/settings.php:296
 msgid "Select header logo"
 msgstr "انتخاب نشان سربرگ"
 
-#: inc/settings.php:269
+#: inc/settings.php:316
 msgid "Select image"
 msgstr "انتخاب تصویر"
 
-#: functions.php:144
+#: functions.php:155
 msgid "Service"
 msgstr "خدمت"
 
-#: functions.php:190 template-parts/landing.php:6
+#: functions.php:242 template-parts/landing.php:6
 msgid "Services"
 msgstr "خدمات"
 
-#: inc/settings.php:37
+#: inc/settings.php:61
 msgid "Set shared colors and the built-in header, content, and footer surfaces."
 msgstr "رنگ‌های مشترک و رنگ سربرگ، محتوا و پانوشت پیش‌فرض پوسته را تنظیم کنید."
 
-#: inc/settings.php:95
+#: inc/settings.php:111
 msgid "Set the default page layout, then adjust each UNDO template. Explicit page templates take priority."
 msgstr "چیدمان پیش‌فرض صفحه را انتخاب کنید و سپس هر قالب UNDO را جداگانه تنظیم کنید. قالب انتخاب‌شده برای هر صفحه اولویت دارد."
 
-#: inc/settings.php:33
+#: inc/settings.php:57
 msgid "Set the site width and layout. The initial language follows WordPress Site Language."
 msgstr "عرض و چیدمان وب‌سایت را تنظیم کنید. زبان آغازین از زبان سایت وردپرس پیروی می‌کند."
 
-#: inc/settings.php:344
+#: inc/settings.php:78
+msgid "Set type for each role and choose whether Google Fonts may load."
+msgstr "برای هر بخش قلم و ویژگی‌های نوشتار را تنظیم کنید و بارگذاری قلم‌های گوگل را روشن یا خاموش کنید."
+
+#: inc/settings.php:409
 msgid "Shared palette"
 msgstr "پالت مشترک"
 
-#: inc/settings.php:76
+#: inc/settings.php:92
 msgid "Show action button"
 msgstr "نمایش دکمه اقدام"
 
-#: inc/settings.php:77
+#: inc/settings.php:93
 msgid "Show action in mobile menu"
 msgstr "نمایش دکمه اقدام در فهرست موبایل"
 
-#: inc/settings.php:86
+#: inc/settings.php:102
 msgid "Show author"
 msgstr "نمایش نویسنده"
 
-#: inc/settings.php:115
+#: inc/settings.php:132
 msgid "Show card dates"
 msgstr "نمایش تاریخ کارت‌ها"
 
-#: inc/settings.php:114
+#: inc/settings.php:131
 msgid "Show card images"
 msgstr "نمایش تصویر کارت‌ها"
 
-#: inc/settings.php:87
+#: inc/settings.php:103
 msgid "Show categories"
 msgstr "نمایش دسته‌ها"
 
-#: inc/settings.php:92
+#: inc/settings.php:108
 msgid "Show comments"
 msgstr "نمایش دیدگاه‌ها"
 
-#: inc/settings.php:123
+#: inc/settings.php:140
 msgid "Show contact email"
 msgstr "نمایش ایمیل تماس"
 
-#: inc/settings.php:124
+#: inc/settings.php:141
 msgid "Show copyright"
 msgstr "نمایش حق نشر"
 
-#: inc/settings.php:85
+#: inc/settings.php:101
 msgid "Show date"
 msgstr "نمایش تاریخ"
 
-#: inc/settings.php:116
+#: inc/settings.php:133
 msgid "Show excerpts"
 msgstr "نمایش خلاصه‌ها"
 
-#: inc/settings.php:83
+#: inc/settings.php:99
 msgid "Show featured image"
 msgstr "نمایش تصویر شاخص"
 
-#: inc/settings.php:121
+#: inc/settings.php:138
 msgid "Show footer brand"
 msgstr "نمایش برند پانوشت"
 
-#: inc/settings.php:122
+#: inc/settings.php:139
 msgid "Show footer navigation"
 msgstr "نمایش فهرست پانوشت"
 
-#: inc/settings.php:74
+#: inc/settings.php:90
 msgid "Show header search"
 msgstr "نمایش جست‌وجو در سربرگ"
 
-#: inc/settings.php:75
+#: inc/settings.php:91
 msgid "Show language switcher"
 msgstr "نمایش تغییر زبان"
 
-#: inc/settings.php:73
+#: inc/settings.php:89
 msgid "Show main navigation"
 msgstr "نمایش فهرست اصلی"
 
-#: inc/settings.php:84
+#: inc/settings.php:100
 msgid "Show manually written excerpt"
 msgstr "نمایش خلاصه نوشته‌شده"
 
-#: inc/settings.php:110
+#: inc/settings.php:126
 msgid "Show on archives"
 msgstr "نمایش در بایگانی‌ها"
 
-#: inc/settings.php:111
+#: inc/settings.php:127
 msgid "Show on search results"
 msgstr "نمایش در نتایج جست‌وجو"
 
-#: inc/settings.php:98
+#: inc/settings.php:114
 msgid "Show page breadcrumbs"
 msgstr "نمایش مسیر صفحه"
 
-#: inc/settings.php:99
+#: inc/settings.php:115
 msgid "Show page featured image"
 msgstr "نمایش تصویر شاخص صفحه"
 
-#: inc/settings.php:101
+#: inc/settings.php:117
 msgid "Show page sidebar"
 msgstr "نمایش نوار کناری صفحه"
 
-#: inc/settings.php:96
+#: inc/settings.php:112
 msgid "Show page title"
 msgstr "نمایش عنوان صفحه"
 
-#: inc/settings.php:93
+#: inc/settings.php:109
 msgid "Show post sidebar"
 msgstr "نمایش نوار کناری نوشته"
 
-#: inc/settings.php:89
+#: inc/settings.php:105
 msgid "Show previous and next posts"
 msgstr "نمایش نوشته‌های قبلی و بعدی"
 
-#: inc/settings.php:90
+#: inc/settings.php:106
 msgid "Show related posts"
 msgstr "نمایش نوشته‌های مرتبط"
 
-#: inc/settings.php:134
+#: inc/settings.php:151
 msgid "Show section navigation"
 msgstr "نمایش ناوبری بخش‌ها"
 
-#: inc/settings.php:88
+#: inc/settings.php:104
 msgid "Show tags"
 msgstr "نمایش برچسب‌ها"
 
@@ -813,27 +889,27 @@ msgstr "نمایش برچسب‌ها"
 msgid "Side padding in pixels"
 msgstr "فاصله درونی کناره‌ها به پیکسل"
 
-#: inc/settings.php:103
+#: inc/settings.php:119
 msgid "Sidebar"
 msgstr "نوار کناری"
 
-#: inc/settings.php:104
+#: inc/settings.php:120
 msgid "Sidebar position"
 msgstr "جایگاه نوار کناری"
 
-#: inc/settings.php:105
+#: inc/settings.php:121
 msgid "Sidebar width in pixels"
 msgstr "عرض نوار کناری به پیکسل"
 
-#: inc/settings.php:82
+#: inc/settings.php:98
 msgid "Single post"
 msgstr "تک‌نوشته"
 
-#: inc/settings.php:39
+#: inc/settings.php:63
 msgid "Site background"
 msgstr "پس‌زمینه وب‌سایت"
 
-#: inc/settings.php:34
+#: inc/settings.php:58
 msgid "Site width"
 msgstr "عرض وب‌سایت"
 
@@ -841,31 +917,27 @@ msgstr "عرض وب‌سایت"
 msgid "Skip to content"
 msgstr "رفتن به محتوای اصلی"
 
-#: functions.php:156 template-parts/landing.php:39
+#: functions.php:167 template-parts/landing.php:39
 msgid "Something new"
 msgstr "پروژه‌ای تازه"
 
-#: inc/settings.php:71
+#: inc/settings.php:87
 msgid "Standard"
 msgstr "استاندارد"
-
-#: inc/settings.php:104
-msgid "Start"
-msgstr "ابتدای جهت نوشتار"
 
 #: template-parts/landing.php:24
 msgid "Start here"
 msgstr "از اینجا شروع کنید"
 
-#: functions.php:145
+#: functions.php:156
 msgid "Starting point"
 msgstr "نقطه شروع"
 
-#: inc/settings.php:72
+#: inc/settings.php:88
 msgid "Sticky header"
 msgstr "سربرگ چسبان"
 
-#: inc/settings.php:109
+#: inc/settings.php:125
 msgid "Sticky sidebar top gap in pixels"
 msgstr "فاصله نوار کناری چسبان از بالای صفحه به پیکسل"
 
@@ -873,11 +945,11 @@ msgstr "فاصله نوار کناری چسبان از بالای صفحه به 
 msgid "Structure, content, interface"
 msgstr "ساختار، محتوا، رابط کاربری"
 
-#: inc/settings.php:40
+#: inc/settings.php:64
 msgid "Surface color"
 msgstr "رنگ سطح"
 
-#: inc/settings.php:184
+#: inc/settings.php:212
 msgid "System sans-serif"
 msgstr "قلم بدون سریف سیستم"
 
@@ -889,7 +961,11 @@ msgstr "برچسب‌ها"
 msgid "Tell us what you want to make."
 msgstr "از پروژه‌ای که در ذهن دارید بگویید."
 
-#: inc/settings.php:336
+#: inc/settings.php:48
+msgid "Text color (blank = theme default)"
+msgstr "رنگ متن (خالی = پیش‌فرض پوسته)"
+
+#: inc/settings.php:401
 msgid "The UNDO Custom Width template uses a width set on each page below the editor."
 msgstr "عرض قالب UNDO Custom Width برای هر صفحه، در بخش زیر ویرایشگر همان صفحه تعیین می‌شود."
 
@@ -905,15 +981,15 @@ msgstr "صفحه موردنظر شما در دسترس نیست."
 msgid "The right work for the next version of your business."
 msgstr "کار درست برای نسخه بعدی کسب‌وکار شما."
 
-#: inc/settings.php:103
+#: inc/settings.php:119
 msgid "The sidebar appears only where enabled and when widgets are assigned."
 msgstr "نوار کناری فقط در بخش‌های فعال و پس از افزودن ابزارک نمایش داده می‌شود."
 
-#: inc/settings.php:179
+#: inc/settings.php:44 inc/settings.php:45 inc/settings.php:203
 msgid "Theme default"
 msgstr "پیش‌فرض پوسته"
 
-#: inc/settings.php:325
+#: inc/settings.php:390
 msgid "Theme settings sections"
 msgstr "بخش‌های تنظیمات پوسته"
 
@@ -925,11 +1001,11 @@ msgstr "به‌روزرسانی پوسته"
 msgid "This width applies only when the page template is UNDO Custom Width. Leave the field blank for 1200px."
 msgstr "این عرض فقط با قالب UNDO Custom Width اعمال می‌شود. اگر کادر را خالی بگذارید، عرض ۱۲۰۰ پیکسل استفاده می‌شود."
 
-#: functions.php:148
+#: functions.php:159
 msgid "To be discussed"
 msgstr "در گفت‌وگو مشخص می‌شود"
 
-#: functions.php:201
+#: functions.php:253
 msgid "Toggle submenu for %s"
 msgstr "باز یا بسته کردن زیرمنوی %s"
 
@@ -941,7 +1017,7 @@ msgstr "فاصله بیرونی بالا به پیکسل"
 msgid "Top padding in pixels"
 msgstr "فاصله درونی بالا به پیکسل"
 
-#: inc/settings.php:54
+#: inc/settings.php:78
 msgid "Typography"
 msgstr "تایپوگرافی"
 
@@ -957,7 +1033,7 @@ msgstr "UNDO تمام‌عرض"
 msgid "UNDO Reading"
 msgstr "UNDO مناسب مطالعه"
 
-#: inc/settings.php:242 inc/settings.php:242 inc/settings.php:323
+#: inc/settings.php:287 inc/settings.php:287 inc/settings.php:388
 msgid "UNDO Theme Settings"
 msgstr "تنظیمات پوسته UNDO"
 
@@ -965,7 +1041,7 @@ msgstr "تنظیمات پوسته UNDO"
 msgid "UNDO Web Developments"
 msgstr "توسعه وب UNDO"
 
-#: functions.php:142
+#: functions.php:153
 msgid "UNDO Web Developments — Project brief"
 msgstr "توسعه وب UNDO — خلاصه پروژه"
 
@@ -997,7 +1073,7 @@ msgstr "اعتبار فایل به‌روزرسانی پوسته UNDO تأیید
 msgid "Understand"
 msgstr "شناخت"
 
-#: inc/settings.php:258
+#: inc/settings.php:303
 msgid "Unsaved changes"
 msgstr "تغییرات ذخیره‌نشده"
 
@@ -1005,39 +1081,43 @@ msgstr "تغییرات ذخیره‌نشده"
 msgid "Untitled page"
 msgstr "صفحه بدون عنوان"
 
-#: functions.php:147
+#: functions.php:158
 msgid "Untitled project"
 msgstr "پروژه بدون نام"
 
-#: inc/settings.php:309
+#: inc/settings.php:369
 msgid "Up to 12 families. Choose a font below after naming it and selecting its regular file."
 msgstr "حداکثر ۱۲ خانواده قلم. پس از نام‌گذاری و انتخاب فایل معمولی، قلم را در پایین انتخاب کنید."
 
-#: inc/settings.php:307
+#: inc/settings.php:367
 msgid "Upload WOFF2 files to the WordPress Media Library. Add a regular file for each family; a bold file is optional. Uploaded files stay in Media Library during theme updates."
 msgstr "فایل‌های WOFF2 را در کتابخانه رسانه وردپرس بارگذاری کنید. برای هر خانواده فایل معمولی لازم است و فایل ضخیم اختیاری است. فایل‌ها پس از به‌روزرسانی پوسته در کتابخانه رسانه باقی می‌مانند."
 
-#: inc/settings.php:54
-msgid "Upload WOFF2 font files, then assign a family to each theme text role."
-msgstr "فایل‌های قلم WOFF2 را بارگذاری کنید و سپس برای هر نقش متنی پوسته قلمی انتخاب کنید."
-
-#: inc/settings.php:349
+#: inc/settings.php:326
 msgid "Uploaded fonts"
 msgstr "قلم‌های بارگذاری‌شده"
 
-#: inc/settings.php:285
+#: inc/settings.php:345
 msgid "Use 320–1920px or 20–100%, for example 1200px or 80%."
 msgstr "از ۳۲۰ تا ۱۹۲۰ پیکسل یا ۲۰ تا ۱۰۰ درصد استفاده کنید؛ برای مثال 1200px یا 80%."
+
+#: inc/settings.php:339
+msgid "Use 320–1920px or 20–100%, for example 1440px or 80%."
+msgstr "از ۳۲۰ تا ۱۹۲۰ پیکسل یا ۲۰ تا ۱۰۰ درصد استفاده کنید؛ برای نمونه 1440px یا 80%."
 
 #: inc/page-layout.php:53
 msgid "Use 320–1920px or 20–100%."
 msgstr "از ۳۲۰ تا ۱۹۲۰ پیکسل یا ۲۰ تا ۱۰۰ درصد استفاده کنید."
 
-#: inc/settings.php:254
+#: inc/settings.php:341
+msgid "Use theme color"
+msgstr "استفاده از رنگ پوسته"
+
+#: inc/settings.php:299
 msgid "Use this font"
 msgstr "استفاده از این قلم"
 
-#: inc/settings.php:252
+#: inc/settings.php:297
 msgid "Use this image"
 msgstr "استفاده از این تصویر"
 
@@ -1061,11 +1141,11 @@ msgstr "برای نیازهای شما راهکار داریم"
 msgid "Web Developments"
 msgstr "توسعه وب"
 
-#: functions.php:151 template-parts/landing.php:38
+#: functions.php:162 template-parts/landing.php:38
 msgid "Website"
 msgstr "وب‌سایت"
 
-#: inc/settings.php:33
+#: inc/settings.php:57
 msgid "Website layout"
 msgstr "چیدمان وب‌سایت"
 
@@ -1101,21 +1181,21 @@ msgstr "از کجا شروع می‌کنید؟"
 msgid "Whether the starting point is a blank page or an existing product, UNDO brings design and development together to make it easier to use, easier to manage, and ready to grow."
 msgstr "چه از یک ایده تازه شروع کنید، چه محصولی آماده داشته باشید، UNDO طراحی و توسعه را کنار هم می‌آورد تا تجربه‌ای ساده‌تر، مدیریتی آسان‌تر و بستری آماده رشد بسازد."
 
-#: inc/settings.php:34 inc/settings.php:100
+#: inc/settings.php:58 inc/settings.php:116
 msgid "Wide"
 msgstr "عریض"
 
-#: inc/settings.php:107
+#: inc/settings.php:123
 msgid "Widget spacing in pixels"
 msgstr "فاصله ابزارک‌ها به پیکسل"
 
-#: inc/settings.php:106
+#: inc/settings.php:122
 msgid "Widget style"
 msgstr "سبک ابزارک‌ها"
 
-#: inc/settings.php:63
-msgid "Widget title font"
-msgstr "قلم عنوان ابزارک"
+#: inc/settings.php:34
+msgid "Widget titles"
+msgstr "عنوان ابزارک‌ها"
 
 #: functions.php:29
 msgid "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings."
@@ -1125,7 +1205,7 @@ msgstr "ابزارک‌هایی که با فعال‌سازی در تنظیما�
 msgid "Width in pixels or percent"
 msgstr "عرض به پیکسل یا درصد"
 
-#: functions.php:152 template-parts/landing.php:38
+#: functions.php:163 template-parts/landing.php:38
 msgid "WordPress plugin"
 msgstr "افزونه وردپرس"
 
@@ -1145,7 +1225,7 @@ msgstr "محصولی که کار می‌کند"
 msgid "You are not allowed to view theme update details."
 msgstr "شما مجوز مشاهده جزئیات به‌روزرسانی پوسته را ندارید."
 
-#: inc/settings.php:257
+#: inc/settings.php:302
 msgid "You can add up to 12 font families."
 msgstr "می‌توانید حداکثر ۱۲ خانواده قلم اضافه کنید."
 
@@ -1153,7 +1233,7 @@ msgstr "می‌توانید حداکثر ۱۲ خانواده قلم اضافه �
 msgid "Your answers stay in this browser. The brief downloads to your device."
 msgstr "پاسخ‌های شما در همین مرورگر می‌ماند. خلاصه پروژه روی دستگاهتان دانلود می‌شود."
 
-#: functions.php:149
+#: functions.php:160
 msgid "Your project brief has been downloaded."
 msgstr "خلاصه پروژه شما دانلود شد."
 

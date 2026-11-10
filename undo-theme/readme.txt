@@ -3,21 +3,22 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.5.0
+Stable tag: 0.6.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The full-width, single-save settings dashboard controls layout, colors, typography, uploaded WOFF2 fonts, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.
+A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, three blog layouts, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls pixel or percentage site width, colors, typography, Google and uploaded WOFF2 fonts, header, pages, posts, blog, physical sidebar position or visibility, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.
 
 == Features ==
 * Initial language follows WordPress Site Language; Persian and English visitor overrides, compiled translations, and dedicated RTL stylesheet are included.
 * Responsive UNDO landing page with section navigation and a project brief download.
 * Standalone, full-width UNDO Theme Settings page with a joined vertical sidebar. Switching sections keeps unsaved values in place; Save all changes stores every section at once.
-* Separate layout, colors, and typography sections. Colors cover the shared palette and built-in header, page/post content, and footer. Typography assigns built-in or uploaded WOFF2 font families to body, headings, navigation, buttons, titles, widgets, and footer. Header options include light/dark styles, logo variants, centered navigation, search, and mobile action visibility.
+* Separate layout, colors, and typography sections. Site content width accepts pixels or percent. Typography assigns Google, system, or uploaded WOFF2 font families to body, headings, navigation, buttons, titles, widgets, and footer, with size, weight, style, line height, letter spacing, and color controls per role. Google font loading can be disabled. Header options include light/dark styles, logo variants, centered navigation, search, and mobile action visibility.
 * WordPress menus, widgets, featured images, logo support, and normal post, page, archive, search, and 404 templates.
 * Editorial single-post template with optional manual excerpt, metadata, featured image, tags, related posts, comments, post navigation, and sidebar. Related posts are opt-in and matched by category.
 * Reading, wide, boxed, and full-width page templates each have width, margin, and padding controls in Pages settings. The default can be overridden in the WordPress or Elementor page template selector. UNDO Custom Width uses only a per-page pixel/percentage field below the WordPress editor, visible when that template is selected.
-* Configurable start/end widget sidebar with lined or panel styling, adjustable width and spacing, context visibility, and optional sticky behavior that stops when the widget area is too tall. On small screens the sidebar follows the main content.
+* Physical left/right or hidden widget sidebar with lined or panel styling, adjustable width and spacing, context visibility, and optional sticky behavior that stops when the widget area is too tall. On small screens the sidebar follows the main content.
+* Editorial list, image grid, and journal grid for blog indexes, archives, and search results; grid column count is configurable.
 * Elementor-compatible page layouts and Elementor Pro Theme Builder location support.
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
@@ -31,6 +32,10 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.6.0 =
+* Added pixel/percentage site content width and left/right/hidden sidebar position, while preserving legacy saved choices.
+* Added editorial list, image grid, and journal grid designs for blog, archive, and search.
+* Added per-role typography details and a Google Fonts on/off control with curated families and system fallbacks.
 = 0.5.0 =
 * Expanded the Theme Settings workspace to full width with a joined sidebar, full-row selected state, and instant section switching without losing unsaved edits.
 * Moved colors out of Website Layout into a dedicated Colors section; added shared, header, content, and footer controls.

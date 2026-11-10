@@ -124,6 +124,42 @@ const fa = {
 };
 
 Object.assign(fa, {
+  'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, three blog layouts, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls pixel or percentage site width, colors, typography, Google and uploaded WOFF2 fonts, header, pages, posts, blog, physical sidebar position or visibility, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.': 'پوسته وردپرس دوزبانه برای آژانس‌ها و استودیوهای خلاق با زبان آغازین هماهنگ با زبان سایت وردپرس، تغییر زبان فارسی و انگلیسی و استایل راست‌چین. دارای صفحه اصلی واکنش‌گرا، سه چیدمان وبلاگ، نوشته‌های خوانا و قالب‌های صفحه با عرض و فاصله قابل تنظیم است. پیشخوان تنظیمات با ذخیره یک‌جای تنظیمات، عرض پیکسلی یا درصدی، رنگ‌ها، تایپوگرافی، قلم‌های گوگل و WOFF2، سربرگ، صفحه‌ها، نوشته‌ها، وبلاگ، جایگاه یا پنهان‌سازی نوار کناری و پانوشت را کنترل می‌کند. از قالب‌های المنتور و به‌روزرسانی در پیشخوان وردپرس پشتیبانی می‌کند.',
+  'Accent text': 'متن تأکیدی',
+  'Blog design': 'طرح وبلاگ',
+  'Body text': 'متن اصلی',
+  'Buttons': 'دکمه‌ها',
+  'Content width (pixels or percent)': 'عرض محتوا (پیکسل یا درصد)',
+  'Editorial list': 'فهرست تحریریه‌ای',
+  'Font family': 'خانواده قلم',
+  'Font size in pixels (0 = theme default)': 'اندازه قلم به پیکسل (۰ = پیش‌فرض پوسته)',
+  'Font sources': 'منابع قلم',
+  'Font style': 'سبک قلم',
+  'Font weight': 'ضخامت قلم',
+  'Google families use system fallbacks when Google Fonts loading is off. Uploaded WOFF2 families remain available.': 'وقتی بارگذاری قلم‌های گوگل خاموش است، قلم‌های گوگل از قلم‌های سیستم استفاده می‌کنند. قلم‌های WOFF2 بارگذاری‌شده همچنان در دسترس‌اند.',
+  'Google Fonts': 'قلم‌های گوگل',
+  'Grid columns': 'ستون‌های شبکه',
+  'Headings': 'عنوان‌ها',
+  'Hidden': 'پنهان',
+  'Image grid': 'شبکه تصویری',
+  'Italic': 'مورب',
+  'Journal grid': 'شبکه ژورنالی',
+  'Leave blank to inherit the theme color.': 'برای استفاده از رنگ پیش‌فرض پوسته خالی بگذارید.',
+  'Left': 'چپ',
+  'Local and system fonts': 'قلم‌های محلی و سیستم',
+  'Letter spacing in pixels (0 = theme default)': 'فاصله حروف به پیکسل (۰ = پیش‌فرض پوسته)',
+  'Line height (0 = theme default)': 'ارتفاع خط (۰ = پیش‌فرض پوسته)',
+  'Load Google Fonts': 'بارگذاری قلم‌های گوگل',
+  'Navigation': 'ناوبری',
+  'Normal': 'معمولی',
+  'Page titles': 'عنوان صفحه‌ها',
+  'Post titles': 'عنوان نوشته‌ها',
+  'Right': 'راست',
+  'Set type for each role and choose whether Google Fonts may load.': 'برای هر بخش قلم و ویژگی‌های نوشتار را تنظیم کنید و بارگذاری قلم‌های گوگل را روشن یا خاموش کنید.',
+  'Text color (blank = theme default)': 'رنگ متن (خالی = پیش‌فرض پوسته)',
+  'Use 320–1920px or 20–100%, for example 1440px or 80%.': 'از ۳۲۰ تا ۱۹۲۰ پیکسل یا ۲۰ تا ۱۰۰ درصد استفاده کنید؛ برای نمونه 1440px یا 80%.',
+  'Use theme color': 'استفاده از رنگ پوسته',
+  'Widget titles': 'عنوان ابزارک‌ها',
   'Header logo': 'نشان سربرگ',
   'Maximum logo width in pixels': 'بیشترین عرض نشان به پیکسل',
   'Select header logo': 'انتخاب نشان سربرگ',
@@ -334,13 +370,13 @@ for (const file of files) {
     refs.get(id).push(`${path.relative(root, file).replaceAll('\\', '/')}:${line}`);
   }
 }
-for (const id of ['UNDO Web Developments', 'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The full-width, single-save settings dashboard controls layout, colors, typography, uploaded WOFF2 fonts, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.']) refs.set(id, ['style.css:1']);
+for (const id of ['UNDO Web Developments', 'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, three blog layouts, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls pixel or percentage site width, colors, typography, Google and uploaded WOFF2 fonts, header, pages, posts, blog, physical sidebar position or visibility, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.']) refs.set(id, ['style.css:1']);
 const ids = [...refs.keys()].sort((a, b) => Buffer.compare(Buffer.from(a), Buffer.from(b)));
 const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.5.0',
+  'Project-Id-Version: UNDO Web Developments 0.6.0',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

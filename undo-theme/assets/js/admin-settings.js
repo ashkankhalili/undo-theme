@@ -3,6 +3,13 @@ const dirtyStatus = document.querySelector('[data-undo-dirty-status]');
 const markDirty = () => { if (dirtyStatus) dirtyStatus.textContent = undoSettingsMedia.unsaved; };
 settingsForm?.addEventListener('input', markDirty);
 settingsForm?.addEventListener('change', markDirty);
+settingsForm?.querySelectorAll('.undo-optional-color').forEach((field) => {
+  const picker = field.querySelector('[data-undo-color-picker]');
+  const text = field.querySelector('[data-undo-color-text]');
+  picker?.addEventListener('input', () => { text.value = picker.value; markDirty(); });
+  text?.addEventListener('input', () => { if (/^#[0-9a-f]{6}$/i.test(text.value)) picker.value = text.value; });
+  field.querySelector('[data-undo-color-clear]')?.addEventListener('click', () => { text.value = ''; markDirty(); text.focus(); });
+});
 
 const tabs = [...document.querySelectorAll('[data-undo-tab]')];
 const panels = [...document.querySelectorAll('[data-undo-panel]')];
@@ -106,7 +113,7 @@ function refreshFontChoices() {
     available.forEach((font) => {
       const option = new Option(font.name, font.id);
       option.dataset.undoCustomFont = '1';
-      select.add(option);
+      (select.querySelector('[data-undo-custom-group]') || select).append(option);
     });
     select.value = available.some((font) => font.id === selected) || [...select.options].some((option) => option.value === selected) ? selected : 'default';
   });

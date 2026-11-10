@@ -6,6 +6,7 @@ function add_filter( $hook, $callback, $priority = 10, $accepted_args = 1 ) {}
 function __( $message, $domain = 'default' ) { return $message; }
 function get_option( $key, $default = false ) { return $GLOBALS['options'][ $key ] ?? $default; }
 function get_locale() { return $GLOBALS['site_locale'] ?? 'en_US'; }
+function is_rtl() { return ! empty( $GLOBALS['test_rtl'] ); }
 function wp_unslash( $value ) { return stripslashes( $value ); }
 function wp_attachment_is_image( $id ) { return 42 === $id; }
 function get_post_mime_type( $id ) { return $GLOBALS['font_mimes'][ $id ] ?? ''; }
@@ -26,6 +27,18 @@ function expect( $condition, $message ) { if ( ! $condition ) { throw new Runtim
 require dirname( __DIR__ ) . '/undo-theme/functions.php';
 
 $defaults = undo_setting_defaults();
+expect( '1440px' === $defaults['content_width'] && '80%' === undo_sanitize_site_dimension( '80%' ) && '1440px' === undo_sanitize_site_dimension( '1440' ), 'Site width accepts percent and migrates saved pixel numbers' );
+expect( '1440px' === undo_sanitize_site_dimension( '999vw' ) && '1440px' === undo_sanitize_site_dimension( '0%' ), 'Invalid site widths fall back safely' );
+expect( '1' === $defaults['google_fonts_enabled'] && 'editorial' === $defaults['blog_style'], 'Existing Google font appearance and editorial blog layout remain enabled by default' );
+$type = undo_sanitize_settings( array( 'font_body_size' => '18', 'font_body_color' => '#123456', 'font_headings_weight' => '700', 'font_navigation_style' => 'italic', 'font_footer_line_height' => '1.6', 'font_footer_letter_spacing' => '-1.5', 'google_fonts_enabled' => '0', 'content_width' => '80%', 'blog_style' => 'gallery', 'blog_columns' => '3' ) );
+expect( '18' === $type['font_body_size'] && '#123456' === $type['font_body_color'] && '700' === $type['font_headings_weight'] && 'italic' === $type['font_navigation_style'] && '1.6' === $type['font_footer_line_height'] && '-1.5' === $type['font_footer_letter_spacing'], 'Typography controls validate and save together' );
+expect( '0' === $type['google_fonts_enabled'] && '80%' === $type['content_width'] && 'gallery' === $type['blog_style'] && '3' === $type['blog_columns'], 'Google fonts, width and blog options save together' );
+$GLOBALS['options']['undo_theme_settings'] = $type;
+$type_css = undo_theme_typography_css();
+expect( false !== strpos( $type_css, 'font-size:18px' ) && false !== strpos( $type_css, 'color:#123456' ) && false !== strpos( $type_css, 'font-style:italic' ), 'Saved typography choices must reach frontend CSS' );
+$GLOBALS['options'] = array();
+$type = undo_sanitize_settings( array( 'font_body_size' => '999', 'font_body_color' => 'red', 'font_headings_weight' => '999', 'font_footer_line_height' => '7' ) );
+expect( '160' === $type['font_body_size'] && '' === $type['font_body_color'] && 'default' === $type['font_headings_weight'] && '3' === $type['font_footer_line_height'], 'Invalid typography values are clamped or rejected' );
 expect( ! isset( undo_settings_sections()['layout'][2]['accent_color'] ) && isset( undo_settings_sections()['colors'][2]['accent_color'] ), 'Color controls must live in the Colors section' );
 expect( isset( undo_settings_sections()['typography'][2]['custom_fonts'] ), 'Typography must provide custom font management' );
 $GLOBALS['font_mimes'] = array( 101 => 'font/woff2', 102 => 'application/font-woff2', 103 => 'image/png' );
@@ -64,8 +77,15 @@ expect( '0' === $settings['footer_show_brand'], 'Saving template controls must p
 $defaults = undo_setting_defaults();
 expect( 'lined' === $defaults['sidebar_widget_style'] && '32' === $defaults['sidebar_widget_spacing'] && '0' === $defaults['sidebar_sticky'], 'Sidebar design and sticky behavior must preserve existing defaults' );
 $GLOBALS['options']['undo_theme_settings'] = array( 'page_wide_width' => '80%', 'footer_show_brand' => '0' );
-$settings = undo_sanitize_settings( array( 'sidebar_position' => 'start', 'sidebar_width' => '999', 'sidebar_widget_style' => 'panel', 'sidebar_widget_spacing' => '8', 'sidebar_sticky' => '1', 'sidebar_sticky_offset' => '200' ) );
-expect( 'start' === $settings['sidebar_position'] && '420' === $settings['sidebar_width'] && 'panel' === $settings['sidebar_widget_style'] && '16' === $settings['sidebar_widget_spacing'] && '1' === $settings['sidebar_sticky'] && '120' === $settings['sidebar_sticky_offset'], 'Sidebar controls must validate and clamp' );
+$settings = undo_sanitize_settings( array( 'sidebar_position' => 'left', 'sidebar_width' => '999', 'sidebar_widget_style' => 'panel', 'sidebar_widget_spacing' => '8', 'sidebar_sticky' => '1', 'sidebar_sticky_offset' => '200' ) );
+expect( 'left' === $settings['sidebar_position'] && '420' === $settings['sidebar_width'] && 'panel' === $settings['sidebar_widget_style'] && '16' === $settings['sidebar_widget_spacing'] && '1' === $settings['sidebar_sticky'] && '120' === $settings['sidebar_sticky_offset'], 'Sidebar controls must validate and clamp' );
+expect( 'hidden' === undo_sanitize_settings( array( 'sidebar_position' => 'hidden' ) )['sidebar_position'], 'Sidebar can be hidden globally' );
+$GLOBALS['options']['undo_theme_settings'] = array( 'sidebar_position' => 'start' );
+expect( 'left' === undo_sidebar_position(), 'Legacy logical start maps to physical left in LTR' );
+$GLOBALS['test_rtl'] = true;
+expect( 'right' === undo_sidebar_position(), 'Legacy logical start maps to physical right in RTL' );
+$GLOBALS['test_rtl'] = false;
+$GLOBALS['options']['undo_theme_settings'] = array( 'page_wide_width' => '80%', 'footer_show_brand' => '0' );
 expect( '80%' === $settings['page_wide_width'] && '0' === $settings['footer_show_brand'], 'Saving sidebar controls must preserve the new Pages settings and other sections' );
 $settings = undo_sanitize_settings( array( 'sidebar_widget_style' => 'invalid' ) );
 expect( 'lined' === $settings['sidebar_widget_style'], 'Unknown widget styles must fall back to lined' );
