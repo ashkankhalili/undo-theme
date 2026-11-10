@@ -24,6 +24,25 @@
 .undo-settings__type-group summary:focus-visible{outline:2px solid #b83b30;outline-offset:-3px}
 .undo-settings__type-group[open] summary{border-block-end:1px solid #e1ded8;background:#f8f6f2}
 .undo-settings__type-group .form-table{width:calc(100% - 40px);margin:10px 20px 20px}
+.undo-typography-scroll{max-width:100%;overflow-x:auto;margin-block:24px 32px;border:1px solid #dedbd5;border-radius:9px;background:#fff;scrollbar-color:#b8b2a9 #f8f6f2}
+.undo-typography-table{width:100%;min-width:1240px;border-collapse:collapse;table-layout:fixed;text-align:start}
+.undo-typography-table th,.undo-typography-table td{box-sizing:border-box;padding:13px 10px;border-block-end:1px solid #ebe8e3;text-align:start;vertical-align:middle}
+.undo-typography-table thead th{position:sticky;top:0;z-index:1;background:#f7f5f1;color:#5c5852;font-size:11px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
+.undo-typography-table tbody tr:last-child>*{border-block-end:0}
+.undo-typography-table tbody tr:hover{background:#fbfaf7}
+.undo-typography-table tbody th{width:105px;color:#242320;font-size:13px;font-weight:700}
+.undo-typography-table th:nth-child(2){width:230px}.undo-typography-table th:nth-child(3){width:92px}.undo-typography-table th:nth-child(4){width:100px}.undo-typography-table th:nth-child(5){width:105px}.undo-typography-table th:nth-child(6){width:100px}.undo-typography-table th:nth-child(7){width:180px}.undo-typography-table th:nth-child(8){width:205px}
+.undo-typography-table :is(select,input[type="number"],input[type="text"]){box-sizing:border-box;width:100%;min-height:37px;max-width:100%;margin:0;border:1px solid #c9c6bf;border-radius:5px;background:#fff;font-size:12px}
+.undo-typography-table .undo-font-choice{min-width:0}
+.undo-typography-table .undo-optional-color{flex-wrap:nowrap;gap:5px}
+.undo-typography-table .undo-optional-color input[type="color"]{flex:0 0 34px;width:34px;height:37px;padding:2px;border:1px solid #c9c6bf;border-radius:5px;cursor:pointer}
+.undo-typography-table .undo-optional-color input[type="text"]{min-width:0;flex:1}
+.undo-typography-table .undo-optional-color .button-link{flex:0 0 24px;width:24px;height:34px;font-size:0;white-space:nowrap}
+.undo-typography-table .undo-optional-color .button-link::after{content:'×';font-size:20px;line-height:1}
+.undo-typography-table .description{display:none}
+.undo-typography-spacing{display:flex;align-items:center;gap:4px}
+.undo-typography-spacing span{font-size:10px;color:#77716a}
+.undo-typography-spacing input{min-width:0}
 .undo-settings__hint{margin:22px 0 0;padding:12px 16px;border-inline-start:2px solid #b83b30;background:#f8f6f2;color:#5d5a54;font-size:13px;line-height:1.6}
 .undo-settings .form-table{margin-block:12px 0}
 .undo-settings .form-table tr+tr{border-block-start:1px solid #f0eeea}

@@ -44,6 +44,7 @@ function undo_typography_role_fields() {
         $fields[ $prefix . '_weight' ] = array( __( 'Font weight', 'undo-theme' ), 'select', 'default', array( 'default' => __( 'Theme default', 'undo-theme' ), '300' => '300', '400' => '400', '500' => '500', '600' => '600', '700' => '700', '800' => '800' ) );
         $fields[ $prefix . '_style' ] = array( __( 'Font style', 'undo-theme' ), 'select', 'default', array( 'default' => __( 'Theme default', 'undo-theme' ), 'normal' => __( 'Normal', 'undo-theme' ), 'italic' => __( 'Italic', 'undo-theme' ) ) );
         $fields[ $prefix . '_line_height' ] = array( __( 'Line height (0 = theme default)', 'undo-theme' ), 'decimal', '0', array( 0, 3 ) );
+        $fields[ $prefix . '_word_spacing' ] = array( __( 'Word spacing in pixels (0 = theme default)', 'undo-theme' ), 'decimal_signed', '0', array( -5, 20 ) );
         $fields[ $prefix . '_letter_spacing' ] = array( __( 'Letter spacing in pixels (0 = theme default)', 'undo-theme' ), 'decimal_signed', '0', array( -5, 10 ) );
         $fields[ $prefix . '_color' ] = array( __( 'Text color (blank = theme default)', 'undo-theme' ), 'optional_color', '' );
     }
@@ -127,6 +128,7 @@ function undo_settings_sections() {
             'sidebar_on_search' => array( __( 'Show on search results', 'undo-theme' ), 'checkbox', '0' ),
         ) ),
         'blog' => array( __( 'Blog', 'undo-theme' ), __( 'Post cards in blog, archive, and search results.', 'undo-theme' ), array(
+            'blog_page_id' => array( __( 'Posts page', 'undo-theme' ), 'page_choice', '0' ),
             'blog_style' => array( __( 'Blog design', 'undo-theme' ), 'select', 'editorial', array( 'editorial' => __( 'Editorial list', 'undo-theme' ), 'gallery' => __( 'Image grid', 'undo-theme' ), 'journal' => __( 'Journal grid', 'undo-theme' ) ) ),
             'blog_show_featured' => array( __( 'Show card images', 'undo-theme' ), 'checkbox', '1' ),
             'blog_show_date' => array( __( 'Show card dates', 'undo-theme' ), 'checkbox', '1' ),
@@ -161,6 +163,7 @@ function undo_setting_defaults() {
     return $defaults;
 }
 function undo_setting( $key ) {
+    if ( 'blog_page_id' === $key ) { return (string) absint( get_option( 'page_for_posts', 0 ) ); }
     $saved = get_option( 'undo_theme_settings', array() );
     $defaults = undo_setting_defaults();
     $value = isset( $saved[ $key ] ) ? $saved[ $key ] : ( isset( $defaults[ $key ] ) ? $defaults[ $key ] : '' );
@@ -217,6 +220,11 @@ function undo_font_choices( $custom_fonts = null ) {
     }
     return $choices;
 }
+function undo_original_font_label( $key ) {
+    if ( in_array( $key, array( 'font_headings', 'font_page_title', 'font_post_title', 'font_widget_title' ), true ) ) { return __( 'Original: Space Grotesk / Vazirmatn', 'undo-theme' ); }
+    if ( 'font_accent' === $key ) { return __( 'Original: Instrument Serif / Vazirmatn', 'undo-theme' ); }
+    return __( 'Original: DM Sans / Vazirmatn', 'undo-theme' );
+}
 function undo_allow_font_uploads( $mimes ) {
     if ( current_user_can( 'manage_options' ) ) { $mimes['woff2'] = PHP_VERSION_ID >= 80112 ? 'font/woff2' : 'application/font-woff2'; }
     return $mimes;
@@ -269,6 +277,11 @@ function undo_sanitize_settings( $input ) {
                     $choices = undo_font_choices( isset( $clean['custom_fonts'] ) ? $clean['custom_fonts'] : array() );
                     $clean[ $key ] = isset( $choices[ $value ] ) ? $value : 'default';
                     break;
+                case 'page_choice':
+                    $id = absint( $value );
+                    $front_id = absint( get_option( 'page_on_front', 0 ) );
+                    $clean[ $key ] = (string) ( $id && 'page' === get_post_type( $id ) && 'publish' === get_post_status( $id ) && $id !== $front_id ? $id : 0 );
+                    break;
                 case 'media': $clean[ $key ] = ctype_digit( $value ) && wp_attachment_is_image( (int) $value ) ? $value : '0'; break;
                 case 'textarea': $clean[ $key ] = sanitize_textarea_field( $value ); break;
                 case 'url': $clean[ $key ] = 0 === strpos( $value, '#' ) ? sanitize_text_field( $value ) : esc_url_raw( $value ); break;
@@ -276,6 +289,9 @@ function undo_sanitize_settings( $input ) {
                 default: $clean[ $key ] = sanitize_text_field( $value );
             }
         }
+    }
+    if ( array_key_exists( 'blog_page_id', $input ) && current_user_can( 'manage_options' ) ) {
+        update_option( 'page_for_posts', (int) $clean['blog_page_id'] );
     }
     return array_intersect_key( $clean, undo_setting_defaults() );
 }
@@ -304,12 +320,12 @@ function undo_settings_assets( $hook ) {
     ) );
 }
 add_action( 'admin_enqueue_scripts', 'undo_settings_assets' );
-function undo_settings_field( $key, $field ) {
+function undo_settings_field( $key, $field, $control_only = false ) {
     $value = undo_setting( $key );
     if ( 'sidebar_position' === $key ) { $value = undo_sidebar_position(); }
     if ( 'content_width' === $key ) { $value = undo_sanitize_site_dimension( $value ); }
     $depends = isset( $field[4] ) && is_string( $field[4] ) ? ' data-undo-depends="' . esc_attr( $field[4] ) . '"' : '';
-    echo '<tr' . $depends . '><th scope="row"><label for="undo-' . esc_attr( $key ) . '">' . esc_html( $field[0] ) . '</label></th><td>';
+    if ( ! $control_only ) { echo '<tr' . $depends . '><th scope="row"><label for="undo-' . esc_attr( $key ) . '">' . esc_html( $field[0] ) . '</label></th><td>'; }
     $name = 'undo_theme_settings[' . esc_attr( $key ) . ']';
     if ( 'media' === $field[1] ) {
         $image = $value ? wp_get_attachment_image( (int) $value, 'medium', false, array( 'style' => 'max-width:220px;max-height:80px;width:auto;height:auto;' ) ) : '';
@@ -319,7 +335,7 @@ function undo_settings_field( $key, $field ) {
     } elseif ( 'font_choice' === $field[1] ) {
         echo '<select class="undo-font-choice" data-undo-font-choice id="undo-' . esc_attr( $key ) . '" name="' . $name . '">';
         $choices = undo_font_choices();
-        echo '<option value="default"' . selected( $value, 'default', false ) . '>' . esc_html( $choices['default'] ) . '</option><optgroup label="' . esc_attr__( 'Google Fonts', 'undo-theme' ) . '">';
+        echo '<option value="default"' . selected( $value, 'default', false ) . '>' . esc_html( undo_original_font_label( $key ) ) . '</option><optgroup label="' . esc_attr__( 'Google Fonts', 'undo-theme' ) . '">';
         foreach ( array( 'dm-sans', 'space-grotesk', 'vazirmatn', 'instrument-serif', 'inter', 'manrope', 'playfair-display', 'noto-sans-arabic' ) as $option ) { echo '<option value="' . esc_attr( $option ) . '"' . selected( $value, $option, false ) . '>' . esc_html( $choices[ $option ] ) . '</option>'; }
         echo '</optgroup><optgroup label="' . esc_attr__( 'Local and system fonts', 'undo-theme' ) . '">';
         foreach ( array( 'system-sans', 'georgia' ) as $option ) { echo '<option value="' . esc_attr( $option ) . '"' . selected( $value, $option, false ) . '>' . esc_html( $choices[ $option ] ) . '</option>'; }
@@ -327,6 +343,14 @@ function undo_settings_field( $key, $field ) {
         foreach ( undo_custom_fonts() as $font ) { if ( isset( $font['id'], $font['name'] ) ) { echo '<option data-undo-custom-font value="' . esc_attr( $font['id'] ) . '"' . selected( $value, $font['id'], false ) . '>' . esc_html( $font['name'] ) . '</option>'; } }
         echo '</optgroup>';
         echo '</select>';
+    } elseif ( 'page_choice' === $field[1] ) {
+        echo '<select id="undo-' . esc_attr( $key ) . '" name="' . $name . '"><option value="0"' . selected( $value, '0', false ) . '>' . esc_html__( 'No dedicated posts page', 'undo-theme' ) . '</option>';
+        $front_id = absint( get_option( 'page_on_front', 0 ) );
+        foreach ( get_pages( array( 'post_status' => 'publish', 'sort_column' => 'post_title' ) ) as $page ) {
+            if ( (int) $page->ID === $front_id ) { continue; }
+            echo '<option value="' . esc_attr( $page->ID ) . '"' . selected( $value, (string) $page->ID, false ) . '>' . esc_html( get_the_title( $page ) ) . '</option>';
+        }
+        echo '</select><p class="description">' . esc_html__( 'Uses the WordPress posts page. Select a static homepage in Settings → Reading to show posts on this page.', 'undo-theme' ) . '</p>';
     } elseif ( 'textarea' === $field[1] ) {
         echo '<textarea id="undo-' . esc_attr( $key ) . '" name="' . $name . '" rows="3" class="large-text" dir="auto">' . esc_textarea( $value ) . '</textarea>';
     } elseif ( 'select' === $field[1] ) {
@@ -347,7 +371,7 @@ function undo_settings_field( $key, $field ) {
         $extra = 'number' === $field[1] ? ' min="' . esc_attr( $field[3][0] ) . '" max="' . esc_attr( $field[3][1] ) . '"' : '';
         echo '<input type="' . esc_attr( $field[1] ) . '" id="undo-' . esc_attr( $key ) . '" name="' . $name . '" value="' . esc_attr( $value ) . '" class="regular-text" dir="auto"' . $extra . '>';
     }
-    echo '</td></tr>';
+    if ( ! $control_only ) { echo '</td></tr>'; }
 }
 function undo_render_font_row( $index, $font ) {
     $id = isset( $font['id'] ) ? $font['id'] : '';
@@ -375,10 +399,23 @@ function undo_render_settings_group( $title, $fields ) {
     foreach ( $fields as $key => $field ) { undo_settings_field( $key, $field ); }
     echo '</table></section>';
 }
-function undo_render_typography_group( $title, $fields, $open = false ) {
-    echo '<details class="undo-settings__type-group"' . ( $open ? ' open' : '' ) . '><summary>' . esc_html( $title ) . '</summary><table class="form-table" role="presentation">';
-    foreach ( $fields as $key => $field ) { undo_settings_field( $key, $field ); }
-    echo '</table></details>';
+function undo_render_typography_row( $role, $title, $fields ) {
+    echo '<tr><th scope="row">' . esc_html( $title ) . '</th>';
+    foreach ( array( '', '_size', '_weight', '_style', '_line_height', '_word_spacing', '_color' ) as $suffix ) {
+        $key = 'font_' . $role . $suffix;
+        $field = $fields[ $key ];
+        echo '<td><label class="screen-reader-text" for="undo-' . esc_attr( $key ) . '">' . esc_html( $title . ': ' . $field[0] ) . '</label>';
+        if ( '_word_spacing' === $suffix ) { echo '<div class="undo-typography-spacing"><span>' . esc_html__( 'Word', 'undo-theme' ) . '</span>'; }
+        undo_settings_field( $key, $field, true );
+        if ( '_word_spacing' === $suffix ) {
+            $letter_key = 'font_' . $role . '_letter_spacing';
+            echo '<label class="screen-reader-text" for="undo-' . esc_attr( $letter_key ) . '">' . esc_html( $title . ': ' . $fields[ $letter_key ][0] ) . '</label><span>' . esc_html__( 'Letter', 'undo-theme' ) . '</span>';
+            undo_settings_field( $letter_key, $fields[ $letter_key ], true );
+            echo '</div>';
+        }
+        echo '</td>';
+    }
+    echo '</tr>';
 }
 function undo_render_settings_page() {
     if ( ! current_user_can( 'manage_options' ) ) { return; }
@@ -413,11 +450,14 @@ function undo_render_settings_page() {
         } elseif ( 'typography' === $slug ) {
             undo_render_settings_group( __( 'Font sources', 'undo-theme' ), array_slice( $section[2], 0, 2, true ) );
             echo '<p class="undo-settings__hint">' . esc_html__( 'Google families use system fallbacks when Google Fonts loading is off. Uploaded WOFF2 families remain available.', 'undo-theme' ) . '</p>';
+            echo '<p class="undo-settings__hint">' . esc_html__( 'Original font choices follow the site language: DM Sans body, Space Grotesk headings, and Instrument Serif accents in English; Vazirmatn in Persian.', 'undo-theme' ) . '</p>';
+            echo '<div class="undo-typography-scroll"><table class="undo-typography-table"><thead><tr><th scope="col">' . esc_html__( 'Text role', 'undo-theme' ) . '</th><th scope="col">' . esc_html__( 'Font family', 'undo-theme' ) . '</th><th scope="col">' . esc_html__( 'Size (px)', 'undo-theme' ) . '</th><th scope="col">' . esc_html__( 'Weight', 'undo-theme' ) . '</th><th scope="col">' . esc_html__( 'Style', 'undo-theme' ) . '</th><th scope="col">' . esc_html__( 'Line height', 'undo-theme' ) . '</th><th scope="col">' . esc_html__( 'Spacing (px)', 'undo-theme' ) . '</th><th scope="col">' . esc_html__( 'Color', 'undo-theme' ) . '</th></tr></thead><tbody>';
             foreach ( undo_typography_roles() as $role => $label ) {
                 $fields = array();
                 foreach ( $section[2] as $key => $field ) { if ( $key === 'font_' . $role || 0 === strpos( $key, 'font_' . $role . '_' ) ) { $fields[ $key ] = $field; } }
-                undo_render_typography_group( $label, $fields, 'body' === $role );
+                undo_render_typography_row( $role, $label, $fields );
             }
+            echo '</tbody></table></div>';
         } else {
             echo '<table class="form-table" role="presentation">';
             foreach ( $section[2] as $key => $field ) { undo_settings_field( $key, $field ); }

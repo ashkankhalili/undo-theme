@@ -4,6 +4,23 @@ import path from 'node:path';
 const root = path.resolve('undo-theme');
 const domain = 'undo-theme';
 const fa = {
+  'Color':'رنگ',
+  'Letter':'حرف',
+  'Line height':'ارتفاع خط',
+  'No dedicated posts page':'بدون صفحهٔ ویژهٔ نوشته‌ها',
+  'Original font choices follow the site language: DM Sans body, Space Grotesk headings, and Instrument Serif accents in English; Vazirmatn in Persian.':'قلم‌های اصلی با زبان سایت هماهنگ می‌شوند: متن DM Sans، عنوان Space Grotesk و تأکید Instrument Serif در انگلیسی؛ و Vazirmatn در فارسی.',
+  'Original: DM Sans / Vazirmatn':'اصلی: DM Sans / Vazirmatn',
+  'Original: Instrument Serif / Vazirmatn':'اصلی: Instrument Serif / Vazirmatn',
+  'Original: Space Grotesk / Vazirmatn':'اصلی: Space Grotesk / Vazirmatn',
+  'Posts page':'صفحهٔ نوشته‌ها',
+  'Size (px)':'اندازه (پیکسل)',
+  'Spacing (px)':'فاصله‌گذاری (پیکسل)',
+  'Style':'سبک',
+  'Text role':'نوع متن',
+  'Uses the WordPress posts page. Select a static homepage in Settings → Reading to show posts on this page.':'از صفحهٔ نوشته‌های وردپرس استفاده می‌کند. برای نمایش نوشته‌ها در این صفحه، در تنظیمات ← خواندن یک صفحهٔ اصلی ایستا انتخاب کنید.',
+  'Weight':'ضخامت',
+  'Word':'واژه',
+  'Word spacing in pixels (0 = theme default)':'فاصلهٔ واژه‌ها بر حسب پیکسل (۰ = پیش‌فرض پوسته)',
   '% comments':'% دیدگاه',
   '%s%% of the earlier layout visible':'%s٪ از طرح قبلی دیده می‌شود',
   'A better site or product should help people understand, decide, and act. The design follows that job.':'یک وب‌سایت یا محصول بهتر باید به مردم کمک کند بفهمند، تصمیم بگیرند و اقدام کنند. طراحی در خدمت همین هدف است.',

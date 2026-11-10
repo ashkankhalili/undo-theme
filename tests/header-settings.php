@@ -5,6 +5,11 @@ function add_action( $hook, $callback, $priority = 10, $accepted_args = 1 ) {}
 function add_filter( $hook, $callback, $priority = 10, $accepted_args = 1 ) {}
 function __( $message, $domain = 'default' ) { return $message; }
 function get_option( $key, $default = false ) { return $GLOBALS['options'][ $key ] ?? $default; }
+function update_option( $key, $value ) { $GLOBALS['options'][ $key ] = $value; return true; }
+function current_user_can( $capability ) { return 'manage_options' === $capability; }
+function absint( $value ) { return abs( (int) $value ); }
+function get_post_type( $id ) { return isset( $GLOBALS['test_pages'][ $id ] ) ? 'page' : false; }
+function get_post_status( $id ) { return $GLOBALS['test_pages'][ $id ] ?? false; }
 function get_locale() { return $GLOBALS['site_locale'] ?? 'en_US'; }
 function is_rtl() { return ! empty( $GLOBALS['test_rtl'] ); }
 function wp_unslash( $value ) { return stripslashes( $value ); }
@@ -29,13 +34,25 @@ require dirname( __DIR__ ) . '/undo-theme/functions.php';
 $defaults = undo_setting_defaults();
 expect( '1440px' === $defaults['content_width'] && '80%' === undo_sanitize_site_dimension( '80%' ) && '1440px' === undo_sanitize_site_dimension( '1440' ), 'Site width accepts percent and migrates saved pixel numbers' );
 expect( '1440px' === undo_sanitize_site_dimension( '999vw' ) && '1440px' === undo_sanitize_site_dimension( '0%' ), 'Invalid site widths fall back safely' );
-expect( '1' === $defaults['google_fonts_enabled'] && 'editorial' === $defaults['blog_style'], 'Existing Google font appearance and editorial blog layout remain enabled by default' );
+expect( '1' === $defaults['google_fonts_enabled'] && 'editorial' === $defaults['blog_style'] && 'default' === $defaults['font_body'], 'Existing Google font appearance, original body font and editorial blog layout remain enabled by default' );
+expect( 'Original: DM Sans / Vazirmatn' === undo_original_font_label( 'font_body' ) && 'Original: Space Grotesk / Vazirmatn' === undo_original_font_label( 'font_page_title' ) && 'Original: Instrument Serif / Vazirmatn' === undo_original_font_label( 'font_accent' ), 'Original font labels must match the pre-0.6.0 design and language-aware defaults' );
 $type = undo_sanitize_settings( array( 'font_body_size' => '18', 'font_body_color' => '#123456', 'font_headings_weight' => '700', 'font_navigation_style' => 'italic', 'font_footer_line_height' => '1.6', 'font_footer_letter_spacing' => '-1.5', 'google_fonts_enabled' => '0', 'content_width' => '80%', 'blog_style' => 'gallery', 'blog_columns' => '3' ) );
 expect( '18' === $type['font_body_size'] && '#123456' === $type['font_body_color'] && '700' === $type['font_headings_weight'] && 'italic' === $type['font_navigation_style'] && '1.6' === $type['font_footer_line_height'] && '-1.5' === $type['font_footer_letter_spacing'], 'Typography controls validate and save together' );
 expect( '0' === $type['google_fonts_enabled'] && '80%' === $type['content_width'] && 'gallery' === $type['blog_style'] && '3' === $type['blog_columns'], 'Google fonts, width and blog options save together' );
 $GLOBALS['options']['undo_theme_settings'] = $type;
 $type_css = undo_theme_typography_css();
 expect( false !== strpos( $type_css, 'font-size:18px' ) && false !== strpos( $type_css, 'color:#123456' ) && false !== strpos( $type_css, 'font-style:italic' ), 'Saved typography choices must reach frontend CSS' );
+$word_settings = undo_sanitize_settings( array( 'font_body_word_spacing' => '2.25', 'font_body_letter_spacing' => '-0.5' ) );
+$GLOBALS['options']['undo_theme_settings'] = $word_settings;
+expect( false !== strpos( undo_theme_typography_css(), 'word-spacing:2.25px;' ) && false !== strpos( undo_theme_typography_css(), 'letter-spacing:-0.5px;' ), 'Word spacing must render while existing letter spacing remains supported' );
+$GLOBALS['test_pages'] = array( 21 => 'publish', 22 => 'draft', 23 => 'publish' );
+$GLOBALS['options']['page_on_front'] = 23;
+$posts_settings = undo_sanitize_settings( array( 'blog_page_id' => '21' ) );
+expect( '21' === $posts_settings['blog_page_id'] && 21 === get_option( 'page_for_posts' ) && '21' === undo_setting( 'blog_page_id' ), 'Published posts page selection must sync to WordPress and read back from it' );
+$posts_settings = undo_sanitize_settings( array( 'blog_page_id' => '22' ) );
+expect( '0' === $posts_settings['blog_page_id'] && 0 === get_option( 'page_for_posts' ), 'Draft pages must not become the posts page' );
+$posts_settings = undo_sanitize_settings( array( 'blog_page_id' => '23' ) );
+expect( '0' === $posts_settings['blog_page_id'] && 0 === get_option( 'page_for_posts' ), 'Static homepage must not also become the posts page' );
 $GLOBALS['options'] = array();
 $type = undo_sanitize_settings( array( 'font_body_size' => '999', 'font_body_color' => 'red', 'font_headings_weight' => '999', 'font_footer_line_height' => '7' ) );
 expect( '160' === $type['font_body_size'] && '' === $type['font_body_color'] && 'default' === $type['font_headings_weight'] && '3' === $type['font_footer_line_height'], 'Invalid typography values are clamped or rejected' );

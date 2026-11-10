@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.6.0' );
+define( 'UNDO_THEME_VERSION', '0.6.1' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/page-layout.php';
 require_once get_template_directory() . '/inc/github-updater.php';
@@ -226,6 +226,8 @@ function undo_theme_typography_css() {
         if ( $line_height >= 0.8 && $line_height <= 3 ) { $declarations .= 'line-height:' . $line_height . ';'; }
         $letter_spacing = (float) undo_setting( $prefix . 'letter_spacing' );
         if ( $letter_spacing >= -5 && $letter_spacing <= 10 && 0.0 !== $letter_spacing ) { $declarations .= 'letter-spacing:' . $letter_spacing . 'px;'; }
+        $word_spacing = (float) undo_setting( $prefix . 'word_spacing' );
+        if ( $word_spacing >= -5 && $word_spacing <= 20 && 0.0 !== $word_spacing ) { $declarations .= 'word-spacing:' . $word_spacing . 'px;'; }
         $color = sanitize_hex_color( undo_setting( $prefix . 'color' ) );
         if ( $color ) { $declarations .= 'color:' . $color . ';'; }
         if ( $declarations ) { $css .= $selector . '{' . $declarations . '}'; }

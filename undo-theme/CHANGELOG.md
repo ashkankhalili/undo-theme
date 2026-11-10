@@ -4,6 +4,24 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.6.1] - 2026-11-10
+
+### Blog and typography corrections
+
+- Blog Settings now selects a published WordPress page for the posts index. The choice updates WordPress's `page_for_posts` option; a static homepage must be selected in Settings → Reading for that page to serve the posts index. The current WordPress choice is shown even if it was set elsewhere.
+- Restored clear labels for the original language-aware font choices from the 0.5.0 design: DM Sans for English body text, Space Grotesk for English headings, Instrument Serif for English accents, and Vazirmatn for Persian. Saved `default` choices retain their original behavior and are not overwritten.
+- Replaced one control per line with a horizontal typography table: one row per text role, with family, size, weight, style, line height, spacing, and color together. Word and letter spacing share the spacing cell so existing letter-spacing settings remain editable and intact.
+- Added word-spacing output for each typography role. Zero continues to inherit the theme style. The table scrolls horizontally where the admin viewport is narrow.
+
+### فارسی
+
+- انتخاب صفحهٔ نوشته‌ها به تنظیمات وبلاگ اضافه شد و با گزینهٔ اصلی وردپرس هماهنگ است.
+- نام قلم‌های اصلی انگلیسی و فارسی در انتخابگرها مشخص شد و تنظیمات هر نوع متن در یک ردیف قرار گرفت. فاصلهٔ واژه‌ها اضافه شد و فاصلهٔ حروف قبلی حفظ شد.
+
+### Validation
+
+- Rebuild translations and package, run PHP and package CI, then verify the exact release ZIP and dashboard update. On staging, check Persian and English font rendering, one-row controls, saved typography values, and posts-page assignment with a static homepage.
+
 ## [0.6.0] - 2026-11-10
 
 ### Layout, blog, and typography
