@@ -1,6 +1,6 @@
 # UNDO premium WordPress theme blueprint
 
-Status: planning document for the 0.4.0 pre-release. No item marked "planned" is implemented merely because it appears here. The initial visitor language follows WordPress Site Language; Persian (fa_IR) and English (en_US) are supported.
+Status: planning document for the 0.5.0 pre-release. No item marked "planned" is implemented merely because it appears here. The initial visitor language follows WordPress Site Language; Persian (fa_IR) and English (en_US) are supported.
 
 ## 1. Product definition and boundaries
 
@@ -53,7 +53,7 @@ Keep **one top-level UNDO Theme Settings page** with tabs, consistent save behav
 
 | Tab | Customer controls | Dependencies / behavior |
 | --- | --- | --- |
-| General & layout | Default language, container and reading widths, boxed/wide layout, colors, typography preset, button style | Widths bounded; design tokens update templates and editor where supported |
+| Website layout, Colors, Typography | Site and page widths, boxed/wide layout; separate shared/component colors; built-in and uploaded font choices | WordPress Site Language sets the initial language; widths are bounded, colors are validated, and uploaded WOFF2 attachments are checked before use |
 | Header | Logo, mobile logo if needed, height, sticky mode, menu, search, language switcher, action label/URL, mobile drawer | Hide dependent fields when their feature is off; Elementor header template replaces built-in header |
 | Footer | Brand, menu columns, contact, legal/copyright text, social links, background style | Contact/social fields appear only when enabled; Elementor footer template wins |
 | Blog/archive | Grid/list, columns, card image ratio, metadata, excerpt length, pagination | Responsive column limits; consistent search and taxonomy states |
@@ -142,11 +142,11 @@ Build and review each stage independently; do not begin the next visual componen
 
 ## 10. Current status and immediate next work
 
-Implemented by 0.4.0: classic theme skeleton, theme.json, reading, wide, boxed, full and custom-width page templates, a top-level settings page with vertical navigation, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, configurable built-in header variants, the single-post reading template with optional related posts, page breadcrumbs/title/width controls, and a widget sidebar with Lined/Panel styles and optional sticky behavior. The four reusable page templates have independent width and spacing controls; Custom Width is set per page. The initial language follows WordPress Site Language. The dark-header logo fallback and static-header homepage section alignment were corrected after staging QA. These are a foundation, not a finished premium product.
+Implemented by 0.5.0: classic theme skeleton, theme.json, reading, wide, boxed, full and custom-width page templates, a top-level settings page with full-width vertical navigation and a single save action, separate Colors and Typography sections with WOFF2 custom font assignments, Persian/English catalogs, RTL CSS, Elementor Theme Builder location fallback, a packaged ZIP, a GitHub Releases updater, configurable built-in header variants, the single-post reading template with optional related posts, page breadcrumbs/title/width controls, and a widget sidebar with Lined/Panel styles and optional sticky behavior. The four reusable page templates have independent width and spacing controls; Custom Width is set per page. The initial language follows WordPress Site Language. The dark-header logo fallback and static-header homepage section alignment were corrected after staging QA. These are a foundation, not a finished premium product.
 
 Outstanding: live WordPress/Elementor and dashboard-update validation; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks.
 
-**Current execution milestone:** the owner confirmed the 0.3.2 width correction. Install 0.4.0 from WordPress Updates; test the page settings introduced in 0.3.3 and the sidebar styles, spacing, start/end placement, sticky behavior, and responsive flow introduced in 0.4.0. Check WordPress Site Language and explicit overrides, Persian and English content, and Elementor's own Full Width and Canvas modes with both plain and Elementor-built content before marking Stages 4 and 5 complete. Continue the pending single-post and header option checks.
+**Current execution milestone:** the owner confirmed the 0.3.2 width correction. Install 0.5.0 from WordPress Updates; test the page settings introduced in 0.3.3, sidebar controls from 0.4.0, and the full-width settings workspace, Colors, Typography, and WOFF2 uploads from 0.5.0. Check WordPress Site Language and explicit overrides, Persian and English content, and Elementor's own Full Width and Canvas modes with both plain and Elementor-built content before marking Stages 4 and 5 complete. Continue the pending single-post and header option checks.
 
 ## Primary references
 

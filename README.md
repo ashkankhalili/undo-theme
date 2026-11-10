@@ -1,17 +1,18 @@
 # UNDO Web Developments theme
 
-Version **0.4.0** is an installable classic WordPress theme for the UNDO agency design. The initial language follows **Settings → General → Site Language** in WordPress; Persian and English remain available through the header switcher. It includes dedicated RTL styles, editorial post and page templates, configurable sidebars, a standalone **UNDO Theme Settings** dashboard, and Elementor page/Theme Builder integration.
+Version **0.5.0** is an installable classic WordPress theme for the UNDO agency design. The initial language follows **Settings → General → Site Language** in WordPress; Persian and English remain available through the header switcher. It includes dedicated RTL styles, editorial post and page templates, configurable sidebars, a standalone **UNDO Theme Settings** dashboard, and Elementor page/Theme Builder integration.
 
 ## Install
 
 1. In WordPress, open **Appearance → Themes → Add New → Upload Theme**.
-2. For a new site, upload `undo-theme-0.4.0.zip`, install, and activate. On an existing updater-enabled site, use **Dashboard → Updates** after backing up; do not upload another ZIP.
-3. Open **UNDO Theme Settings** in the main admin sidebar. Its vertical navigation covers website layout, header, single posts, pages, sidebar, blog, footer, and homepage. Each section saves independently without clearing other sections.
+2. For a new site, upload `undo-theme-0.5.0.zip`, install, and activate. On an existing updater-enabled site, use **Dashboard → Updates** after backing up; do not upload another ZIP.
+3. Open **UNDO Theme Settings** in the main admin sidebar. Its full-width workspace covers website layout, colors, typography, header, single posts, pages, sidebar, blog, footer, and homepage. Switching sections keeps unsaved values in place; **Save all changes** stores all sections at once.
 4. Set header logos, light/dark style, centered navigation, search, and mobile action visibility in **UNDO Theme Settings → Header**. Assign menus in **Appearance → Menus**.
 5. Configure metadata, featured media, tags, comments, navigation, sidebar, and category-matched related posts in **UNDO Theme Settings → Single post**. Related posts are off by default.
 6. Configure page breadcrumbs, title style, featured image, and default layout in **UNDO Theme Settings → Pages**. Reading, Wide, Boxed, and Full Width each have width, minimum side margin, top/bottom margin, and side/top/bottom padding controls; their starting widths match the earlier nominal template widths. In the WordPress editor or Elementor Page Settings, choose an UNDO template to override the default. UNDO Custom Width has no global width: choose that template, then enter `960px` or `80%` in its panel below the WordPress page editor. A blank value uses `1200px`.
-7. Configure sidebar position, width, Lined or Panel style, widget spacing, and optional sticky behavior in **UNDO Theme Settings → Sidebar**. The sidebar appears only where enabled and widgets are assigned. Sticky mode is skipped when the widget area is taller than the viewport; on mobile it follows the main content.
-8. If using Elementor, install it separately. Edit a page with Elementor and assign it as the static homepage to replace the default landing content. Elementor Pro Theme Builder can replace header, footer, single, and archive locations.
+7. In **Colors**, set the shared palette and built-in header, content, and footer colors. In **Typography**, upload WOFF2 files to the Media Library and choose a family for each text role. Elementor widgets with explicit styling keep their own values.
+8. Configure sidebar position, width, Lined or Panel style, widget spacing, and optional sticky behavior in **UNDO Theme Settings → Sidebar**. The sidebar appears only where enabled and widgets are assigned. Sticky mode is skipped when the widget area is taller than the viewport; on mobile it follows the main content.
+9. If using Elementor, install it separately. Edit a page with Elementor and assign it as the static homepage to replace the default landing content. Elementor Pro Theme Builder can replace header, footer, single, and archive locations.
 
 The initial language comes from WordPress Site Language. The visitor switcher uses `?undo_lang=en` and `?undo_lang=fa` and remembers an explicit choice in a cookie. The theme's built-in strings and default landing page are translated. Customer-created posts, pages, menus, and Elementor content require a multilingual content plugin or separate translated pages. For public multilingual SEO, use translated URLs and hreflang from that plugin; the theme switcher alone is not an SEO translation system. Configure page cache to vary by `undo_lang` and its cookie, or exclude language-specific responses from shared cache.
 
@@ -30,11 +31,11 @@ Starting with installed version 0.2.5, **View version details** opens a WordPres
 - WordPress 6.2 or later; PHP 7.4 or later.
 - Elementor is optional; Elementor Pro is required for Theme Builder location replacement.
 - This is a **pre-release theme package**. PHP syntax and live WordPress activation must be checked on a WordPress staging install before customer sale.
-- Fonts currently load from Google Fonts. For WordPress.org directory submission or privacy-sensitive customer deployments, self-host licensed font files and run Theme Check.
+- Built-in font choices load from Google Fonts. Uploaded WOFF2 fonts are served from WordPress Media Library; check font licenses before redistribution. For WordPress.org directory submission or privacy-sensitive customer deployments, self-host licensed fonts and run Theme Check.
 - GitHub Releases update checks are included. Automatic background installation and license-gated downloads are not enabled.
 
 New visitors see the language selected in WordPress Site Language. See the [premium theme blueprint](docs/PREMIUM_THEME_BLUEPRINT.md), [product decisions](docs/PRODUCT_DECISIONS.md), [development workflow](docs/WORKFLOW.md), [implementation roadmap](docs/ROADMAP.md), and [changelog](CHANGELOG.md).
 
 ## First online milestone
 
-Source repository: `https://github.com/ashkankhalili/undo-theme`. The owner-designated staging site is `https://ashkankhalili.ir`. The owner confirmed the 0.3.2 page layout correction. Follow the [staging milestone](docs/STAGING_MILESTONE.md): update to 0.4.0 through WordPress, then check the page settings from 0.3.3 and the new sidebar controls in posts, pages, archives, and RTL/LTR mobile layouts. A GitHub push or passing CI does not by itself validate live WordPress behavior.
+Source repository: `https://github.com/ashkankhalili/undo-theme`. The owner-designated staging site is `https://ashkankhalili.ir`. Follow the [staging milestone](docs/STAGING_MILESTONE.md): update to 0.5.0 through WordPress, then check settings navigation and persistence, custom font uploads, colors, typography, and the prior page/sidebar controls. A GitHub push or passing CI does not by itself validate live WordPress behavior.

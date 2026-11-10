@@ -8,6 +8,8 @@ function get_option( $key, $default = false ) { return $GLOBALS['options'][ $key
 function get_locale() { return $GLOBALS['site_locale'] ?? 'en_US'; }
 function wp_unslash( $value ) { return stripslashes( $value ); }
 function wp_attachment_is_image( $id ) { return 42 === $id; }
+function get_post_mime_type( $id ) { return $GLOBALS['font_mimes'][ $id ] ?? ''; }
+function get_attached_file( $id ) { return $GLOBALS['font_files'][ $id ] ?? ''; }
 function sanitize_text_field( $value ) { return strip_tags( $value ); }
 function esc_url( $value ) { return htmlspecialchars( $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8' ); }
 function esc_html( $value ) { return htmlspecialchars( $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8' ); }
@@ -22,6 +24,18 @@ function expect( $condition, $message ) { if ( ! $condition ) { throw new Runtim
 require dirname( __DIR__ ) . '/undo-theme/functions.php';
 
 $defaults = undo_setting_defaults();
+expect( ! isset( undo_settings_sections()['layout'][2]['accent_color'] ) && isset( undo_settings_sections()['colors'][2]['accent_color'] ), 'Color controls must live in the Colors section' );
+expect( isset( undo_settings_sections()['typography'][2]['custom_fonts'] ), 'Typography must provide custom font management' );
+$GLOBALS['font_mimes'] = array( 101 => 'font/woff2', 102 => 'application/font-woff2', 103 => 'image/png' );
+$GLOBALS['font_files'] = array( 101 => '/uploads/regular.woff2', 102 => '/uploads/bold.woff2', 103 => '/uploads/not-font.png' );
+$font_input = array( array( 'id' => 'custom-1', 'name' => 'Studio Sans', 'regular_id' => '101', 'bold_id' => '102' ), array( 'id' => 'custom-2', 'name' => 'Bad File', 'regular_id' => '103' ) );
+$settings = undo_sanitize_settings( array( 'custom_fonts_present' => '1', 'custom_fonts' => $font_input, 'font_body' => 'custom-1', 'font_navigation' => 'custom-2', 'accent_color' => '#123456', 'site_layout' => 'boxed' ) );
+expect( 1 === count( $settings['custom_fonts'] ) && 'Studio Sans' === $settings['custom_fonts'][0]['name'] && 102 === $settings['custom_fonts'][0]['bold_id'], 'Only valid WOFF2 font attachments must be saved' );
+expect( 'custom-1' === $settings['font_body'] && 'default' === $settings['font_navigation'] && '#123456' === $settings['accent_color'] && 'boxed' === $settings['site_layout'], 'All sections must save together and invalid font choices must fall back' );
+$GLOBALS['options']['undo_theme_settings'] = $settings;
+$settings = undo_sanitize_settings( array( 'custom_fonts_present' => '1', 'font_body' => 'custom-1' ) );
+expect( array() === $settings['custom_fonts'] && 'default' === $settings['font_body'], 'Removing the last custom font must clear its typography assignment' );
+$GLOBALS['options'] = array();
 expect( 'light' === $defaults['header_style'] && 'standard' === $defaults['header_layout'] && '0' === $defaults['header_show_search'], 'New header options must keep the existing appearance by default' );
 $GLOBALS['options']['undo_theme_settings'] = array( 'footer_show_brand' => '0' );
 $settings = undo_sanitize_settings( array( 'header_style' => 'invalid', 'header_layout' => 'centered', 'header_show_search' => '1', 'header_logo_light_id' => '42' ) );

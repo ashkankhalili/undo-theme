@@ -4,6 +4,25 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-11-10
+
+### Settings workspace
+
+- Expanded the standalone UNDO Theme Settings screen to the available WordPress admin width. The section sidebar and content panel now join into one workspace, with a full-row selected state and RTL-aware edges.
+- Section changes now happen in place without a page reload. Unsaved edits remain in their fields while navigating; one **Save all changes** action submits every section together. The current section remains selected after saving.
+- Moved the existing accent color out of Website Layout and into **Colors**, preserving its stored value. Added shared surface/text/border colors and built-in header, content, and footer color controls.
+- Added **Typography** with built-in font choices and Media Library WOFF2 uploads (regular plus optional bold) for up to 12 custom families. Font assignments cover body, headings, accent, navigation, buttons, page/post titles, widget titles, and footer. Invalid attachments or missing families are rejected on save. Uploaded fonts remain in WordPress Media Library during theme updates. Elementor widgets with explicit typography or color choices keep those choices.
+
+### فارسی
+
+- صفحه تنظیمات پوسته تمام عرض مدیریتی را به کار می‌گیرد. نوار بخش‌ها و محتوای تنظیمات به هم متصل‌اند و بخش فعال در تمام عرض ردیف مشخص می‌شود.
+- جابه‌جایی بین بخش‌ها بدون بارگذاری دوباره صفحه انجام می‌شود و تغییرات ذخیره‌نشده تا فشردن «ذخیره همه تغییرات» باقی می‌مانند.
+- رنگ‌ها به بخش مستقل منتقل شدند و بخش تایپوگرافی با امکان بارگذاری قلم WOFF2 و تخصیص آن به نقش‌های متنی اضافه شد.
+
+### Validation
+
+- Local JavaScript syntax and translation generation checked. CI must run PHP 7.4/8.3 checks and package validation. The staging site still needs a dashboard update to 0.5.0 and live verification of section persistence, WOFF2 upload, color and font output, RTL, and Elementor inheritance.
+
 ## [0.4.0] - 2026-11-09
 
 ### Sidebar milestone

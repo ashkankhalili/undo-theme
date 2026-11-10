@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.4.0' );
+define( 'UNDO_THEME_VERSION', '0.5.0' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/page-layout.php';
 require_once get_template_directory() . '/inc/github-updater.php';
@@ -83,11 +83,51 @@ function undo_content( $key, $fallback ) {
 }
 function undo_language_url( $language ) { return add_query_arg( 'undo_lang', $language ); }
 
+function undo_font_css_family( $choice, $custom_fonts ) {
+    $built_in = array(
+        'dm-sans' => '"DM Sans",system-ui,sans-serif',
+        'space-grotesk' => '"Space Grotesk",system-ui,sans-serif',
+        'vazirmatn' => '"Vazirmatn",system-ui,sans-serif',
+        'instrument-serif' => '"Instrument Serif",Georgia,serif',
+        'system-sans' => 'system-ui,sans-serif',
+        'georgia' => 'Georgia,serif',
+    );
+    if ( isset( $built_in[ $choice ] ) ) { return $built_in[ $choice ]; }
+    foreach ( $custom_fonts as $font ) {
+        if ( isset( $font['id'], $font['regular_id'] ) && $font['id'] === $choice && undo_font_attachment_is_valid( (int) $font['regular_id'] ) ) { return '"UNDO Custom ' . $choice . '",system-ui,sans-serif'; }
+    }
+    return '';
+}
+
+function undo_theme_custom_font_css( $custom_fonts ) {
+    $css = '';
+    foreach ( $custom_fonts as $font ) {
+        if ( ! isset( $font['id'] ) || ! preg_match( '/^custom-[1-9][0-9]{0,2}$/', $font['id'] ) ) { continue; }
+        foreach ( array( 'regular_id' => 400, 'bold_id' => 700 ) as $key => $weight ) {
+            $attachment_id = isset( $font[ $key ] ) ? (int) $font[ $key ] : 0;
+            if ( ! undo_font_attachment_is_valid( $attachment_id ) ) { continue; }
+            $url = wp_get_attachment_url( $attachment_id );
+            if ( ! $url ) { continue; }
+            $css .= '@font-face{font-family:"UNDO Custom ' . $font['id'] . '";src:url(' . wp_json_encode( esc_url_raw( $url ) ) . ') format("woff2");font-weight:' . $weight . ';font-style:normal;font-display:swap}';
+        }
+    }
+    return $css;
+}
+
 function undo_theme_assets() {
     $language = undo_language();
-    $fonts = 'fa' === $language
-        ? 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Vazirmatn:wght@400;500;600;700&display=swap'
-        : 'https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap';
+    $google_font_queries = array(
+        'dm-sans' => 'family=DM+Sans:wght@400;500;600;700',
+        'instrument-serif' => 'family=Instrument+Serif:ital@0;1',
+        'space-grotesk' => 'family=Space+Grotesk:wght@400;500;600;700',
+        'vazirmatn' => 'family=Vazirmatn:wght@400;500;600;700',
+    );
+    $needed_fonts = 'fa' === $language ? array( 'space-grotesk', 'vazirmatn' ) : array( 'dm-sans', 'instrument-serif', 'space-grotesk' );
+    foreach ( array( 'font_body', 'font_headings', 'font_accent', 'font_navigation', 'font_buttons', 'font_page_title', 'font_post_title', 'font_widget_title', 'font_footer' ) as $role ) {
+        $choice = undo_setting( $role );
+        if ( isset( $google_font_queries[ $choice ] ) && ! in_array( $choice, $needed_fonts, true ) ) { $needed_fonts[] = $choice; }
+    }
+    $fonts = 'https://fonts.googleapis.com/css2?' . implode( '&', array_map( function( $family ) use ( $google_font_queries ) { return $google_font_queries[ $family ]; }, $needed_fonts ) ) . '&display=swap';
     wp_enqueue_style( 'undo-fonts', esc_url_raw( $fonts ), array(), null );
     wp_enqueue_style( 'undo-site', get_theme_file_uri( '/assets/css/site.css' ), array( 'undo-fonts' ), UNDO_THEME_VERSION );
     wp_enqueue_style( 'undo-theme', get_stylesheet_uri(), array( 'undo-site' ), UNDO_THEME_VERSION );
@@ -117,11 +157,28 @@ function undo_theme_assets() {
             'A redesign' => __( 'A redesign', 'undo-theme' ),
         ),
     ) );
-    $accent = undo_setting( 'accent_color' );
     $width = max( 760, min( 1600, (int) undo_setting( 'content_width' ) ) );
     $sidebar_width = max( 220, min( 420, (int) undo_setting( 'sidebar_width' ) ) );
     $logo_width = max( 60, min( 360, (int) undo_setting( 'header_logo_width' ) ) );
-    wp_add_inline_style( 'undo-site', ':root{--red:' . esc_html( sanitize_hex_color( $accent ) ?: '#b83b30' ) . ';--undo-content-width:' . $width . 'px;--undo-sidebar-width:' . $sidebar_width . 'px;--undo-logo-width:' . $logo_width . 'px}' );
+    $colors = array(
+        '--red' => 'accent_color', '--paper' => 'paper_color', '--white' => 'surface_color', '--ink' => 'ink_color', '--muted' => 'muted_color', '--line' => 'line_color',
+        '--undo-header-light-bg' => 'header_light_bg_color', '--undo-header-light-text' => 'header_light_text_color', '--undo-header-dark-bg' => 'header_dark_bg_color', '--undo-header-dark-text' => 'header_dark_text_color',
+        '--undo-content-title' => 'content_title_color', '--undo-content-body' => 'content_body_color', '--undo-content-link' => 'content_link_color', '--undo-footer-bg' => 'footer_bg_color', '--undo-footer-text' => 'footer_text_color',
+    );
+    $root = ':root{--undo-content-width:' . $width . 'px;--undo-sidebar-width:' . $sidebar_width . 'px;--undo-logo-width:' . $logo_width . 'px;';
+    $defaults = undo_setting_defaults();
+    foreach ( $colors as $variable => $key ) { $root .= $variable . ':' . ( sanitize_hex_color( undo_setting( $key ) ) ?: $defaults[ $key ] ) . ';'; }
+    $root .= '}';
+    $custom_fonts = undo_custom_fonts();
+    $font_css = undo_theme_custom_font_css( $custom_fonts );
+    $font_roles = array( 'font_body' => '--body', 'font_headings' => '--display', 'font_accent' => '--serif', 'font_navigation' => '--undo-font-navigation', 'font_buttons' => '--undo-font-buttons', 'font_page_title' => '--undo-font-page-title', 'font_post_title' => '--undo-font-post-title', 'font_widget_title' => '--undo-font-widget-title', 'font_footer' => '--undo-font-footer' );
+    $chosen = '';
+    foreach ( $font_roles as $setting => $variable ) {
+        $family = undo_font_css_family( undo_setting( $setting ), $custom_fonts );
+        if ( '' !== $family ) { $chosen .= $variable . ':' . $family . ';'; }
+    }
+    if ( $chosen ) { $font_css .= ':root,html[lang^="fa"]{' . $chosen . '}'; }
+    wp_add_inline_style( 'undo-site', $font_css . $root );
 }
 add_action( 'wp_enqueue_scripts', 'undo_theme_assets' );
 

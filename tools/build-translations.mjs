@@ -263,6 +263,62 @@ Object.assign(fa, {
   "More posts": "نوشته‌های بیشتر",
   "Related posts": "نوشته‌های مرتبط",
 });
+Object.assign(fa, {
+  'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The full-width, single-save settings dashboard controls layout, colors, typography, uploaded WOFF2 fonts, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.': 'پوسته وردپرس دوزبانه برای آژانس‌ها و استودیوهای خلاق. زبان آغازین از زبان سایت وردپرس پیروی می‌کند و تغییر زبان فارسی و انگلیسی برای بازدیدکننده و استایل اختصاصی راست‌چین دارد. دارای صفحه اصلی واکنش‌گرا، نوشته‌های خوانا و قالب‌های صفحه با عرض و فاصله قابل تنظیم است. پیشخوان تنظیمات تمام‌عرض با ذخیره یک‌جای تنظیمات، چیدمان، رنگ‌ها، تایپوگرافی، قلم‌های WOFF2 بارگذاری‌شده، سربرگ، صفحه‌ها، نوشته‌ها، وبلاگ، نوارهای کناری و پانوشت را کنترل می‌کند. از قالب‌های المنتور و به‌روزرسانی از پیشخوان وردپرس پشتیبانی می‌کند.',
+  'Accent serif font': 'قلم سریف تأکیدی',
+  'Add font family': 'افزودن خانواده قلم',
+  'Assign fonts': 'تخصیص قلم‌ها',
+  'Body text font': 'قلم متن اصلی',
+  'Bold WOFF2 (optional)': 'قلم ضخیم WOFF2 (اختیاری)',
+  'Border color': 'رنگ حاشیه',
+  'Buttons font': 'قلم دکمه‌ها',
+  'Choose WOFF2': 'انتخاب WOFF2',
+  'Choose a WOFF2 font file': 'انتخاب فایل قلم WOFF2',
+  'Choose a valid WOFF2 file from the Media Library.': 'یک فایل WOFF2 معتبر از کتابخانه رسانه انتخاب کنید.',
+  'Clear': 'پاک کردن',
+  'Colors': 'رنگ‌ها',
+  'Content colors': 'رنگ‌های محتوا',
+  'Custom font families': 'خانواده‌های قلم سفارشی',
+  'Dark header background': 'پس‌زمینه سربرگ تیره',
+  'Dark header text': 'متن سربرگ تیره',
+  'Family name': 'نام خانواده قلم',
+  'Footer background': 'پس‌زمینه پانوشت',
+  'Footer colors': 'رنگ‌های پانوشت',
+  'Footer font': 'قلم پانوشت',
+  'Footer text': 'متن پانوشت',
+  'Header colors': 'رنگ‌های سربرگ',
+  'Headings font': 'قلم عنوان‌ها',
+  'Light header background': 'پس‌زمینه سربرگ روشن',
+  'Light header text': 'متن سربرگ روشن',
+  'Navigation font': 'قلم ناوبری',
+  'No file selected': 'فایلی انتخاب نشده است',
+  'Page and post body text': 'متن صفحه‌ها و نوشته‌ها',
+  'Page and post links': 'پیوندهای صفحه‌ها و نوشته‌ها',
+  'Page and post titles': 'عنوان‌های صفحه‌ها و نوشته‌ها',
+  'Page title font': 'قلم عنوان صفحه',
+  'Post title font': 'قلم عنوان نوشته',
+  'Primary text': 'متن اصلی',
+  'Regular WOFF2': 'قلم معمولی WOFF2',
+  'Remove family': 'حذف خانواده قلم',
+  'Save all changes': 'ذخیره همه تغییرات',
+  'Secondary text': 'متن فرعی',
+  'Set shared colors and the built-in header, content, and footer surfaces.': 'رنگ‌های مشترک و رنگ سربرگ، محتوا و پانوشت پیش‌فرض پوسته را تنظیم کنید.',
+  'Set the site width and layout. The initial language follows WordPress Site Language.': 'عرض و چیدمان وب‌سایت را تنظیم کنید. زبان آغازین از زبان سایت وردپرس پیروی می‌کند.',
+  'Shared palette': 'پالت مشترک',
+  'Site background': 'پس‌زمینه وب‌سایت',
+  'Surface color': 'رنگ سطح',
+  'System sans-serif': 'قلم بدون سریف سیستم',
+  'Theme default': 'پیش‌فرض پوسته',
+  'Typography': 'تایپوگرافی',
+  'Unsaved changes': 'تغییرات ذخیره‌نشده',
+  'Up to 12 families. Choose a font below after naming it and selecting its regular file.': 'حداکثر ۱۲ خانواده قلم. پس از نام‌گذاری و انتخاب فایل معمولی، قلم را در پایین انتخاب کنید.',
+  'Upload WOFF2 files to the WordPress Media Library. Add a regular file for each family; a bold file is optional. Uploaded files stay in Media Library during theme updates.': 'فایل‌های WOFF2 را در کتابخانه رسانه وردپرس بارگذاری کنید. برای هر خانواده فایل معمولی لازم است و فایل ضخیم اختیاری است. فایل‌ها پس از به‌روزرسانی پوسته در کتابخانه رسانه باقی می‌مانند.',
+  'Upload WOFF2 font files, then assign a family to each theme text role.': 'فایل‌های قلم WOFF2 را بارگذاری کنید و سپس برای هر نقش متنی پوسته قلمی انتخاب کنید.',
+  'Uploaded fonts': 'قلم‌های بارگذاری‌شده',
+  'Use this font': 'استفاده از این قلم',
+  'Widget title font': 'قلم عنوان ابزارک',
+  'You can add up to 12 font families.': 'می‌توانید حداکثر ۱۲ خانواده قلم اضافه کنید.'
+});
 
 const files = [];
 function walk(dir) { for (const name of fs.readdirSync(dir)) { const file = path.join(dir, name); if (fs.statSync(file).isDirectory()) walk(file); else if (file.endsWith('.php')) files.push(file); } }
@@ -278,13 +334,13 @@ for (const file of files) {
     refs.get(id).push(`${path.relative(root, file).replaceAll('\\', '/')}:${line}`);
   }
 }
-for (const id of ['UNDO Web Developments', 'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer, including widget styles and optional sticky sidebars. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.']) refs.set(id, ['style.css:1']);
+for (const id of ['UNDO Web Developments', 'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The full-width, single-save settings dashboard controls layout, colors, typography, uploaded WOFF2 fonts, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.']) refs.set(id, ['style.css:1']);
 const ids = [...refs.keys()].sort((a, b) => Buffer.compare(Buffer.from(a), Buffer.from(b)));
 const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.4.0',
+  'Project-Id-Version: UNDO Web Developments 0.5.0',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

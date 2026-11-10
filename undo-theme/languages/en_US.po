@@ -1,11 +1,11 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.4.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: en_US\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.5.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: en_US\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
 msgstr "% comments"
 
-#: functions.php:101
+#: functions.php:141
 msgid "%s%% of the earlier layout visible"
 msgstr "%s%% of the earlier layout visible"
 
@@ -14,10 +14,10 @@ msgid "A better site or product should help people understand, decide, and act. 
 msgstr "A better site or product should help people understand, decide, and act. The design follows that job."
 
 #: style.css:1
-msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer, including widget styles and optional sticky sidebars. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates."
-msgstr "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer, including widget styles and optional sticky sidebars. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates."
+msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The full-width, single-save settings dashboard controls layout, colors, typography, uploaded WOFF2 fonts, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates."
+msgstr "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The full-width, single-save settings dashboard controls layout, colors, typography, uploaded WOFF2 fonts, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates."
 
-#: functions.php:117 template-parts/landing.php:39
+#: functions.php:157 template-parts/landing.php:39
 msgid "A redesign"
 msgstr "A redesign"
 
@@ -25,29 +25,41 @@ msgstr "A redesign"
 msgid "A website with purpose."
 msgstr "A website with purpose."
 
-#: inc/settings.php:34
+#: inc/settings.php:38
 msgid "Accent color"
 msgstr "Accent color"
 
-#: inc/settings.php:52
+#: inc/settings.php:58
+msgid "Accent serif font"
+msgstr "Accent serif font"
+
+#: inc/settings.php:80
 msgid "Action URL"
 msgstr "Action URL"
 
-#: inc/settings.php:51
+#: inc/settings.php:79
 msgid "Action label (English)"
 msgstr "Action label (English)"
 
-#: inc/settings.php:50
+#: inc/settings.php:78
 msgid "Action label (Persian)"
 msgstr "Action label (Persian)"
+
+#: inc/settings.php:309
+msgid "Add font family"
+msgstr "Add font family"
 
 #: template-parts/landing.php:26
 msgid "After"
 msgstr "After"
 
-#: functions.php:134 template-parts/landing.php:7
+#: functions.php:191 template-parts/landing.php:7
 msgid "Approach"
 msgstr "Approach"
+
+#: inc/settings.php:350
+msgid "Assign fonts"
+msgstr "Assign fonts"
 
 #: inc/github-updater.php:134
 msgid "Back to WordPress Updates"
@@ -57,9 +69,21 @@ msgstr "Back to WordPress Updates"
 msgid "Before"
 msgstr "Before"
 
-#: inc/settings.php:85
+#: inc/settings.php:113
 msgid "Blog"
 msgstr "Blog"
+
+#: inc/settings.php:56
+msgid "Body text font"
+msgstr "Body text font"
+
+#: inc/settings.php:298
+msgid "Bold WOFF2 (optional)"
+msgstr "Bold WOFF2 (optional)"
+
+#: inc/settings.php:43
+msgid "Border color"
+msgstr "Border color"
 
 #: inc/settings.php:21
 msgid "Bottom margin in pixels"
@@ -69,7 +93,7 @@ msgstr "Bottom margin in pixels"
 msgid "Bottom padding in pixels"
 msgstr "Bottom padding in pixels"
 
-#: inc/settings.php:35 inc/settings.php:72
+#: inc/settings.php:34 inc/settings.php:100
 msgid "Boxed"
 msgstr "Boxed"
 
@@ -81,17 +105,21 @@ msgstr "Build"
 msgid "Built for every screen."
 msgstr "Built for every screen."
 
-#: inc/settings.php:92
+#: inc/settings.php:120
 msgid "Built-in footer settings. Elementor Theme Builder can replace this template."
 msgstr "Built-in footer settings. Elementor Theme Builder can replace this template."
 
-#: inc/settings.php:38
+#: inc/settings.php:66
 msgid "Built-in header settings. Elementor Theme Builder can replace this template."
 msgstr "Built-in header settings. Elementor Theme Builder can replace this template."
 
-#: inc/settings.php:101
+#: inc/settings.php:129
 msgid "Built-in landing page copy. Elementor pages use their own content."
 msgstr "Built-in landing page copy. Elementor pages use their own content."
+
+#: inc/settings.php:60
+msgid "Buttons font"
+msgstr "Buttons font"
 
 #: single.php:15
 msgid "By %s"
@@ -101,23 +129,43 @@ msgstr "By %s"
 msgid "COMPANY NAME"
 msgstr "COMPANY NAME"
 
-#: inc/settings.php:89
+#: inc/settings.php:117
 msgid "Card columns"
 msgstr "Card columns"
 
-#: inc/settings.php:43
+#: inc/settings.php:71
 msgid "Centered navigation"
 msgstr "Centered navigation"
 
-#: functions.php:98
+#: inc/settings.php:302
+msgid "Choose WOFF2"
+msgstr "Choose WOFF2"
+
+#: inc/settings.php:253
+msgid "Choose a WOFF2 font file"
+msgstr "Choose a WOFF2 font file"
+
+#: inc/settings.php:255
+msgid "Choose a valid WOFF2 file from the Media Library."
+msgstr "Choose a valid WOFF2 file from the Media Library."
+
+#: inc/settings.php:302
+msgid "Clear"
+msgstr "Clear"
+
+#: functions.php:138
 msgid "Close menu"
 msgstr "Close menu"
 
-#: functions.php:100
+#: functions.php:140
 msgid "Close search"
 msgstr "Close search"
 
-#: inc/settings.php:69
+#: inc/settings.php:37
+msgid "Colors"
+msgstr "Colors"
+
+#: inc/settings.php:97
 msgid "Compact"
 msgstr "Compact"
 
@@ -125,17 +173,25 @@ msgstr "Compact"
 msgid "Compare earlier and redesigned website concept"
 msgstr "Compare earlier and redesigned website concept"
 
-#: inc/settings.php:99
+#: inc/settings.php:127
 msgid "Contact email"
 msgstr "Contact email"
 
-#: inc/settings.php:36
+#: inc/settings.php:346
+msgid "Content colors"
+msgstr "Content colors"
+
+#: inc/settings.php:35
 msgid "Content width in pixels"
 msgstr "Content width in pixels"
 
 #: template-parts/landing.php:34
 msgid "Create new. Redo what exists."
 msgstr "Create new. Redo what exists."
+
+#: inc/settings.php:55
+msgid "Custom font families"
+msgstr "Custom font families"
 
 #: template-parts/landing.php:31
 msgid "Custom tools that add the features your website and workflow actually need."
@@ -145,11 +201,19 @@ msgstr "Custom tools that add the features your website and workflow actually ne
 msgid "DESIGN / BUILD / REDO"
 msgstr "DESIGN / BUILD / REDO"
 
-#: inc/settings.php:42
+#: inc/settings.php:70
 msgid "Dark"
 msgstr "Dark"
 
-#: inc/settings.php:72
+#: inc/settings.php:46
+msgid "Dark header background"
+msgstr "Dark header background"
+
+#: inc/settings.php:47
+msgid "Dark header text"
+msgstr "Dark header text"
+
+#: inc/settings.php:100
 msgid "Default page layout"
 msgstr "Default page layout"
 
@@ -173,21 +237,37 @@ msgstr "Download project brief"
 msgid "Drag to compare"
 msgstr "Drag to compare"
 
-#: inc/settings.php:69
+#: inc/settings.php:97
 msgid "Editorial"
 msgstr "Editorial"
 
-#: inc/settings.php:76
+#: inc/settings.php:104
 msgid "End"
 msgstr "End"
 
-#: inc/settings.php:90
+#: inc/settings.php:118
 msgid "Excerpt length in words"
 msgstr "Excerpt length in words"
 
-#: inc/settings.php:92
+#: inc/settings.php:297
+msgid "Family name"
+msgstr "Family name"
+
+#: inc/settings.php:120
 msgid "Footer"
 msgstr "Footer"
+
+#: inc/settings.php:51
+msgid "Footer background"
+msgstr "Footer background"
+
+#: inc/settings.php:347
+msgid "Footer colors"
+msgstr "Footer colors"
+
+#: inc/settings.php:64
+msgid "Footer font"
+msgstr "Footer font"
 
 #: functions.php:21
 msgid "Footer menu"
@@ -197,15 +277,19 @@ msgstr "Footer menu"
 msgid "Footer navigation"
 msgstr "Footer navigation"
 
-#: inc/settings.php:98
+#: inc/settings.php:126
 msgid "Footer slogan (English)"
 msgstr "Footer slogan (English)"
 
-#: inc/settings.php:97
+#: inc/settings.php:125
 msgid "Footer slogan (Persian)"
 msgstr "Footer slogan (Persian)"
 
-#: inc/settings.php:72
+#: inc/settings.php:52
+msgid "Footer text"
+msgstr "Footer text"
+
+#: inc/settings.php:100
 msgid "Full width"
 msgstr "Full width"
 
@@ -213,7 +297,7 @@ msgstr "Full width"
 msgid "Get started"
 msgstr "Get started"
 
-#: functions.php:106
+#: functions.php:146
 msgid "Goal"
 msgstr "Goal"
 
@@ -229,35 +313,43 @@ msgstr "Good design starts with understanding what needs to change. We map the p
 msgid "HOW WE WORK"
 msgstr "HOW WE WORK"
 
-#: inc/settings.php:38
+#: inc/settings.php:66
 msgid "Header"
 msgstr "Header"
 
-#: inc/settings.php:42
+#: inc/settings.php:70
 msgid "Header color style"
 msgstr "Header color style"
 
-#: inc/settings.php:43
+#: inc/settings.php:345
+msgid "Header colors"
+msgstr "Header colors"
+
+#: inc/settings.php:71
 msgid "Header layout"
 msgstr "Header layout"
 
-#: inc/settings.php:39
+#: inc/settings.php:67
 msgid "Header logo"
 msgstr "Header logo"
 
-#: inc/settings.php:105
+#: inc/settings.php:57
+msgid "Headings font"
+msgstr "Headings font"
+
+#: inc/settings.php:133
 msgid "Hero description (English)"
 msgstr "Hero description (English)"
 
-#: inc/settings.php:103
+#: inc/settings.php:131
 msgid "Hero description (Persian)"
 msgstr "Hero description (Persian)"
 
-#: inc/settings.php:104
+#: inc/settings.php:132
 msgid "Hero title (English)"
 msgstr "Hero title (English)"
 
-#: inc/settings.php:102
+#: inc/settings.php:130
 msgid "Hero title (Persian)"
 msgstr "Hero title (Persian)"
 
@@ -269,7 +361,7 @@ msgstr "Home"
 msgid "Home  About  Services  Contact"
 msgstr "Home  About  Services  Contact"
 
-#: inc/settings.php:101
+#: inc/settings.php:129
 msgid "Homepage"
 msgstr "Homepage"
 
@@ -277,7 +369,7 @@ msgstr "Homepage"
 msgid "Interactive concept showing a website before and after a redesign"
 msgstr "Interactive concept showing a website before and after a redesign"
 
-#: inc/settings.php:80
+#: inc/settings.php:108
 msgid "Keep sidebar visible while scrolling"
 msgstr "Keep sidebar visible while scrolling"
 
@@ -289,15 +381,23 @@ msgstr "Keep what works. Redo what does not."
 msgid "Language"
 msgstr "Language"
 
-#: inc/settings.php:42
+#: inc/settings.php:70
 msgid "Light"
 msgstr "Light"
 
-#: inc/settings.php:40
+#: inc/settings.php:44
+msgid "Light header background"
+msgstr "Light header background"
+
+#: inc/settings.php:45
+msgid "Light header text"
+msgstr "Light header text"
+
+#: inc/settings.php:68
 msgid "Light logo for dark header"
 msgstr "Light logo for dark header"
 
-#: inc/settings.php:78
+#: inc/settings.php:106
 msgid "Lined"
 msgstr "Lined"
 
@@ -309,7 +409,7 @@ msgstr "Main navigation"
 msgid "Make the first impression count."
 msgstr "Make the first impression count."
 
-#: inc/settings.php:41
+#: inc/settings.php:69
 msgid "Maximum logo width in pixels"
 msgstr "Maximum logo width in pixels"
 
@@ -321,7 +421,7 @@ msgstr "Maximum width"
 msgid "Minimum side margin in pixels"
 msgstr "Minimum side margin in pixels"
 
-#: functions.php:113 template-parts/landing.php:38
+#: functions.php:153 template-parts/landing.php:38
 msgid "Mobile app"
 msgstr "Mobile app"
 
@@ -345,6 +445,10 @@ msgstr "More posts"
 msgid "Name of your project"
 msgstr "Name of your project"
 
+#: inc/settings.php:59
+msgid "Navigation font"
+msgstr "Navigation font"
+
 #: template-parts/landing.php:30
 msgid "New sites and thoughtful redesigns that communicate clearly and work across every screen."
 msgstr "New sites and thoughtful redesigns that communicate clearly and work across every screen."
@@ -357,6 +461,10 @@ msgstr "Next post"
 msgid "No comments"
 msgstr "No comments"
 
+#: inc/settings.php:256 inc/settings.php:301
+msgid "No file selected"
+msgstr "No file selected"
+
 #: archive.php:8 index.php:7 search.php:8
 msgid "No posts found."
 msgstr "No posts found."
@@ -365,7 +473,7 @@ msgstr "No posts found."
 msgid "No release notes were provided for this version."
 msgstr "No release notes were provided for this version."
 
-#: inc/settings.php:219
+#: inc/settings.php:342
 msgid "On screens under 760px, side margins and padding are capped at 20px; top and bottom padding are capped at 58px and 90px."
 msgstr "On screens under 760px, side margins and padding are capped at 20px; top and bottom padding are capped at 58px and 90px."
 
@@ -373,11 +481,11 @@ msgstr "On screens under 760px, side margins and padding are capped at 20px; top
 msgid "One comment"
 msgstr "One comment"
 
-#: functions.php:97 header.php:42
+#: functions.php:137 header.php:42
 msgid "Open menu"
 msgstr "Open menu"
 
-#: functions.php:99 header.php:39
+#: functions.php:139 header.php:39
 msgid "Open search"
 msgstr "Open search"
 
@@ -389,7 +497,19 @@ msgstr "Our process: understand, design, build, refine"
 msgid "Overview"
 msgstr "Overview"
 
-#: inc/settings.php:211
+#: inc/settings.php:49
+msgid "Page and post body text"
+msgstr "Page and post body text"
+
+#: inc/settings.php:50
+msgid "Page and post links"
+msgstr "Page and post links"
+
+#: inc/settings.php:48
+msgid "Page and post titles"
+msgstr "Page and post titles"
+
+#: inc/settings.php:335
 msgid "Page display"
 msgstr "Page display"
 
@@ -409,15 +529,19 @@ msgstr "Page path"
 msgid "Page sections"
 msgstr "Page sections"
 
-#: inc/settings.php:69
+#: inc/settings.php:61
+msgid "Page title font"
+msgstr "Page title font"
+
+#: inc/settings.php:97
 msgid "Page title style"
 msgstr "Page title style"
 
-#: inc/settings.php:67
+#: inc/settings.php:95
 msgid "Pages"
 msgstr "Pages"
 
-#: inc/settings.php:78
+#: inc/settings.php:106
 msgid "Panel"
 msgstr "Panel"
 
@@ -425,11 +549,11 @@ msgstr "Panel"
 msgid "Plan a project"
 msgstr "Plan a project"
 
-#: inc/settings.php:85
+#: inc/settings.php:113
 msgid "Post cards in blog, archive, and search results."
 msgstr "Post cards in blog, archive, and search results."
 
-#: inc/settings.php:54
+#: inc/settings.php:82
 msgid "Post details in the built-in single template."
 msgstr "Post details in the built-in single template."
 
@@ -440,6 +564,10 @@ msgstr "Post navigation"
 #: single.php:20
 msgid "Post pages"
 msgstr "Post pages"
+
+#: inc/settings.php:62
+msgid "Post title font"
+msgstr "Post title font"
 
 #: single.php:22
 msgid "Previous post"
@@ -453,7 +581,11 @@ msgstr "Primary menu"
 msgid "Primary sidebar"
 msgstr "Primary sidebar"
 
-#: functions.php:103
+#: inc/settings.php:41
+msgid "Primary text"
+msgstr "Primary text"
+
+#: functions.php:143
 msgid "Project"
 msgstr "Project"
 
@@ -461,7 +593,7 @@ msgstr "Project"
 msgid "Project or business name"
 msgstr "Project or business name"
 
-#: functions.php:135 template-parts/landing.php:9
+#: functions.php:192 template-parts/landing.php:9
 msgid "Project planner"
 msgstr "Project planner"
 
@@ -469,7 +601,7 @@ msgstr "Project planner"
 msgid "Put the essentials in one place. Download your brief when you are done, so it is ready to share when we connect."
 msgstr "Put the essentials in one place. Download your brief when you are done, so it is ready to share when we connect."
 
-#: inc/settings.php:72
+#: inc/settings.php:100
 msgid "Reading"
 msgstr "Reading"
 
@@ -481,7 +613,11 @@ msgstr "Redesign"
 msgid "Refine"
 msgstr "Refine"
 
-#: inc/settings.php:63
+#: inc/settings.php:298
+msgid "Regular WOFF2"
+msgstr "Regular WOFF2"
+
+#: inc/settings.php:91
 msgid "Related post count"
 msgstr "Related post count"
 
@@ -493,13 +629,21 @@ msgstr "Related posts"
 msgid "Release details are unavailable. Refresh the WordPress Updates screen and try again."
 msgstr "Release details are unavailable. Refresh the WordPress Updates screen and try again."
 
-#: inc/settings.php:179
+#: inc/settings.php:304
+msgid "Remove family"
+msgstr "Remove family"
+
+#: inc/settings.php:269
 msgid "Remove image"
 msgstr "Remove image"
 
 #: 404.php:3
 msgid "Return home"
 msgstr "Return home"
+
+#: inc/settings.php:359
+msgid "Save all changes"
+msgstr "Save all changes"
 
 #: search.php:5
 msgid "Search results for: %s"
@@ -509,143 +653,159 @@ msgstr "Search results for: %s"
 msgid "Search this site"
 msgstr "Search this site"
 
+#: inc/settings.php:42
+msgid "Secondary text"
+msgstr "Secondary text"
+
 #: inc/github-updater.php:131
 msgid "See what changed before you update. Your theme settings and WordPress content are stored outside the theme files."
 msgstr "See what changed before you update. Your theme settings and WordPress content are stored outside the theme files."
 
-#: inc/settings.php:169
+#: inc/settings.php:251
 msgid "Select header logo"
 msgstr "Select header logo"
 
-#: inc/settings.php:179
+#: inc/settings.php:269
 msgid "Select image"
 msgstr "Select image"
 
-#: functions.php:104
+#: functions.php:144
 msgid "Service"
 msgstr "Service"
 
-#: functions.php:133 template-parts/landing.php:6
+#: functions.php:190 template-parts/landing.php:6
 msgid "Services"
 msgstr "Services"
 
-#: inc/settings.php:67
+#: inc/settings.php:37
+msgid "Set shared colors and the built-in header, content, and footer surfaces."
+msgstr "Set shared colors and the built-in header, content, and footer surfaces."
+
+#: inc/settings.php:95
 msgid "Set the default page layout, then adjust each UNDO template. Explicit page templates take priority."
 msgstr "Set the default page layout, then adjust each UNDO template. Explicit page templates take priority."
 
-#: inc/settings.php:48
+#: inc/settings.php:33
+msgid "Set the site width and layout. The initial language follows WordPress Site Language."
+msgstr "Set the site width and layout. The initial language follows WordPress Site Language."
+
+#: inc/settings.php:344
+msgid "Shared palette"
+msgstr "Shared palette"
+
+#: inc/settings.php:76
 msgid "Show action button"
 msgstr "Show action button"
 
-#: inc/settings.php:49
+#: inc/settings.php:77
 msgid "Show action in mobile menu"
 msgstr "Show action in mobile menu"
 
-#: inc/settings.php:58
+#: inc/settings.php:86
 msgid "Show author"
 msgstr "Show author"
 
-#: inc/settings.php:87
+#: inc/settings.php:115
 msgid "Show card dates"
 msgstr "Show card dates"
 
-#: inc/settings.php:86
+#: inc/settings.php:114
 msgid "Show card images"
 msgstr "Show card images"
 
-#: inc/settings.php:59
+#: inc/settings.php:87
 msgid "Show categories"
 msgstr "Show categories"
 
-#: inc/settings.php:64
+#: inc/settings.php:92
 msgid "Show comments"
 msgstr "Show comments"
 
-#: inc/settings.php:95
+#: inc/settings.php:123
 msgid "Show contact email"
 msgstr "Show contact email"
 
-#: inc/settings.php:96
+#: inc/settings.php:124
 msgid "Show copyright"
 msgstr "Show copyright"
 
-#: inc/settings.php:57
+#: inc/settings.php:85
 msgid "Show date"
 msgstr "Show date"
 
-#: inc/settings.php:88
+#: inc/settings.php:116
 msgid "Show excerpts"
 msgstr "Show excerpts"
 
-#: inc/settings.php:55
+#: inc/settings.php:83
 msgid "Show featured image"
 msgstr "Show featured image"
 
-#: inc/settings.php:93
+#: inc/settings.php:121
 msgid "Show footer brand"
 msgstr "Show footer brand"
 
-#: inc/settings.php:94
+#: inc/settings.php:122
 msgid "Show footer navigation"
 msgstr "Show footer navigation"
 
-#: inc/settings.php:46
+#: inc/settings.php:74
 msgid "Show header search"
 msgstr "Show header search"
 
-#: inc/settings.php:47
+#: inc/settings.php:75
 msgid "Show language switcher"
 msgstr "Show language switcher"
 
-#: inc/settings.php:45
+#: inc/settings.php:73
 msgid "Show main navigation"
 msgstr "Show main navigation"
 
-#: inc/settings.php:56
+#: inc/settings.php:84
 msgid "Show manually written excerpt"
 msgstr "Show manually written excerpt"
 
-#: inc/settings.php:82
+#: inc/settings.php:110
 msgid "Show on archives"
 msgstr "Show on archives"
 
-#: inc/settings.php:83
+#: inc/settings.php:111
 msgid "Show on search results"
 msgstr "Show on search results"
 
-#: inc/settings.php:70
+#: inc/settings.php:98
 msgid "Show page breadcrumbs"
 msgstr "Show page breadcrumbs"
 
-#: inc/settings.php:71
+#: inc/settings.php:99
 msgid "Show page featured image"
 msgstr "Show page featured image"
 
-#: inc/settings.php:73
+#: inc/settings.php:101
 msgid "Show page sidebar"
 msgstr "Show page sidebar"
 
-#: inc/settings.php:68
+#: inc/settings.php:96
 msgid "Show page title"
 msgstr "Show page title"
 
-#: inc/settings.php:65
+#: inc/settings.php:93
 msgid "Show post sidebar"
 msgstr "Show post sidebar"
 
-#: inc/settings.php:61
+#: inc/settings.php:89
 msgid "Show previous and next posts"
 msgstr "Show previous and next posts"
 
-#: inc/settings.php:62
+#: inc/settings.php:90
 msgid "Show related posts"
 msgstr "Show related posts"
 
-#: inc/settings.php:106
+#: inc/settings.php:134
 msgid "Show section navigation"
 msgstr "Show section navigation"
 
-#: inc/settings.php:60
+#: inc/settings.php:88
 msgid "Show tags"
 msgstr "Show tags"
 
@@ -653,43 +813,43 @@ msgstr "Show tags"
 msgid "Side padding in pixels"
 msgstr "Side padding in pixels"
 
-#: inc/settings.php:75
+#: inc/settings.php:103
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: inc/settings.php:76
+#: inc/settings.php:104
 msgid "Sidebar position"
 msgstr "Sidebar position"
 
-#: inc/settings.php:77
+#: inc/settings.php:105
 msgid "Sidebar width in pixels"
 msgstr "Sidebar width in pixels"
 
-#: inc/settings.php:54
+#: inc/settings.php:82
 msgid "Single post"
 msgstr "Single post"
 
-#: inc/settings.php:35
+#: inc/settings.php:39
+msgid "Site background"
+msgstr "Site background"
+
+#: inc/settings.php:34
 msgid "Site width"
 msgstr "Site width"
-
-#: inc/settings.php:33
-msgid "Site width and shared colors. The initial language follows WordPress Site Language."
-msgstr "Site width and shared colors. The initial language follows WordPress Site Language."
 
 #: header.php:18
 msgid "Skip to content"
 msgstr "Skip to content"
 
-#: functions.php:116 template-parts/landing.php:39
+#: functions.php:156 template-parts/landing.php:39
 msgid "Something new"
 msgstr "Something new"
 
-#: inc/settings.php:43
+#: inc/settings.php:71
 msgid "Standard"
 msgstr "Standard"
 
-#: inc/settings.php:76
+#: inc/settings.php:104
 msgid "Start"
 msgstr "Start"
 
@@ -697,21 +857,29 @@ msgstr "Start"
 msgid "Start here"
 msgstr "Start here"
 
-#: functions.php:105
+#: functions.php:145
 msgid "Starting point"
 msgstr "Starting point"
 
-#: inc/settings.php:44
+#: inc/settings.php:72
 msgid "Sticky header"
 msgstr "Sticky header"
 
-#: inc/settings.php:81
+#: inc/settings.php:109
 msgid "Sticky sidebar top gap in pixels"
 msgstr "Sticky sidebar top gap in pixels"
 
 #: template-parts/landing.php:35
 msgid "Structure, content, interface"
 msgstr "Structure, content, interface"
+
+#: inc/settings.php:40
+msgid "Surface color"
+msgstr "Surface color"
+
+#: inc/settings.php:184
+msgid "System sans-serif"
+msgstr "System sans-serif"
 
 #: single.php:21
 msgid "Tags"
@@ -721,7 +889,7 @@ msgstr "Tags"
 msgid "Tell us what you want to make."
 msgstr "Tell us what you want to make."
 
-#: inc/settings.php:213
+#: inc/settings.php:336
 msgid "The UNDO Custom Width template uses a width set on each page below the editor."
 msgstr "The UNDO Custom Width template uses a width set on each page below the editor."
 
@@ -737,11 +905,15 @@ msgstr "The page you requested is unavailable."
 msgid "The right work for the next version of your business."
 msgstr "The right work for the next version of your business."
 
-#: inc/settings.php:75
+#: inc/settings.php:103
 msgid "The sidebar appears only where enabled and when widgets are assigned."
 msgstr "The sidebar appears only where enabled and when widgets are assigned."
 
-#: inc/settings.php:201
+#: inc/settings.php:179
+msgid "Theme default"
+msgstr "Theme default"
+
+#: inc/settings.php:325
 msgid "Theme settings sections"
 msgstr "Theme settings sections"
 
@@ -753,11 +925,11 @@ msgstr "Theme update"
 msgid "This width applies only when the page template is UNDO Custom Width. Leave the field blank for 1200px."
 msgstr "This width applies only when the page template is UNDO Custom Width. Leave the field blank for 1200px."
 
-#: functions.php:108
+#: functions.php:148
 msgid "To be discussed"
 msgstr "To be discussed"
 
-#: functions.php:144
+#: functions.php:201
 msgid "Toggle submenu for %s"
 msgstr "Toggle submenu for %s"
 
@@ -768,6 +940,10 @@ msgstr "Top margin in pixels"
 #: inc/settings.php:23
 msgid "Top padding in pixels"
 msgstr "Top padding in pixels"
+
+#: inc/settings.php:54
+msgid "Typography"
+msgstr "Typography"
 
 #: inc/settings.php:9
 msgid "UNDO Boxed"
@@ -781,7 +957,7 @@ msgstr "UNDO Full Width"
 msgid "UNDO Reading"
 msgstr "UNDO Reading"
 
-#: inc/settings.php:161 inc/settings.php:161 inc/settings.php:201
+#: inc/settings.php:242 inc/settings.php:242 inc/settings.php:323
 msgid "UNDO Theme Settings"
 msgstr "UNDO Theme Settings"
 
@@ -789,7 +965,7 @@ msgstr "UNDO Theme Settings"
 msgid "UNDO Web Developments"
 msgstr "UNDO Web Developments"
 
-#: functions.php:102
+#: functions.php:142
 msgid "UNDO Web Developments — Project brief"
 msgstr "UNDO Web Developments — Project brief"
 
@@ -821,15 +997,35 @@ msgstr "Unable to verify the UNDO theme update package."
 msgid "Understand"
 msgstr "Understand"
 
+#: inc/settings.php:258
+msgid "Unsaved changes"
+msgstr "Unsaved changes"
+
 #: template-parts/page-layout.php:16
 msgid "Untitled page"
 msgstr "Untitled page"
 
-#: functions.php:107
+#: functions.php:147
 msgid "Untitled project"
 msgstr "Untitled project"
 
-#: inc/settings.php:189
+#: inc/settings.php:309
+msgid "Up to 12 families. Choose a font below after naming it and selecting its regular file."
+msgstr "Up to 12 families. Choose a font below after naming it and selecting its regular file."
+
+#: inc/settings.php:307
+msgid "Upload WOFF2 files to the WordPress Media Library. Add a regular file for each family; a bold file is optional. Uploaded files stay in Media Library during theme updates."
+msgstr "Upload WOFF2 files to the WordPress Media Library. Add a regular file for each family; a bold file is optional. Uploaded files stay in Media Library during theme updates."
+
+#: inc/settings.php:54
+msgid "Upload WOFF2 font files, then assign a family to each theme text role."
+msgstr "Upload WOFF2 font files, then assign a family to each theme text role."
+
+#: inc/settings.php:349
+msgid "Uploaded fonts"
+msgstr "Uploaded fonts"
+
+#: inc/settings.php:285
 msgid "Use 320–1920px or 20–100%, for example 1200px or 80%."
 msgstr "Use 320–1920px or 20–100%, for example 1200px or 80%."
 
@@ -837,7 +1033,11 @@ msgstr "Use 320–1920px or 20–100%, for example 1200px or 80%."
 msgid "Use 320–1920px or 20–100%."
 msgstr "Use 320–1920px or 20–100%."
 
-#: inc/settings.php:169
+#: inc/settings.php:254
+msgid "Use this font"
+msgstr "Use this font"
+
+#: inc/settings.php:252
 msgid "Use this image"
 msgstr "Use this image"
 
@@ -861,7 +1061,7 @@ msgstr "We provide solutions for your needs"
 msgid "Web Developments"
 msgstr "Web Developments"
 
-#: functions.php:111 template-parts/landing.php:38
+#: functions.php:151 template-parts/landing.php:38
 msgid "Website"
 msgstr "Website"
 
@@ -901,17 +1101,21 @@ msgstr "Where are you starting?"
 msgid "Whether the starting point is a blank page or an existing product, UNDO brings design and development together to make it easier to use, easier to manage, and ready to grow."
 msgstr "Whether the starting point is a blank page or an existing product, UNDO brings design and development together to make it easier to use, easier to manage, and ready to grow."
 
-#: inc/settings.php:35 inc/settings.php:72
+#: inc/settings.php:34 inc/settings.php:100
 msgid "Wide"
 msgstr "Wide"
 
-#: inc/settings.php:79
+#: inc/settings.php:107
 msgid "Widget spacing in pixels"
 msgstr "Widget spacing in pixels"
 
-#: inc/settings.php:78
+#: inc/settings.php:106
 msgid "Widget style"
 msgstr "Widget style"
+
+#: inc/settings.php:63
+msgid "Widget title font"
+msgstr "Widget title font"
 
 #: functions.php:29
 msgid "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings."
@@ -921,7 +1125,7 @@ msgstr "Widgets shown beside posts, pages, or archives when enabled in UNDO Them
 msgid "Width in pixels or percent"
 msgstr "Width in pixels or percent"
 
-#: functions.php:112 template-parts/landing.php:38
+#: functions.php:152 template-parts/landing.php:38
 msgid "WordPress plugin"
 msgstr "WordPress plugin"
 
@@ -941,11 +1145,15 @@ msgstr "Working product"
 msgid "You are not allowed to view theme update details."
 msgstr "You are not allowed to view theme update details."
 
+#: inc/settings.php:257
+msgid "You can add up to 12 font families."
+msgstr "You can add up to 12 font families."
+
 #: template-parts/landing.php:37
 msgid "Your answers stay in this browser. The brief downloads to your device."
 msgstr "Your answers stay in this browser. The brief downloads to your device."
 
-#: functions.php:109
+#: functions.php:149
 msgid "Your project brief has been downloaded."
 msgstr "Your project brief has been downloaded."
 

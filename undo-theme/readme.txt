@@ -3,16 +3,17 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.4.0
+Stable tag: 0.5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The standalone settings dashboard controls layout, header, pages, posts, blog, sidebars, and footer, including widget styles and optional sticky sidebars. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.
+A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The full-width, single-save settings dashboard controls layout, colors, typography, uploaded WOFF2 fonts, header, pages, posts, blog, sidebars, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.
 
 == Features ==
 * Initial language follows WordPress Site Language; Persian and English visitor overrides, compiled translations, and dedicated RTL stylesheet are included.
 * Responsive UNDO landing page with section navigation and a project brief download.
-* Standalone UNDO Theme Settings page with a vertical sidebar for site layout, colors, header, pages, single posts, blog, sidebar, footer, and homepage copy. Header options include light/dark styles, logo variants, centered navigation, search, and mobile action visibility.
+* Standalone, full-width UNDO Theme Settings page with a joined vertical sidebar. Switching sections keeps unsaved values in place; Save all changes stores every section at once.
+* Separate layout, colors, and typography sections. Colors cover the shared palette and built-in header, page/post content, and footer. Typography assigns built-in or uploaded WOFF2 font families to body, headings, navigation, buttons, titles, widgets, and footer. Header options include light/dark styles, logo variants, centered navigation, search, and mobile action visibility.
 * WordPress menus, widgets, featured images, logo support, and normal post, page, archive, search, and 404 templates.
 * Editorial single-post template with optional manual excerpt, metadata, featured image, tags, related posts, comments, post navigation, and sidebar. Related posts are opt-in and matched by category.
 * Reading, wide, boxed, and full-width page templates each have width, margin, and padding controls in Pages settings. The default can be overridden in the WordPress or Elementor page template selector. UNDO Custom Width uses only a per-page pixel/percentage field below the WordPress editor, visible when that template is selected.
@@ -21,7 +22,7 @@ A bilingual WordPress theme for creative agencies and studios. The initial langu
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
 == Limitations ==
-Elementor is optional; Elementor Pro is needed for Theme Builder location replacement. User-created pages and posts require a multilingual content solution for translation. Dedicated UNDO Elementor widgets are planned and are not included yet. This theme is still a pre-release under staging validation.
+Elementor is optional; Elementor Pro is needed for Theme Builder location replacement. Elementor widgets with explicit colors or fonts keep their own styling. User-created pages and posts require a multilingual content solution for translation. Dedicated UNDO Elementor widgets are planned and are not included yet. This theme is still a pre-release under staging validation.
 
 == Installation ==
 Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Theme Settings in the main admin menu.
@@ -30,6 +31,10 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.5.0 =
+* Expanded the Theme Settings workspace to full width with a joined sidebar, full-row selected state, and instant section switching without losing unsaved edits.
+* Moved colors out of Website Layout into a dedicated Colors section; added shared, header, content, and footer controls.
+* Added Typography font roles and Media Library WOFF2 uploads for custom families, with regular and optional bold files.
 = 0.4.0 =
 * Added lined and panel sidebar styles, adjustable widget spacing, and optional sticky behavior with a top gap.
 * Sticky mode engages only when the sidebar fits the viewport; tall widgets scroll normally. Start/end placement mirrors in RTL, and empty widget areas reserve no sidebar markup.

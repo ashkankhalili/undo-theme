@@ -30,10 +30,38 @@ function undo_settings_sections() {
     static $sections = null;
     if ( null !== $sections ) { return $sections; }
     $sections = array(
-        'layout' => array( __( 'Website layout', 'undo-theme' ), __( 'Site width and shared colors. The initial language follows WordPress Site Language.', 'undo-theme' ), array(
-            'accent_color' => array( __( 'Accent color', 'undo-theme' ), 'color', '#b83b30' ),
+        'layout' => array( __( 'Website layout', 'undo-theme' ), __( 'Set the site width and layout. The initial language follows WordPress Site Language.', 'undo-theme' ), array(
             'site_layout' => array( __( 'Site width', 'undo-theme' ), 'select', 'wide', array( 'wide' => __( 'Wide', 'undo-theme' ), 'boxed' => __( 'Boxed', 'undo-theme' ) ) ),
             'content_width' => array( __( 'Content width in pixels', 'undo-theme' ), 'number', '1440', array( 760, 1600 ) ),
+        ) ),
+        'colors' => array( __( 'Colors', 'undo-theme' ), __( 'Set shared colors and the built-in header, content, and footer surfaces.', 'undo-theme' ), array(
+            'accent_color' => array( __( 'Accent color', 'undo-theme' ), 'color', '#b83b30' ),
+            'paper_color' => array( __( 'Site background', 'undo-theme' ), 'color', '#f8f6f2' ),
+            'surface_color' => array( __( 'Surface color', 'undo-theme' ), 'color', '#ffffff' ),
+            'ink_color' => array( __( 'Primary text', 'undo-theme' ), 'color', '#242320' ),
+            'muted_color' => array( __( 'Secondary text', 'undo-theme' ), 'color', '#5b5a57' ),
+            'line_color' => array( __( 'Border color', 'undo-theme' ), 'color', '#dedbd5' ),
+            'header_light_bg_color' => array( __( 'Light header background', 'undo-theme' ), 'color', '#f8f6f2' ),
+            'header_light_text_color' => array( __( 'Light header text', 'undo-theme' ), 'color', '#20201e' ),
+            'header_dark_bg_color' => array( __( 'Dark header background', 'undo-theme' ), 'color', '#20201e' ),
+            'header_dark_text_color' => array( __( 'Dark header text', 'undo-theme' ), 'color', '#f8f6f2' ),
+            'content_title_color' => array( __( 'Page and post titles', 'undo-theme' ), 'color', '#242320' ),
+            'content_body_color' => array( __( 'Page and post body text', 'undo-theme' ), 'color', '#242320' ),
+            'content_link_color' => array( __( 'Page and post links', 'undo-theme' ), 'color', '#242320' ),
+            'footer_bg_color' => array( __( 'Footer background', 'undo-theme' ), 'color', '#1b1b1b' ),
+            'footer_text_color' => array( __( 'Footer text', 'undo-theme' ), 'color', '#ffffff' ),
+        ) ),
+        'typography' => array( __( 'Typography', 'undo-theme' ), __( 'Upload WOFF2 font files, then assign a family to each theme text role.', 'undo-theme' ), array(
+            'custom_fonts' => array( __( 'Custom font families', 'undo-theme' ), 'font_collection', array() ),
+            'font_body' => array( __( 'Body text font', 'undo-theme' ), 'font_choice', 'default' ),
+            'font_headings' => array( __( 'Headings font', 'undo-theme' ), 'font_choice', 'default' ),
+            'font_accent' => array( __( 'Accent serif font', 'undo-theme' ), 'font_choice', 'default' ),
+            'font_navigation' => array( __( 'Navigation font', 'undo-theme' ), 'font_choice', 'default' ),
+            'font_buttons' => array( __( 'Buttons font', 'undo-theme' ), 'font_choice', 'default' ),
+            'font_page_title' => array( __( 'Page title font', 'undo-theme' ), 'font_choice', 'default' ),
+            'font_post_title' => array( __( 'Post title font', 'undo-theme' ), 'font_choice', 'default' ),
+            'font_widget_title' => array( __( 'Widget title font', 'undo-theme' ), 'font_choice', 'default' ),
+            'font_footer' => array( __( 'Footer font', 'undo-theme' ), 'font_choice', 'default' ),
         ) ),
         'header' => array( __( 'Header', 'undo-theme' ), __( 'Built-in header settings. Elementor Theme Builder can replace this template.', 'undo-theme' ), array(
             'header_logo_id' => array( __( 'Header logo', 'undo-theme' ), 'media', '0' ),
@@ -118,9 +146,54 @@ function undo_setting_defaults() {
 function undo_setting( $key ) {
     $saved = get_option( 'undo_theme_settings', array() );
     $defaults = undo_setting_defaults();
-    return isset( $saved[ $key ] ) ? (string) $saved[ $key ] : ( isset( $defaults[ $key ] ) ? (string) $defaults[ $key ] : '' );
+    $value = isset( $saved[ $key ] ) ? $saved[ $key ] : ( isset( $defaults[ $key ] ) ? $defaults[ $key ] : '' );
+    return is_scalar( $value ) ? (string) $value : '';
 }
 function undo_setting_enabled( $key ) { return '1' === undo_setting( $key ); }
+function undo_custom_fonts() {
+    $saved = get_option( 'undo_theme_settings', array() );
+    return isset( $saved['custom_fonts'] ) && is_array( $saved['custom_fonts'] ) ? $saved['custom_fonts'] : array();
+}
+function undo_font_attachment_is_valid( $attachment_id ) {
+    if ( $attachment_id <= 0 || ! function_exists( 'get_post_mime_type' ) || ! function_exists( 'get_attached_file' ) ) { return false; }
+    $mime = get_post_mime_type( $attachment_id );
+    $file = get_attached_file( $attachment_id );
+    return in_array( $mime, array( 'font/woff2', 'application/font-woff2' ), true ) && is_string( $file ) && 'woff2' === strtolower( pathinfo( $file, PATHINFO_EXTENSION ) );
+}
+function undo_sanitize_custom_fonts( $fonts ) {
+    if ( ! is_array( $fonts ) ) { return array(); }
+    $clean = array();
+    foreach ( array_slice( $fonts, 0, 12 ) as $font ) {
+        if ( ! is_array( $font ) ) { continue; }
+        $id = isset( $font['id'] ) && is_scalar( $font['id'] ) ? sanitize_key( $font['id'] ) : '';
+        $name = isset( $font['name'] ) && is_scalar( $font['name'] ) ? trim( sanitize_text_field( wp_unslash( (string) $font['name'] ) ) ) : '';
+        $regular = isset( $font['regular_id'] ) && is_scalar( $font['regular_id'] ) && ctype_digit( (string) $font['regular_id'] ) ? (int) $font['regular_id'] : 0;
+        $bold = isset( $font['bold_id'] ) && is_scalar( $font['bold_id'] ) && ctype_digit( (string) $font['bold_id'] ) ? (int) $font['bold_id'] : 0;
+        if ( ! preg_match( '/^custom-[1-9][0-9]{0,2}$/', $id ) || '' === $name || strlen( $name ) > 240 || isset( $clean[ $id ] ) || ! undo_font_attachment_is_valid( $regular ) ) { continue; }
+        $clean[ $id ] = array( 'id' => $id, 'name' => $name, 'regular_id' => $regular, 'bold_id' => undo_font_attachment_is_valid( $bold ) ? $bold : 0 );
+    }
+    return array_values( $clean );
+}
+function undo_font_choices( $custom_fonts = null ) {
+    $choices = array(
+        'default' => __( 'Theme default', 'undo-theme' ),
+        'dm-sans' => 'DM Sans',
+        'space-grotesk' => 'Space Grotesk',
+        'vazirmatn' => 'Vazirmatn',
+        'instrument-serif' => 'Instrument Serif',
+        'system-sans' => __( 'System sans-serif', 'undo-theme' ),
+        'georgia' => 'Georgia',
+    );
+    foreach ( null === $custom_fonts ? undo_custom_fonts() : $custom_fonts as $font ) {
+        if ( isset( $font['id'], $font['name'] ) ) { $choices[ $font['id'] ] = $font['name']; }
+    }
+    return $choices;
+}
+function undo_allow_font_uploads( $mimes ) {
+    if ( current_user_can( 'manage_options' ) ) { $mimes['woff2'] = PHP_VERSION_ID >= 80112 ? 'font/woff2' : 'application/font-woff2'; }
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'undo_allow_font_uploads' );
 function undo_sanitize_page_dimension( $value, $fallback = '1200px' ) {
     $value = trim( (string) $value );
     if ( ! preg_match( '/^([0-9]{1,4})(px|%)$/', $value, $match ) ) { return $fallback; }
@@ -135,6 +208,10 @@ function undo_sanitize_settings( $input ) {
     $clean = array_merge( undo_setting_defaults(), is_array( $previous ) ? $previous : array() );
     foreach ( undo_settings_sections() as $section ) {
         foreach ( $section[2] as $key => $field ) {
+            if ( 'font_collection' === $field[1] ) {
+                if ( isset( $input['custom_fonts_present'] ) ) { $clean[ $key ] = undo_sanitize_custom_fonts( isset( $input[ $key ] ) ? $input[ $key ] : array() ); }
+                continue;
+            }
             if ( ! array_key_exists( $key, $input ) ) { continue; }
             $value = is_scalar( $input[ $key ] ) ? wp_unslash( (string) $input[ $key ] ) : '';
             switch ( $field[1] ) {
@@ -143,6 +220,10 @@ function undo_sanitize_settings( $input ) {
                 case 'select': $clean[ $key ] = isset( $field[3][ $value ] ) ? $value : $field[2]; break;
                 case 'number': $clean[ $key ] = (string) max( $field[3][0], min( $field[3][1], (int) $value ) ); break;
                 case 'dimension': $clean[ $key ] = undo_sanitize_page_dimension( $value, $field[2] ); break;
+                case 'font_choice':
+                    $choices = undo_font_choices( isset( $clean['custom_fonts'] ) ? $clean['custom_fonts'] : array() );
+                    $clean[ $key ] = isset( $choices[ $value ] ) ? $value : 'default';
+                    break;
                 case 'media': $clean[ $key ] = ctype_digit( $value ) && wp_attachment_is_image( (int) $value ) ? $value : '0'; break;
                 case 'textarea': $clean[ $key ] = sanitize_textarea_field( $value ); break;
                 case 'url': $clean[ $key ] = 0 === strpos( $value, '#' ) ? sanitize_text_field( $value ) : esc_url_raw( $value ); break;
@@ -166,7 +247,16 @@ function undo_settings_assets( $hook ) {
     wp_enqueue_media();
     wp_enqueue_style( 'undo-admin-settings', get_theme_file_uri( '/assets/css/admin-settings.css' ), array(), UNDO_THEME_VERSION );
     wp_enqueue_script( 'undo-settings-media', get_theme_file_uri( '/assets/js/admin-settings.js' ), array( 'media-views' ), UNDO_THEME_VERSION, true );
-    wp_localize_script( 'undo-settings-media', 'undoSettingsMedia', array( 'title' => __( 'Select header logo', 'undo-theme' ), 'use' => __( 'Use this image', 'undo-theme' ) ) );
+    wp_localize_script( 'undo-settings-media', 'undoSettingsMedia', array(
+        'title' => __( 'Select header logo', 'undo-theme' ),
+        'use' => __( 'Use this image', 'undo-theme' ),
+        'fontTitle' => __( 'Choose a WOFF2 font file', 'undo-theme' ),
+        'fontUse' => __( 'Use this font', 'undo-theme' ),
+        'fontInvalid' => __( 'Choose a valid WOFF2 file from the Media Library.', 'undo-theme' ),
+        'fontNone' => __( 'No file selected', 'undo-theme' ),
+        'fontLimit' => __( 'You can add up to 12 font families.', 'undo-theme' ),
+        'unsaved' => __( 'Unsaved changes', 'undo-theme' ),
+    ) );
 }
 add_action( 'admin_enqueue_scripts', 'undo_settings_assets' );
 function undo_settings_field( $key, $field ) {
@@ -177,6 +267,12 @@ function undo_settings_field( $key, $field ) {
     if ( 'media' === $field[1] ) {
         $image = $value ? wp_get_attachment_image( (int) $value, 'medium', false, array( 'style' => 'max-width:220px;max-height:80px;width:auto;height:auto;' ) ) : '';
         echo '<div class="undo-media-field"><input type="hidden" class="undo-media-id" id="undo-' . esc_attr( $key ) . '" name="' . $name . '" value="' . esc_attr( $value ) . '"><div class="undo-media-preview">' . wp_kses_post( $image ) . '</div><button type="button" class="button undo-media-select">' . esc_html__( 'Select image', 'undo-theme' ) . '</button> <button type="button" class="button undo-media-remove">' . esc_html__( 'Remove image', 'undo-theme' ) . '</button></div>';
+    } elseif ( 'font_collection' === $field[1] ) {
+        undo_render_font_collection();
+    } elseif ( 'font_choice' === $field[1] ) {
+        echo '<select class="undo-font-choice" data-undo-font-choice id="undo-' . esc_attr( $key ) . '" name="' . $name . '">';
+        foreach ( undo_font_choices() as $option => $label ) { echo '<option value="' . esc_attr( $option ) . '"' . selected( $value, (string) $option, false ) . '>' . esc_html( $label ) . '</option>'; }
+        echo '</select>';
     } elseif ( 'textarea' === $field[1] ) {
         echo '<textarea id="undo-' . esc_attr( $key ) . '" name="' . $name . '" rows="3" class="large-text" dir="auto">' . esc_textarea( $value ) . '</textarea>';
     } elseif ( 'select' === $field[1] ) {
@@ -193,35 +289,73 @@ function undo_settings_field( $key, $field ) {
     }
     echo '</td></tr>';
 }
+function undo_render_font_row( $index, $font ) {
+    $id = isset( $font['id'] ) ? $font['id'] : '';
+    $name = isset( $font['name'] ) ? $font['name'] : '';
+    $base = 'undo_theme_settings[custom_fonts][' . $index . ']';
+    echo '<div class="undo-font-row" data-undo-font-row><input type="hidden" data-undo-font-id name="' . esc_attr( $base . '[id]' ) . '" value="' . esc_attr( $id ) . '">';
+    echo '<label class="undo-font-row__name">' . esc_html__( 'Family name', 'undo-theme' ) . '<input type="text" data-undo-font-name name="' . esc_attr( $base . '[name]' ) . '" value="' . esc_attr( $name ) . '" maxlength="80" required></label>';
+    foreach ( array( 'regular' => __( 'Regular WOFF2', 'undo-theme' ), 'bold' => __( 'Bold WOFF2 (optional)', 'undo-theme' ) ) as $weight => $label ) {
+        $attachment_id = isset( $font[ $weight . '_id' ] ) ? (int) $font[ $weight . '_id' ] : 0;
+        $attachment_url = $attachment_id && function_exists( 'wp_get_attachment_url' ) ? wp_get_attachment_url( $attachment_id ) : '';
+        $filename = $attachment_url ? wp_basename( $attachment_url ) : __( 'No file selected', 'undo-theme' );
+        echo '<div class="undo-font-row__file"><span class="undo-font-row__label">' . esc_html( $label ) . '</span><input type="hidden" data-undo-font-file="' . esc_attr( $weight ) . '" name="' . esc_attr( $base . '[' . $weight . '_id]' ) . '" value="' . esc_attr( $attachment_id ) . '"><span class="undo-font-row__filename" data-undo-font-filename="' . esc_attr( $weight ) . '">' . esc_html( $filename ) . '</span><button type="button" class="button" data-undo-font-upload="' . esc_attr( $weight ) . '">' . esc_html__( 'Choose WOFF2', 'undo-theme' ) . '</button><button type="button" class="button-link" data-undo-font-clear="' . esc_attr( $weight ) . '">' . esc_html__( 'Clear', 'undo-theme' ) . '</button></div>';
+    }
+    echo '<button type="button" class="button-link-delete undo-font-row__remove" data-undo-font-remove>' . esc_html__( 'Remove family', 'undo-theme' ) . '</button></div>';
+}
+function undo_render_font_collection() {
+    echo '<div class="undo-fonts"><input type="hidden" name="undo_theme_settings[custom_fonts_present]" value="1"><p class="description">' . esc_html__( 'Upload WOFF2 files to the WordPress Media Library. Add a regular file for each family; a bold file is optional. Uploaded files stay in Media Library during theme updates.', 'undo-theme' ) . '</p><div class="undo-fonts__list" data-undo-font-list>';
+    foreach ( undo_custom_fonts() as $index => $font ) { undo_render_font_row( $index, $font ); }
+    echo '</div><button type="button" class="button button-secondary" data-undo-font-add>' . esc_html__( 'Add font family', 'undo-theme' ) . '</button><p class="description">' . esc_html__( 'Up to 12 families. Choose a font below after naming it and selecting its regular file.', 'undo-theme' ) . '</p><template id="undo-font-row-template">';
+    undo_render_font_row( '__INDEX__', array( 'id' => '__ID__', 'name' => '', 'regular_id' => 0, 'bold_id' => 0 ) );
+    echo '</template></div>';
+}
+function undo_render_settings_group( $title, $fields ) {
+    echo '<section class="undo-settings__group"><h3>' . esc_html( $title ) . '</h3><table class="form-table" role="presentation">';
+    foreach ( $fields as $key => $field ) { undo_settings_field( $key, $field ); }
+    echo '</table></section>';
+}
 function undo_render_settings_page() {
     if ( ! current_user_can( 'manage_options' ) ) { return; }
     $sections = undo_settings_sections();
     $requested = isset( $_GET['tab'] ) && is_string( $_GET['tab'] ) ? sanitize_key( wp_unslash( $_GET['tab'] ) ) : 'layout';
     $active = isset( $sections[ $requested ] ) ? $requested : 'layout';
-    echo '<div class="wrap undo-settings"><header class="undo-settings__header"><span class="undo-settings__brand">UNDO</span><h1>' . esc_html__( 'UNDO Theme Settings', 'undo-theme' ) . '</h1></header><div class="undo-settings__layout"><nav class="undo-settings__nav" aria-label="' . esc_attr__( 'Theme settings sections', 'undo-theme' ) . '">';
+    echo '<div class="wrap undo-settings"><header class="undo-settings__header"><span class="undo-settings__brand">UNDO</span><h1>' . esc_html__( 'UNDO Theme Settings', 'undo-theme' ) . '</h1></header><form action="options.php" method="post" class="undo-settings__form">';
+    settings_fields( 'undo_theme_settings' );
+    echo '<div class="undo-settings__layout"><nav class="undo-settings__nav" role="tablist" aria-orientation="vertical" aria-label="' . esc_attr__( 'Theme settings sections', 'undo-theme' ) . '">';
     foreach ( $sections as $slug => $section ) {
         $url = add_query_arg( array( 'page' => 'undo-theme-settings', 'tab' => $slug ), admin_url( 'admin.php' ) );
-        echo '<a class="undo-settings__nav-link' . ( $active === $slug ? ' is-active' : '' ) . '" href="' . esc_url( $url ) . '"' . ( $active === $slug ? ' aria-current="page"' : '' ) . '>' . esc_html( $section[0] ) . '</a>';
+        echo '<a id="undo-tab-' . esc_attr( $slug ) . '" class="undo-settings__nav-link' . ( $active === $slug ? ' is-active' : '' ) . '" data-undo-tab="' . esc_attr( $slug ) . '" role="tab" aria-controls="undo-panel-' . esc_attr( $slug ) . '" aria-selected="' . ( $active === $slug ? 'true' : 'false' ) . '" href="' . esc_url( $url ) . '">' . esc_html( $section[0] ) . '</a>';
     }
-    echo '</nav><main class="undo-settings__content"><div class="undo-settings__intro"><h2>' . esc_html( $sections[ $active ][0] ) . '</h2><p>' . esc_html( $sections[ $active ][1] ) . '</p></div><form action="options.php" method="post">';
-    settings_fields( 'undo_theme_settings' );
-    if ( 'pages' === $active ) {
-        $template_fields = undo_page_template_fields();
-        $common_fields = array_diff_key( $sections[ $active ][2], $template_fields );
-        echo '<section class="undo-settings__group"><h3>' . esc_html__( 'Page display', 'undo-theme' ) . '</h3><table class="form-table" role="presentation">';
-        foreach ( $common_fields as $key => $field ) { undo_settings_field( $key, $field ); }
-        echo '</table></section><p class="undo-settings__hint">' . esc_html__( 'The UNDO Custom Width template uses a width set on each page below the editor.', 'undo-theme' ) . '</p>';
-        foreach ( undo_page_template_presets() as $mode => $preset ) {
-            echo '<section class="undo-settings__group"><h3>' . esc_html( $preset['title'] ) . '</h3><table class="form-table" role="presentation">';
-            foreach ( $template_fields as $key => $field ) { if ( 0 === strpos( $key, 'page_' . $mode . '_' ) ) { undo_settings_field( $key, $field ); } }
-            echo '</table></section>';
+    echo '</nav><main class="undo-settings__content">';
+    foreach ( $sections as $slug => $section ) {
+        echo '<section id="undo-panel-' . esc_attr( $slug ) . '" class="undo-settings__panel" data-undo-panel="' . esc_attr( $slug ) . '" role="tabpanel" aria-labelledby="undo-tab-' . esc_attr( $slug ) . '"' . ( $active === $slug ? '' : ' hidden' ) . '><div class="undo-settings__intro"><h2>' . esc_html( $section[0] ) . '</h2><p>' . esc_html( $section[1] ) . '</p></div>';
+        if ( 'pages' === $slug ) {
+            $template_fields = undo_page_template_fields();
+            undo_render_settings_group( __( 'Page display', 'undo-theme' ), array_diff_key( $section[2], $template_fields ) );
+            echo '<p class="undo-settings__hint">' . esc_html__( 'The UNDO Custom Width template uses a width set on each page below the editor.', 'undo-theme' ) . '</p>';
+            foreach ( undo_page_template_presets() as $mode => $preset ) {
+                $fields = array();
+                foreach ( $template_fields as $key => $field ) { if ( 0 === strpos( $key, 'page_' . $mode . '_' ) ) { $fields[ $key ] = $field; } }
+                undo_render_settings_group( $preset['title'], $fields );
+            }
+            echo '<p class="undo-settings__hint">' . esc_html__( 'On screens under 760px, side margins and padding are capped at 20px; top and bottom padding are capped at 58px and 90px.', 'undo-theme' ) . '</p>';
+        } elseif ( 'colors' === $slug ) {
+            undo_render_settings_group( __( 'Shared palette', 'undo-theme' ), array_slice( $section[2], 0, 6, true ) );
+            undo_render_settings_group( __( 'Header colors', 'undo-theme' ), array_slice( $section[2], 6, 4, true ) );
+            undo_render_settings_group( __( 'Content colors', 'undo-theme' ), array_slice( $section[2], 10, 3, true ) );
+            undo_render_settings_group( __( 'Footer colors', 'undo-theme' ), array_slice( $section[2], 13, 2, true ) );
+        } elseif ( 'typography' === $slug ) {
+            undo_render_settings_group( __( 'Uploaded fonts', 'undo-theme' ), array_slice( $section[2], 0, 1, true ) );
+            undo_render_settings_group( __( 'Assign fonts', 'undo-theme' ), array_slice( $section[2], 1, null, true ) );
+        } else {
+            echo '<table class="form-table" role="presentation">';
+            foreach ( $section[2] as $key => $field ) { undo_settings_field( $key, $field ); }
+            echo '</table>';
         }
-        echo '<p class="undo-settings__hint">' . esc_html__( 'On screens under 760px, side margins and padding are capped at 20px; top and bottom padding are capped at 58px and 90px.', 'undo-theme' ) . '</p>';
-    } else {
-        echo '<table class="form-table" role="presentation">';
-        foreach ( $sections[ $active ][2] as $key => $field ) { undo_settings_field( $key, $field ); }
-        echo '</table>';
+        echo '</section>';
     }
-    submit_button();
-    echo '</form></main></div></div>';
+    echo '<div class="undo-settings__actions"><span data-undo-dirty-status aria-live="polite"></span>';
+    submit_button( __( 'Save all changes', 'undo-theme' ) );
+    echo '</div></main></div></form></div>';
 }

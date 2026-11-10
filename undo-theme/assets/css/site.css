@@ -442,3 +442,19 @@ html[dir="rtl"] .page-body .alignfull{transform:translateX(50%)}
 .page-pagination a{min-width:36px;text-align:center}
 html[lang^="fa"] .page-header h1{letter-spacing:0;line-height:1.35}
 @media(max-width:760px){.undo-elementor-page,body.elementor-template-full-width .elementor[data-elementor-type="wp-page"]{min-height:calc(100svh - 66px)}.page-content{padding-block:58px 90px}.page-layout{--undo-page-side-space:min(var(--undo-page-margin-inline,48px),20px);padding-inline:min(var(--undo-page-padding-inline,0px),20px);padding-block-start:min(var(--undo-page-padding-top,112px),58px);padding-block-end:min(var(--undo-page-padding-bottom,160px),90px);min-height:calc(100svh - 66px)}.page-layout>.page-content{padding-block:0}.page-header h1{font-size:clamp(40px,10vw,62px)}.page-header--compact h1{font-size:clamp(32px,8vw,48px)}.page-body{font-size:16px;line-height:1.9}}
+
+/* Theme palette and type roles. Elementor widgets with explicit styles retain their own choices. */
+.site-header{--header-bg:var(--undo-header-light-bg);--header-ink:var(--undo-header-light-text);--header-panel:var(--undo-header-light-bg)}
+.site-header--dark{--header-bg:var(--undo-header-dark-bg);--header-ink:var(--undo-header-dark-text);--header-panel:var(--undo-header-dark-bg)}
+.site-header .header-action{background:var(--header-ink);color:var(--header-bg)}
+.site-header .desktop-nav,.site-header .mobile-nav{font-family:var(--undo-font-navigation,var(--body))}
+.site-header .header-action,.mobile-header-action,.button,.brief-form button,.undo-sidebar :is(button,input[type="submit"]){font-family:var(--undo-font-buttons,var(--body))}
+.page-content,.single-content{color:var(--undo-content-body)}
+.page-header h1,.single-header h1{color:var(--undo-content-title)}
+.page-header h1{font-family:var(--undo-font-page-title,inherit)}
+.single-header h1{font-family:var(--undo-font-post-title,inherit)}
+.undo-sidebar :is(.widget-title,.wp-block-heading){font-family:var(--undo-font-widget-title,var(--display))}
+.page-body a:not(.button),.single-body a:not(.button){color:var(--undo-content-link)}
+.footer{background:var(--undo-footer-bg);color:var(--undo-footer-text);font-family:var(--undo-font-footer,var(--body))}
+.footer-bottom{color:color-mix(in srgb,var(--undo-footer-text) 68%,var(--undo-footer-bg))}
+.footer-bottom nav{color:var(--undo-footer-text)}
