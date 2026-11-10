@@ -11,6 +11,7 @@ function wp_attachment_is_image( $id ) { return 42 === $id; }
 function get_post_mime_type( $id ) { return $GLOBALS['font_mimes'][ $id ] ?? ''; }
 function get_attached_file( $id ) { return $GLOBALS['font_files'][ $id ] ?? ''; }
 function sanitize_text_field( $value ) { return strip_tags( $value ); }
+function sanitize_key( $value ) { return strtolower( preg_replace( '/[^a-z0-9_\-]/i', '', (string) $value ) ); }
 function sanitize_hex_color( $value ) { return is_string( $value ) && preg_match( '/^#[0-9a-fA-F]{6}$/', $value ) ? strtolower( $value ) : null; }
 function esc_url( $value ) { return htmlspecialchars( $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8' ); }
 function esc_html( $value ) { return htmlspecialchars( $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8' ); }
