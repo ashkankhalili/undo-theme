@@ -2,6 +2,7 @@
 /** Behavioral checks for the built-in page renderer without a WordPress install. */
 define( 'ABSPATH', __DIR__ . '/' );
 function add_action( $hook, $callback ) {}
+function add_filter( $hook, $callback ) {}
 function __( $message, $domain = 'default' ) { return $message; }
 function get_option( $key, $default = false ) { return $GLOBALS['options'][ $key ] ?? $default; }
 function esc_attr( $value ) { return htmlspecialchars( $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8' ); }
