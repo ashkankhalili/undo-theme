@@ -4,6 +4,25 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-11-11
+
+### Footer milestone
+
+- Rebuilt the built-in footer around a project action, useful directory, and large UNDO wordmark. The responsive layout uses logical spacing, preserves a complete footer on ordinary pages, and respects reduced-motion preferences.
+- Added an optional second WordPress footer menu location. Main and second menu columns have editable Persian and English headings. The second column renders only when enabled and assigned a menu; the existing footer location and fallback remain intact.
+- Added optional email, phone, location, and six validated social URL fields. Empty contact and social groups do not render. Persian and Arabic phone digits are normalized for working `tel:` links; social URLs accept only HTTP(S).
+- Added editable Persian and English footer action labels, URL, legal note, and copyright line. `{year}` is replaced at render time. The privacy link uses the published Privacy Policy page configured in WordPress.
+- Grouped Footer settings into Statement and action, Menu columns, Contact and social, and Legal and copyright. Existing stored brand, footer-menu, contact email, slogan, and copyright values remain in use. Elementor Pro footer location still replaces the built-in footer.
+
+### فارسی
+
+- پایین صفحه با چیدمان واکنش‌گرا، دو ستون فهرست اختیاری، راه ارتباطی، پیوندهای اجتماعی و اطلاعات حقوقی بازطراحی شد. متن‌های مربوط به پیام، دکمه، عنوان فهرست‌ها، نشانی و حق نشر برای فارسی و انگلیسی جداگانه تنظیم می‌شوند.
+- اطلاعات خالی نمایش داده نمی‌شوند، شماره‌های فارسی برای پیوند تلفن تبدیل می‌شوند و قالب پایین صفحهٔ المنتور همچنان جایگزین قالب پیش‌فرض است.
+
+### Validation
+
+- Added footer settings, URL, phone, output, and Elementor fallback checks to PHP CI. Translation catalogs and the installable ZIP are regenerated. Live staging checks remain required before marking Stage 7 complete.
+
 ## [0.6.1] - 2026-11-10
 
 ### Blog and typography corrections

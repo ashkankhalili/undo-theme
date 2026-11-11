@@ -3,11 +3,11 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.6.1
+Stable tag: 0.7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, three blog layouts, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls pixel or percentage site width, colors, typography, Google and uploaded WOFF2 fonts, header, pages, posts, blog, physical sidebar position or visibility, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.
+A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, three blog layouts, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. The single-save settings dashboard controls layout, colors, typography, header, pages, posts, blog, sidebar, and a configurable footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.
 
 == Features ==
 * Initial language follows WordPress Site Language; Persian and English visitor overrides, compiled translations, and dedicated RTL stylesheet are included.
@@ -19,6 +19,7 @@ A bilingual WordPress theme for creative agencies and studios. The initial langu
 * Reading, wide, boxed, and full-width page templates each have width, margin, and padding controls in Pages settings. The default can be overridden in the WordPress or Elementor page template selector. UNDO Custom Width uses only a per-page pixel/percentage field below the WordPress editor, visible when that template is selected.
 * Physical left/right or hidden widget sidebar with lined or panel styling, adjustable width and spacing, context visibility, and optional sticky behavior that stops when the widget area is too tall. On small screens the sidebar follows the main content.
 * Editorial list, image grid, and journal grid for blog indexes, archives, and search results; grid column count is configurable. Blog Settings can choose a published WordPress posts page, which follows Settings > Reading.
+* Footer stage: responsive statement and action, two optional menu columns, email/phone/location, validated social links, copyright with a current-year token, and the configured WordPress Privacy Policy link. Text settings have Persian and English values; Elementor Pro's footer template can replace the built-in footer.
 * Elementor-compatible page layouts and Elementor Pro Theme Builder location support.
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
@@ -32,6 +33,9 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.7.0 =
+* Built the footer stage with responsive layout, two menu locations, contact and social links, copyright/legal text, and automatic Privacy Policy link.
+* Added grouped bilingual footer settings and kept Elementor Theme Builder replacement behavior.
 = 0.6.1 =
 * Added a published-page selector for the WordPress posts page in Blog Settings.
 * Named the original English/Persian font choices and arranged all typography controls for each text role on one horizontal row.

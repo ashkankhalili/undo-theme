@@ -146,7 +146,7 @@ Implemented by 0.6.0: classic theme skeleton, theme.json, reading, wide, boxed, 
 
 Outstanding: live WordPress/Elementor and dashboard-update validation; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks.
 
-**Current execution milestone:** install 0.6.0 from WordPress Updates. Test the pixel/percentage width, physical sidebar placement/hiding in both directions, three blog designs, typography details, and Google-off behavior. Recheck prior page, header, and sidebar controls, Persian and English content, and Elementor Full Width, Canvas, and Theme Builder fallbacks before marking stages complete.
+**Current execution milestone:** install 0.7.0 from WordPress Updates. Validate the footer in Persian and English: assigned and empty menu locations, optional contact/social/legal content, safe links, narrow screens, RTL, reduced motion, and Elementor Pro footer replacement. Recheck the earlier 0.6.0–0.6.1 layout, blog page, typography, header, sidebar, and page controls before marking stages complete.
 
 ## Primary references
 

@@ -11,7 +11,7 @@ Each stage is complete only after template behavior, Persian and English copy, R
 | 4. Pages | Reading, wide, boxed, full and custom-width templates, breadcrumbs, title modes, Elementor compatibility | 0.3.0 exposed a width bug on staging; 0.3.1 and 0.3.2 fixed the page-width cases; 0.3.3 adds per-template width/spacing controls and the conditional per-page Custom Width panel; live retest pending |
 | 5. Sidebar | Widget spacing, sticky behavior, layout modes, RTL placement | 0.6.0 adds physical Left/Right/Hidden while mapping earlier logical choices; live widget and RTL checks pending |
 | 6. Blog | Archive cards, pagination, taxonomy/search states and empty states | Three list/grid designs implemented in 0.6.0; live archive, search, RTL, and Elementor checks pending |
-| 7. Footer | Menu columns, contact blocks, legal text and social links | Basic controls implemented; visual design next |
+| 7. Footer | Menu columns, contact blocks, legal text and social links | Implemented in 0.7.0 with bilingual controls, responsive design, validated links, and Elementor fallback; live staging validation pending |
 | 8. Homepage | Editable sections, content model, accessible motion, Elementor starter layout | Existing landing page; configurable sections next |
 | 9. Elementor integration | Elementor Free/Pro/absent-plugin scenarios, page templates and location fallbacks | Basic location hooks implemented; matrix pending |
 | 10. UNDO Elements addon | Separate plugin, first Elementor widget set, planner migration | Planned |

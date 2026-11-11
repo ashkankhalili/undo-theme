@@ -49,6 +49,7 @@
 .undo-settings .form-table th{width:260px;padding-block:17px;padding-inline:0 24px;color:#34332f;font-weight:600;line-height:1.5}
 .undo-settings .form-table td{padding:12px 0}
 .undo-settings .form-table :is(input[type="text"],input[type="number"],input[type="email"],input[type="url"],select,textarea){max-width:100%;border-color:#c9c6bf;border-radius:5px;background:#fff}
+.undo-settings .form-table input[type="tel"]{max-width:100%;min-height:38px;border-color:#c9c6bf;border-radius:5px;background:#fff}
 .undo-settings .form-table :is(input[type="text"],input[type="number"],input[type="email"],input[type="url"],select){min-height:38px}
 .undo-settings .form-table input[type="color"]{width:70px;height:40px;padding:3px;border:1px solid #c9c6bf;border-radius:5px;background:#fff;cursor:pointer}
 .undo-optional-color{display:flex;flex-wrap:wrap;align-items:center;gap:10px}

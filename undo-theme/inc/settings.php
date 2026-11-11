@@ -136,11 +136,35 @@ function undo_settings_sections() {
             'blog_columns' => array( __( 'Grid columns', 'undo-theme' ), 'select', '2', array( '1' => '1', '2' => '2', '3' => '3' ) ),
             'blog_excerpt_length' => array( __( 'Excerpt length in words', 'undo-theme' ), 'number', '30', array( 10, 80 ) ),
         ) ),
-        'footer' => array( __( 'Footer', 'undo-theme' ), __( 'Built-in footer settings. Elementor Theme Builder can replace this template.', 'undo-theme' ), array(
+        'footer' => array( __( 'Footer', 'undo-theme' ), __( 'Build the footer with menus, contact details, social links, and legal copy. Elementor Theme Builder can replace it.', 'undo-theme' ), array(
             'footer_show_brand' => array( __( 'Show footer brand', 'undo-theme' ), 'checkbox', '1' ),
             'footer_show_navigation' => array( __( 'Show footer navigation', 'undo-theme' ), 'checkbox', '1' ),
-            'footer_show_contact' => array( __( 'Show contact email', 'undo-theme' ), 'checkbox', '1' ),
+            'footer_show_secondary_navigation' => array( __( 'Show second menu column', 'undo-theme' ), 'checkbox', '0' ),
+            'footer_menu_title_fa' => array( __( 'Main menu heading (Persian)', 'undo-theme' ), 'text', 'کاوش', array(), 'footer_show_navigation' ),
+            'footer_menu_title_en' => array( __( 'Main menu heading (English)', 'undo-theme' ), 'text', 'Explore', array(), 'footer_show_navigation' ),
+            'footer_secondary_title_fa' => array( __( 'Second menu heading (Persian)', 'undo-theme' ), 'text', 'بیشتر', array(), 'footer_show_secondary_navigation' ),
+            'footer_secondary_title_en' => array( __( 'Second menu heading (English)', 'undo-theme' ), 'text', 'More', array(), 'footer_show_secondary_navigation' ),
+            'footer_show_action' => array( __( 'Show footer action', 'undo-theme' ), 'checkbox', '1' ),
+            'footer_action_label_fa' => array( __( 'Footer action label (Persian)', 'undo-theme' ), 'text', 'برنامه‌ریزی پروژه', array(), 'footer_show_action' ),
+            'footer_action_label_en' => array( __( 'Footer action label (English)', 'undo-theme' ), 'text', 'Plan a project', array(), 'footer_show_action' ),
+            'footer_action_url' => array( __( 'Footer action URL', 'undo-theme' ), 'url', '#project-planner', array(), 'footer_show_action' ),
+            'footer_show_contact' => array( __( 'Show contact details', 'undo-theme' ), 'checkbox', '1' ),
+            'footer_contact_phone' => array( __( 'Contact phone', 'undo-theme' ), 'phone', '', array(), 'footer_show_contact' ),
+            'footer_contact_address_fa' => array( __( 'Contact location (Persian)', 'undo-theme' ), 'text', '', array(), 'footer_show_contact' ),
+            'footer_contact_address_en' => array( __( 'Contact location (English)', 'undo-theme' ), 'text', '', array(), 'footer_show_contact' ),
+            'footer_show_social' => array( __( 'Show social links', 'undo-theme' ), 'checkbox', '0' ),
+            'footer_social_instagram' => array( __( 'Instagram URL', 'undo-theme' ), 'external_url', '', array(), 'footer_show_social' ),
+            'footer_social_linkedin' => array( __( 'LinkedIn URL', 'undo-theme' ), 'external_url', '', array(), 'footer_show_social' ),
+            'footer_social_telegram' => array( __( 'Telegram URL', 'undo-theme' ), 'external_url', '', array(), 'footer_show_social' ),
+            'footer_social_github' => array( __( 'GitHub URL', 'undo-theme' ), 'external_url', '', array(), 'footer_show_social' ),
+            'footer_social_youtube' => array( __( 'YouTube URL', 'undo-theme' ), 'external_url', '', array(), 'footer_show_social' ),
+            'footer_social_x' => array( __( 'X URL', 'undo-theme' ), 'external_url', '', array(), 'footer_show_social' ),
             'footer_show_copyright' => array( __( 'Show copyright', 'undo-theme' ), 'checkbox', '1' ),
+            'footer_copyright_fa' => array( __( 'Copyright line (Persian)', 'undo-theme' ), 'text', '© {year} UNDO Web Developments', array(), 'footer_show_copyright' ),
+            'footer_copyright_en' => array( __( 'Copyright line (English)', 'undo-theme' ), 'text', '© {year} UNDO Web Developments', array(), 'footer_show_copyright' ),
+            'footer_show_legal' => array( __( 'Show legal links and note', 'undo-theme' ), 'checkbox', '1' ),
+            'footer_legal_fa' => array( __( 'Legal note (Persian)', 'undo-theme' ), 'text', '', array(), 'footer_show_legal' ),
+            'footer_legal_en' => array( __( 'Legal note (English)', 'undo-theme' ), 'text', '', array(), 'footer_show_legal' ),
             'footer_slogan_fa' => array( __( 'Footer slogan (Persian)', 'undo-theme' ), 'text', 'برای شما از نو می‌سازیم.' ),
             'footer_slogan_en' => array( __( 'Footer slogan (English)', 'undo-theme' ), 'text', 'WE REDO IT FOR YOU.' ),
             'contact_email' => array( __( 'Contact email', 'undo-theme' ), 'email', '' ),
@@ -243,6 +267,10 @@ function undo_sanitize_site_dimension( $value ) {
     if ( preg_match( '/^[0-9]{3,4}$/', $value ) ) { $value .= 'px'; }
     return undo_sanitize_page_dimension( $value, '1440px' );
 }
+function undo_sanitize_phone( $value ) {
+    $value = strtr( (string) $value, array( '۰' => '0', '۱' => '1', '۲' => '2', '۳' => '3', '۴' => '4', '۵' => '5', '۶' => '6', '۷' => '7', '۸' => '8', '۹' => '9', '٠' => '0', '١' => '1', '٢' => '2', '٣' => '3', '٤' => '4', '٥' => '5', '٦' => '6', '٧' => '7', '٨' => '8', '٩' => '9' ) );
+    return substr( preg_replace( '/[^0-9+() .\-]/', '', $value ), 0, 64 );
+}
 function undo_sanitize_settings( $input ) {
     $input = is_array( $input ) ? $input : array();
     $previous = get_option( 'undo_theme_settings', array() );
@@ -286,6 +314,11 @@ function undo_sanitize_settings( $input ) {
                 case 'textarea': $clean[ $key ] = sanitize_textarea_field( $value ); break;
                 case 'url': $clean[ $key ] = 0 === strpos( $value, '#' ) ? sanitize_text_field( $value ) : esc_url_raw( $value ); break;
                 case 'email': $clean[ $key ] = sanitize_email( $value ); break;
+                case 'phone': $clean[ $key ] = undo_sanitize_phone( $value ); break;
+                case 'external_url':
+                    $url = esc_url_raw( $value, array( 'http', 'https' ) );
+                    $clean[ $key ] = in_array( wp_parse_url( $url, PHP_URL_SCHEME ), array( 'http', 'https' ), true ) ? $url : '';
+                    break;
                 default: $clean[ $key ] = sanitize_text_field( $value );
             }
         }
@@ -343,6 +376,8 @@ function undo_settings_field( $key, $field, $control_only = false ) {
         foreach ( undo_custom_fonts() as $font ) { if ( isset( $font['id'], $font['name'] ) ) { echo '<option data-undo-custom-font value="' . esc_attr( $font['id'] ) . '"' . selected( $value, $font['id'], false ) . '>' . esc_html( $font['name'] ) . '</option>'; } }
         echo '</optgroup>';
         echo '</select>';
+    } elseif ( 'external_url' === $field[1] || 'phone' === $field[1] ) {
+        echo '<input type="' . ( 'external_url' === $field[1] ? 'url' : 'tel' ) . '" id="undo-' . esc_attr( $key ) . '" name="' . $name . '" value="' . esc_attr( $value ) . '" class="regular-text" dir="auto">';
     } elseif ( 'page_choice' === $field[1] ) {
         echo '<select id="undo-' . esc_attr( $key ) . '" name="' . $name . '"><option value="0"' . selected( $value, '0', false ) . '>' . esc_html__( 'No dedicated posts page', 'undo-theme' ) . '</option>';
         $front_id = absint( get_option( 'page_on_front', 0 ) );
@@ -458,6 +493,20 @@ function undo_render_settings_page() {
                 undo_render_typography_row( $role, $label, $fields );
             }
             echo '</tbody></table></div>';
+        } elseif ( 'footer' === $slug ) {
+            $footer_groups = array(
+                __( 'Statement and action', 'undo-theme' ) => array( 'footer_show_brand', 'footer_slogan_fa', 'footer_slogan_en', 'footer_show_action', 'footer_action_label_fa', 'footer_action_label_en', 'footer_action_url' ),
+                __( 'Menu columns', 'undo-theme' ) => array( 'footer_show_navigation', 'footer_menu_title_fa', 'footer_menu_title_en', 'footer_show_secondary_navigation', 'footer_secondary_title_fa', 'footer_secondary_title_en' ),
+                __( 'Contact and social', 'undo-theme' ) => array( 'footer_show_contact', 'contact_email', 'footer_contact_phone', 'footer_contact_address_fa', 'footer_contact_address_en', 'footer_show_social', 'footer_social_instagram', 'footer_social_linkedin', 'footer_social_telegram', 'footer_social_github', 'footer_social_youtube', 'footer_social_x' ),
+                __( 'Legal and copyright', 'undo-theme' ) => array( 'footer_show_copyright', 'footer_copyright_fa', 'footer_copyright_en', 'footer_show_legal', 'footer_legal_fa', 'footer_legal_en' ),
+            );
+            foreach ( $footer_groups as $title => $keys ) {
+                $group_fields = array();
+                foreach ( $keys as $key ) { $group_fields[ $key ] = $section[2][ $key ]; }
+                undo_render_settings_group( $title, $group_fields );
+            }
+            echo '<p class="undo-settings__hint">' . esc_html__( 'Assign the Footer and Footer secondary menu locations in Appearance → Menus. The second column appears only when it has an assigned menu.', 'undo-theme' ) . ' <a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '">' . esc_html__( 'Open Menus', 'undo-theme' ) . '</a></p>';
+            echo '<p class="undo-settings__hint">' . esc_html__( 'Use {year} in copyright text for the current year. The privacy link appears only when a published Privacy Policy page is configured in WordPress.', 'undo-theme' ) . '</p>';
         } else {
             echo '<table class="form-table" role="presentation">';
             foreach ( $section[2] as $key => $field ) { undo_settings_field( $key, $field ); }

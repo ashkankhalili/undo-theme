@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.6.1' );
+define( 'UNDO_THEME_VERSION', '0.7.0' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/page-layout.php';
 require_once get_template_directory() . '/inc/github-updater.php';
@@ -18,7 +18,7 @@ function undo_theme_setup() {
 add_action( 'after_setup_theme', 'undo_theme_setup' );
 
 function undo_register_menus() {
-    register_nav_menus( array( 'primary' => __( 'Primary menu', 'undo-theme' ), 'footer' => __( 'Footer menu', 'undo-theme' ) ) );
+    register_nav_menus( array( 'primary' => __( 'Primary menu', 'undo-theme' ), 'footer' => __( 'Footer menu', 'undo-theme' ), 'footer_secondary' => __( 'Footer secondary menu', 'undo-theme' ) ) );
 }
 add_action( 'init', 'undo_register_menus', 2 );
 
@@ -76,6 +76,23 @@ function undo_language() { return 'fa' === undo_requested_language() ? 'fa' : 'e
 function undo_cta_url() {
     $url = undo_setting( 'cta_url' );
     return '#' === substr( $url, 0, 1 ) && ! is_front_page() ? home_url( '/' ) . $url : $url;
+}
+function undo_footer_action_url() {
+    $url = undo_setting( 'footer_action_url' );
+    return '#' === substr( $url, 0, 1 ) && ! is_front_page() ? home_url( '/' ) . $url : $url;
+}
+function undo_footer_copyright() {
+    $text = undo_content( 'footer_copyright', '© {year} UNDO Web Developments' );
+    return str_replace( '{year}', wp_date( 'Y' ), $text );
+}
+function undo_footer_social_links() {
+    $networks = array( 'instagram' => 'Instagram', 'linkedin' => 'LinkedIn', 'telegram' => 'Telegram', 'github' => 'GitHub', 'youtube' => 'YouTube', 'x' => 'X' );
+    $links = array();
+    foreach ( $networks as $key => $label ) {
+        $url = undo_setting( 'footer_social_' . $key );
+        if ( in_array( wp_parse_url( $url, PHP_URL_SCHEME ), array( 'http', 'https' ), true ) ) { $links[] = array( 'label' => $label, 'url' => $url ); }
+    }
+    return $links;
 }
 function undo_content( $key, $fallback ) {
     $value = undo_setting( $key . '_' . undo_language() );

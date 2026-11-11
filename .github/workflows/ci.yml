@@ -30,6 +30,7 @@ jobs:
           php tests/header-settings.php
           php tests/page-layout.php
           php tests/sidebar.php
+          php tests/footer-settings.php
 
   package:
     name: Translation and package integrity

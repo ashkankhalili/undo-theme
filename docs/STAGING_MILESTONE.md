@@ -40,6 +40,7 @@ The owner installed 0.3.0 and supplied screenshots showing that its UNDO Full Wi
 | 23 | Test 0.6.0 layout and sidebar | Save `80%` and `1200px` in Website Layout and confirm the frontend container changes; an old numeric value still resolves to pixels. In RTL and LTR, check physical Left and Right on posts, pages, archives, and search. Hidden outputs no built-in sidebar even if widgets and context toggles remain enabled. |
 | 24 | Test blog designs | Compare Editorial list, Image grid, and Journal grid on blog, archive, and search with featured-image and image-free posts, long Persian/English titles, grid column choices, pagination, RTL, desktop, and phone widths. Confirm Elementor Theme Builder archive replacement still takes priority. |
 | 25 | Test detailed typography | In each role, save a family, size, weight, italic/normal, line height, letter spacing, and hex color. Reload and confirm values and frontend output. Turn Google loading off and verify no `fonts.googleapis.com` stylesheet request; system and uploaded fonts still work. Turn it back on and confirm selected Google families load. |
+| 26 | Test 0.7.0 footer | Check Persian and English on desktop and phone. Assign only Footer, then both Footer and Footer secondary menus; switch the second column off and on. Check empty contact/social groups, then valid email, Persian-digit phone, location, and each social URL. Confirm bad URL input does not render, `{year}` resolves, and Privacy Policy appears only when published and configured. Test action link from a post, RTL, reduced motion, keyboard focus, Elementor Pro footer replacement, and no duplicate footer. |
 
 Use Persian and English content with long titles, mixed Latin text, and varied images. For multilingual SEO, test a separately chosen content translation plugin and translated URLs; the theme's language cookie only switches built-in strings.
 
@@ -49,4 +50,4 @@ Create one dated test report in `docs/staging-reports/` after installation. Reco
 
 ## Exit condition
 
-All rows pass or have a documented non-blocking exception. Only then mark Stage 1 validated in the roadmap and start Stage 2 header work. Publishing a customer release requires the later release gates in the blueprint.
+Mark a roadmap stage validated only when its relevant rows pass or have a documented non-blocking exception. Stages that have been implemented while staging checks are pending stay marked pending in the roadmap. Publishing a customer release requires the later release gates in the blueprint.

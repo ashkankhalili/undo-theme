@@ -38,4 +38,4 @@ New visitors see the language selected in WordPress Site Language. See the [prem
 
 ## First online milestone
 
-Source repository: `https://github.com/ashkankhalili/undo-theme`. The owner-designated staging site is `https://ashkankhalili.ir`. Follow the [staging milestone](docs/STAGING_MILESTONE.md): update to 0.6.0 through WordPress, then check the new width, sidebar, blog, and typography settings alongside the prior controls. A GitHub push or passing CI does not by itself validate live WordPress behavior.
+Source repository: `https://github.com/ashkankhalili/undo-theme`. The owner-designated staging site is `https://ashkankhalili.ir`. Follow the [staging milestone](docs/STAGING_MILESTONE.md): update to 0.7.0 through WordPress, then check the footer in both languages and Elementor alongside the earlier width, sidebar, blog, and typography controls. A GitHub push or passing CI does not by itself validate live WordPress behavior.
