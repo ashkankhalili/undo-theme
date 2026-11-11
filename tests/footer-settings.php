@@ -11,7 +11,6 @@ function esc_html_e( $text, $domain = 'default' ) { echo htmlspecialchars( $text
 function esc_attr_e( $text, $domain = 'default' ) { echo htmlspecialchars( $text, ENT_QUOTES, 'UTF-8' ); }
 function esc_html( $text ) { return htmlspecialchars( $text, ENT_QUOTES, 'UTF-8' ); }
 function esc_attr( $text ) { return htmlspecialchars( $text, ENT_QUOTES, 'UTF-8' ); }
-function esc_attr__( $text, $domain = 'default' ) { return htmlspecialchars( $text, ENT_QUOTES, 'UTF-8' ); }
 function esc_url( $text ) { return htmlspecialchars( $text, ENT_QUOTES, 'UTF-8' ); }
 function esc_url_raw( $text, $protocols = array( 'http', 'https' ) ) { return in_array( parse_url( $text, PHP_URL_SCHEME ), $protocols, true ) ? $text : ''; }
 function wp_parse_url( $url, $component = -1 ) { return parse_url( $url, $component ); }
