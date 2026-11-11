@@ -1,0 +1,88 @@
+{
+  "title": "UNDO Footer — English",
+  "type": "footer",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "798932f1",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_css_classes": "undo-starter-footer undo-starter--en"
+      },
+      "elements": [
+        {
+          "id": "2333353c",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "_css_classes": "undo-starter-footer-top"
+          },
+          "elements": [
+            {
+              "id": "1e0f25cd",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "WE REDO IT FOR YOU.",
+                "header_size": "h2",
+                "_css_classes": "undo-starter-footer-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "f91d16b4",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Plan a project",
+                "link": {
+                  "url": "#project-planner"
+                },
+                "_css_classes": "undo-starter-button"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "8fa245c1",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "isInner": false,
+          "settings": {
+            "editor": "Websites, WordPress plugins and mobile apps, designed for what comes next.",
+            "_css_classes": "undo-starter-footer-note"
+          },
+          "elements": []
+        },
+        {
+          "id": "40221dea",
+          "elType": "widget",
+          "widgetType": "shortcode",
+          "isInner": false,
+          "settings": {
+            "shortcode": "[undo_footer_widgets]",
+            "_css_classes": "undo-starter-widget-shortcode"
+          },
+          "elements": []
+        },
+        {
+          "id": "075338c1",
+          "elType": "widget",
+          "widgetType": "heading",
+          "isInner": false,
+          "settings": {
+            "title": "UNDO",
+            "header_size": "div",
+            "_css_classes": "undo-starter-footer-brand"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

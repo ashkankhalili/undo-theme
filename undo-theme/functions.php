@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.7.0' );
+define( 'UNDO_THEME_VERSION', '0.8.0' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/page-layout.php';
 require_once get_template_directory() . '/inc/github-updater.php';
@@ -32,8 +32,44 @@ function undo_register_sidebars() {
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
     ) );
+    for ( $area = 1; $area <= 3; $area++ ) {
+        register_sidebar( array(
+            'name' => sprintf( __( 'Footer widget area %d', 'undo-theme' ), $area ),
+            'id' => 'footer-widget-' . $area,
+            'description' => __( 'Add blocks or widgets here to show them above the footer wordmark.', 'undo-theme' ),
+            'before_widget' => '<section id="%1$s" class="widget footer-widget %2$s">',
+            'after_widget' => '</section>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ) );
+    }
 }
 add_action( 'widgets_init', 'undo_register_sidebars' );
+
+function undo_active_footer_widget_areas() {
+    if ( ! undo_setting_enabled( 'footer_show_widgets' ) ) { return array(); }
+    $areas = array();
+    for ( $area = 1; $area <= 3; $area++ ) {
+        $id = 'footer-widget-' . $area;
+        if ( is_active_sidebar( $id ) ) { $areas[] = $id; }
+    }
+    return $areas;
+}
+
+function undo_footer_widgets_markup() {
+    $areas = undo_active_footer_widget_areas();
+    if ( ! $areas ) { return ''; }
+    ob_start();
+    echo '<div class="footer-widgets footer-widgets--' . esc_attr( count( $areas ) ) . '" aria-label="' . esc_attr__( 'Footer widgets', 'undo-theme' ) . '">';
+    foreach ( $areas as $area ) {
+        echo '<div class="footer-widget-area">';
+        dynamic_sidebar( $area );
+        echo '</div>';
+    }
+    echo '</div>';
+    return ob_get_clean();
+}
+add_shortcode( 'undo_footer_widgets', 'undo_footer_widgets_markup' );
 
 function undo_body_classes( $classes ) {
     $classes[] = 'boxed' === undo_setting( 'site_layout' ) ? 'undo-layout-boxed' : 'undo-layout-wide';

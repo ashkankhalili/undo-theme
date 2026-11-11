@@ -4,6 +4,24 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-11-11
+
+### Footer widgets and Elementor starters
+
+- Registered three footer widget areas for WordPress blocks/widgets. The Footer settings page can show or hide them without deleting assignments; only populated areas render. Their responsive layout supports RTL and keyboard focus.
+- Added the `[undo_footer_widgets]` shortcode so an Elementor Pro footer can include the same widget areas. The built-in footer remains the fallback and never duplicates an assigned Elementor Pro footer.
+- Bundled eight importable Elementor JSON starters: editable Home pages for Elementor Free and Header, Footer, and dynamic Blog Archive site parts for Elementor Pro, each in English and Persian. The templates are examples and are not auto-imported or used to overwrite customer content during updates.
+- Added starter import and assignment instructions, language limitations, staging checks, and CI checks for the JSON structure and package contents. The native theme templates remain the live defaults until a replacement is assigned.
+
+### فارسی
+
+- سه ناحیهٔ ابزارک برای پایین صفحه اضافه شد. فقط ناحیه‌های دارای ابزارک نمایش داده می‌شوند و نمایش آن‌ها از تنظیمات پوسته قابل تغییر است.
+- هشت قالب آغازین المنتور برای صفحهٔ اصلی، سربرگ، پایین صفحه و بایگانی وبلاگ به فارسی و انگلیسی اضافه شد. صفحهٔ اصلی با نسخهٔ رایگان و بخش‌های سراسری با Elementor Pro کار می‌کنند. در به‌روزرسانی پوسته، محتوای ویرایش‌شدهٔ کاربران بازنویسی نمی‌شود.
+
+### Validation
+
+- Added PHP checks for footer widget registration, empty/disabled areas, rendered output and Elementor fallback. JSON templates are structurally checked in CI and included in the installable ZIP. Import and display-condition behavior still require the live staging matrix.
+
 ## [0.7.0] - 2026-11-11
 
 ### Footer milestone

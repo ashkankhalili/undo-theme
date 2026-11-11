@@ -1,0 +1,277 @@
+{
+  "title": "UNDO Home — English",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "578f07f3",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_css_classes": "undo-starter-home undo-starter--en"
+      },
+      "elements": [
+        {
+          "id": "36c65a26",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "_css_classes": "undo-starter-hero"
+          },
+          "elements": [
+            {
+              "id": "8062d432",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Websites, plugins & apps made better.",
+                "header_size": "h1",
+                "_css_classes": "undo-starter-display"
+              },
+              "elements": []
+            },
+            {
+              "id": "f777bb25",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "We create new digital products and redesign the ones that no longer serve your business.",
+                "_css_classes": "undo-starter-lead"
+              },
+              "elements": []
+            },
+            {
+              "id": "67828544",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Plan a project",
+                "link": {
+                  "url": "#project-planner"
+                },
+                "_css_classes": "undo-starter-button"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "0266d1e5",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "_css_classes": "undo-starter-services"
+          },
+          "elements": [
+            {
+              "id": "db67332b",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "What we build.",
+                "header_size": "h2",
+                "_css_classes": "undo-starter-section-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "41c2cdd8",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "_css_classes": "undo-starter-service-list"
+              },
+              "elements": [
+                {
+                  "id": "8b1e64ee",
+                  "elType": "container",
+                  "isInner": false,
+                  "settings": {
+                    "_css_classes": "undo-starter-service"
+                  },
+                  "elements": [
+                    {
+                      "id": "6299b4a6",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Websites",
+                        "header_size": "h3",
+                        "_css_classes": ""
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "5bad6fe7",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "New sites and thoughtful redesigns that communicate clearly and work across every screen.",
+                        "_css_classes": ""
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "9d518462",
+                  "elType": "container",
+                  "isInner": false,
+                  "settings": {
+                    "_css_classes": "undo-starter-service"
+                  },
+                  "elements": [
+                    {
+                      "id": "cc617167",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "WordPress plugins",
+                        "header_size": "h3",
+                        "_css_classes": ""
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "1def38fd",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "Custom tools that add the features your website and workflow actually need.",
+                        "_css_classes": ""
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "a1e3c516",
+                  "elType": "container",
+                  "isInner": false,
+                  "settings": {
+                    "_css_classes": "undo-starter-service"
+                  },
+                  "elements": [
+                    {
+                      "id": "2e0750af",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Mobile apps",
+                        "header_size": "h3",
+                        "_css_classes": ""
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "b1faa9ac",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "Mobile experiences built around the people who use them every day.",
+                        "_css_classes": ""
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ab8880ea",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "_css_classes": "undo-starter-method"
+          },
+          "elements": [
+            {
+              "id": "d43d7037",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Create new. Redo what exists.",
+                "header_size": "h2",
+                "_css_classes": "undo-starter-section-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "ce0d8cb0",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "We map the problem, shape the experience, then build and refine the result.",
+                "_css_classes": "undo-starter-lead"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "0b353b8c",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "_css_classes": "undo-starter-close",
+            "_element_id": "project-planner"
+          },
+          "elements": [
+            {
+              "id": "37f1ed87",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Tell us what you want to make.",
+                "header_size": "h2",
+                "_css_classes": "undo-starter-section-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "e974fd40",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "Start with the essentials. We will shape the next version together.",
+                "_css_classes": "undo-starter-lead"
+              },
+              "elements": []
+            },
+            {
+              "id": "eb2f655b",
+              "elType": "widget",
+              "widgetType": "button",
+              "isInner": false,
+              "settings": {
+                "text": "Plan a project",
+                "link": {
+                  "url": "#project-planner"
+                },
+                "_css_classes": "undo-starter-button"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

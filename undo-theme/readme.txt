@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.7.0
+Stable tag: 0.8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,12 +19,12 @@ A bilingual WordPress theme for creative agencies and studios. The initial langu
 * Reading, wide, boxed, and full-width page templates each have width, margin, and padding controls in Pages settings. The default can be overridden in the WordPress or Elementor page template selector. UNDO Custom Width uses only a per-page pixel/percentage field below the WordPress editor, visible when that template is selected.
 * Physical left/right or hidden widget sidebar with lined or panel styling, adjustable width and spacing, context visibility, and optional sticky behavior that stops when the widget area is too tall. On small screens the sidebar follows the main content.
 * Editorial list, image grid, and journal grid for blog indexes, archives, and search results; grid column count is configurable. Blog Settings can choose a published WordPress posts page, which follows Settings > Reading.
-* Footer stage: responsive statement and action, two optional menu columns, email/phone/location, validated social links, copyright with a current-year token, and the configured WordPress Privacy Policy link. Text settings have Persian and English values; Elementor Pro's footer template can replace the built-in footer.
-* Elementor-compatible page layouts and Elementor Pro Theme Builder location support.
+* Footer stage: responsive statement and action, two optional menu columns, email/phone/location, validated social links, copyright with a current-year token, the configured WordPress Privacy Policy link, and three optional widget areas. Text settings have Persian and English values; Elementor Pro's footer template can replace the built-in footer.
+* Elementor-compatible page layouts and Elementor Pro Theme Builder location support. Importable English/Persian Home starters work with Elementor Free; Header, Footer and Blog Archive starters work with Elementor Pro. They are in elementor-templates/ and are not applied during theme updates.
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
 == Limitations ==
-Elementor is optional; Elementor Pro is needed for Theme Builder location replacement. Elementor widgets with explicit colors or fonts keep their own styling. User-created pages and posts require a multilingual content solution for translation. Dedicated UNDO Elementor widgets are planned and are not included yet. This theme is still a pre-release under staging validation.
+Elementor is optional; Elementor Pro is needed for Theme Builder location replacement and the Header, Footer and Blog Archive starters. Elementor widgets with explicit colors or fonts keep their own styling. The language switcher does not translate Elementor-authored page or template content; production bilingual content requires a multilingual content solution. Dedicated UNDO Elementor widgets are planned and are not included yet. Imported starter behavior still needs live staging verification. This theme is still a pre-release under staging validation.
 
 == Installation ==
 Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Theme Settings in the main admin menu.
@@ -33,6 +33,10 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.8.0 =
+* Added three optional, responsive footer widget areas, with a Theme Settings toggle and support for the [undo_footer_widgets] shortcode in an Elementor Pro footer.
+* Bundled importable Home page starters for Elementor Free and Header, Footer and dynamic Blog Archive starters for Elementor Pro in English and Persian.
+* Kept theme PHP templates as reliable fallbacks and documented import, language and upgrade behavior.
 = 0.7.0 =
 * Built the footer stage with responsive layout, two menu locations, contact and social links, copyright/legal text, and automatic Privacy Policy link.
 * Added grouped bilingual footer settings and kept Elementor Theme Builder replacement behavior.

@@ -520,6 +520,20 @@ html[lang^="fa"] .footer-invite h2{max-width:15ch;letter-spacing:0;line-height:1
 .footer-column a:hover{text-decoration-color:currentColor}
 .footer-contact a,.footer-contact address{display:block;margin-block-end:12px}
 .footer-contact address{font-style:normal;opacity:.8;white-space:pre-line}
+.footer-widgets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,68px);padding-block:clamp(38px,5vw,72px);border-block-start:1px solid color-mix(in srgb,var(--undo-footer-text) 24%,transparent)}
+.footer-widgets--1{grid-template-columns:minmax(0,1fr)}
+.footer-widgets--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.footer-widget-area,.footer-widget{min-width:0}
+.footer-widget+.footer-widget{margin-block-start:35px}
+.footer-widget :is(h3,.widget-title,.wp-block-heading){margin:0 0 18px;color:var(--undo-footer-text);font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;opacity:.75}
+.footer-widget :is(p,li){color:var(--undo-footer-text);font-size:15px;line-height:1.65;overflow-wrap:anywhere}
+.footer-widget p{margin-block:0 14px}
+.footer-widget :is(ul,ol){display:grid;gap:10px;margin:0;padding-inline-start:20px}
+.footer-widget a{color:var(--undo-footer-text);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--undo-footer-text) 44%,transparent);text-underline-offset:4px}
+.footer-widget a:hover{text-decoration-color:currentColor}
+.footer-widget a:focus-visible,.footer-widget :is(input,textarea,select,button):focus-visible{outline:2px solid var(--undo-footer-text);outline-offset:3px}
+.footer-widget :is(input,textarea,select){max-width:100%;color:var(--undo-footer-bg);background:var(--undo-footer-text)}
+.footer-widget img{max-width:100%;height:auto}
 .footer-wordmark{padding-block:12px 29px;border-block-start:1px solid color-mix(in srgb,var(--undo-footer-text) 24%,transparent)}
 .footer-wordmark .footer-brand{display:inline-flex;align-items:flex-start;gap:clamp(10px,2vw,28px);max-width:100%;color:var(--undo-footer-text);font-family:var(--display);font-size:clamp(82px,14vw,210px);font-weight:600;line-height:.9;letter-spacing:-.095em}
 .footer-wordmark .footer-brand svg{width:.28em;height:.28em;flex:none;margin-block-start:.13em;color:var(--red)}
@@ -532,6 +546,39 @@ html[lang^="fa"] .footer-invite h2{max-width:15ch;letter-spacing:0;line-height:1
 .footer-legal a:hover{text-decoration-color:currentColor}
 html[dir="rtl"] .footer-action svg{transform:scaleX(-1)}
 @media(max-width:1000px){.footer-main{grid-template-columns:1fr;gap:58px}.footer-invite h2{max-width:14ch}.footer-directory{max-width:780px;grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:760px){.footer-shell{padding-block:58px 22px}.footer-main{display:block;padding-block-end:58px}.footer-invite h2{font-size:clamp(42px,8vw,64px)}.footer-action{margin-block-start:29px}.footer-directory{grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 24px;margin-block-start:64px}.footer-wordmark .footer-brand{font-size:clamp(72px,19vw,132px)}.footer-bottom{flex-direction:column;gap:13px}.footer-legal{justify-content:flex-start;max-width:none;text-align:start}}
-@media(max-width:520px){.footer-kicker{margin-block-end:20px}.footer-directory{margin-block-start:56px}.footer-contact{grid-column:1/-1}.footer-wordmark{padding-block:20px 25px}.footer-wordmark .footer-brand{font-size:clamp(64px,18vw,92px)}}
+@media(max-width:760px){.footer-shell{padding-block:58px 22px}.footer-main{display:block;padding-block-end:58px}.footer-invite h2{font-size:clamp(42px,8vw,64px)}.footer-action{margin-block-start:29px}.footer-directory{grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 24px;margin-block-start:64px}.footer-widgets{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 24px}.footer-widgets--1{grid-template-columns:minmax(0,1fr)}.footer-wordmark .footer-brand{font-size:clamp(72px,19vw,132px)}.footer-bottom{flex-direction:column;gap:13px}.footer-legal{justify-content:flex-start;max-width:none;text-align:start}}
+@media(max-width:520px){.footer-kicker{margin-block-end:20px}.footer-directory{margin-block-start:56px}.footer-contact{grid-column:1/-1}.footer-widgets{grid-template-columns:minmax(0,1fr);gap:32px}.footer-wordmark{padding-block:20px 25px}.footer-wordmark .footer-brand{font-size:clamp(64px,18vw,92px)}}
 @media(prefers-reduced-motion:reduce){.footer-action,.footer-column a,.footer-legal a,.footer-brand svg{transition:none!important}.footer-action:hover,.footer-action:active{transform:none}.footer-wordmark .footer-brand:hover svg{transform:none}}
+
+/* Importable Elementor starters. Every selector is scoped to UNDO's own templates. */
+.undo-starter-home,.undo-starter-archive{background:var(--undo-paper,var(--paper));color:var(--undo-ink,var(--ink))}
+.undo-starter-home :is(.undo-starter-hero,.undo-starter-services,.undo-starter-method,.undo-starter-close),.undo-starter-archive{padding:clamp(70px,8vw,130px) max(24px,calc((100vw - 1440px)/2));min-width:0}
+.undo-starter-home .undo-starter-hero{min-height:min(780px,90svh);justify-content:center;border-block-end:1px solid var(--line)}
+.undo-starter-home .undo-starter-display h1,.undo-starter-archive .undo-starter-display h1{max-width:12ch;margin:0;font-family:var(--display);font-size:clamp(52px,7.8vw,112px);font-weight:500;line-height:1.03;letter-spacing:-.055em;text-wrap:balance}
+.undo-starter-home .undo-starter-lead,.undo-starter-archive .undo-starter-lead{max-width:660px;margin-block:25px 35px;font-size:clamp(17px,1.5vw,21px);line-height:1.6;color:var(--undo-muted,var(--muted))}
+.undo-starter-home .undo-starter-button .elementor-button,.undo-starter-header .undo-starter-button .elementor-button,.undo-starter-footer .undo-starter-button .elementor-button{padding:15px 22px;border-radius:999px;background:var(--red);color:#fff;font-size:14px;font-weight:700;transition:transform 180ms cubic-bezier(.22,.8,.22,1),background-color 180ms ease}
+.undo-starter-home .undo-starter-button .elementor-button:hover,.undo-starter-header .undo-starter-button .elementor-button:hover,.undo-starter-footer .undo-starter-button .elementor-button:hover{transform:translateY(-2px);background:#aa2d25}
+.undo-starter-home .undo-starter-button .elementor-button:focus-visible,.undo-starter-header .undo-starter-button .elementor-button:focus-visible,.undo-starter-footer .undo-starter-button .elementor-button:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.undo-starter-home .undo-starter-services{background:var(--white)}
+.undo-starter-home .undo-starter-section-title h2{max-width:16ch;margin:0 0 38px;font-family:var(--display);font-size:clamp(42px,5vw,72px);font-weight:500;line-height:1.1;letter-spacing:-.045em;text-wrap:balance}
+.undo-starter-home .undo-starter-service-list{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-block-start:1px solid var(--line)}
+.undo-starter-home .undo-starter-service{min-width:0;padding:32px 24px 38px;border-block-end:1px solid var(--line)}
+.undo-starter-home .undo-starter-service:first-child{padding-inline-start:0}
+.undo-starter-home .undo-starter-service h3{margin:0 0 13px;font-size:clamp(23px,2.2vw,34px);font-weight:600;line-height:1.25}
+.undo-starter-home .undo-starter-service p{max-width:34ch;margin:0;color:var(--undo-muted,var(--muted));line-height:1.7}
+.undo-starter-home .undo-starter-method{background:var(--ink);color:#fff}
+.undo-starter-home .undo-starter-method .undo-starter-lead{color:#d2d2d0}
+.undo-starter-home .undo-starter-close{background:var(--paper)}
+.undo-starter-header{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:clamp(20px,3vw,54px);min-height:76px;padding:12px max(24px,calc((100vw - 1440px)/2));background:var(--paper);border-block-end:1px solid var(--line)}
+.undo-starter-header .undo-starter-logo{flex:none}.undo-starter-header .undo-starter-logo :is(h1,h2,h3,div){margin:0;color:var(--ink);font-family:var(--display);font-size:25px;font-weight:700;letter-spacing:-.055em}
+.undo-starter-header .undo-starter-menu{min-width:0;flex:1}.undo-starter-header .undo-starter-language{flex:none;font-size:13px}.undo-starter-header .undo-starter-language p{margin:0}.undo-starter-header .undo-starter-language a{color:var(--ink);text-underline-offset:3px}
+.undo-starter-footer{padding:clamp(60px,6vw,100px) max(24px,calc((100vw - 1440px)/2)) 28px;background:var(--undo-footer-bg,#1b1b1b);color:var(--undo-footer-text,#fff)}
+.undo-starter-footer .undo-starter-footer-top{display:flex;flex-direction:row;align-items:end;justify-content:space-between;gap:30px}
+.undo-starter-footer .undo-starter-footer-title h2{max-width:11ch;margin:0;color:inherit;font-family:var(--display);font-size:clamp(48px,6vw,88px);font-weight:500;line-height:1.08;letter-spacing:-.05em}
+.undo-starter-footer .undo-starter-footer-note{max-width:45ch;margin-block:36px 60px;opacity:.78}.undo-starter-footer .undo-starter-footer-note p{margin:0}
+.undo-starter-footer .undo-starter-footer-brand{padding-block-start:24px;border-block-start:1px solid #ffffff44}.undo-starter-footer .undo-starter-footer-brand :is(h1,h2,h3,div){margin:0;color:inherit;font-family:var(--display);font-size:clamp(76px,15vw,210px);font-weight:600;line-height:.9;letter-spacing:-.07em}
+.undo-starter-archive .undo-starter-archive-posts{margin-block-start:45px}
+.undo-starter--fa :is(.undo-starter-display h1,.undo-starter-section-title h2,.undo-starter-footer-title h2){letter-spacing:0;line-height:1.35}
+@media(max-width:800px){.undo-starter-home .undo-starter-service-list{grid-template-columns:1fr}.undo-starter-home .undo-starter-service{padding-inline:0}.undo-starter-header{flex-wrap:wrap}.undo-starter-header .undo-starter-menu{order:4;flex-basis:100%}.undo-starter-footer .undo-starter-footer-top{align-items:start;flex-direction:column}}
+@media(max-width:520px){.undo-starter-home :is(.undo-starter-hero,.undo-starter-services,.undo-starter-method,.undo-starter-close),.undo-starter-archive{padding:72px 20px}.undo-starter-header{padding-inline:20px}.undo-starter-header .undo-starter-button{display:none}.undo-starter-footer{padding-inline:20px}.undo-starter-home .undo-starter-display h1,.undo-starter-archive .undo-starter-display h1{font-size:clamp(46px,11vw,68px)}}
+@media(prefers-reduced-motion:reduce){.undo-starter-home .undo-starter-button .elementor-button,.undo-starter-header .undo-starter-button .elementor-button,.undo-starter-footer .undo-starter-button .elementor-button{transition:none}.undo-starter-home .undo-starter-button .elementor-button:hover,.undo-starter-header .undo-starter-button .elementor-button:hover,.undo-starter-footer .undo-starter-button .elementor-button:hover{transform:none}}

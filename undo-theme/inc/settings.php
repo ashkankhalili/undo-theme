@@ -138,6 +138,7 @@ function undo_settings_sections() {
         ) ),
         'footer' => array( __( 'Footer', 'undo-theme' ), __( 'Build the footer with menus, contact details, social links, and legal copy. Elementor Theme Builder can replace it.', 'undo-theme' ), array(
             'footer_show_brand' => array( __( 'Show footer brand', 'undo-theme' ), 'checkbox', '1' ),
+            'footer_show_widgets' => array( __( 'Show footer widget areas', 'undo-theme' ), 'checkbox', '1' ),
             'footer_show_navigation' => array( __( 'Show footer navigation', 'undo-theme' ), 'checkbox', '1' ),
             'footer_show_secondary_navigation' => array( __( 'Show second menu column', 'undo-theme' ), 'checkbox', '0' ),
             'footer_menu_title_fa' => array( __( 'Main menu heading (Persian)', 'undo-theme' ), 'text', 'کاوش', array(), 'footer_show_navigation' ),
@@ -497,6 +498,7 @@ function undo_render_settings_page() {
             $footer_groups = array(
                 __( 'Statement and action', 'undo-theme' ) => array( 'footer_show_brand', 'footer_slogan_fa', 'footer_slogan_en', 'footer_show_action', 'footer_action_label_fa', 'footer_action_label_en', 'footer_action_url' ),
                 __( 'Menu columns', 'undo-theme' ) => array( 'footer_show_navigation', 'footer_menu_title_fa', 'footer_menu_title_en', 'footer_show_secondary_navigation', 'footer_secondary_title_fa', 'footer_secondary_title_en' ),
+                __( 'Widget areas', 'undo-theme' ) => array( 'footer_show_widgets' ),
                 __( 'Contact and social', 'undo-theme' ) => array( 'footer_show_contact', 'contact_email', 'footer_contact_phone', 'footer_contact_address_fa', 'footer_contact_address_en', 'footer_show_social', 'footer_social_instagram', 'footer_social_linkedin', 'footer_social_telegram', 'footer_social_github', 'footer_social_youtube', 'footer_social_x' ),
                 __( 'Legal and copyright', 'undo-theme' ) => array( 'footer_show_copyright', 'footer_copyright_fa', 'footer_copyright_en', 'footer_show_legal', 'footer_legal_fa', 'footer_legal_en' ),
             );
@@ -506,6 +508,7 @@ function undo_render_settings_page() {
                 undo_render_settings_group( $title, $group_fields );
             }
             echo '<p class="undo-settings__hint">' . esc_html__( 'Assign the Footer and Footer secondary menu locations in Appearance → Menus. The second column appears only when it has an assigned menu.', 'undo-theme' ) . ' <a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '">' . esc_html__( 'Open Menus', 'undo-theme' ) . '</a></p>';
+            echo '<p class="undo-settings__hint">' . esc_html__( 'Add blocks to Footer widget areas 1–3 in Appearance → Widgets. Only areas containing widgets appear.', 'undo-theme' ) . ' <a href="' . esc_url( admin_url( 'widgets.php' ) ) . '">' . esc_html__( 'Open Widgets', 'undo-theme' ) . '</a></p>';
             echo '<p class="undo-settings__hint">' . esc_html__( 'Use {year} in copyright text for the current year. The privacy link appears only when a published Privacy Policy page is configured in WordPress.', 'undo-theme' ) . '</p>';
         } else {
             echo '<table class="form-table" role="presentation">';

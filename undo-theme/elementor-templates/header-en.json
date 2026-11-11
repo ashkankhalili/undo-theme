@@ -1,0 +1,65 @@
+{
+  "title": "UNDO Header — English",
+  "type": "header",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "b4e3f187",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_css_classes": "undo-starter-header undo-starter--en"
+      },
+      "elements": [
+        {
+          "id": "a95af9fe",
+          "elType": "widget",
+          "widgetType": "heading",
+          "isInner": false,
+          "settings": {
+            "title": "UNDO",
+            "header_size": "div",
+            "_css_classes": "undo-starter-logo"
+          },
+          "elements": []
+        },
+        {
+          "id": "a3bdc675",
+          "elType": "widget",
+          "widgetType": "nav-menu",
+          "isInner": false,
+          "settings": {
+            "_css_classes": "undo-starter-menu"
+          },
+          "elements": []
+        },
+        {
+          "id": "df7dc820",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "isInner": false,
+          "settings": {
+            "editor": "<a href=\"?undo_lang=en\" lang=\"en\">English</a> / <a href=\"?undo_lang=fa\" lang=\"fa\">فارسی</a>",
+            "_css_classes": "undo-starter-language"
+          },
+          "elements": []
+        },
+        {
+          "id": "0cb3680f",
+          "elType": "widget",
+          "widgetType": "button",
+          "isInner": false,
+          "settings": {
+            "text": "Plan a project",
+            "link": {
+              "url": "#project-planner"
+            },
+            "_css_classes": "undo-starter-button"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

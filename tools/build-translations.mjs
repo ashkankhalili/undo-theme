@@ -4,6 +4,13 @@ import path from 'node:path';
 const root = path.resolve('undo-theme');
 const domain = 'undo-theme';
 const fa = {
+  'Add blocks or widgets here to show them above the footer wordmark.':'بلوک‌ها یا ابزارک‌ها را اینجا اضافه کنید تا بالای نشان بزرگ پایین صفحه نمایش داده شوند.',
+  'Add blocks to Footer widget areas 1–3 in Appearance → Widgets. Only areas containing widgets appear.':'بلوک‌ها را در نمایش ← ابزارک‌ها به ناحیه‌های ابزارک پایین صفحهٔ ۱ تا ۳ اضافه کنید. فقط ناحیه‌های دارای ابزارک نمایش داده می‌شوند.',
+  'Footer widget area %d':'ناحیهٔ ابزارک پایین صفحهٔ %d',
+  'Footer widgets':'ابزارک‌های پایین صفحه',
+  'Open Widgets':'باز کردن ابزارک‌ها',
+  'Show footer widget areas':'نمایش ناحیه‌های ابزارک پایین صفحه',
+  'Widget areas':'ناحیه‌های ابزارک',
   'Assign the Footer and Footer secondary menu locations in Appearance → Menus. The second column appears only when it has an assigned menu.':'جایگاه فهرست‌های پایین صفحه و فهرست دوم را در نمایش ← فهرست‌ها تعیین کنید. ستون دوم فقط وقتی فهرستی به آن اختصاص داده شده باشد نمایش می‌یابد.',
   'Build the footer with menus, contact details, social links, and legal copy. Elementor Theme Builder can replace it.':'پایین صفحه را با فهرست‌ها، اطلاعات تماس، پیوندهای اجتماعی و متن حقوقی بسازید. قالب‌ساز المنتور می‌تواند آن را جایگزین کند.',
   'Contact':'تماس',
@@ -433,7 +440,7 @@ const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.6.0',
+  'Project-Id-Version: UNDO Web Developments 0.8.0',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',
