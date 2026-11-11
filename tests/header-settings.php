@@ -3,6 +3,7 @@ define( 'ABSPATH', __DIR__ . '/' );
 function get_template_directory() { return dirname( __DIR__ ) . '/undo-theme'; }
 function add_action( $hook, $callback, $priority = 10, $accepted_args = 1 ) {}
 function add_filter( $hook, $callback, $priority = 10, $accepted_args = 1 ) {}
+function add_shortcode( $tag, $callback ) {}
 function __( $message, $domain = 'default' ) { return $message; }
 function get_option( $key, $default = false ) { return $GLOBALS['options'][ $key ] ?? $default; }
 function update_option( $key, $value ) { $GLOBALS['options'][ $key ] = $value; return true; }
