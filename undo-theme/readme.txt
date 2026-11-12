@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.8.0
+Stable tag: 0.9.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,7 +11,7 @@ A bilingual WordPress theme for creative agencies and studios. The initial langu
 
 == Features ==
 * Initial language follows WordPress Site Language; Persian and English visitor overrides, compiled translations, and dedicated RTL stylesheet are included.
-* Responsive UNDO landing page with section navigation and a project brief download.
+* Responsive UNDO landing page with section navigation, adjustable section order and visibility, linked published-page titles and excerpts per language, and a project brief download.
 * Standalone, full-width UNDO Theme Settings page with a joined vertical sidebar. Switching sections keeps unsaved values in place; Save all changes stores every section at once.
 * Separate layout, colors, and typography sections. Site content width accepts pixels or percent. Typography shows each text role on a single row with its original language-aware font named explicitly, plus size, weight, style, line height, word and letter spacing, and color controls. Google, system, and uploaded WOFF2 font families are available; Google font loading can be disabled. Header options include light/dark styles, logo variants, centered navigation, search, and mobile action visibility.
 * WordPress menus, widgets, featured images, logo support, and normal post, page, archive, search, and 404 templates.
@@ -33,6 +33,10 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.9.0 =
+* Added Homepage settings for section visibility and keyboard-accessible ordering while keeping the hero and project planner as fixed destinations.
+* Added published-page references for overview, services, approach, and redesign copy, with separate Persian and English choices and links to the selected pages.
+* Made guided section navigation follow the rendered order and tolerate hidden sections or an Elementor footer.
 = 0.8.0 =
 * Added three optional, responsive footer widget areas, with a Theme Settings toggle and support for the [undo_footer_widgets] shortcode in an Elementor Pro footer.
 * Bundled importable Home page starters for Elementor Free and Header, Footer and dynamic Blog Archive starters for Elementor Pro in English and Persian.

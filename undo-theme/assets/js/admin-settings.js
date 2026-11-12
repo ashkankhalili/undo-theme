@@ -3,6 +3,30 @@ const dirtyStatus = document.querySelector('[data-undo-dirty-status]');
 const markDirty = () => { if (dirtyStatus) dirtyStatus.textContent = undoSettingsMedia.unsaved; };
 settingsForm?.addEventListener('input', markDirty);
 settingsForm?.addEventListener('change', markDirty);
+const homeOrder = document.querySelector('[data-undo-home-order]');
+const homeOrderValue = document.querySelector('[data-undo-home-order-value]');
+function syncHomeOrder() {
+  if (!homeOrder || !homeOrderValue) return;
+  const rows = [...homeOrder.querySelectorAll('[data-undo-home-section]')];
+  homeOrderValue.value = rows.map((row) => row.dataset.undoHomeSection).join(',');
+  rows.forEach((row, index) => {
+    row.querySelector('[data-undo-home-move="up"]').disabled = index === 0;
+    row.querySelector('[data-undo-home-move="down"]').disabled = index === rows.length - 1;
+  });
+}
+homeOrder?.addEventListener('click', (event) => {
+  const button = event.target.closest('[data-undo-home-move]');
+  if (!button || !homeOrder.contains(button)) return;
+  const row = button.closest('[data-undo-home-section]');
+  const sibling = button.dataset.undoHomeMove === 'up' ? row.previousElementSibling : row.nextElementSibling;
+  if (!sibling) return;
+  if (button.dataset.undoHomeMove === 'up') sibling.before(row);
+  else sibling.after(row);
+  syncHomeOrder();
+  markDirty();
+  button.focus();
+});
+syncHomeOrder();
 settingsForm?.querySelectorAll('.undo-optional-color').forEach((field) => {
   const picker = field.querySelector('[data-undo-color-picker]');
   const text = field.querySelector('[data-undo-color-text]');

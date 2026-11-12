@@ -72,6 +72,16 @@
 .undo-font-row__file .button-link{grid-column:2;grid-row:3}
 .undo-font-row__remove{align-self:end;white-space:nowrap}
 .undo-font-choice{min-width:min(100%,280px)}
+.undo-home-order{display:grid;gap:0;margin:18px 0 0;padding:0;list-style:none;counter-reset:undo-home-section}
+.undo-home-order__item{display:flex;align-items:center;gap:16px;min-height:68px;padding:12px 0;border-block-start:1px solid #e6e3de;counter-increment:undo-home-section}
+.undo-home-order__item::before{content:counter(undo-home-section,decimal-leading-zero);width:30px;flex:none;color:#8e3129;font-size:12px;font-weight:700;font-variant-numeric:tabular-nums}
+.undo-home-order__name{min-width:140px;flex:1;font-size:15px;font-weight:650}
+.undo-home-order__toggle{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-size:13px}
+.undo-home-order__toggle input[type="checkbox"]{margin:0}
+.undo-home-order__actions{display:flex;gap:6px;margin-inline-start:auto}
+.undo-home-order__actions .button{min-height:33px;padding-inline:11px;border-color:#c9c6bf;border-radius:5px}
+.undo-home-order__actions .button:disabled{opacity:.45}
+@media(max-width:550px){.undo-home-order__item{flex-wrap:wrap;gap:9px 12px}.undo-home-order__name{min-width:calc(100% - 44px)}.undo-home-order__toggle{margin-inline-start:42px}.undo-home-order__actions{margin-inline-start:auto}}
 @media(max-width:1200px){.undo-font-row{grid-template-columns:repeat(2,minmax(0,1fr))}.undo-font-row__remove{justify-self:start}}
 @media(max-width:960px){.undo-settings__layout{grid-template-columns:190px minmax(0,1fr)}.undo-settings__content{padding-inline:24px}.undo-settings .form-table th{width:200px}}
 @media(max-width:782px){.wrap.undo-settings{padding:16px 12px 36px}.undo-settings__layout{grid-template-columns:1fr}.undo-settings__nav{position:static;min-height:0;border-inline-end:0;border-block-end:1px solid #d9d6d0;border-radius:10px 10px 0 0}.undo-settings__content{min-height:0;padding:24px 20px 0;border-radius:0 0 10px 10px}.undo-settings .form-table th,.undo-settings .form-table td{display:block;width:100%;padding:8px 0}.undo-settings .form-table td{padding-block-end:14px}.undo-settings__header{flex-wrap:wrap;gap:5px 12px}}

@@ -11,6 +11,10 @@ function current_user_can( $capability ) { return 'manage_options' === $capabili
 function absint( $value ) { return abs( (int) $value ); }
 function get_post_type( $id ) { return isset( $GLOBALS['test_pages'][ $id ] ) ? 'page' : false; }
 function get_post_status( $id ) { return $GLOBALS['test_pages'][ $id ] ?? false; }
+function get_post( $id ) { return $GLOBALS['test_page_objects'][ $id ] ?? null; }
+function get_the_title( $post ) { return $post->post_title; }
+function get_permalink( $id ) { return 'https://example.test/page/' . $id; }
+function strip_shortcodes( $content ) { return preg_replace( '/\[[^\]]+\]/', '', $content ); }
 function get_locale() { return $GLOBALS['site_locale'] ?? 'en_US'; }
 function is_rtl() { return ! empty( $GLOBALS['test_rtl'] ); }
 function wp_unslash( $value ) { return stripslashes( $value ); }
@@ -48,6 +52,18 @@ $GLOBALS['options']['undo_theme_settings'] = $word_settings;
 expect( false !== strpos( undo_theme_typography_css(), 'word-spacing:2.25px;' ) && false !== strpos( undo_theme_typography_css(), 'letter-spacing:-0.5px;' ), 'Word spacing must render while existing letter spacing remains supported' );
 $GLOBALS['test_pages'] = array( 21 => 'publish', 22 => 'draft', 23 => 'publish' );
 $GLOBALS['options']['page_on_front'] = 23;
+expect( array( 'overview', 'services', 'approach', 'redesign' ) === undo_home_section_order(), 'Homepage sections retain the shipped order by default' );
+expect( 'redesign,overview,services,approach' === undo_sanitize_home_section_order( 'redesign,overview,redesign,invalid' ), 'Homepage order removes duplicates and unknown sections, then restores missing sections' );
+$home_settings = undo_sanitize_settings( array( 'home_section_order' => 'redesign,overview,services,approach', 'home_show_services' => '0', 'home_overview_page_en' => '21', 'home_approach_page_en' => '22', 'home_redesign_page_en' => '23' ) );
+expect( '21' === $home_settings['home_overview_page_en'] && '0' === $home_settings['home_approach_page_en'] && '0' === $home_settings['home_redesign_page_en'], 'Homepage references accept published pages and reject drafts or the homepage itself' );
+$GLOBALS['options']['undo_theme_settings'] = $home_settings;
+expect( array( 'redesign', 'overview', 'approach' ) === undo_home_visible_sections(), 'Hidden homepage sections are removed without changing the saved order' );
+$GLOBALS['test_page_objects'][21] = (object) array( 'post_title' => 'Better & bigger', 'post_excerpt' => 'Fresh <strong>work</strong> [shortcode]' );
+$copy = undo_home_reference( 'overview', 'Fallback title', 'Fallback description' );
+expect( 'Better & bigger' === $copy['title'] && 'Fresh work' === $copy['description'] && 'https://example.test/page/21' === $copy['url'], 'Linked homepage sections use the published page title, manual excerpt and URL' );
+$GLOBALS['test_pages'][21] = 'draft';
+expect( '' === undo_home_reference( 'overview', 'Fallback title', 'Fallback description' )['url'], 'Unpublished linked pages fall back safely after a status change' );
+$GLOBALS['test_pages'][21] = 'publish';
 $posts_settings = undo_sanitize_settings( array( 'blog_page_id' => '21' ) );
 expect( '21' === $posts_settings['blog_page_id'] && 21 === get_option( 'page_for_posts' ) && '21' === undo_setting( 'blog_page_id' ), 'Published posts page selection must sync to WordPress and read back from it' );
 $posts_settings = undo_sanitize_settings( array( 'blog_page_id' => '22' ) );

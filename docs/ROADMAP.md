@@ -12,7 +12,7 @@ Each stage is complete only after template behavior, Persian and English copy, R
 | 5. Sidebar | Widget spacing, sticky behavior, layout modes, RTL placement | 0.6.0 adds physical Left/Right/Hidden while mapping earlier logical choices; live widget and RTL checks pending |
 | 6. Blog | Archive cards, pagination, taxonomy/search states and empty states | Three list/grid designs implemented in 0.6.0; live archive, search, RTL, and Elementor checks pending |
 | 7. Footer | Menu columns, contact blocks, legal text, social links and optional widget areas | 0.7.0 built the footer; 0.8.0 adds three responsive widget areas and a Theme Settings toggle; live staging validation pending |
-| 8. Homepage | Editable sections, content model, accessible motion, Elementor starter layout | 0.8.0 ships editable English/Persian Elementor Home starters; native landing section controls and live import validation remain |
+| 8. Homepage | Editable sections, content model, accessible motion, Elementor starter layout | 0.9.0 adds native section order, visibility and published-page references; 0.8.0 ships editable English/Persian Elementor Home starters; live staging and import validation remain |
 | 9. Elementor integration | Elementor Free/Pro/absent-plugin scenarios, page templates and location fallbacks | 0.8.0 ships Header, Footer and Blog Archive Pro starters; live import and fallback matrix pending |
 | 10. UNDO Elements addon | Separate plugin, first Elementor widget set, planner migration | Planned |
 | 11. Localization and polish | Content translation integration, complete RTL/LTR visual pass | Planned |

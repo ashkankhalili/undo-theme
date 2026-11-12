@@ -76,6 +76,8 @@ jobs:
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-custom-width.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/inc/page-layout.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-parts/page-layout.php'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-parts/home/hero.php'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-parts/home/project-planner.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/assets/css/admin-settings.css'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/assets/css/admin-page-width.css'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/assets/js/admin-page-width.js'

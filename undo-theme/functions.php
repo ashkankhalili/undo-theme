@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.8.0' );
+define( 'UNDO_THEME_VERSION', '0.9.0' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/page-layout.php';
 require_once get_template_directory() . '/inc/github-updater.php';
@@ -16,6 +16,9 @@ function undo_theme_setup() {
     add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' ) );
 }
 add_action( 'after_setup_theme', 'undo_theme_setup' );
+
+function undo_enable_page_excerpts() { add_post_type_support( 'page', 'excerpt' ); }
+add_action( 'init', 'undo_enable_page_excerpts', 5 );
 
 function undo_register_menus() {
     register_nav_menus( array( 'primary' => __( 'Primary menu', 'undo-theme' ), 'footer' => __( 'Footer menu', 'undo-theme' ), 'footer_secondary' => __( 'Footer secondary menu', 'undo-theme' ) ) );
@@ -133,6 +136,22 @@ function undo_footer_social_links() {
 function undo_content( $key, $fallback ) {
     $value = undo_setting( $key . '_' . undo_language() );
     return '' !== trim( $value ) ? $value : $fallback;
+}
+function undo_home_reference( $slot, $fallback_title, $fallback_description ) {
+    $result = array( 'title' => $fallback_title, 'description' => $fallback_description, 'url' => '' );
+    $allowed = array( 'overview', 'service_web', 'service_plugin', 'service_app', 'approach', 'redesign' );
+    if ( ! in_array( $slot, $allowed, true ) ) { return $result; }
+    $id = absint( undo_setting( 'home_' . $slot . '_page_' . undo_language() ) );
+    if ( ! $id || $id === absint( get_option( 'page_on_front', 0 ) ) || 'page' !== get_post_type( $id ) || 'publish' !== get_post_status( $id ) ) { return $result; }
+    $page = get_post( $id );
+    if ( ! $page ) { return $result; }
+    $title = trim( get_the_title( $page ) );
+    $excerpt = trim( wp_strip_all_tags( strip_shortcodes( $page->post_excerpt ) ) );
+    $url = get_permalink( $id );
+    if ( $title ) { $result['title'] = $title; }
+    if ( $excerpt ) { $result['description'] = $excerpt; }
+    if ( $url ) { $result['url'] = $url; }
+    return $result;
 }
 function undo_language_url( $language ) { return add_query_arg( 'undo_lang', $language ); }
 
@@ -293,11 +312,10 @@ function undo_register_elementor_locations( $manager ) { $manager->register_all_
 add_action( 'elementor/theme/register_locations', 'undo_register_elementor_locations' );
 
 function undo_nav_fallback( $args ) {
-    $items = array(
-        __( 'Services', 'undo-theme' ) => '#services',
-        __( 'Approach', 'undo-theme' ) => '#approach',
-        __( 'Project planner', 'undo-theme' ) => '#project-planner',
-    );
+    $items = array();
+    if ( undo_setting_enabled( 'home_show_services' ) ) { $items[ __( 'Services', 'undo-theme' ) ] = '#services'; }
+    if ( undo_setting_enabled( 'home_show_approach' ) ) { $items[ __( 'Approach', 'undo-theme' ) ] = '#approach'; }
+    $items[ __( 'Project planner', 'undo-theme' ) ] = '#project-planner';
     echo '<ul class="nav-list">';
     foreach ( $items as $label => $anchor ) { echo '<li><a href="' . esc_url( home_url( '/' ) . $anchor ) . '">' . esc_html( $label ) . '</a></li>'; }
     echo '</ul>';

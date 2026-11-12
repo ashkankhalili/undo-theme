@@ -36,14 +36,19 @@ function updateComparison(){if(!comparison||!comparisonBrowser)return;const amou
 comparison?.addEventListener('input',updateComparison);
 updateComparison();
 document.getElementById('brief-form')?.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(event.currentTarget);const name=String(data.get('projectName')||'').trim()||ui.untitled;const goal=String(data.get('goal')||'').trim()||ui.toDiscuss;const service=ui.serviceLabels?.[data.get('service')]||data.get('service');const stage=ui.stageLabels?.[data.get('stage')]||data.get('stage');const lines=[ui.briefTitle,'',`${ui.project}: ${name}`,`${ui.service}: ${service}`,`${ui.startingPoint}: ${stage}`,`${ui.goal}: ${goal}`];const body=(ui.language==='fa'?'\uFEFF':'')+lines.join('\n');const file=new Blob([body],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(file);const link=document.createElement('a');link.href=url;link.download=ui.language==='fa'?'undo-project-brief-fa.txt':'undo-project-brief.txt';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);document.getElementById('form-status').textContent=ui.downloaded});
-const sectionIds=['top','overview','services','approach','redesign','project-planner','finish'];
-const pageSections=sectionIds.map(id=>document.getElementById(id)).filter(Boolean);
-const isLandingPage=Boolean(document.querySelector('main#main > section#top.hero'))&&pageSections.length===sectionIds.length;
+const pageSections=[...document.querySelectorAll('main#main > section[id]')];
+const footerSection=document.getElementById('finish');
+if(footerSection)pageSections.push(footerSection);
+const isLandingPage=Boolean(document.querySelector('main#main > section#top.hero'))&&pageSections.some(section=>section.id==='project-planner');
 const sectionRail=document.querySelector('.section-rail');
-const railLinks=[...document.querySelectorAll('[data-rail-for]')];
+const allRailLinks=[...document.querySelectorAll('[data-rail-for]')];
+const railLinks=allRailLinks.filter(link=>pageSections.some(section=>section.id===link.dataset.railFor));
+allRailLinks.filter(link=>!railLinks.includes(link)).forEach(link=>link.remove());
+sectionRail?.style.setProperty('--rail-track-height',`${Math.max(0,railLinks.length-1)*42}px`);
 const railCurrent=document.querySelector('.section-rail__current');
 const mobileProgress=document.querySelector('.mobile-section-progress');
 const progressSegments=[...document.querySelectorAll('.mobile-section-progress span')];
+progressSegments.slice(pageSections.length).forEach(segment=>segment.remove());
 const guidedMotion=window.matchMedia('(min-width: 1024px) and (prefers-reduced-motion: no-preference)');
 let activeSectionIndex=0;
 let sectionFramePending=false;
@@ -54,12 +59,12 @@ function updateCurrentSection(){
   let distance=Infinity;
   for(const section of pageSections){const rect=section.getBoundingClientRect();const gap=rect.top<=viewportMiddle&&rect.bottom>=viewportMiddle?0:Math.min(Math.abs(rect.top-viewportMiddle),Math.abs(rect.bottom-viewportMiddle));if(gap<distance){distance=gap;current=section}}
   if(!current)return;
-  const index=sectionIds.indexOf(current.id);
+  const index=pageSections.indexOf(current);
   activeSectionIndex=index;
-  const activeLink=railLinks[index];
+  const activeLink=railLinks.find(link=>link.dataset.railFor===current.id);
   for(const link of railLinks){if(link===activeLink)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current')}
   if(railCurrent)railCurrent.textContent=activeLink?.getAttribute('aria-label')||'';
-  if(sectionRail)sectionRail.style.setProperty('--rail-progress',String(index/(pageSections.length-1)));
+  if(sectionRail)sectionRail.style.setProperty('--rail-progress',String(index/Math.max(1,pageSections.length-1)));
   const inverse=current.id==='redesign'||current.id==='finish';
   if(sectionRail)sectionRail.dataset.tone=inverse?'inverse':'normal';
   if(mobileProgress)mobileProgress.dataset.tone=inverse?'inverse':'normal';

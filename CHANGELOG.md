@@ -4,6 +4,24 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-11-12
+
+### Homepage milestone
+
+- Added Homepage settings for the built-in landing page. Overview, Services, Approach, and Redesign can be shown or hidden and reordered with keyboard-accessible buttons. The hero remains first and the project planner remains last so existing project links stay valid.
+- Enabled manual excerpts for WordPress pages and added separate Persian and English published-page references for the Overview, three Services, Approach, and Redesign copy. A selected page supplies its title and manual excerpt, and its heading links to that page. Empty excerpts retain the built-in description; missing or unpublished pages fall back to built-in copy.
+- Split the native landing into section partials and made the section rail, mobile progress, guided scrolling, and fallback menu follow the rendered sections. Elementor Home content remains the site's choice when a front page is assigned; imported Elementor documents are not overwritten.
+
+### فارسی
+
+- نمایش و ترتیب بخش‌های صفحهٔ اصلی از تنظیمات پوسته قابل تغییر است. بخش آغازین و فرم برنامه‌ریزی پروژه در جای ثابت می‌مانند.
+- برای متن بخش‌های صفحهٔ اصلی می‌توان صفحه‌های منتشرشدهٔ جداگانه به فارسی و انگلیسی انتخاب کرد. عنوان و چکیدهٔ دستی صفحه در بخش نمایش داده می‌شود و عنوان به همان صفحه پیوند می‌خورد.
+- راهبری بخش‌ها و پیمایش هدایت‌شده با ترتیب جدید و بخش‌های پنهان هماهنگ شدند.
+
+### Validation
+
+- Added sanitization and content-fallback checks for section ordering, visibility, and linked pages. JavaScript syntax, translation generation, package integrity, and GitHub CI are release gates. Live staging review of RTL/LTR, motion, and Elementor imports remains required.
+
 ## [0.8.0] - 2026-11-11
 
 ### Footer widgets and Elementor starters

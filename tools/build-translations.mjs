@@ -4,6 +4,34 @@ import path from 'node:path';
 const root = path.resolve('undo-theme');
 const domain = 'undo-theme';
 const fa = {
+  'Approach page (English)':'صفحهٔ روش کار (انگلیسی)',
+  'Approach page (Persian)':'صفحهٔ روش کار (فارسی)',
+  'Down':'پایین',
+  'For linked pages, the page title and manual excerpt replace the built-in section copy, and the title links to the page. Empty excerpts keep the built-in description. Use separate published pages for Persian and English.':'برای صفحه‌های پیوندشده، عنوان و خلاصهٔ دستی صفحه جای متن پیش‌فرض بخش را می‌گیرند و عنوان به صفحه پیوند می‌شود. اگر خلاصه خالی باشد، توضیح پیش‌فرض باقی می‌ماند. برای فارسی و انگلیسی از صفحه‌های منتشرشدهٔ جداگانه استفاده کنید.',
+  'Hero copy':'متن بخش آغازین',
+  'Homepage sections':'بخش‌های صفحهٔ اصلی',
+  'Linked pages':'صفحه‌های پیوندشده',
+  'Mobile apps page (English)':'صفحهٔ اپلیکیشن‌های موبایل (انگلیسی)',
+  'Mobile apps page (Persian)':'صفحهٔ اپلیکیشن‌های موبایل (فارسی)',
+  'Move %s down':'انتقال %s به پایین',
+  'Move %s up':'انتقال %s به بالا',
+  'Overview page (English)':'صفحهٔ معرفی (انگلیسی)',
+  'Overview page (Persian)':'صفحهٔ معرفی (فارسی)',
+  'Redesign page (English)':'صفحهٔ بازطراحی (انگلیسی)',
+  'Redesign page (Persian)':'صفحهٔ بازطراحی (فارسی)',
+  'Section order':'ترتیب بخش‌ها',
+  'Show':'نمایش',
+  'Show Approach':'نمایش روش کار',
+  'Show Overview':'نمایش معرفی',
+  'Show Redesign':'نمایش بازطراحی',
+  'Show Services':'نمایش خدمات',
+  'The hero stays first and the project planner stays last so project links keep working. Move the other sections and hide any you do not need.':'بخش آغازین همیشه نخست و برنامه‌ریز پروژه همیشه آخر می‌مانند تا پیوندهای پروژه درست کار کنند. بخش‌های دیگر را جابه‌جا کنید یا موارد غیرضروری را پنهان کنید.',
+  'Up':'بالا',
+  'Use built-in copy':'استفاده از متن پیش‌فرض',
+  'Websites page (English)':'صفحهٔ وب‌سایت‌ها (انگلیسی)',
+  'Websites page (Persian)':'صفحهٔ وب‌سایت‌ها (فارسی)',
+  'WordPress plugins page (English)':'صفحهٔ افزونه‌های وردپرس (انگلیسی)',
+  'WordPress plugins page (Persian)':'صفحهٔ افزونه‌های وردپرس (فارسی)',
   'Add blocks or widgets here to show them above the footer wordmark.':'بلوک‌ها یا ابزارک‌ها را اینجا اضافه کنید تا بالای نشان بزرگ پایین صفحه نمایش داده شوند.',
   'Add blocks to Footer widget areas 1–3 in Appearance → Widgets. Only areas containing widgets appear.':'بلوک‌ها را در نمایش ← ابزارک‌ها به ناحیه‌های ابزارک پایین صفحهٔ ۱ تا ۳ اضافه کنید. فقط ناحیه‌های دارای ابزارک نمایش داده می‌شوند.',
   'Footer widget area %d':'ناحیهٔ ابزارک پایین صفحهٔ %d',
@@ -440,7 +468,7 @@ const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.8.0',
+  'Project-Id-Version: UNDO Web Developments 0.9.0',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

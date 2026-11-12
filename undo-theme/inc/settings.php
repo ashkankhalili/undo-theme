@@ -51,6 +51,33 @@ function undo_typography_role_fields() {
     return $fields;
 }
 
+function undo_home_sections() {
+    return array(
+        'overview' => __( 'Overview', 'undo-theme' ),
+        'services' => __( 'Services', 'undo-theme' ),
+        'approach' => __( 'Approach', 'undo-theme' ),
+        'redesign' => __( 'Redesign', 'undo-theme' ),
+    );
+}
+
+function undo_sanitize_home_section_order( $value ) {
+    $allowed = array_keys( undo_home_sections() );
+    $order = array();
+    foreach ( explode( ',', (string) $value ) as $section ) {
+        $section = trim( $section );
+        if ( in_array( $section, $allowed, true ) && ! in_array( $section, $order, true ) ) { $order[] = $section; }
+    }
+    return implode( ',', array_merge( $order, array_diff( $allowed, $order ) ) );
+}
+
+function undo_home_section_order() {
+    return explode( ',', undo_sanitize_home_section_order( undo_setting( 'home_section_order' ) ) );
+}
+
+function undo_home_visible_sections() {
+    return array_values( array_filter( undo_home_section_order(), function ( $section ) { return undo_setting_enabled( 'home_show_' . $section ); } ) );
+}
+
 function undo_settings_sections() {
     static $sections = null;
     if ( null !== $sections ) { return $sections; }
@@ -176,6 +203,23 @@ function undo_settings_sections() {
             'hero_title_en' => array( __( 'Hero title (English)', 'undo-theme' ), 'text', 'Websites, plugins & apps made better.' ),
             'hero_lead_en' => array( __( 'Hero description (English)', 'undo-theme' ), 'textarea', 'UNDO creates new digital products and redesigns the ones that no longer serve your business. From the first screen to the working code.' ),
             'show_section_rail' => array( __( 'Show section navigation', 'undo-theme' ), 'checkbox', '1' ),
+            'home_section_order' => array( __( 'Section order', 'undo-theme' ), 'section_order', 'overview,services,approach,redesign' ),
+            'home_show_overview' => array( __( 'Show Overview', 'undo-theme' ), 'checkbox', '1' ),
+            'home_show_services' => array( __( 'Show Services', 'undo-theme' ), 'checkbox', '1' ),
+            'home_show_approach' => array( __( 'Show Approach', 'undo-theme' ), 'checkbox', '1' ),
+            'home_show_redesign' => array( __( 'Show Redesign', 'undo-theme' ), 'checkbox', '1' ),
+            'home_overview_page_fa' => array( __( 'Overview page (Persian)', 'undo-theme' ), 'home_page_choice', '0' ),
+            'home_overview_page_en' => array( __( 'Overview page (English)', 'undo-theme' ), 'home_page_choice', '0' ),
+            'home_service_web_page_fa' => array( __( 'Websites page (Persian)', 'undo-theme' ), 'home_page_choice', '0' ),
+            'home_service_web_page_en' => array( __( 'Websites page (English)', 'undo-theme' ), 'home_page_choice', '0' ),
+            'home_service_plugin_page_fa' => array( __( 'WordPress plugins page (Persian)', 'undo-theme' ), 'home_page_choice', '0' ),
+            'home_service_plugin_page_en' => array( __( 'WordPress plugins page (English)', 'undo-theme' ), 'home_page_choice', '0' ),
+            'home_service_app_page_fa' => array( __( 'Mobile apps page (Persian)', 'undo-theme' ), 'home_page_choice', '0' ),
+            'home_service_app_page_en' => array( __( 'Mobile apps page (English)', 'undo-theme' ), 'home_page_choice', '0' ),
+            'home_approach_page_fa' => array( __( 'Approach page (Persian)', 'undo-theme' ), 'home_page_choice', '0' ),
+            'home_approach_page_en' => array( __( 'Approach page (English)', 'undo-theme' ), 'home_page_choice', '0' ),
+            'home_redesign_page_fa' => array( __( 'Redesign page (Persian)', 'undo-theme' ), 'home_page_choice', '0' ),
+            'home_redesign_page_en' => array( __( 'Redesign page (English)', 'undo-theme' ), 'home_page_choice', '0' ),
         ) ),
     );
     return $sections;
@@ -311,6 +355,12 @@ function undo_sanitize_settings( $input ) {
                     $front_id = absint( get_option( 'page_on_front', 0 ) );
                     $clean[ $key ] = (string) ( $id && 'page' === get_post_type( $id ) && 'publish' === get_post_status( $id ) && $id !== $front_id ? $id : 0 );
                     break;
+                case 'home_page_choice':
+                    $id = absint( $value );
+                    $front_id = absint( get_option( 'page_on_front', 0 ) );
+                    $clean[ $key ] = (string) ( $id && 'page' === get_post_type( $id ) && 'publish' === get_post_status( $id ) && $id !== $front_id ? $id : 0 );
+                    break;
+                case 'section_order': $clean[ $key ] = undo_sanitize_home_section_order( $value ); break;
                 case 'media': $clean[ $key ] = ctype_digit( $value ) && wp_attachment_is_image( (int) $value ) ? $value : '0'; break;
                 case 'textarea': $clean[ $key ] = sanitize_textarea_field( $value ); break;
                 case 'url': $clean[ $key ] = 0 === strpos( $value, '#' ) ? sanitize_text_field( $value ) : esc_url_raw( $value ); break;
@@ -387,6 +437,14 @@ function undo_settings_field( $key, $field, $control_only = false ) {
             echo '<option value="' . esc_attr( $page->ID ) . '"' . selected( $value, (string) $page->ID, false ) . '>' . esc_html( get_the_title( $page ) ) . '</option>';
         }
         echo '</select><p class="description">' . esc_html__( 'Uses the WordPress posts page. Select a static homepage in Settings → Reading to show posts on this page.', 'undo-theme' ) . '</p>';
+    } elseif ( 'home_page_choice' === $field[1] ) {
+        echo '<select id="undo-' . esc_attr( $key ) . '" name="' . $name . '"><option value="0"' . selected( $value, '0', false ) . '>' . esc_html__( 'Use built-in copy', 'undo-theme' ) . '</option>';
+        $front_id = absint( get_option( 'page_on_front', 0 ) );
+        foreach ( get_pages( array( 'post_status' => 'publish', 'sort_column' => 'post_title' ) ) as $page ) {
+            if ( (int) $page->ID === $front_id ) { continue; }
+            echo '<option value="' . esc_attr( $page->ID ) . '"' . selected( $value, (string) $page->ID, false ) . '>' . esc_html( get_the_title( $page ) ) . '</option>';
+        }
+        echo '</select>';
     } elseif ( 'textarea' === $field[1] ) {
         echo '<textarea id="undo-' . esc_attr( $key ) . '" name="' . $name . '" rows="3" class="large-text" dir="auto">' . esc_textarea( $value ) . '</textarea>';
     } elseif ( 'select' === $field[1] ) {
@@ -434,6 +492,22 @@ function undo_render_settings_group( $title, $fields ) {
     echo '<section class="undo-settings__group"><h3>' . esc_html( $title ) . '</h3><table class="form-table" role="presentation">';
     foreach ( $fields as $key => $field ) { undo_settings_field( $key, $field ); }
     echo '</table></section>';
+}
+
+function undo_render_home_sections() {
+    $sections = undo_home_sections();
+    echo '<section class="undo-settings__group"><h3>' . esc_html__( 'Homepage sections', 'undo-theme' ) . '</h3>';
+    echo '<p class="undo-settings__hint">' . esc_html__( 'The hero stays first and the project planner stays last so project links keep working. Move the other sections and hide any you do not need.', 'undo-theme' ) . '</p>';
+    echo '<input type="hidden" id="undo-home_section_order" name="undo_theme_settings[home_section_order]" value="' . esc_attr( implode( ',', undo_home_section_order() ) ) . '" data-undo-home-order-value>';
+    echo '<ol class="undo-home-order" data-undo-home-order>';
+    foreach ( undo_home_section_order() as $slug ) {
+        $label = $sections[ $slug ];
+        $key = 'home_show_' . $slug;
+        echo '<li class="undo-home-order__item" data-undo-home-section="' . esc_attr( $slug ) . '"><span class="undo-home-order__name">' . esc_html( $label ) . '</span>';
+        echo '<label class="undo-home-order__toggle"><input type="hidden" name="undo_theme_settings[' . esc_attr( $key ) . ']" value="0"><input type="checkbox" id="undo-' . esc_attr( $key ) . '" name="undo_theme_settings[' . esc_attr( $key ) . ']" value="1"' . checked( undo_setting( $key ), '1', false ) . '><span>' . esc_html__( 'Show', 'undo-theme' ) . '</span></label>';
+        echo '<span class="undo-home-order__actions"><button type="button" class="button" data-undo-home-move="up" aria-label="' . esc_attr( sprintf( __( 'Move %s up', 'undo-theme' ), $label ) ) . '">' . esc_html__( 'Up', 'undo-theme' ) . '</button><button type="button" class="button" data-undo-home-move="down" aria-label="' . esc_attr( sprintf( __( 'Move %s down', 'undo-theme' ), $label ) ) . '">' . esc_html__( 'Down', 'undo-theme' ) . '</button></span></li>';
+    }
+    echo '</ol></section>';
 }
 function undo_render_typography_row( $role, $title, $fields ) {
     echo '<tr><th scope="row">' . esc_html( $title ) . '</th>';
@@ -510,6 +584,11 @@ function undo_render_settings_page() {
             echo '<p class="undo-settings__hint">' . esc_html__( 'Assign the Footer and Footer secondary menu locations in Appearance → Menus. The second column appears only when it has an assigned menu.', 'undo-theme' ) . ' <a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '">' . esc_html__( 'Open Menus', 'undo-theme' ) . '</a></p>';
             echo '<p class="undo-settings__hint">' . esc_html__( 'Add blocks to Footer widget areas 1–3 in Appearance → Widgets. Only areas containing widgets appear.', 'undo-theme' ) . ' <a href="' . esc_url( admin_url( 'widgets.php' ) ) . '">' . esc_html__( 'Open Widgets', 'undo-theme' ) . '</a></p>';
             echo '<p class="undo-settings__hint">' . esc_html__( 'Use {year} in copyright text for the current year. The privacy link appears only when a published Privacy Policy page is configured in WordPress.', 'undo-theme' ) . '</p>';
+        } elseif ( 'homepage' === $slug ) {
+            undo_render_home_sections();
+            undo_render_settings_group( __( 'Hero copy', 'undo-theme' ), array_intersect_key( $section[2], array_flip( array( 'hero_title_fa', 'hero_lead_fa', 'hero_title_en', 'hero_lead_en', 'show_section_rail' ) ) ) );
+            undo_render_settings_group( __( 'Linked pages', 'undo-theme' ), array_filter( $section[2], function ( $field ) { return 'home_page_choice' === $field[1]; } ) );
+            echo '<p class="undo-settings__hint">' . esc_html__( 'For linked pages, the page title and manual excerpt replace the built-in section copy, and the title links to the page. Empty excerpts keep the built-in description. Use separate published pages for Persian and English.', 'undo-theme' ) . '</p>';
         } else {
             echo '<table class="form-table" role="presentation">';
             foreach ( $section[2] as $key => $field ) { undo_settings_field( $key, $field ); }
