@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.9.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.10.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
@@ -49,7 +49,7 @@ msgstr ""
 msgid "Add blocks or widgets here to show them above the footer wordmark."
 msgstr ""
 
-#: inc/settings.php:585
+#: inc/settings.php:586
 msgid "Add blocks to Footer widget areas 1–3 in Appearance → Widgets. Only areas containing widgets appear."
 msgstr ""
 
@@ -73,7 +73,7 @@ msgstr ""
 msgid "Approach page (Persian)"
 msgstr ""
 
-#: inc/settings.php:584
+#: inc/settings.php:585
 msgid "Assign the Footer and Footer secondary menu locations in Appearance → Menus. The second column appears only when it has an assigned menu."
 msgstr ""
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Close search"
 msgstr ""
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Color"
 msgstr ""
 
@@ -197,7 +197,7 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: inc/settings.php:576
+#: inc/settings.php:577
 msgid "Contact and social"
 msgstr ""
 
@@ -217,7 +217,7 @@ msgstr ""
 msgid "Contact phone"
 msgstr ""
 
-#: inc/settings.php:558
+#: inc/settings.php:559
 msgid "Content colors"
 msgstr ""
 
@@ -297,6 +297,10 @@ msgstr ""
 msgid "Editorial list"
 msgstr ""
 
+#: inc/settings.php:549
+msgid "Elementor pages using a UNDO page template follow the widths and spacing below. Elementor Full Width and Canvas use Elementor layouts instead; Canvas also omits the theme header and footer."
+msgstr ""
+
 #: inc/settings.php:164
 msgid "Excerpt length in words"
 msgstr ""
@@ -313,7 +317,7 @@ msgstr ""
 msgid "Follow"
 msgstr ""
 
-#: inc/settings.php:42 inc/settings.php:564
+#: inc/settings.php:42 inc/settings.php:565
 msgid "Font family"
 msgstr ""
 
@@ -321,7 +325,7 @@ msgstr ""
 msgid "Font size in pixels (0 = theme default)"
 msgstr ""
 
-#: inc/settings.php:561
+#: inc/settings.php:562
 msgid "Font sources"
 msgstr ""
 
@@ -353,7 +357,7 @@ msgstr ""
 msgid "Footer background"
 msgstr ""
 
-#: inc/settings.php:559
+#: inc/settings.php:560
 msgid "Footer colors"
 msgstr ""
 
@@ -393,7 +397,7 @@ msgstr ""
 msgid "Footer widgets"
 msgstr ""
 
-#: inc/settings.php:591
+#: inc/settings.php:592
 msgid "For linked pages, the page title and manual excerpt replace the built-in section copy, and the title links to the page. Empty excerpts keep the built-in description. Use separate published pages for Persian and English."
 msgstr ""
 
@@ -425,7 +429,7 @@ msgstr ""
 msgid "Google Fonts"
 msgstr ""
 
-#: inc/settings.php:562
+#: inc/settings.php:563
 msgid "Google families use system fallbacks when Google Fonts loading is off. Uploaded WOFF2 families remain available."
 msgstr ""
 
@@ -445,7 +449,7 @@ msgstr ""
 msgid "Header color style"
 msgstr ""
 
-#: inc/settings.php:557
+#: inc/settings.php:558
 msgid "Header colors"
 msgstr ""
 
@@ -461,7 +465,7 @@ msgstr ""
 msgid "Headings"
 msgstr ""
 
-#: inc/settings.php:589
+#: inc/settings.php:590
 msgid "Hero copy"
 msgstr ""
 
@@ -541,7 +545,7 @@ msgstr ""
 msgid "Left"
 msgstr ""
 
-#: inc/settings.php:577
+#: inc/settings.php:578
 msgid "Legal and copyright"
 msgstr ""
 
@@ -577,7 +581,7 @@ msgstr ""
 msgid "Light logo for dark header"
 msgstr ""
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Line height"
 msgstr ""
 
@@ -589,7 +593,7 @@ msgstr ""
 msgid "Lined"
 msgstr ""
 
-#: inc/settings.php:590
+#: inc/settings.php:591
 msgid "Linked pages"
 msgstr ""
 
@@ -629,7 +633,7 @@ msgstr ""
 msgid "Maximum width"
 msgstr ""
 
-#: inc/settings.php:574
+#: inc/settings.php:575
 msgid "Menu columns"
 msgstr ""
 
@@ -717,7 +721,7 @@ msgstr ""
 msgid "Normal"
 msgstr ""
 
-#: inc/settings.php:554
+#: inc/settings.php:555
 msgid "On screens under 760px, side margins and padding are capped at 20px; top and bottom padding are capped at 58px and 90px."
 msgstr ""
 
@@ -725,11 +729,11 @@ msgstr ""
 msgid "One comment"
 msgstr ""
 
-#: inc/settings.php:584
+#: inc/settings.php:585
 msgid "Open Menus"
 msgstr ""
 
-#: inc/settings.php:585
+#: inc/settings.php:586
 msgid "Open Widgets"
 msgstr ""
 
@@ -741,7 +745,7 @@ msgstr ""
 msgid "Open search"
 msgstr ""
 
-#: inc/settings.php:563
+#: inc/settings.php:564
 msgid "Original font choices follow the site language: DM Sans body, Space Grotesk headings, and Instrument Serif accents in English; Vazirmatn in Persian."
 msgstr ""
 
@@ -937,7 +941,7 @@ msgstr ""
 msgid "Right"
 msgstr ""
 
-#: inc/settings.php:600
+#: inc/settings.php:601
 msgid "Save all changes"
 msgstr ""
 
@@ -1001,7 +1005,7 @@ msgstr ""
 msgid "Set type for each role and choose whether Google Fonts may load."
 msgstr ""
 
-#: inc/settings.php:556
+#: inc/settings.php:557
 msgid "Shared palette"
 msgstr ""
 
@@ -1189,7 +1193,7 @@ msgstr ""
 msgid "Site width"
 msgstr ""
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Size (px)"
 msgstr ""
 
@@ -1201,7 +1205,7 @@ msgstr ""
 msgid "Something new"
 msgstr ""
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Spacing (px)"
 msgstr ""
 
@@ -1217,7 +1221,7 @@ msgstr ""
 msgid "Starting point"
 msgstr ""
 
-#: inc/settings.php:573
+#: inc/settings.php:574
 msgid "Statement and action"
 msgstr ""
 
@@ -1233,7 +1237,7 @@ msgstr ""
 msgid "Structure, content, interface"
 msgstr ""
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Style"
 msgstr ""
 
@@ -1261,7 +1265,7 @@ msgstr ""
 msgid "Text color (blank = theme default)"
 msgstr ""
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Text role"
 msgstr ""
 
@@ -1433,7 +1437,7 @@ msgstr ""
 msgid "Use this image"
 msgstr ""
 
-#: inc/settings.php:586
+#: inc/settings.php:587
 msgid "Use {year} in copyright text for the current year. The privacy link appears only when a published Privacy Policy page is configured in WordPress."
 msgstr ""
 
@@ -1485,7 +1489,7 @@ msgstr ""
 msgid "Websites, plugins & apps made better."
 msgstr ""
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Weight"
 msgstr ""
 
@@ -1517,7 +1521,7 @@ msgstr ""
 msgid "Wide"
 msgstr ""
 
-#: inc/settings.php:575
+#: inc/settings.php:576
 msgid "Widget areas"
 msgstr ""
 

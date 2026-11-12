@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.9.0
+Stable tag: 0.10.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ A bilingual WordPress theme for creative agencies and studios. The initial langu
 * Physical left/right or hidden widget sidebar with lined or panel styling, adjustable width and spacing, context visibility, and optional sticky behavior that stops when the widget area is too tall. On small screens the sidebar follows the main content.
 * Editorial list, image grid, and journal grid for blog indexes, archives, and search results; grid column count is configurable. Blog Settings can choose a published WordPress posts page, which follows Settings > Reading.
 * Footer stage: responsive statement and action, two optional menu columns, email/phone/location, validated social links, copyright with a current-year token, the configured WordPress Privacy Policy link, and three optional widget areas. Text settings have Persian and English values; Elementor Pro's footer template can replace the built-in footer.
-* Elementor-compatible page layouts and Elementor Pro Theme Builder location support. Importable English/Persian Home starters work with Elementor Free; Header, Footer and Blog Archive starters work with Elementor Pro. They are in elementor-templates/ and are not applied during theme updates.
+* Elementor Free page layouts and Elementor Pro Theme Builder locations with native fallbacks. Old builder metadata no longer hides normal page chrome when Elementor is disabled. Importable English/Persian Home starters work with Elementor Free; Header, Footer and Blog Archive starters work with Elementor Pro. They are in elementor-templates/ and are not applied during theme updates.
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
 == Limitations ==
@@ -33,6 +33,10 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.10.0 =
+* Improved the Elementor Free, Pro and disabled-plugin paths: builder page styling is used only while Elementor is loaded, and the native front page returns when an Elementor page is unavailable.
+* Scoped native landing heading and section styles to the built-in homepage so Elementor content can retain its own headings and layout.
+* Added page-setting guidance and automated front-page fallback checks; documented the Elementor compatibility and staging matrix.
 = 0.9.0 =
 * Added Homepage settings for section visibility and keyboard-accessible ordering while keeping the hero and project planner as fixed destinations.
 * Added published-page references for overview, services, approach, and redesign copy, with separate Persian and English choices and links to the selected pages.

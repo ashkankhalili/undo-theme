@@ -546,6 +546,7 @@ function undo_render_settings_page() {
             $template_fields = undo_page_template_fields();
             undo_render_settings_group( __( 'Page display', 'undo-theme' ), array_diff_key( $section[2], $template_fields ) );
             echo '<p class="undo-settings__hint">' . esc_html__( 'The UNDO Custom Width template uses a width set on each page below the editor.', 'undo-theme' ) . '</p>';
+            echo '<p class="undo-settings__hint">' . esc_html__( 'Elementor pages using a UNDO page template follow the widths and spacing below. Elementor Full Width and Canvas use Elementor layouts instead; Canvas also omits the theme header and footer.', 'undo-theme' ) . '</p>';
             foreach ( undo_page_template_presets() as $mode => $preset ) {
                 $fields = array();
                 foreach ( $template_fields as $key => $field ) { if ( 0 === strpos( $key, 'page_' . $mode . '_' ) ) { $fields[ $key ] = $field; } }

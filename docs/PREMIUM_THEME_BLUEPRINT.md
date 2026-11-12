@@ -146,7 +146,7 @@ Implemented by 0.6.0: classic theme skeleton, theme.json, reading, wide, boxed, 
 
 Outstanding: live WordPress/Elementor and dashboard-update validation; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks.
 
-**Current execution milestone:** install 0.9.0 from WordPress Updates. Validate the native Homepage section controls and published-page references using the [Homepage guide](HOMEPAGE.md). Validate the three optional footer widget areas and import the Home, Header, Footer, and Blog Archive Elementor starters on staging using the [Elementor starter guide](ELEMENTOR_STARTERS.md). Record Elementor Free/Pro versions, RTL/LTR behavior, and native fallbacks. Recheck the 0.7.0 footer and earlier layout, blog page, typography, header, sidebar, and page controls before marking stages complete.
+**Current execution milestone:** install 0.10.0 from WordPress Updates. Validate Elementor Free, Pro, and disabled-plugin paths with the [compatibility matrix](ELEMENTOR_COMPATIBILITY.md), then validate the native Homepage controls using the [Homepage guide](HOMEPAGE.md) and import the starters using the [Elementor starter guide](ELEMENTOR_STARTERS.md). Record RTL/LTR behavior and native fallbacks. Recheck footer widgets and the earlier layout, blog, typography, header, sidebar, and page controls before marking stages complete.
 
 ## Primary references
 

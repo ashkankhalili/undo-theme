@@ -15,6 +15,10 @@ function get_post( $id ) { return $GLOBALS['test_page_objects'][ $id ] ?? null; 
 function get_the_title( $post ) { return $post->post_title; }
 function get_permalink( $id ) { return 'https://example.test/page/' . $id; }
 function strip_shortcodes( $content ) { return preg_replace( '/\[[^\]]+\]/', '', $content ); }
+function did_action( $hook ) { return 'elementor/loaded' === $hook ? ( $GLOBALS['elementor_loaded'] ?? 0 ) : 0; }
+function is_singular() { return $GLOBALS['singular'] ?? true; }
+function get_queried_object_id() { return 21; }
+function get_post_meta( $id, $key, $single = false ) { return $GLOBALS['builder_mode'] ?? ''; }
 function get_locale() { return $GLOBALS['site_locale'] ?? 'en_US'; }
 function is_rtl() { return ! empty( $GLOBALS['test_rtl'] ); }
 function wp_unslash( $value ) { return stripslashes( $value ); }
@@ -35,6 +39,15 @@ function get_posts( $args ) { $GLOBALS['related_query'] = $args; return array( (
 function expect( $condition, $message ) { if ( ! $condition ) { throw new RuntimeException( $message ); } }
 
 require dirname( __DIR__ ) . '/undo-theme/functions.php';
+
+$GLOBALS['builder_mode'] = 'builder';
+expect( ! undo_is_elementor_page(), 'Saved Elementor metadata alone must not suppress the WordPress page layout when Elementor is disabled' );
+$GLOBALS['elementor_loaded'] = 1;
+expect( undo_is_elementor_page(), 'An active Elementor-built singular page must use its builder layout' );
+$GLOBALS['singular'] = false;
+expect( ! undo_is_elementor_page(), 'An Elementor edit flag must not turn archives into builder pages' );
+$GLOBALS['singular'] = true;
+$GLOBALS['elementor_loaded'] = 0;
 
 $defaults = undo_setting_defaults();
 expect( '1440px' === $defaults['content_width'] && '80%' === undo_sanitize_site_dimension( '80%' ) && '1440px' === undo_sanitize_site_dimension( '1440' ), 'Site width accepts percent and migrates saved pixel numbers' );

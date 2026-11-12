@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.9.0' );
+define( 'UNDO_THEME_VERSION', '0.10.0' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/page-layout.php';
 require_once get_template_directory() . '/inc/github-updater.php';
@@ -268,8 +268,8 @@ function undo_theme_assets() {
 function undo_theme_typography_css() {
     $selectors = array(
         'body' => 'body',
-        'headings' => '.hero h1,.section h2,.wp-content h1,.wp-content h2,.page-header h1,.single-header h1,.archive-copy h2,.page-body h2,.page-body h3,.single-body h2,.single-body h3,.single-related-heading h2',
-        'accent' => '.hero h1 .outline,.statement h2 span,html[lang^="fa"] .hero h1 .outline,html[lang^="fa"] .statement h2 span',
+        'headings' => '.undo-native-home .hero h1,.undo-native-home .section h2,.wp-content h1,.wp-content h2,.page-header h1,.single-header h1,.archive-copy h2,.page-body h2,.page-body h3,.single-body h2,.single-body h3,.single-related-heading h2',
+        'accent' => '.undo-native-home .hero h1 .outline,.undo-native-home .statement h2 span,html[lang^="fa"] .undo-native-home .hero h1 .outline,html[lang^="fa"] .undo-native-home .statement h2 span',
         'navigation' => '.site-header .desktop-nav,.site-header .mobile-nav',
         'buttons' => '.site-header .header-action,.mobile-header-action,.button,.brief-form button,.undo-sidebar button',
         'page_title' => '.page-header h1',
@@ -328,8 +328,10 @@ function undo_primary_menu_submenu_toggle( $output, $item, $depth, $args ) {
 }
 add_filter( 'walker_nav_menu_start_el', 'undo_primary_menu_submenu_toggle', 10, 4 );
 
+function undo_elementor_active() { return did_action( 'elementor/loaded' ) > 0; }
+
 function undo_is_elementor_page() {
-    return is_singular() && 'builder' === get_post_meta( get_queried_object_id(), '_elementor_edit_mode', true );
+    return undo_elementor_active() && is_singular() && 'builder' === get_post_meta( get_queried_object_id(), '_elementor_edit_mode', true );
 }
 
 function undo_related_posts( $post_id ) {

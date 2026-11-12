@@ -1,5 +1,7 @@
 # Elementor starter templates
 
+For template precedence, page width behavior, and Free/Pro/disabled-plugin checks, see [Elementor compatibility](ELEMENTOR_COMPATIBILITY.md).
+
 Version 0.8.0 ships eight editable Elementor JSON templates in `undo-theme/elementor-templates/`: Home, Header, Footer, and Blog Archive, each in English and Persian. They are **starter content**. A theme update never imports or overwrites a customer's pages or Elementor templates. The existing PHP templates remain the live defaults until the site owner assigns a replacement.
 
 ## Which Elementor edition is needed?

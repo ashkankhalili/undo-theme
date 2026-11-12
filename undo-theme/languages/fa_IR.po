@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.9.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.10.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
@@ -49,7 +49,7 @@ msgstr "متن دکمه اقدام (فارسی)"
 msgid "Add blocks or widgets here to show them above the footer wordmark."
 msgstr "بلوک‌ها یا ابزارک‌ها را اینجا اضافه کنید تا بالای نشان بزرگ پایین صفحه نمایش داده شوند."
 
-#: inc/settings.php:585
+#: inc/settings.php:586
 msgid "Add blocks to Footer widget areas 1–3 in Appearance → Widgets. Only areas containing widgets appear."
 msgstr "بلوک‌ها را در نمایش ← ابزارک‌ها به ناحیه‌های ابزارک پایین صفحهٔ ۱ تا ۳ اضافه کنید. فقط ناحیه‌های دارای ابزارک نمایش داده می‌شوند."
 
@@ -73,7 +73,7 @@ msgstr "صفحهٔ روش کار (انگلیسی)"
 msgid "Approach page (Persian)"
 msgstr "صفحهٔ روش کار (فارسی)"
 
-#: inc/settings.php:584
+#: inc/settings.php:585
 msgid "Assign the Footer and Footer secondary menu locations in Appearance → Menus. The second column appears only when it has an assigned menu."
 msgstr "جایگاه فهرست‌های پایین صفحه و فهرست دوم را در نمایش ← فهرست‌ها تعیین کنید. ستون دوم فقط وقتی فهرستی به آن اختصاص داده شده باشد نمایش می‌یابد."
 
@@ -177,7 +177,7 @@ msgstr "بستن منو"
 msgid "Close search"
 msgstr "بستن جست‌وجو"
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Color"
 msgstr "رنگ"
 
@@ -197,7 +197,7 @@ msgstr "مقایسه نمونه وب‌سایت پیش و پس از بازطرا
 msgid "Contact"
 msgstr "تماس"
 
-#: inc/settings.php:576
+#: inc/settings.php:577
 msgid "Contact and social"
 msgstr "تماس و شبکه‌های اجتماعی"
 
@@ -217,7 +217,7 @@ msgstr "موقعیت تماس (فارسی)"
 msgid "Contact phone"
 msgstr "تلفن تماس"
 
-#: inc/settings.php:558
+#: inc/settings.php:559
 msgid "Content colors"
 msgstr "رنگ‌های محتوا"
 
@@ -297,6 +297,10 @@ msgstr "تحریریه‌ای"
 msgid "Editorial list"
 msgstr "فهرست تحریریه‌ای"
 
+#: inc/settings.php:549
+msgid "Elementor pages using a UNDO page template follow the widths and spacing below. Elementor Full Width and Canvas use Elementor layouts instead; Canvas also omits the theme header and footer."
+msgstr "صفحه‌های المنتوری که قالب صفحهٔ UNDO دارند از عرض و فاصله‌های زیر پیروی می‌کنند. Elementor Full Width و Canvas از چیدمان المنتور استفاده می‌کنند؛ Canvas سربرگ و پایین صفحهٔ پوسته را نیز نمایش نمی‌دهد."
+
 #: inc/settings.php:164
 msgid "Excerpt length in words"
 msgstr "طول خلاصه به واژه"
@@ -313,7 +317,7 @@ msgstr "نام خانواده قلم"
 msgid "Follow"
 msgstr "دنبال کنید"
 
-#: inc/settings.php:42 inc/settings.php:564
+#: inc/settings.php:42 inc/settings.php:565
 msgid "Font family"
 msgstr "خانواده قلم"
 
@@ -321,7 +325,7 @@ msgstr "خانواده قلم"
 msgid "Font size in pixels (0 = theme default)"
 msgstr "اندازه قلم به پیکسل (۰ = پیش‌فرض پوسته)"
 
-#: inc/settings.php:561
+#: inc/settings.php:562
 msgid "Font sources"
 msgstr "منابع قلم"
 
@@ -353,7 +357,7 @@ msgstr "متن دکمهٔ پایین صفحه (فارسی)"
 msgid "Footer background"
 msgstr "پس‌زمینه پانوشت"
 
-#: inc/settings.php:559
+#: inc/settings.php:560
 msgid "Footer colors"
 msgstr "رنگ‌های پانوشت"
 
@@ -393,7 +397,7 @@ msgstr "ناحیهٔ ابزارک پایین صفحهٔ %d"
 msgid "Footer widgets"
 msgstr "ابزارک‌های پایین صفحه"
 
-#: inc/settings.php:591
+#: inc/settings.php:592
 msgid "For linked pages, the page title and manual excerpt replace the built-in section copy, and the title links to the page. Empty excerpts keep the built-in description. Use separate published pages for Persian and English."
 msgstr "برای صفحه‌های پیوندشده، عنوان و خلاصهٔ دستی صفحه جای متن پیش‌فرض بخش را می‌گیرند و عنوان به صفحه پیوند می‌شود. اگر خلاصه خالی باشد، توضیح پیش‌فرض باقی می‌ماند. برای فارسی و انگلیسی از صفحه‌های منتشرشدهٔ جداگانه استفاده کنید."
 
@@ -425,7 +429,7 @@ msgstr "طراحی خوب از شناخت چیزی آغاز می‌شود که �
 msgid "Google Fonts"
 msgstr "قلم‌های گوگل"
 
-#: inc/settings.php:562
+#: inc/settings.php:563
 msgid "Google families use system fallbacks when Google Fonts loading is off. Uploaded WOFF2 families remain available."
 msgstr "وقتی بارگذاری قلم‌های گوگل خاموش است، قلم‌های گوگل از قلم‌های سیستم استفاده می‌کنند. قلم‌های WOFF2 بارگذاری‌شده همچنان در دسترس‌اند."
 
@@ -445,7 +449,7 @@ msgstr "سربرگ"
 msgid "Header color style"
 msgstr "سبک رنگ سربرگ"
 
-#: inc/settings.php:557
+#: inc/settings.php:558
 msgid "Header colors"
 msgstr "رنگ‌های سربرگ"
 
@@ -461,7 +465,7 @@ msgstr "نشان سربرگ"
 msgid "Headings"
 msgstr "عنوان‌ها"
 
-#: inc/settings.php:589
+#: inc/settings.php:590
 msgid "Hero copy"
 msgstr "متن بخش آغازین"
 
@@ -541,7 +545,7 @@ msgstr "برای استفاده از رنگ پیش‌فرض پوسته خالی 
 msgid "Left"
 msgstr "چپ"
 
-#: inc/settings.php:577
+#: inc/settings.php:578
 msgid "Legal and copyright"
 msgstr "اطلاعات حقوقی و حق نشر"
 
@@ -577,7 +581,7 @@ msgstr "متن سربرگ روشن"
 msgid "Light logo for dark header"
 msgstr "نشان روشن برای سربرگ تیره"
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Line height"
 msgstr "ارتفاع خط"
 
@@ -589,7 +593,7 @@ msgstr "ارتفاع خط (۰ = پیش‌فرض پوسته)"
 msgid "Lined"
 msgstr "خط‌دار"
 
-#: inc/settings.php:590
+#: inc/settings.php:591
 msgid "Linked pages"
 msgstr "صفحه‌های پیوندشده"
 
@@ -629,7 +633,7 @@ msgstr "بیشترین عرض نشان به پیکسل"
 msgid "Maximum width"
 msgstr "بیشینه عرض"
 
-#: inc/settings.php:574
+#: inc/settings.php:575
 msgid "Menu columns"
 msgstr "ستون‌های فهرست"
 
@@ -717,7 +721,7 @@ msgstr "برای این نسخه یادداشت انتشار ثبت نشده ا�
 msgid "Normal"
 msgstr "معمولی"
 
-#: inc/settings.php:554
+#: inc/settings.php:555
 msgid "On screens under 760px, side margins and padding are capped at 20px; top and bottom padding are capped at 58px and 90px."
 msgstr "در نمایشگرهای کوچک‌تر از ۷۶۰ پیکسل، فاصله کناره‌ها حداکثر ۲۰ پیکسل و فاصله درونی بالا و پایین حداکثر ۵۸ و ۹۰ پیکسل است."
 
@@ -725,11 +729,11 @@ msgstr "در نمایشگرهای کوچک‌تر از ۷۶۰ پیکسل، فا�
 msgid "One comment"
 msgstr "یک دیدگاه"
 
-#: inc/settings.php:584
+#: inc/settings.php:585
 msgid "Open Menus"
 msgstr "باز کردن فهرست‌ها"
 
-#: inc/settings.php:585
+#: inc/settings.php:586
 msgid "Open Widgets"
 msgstr "باز کردن ابزارک‌ها"
 
@@ -741,7 +745,7 @@ msgstr "باز کردن منو"
 msgid "Open search"
 msgstr "باز کردن جست‌وجو"
 
-#: inc/settings.php:563
+#: inc/settings.php:564
 msgid "Original font choices follow the site language: DM Sans body, Space Grotesk headings, and Instrument Serif accents in English; Vazirmatn in Persian."
 msgstr "قلم‌های اصلی با زبان سایت هماهنگ می‌شوند: متن DM Sans، عنوان Space Grotesk و تأکید Instrument Serif در انگلیسی؛ و Vazirmatn در فارسی."
 
@@ -937,7 +941,7 @@ msgstr "بازگشت به خانه"
 msgid "Right"
 msgstr "راست"
 
-#: inc/settings.php:600
+#: inc/settings.php:601
 msgid "Save all changes"
 msgstr "ذخیره همه تغییرات"
 
@@ -1001,7 +1005,7 @@ msgstr "عرض و چیدمان وب‌سایت را تنظیم کنید. زبا�
 msgid "Set type for each role and choose whether Google Fonts may load."
 msgstr "برای هر بخش قلم و ویژگی‌های نوشتار را تنظیم کنید و بارگذاری قلم‌های گوگل را روشن یا خاموش کنید."
 
-#: inc/settings.php:556
+#: inc/settings.php:557
 msgid "Shared palette"
 msgstr "پالت مشترک"
 
@@ -1189,7 +1193,7 @@ msgstr "پس‌زمینه وب‌سایت"
 msgid "Site width"
 msgstr "عرض وب‌سایت"
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Size (px)"
 msgstr "اندازه (پیکسل)"
 
@@ -1201,7 +1205,7 @@ msgstr "رفتن به محتوای اصلی"
 msgid "Something new"
 msgstr "پروژه‌ای تازه"
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Spacing (px)"
 msgstr "فاصله‌گذاری (پیکسل)"
 
@@ -1217,7 +1221,7 @@ msgstr "از اینجا شروع کنید"
 msgid "Starting point"
 msgstr "نقطه شروع"
 
-#: inc/settings.php:573
+#: inc/settings.php:574
 msgid "Statement and action"
 msgstr "پیام و اقدام"
 
@@ -1233,7 +1237,7 @@ msgstr "فاصله نوار کناری چسبان از بالای صفحه به 
 msgid "Structure, content, interface"
 msgstr "ساختار، محتوا، رابط کاربری"
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Style"
 msgstr "سبک"
 
@@ -1261,7 +1265,7 @@ msgstr "از پروژه‌ای که در ذهن دارید بگویید."
 msgid "Text color (blank = theme default)"
 msgstr "رنگ متن (خالی = پیش‌فرض پوسته)"
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Text role"
 msgstr "نوع متن"
 
@@ -1433,7 +1437,7 @@ msgstr "استفاده از این قلم"
 msgid "Use this image"
 msgstr "استفاده از این تصویر"
 
-#: inc/settings.php:586
+#: inc/settings.php:587
 msgid "Use {year} in copyright text for the current year. The privacy link appears only when a published Privacy Policy page is configured in WordPress."
 msgstr "برای نمایش سال جاری در متن حق نشر از {year} استفاده کنید. پیوند حریم خصوصی فقط وقتی صفحهٔ منتشرشده‌ای برای آن در وردپرس تنظیم شده باشد ظاهر می‌شود."
 
@@ -1485,7 +1489,7 @@ msgstr "صفحهٔ وب‌سایت‌ها (فارسی)"
 msgid "Websites, plugins & apps made better."
 msgstr "وب‌سایت‌ها، افزونه‌ها و اپ‌ها؛ بهتر از قبل."
 
-#: inc/settings.php:564
+#: inc/settings.php:565
 msgid "Weight"
 msgstr "ضخامت"
 
@@ -1517,7 +1521,7 @@ msgstr "چه از یک ایده تازه شروع کنید، چه محصولی �
 msgid "Wide"
 msgstr "عریض"
 
-#: inc/settings.php:575
+#: inc/settings.php:576
 msgid "Widget areas"
 msgstr "ناحیه‌های ابزارک"
 

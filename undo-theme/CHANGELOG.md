@@ -4,6 +4,24 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.10.0] - 2026-11-12
+
+### Elementor integration milestone
+
+- Elementor page detection now requires the loaded plugin as well as the saved builder flag. If Elementor is disabled, ordinary pages return to WordPress title/content/sidebar rules, and the native Home returns when no explicit page template is assigned. Saved Elementor data and customer content are not modified.
+- Scoped native landing section and heading CSS to the built-in Home so those rules do not alter Elementor headings or sections. The static-header full-height rule now applies to the native landing instead of every Elementor Home page.
+- Added Pages settings guidance explaining that UNDO page templates use the configured widths and spacing, while Elementor Full Width and Canvas use Elementor's layouts. Added automated front-page routing tests for Free, Pro, and no Elementor, plus the compatibility and staging matrix.
+
+### فارسی
+
+- تشخیص صفحهٔ المنتوری فقط زمانی فعال است که خود افزونه بارگذاری شده باشد. با غیرفعال شدن المنتور، صفحه‌های معمولی از قالب وردپرس و صفحهٔ اصلی بدون قالب صریح از طرح اصلی پوسته استفاده می‌کنند.
+- سبک‌های عنوان و بخش‌های صفحهٔ اصلی به همان طرح محدود شدند تا روی محتوای المنتور اثر نگذارند.
+- راهنمای تفاوت قالب‌های صفحهٔ UNDO با Elementor Full Width و Canvas و آزمون‌های مسیرهای جایگزین اضافه شد.
+
+### Validation
+
+- PHP routing tests cover an active Elementor page, stale builder metadata without the plugin, native Home fallback, explicit UNDO page templates, and a Pro single location. GitHub CI validates PHP 7.4/8.3, translations, starter JSON, and package structure. Live Free/Pro/deactivated-plugin rendering and starter imports on staging remain an acceptance gate.
+
 ## [0.9.0] - 2026-11-12
 
 ### Homepage milestone

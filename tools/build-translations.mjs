@@ -4,6 +4,7 @@ import path from 'node:path';
 const root = path.resolve('undo-theme');
 const domain = 'undo-theme';
 const fa = {
+  'Elementor pages using a UNDO page template follow the widths and spacing below. Elementor Full Width and Canvas use Elementor layouts instead; Canvas also omits the theme header and footer.':'صفحه‌های المنتوری که قالب صفحهٔ UNDO دارند از عرض و فاصله‌های زیر پیروی می‌کنند. Elementor Full Width و Canvas از چیدمان المنتور استفاده می‌کنند؛ Canvas سربرگ و پایین صفحهٔ پوسته را نیز نمایش نمی‌دهد.',
   'Approach page (English)':'صفحهٔ روش کار (انگلیسی)',
   'Approach page (Persian)':'صفحهٔ روش کار (فارسی)',
   'Down':'پایین',
@@ -468,7 +469,7 @@ const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.9.0',
+  'Project-Id-Version: UNDO Web Developments 0.10.0',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',
