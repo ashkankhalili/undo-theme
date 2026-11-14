@@ -4,6 +4,14 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.13.3] - 2026-11-14
+
+- Print Theme Check and Plugin Check findings in the WordPress audit job log when a checker exits with findings, while retaining the full downloadable reports. Disable the unused `wp-env` tests instance to keep this audit focused and faster.
+
+### فارسی
+
+- نتیجهٔ خطاهای بررسی پوسته و افزونه در گزارش اجرای گیت‌هاب نمایش داده می‌شود و گزارش کامل نیز برای دانلود باقی می‌ماند.
+
 ## [0.13.2] - 2026-11-14
 
 - Started the release-candidate audit with an isolated WordPress environment. GitHub Actions now runs official Theme Check and Plugin Check against the theme and separate Elementor addon, retaining full output as a downloadable audit artifact. The audit is informational until findings are reviewed and resolved; the existing syntax, translation, package, and release gates remain unchanged.

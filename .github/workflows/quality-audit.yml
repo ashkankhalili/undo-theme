@@ -37,6 +37,14 @@ jobs:
           plugin_status=$?
           set -e
           printf 'Theme Check exit: %s\nPlugin Check exit: %s\n' "$theme_status" "$plugin_status" | tee audit-results/status.txt
+          if [ "$theme_status" -ne 0 ]; then
+            echo 'Theme Check findings:'
+            cat audit-results/theme-check.json audit-results/theme-check.stderr
+          fi
+          if [ "$plugin_status" -ne 0 ]; then
+            echo 'Plugin Check findings:'
+            cat audit-results/plugin-check.txt audit-results/plugin-check.stderr
+          fi
           test "$theme_status" -eq 0 && test "$plugin_status" -eq 0
       - uses: actions/upload-artifact@v4
         if: always()

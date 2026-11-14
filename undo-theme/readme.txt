@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.13.2
+Stable tag: 0.13.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,8 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.13.3 =
+* Print WordPress Theme Check findings in the audit run so they can be reviewed without downloading an artifact; the full reports remain available as an artifact.
 = 0.13.2 =
 * Added an isolated WordPress Theme Check and UNDO Elements Plugin Check audit in GitHub Actions, with downloadable raw results for release-candidate review.
 * Recorded live provisioning of the four editable Elementor Home and Blog starters on staging, while preserving existing Settings > Reading choices.
