@@ -1,0 +1,10 @@
+/* Match the native reading surface in the block editor without changing editor controls. */
+.editor-styles-wrapper{background:#f8f6f2;color:#242320;font-family:"DM Sans",system-ui,sans-serif;font-size:17px;line-height:1.7}
+.editor-styles-wrapper .wp-block{max-width:760px}
+.editor-styles-wrapper .wp-block[data-align="wide"]{max-width:1200px}
+.editor-styles-wrapper .wp-block[data-align="full"]{max-width:none}
+.editor-styles-wrapper :is(h1,h2,h3,h4,h5,h6){font-family:"Space Grotesk",system-ui,sans-serif;line-height:1.18;letter-spacing:-.035em}
+.editor-styles-wrapper a{color:#a53127;text-decoration:underline;text-underline-offset:.15em}
+.editor-styles-wrapper blockquote{border-inline-start:3px solid #b83b30;padding-inline-start:1.25em}
+.editor-styles-wrapper[lang^="fa"],html[lang^="fa"] .editor-styles-wrapper{font-family:Vazirmatn,Tahoma,sans-serif;direction:rtl}
+.editor-styles-wrapper[lang^="fa"] :is(h1,h2,h3,h4,h5,h6),html[lang^="fa"] .editor-styles-wrapper :is(h1,h2,h3,h4,h5,h6){font-family:Vazirmatn,Tahoma,sans-serif;letter-spacing:0}

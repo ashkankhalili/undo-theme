@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.13.3
+Stable tag: 0.13.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,7 @@ A bilingual WordPress theme for creative agencies and studios. The initial langu
 * Standalone, full-width UNDO Theme Settings page with a joined vertical sidebar. Switching sections keeps unsaved values in place; Save all changes stores every section at once.
 * Separate layout, colors, and typography sections. Site content width accepts pixels or percent. Typography shows each text role on a single row with its original language-aware font named explicitly, plus size, weight, style, line height, word and letter spacing, and color controls. Google, system, and uploaded WOFF2 font families are available; Google font loading can be disabled. Header options include light/dark styles, logo variants, centered navigation, search, and mobile action visibility.
 * WordPress menus, widgets, featured images, logo support, and normal post, page, archive, search, and 404 templates.
+* Block editor styles reflect the native reading palette and typography, including Persian RTL direction. Standard WordPress image alignment and captions, visible keyboard focus, and threaded comment replies are supported.
 * Editorial single-post template with optional manual excerpt, metadata, featured image, tags, related posts, comments, post navigation, and sidebar. Related posts are opt-in and matched by category.
 * Reading, wide, boxed, and full-width page templates each have width, margin, and padding controls in Pages settings. The default can be overridden in the WordPress or Elementor page template selector. UNDO Custom Width uses only a per-page pixel/percentage field below the WordPress editor, visible when that template is selected.
 * Physical left/right or hidden widget sidebar with lined or panel styling, adjustable width and spacing, context visibility, and optional sticky behavior that stops when the widget area is too tall. On small screens the sidebar follows the main content.
@@ -33,6 +34,9 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.13.4 =
+* Added matching block editor styles, threaded comment replies, keyboard-visible screen-reader labels, and standard WordPress image, alignment, sticky-post, and author-comment styles.
+* Declared the WordPress 7.1 tested series and documented the commercial Theme Check exceptions while release-candidate checks continue.
 = 0.13.3 =
 * Print WordPress Theme Check findings in the audit run so they can be reviewed without downloading an artifact; the full reports remain available as an artifact.
 = 0.13.2 =

@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.13.3' );
+define( 'UNDO_THEME_VERSION', '0.13.4' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/page-layout.php';
 require_once get_template_directory() . '/inc/github-updater.php';
@@ -14,6 +14,7 @@ function undo_theme_setup() {
     add_theme_support( 'responsive-embeds' );
     add_theme_support( 'align-wide' );
     add_theme_support( 'editor-styles' );
+    add_editor_style( 'assets/css/editor.css' );
     add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' ) );
 }
 add_action( 'after_setup_theme', 'undo_theme_setup' );
@@ -251,6 +252,7 @@ function undo_theme_assets() {
     wp_enqueue_style( 'undo-site', get_theme_file_uri( '/assets/css/site.css' ), $needed_fonts ? array( 'undo-fonts' ) : array(), UNDO_THEME_VERSION );
     wp_enqueue_style( 'undo-theme', get_stylesheet_uri(), array( 'undo-site' ), UNDO_THEME_VERSION );
     wp_enqueue_script( 'undo-site', get_theme_file_uri( '/assets/js/theme.js' ), array(), UNDO_THEME_VERSION, true );
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
     wp_localize_script( 'undo-site', 'undoTheme', array(
         'language' => $language,
         'menuOpen' => __( 'Open menu', 'undo-theme' ),

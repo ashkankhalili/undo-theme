@@ -1,11 +1,11 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.13.3\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.13.4\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:262
 msgid "%s%% of the earlier layout visible"
 msgstr ""
 
@@ -17,7 +17,7 @@ msgstr ""
 msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Optional Polylang integration links translated pages and language-specific home URLs. Includes an editable landing page with section ordering, visibility, and published-page references; three blog layouts; editorial posts; and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls layout, colors, language-aware typography, header, pages, posts, blog, sidebar, and a configurable footer with menus, contact, social, legal and three optional widget areas. With Elementor Free or Pro active, creates editable English/Persian Home and Blog starter pages once without replacing Reading choices; native pages remain when Elementor is absent. Includes Elementor Pro Theme Builder locations with fallbacks, optional UNDO Elements widgets, and GitHub dashboard updates."
 msgstr ""
 
-#: functions.php:276 template-parts/home/project-planner.php:3
+#: functions.php:278 template-parts/home/project-planner.php:3
 msgid "A redesign"
 msgstr ""
 
@@ -45,7 +45,7 @@ msgstr ""
 msgid "Action label (Persian)"
 msgstr ""
 
-#: functions.php:43
+#: functions.php:44
 msgid "Add blocks or widgets here to show them above the footer wordmark."
 msgstr ""
 
@@ -61,7 +61,7 @@ msgstr ""
 msgid "After"
 msgstr ""
 
-#: functions.php:353 inc/settings.php:58
+#: functions.php:355 inc/settings.php:58
 msgid "Approach"
 msgstr ""
 
@@ -169,11 +169,11 @@ msgstr ""
 msgid "Clear"
 msgstr ""
 
-#: functions.php:257
+#: functions.php:259
 msgid "Close menu"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:261
 msgid "Close search"
 msgstr ""
 
@@ -361,7 +361,7 @@ msgstr ""
 msgid "Footer colors"
 msgstr ""
 
-#: functions.php:25
+#: functions.php:26
 msgid "Footer menu"
 msgstr ""
 
@@ -369,7 +369,7 @@ msgstr ""
 msgid "Footer navigation"
 msgstr ""
 
-#: functions.php:25
+#: functions.php:26
 msgid "Footer secondary menu"
 msgstr ""
 
@@ -389,11 +389,11 @@ msgstr ""
 msgid "Footer text"
 msgstr ""
 
-#: functions.php:41
+#: functions.php:42
 msgid "Footer widget area %d"
 msgstr ""
 
-#: functions.php:67
+#: functions.php:68
 msgid "Footer widgets"
 msgstr ""
 
@@ -413,7 +413,7 @@ msgstr ""
 msgid "GitHub URL"
 msgstr ""
 
-#: functions.php:265
+#: functions.php:267
 msgid "Goal"
 msgstr ""
 
@@ -641,7 +641,7 @@ msgstr ""
 msgid "Minimum side margin in pixels"
 msgstr ""
 
-#: functions.php:272 template-parts/home/project-planner.php:2
+#: functions.php:274 template-parts/home/project-planner.php:2
 msgid "Mobile app"
 msgstr ""
 
@@ -737,11 +737,11 @@ msgstr ""
 msgid "Open Widgets"
 msgstr ""
 
-#: functions.php:256 header.php:43
+#: functions.php:258 header.php:43
 msgid "Open menu"
 msgstr ""
 
-#: functions.php:258 header.php:39
+#: functions.php:260 header.php:39
 msgid "Open search"
 msgstr ""
 
@@ -861,11 +861,11 @@ msgstr ""
 msgid "Previous post"
 msgstr ""
 
-#: functions.php:25
+#: functions.php:26
 msgid "Primary menu"
 msgstr ""
 
-#: functions.php:31 sidebar.php:7
+#: functions.php:32 sidebar.php:7
 msgid "Primary sidebar"
 msgstr ""
 
@@ -877,7 +877,7 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr ""
 
-#: functions.php:262
+#: functions.php:264
 msgid "Project"
 msgstr ""
 
@@ -885,7 +885,7 @@ msgstr ""
 msgid "Project or business name"
 msgstr ""
 
-#: functions.php:354 template-parts/landing.php:7
+#: functions.php:356 template-parts/landing.php:7
 msgid "Project planner"
 msgstr ""
 
@@ -985,11 +985,11 @@ msgstr ""
 msgid "Select image"
 msgstr ""
 
-#: functions.php:263
+#: functions.php:265
 msgid "Service"
 msgstr ""
 
-#: functions.php:352 inc/settings.php:57
+#: functions.php:354 inc/settings.php:57
 msgid "Services"
 msgstr ""
 
@@ -1205,7 +1205,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: functions.php:275 template-parts/home/project-planner.php:3
+#: functions.php:277 template-parts/home/project-planner.php:3
 msgid "Something new"
 msgstr ""
 
@@ -1221,7 +1221,7 @@ msgstr ""
 msgid "Start here"
 msgstr ""
 
-#: functions.php:264
+#: functions.php:266
 msgid "Starting point"
 msgstr ""
 
@@ -1313,11 +1313,11 @@ msgstr ""
 msgid "This width applies only when the page template is UNDO Custom Width. Leave the field blank for 1200px."
 msgstr ""
 
-#: functions.php:267
+#: functions.php:269
 msgid "To be discussed"
 msgstr ""
 
-#: functions.php:362
+#: functions.php:364
 msgid "Toggle submenu for %s"
 msgstr ""
 
@@ -1353,7 +1353,7 @@ msgstr ""
 msgid "UNDO Web Developments"
 msgstr ""
 
-#: functions.php:261
+#: functions.php:263
 msgid "UNDO Web Developments — Project brief"
 msgstr ""
 
@@ -1393,7 +1393,7 @@ msgstr ""
 msgid "Untitled page"
 msgstr ""
 
-#: functions.php:266
+#: functions.php:268
 msgid "Untitled project"
 msgstr ""
 
@@ -1469,7 +1469,7 @@ msgstr ""
 msgid "Web Developments"
 msgstr ""
 
-#: functions.php:270 template-parts/home/project-planner.php:2
+#: functions.php:272 template-parts/home/project-planner.php:2
 msgid "Website"
 msgstr ""
 
@@ -1541,7 +1541,7 @@ msgstr ""
 msgid "Widget titles"
 msgstr ""
 
-#: functions.php:33
+#: functions.php:34
 msgid "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings."
 msgstr ""
 
@@ -1557,7 +1557,7 @@ msgstr ""
 msgid "Word spacing in pixels (0 = theme default)"
 msgstr ""
 
-#: functions.php:271 template-parts/home/project-planner.php:2
+#: functions.php:273 template-parts/home/project-planner.php:2
 msgid "WordPress plugin"
 msgstr ""
 
@@ -1601,7 +1601,7 @@ msgstr ""
 msgid "Your answers stay in this browser. The brief downloads to your device."
 msgstr ""
 
-#: functions.php:268
+#: functions.php:270
 msgid "Your project brief has been downloaded."
 msgstr ""
 

@@ -4,6 +4,16 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.13.4] - 2026-11-14
+
+- Added a block editor stylesheet that echoes the native reading palette and type rhythm, including a Persian RTL baseline. Threaded comment replies now load the WordPress reply script when needed. The isolated audit also captures a full WordPress PHP Coding Standards baseline for the theme and addon.
+- Added a visible focus treatment for screen-reader labels and styles for WordPress alignment, captions, sticky posts, and author comments. Declared the 7.1 tested WordPress series; documented Theme Check findings and the intentional commercial distribution exceptions in `docs/THEME_CHECK_AUDIT.md`.
+
+### فارسی
+
+- ظاهر ویرایشگر بلوکی با نمای خواندن پوسته هماهنگ شد و حالت راست‌به‌چپ فارسی نیز در نظر گرفته شد.
+- پاسخ تو در تو برای دیدگاه‌ها، نمایش مناسب برچسب‌های دسترس‌پذیری هنگام فوکوس و سبک‌های استاندارد تصاویر و نوشته‌های سنجاق‌شده اضافه شد.
+
 ## [0.13.3] - 2026-11-14
 
 - Print Theme Check and Plugin Check findings in the WordPress audit job log when a checker exits with findings, while retaining the full downloadable reports. Disable the unused `wp-env` tests instance to keep this audit focused and faster.
