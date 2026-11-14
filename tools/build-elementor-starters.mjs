@@ -15,9 +15,14 @@ const container = (className, elements, settings = {}) => ({
 const widget = (widgetType, settings = {}) => ({
   id: id(), elType: 'widget', widgetType, isInner: false, settings, elements: [],
 });
+// New elements use stable IDs so adding them does not renumber existing starters.
 const fixedWidget = (key, widgetType, settings = {}) => ({
   id: crypto.createHash('sha1').update(`undo-starter-${key}`).digest('hex').slice(0, 8),
   elType: 'widget', widgetType, isInner: false, settings, elements: [],
+});
+const fixedContainer = (key, className, elements, settings = {}) => ({
+  id: crypto.createHash('sha1').update(`undo-starter-${key}`).digest('hex').slice(0, 8),
+  elType: 'container', isInner: false, settings: { _css_classes: className, ...settings }, elements,
 });
 const heading = (title, className, size = 'h2') => widget('heading', { title, header_size: size, _css_classes: className });
 const text = (editor, className = '') => widget('text-editor', { editor, _css_classes: className });
@@ -31,10 +36,12 @@ const copy = {
   en: {
     home: 'Home — English', header: 'Header — English', footer: 'Footer — English', archive: 'Blog Archive — English',
     hero: 'Websites, plugins & apps made better.', intro: 'We create new digital products and redesign the ones that no longer serve your business.',
+    overview: 'The right work for the next version of your business.', overviewText: 'Whether the starting point is a blank page or an existing product, UNDO brings design and development together to make it easier to use, easier to manage, and ready to grow.',
     action: 'Plan a project', services: 'What we build.', serviceOne: 'Websites', serviceOneText: 'New sites and thoughtful redesigns that communicate clearly and work across every screen.',
     serviceTwo: 'WordPress plugins', serviceTwoText: 'Custom tools that add the features your website and workflow actually need.',
     serviceThree: 'Mobile apps', serviceThreeText: 'Mobile experiences built around the people who use them every day.',
     method: 'Create new. Redo what exists.', methodText: 'We map the problem, shape the experience, then build and refine the result.',
+    redesign: 'Keep what works. Redo what does not.', redesignText: 'A better site or product should help people understand, decide, and act. The design follows that job.',
     close: 'Tell us what you want to make.', closeText: 'Start with the essentials. We will shape the next version together.',
     brand: 'UNDO', blog: 'Journal', blogText: 'Notes on designing, building, and making useful things better.',
     footerTitle: 'WE REDO IT FOR YOU.', footerText: 'Websites, WordPress plugins and mobile apps, designed for what comes next.',
@@ -42,10 +49,12 @@ const copy = {
   fa: {
     home: 'صفحهٔ اصلی — فارسی', header: 'سربرگ — فارسی', footer: 'پایین صفحه — فارسی', archive: 'بایگانی وبلاگ — فارسی',
     hero: 'وب‌سایت‌ها، افزونه‌ها و اپ‌ها؛ بهتر از قبل.', intro: 'محصولات دیجیتال تازه می‌سازیم و آنچه دیگر پاسخ‌گوی کسب‌وکار شما نیست را بازطراحی می‌کنیم.',
+    overview: 'کار درست برای نسخهٔ بعدی کسب‌وکار شما.', overviewText: 'چه از یک صفحهٔ خالی شروع کنید و چه از محصولی موجود، UNDO طراحی و توسعه را کنار هم می‌آورد تا استفاده و مدیریت آن ساده‌تر شود و برای رشد آماده باشد.',
     action: 'برنامه‌ریزی پروژه', services: 'چه می‌سازیم؟', serviceOne: 'وب‌سایت‌ها', serviceOneText: 'طراحی و بازطراحی وب‌سایت‌هایی روشن، کاربردی و سازگار با همهٔ صفحه‌ها.',
     serviceTwo: 'افزونه‌های وردپرس', serviceTwoText: 'ابزارهای اختصاصی برای نیازهای واقعی وب‌سایت و روند کاری شما.',
     serviceThree: 'اپلیکیشن‌های موبایل', serviceThreeText: 'تجربه‌های موبایل بر پایهٔ نیاز کسانی که هر روز از آن‌ها استفاده می‌کنند.',
     method: 'از نو بسازیم. آنچه هست را بهتر کنیم.', methodText: 'مسئله را می‌شناسیم، تجربه را طراحی می‌کنیم و نتیجه را می‌سازیم و اصلاح می‌کنیم.',
+    redesign: 'آنچه کار می‌کند را نگه داریم. بقیه را از نو بسازیم.', redesignText: 'وب‌سایت یا محصول بهتر به مردم کمک می‌کند بفهمند، تصمیم بگیرند و اقدام کنند. طراحی باید به همین هدف خدمت کند.',
     close: 'از پروژه‌تان بگویید.', closeText: 'از نکات اصلی شروع کنیم و نسخهٔ بعدی را با هم شکل دهیم.',
     brand: 'UNDO', blog: 'یادداشت‌ها', blogText: 'دربارهٔ طراحی، ساخت و بهتر کردن چیزهای کاربردی.',
     footerTitle: 'برای شما از نو می‌سازیم.', footerText: 'وب‌سایت، افزونهٔ وردپرس و اپلیکیشن موبایل؛ برای آنچه پیش رو دارید.',
@@ -59,7 +68,11 @@ for (const [language, c] of Object.entries(copy)) {
     container(`undo-starter-home ${langClass}`, [
       container('undo-starter-hero', [
         heading(c.hero, 'undo-starter-display', 'h1'), text(c.intro, 'undo-starter-lead'), button(c.action, '#project-planner'),
-      ]),
+      ], { _element_id: 'top' }),
+      fixedContainer(`home-overview-${language}`, 'undo-starter-overview', [
+        fixedWidget(`home-overview-title-${language}`, 'heading', { title: c.overview, header_size: 'h2', _css_classes: 'undo-starter-section-title' }),
+        fixedWidget(`home-overview-text-${language}`, 'text-editor', { editor: c.overviewText, _css_classes: 'undo-starter-lead' }),
+      ], { _element_id: 'overview' }),
       container('undo-starter-services', [
         heading(c.services, 'undo-starter-section-title'),
         container('undo-starter-service-list', [
@@ -67,9 +80,9 @@ for (const [language, c] of Object.entries(copy)) {
           container('undo-starter-service', [heading(c.serviceTwo, '', 'h3'), text(c.serviceTwoText)]),
           container('undo-starter-service', [heading(c.serviceThree, '', 'h3'), text(c.serviceThreeText)]),
         ]),
-      ]),
-      container('undo-starter-method', [heading(c.method, 'undo-starter-section-title'), text(c.methodText, 'undo-starter-lead')]),
-      container('undo-starter-close', [heading(c.close, 'undo-starter-section-title'), text(c.closeText, 'undo-starter-lead'), button(c.action, '#project-planner')]),
+      ], { _element_id: 'services' }),
+      container('undo-starter-method', [heading(c.method, 'undo-starter-section-title'), text(c.methodText, 'undo-starter-lead')], { _element_id: 'approach' }),
+      container('undo-starter-redesign', [heading(c.redesign, 'undo-starter-section-title'), text(c.redesignText, 'undo-starter-lead'), button(c.action, '#project-planner')], { _element_id: 'redesign' }),
       fixedWidget(`home-planner-${language}`, 'shortcode', { shortcode: '[undo_home_planner]', _css_classes: 'undo-starter-planner' }),
     ]),
   ]);

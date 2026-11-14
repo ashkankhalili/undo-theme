@@ -2,7 +2,7 @@
 
 For template precedence, page width behavior, and Free/Pro/disabled-plugin checks, see [Elementor compatibility](ELEMENTOR_COMPATIBILITY.md).
 
-Version 0.13.0 ships ten editable Elementor JSON templates in `undo-theme/elementor-templates/`: Home, Blog Page, Header, Footer, and Blog Archive in English and Persian. When Elementor Free or Pro is active, the theme creates four published Home and Blog pages from the page starters on the first administrator load. It marks them as UNDO starters and stores their IDs so later loads and theme updates never rewrite them. Existing pages and **Settings → Reading** choices remain untouched. If Elementor is absent, no pages are created and the native Home and blog remain.
+Version 0.13.1 ships ten editable Elementor JSON templates in `undo-theme/elementor-templates/`: Home, Blog Page, Header, Footer, and Blog Archive in English and Persian. The Home starters follow the native section order and anchors: Hero, Overview, Services, Approach, Redesign and Project Planner. When Elementor Free or Pro is active, the theme creates four published Home and Blog pages from the page starters on the first administrator load. It marks them as UNDO starters and stores their IDs so later loads and theme updates never rewrite them. Existing pages and **Settings → Reading** choices remain untouched. If Elementor is absent, no pages are created and the native Home and blog remain.
 
 ## Which Elementor edition is needed?
 

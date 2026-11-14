@@ -29,7 +29,10 @@ for (const [slug, type] of Object.entries(expected)) {
     if (slug === 'blog-archive') assert.ok(widgets.some(widget => widget.widgetType === 'archive-posts'), `${name}: dynamic archive loop`);
     if (slug === 'blog-page') assert.ok(widgets.some(widget => widget.widgetType === 'shortcode' && widget.settings.shortcode === '[undo_blog_posts]'), `${name}: Free posts loop`);
     if (slug === 'footer') assert.ok(widgets.some(widget => widget.widgetType === 'shortcode' && widget.settings.shortcode === '[undo_footer_widgets]'), `${name}: optional WordPress widget areas`);
-    if (slug === 'home') assert.ok(widgets.some(widget => widget.widgetType === 'shortcode' && widget.settings.shortcode === '[undo_home_planner]'), `${name}: working project planner`);
+    if (slug === 'home') {
+      assert.ok(widgets.some(widget => widget.widgetType === 'shortcode' && widget.settings.shortcode === '[undo_home_planner]'), `${name}: working project planner`);
+      assert.deepEqual(document.content[0].elements.slice(0, 5).map(element => element.settings._element_id), ['top', 'overview', 'services', 'approach', 'redesign'], `${name}: native Home section order and anchors`);
+    }
   }
 }
 console.log('Ten Elementor starter templates have the expected editable structure.');

@@ -601,3 +601,15 @@ html[dir="rtl"] .footer-action svg{transform:scaleX(-1)}
 .undo-starter-pagination a,.undo-starter-pagination .current{display:inline-flex;min-width:40px;min-height:40px;align-items:center;justify-content:center;padding:8px 12px;border:1px solid var(--line);color:var(--ink);text-decoration:none}
 .undo-starter-pagination .current{background:var(--ink);color:#fff}
 @media(max-width:760px){.undo-starter-home .undo-starter-planner .planner{padding:72px 20px}}
+
+/* The editable Home starter follows the native Home's section order and colors. */
+.undo-starter-home :is(.undo-starter-overview,.undo-starter-redesign){padding:clamp(70px,8vw,130px) max(24px,calc((100vw - 1440px)/2));min-width:0}
+.undo-starter-home :is(.undo-starter-overview,.undo-starter-services,.undo-starter-method,.undo-starter-redesign){min-height:min(780px,100svh);justify-content:center;scroll-margin-block-start:var(--undo-header-height,76px)}
+.undo-starter-home .undo-starter-overview{background:var(--paper)}
+.undo-starter-home .undo-starter-overview .undo-starter-section-title h2{max-width:14ch}
+.undo-starter-home .undo-starter-redesign{background:var(--red);color:#fff}
+.undo-starter-home .undo-starter-redesign .undo-starter-section-title h2{max-width:15ch;color:inherit}
+.undo-starter-home .undo-starter-redesign .undo-starter-lead{color:#fff;opacity:.88}
+.undo-starter-home .undo-starter-redesign .undo-starter-button .elementor-button{background:#fff;color:var(--red)}
+.undo-starter-home .undo-starter-redesign .undo-starter-button .elementor-button:hover{background:#f7e6e2;color:#8e261f}
+@media(max-width:760px){.undo-starter-home :is(.undo-starter-overview,.undo-starter-redesign){padding:72px 20px}.undo-starter-home :is(.undo-starter-overview,.undo-starter-services,.undo-starter-method,.undo-starter-redesign){min-height:auto}}

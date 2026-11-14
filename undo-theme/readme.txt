@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.13.0
+Stable tag: 0.13.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,8 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.13.1 =
+* Expanded both generated Elementor Home starters to match the native Home section order: Hero, Overview, Services, Approach, Redesign and a working Project Planner.
 = 0.13.0 =
 * Creates editable English and Persian Elementor Home and Blog pages once when Elementor Free or Pro is active, without changing existing Reading choices or customer pages.
 * Adds a live blog posts shortcode for the Elementor Free Reading posts page and keeps the native fallback when Elementor is disabled.

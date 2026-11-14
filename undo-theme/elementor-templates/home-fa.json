@@ -17,7 +17,8 @@
           "elType": "container",
           "isInner": false,
           "settings": {
-            "_css_classes": "undo-starter-hero"
+            "_css_classes": "undo-starter-hero",
+            "_element_id": "top"
           },
           "elements": [
             {
@@ -60,11 +61,46 @@
           ]
         },
         {
+          "id": "49a26f1e",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "_css_classes": "undo-starter-overview",
+            "_element_id": "overview"
+          },
+          "elements": [
+            {
+              "id": "c91ab119",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "کار درست برای نسخهٔ بعدی کسب‌وکار شما.",
+                "header_size": "h2",
+                "_css_classes": "undo-starter-section-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "947e2060",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "isInner": false,
+              "settings": {
+                "editor": "چه از یک صفحهٔ خالی شروع کنید و چه از محصولی موجود، UNDO طراحی و توسعه را کنار هم می‌آورد تا استفاده و مدیریت آن ساده‌تر شود و برای رشد آماده باشد.",
+                "_css_classes": "undo-starter-lead"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
           "id": "0266d1e5",
           "elType": "container",
           "isInner": false,
           "settings": {
-            "_css_classes": "undo-starter-services"
+            "_css_classes": "undo-starter-services",
+            "_element_id": "services"
           },
           "elements": [
             {
@@ -195,7 +231,8 @@
           "elType": "container",
           "isInner": false,
           "settings": {
-            "_css_classes": "undo-starter-method"
+            "_css_classes": "undo-starter-method",
+            "_element_id": "approach"
           },
           "elements": [
             {
@@ -228,7 +265,8 @@
           "elType": "container",
           "isInner": false,
           "settings": {
-            "_css_classes": "undo-starter-close"
+            "_css_classes": "undo-starter-redesign",
+            "_element_id": "redesign"
           },
           "elements": [
             {
@@ -237,7 +275,7 @@
               "widgetType": "heading",
               "isInner": false,
               "settings": {
-                "title": "از پروژه‌تان بگویید.",
+                "title": "آنچه کار می‌کند را نگه داریم. بقیه را از نو بسازیم.",
                 "header_size": "h2",
                 "_css_classes": "undo-starter-section-title"
               },
@@ -249,7 +287,7 @@
               "widgetType": "text-editor",
               "isInner": false,
               "settings": {
-                "editor": "از نکات اصلی شروع کنیم و نسخهٔ بعدی را با هم شکل دهیم.",
+                "editor": "وب‌سایت یا محصول بهتر به مردم کمک می‌کند بفهمند، تصمیم بگیرند و اقدام کنند. طراحی باید به همین هدف خدمت کند.",
                 "_css_classes": "undo-starter-lead"
               },
               "elements": []

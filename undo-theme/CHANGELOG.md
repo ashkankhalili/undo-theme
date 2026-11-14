@@ -4,6 +4,15 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.13.1] - 2026-11-14
+
+- Expanded both generated Elementor Home starters to follow the native section order and anchors: Hero, Overview, Services, Approach, Redesign, and the working Project Planner. Added matching section styling for English and Persian and a structure check in CI.
+- Existing generated or customer-edited pages remain untouched. New installations receive the expanded starter; existing sites can manually import the updated JSON if they want the additional sections.
+
+### فارسی
+
+- صفحهٔ اصلی آمادهٔ المنتوری در هر دو زبان اکنون بخش‌های آغازین، معرفی، خدمات، روش کار، بازطراحی و برنامه‌ریز پروژه را با ترتیب و پیوندهای هماهنگ با صفحهٔ اصلی پوسته دارد.
+
 ## [0.13.0] - 2026-11-14
 
 ### Elementor Home and Blog setup
