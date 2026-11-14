@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.13.1
+Stable tag: 0.13.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,7 +24,7 @@ A bilingual WordPress theme for creative agencies and studios. The initial langu
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
 == Limitations ==
-Elementor is optional; Elementor Pro is needed for Theme Builder location replacement and the Header, Footer and Blog Archive starters. The automatically created Free pages are published but are not assigned in Settings > Reading; review and select the matching Home and Blog pair. Elementor widgets with explicit colors or fonts keep their own styling. The theme does not translate customer-authored pages, posts, menus, or Elementor templates by itself. Polylang is the first supported content translation workflow; Elementor template translations additionally need an integration plugin. Automatic starter creation and the multilingual workflow still need live staging validation. This theme is still a pre-release.
+Elementor is optional; Elementor Pro is needed for Theme Builder location replacement and the Header, Footer and Blog Archive starters. The automatically created Free pages are published but are not assigned in Settings > Reading; review and select the matching Home and Blog pair. Elementor widgets with explicit colors or fonts keep their own styling. The theme does not translate customer-authored pages, posts, menus, or Elementor templates by itself. Polylang is the first supported content translation workflow; Elementor template translations additionally need an integration plugin. Starter page creation has been confirmed on staging; frontend rendering and the multilingual workflow still need live validation. This theme is still a pre-release.
 
 == Installation ==
 Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Theme Settings in the main admin menu.
@@ -33,6 +33,9 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.13.2 =
+* Added an isolated WordPress Theme Check and UNDO Elements Plugin Check audit in GitHub Actions, with downloadable raw results for release-candidate review.
+* Recorded live provisioning of the four editable Elementor Home and Blog starters on staging, while preserving existing Settings > Reading choices.
 = 0.13.1 =
 * Expanded both generated Elementor Home starters to match the native Home section order: Hero, Overview, Services, Approach, Redesign and a working Project Planner.
 = 0.13.0 =

@@ -4,6 +4,16 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.13.2] - 2026-11-14
+
+- Started the release-candidate audit with an isolated WordPress environment. GitHub Actions now runs official Theme Check and Plugin Check against the theme and separate Elementor addon, retaining full output as a downloadable audit artifact. The audit is informational until findings are reviewed and resolved; the existing syntax, translation, package, and release gates remain unchanged.
+- Confirmed through the connected staging WordPress app that the four published English/Persian Home and Blog pages contain editable Elementor data and the expected planner/posts shortcodes. Recorded IDs, routes, and remaining frontend checks in `docs/staging-reports/2026-11-14-elementor-starters.md`. Existing Reading selections were not changed.
+
+### فارسی
+
+- بررسی آزمایشی پوسته و افزونه در محیط وردپرس مجزا به گردش‌کار گیت‌هاب اضافه شد و خروجی کامل آن برای بازبینی نگه‌داری می‌شود.
+- ساخت چهار صفحهٔ آمادهٔ خانه و وبلاگ در دو زبان روی سایت آزمایشی تأیید شد؛ تنظیمات خواندن و محتوای کاربران تغییر نکرد.
+
 ## [0.13.1] - 2026-11-14
 
 - Expanded both generated Elementor Home starters to follow the native section order and anchors: Hero, Overview, Services, Approach, Redesign, and the working Project Planner. Added matching section styling for English and Persian and a structure check in CI.

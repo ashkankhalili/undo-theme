@@ -1,0 +1,49 @@
+name: WordPress quality audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  wordpress-checks:
+    name: Theme Check and Plugin Check
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Start isolated WordPress
+        run: npx --yes @wordpress/env start
+      - name: Install official checkers
+        run: |
+          npx --yes @wordpress/env run cli wp theme activate undo-theme
+          npx --yes @wordpress/env run cli wp plugin install theme-check plugin-check --activate
+      - name: Run checks and retain their full results
+        id: checks
+        continue-on-error: true
+        run: |
+          mkdir -p audit-results
+          set +e
+          npx --yes @wordpress/env run cli wp theme-check run undo-theme --format=json > audit-results/theme-check.json 2> audit-results/theme-check.stderr
+          theme_status=$?
+          npx --yes @wordpress/env run cli wp plugin check undo-elements > audit-results/plugin-check.txt 2> audit-results/plugin-check.stderr
+          plugin_status=$?
+          set -e
+          printf 'Theme Check exit: %s\nPlugin Check exit: %s\n' "$theme_status" "$plugin_status" | tee audit-results/status.txt
+          test "$theme_status" -eq 0 && test "$plugin_status" -eq 0
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: wordpress-quality-audit
+          path: audit-results/
+          if-no-files-found: warn
+      - name: Stop isolated WordPress
+        if: always()
+        run: npx --yes @wordpress/env stop
