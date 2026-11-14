@@ -49,13 +49,13 @@ expect( false !== strpos( $second, 'id="project-planner-2"' ), 'Multiple planner
 expect( false !== strpos( $first, 'data-undo-elements-planner' ) && false === strpos( $first, 'id="brief-form"' ), 'Addon form must use its independent handler' );
 expect( false === strpos( $first, ' action=' ) && false === strpos( $first, ' method=' ), 'Planner must remain browser-only' );
 
-$version = '0.1.1';
+$version = '0.1.2';
 $name = 'undo-elements-' . $version . '.zip';
-$url = UNDO_ELEMENTS_UPDATE_URI . '/releases/download/v0.11.1/' . $name;
+$url = UNDO_ELEMENTS_UPDATE_URI . '/releases/download/v0.12.1/' . $name;
 $bytes = 'valid addon zip bytes';
 $digest = hash( 'sha256', $bytes );
 $GLOBALS['responses'] = array( UNDO_ELEMENTS_RELEASE_API => array( 'code' => 200, 'body' => json_encode( array(
-    'tag_name' => 'v0.11.1', 'draft' => false, 'prerelease' => false, 'body' => "### UNDO Elements\n- Fixed <script>bad</script>",
+    'tag_name' => 'v0.12.1', 'draft' => false, 'prerelease' => false, 'body' => "### UNDO Elements\n- Fixed <script>bad</script>",
     'assets' => array( array( 'name' => $name, 'browser_download_url' => $url, 'state' => 'uploaded', 'size' => strlen( $bytes ), 'digest' => 'sha256:' . $digest ) ),
 ) ) ) );
 $update = undo_elements_github_update( false, array( 'UpdateURI' => UNDO_ELEMENTS_UPDATE_URI, 'Version' => UNDO_ELEMENTS_VERSION ), 'undo-elements/undo-elements.php', array() );
