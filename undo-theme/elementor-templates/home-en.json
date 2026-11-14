@@ -5,217 +5,177 @@
   "page_settings": [],
   "content": [
     {
-      "id": "578f07f3",
+      "id": "50a4bb85",
       "elType": "container",
       "isInner": false,
       "settings": {
-        "_css_classes": "undo-starter-home undo-starter--en"
+        "css_classes": "undo-native-home undo-elementor-home undo-elementor-home--en",
+        "content_width": "full"
       },
       "elements": [
         {
-          "id": "36c65a26",
+          "id": "6b1f9b55",
           "elType": "container",
           "isInner": false,
           "settings": {
-            "_css_classes": "undo-starter-hero",
-            "_element_id": "top"
+            "css_classes": "hero",
+            "_element_id": "top",
+            "html_tag": "section",
+            "content_width": "full"
           },
           "elements": [
             {
-              "id": "8062d432",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "Websites, plugins & apps made better.",
-                "header_size": "h1",
-                "_css_classes": "undo-starter-display"
-              },
-              "elements": []
-            },
-            {
-              "id": "f777bb25",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "isInner": false,
-              "settings": {
-                "editor": "We create new digital products and redesign the ones that no longer serve your business.",
-                "_css_classes": "undo-starter-lead"
-              },
-              "elements": []
-            },
-            {
-              "id": "67828544",
-              "elType": "widget",
-              "widgetType": "button",
-              "isInner": false,
-              "settings": {
-                "text": "Plan a project",
-                "link": {
-                  "url": "#project-planner"
-                },
-                "_css_classes": "undo-starter-button"
-              },
-              "elements": []
-            }
-          ]
-        },
-        {
-          "id": "e11f6968",
-          "elType": "container",
-          "isInner": false,
-          "settings": {
-            "_css_classes": "undo-starter-overview",
-            "_element_id": "overview"
-          },
-          "elements": [
-            {
-              "id": "44010362",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "The right work for the next version of your business.",
-                "header_size": "h2",
-                "_css_classes": "undo-starter-section-title"
-              },
-              "elements": []
-            },
-            {
-              "id": "35f47496",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "isInner": false,
-              "settings": {
-                "editor": "Whether the starting point is a blank page or an existing product, UNDO brings design and development together to make it easier to use, easier to manage, and ready to grow.",
-                "_css_classes": "undo-starter-lead"
-              },
-              "elements": []
-            }
-          ]
-        },
-        {
-          "id": "0266d1e5",
-          "elType": "container",
-          "isInner": false,
-          "settings": {
-            "_css_classes": "undo-starter-services",
-            "_element_id": "services"
-          },
-          "elements": [
-            {
-              "id": "db67332b",
-              "elType": "widget",
-              "widgetType": "heading",
-              "isInner": false,
-              "settings": {
-                "title": "What we build.",
-                "header_size": "h2",
-                "_css_classes": "undo-starter-section-title"
-              },
-              "elements": []
-            },
-            {
-              "id": "41c2cdd8",
+              "id": "6299b4a6",
               "elType": "container",
               "isInner": false,
               "settings": {
-                "_css_classes": "undo-starter-service-list"
+                "css_classes": "wrap hero-grid",
+                "content_width": "full"
               },
               "elements": [
                 {
-                  "id": "8b1e64ee",
+                  "id": "36c65a26",
                   "elType": "container",
                   "isInner": false,
                   "settings": {
-                    "_css_classes": "undo-starter-service"
+                    "css_classes": "hero-copy",
+                    "content_width": "full"
                   },
                   "elements": [
                     {
-                      "id": "6299b4a6",
+                      "id": "8062d432",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Websites",
-                        "header_size": "h3",
+                        "title": "Websites, plugins & apps made better.",
+                        "header_size": "h1",
                         "_css_classes": ""
                       },
                       "elements": []
                     },
                     {
-                      "id": "5bad6fe7",
+                      "id": "f777bb25",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "New sites and thoughtful redesigns that communicate clearly and work across every screen.",
-                        "_css_classes": ""
+                        "editor": "UNDO creates new digital products and redesigns the ones that no longer serve your business. From the first screen to the working code.",
+                        "_css_classes": "hero-description"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "67828544",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "text": "Plan a project",
+                        "link": {
+                          "url": "#project-planner"
+                        },
+                        "_css_classes": "undo-home-cta"
                       },
                       "elements": []
                     }
                   ]
                 },
                 {
-                  "id": "9d518462",
+                  "id": "db67332b",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "isInner": false,
+                  "settings": {
+                    "html": "<div class=\"hero-stage\" aria-label=\"Interactive concept showing a website before and after a redesign\"><div class=\"stage-label\">Drag to compare</div><div class=\"browser\"><div class=\"browser-bar\"><span class=\"browser-dots\"><i></i><i></i><i></i></span><span class=\"browser-address\">undo / new perspective</span><span class=\"browser-menu\">•••</span></div><div class=\"mock-site\"><div class=\"mock-nav\"><span class=\"mock-mark\">U.</span><span>Work  About  Contact</span></div><div class=\"mock-body\"><div class=\"mock-kicker\">A website with purpose.</div><div class=\"mock-heading\">Make the first impression count.</div><div class=\"mock-line\"></div><div class=\"mock-button\">Start here ↗</div></div><div class=\"mock-blocks\"><div></div><div></div><div></div></div></div><div class=\"before-site\" aria-hidden=\"true\"><div class=\"before-top\"><span>COMPANY NAME</span><span>Home  About  Services  Contact</span></div><div class=\"before-banner\">WELCOME TO OUR WEBSITE</div><div class=\"before-content\"><div class=\"before-heading\">We provide solutions for your needs</div><div class=\"before-lines\"><i></i><i></i><i></i><i></i></div><div class=\"before-boxes\"><i></i><i></i><i></i></div></div></div><span class=\"comparison-label comparison-label--before\" aria-hidden=\"true\">Before</span><span class=\"comparison-label comparison-label--after\" aria-hidden=\"true\">After</span><div class=\"comparison-divider\" aria-hidden=\"true\"><span><svg><use href=\"#icon-horizontal\"></use></svg></span></div><input class=\"comparison-range\" type=\"range\" min=\"0\" max=\"100\" value=\"38\" aria-label=\"Compare earlier and redesigned website concept\"></div><div class=\"phone\"><div class=\"phone-notch\"></div><div class=\"phone-inner\"><div class=\"phone-top\">U. <span>☰</span></div><div class=\"phone-title\">Built for every screen.</div><div class=\"phone-shape\"></div><div class=\"phone-lines\"><span></span><span></span></div><div class=\"phone-cta\">Get started ↗</div></div></div><span class=\"stage-stamp\">DESIGN / BUILD / REDO</span></div>",
+                    "_css_classes": "undo-home-visual"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "8b1e64ee",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "css_classes": "wrap hero-bottom",
+                "content_width": "full"
+              },
+              "elements": [
+                {
+                  "id": "5bad6fe7",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "WE REDO IT FOR YOU.",
+                    "_css_classes": "undo-home-slogan"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1ec74faf",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "css_classes": "intro section",
+            "_element_id": "overview",
+            "html_tag": "section",
+            "content_width": "full"
+          },
+          "elements": [
+            {
+              "id": "b1faa9ac",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "css_classes": "wrap intro-grid",
+                "content_width": "full"
+              },
+              "elements": [
+                {
+                  "id": "cc617167",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "isInner": false,
+                  "settings": {
+                    "html": "<div class=\"intro-mark\" aria-hidden=\"true\"><svg><use href=\"#icon-undo\"></use></svg></div>",
+                    "_css_classes": "undo-home-mark"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "2e0750af",
                   "elType": "container",
                   "isInner": false,
                   "settings": {
-                    "_css_classes": "undo-starter-service"
+                    "css_classes": "intro-copy",
+                    "content_width": "full"
                   },
                   "elements": [
-                    {
-                      "id": "cc617167",
-                      "elType": "widget",
-                      "widgetType": "heading",
-                      "isInner": false,
-                      "settings": {
-                        "title": "WordPress plugins",
-                        "header_size": "h3",
-                        "_css_classes": ""
-                      },
-                      "elements": []
-                    },
                     {
                       "id": "1def38fd",
                       "elType": "widget",
-                      "widgetType": "text-editor",
-                      "isInner": false,
-                      "settings": {
-                        "editor": "Custom tools that add the features your website and workflow actually need.",
-                        "_css_classes": ""
-                      },
-                      "elements": []
-                    }
-                  ]
-                },
-                {
-                  "id": "a1e3c516",
-                  "elType": "container",
-                  "isInner": false,
-                  "settings": {
-                    "_css_classes": "undo-starter-service"
-                  },
-                  "elements": [
-                    {
-                      "id": "2e0750af",
-                      "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
                       "settings": {
-                        "title": "Mobile apps",
-                        "header_size": "h3",
-                        "_css_classes": ""
+                        "title": "The right work for the next version of your business.",
+                        "header_size": "h2"
                       },
                       "elements": []
                     },
                     {
-                      "id": "b1faa9ac",
+                      "id": "9d518462",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
                       "settings": {
-                        "editor": "Mobile experiences built around the people who use them every day.",
+                        "editor": "Whether the starting point is a blank page or an existing product, UNDO brings design and development together to make it easier to use, easier to manage, and ready to grow.",
                         "_css_classes": ""
                       },
                       "elements": []
@@ -227,84 +187,388 @@
           ]
         },
         {
-          "id": "ab8880ea",
+          "id": "58614aed",
           "elType": "container",
           "isInner": false,
           "settings": {
-            "_css_classes": "undo-starter-method",
-            "_element_id": "approach"
+            "css_classes": "services section",
+            "_element_id": "services",
+            "html_tag": "section",
+            "content_width": "full"
           },
           "elements": [
             {
-              "id": "d43d7037",
-              "elType": "widget",
-              "widgetType": "heading",
+              "id": "b4e3f187",
+              "elType": "container",
               "isInner": false,
               "settings": {
-                "title": "Create new. Redo what exists.",
-                "header_size": "h2",
-                "_css_classes": "undo-starter-section-title"
+                "css_classes": "wrap",
+                "content_width": "full"
               },
-              "elements": []
-            },
-            {
-              "id": "ce0d8cb0",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "isInner": false,
-              "settings": {
-                "editor": "We map the problem, shape the experience, then build and refine the result.",
-                "_css_classes": "undo-starter-lead"
-              },
-              "elements": []
+              "elements": [
+                {
+                  "id": "41c2cdd8",
+                  "elType": "container",
+                  "isInner": false,
+                  "settings": {
+                    "css_classes": "section-head",
+                    "content_width": "full"
+                  },
+                  "elements": [
+                    {
+                      "id": "a1e3c516",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "What we build.",
+                        "header_size": "h2"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "0cb3680f",
+                  "elType": "container",
+                  "isInner": false,
+                  "settings": {
+                    "css_classes": "service-list",
+                    "content_width": "full"
+                  },
+                  "elements": [
+                    {
+                      "id": "210de1ec",
+                      "elType": "container",
+                      "isInner": false,
+                      "settings": {
+                        "css_classes": "service-row",
+                        "html_tag": "article",
+                        "content_width": "full"
+                      },
+                      "elements": [
+                        {
+                          "id": "0266d1e5",
+                          "elType": "widget",
+                          "widgetType": "html",
+                          "isInner": false,
+                          "settings": {
+                            "html": "<div class=\"service-number\">01</div>",
+                            "_css_classes": "undo-home-number"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c541926d",
+                          "elType": "container",
+                          "isInner": false,
+                          "settings": {
+                            "css_classes": "service-name"
+                          },
+                          "elements": [
+                            {
+                              "id": "d43d7037",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "title": "Websites",
+                                "header_size": "h3",
+                                "_css_classes": ""
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "ce0d8cb0",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "editor": "New sites and thoughtful redesigns that communicate clearly and work across every screen.",
+                                "_css_classes": ""
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ab8880ea",
+                          "elType": "widget",
+                          "widgetType": "html",
+                          "isInner": false,
+                          "settings": {
+                            "html": "<div class=\"service-symbol\" aria-hidden=\"true\"><span class=\"web-glyph\"><i></i><i></i><i></i></span></div>",
+                            "_css_classes": "undo-home-symbol"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "1c762786",
+                      "elType": "container",
+                      "isInner": false,
+                      "settings": {
+                        "css_classes": "service-row",
+                        "html_tag": "article",
+                        "content_width": "full"
+                      },
+                      "elements": [
+                        {
+                          "id": "37f1ed87",
+                          "elType": "widget",
+                          "widgetType": "html",
+                          "isInner": false,
+                          "settings": {
+                            "html": "<div class=\"service-number\">02</div>",
+                            "_css_classes": "undo-home-number"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "7e2ca031",
+                          "elType": "container",
+                          "isInner": false,
+                          "settings": {
+                            "css_classes": "service-name"
+                          },
+                          "elements": [
+                            {
+                              "id": "e974fd40",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "title": "WordPress plugins",
+                                "header_size": "h3",
+                                "_css_classes": ""
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "eb2f655b",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "editor": "Custom tools that add the features your website and workflow actually need.",
+                                "_css_classes": ""
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "0b353b8c",
+                          "elType": "widget",
+                          "widgetType": "html",
+                          "isInner": false,
+                          "settings": {
+                            "html": "<div class=\"service-symbol\" aria-hidden=\"true\"><span class=\"plugin-glyph\"><i></i><i></i><i></i><i></i></span></div>",
+                            "_css_classes": "undo-home-symbol"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "79231fc9",
+                      "elType": "container",
+                      "isInner": false,
+                      "settings": {
+                        "css_classes": "service-row",
+                        "html_tag": "article",
+                        "content_width": "full"
+                      },
+                      "elements": [
+                        {
+                          "id": "578f07f3",
+                          "elType": "widget",
+                          "widgetType": "html",
+                          "isInner": false,
+                          "settings": {
+                            "html": "<div class=\"service-number\">03</div>",
+                            "_css_classes": "undo-home-number"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "b09e065d",
+                          "elType": "container",
+                          "isInner": false,
+                          "settings": {
+                            "css_classes": "service-name"
+                          },
+                          "elements": [
+                            {
+                              "id": "a95af9fe",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "isInner": false,
+                              "settings": {
+                                "title": "Mobile apps",
+                                "header_size": "h3",
+                                "_css_classes": ""
+                              },
+                              "elements": []
+                            },
+                            {
+                              "id": "a3bdc675",
+                              "elType": "widget",
+                              "widgetType": "text-editor",
+                              "isInner": false,
+                              "settings": {
+                                "editor": "Mobile experiences designed around the people who will use them every day.",
+                                "_css_classes": ""
+                              },
+                              "elements": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "df7dc820",
+                          "elType": "widget",
+                          "widgetType": "html",
+                          "isInner": false,
+                          "settings": {
+                            "html": "<div class=\"service-symbol\" aria-hidden=\"true\"><span class=\"app-glyph\"><i></i></span></div>",
+                            "_css_classes": "undo-home-symbol"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
         {
-          "id": "0b353b8c",
+          "id": "dcb07dd7",
           "elType": "container",
           "isInner": false,
           "settings": {
-            "_css_classes": "undo-starter-redesign",
-            "_element_id": "redesign"
+            "css_classes": "approach section",
+            "_element_id": "approach",
+            "html_tag": "section",
+            "content_width": "full"
           },
           "elements": [
             {
-              "id": "37f1ed87",
-              "elType": "widget",
-              "widgetType": "heading",
+              "id": "075338c1",
+              "elType": "container",
               "isInner": false,
               "settings": {
-                "title": "Keep what works. Redo what does not.",
-                "header_size": "h2",
-                "_css_classes": "undo-starter-section-title"
+                "css_classes": "wrap approach-grid",
+                "content_width": "full"
               },
-              "elements": []
-            },
-            {
-              "id": "e974fd40",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "isInner": false,
-              "settings": {
-                "editor": "A better site or product should help people understand, decide, and act. The design follows that job.",
-                "_css_classes": "undo-starter-lead"
-              },
-              "elements": []
-            },
-            {
-              "id": "eb2f655b",
-              "elType": "widget",
-              "widgetType": "button",
-              "isInner": false,
-              "settings": {
-                "text": "Plan a project",
-                "link": {
-                  "url": "#project-planner"
+              "elements": [
+                {
+                  "id": "8fa245c1",
+                  "elType": "container",
+                  "isInner": false,
+                  "settings": {
+                    "css_classes": "approach-copy",
+                    "content_width": "full"
+                  },
+                  "elements": [
+                    {
+                      "id": "1e0f25cd",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "isInner": false,
+                      "settings": {
+                        "title": "Create new. Redo what exists.",
+                        "header_size": "h2"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "f91d16b4",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "isInner": false,
+                      "settings": {
+                        "editor": "Good design starts with understanding what needs to change. We map the problem, shape the experience, then build and refine the result.",
+                        "_css_classes": ""
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "2333353c",
+                      "elType": "widget",
+                      "widgetType": "button",
+                      "isInner": false,
+                      "settings": {
+                        "text": "Plan a project",
+                        "link": {
+                          "url": "#project-planner"
+                        },
+                        "_css_classes": "undo-home-text-link"
+                      },
+                      "elements": []
+                    }
+                  ]
                 },
-                "_css_classes": "undo-starter-button"
+                {
+                  "id": "40221dea",
+                  "elType": "widget",
+                  "widgetType": "html",
+                  "isInner": false,
+                  "settings": {
+                    "html": "<div class=\"process-board\" aria-label=\"Our process: understand, design, build, refine\"><div class=\"process-top\">HOW WE WORK <span>UNDO / 04</span></div><div class=\"process-step\"><span>01</span><strong>Understand</strong><small>Goals, users, constraints</small></div><div class=\"process-step\"><span>02</span><strong>Design</strong><small>Structure, content, interface</small></div><div class=\"process-step\"><span>03</span><strong>Build</strong><small>Working product</small></div><div class=\"process-step\"><span>04</span><strong>Refine</strong><small>Details that make it last</small></div></div>",
+                    "_css_classes": "undo-home-process"
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bf5f3888",
+          "elType": "container",
+          "isInner": false,
+          "settings": {
+            "css_classes": "statement section",
+            "_element_id": "redesign",
+            "html_tag": "section",
+            "content_width": "full"
+          },
+          "elements": [
+            {
+              "id": "29bae7c8",
+              "elType": "container",
+              "isInner": false,
+              "settings": {
+                "css_classes": "wrap",
+                "content_width": "full"
               },
-              "elements": []
+              "elements": [
+                {
+                  "id": "798932f1",
+                  "elType": "widget",
+                  "widgetType": "heading",
+                  "isInner": false,
+                  "settings": {
+                    "title": "Keep what works. Redo what does not.",
+                    "header_size": "h2"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "13e1b347",
+                  "elType": "widget",
+                  "widgetType": "text-editor",
+                  "isInner": false,
+                  "settings": {
+                    "editor": "A better site or product should help people understand, decide, and act. The design follows that job.",
+                    "_css_classes": ""
+                  },
+                  "elements": []
+                }
+              ]
             }
           ]
         },
@@ -315,7 +579,7 @@
           "isInner": false,
           "settings": {
             "shortcode": "[undo_home_planner]",
-            "_css_classes": "undo-starter-planner"
+            "_css_classes": "undo-home-planner"
           },
           "elements": []
         }

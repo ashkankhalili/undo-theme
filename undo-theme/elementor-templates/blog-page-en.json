@@ -5,15 +5,15 @@
   "page_settings": [],
   "content": [
     {
-      "id": "fdf82eeb",
+      "id": "62439a81",
       "elType": "container",
       "isInner": false,
       "settings": {
-        "_css_classes": "undo-starter-archive undo-starter--en"
+        "css_classes": "undo-starter-archive undo-starter--en"
       },
       "elements": [
         {
-          "id": "c2742d26",
+          "id": "6cc6021b",
           "elType": "widget",
           "widgetType": "heading",
           "isInner": false,
@@ -25,7 +25,7 @@
           "elements": []
         },
         {
-          "id": "c0e30464",
+          "id": "4d9e5fd9",
           "elType": "widget",
           "widgetType": "text-editor",
           "isInner": false,
@@ -36,7 +36,7 @@
           "elements": []
         },
         {
-          "id": "1820402c",
+          "id": "55017198",
           "elType": "widget",
           "widgetType": "shortcode",
           "isInner": false,

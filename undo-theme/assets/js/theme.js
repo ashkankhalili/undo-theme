@@ -36,10 +36,13 @@ function updateComparison(){if(!comparison||!comparisonBrowser)return;const amou
 comparison?.addEventListener('input',updateComparison);
 updateComparison();
 document.getElementById('brief-form')?.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(event.currentTarget);const name=String(data.get('projectName')||'').trim()||ui.untitled;const goal=String(data.get('goal')||'').trim()||ui.toDiscuss;const service=ui.serviceLabels?.[data.get('service')]||data.get('service');const stage=ui.stageLabels?.[data.get('stage')]||data.get('stage');const lines=[ui.briefTitle,'',`${ui.project}: ${name}`,`${ui.service}: ${service}`,`${ui.startingPoint}: ${stage}`,`${ui.goal}: ${goal}`];const body=(ui.language==='fa'?'\uFEFF':'')+lines.join('\n');const file=new Blob([body],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(file);const link=document.createElement('a');link.href=url;link.download=ui.language==='fa'?'undo-project-brief-fa.txt':'undo-project-brief.txt';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);document.getElementById('form-status').textContent=ui.downloaded});
-const pageSections=[...document.querySelectorAll('main#main > section[id]')];
+const elementorHome=document.querySelector('main#main .undo-elementor-home');
+const pageSections=elementorHome
+  ? [...elementorHome.querySelectorAll(':scope > section[id]'),...elementorHome.querySelectorAll('.undo-home-planner section#project-planner')]
+  : [...document.querySelectorAll('main#main > section[id]')];
 const footerSection=document.getElementById('finish');
 if(footerSection)pageSections.push(footerSection);
-const isLandingPage=Boolean(document.querySelector('main#main > section#top.hero'))&&pageSections.some(section=>section.id==='project-planner');
+const isLandingPage=pageSections[0]?.id==='top'&&pageSections[0].classList.contains('hero')&&pageSections.some(section=>section.id==='project-planner');
 const sectionRail=document.querySelector('.section-rail');
 const allRailLinks=[...document.querySelectorAll('[data-rail-for]')];
 const railLinks=allRailLinks.filter(link=>pageSections.some(section=>section.id===link.dataset.railFor));

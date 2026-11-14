@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.13.4
+Stable tag: 0.14.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,7 +21,7 @@ A bilingual WordPress theme for creative agencies and studios. The initial langu
 * Physical left/right or hidden widget sidebar with lined or panel styling, adjustable width and spacing, context visibility, and optional sticky behavior that stops when the widget area is too tall. On small screens the sidebar follows the main content.
 * Editorial list, image grid, and journal grid for blog indexes, archives, and search results; grid column count is configurable. Blog Settings can choose a published WordPress posts page, which follows Settings > Reading.
 * Footer stage: responsive statement and action, two optional menu columns, email/phone/location, validated social links, copyright with a current-year token, the configured WordPress Privacy Policy link, and three optional widget areas. Text settings have Persian and English values; Elementor Pro's footer template can replace the built-in footer.
-* With Elementor Free or Pro active, the theme creates editable English/Persian Home and Blog starter pages once, without changing Settings > Reading or existing pages. The Reading posts page renders the Elementor Blog starter and its live post loop; Elementor Pro archive templates take precedence. Without Elementor, native Home and blog layouts remain. Header, Footer and Blog Archive starters for Pro remain manual imports. Theme updates never rewrite created pages. The separately installed UNDO Elements addon supplies three Elementor widgets and a reusable project planner.
+* With Elementor Free or Pro active, the theme creates editable English/Persian Home and Blog starter pages once, without changing Settings > Reading or existing pages. Home starters use the native homepage section structure, comparison mockup, service rows, process board, section rail, and project planner. The Reading posts page renders the Elementor Blog starter and its live post loop; Elementor Pro archive templates take precedence. Without Elementor, native Home and blog layouts remain. Header, Footer and Blog Archive starters for Pro remain manual imports. Theme updates never rewrite created pages. The separately installed UNDO Elements addon supplies three Elementor widgets and a reusable project planner.
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
 == Limitations ==
@@ -34,6 +34,10 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.14.0 =
+* Rebuilt the English and Persian Elementor Home starters with the native homepage layout, visual comparison, service rows, process board, section navigation, and planner. The published staging Home pages are updated separately so existing customer pages remain protected.
+* Removed standard page-template spacing from generated Elementor Home pages and enabled the same section navigation behavior as the native homepage.
+* Corrected Elementor container class settings in all bundled starter templates so theme styles apply to imported layouts.
 = 0.13.4 =
 * Added matching block editor styles, threaded comment replies, keyboard-visible screen-reader labels, and standard WordPress image, alignment, sticky-post, and author-comment styles.
 * Declared the WordPress 7.1 tested series and documented the commercial Theme Check exceptions while release-candidate checks continue.

@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.13.4\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.14.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
@@ -489,7 +489,7 @@ msgstr ""
 msgid "Hidden"
 msgstr ""
 
-#: template-parts/landing.php:5 template-parts/landing.php:12 template-parts/page-layout.php:26
+#: template-parts/home/section-rail.php:5 template-parts/home/section-rail.php:14 template-parts/page-layout.php:28
 msgid "Home"
 msgstr ""
 
@@ -793,7 +793,7 @@ msgstr ""
 msgid "Page display"
 msgstr ""
 
-#: template-parts/page-layout.php:35
+#: template-parts/page-layout.php:37
 msgid "Page navigation"
 msgstr ""
 
@@ -801,11 +801,11 @@ msgstr ""
 msgid "Page not found"
 msgstr ""
 
-#: template-parts/page-layout.php:25
+#: template-parts/page-layout.php:27
 msgid "Page path"
 msgstr ""
 
-#: template-parts/landing.php:10
+#: template-parts/home/section-rail.php:12
 msgid "Page sections"
 msgstr ""
 
@@ -885,7 +885,7 @@ msgstr ""
 msgid "Project or business name"
 msgstr ""
 
-#: functions.php:356 template-parts/landing.php:7
+#: functions.php:356 template-parts/home/section-rail.php:9
 msgid "Project planner"
 msgstr ""
 
@@ -1389,7 +1389,7 @@ msgstr ""
 msgid "Unsaved changes"
 msgstr ""
 
-#: template-parts/page-layout.php:16
+#: template-parts/page-layout.php:18
 msgid "Untitled page"
 msgstr ""
 

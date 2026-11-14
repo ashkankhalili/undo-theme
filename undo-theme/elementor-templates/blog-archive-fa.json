@@ -5,15 +5,15 @@
   "page_settings": [],
   "content": [
     {
-      "id": "7fe37ac2",
+      "id": "b59c567d",
       "elType": "container",
       "isInner": false,
       "settings": {
-        "_css_classes": "undo-starter-archive undo-starter--fa"
+        "css_classes": "undo-starter-archive undo-starter--fa"
       },
       "elements": [
         {
-          "id": "13e1b347",
+          "id": "eb9b1c57",
           "elType": "widget",
           "widgetType": "heading",
           "isInner": false,
@@ -25,7 +25,7 @@
           "elements": []
         },
         {
-          "id": "29bae7c8",
+          "id": "37c54aae",
           "elType": "widget",
           "widgetType": "text-editor",
           "isInner": false,
@@ -36,7 +36,7 @@
           "elements": []
         },
         {
-          "id": "a40438d3",
+          "id": "71574020",
           "elType": "widget",
           "widgetType": "archive-posts",
           "isInner": false,

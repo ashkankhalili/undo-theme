@@ -613,3 +613,50 @@ html[dir="rtl"] .footer-action svg{transform:scaleX(-1)}
 .undo-starter-home .undo-starter-redesign .undo-starter-button .elementor-button{background:#fff;color:var(--red)}
 .undo-starter-home .undo-starter-redesign .undo-starter-button .elementor-button:hover{background:#f7e6e2;color:#8e261f}
 @media(max-width:760px){.undo-starter-home :is(.undo-starter-overview,.undo-starter-redesign){padding:72px 20px}.undo-starter-home :is(.undo-starter-overview,.undo-starter-services,.undo-starter-method,.undo-starter-redesign){min-height:auto}}
+
+/* Elementor Home uses the native homepage structure; neutralize Elementor's default container gaps. */
+.page-layout--elementor-home{width:100%;max-width:none;margin:0;padding:0;min-height:0}
+.page-layout--elementor-home .undo-elementor-page{min-height:0}
+.page-layout--elementor-home .elementor[data-elementor-type="wp-page"]{width:100%}
+.undo-elementor-home{width:100%;max-width:none!important;padding:0!important;gap:0!important;background:var(--paper);color:var(--ink);font-family:var(--body)}
+.undo-elementor-home .e-con{--container-max-width:none;--widgets-spacing:0px;min-width:0}
+.undo-elementor-home>.elementor-element{width:100%;max-width:none!important}
+.undo-elementor-home .wrap{width:min(calc(100% - 96px),var(--undo-content-width,1440px));max-width:none!important;margin-inline:auto;padding:0}
+.undo-elementor-home .elementor-widget{margin:0;min-width:0}
+.undo-elementor-home .elementor-heading-title{color:inherit}
+.undo-elementor-home .hero{display:flex;flex-direction:column;justify-content:space-between}
+.undo-elementor-home .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;align-items:center;gap:5%}
+.undo-elementor-home .hero-copy{align-self:center}
+.undo-elementor-home .hero-description p,.undo-elementor-home .hero-bottom p{margin:0;color:inherit;font:inherit}
+.undo-elementor-home .hero-description{margin:32px 0}
+.undo-elementor-home .hero-bottom .elementor-widget-text-editor{font:inherit}
+.undo-elementor-home .hero-bottom{display:flex;align-items:center}
+.undo-elementor-home .undo-home-visual,.undo-elementor-home .undo-home-visual .elementor-widget-container{width:100%}
+.undo-elementor-home .intro-grid{display:grid;grid-template-columns:1fr 2fr;gap:10%}
+.undo-elementor-home .section-head{display:grid;grid-template-columns:1fr 2fr;gap:10%}
+.undo-elementor-home .service-list{display:block}
+.undo-elementor-home .service-row{display:grid;grid-template-columns:12% 1fr 18%;align-items:center;gap:20px}
+.undo-elementor-home .service-name{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px}
+.undo-elementor-home .undo-home-symbol{justify-self:end}
+.undo-elementor-home .undo-home-symbol .service-symbol{display:grid}
+.undo-elementor-home .approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:12%;align-items:center}
+.undo-elementor-home .undo-home-process,.undo-elementor-home .undo-home-process .process-board{width:100%}
+.undo-elementor-home .statement .elementor-heading-title,.undo-elementor-home .statement .elementor-widget-text-editor{color:#fff}
+.undo-elementor-home .statement .elementor-widget-text-editor p{margin:45px 0 0;max-width:500px}
+.undo-elementor-home .undo-home-cta .elementor-button{display:inline-flex;align-items:center;gap:42px;min-height:54px;padding:0 22px;border-radius:999px;background:var(--red);color:#fff;font-size:15px;font-weight:700;transition:transform 160ms var(--ease-out),background-color 160ms ease}
+.undo-elementor-home .undo-home-cta .elementor-button:after{content:'↗';font-size:20px;font-weight:400;line-height:1}
+.undo-elementor-home .undo-home-cta .elementor-button:hover{transform:translateY(-2px);background:#a53127}
+.undo-elementor-home .undo-home-cta .elementor-button:active{transform:translateY(1px)}
+.undo-elementor-home .undo-home-text-link .elementor-button{padding:0;border:0;border-radius:0;background:transparent;color:var(--ink);font-size:15px;font-weight:700;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:5px}
+.undo-elementor-home .undo-home-text-link .elementor-button:hover{background:transparent;color:var(--ink);text-decoration-color:currentColor}
+.undo-elementor-home .undo-home-planner{width:100%}
+.undo-elementor-home .undo-home-planner .planner{width:100%}
+.undo-elementor-home--en{direction:ltr}.undo-elementor-home--fa{direction:rtl}
+html[lang^="fa"] .undo-elementor-home--en{--body:"DM Sans",system-ui,sans-serif;--display:"Space Grotesk",system-ui,sans-serif;--serif:"Instrument Serif",Georgia,serif}
+html:not([lang^="fa"]) .undo-elementor-home--fa{--body:Vazirmatn,Tahoma,sans-serif;--display:Vazirmatn,Tahoma,sans-serif;--serif:Vazirmatn,Tahoma,sans-serif}
+.undo-elementor-home--fa :is(h1,h2,h3){letter-spacing:0!important;line-height:1.3}
+.undo-elementor-home--fa .undo-home-cta .elementor-button:after{content:'↖'}
+@media(max-width:1100px){.undo-elementor-home .service-name{grid-template-columns:1fr}}
+@media(max-width:760px){.undo-elementor-home .wrap{width:calc(100% - 40px)}.undo-elementor-home .hero-grid,.undo-elementor-home .intro-grid,.undo-elementor-home .section-head,.undo-elementor-home .approach-grid{display:block}.undo-elementor-home .hero-grid{padding:57px 0 45px}.undo-elementor-home .hero-visual{margin-top:20px}.undo-elementor-home .service-row{grid-template-columns:30px 1fr}.undo-elementor-home .undo-home-symbol{display:none}.undo-elementor-home .undo-home-process{margin-top:55px}}
+@media(max-width:520px){.undo-elementor-home .hero-grid{padding:30px 0 20px}.undo-elementor-home .hero-visual{margin-top:0}.undo-elementor-home .service-name{display:block}}
+@media(prefers-reduced-motion:reduce){.undo-elementor-home .undo-home-cta .elementor-button{transition:none}.undo-elementor-home .undo-home-cta .elementor-button:hover{transform:none}}

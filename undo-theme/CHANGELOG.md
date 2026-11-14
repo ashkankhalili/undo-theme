@@ -4,6 +4,18 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.14.0] - 2026-11-14
+
+- Rebuilt the English and Persian Elementor Home starters around the native homepage's full-screen sections, interactive before/after concept, service rows, process board, project planner, and section rail. Main copy, headings, and actions remain editable in Elementor.
+- Removed standard page-template spacing from generated Elementor Home pages and routed section navigation and scroll motion through their real section elements. Extracted the native rail into one shared template part.
+- Corrected Elementor container class settings across all ten bundled starter templates so their intended theme CSS selectors render in Elementor 4.2.
+- Updated the two unchanged, generated Home pages on staging separately after backing up their Elementor data. Existing customer-edited pages are never overwritten by theme updates.
+
+### فارسی
+
+- صفحه‌های اصلی المنتوری فارسی و انگلیسی با بخش‌ها، طرح مقایسه‌ای، ردیف‌های خدمات، مراحل کار، برنامه‌ریز پروژه و راهبری بخش‌ها مطابق صفحهٔ اصلی پیش‌فرض بازطراحی شدند.
+- فاصله‌های قالب معمولی صفحه از صفحه‌های اصلی المنتوری حذف شد و دادهٔ دو صفحهٔ ساخته‌شده در محیط آزمایشی، جداگانه و پس از تهیهٔ نسخهٔ پشتیبان به‌روز شد.
+
 ## [0.13.4] - 2026-11-14
 
 - Added a block editor stylesheet that echoes the native reading palette and type rhythm, including a Persian RTL baseline. Threaded comment replies now load the WordPress reply script when needed. The isolated audit also captures a full WordPress PHP Coding Standards baseline for the theme and addon.
