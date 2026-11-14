@@ -1,6 +1,6 @@
 # UNDO Elements addon
 
-`undo-elements` is a separately installable plugin. Version 0.1.0 accompanies theme 0.11.0. Install the theme ZIP first, then the plugin ZIP. Elementor Free is needed for the three editor widgets; the shortcode works without Elementor. Elementor Pro is optional. The addon also works with a different WordPress theme.
+`undo-elements` is a separately installable plugin. Version 0.1.1 accompanies theme 0.12.0. Install the theme ZIP first, then the plugin ZIP. Elementor Free is needed for the three editor widgets; the shortcode works without Elementor. Elementor Pro is optional. The addon also works with a different WordPress theme.
 
 ## What ships
 
@@ -16,7 +16,7 @@ The planner has no submit endpoint. JavaScript builds a UTF-8 text file in the v
 
 ## Install and update
 
-1. From the matching GitHub Release, download `undo-elements-0.1.0.zip` and its `.sha256` file. Check the checksum, then upload the ZIP in **Plugins → Add New → Upload Plugin**. Activate it.
+1. From the matching GitHub Release, download `undo-elements-0.1.1.zip` and its `.sha256` file. Check the checksum, then upload the ZIP in **Plugins → Add New → Upload Plugin**. Activate it. An existing 0.1.0 installation should detect 0.1.1 in **Dashboard → Updates**.
 2. With Elementor Free active, open an Elementor page and find the **UNDO Elements** category. Add each widget and edit its controls. Check the preview and public page in Persian RTL and English LTR.
 3. On the native UNDO Home, check that the planner replaces the fallback, retains `#project-planner`, and downloads a local brief. Deactivate the addon and confirm the original theme planner returns. Reactivate it.
 4. Future addon versions are discovered in **Dashboard → Updates** from the latest public release in `ashkankhalili/undo-theme`. The plugin version is read from the addon asset name, so it can differ from the theme release tag. The upgrader checks the downloaded ZIP against the GitHub asset SHA-256 digest or paired checksum file.

@@ -1,11 +1,11 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.11.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.12.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
 msgstr ""
 
-#: functions.php:224
+#: functions.php:259
 msgid "%s%% of the earlier layout visible"
 msgstr ""
 
@@ -13,11 +13,11 @@ msgstr ""
 msgid "A better site or product should help people understand, decide, and act. The design follows that job."
 msgstr ""
 
-#: style.css:1
-msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, three blog layouts, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls pixel or percentage site width, colors, typography, Google and uploaded WOFF2 fonts, header, pages, posts, blog, physical sidebar position or visibility, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates."
+#: style.css:5
+msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Optional Polylang integration links translated pages and language-specific home URLs. Includes an editable landing page with section ordering, visibility, and published-page references; three blog layouts; editorial posts; and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls layout, colors, language-aware typography, header, pages, posts, blog, sidebar, and a configurable footer with menus, contact, social, legal and three optional widget areas. Includes Elementor Free page layouts, Elementor Pro Theme Builder locations with native fallbacks, importable English/Persian starters, optional UNDO Elements widgets, and GitHub dashboard updates."
 msgstr ""
 
-#: functions.php:240 template-parts/home/project-planner.php:3
+#: functions.php:275 template-parts/home/project-planner.php:3
 msgid "A redesign"
 msgstr ""
 
@@ -61,7 +61,7 @@ msgstr ""
 msgid "After"
 msgstr ""
 
-#: functions.php:317 inc/settings.php:58
+#: functions.php:352 inc/settings.php:58
 msgid "Approach"
 msgstr ""
 
@@ -130,7 +130,7 @@ msgid "Built for every screen."
 msgstr ""
 
 #: inc/settings.php:110
-msgid "Built-in header settings. Elementor Theme Builder can replace this template."
+msgid "Built-in header settings. Elementor Theme Builder can replace this template. With Polylang, the language switcher follows translated content URLs."
 msgstr ""
 
 #: inc/settings.php:200
@@ -169,11 +169,11 @@ msgstr ""
 msgid "Clear"
 msgstr ""
 
-#: functions.php:221
+#: functions.php:256
 msgid "Close menu"
 msgstr ""
 
-#: functions.php:223
+#: functions.php:258
 msgid "Close search"
 msgstr ""
 
@@ -413,7 +413,7 @@ msgstr ""
 msgid "GitHub URL"
 msgstr ""
 
-#: functions.php:229
+#: functions.php:264
 msgid "Goal"
 msgstr ""
 
@@ -533,7 +533,7 @@ msgstr ""
 msgid "Keep what works. Redo what does not."
 msgstr ""
 
-#: header.php:40
+#: header.php:41
 msgid "Language"
 msgstr ""
 
@@ -641,7 +641,7 @@ msgstr ""
 msgid "Minimum side margin in pixels"
 msgstr ""
 
-#: functions.php:236 template-parts/home/project-planner.php:2
+#: functions.php:271 template-parts/home/project-planner.php:2
 msgid "Mobile app"
 msgstr ""
 
@@ -661,7 +661,7 @@ msgstr ""
 msgid "Mobile experiences designed around the people who will use them every day."
 msgstr ""
 
-#: header.php:46
+#: header.php:47
 msgid "Mobile navigation"
 msgstr ""
 
@@ -737,11 +737,11 @@ msgstr ""
 msgid "Open Widgets"
 msgstr ""
 
-#: functions.php:220 header.php:42
+#: functions.php:255 header.php:43
 msgid "Open menu"
 msgstr ""
 
-#: functions.php:222 header.php:39
+#: functions.php:257 header.php:39
 msgid "Open search"
 msgstr ""
 
@@ -825,7 +825,7 @@ msgstr ""
 msgid "Panel"
 msgstr ""
 
-#: footer.php:19 header.php:41 header.php:46 template-parts/home/approach.php:5 template-parts/home/hero.php:5
+#: footer.php:19 header.php:42 header.php:47 template-parts/home/approach.php:5 template-parts/home/hero.php:5
 msgid "Plan a project"
 msgstr ""
 
@@ -873,7 +873,7 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr ""
 
-#: functions.php:226
+#: functions.php:261
 msgid "Project"
 msgstr ""
 
@@ -881,7 +881,7 @@ msgstr ""
 msgid "Project or business name"
 msgstr ""
 
-#: functions.php:318 template-parts/landing.php:7
+#: functions.php:353 template-parts/landing.php:7
 msgid "Project planner"
 msgstr ""
 
@@ -949,7 +949,7 @@ msgstr ""
 msgid "Search results for: %s"
 msgstr ""
 
-#: header.php:45
+#: header.php:46
 msgid "Search this site"
 msgstr ""
 
@@ -981,11 +981,11 @@ msgstr ""
 msgid "Select image"
 msgstr ""
 
-#: functions.php:227
+#: functions.php:262
 msgid "Service"
 msgstr ""
 
-#: functions.php:316 inc/settings.php:57
+#: functions.php:351 inc/settings.php:57
 msgid "Services"
 msgstr ""
 
@@ -1201,7 +1201,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: functions.php:239 template-parts/home/project-planner.php:3
+#: functions.php:274 template-parts/home/project-planner.php:3
 msgid "Something new"
 msgstr ""
 
@@ -1217,7 +1217,7 @@ msgstr ""
 msgid "Start here"
 msgstr ""
 
-#: functions.php:228
+#: functions.php:263
 msgid "Starting point"
 msgstr ""
 
@@ -1309,11 +1309,11 @@ msgstr ""
 msgid "This width applies only when the page template is UNDO Custom Width. Leave the field blank for 1200px."
 msgstr ""
 
-#: functions.php:231
+#: functions.php:266
 msgid "To be discussed"
 msgstr ""
 
-#: functions.php:326
+#: functions.php:361
 msgid "Toggle submenu for %s"
 msgstr ""
 
@@ -1345,11 +1345,11 @@ msgstr ""
 msgid "UNDO Theme Settings"
 msgstr ""
 
-#: style.css:1
+#: style.css:2
 msgid "UNDO Web Developments"
 msgstr ""
 
-#: functions.php:225
+#: functions.php:260
 msgid "UNDO Web Developments — Project brief"
 msgstr ""
 
@@ -1389,7 +1389,7 @@ msgstr ""
 msgid "Untitled page"
 msgstr ""
 
-#: functions.php:230
+#: functions.php:265
 msgid "Untitled project"
 msgstr ""
 
@@ -1465,7 +1465,7 @@ msgstr ""
 msgid "Web Developments"
 msgstr ""
 
-#: functions.php:234 template-parts/home/project-planner.php:2
+#: functions.php:269 template-parts/home/project-planner.php:2
 msgid "Website"
 msgstr ""
 
@@ -1553,7 +1553,7 @@ msgstr ""
 msgid "Word spacing in pixels (0 = theme default)"
 msgstr ""
 
-#: functions.php:235 template-parts/home/project-planner.php:2
+#: functions.php:270 template-parts/home/project-planner.php:2
 msgid "WordPress plugin"
 msgstr ""
 
@@ -1597,7 +1597,7 @@ msgstr ""
 msgid "Your answers stay in this browser. The brief downloads to your device."
 msgstr ""
 
-#: functions.php:232
+#: functions.php:267
 msgid "Your project brief has been downloaded."
 msgstr ""
 

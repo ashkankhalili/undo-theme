@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Elements 0.1.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: en_US\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Elements 0.1.1\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: en_US\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: includes/planner.php:25
 msgid "A clearer starting point"
@@ -41,7 +41,7 @@ msgstr "Elementor widgets and a browser-only project brief for UNDO websites."
 msgid "Eyebrow"
 msgstr "Eyebrow"
 
-#: undo-elements.php:40
+#: undo-elements.php:42
 msgid "Goal"
 msgstr "Goal"
 
@@ -73,11 +73,11 @@ msgstr "Name of your project"
 msgid "Plan a project"
 msgstr "Plan a project"
 
-#: undo-elements.php:37
+#: undo-elements.php:39
 msgid "Project"
 msgstr "Project"
 
-#: undo-elements.php:36
+#: undo-elements.php:38
 msgid "Project brief"
 msgstr "Project brief"
 
@@ -97,7 +97,7 @@ msgstr "Project planner"
 msgid "Put the essentials in one place. Download your brief when you are done, so it is ready to share when we connect."
 msgstr "Put the essentials in one place. Download your brief when you are done, so it is ready to share when we connect."
 
-#: undo-elements.php:38
+#: undo-elements.php:40
 msgid "Service"
 msgstr "Service"
 
@@ -109,7 +109,7 @@ msgstr "Service card"
 msgid "Something new"
 msgstr "Something new"
 
-#: undo-elements.php:39
+#: undo-elements.php:41
 msgid "Starting point"
 msgstr "Starting point"
 
@@ -125,15 +125,15 @@ msgstr "Tell us what you want to make."
 msgid "The UNDO Elements update failed its checksum check."
 msgstr "The UNDO Elements update failed its checksum check."
 
-#: undo-elements.php:42
+#: undo-elements.php:44
 msgid "To discuss"
 msgstr "To discuss"
 
-#: undo-elements.php:68
+#: undo-elements.php:70
 msgid "UNDO Elements"
 msgstr "UNDO Elements"
 
-#: undo-elements.php:89
+#: undo-elements.php:91
 msgid "UNDO Elements needs Elementor for its widgets. The project planner shortcode remains available."
 msgstr "UNDO Elements needs Elementor for its widgets. The project planner shortcode remains available."
 
@@ -141,7 +141,7 @@ msgstr "UNDO Elements needs Elementor for its widgets. The project planner short
 msgid "Unable to verify the UNDO Elements update package."
 msgstr "Unable to verify the UNDO Elements update package."
 
-#: undo-elements.php:41
+#: undo-elements.php:43
 msgid "Untitled project"
 msgstr "Untitled project"
 
@@ -173,10 +173,10 @@ msgstr "WordPress plugin"
 msgid "Your answers stay in this browser. The brief downloads to your device."
 msgstr "Your answers stay in this browser. The brief downloads to your device."
 
-#: undo-elements.php:43
+#: undo-elements.php:45
 msgid "Your brief has been downloaded."
 msgstr "Your brief has been downloaded."
 
-#: undo-elements.php:44
+#: undo-elements.php:46
 msgid "undo-project-brief.txt"
 msgstr "undo-project-brief.txt"

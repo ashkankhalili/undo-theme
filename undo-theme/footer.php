@@ -52,7 +52,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
   </div>
   <?php echo undo_footer_widgets_markup(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- WordPress renders each widget and all wrapper attributes are escaped. ?>
   <?php if ( undo_setting_enabled( 'footer_show_brand' ) ) : ?>
-  <div class="footer-wordmark"><a class="footer-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php esc_attr_e( 'UNDO Web Developments, back to top', 'undo-theme' ); ?>">UNDO<svg aria-hidden="true"><use href="#icon-undo"></use></svg></a></div>
+  <div class="footer-wordmark"><a class="footer-brand" href="<?php echo esc_url( undo_home_url() ); ?>" aria-label="<?php esc_attr_e( 'UNDO Web Developments, back to top', 'undo-theme' ); ?>">UNDO<svg aria-hidden="true"><use href="#icon-undo"></use></svg></a></div>
   <?php endif; ?>
   <?php if ( undo_setting_enabled( 'footer_show_copyright' ) || ( undo_setting_enabled( 'footer_show_legal' ) && ( $legal_note || $privacy_url ) ) ) : ?>
   <div class="footer-bottom">

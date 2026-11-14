@@ -146,7 +146,7 @@ Implemented by 0.6.0: classic theme skeleton, theme.json, reading, wide, boxed, 
 
 Outstanding: live WordPress/Elementor and dashboard-update validation; complete header/footer/content design; Elementor widget plugin; migration of project planner functionality; multilingual-content integration; broader accessibility/performance/security checks.
 
-**Current execution milestone:** update the theme to 0.11.0, install the separate UNDO Elements 0.1.0 ZIP, and follow the [addon validation guide](UNDO_ELEMENTS.md). Validate the Elementor Free, Pro, and disabled-plugin paths with the [compatibility matrix](ELEMENTOR_COMPATIBILITY.md), then validate the native Homepage controls using the [Homepage guide](HOMEPAGE.md) and import the starters using the [Elementor starter guide](ELEMENTOR_STARTERS.md). Record RTL/LTR behavior and native fallbacks. Recheck footer widgets and the earlier layout, blog, typography, header, sidebar, and page controls before marking stages complete.
+**Current execution milestone:** update the theme to 0.12.0 and the separate UNDO Elements addon to 0.1.1, then follow the [content translation guide](CONTENT_TRANSLATION.md) and [addon validation guide](UNDO_ELEMENTS.md). Validate the Elementor Free, Pro, and disabled-plugin paths with the [compatibility matrix](ELEMENTOR_COMPATIBILITY.md), then validate the native Homepage controls using the [Homepage guide](HOMEPAGE.md) and import the starters using the [Elementor starter guide](ELEMENTOR_STARTERS.md). Record RTL/LTR behavior and native fallbacks. Recheck footer widgets and the earlier layout, blog, typography, header, sidebar, and page controls before marking stages complete.
 
 ## Primary references
 

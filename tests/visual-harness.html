@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UNDO bilingual visual check</title>
+<link rel="stylesheet" href="../undo-theme/assets/css/site.css">
+<link rel="stylesheet" href="../undo-elements/assets/elements.css">
+<style>:root{--undo-header-light-bg:#f8f6f2;--undo-header-light-text:#171717;--undo-header-dark-bg:#22211f;--undo-header-dark-text:#fff;--undo-footer-bg:#22211f;--undo-footer-text:#fff}body{overflow-x:hidden}.site-header{position:relative}.visual-harness-note{font-size:12px;color:#666;padding:12px 0}.visual-harness-note pre{white-space:pre-wrap;overflow-wrap:anywhere}</style>
+<script>
+const isFa=new URLSearchParams(location.search).get('lang')==='fa';
+document.documentElement.lang=isFa?'fa-IR':'en-US';document.documentElement.dir=isFa?'rtl':'ltr';
+window.addEventListener('DOMContentLoaded',()=>{
+  const strings=isFa?{
+    services:'خدمات',approach:'روش کار',planner:'برنامه‌ریز پروژه',title:'بگویید چه می‌خواهید بسازید.',
+    body:'اطلاعات اصلی را در یک جا جمع کنید. پس از پایان، خلاصهٔ پروژه را دریافت کنید تا برای گفت‌وگو آماده باشد. نمونهٔ ترکیبی UNDO Web Developments و یک نشانی طولانی example@example.com.',
+    note:'پاسخ‌های شما در همین مرورگر می‌مانند. خلاصهٔ پروژه روی دستگاه شما دریافت می‌شود.',
+    question:'به چه چیزی نیاز دارید؟',website:'وب‌سایت',plugin:'افزونهٔ وردپرس',app:'اپلیکیشن موبایل',
+    name:'نام پروژه یا کسب‌وکار',goal:'قرار است به چه کاری کمک کند؟',download:'دریافت خلاصهٔ پروژه'
+  }:{
+    services:'Services',approach:'Approach',planner:'Project planner',title:'Tell us what you want to make.',
+    body:'Put the essentials in one place. Download your brief when you are done, so it is ready to share when we connect. Mixed content: UNDO Web Developments and example@example.com.',
+    note:'Your answers stay in this browser. The brief downloads to your device.',question:'What do you need?',website:'Website',plugin:'WordPress plugin',app:'Mobile app',
+    name:'Project or business name',goal:'What should it help you do?',download:'Download project brief'
+  };
+  document.querySelectorAll('[data-copy]').forEach(el=>{el.textContent=strings[el.dataset.copy]});
+  document.getElementById('visual-metrics').textContent=JSON.stringify({viewport:innerWidth,scrollWidth:document.documentElement.scrollWidth,headerWidth:document.querySelector('.header-inner').getBoundingClientRect().width,toolsRight:document.querySelector('.header-tools').getBoundingClientRect().right});
+});
+</script>
+</head>
+<body>
+<header class="site-header site-header--light header-layout-standard"><div class="wrap header-inner">
+  <a class="brand" href="#top"><span class="brand-symbol">↶</span><span>UNDO<span class="brand-small">Web Developments</span></span></a>
+  <nav class="desktop-nav"><ul class="nav-list"><li><a href="#services" data-copy="services">Services</a></li><li><a href="#approach" data-copy="approach">Approach</a></li><li><a href="#project-planner" data-copy="planner">Project planner</a></li></ul></nav>
+  <div class="header-tools"><button class="header-search-toggle" aria-label="Search">⌕</button><div class="language-switcher"><span aria-hidden="true">◎</span><a lang="en" href="?lang=en">English</a><span aria-hidden="true">/</span><a lang="fa" href="?lang=fa">فارسی</a></div><a class="header-action" href="#project-planner" data-copy="planner">Project planner</a><button class="menu-toggle" aria-label="Menu"><span></span><span></span></button></div>
+</div></header>
+<main id="main" class="undo-native-home"><section id="project-planner" class="undo-elements-planner planner section"><div class="undo-elements-planner__inner planner-grid">
+  <div class="undo-elements-planner__copy planner-copy"><p class="undo-elements-kicker">UNDO / 01</p><h2 data-copy="title">Tell us what you want to make.</h2><p data-copy="body"></p><div class="undo-elements-planner__note planner-note" data-copy="note"></div></div>
+  <form class="undo-elements-planner__form"><fieldset><legend data-copy="question">What do you need?</legend><div class="undo-elements-planner__choices"><label><input type="radio" name="service" checked><span data-copy="website">Website</span></label><label><input type="radio" name="service"><span data-copy="plugin">WordPress plugin</span></label><label><input type="radio" name="service"><span data-copy="app">Mobile app</span></label></div></fieldset><label for="name" data-copy="name">Project or business name</label><input id="name" dir="auto" placeholder="UNDO Web Developments"><label for="goal" data-copy="goal">What should it help you do?</label><textarea id="goal" dir="auto" rows="3"></textarea><button type="button"><span data-copy="download">Download project brief</span><span>↗</span></button></form>
+</div></section></main>
+<div class="wrap visual-harness-note"><pre id="visual-metrics"></pre></div>
+</body></html>

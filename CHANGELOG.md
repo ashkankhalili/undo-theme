@@ -4,6 +4,25 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.12.0] - 2026-11-14
+
+### Localization and RTL milestone
+
+- Added optional Polylang integration for the header switcher, localized Home links, cross-page section links, and published-page references on the native Home. A missing page translation uses the target-language Home or the built-in section text.
+- Preserved the WordPress Site Language baseline and existing visitor switcher when Polylang is absent. The theme does not install Polylang or create translations automatically.
+- Updated the separate UNDO Elements addon to 0.1.1 so its planner download follows the content language. Added automatic text direction for visitor inputs, theme font inheritance, Persian text spacing, and RTL arrow placement.
+- Refined the narrowest mobile header layout in both directions and added isolated translated-link tests and a bilingual visual harness.
+- Regenerated English/Persian theme and addon catalogs and documented the content translation workflow.
+
+### فارسی
+
+- تغییر زبان سربرگ و پیوندهای خانه با Polylang به صفحهٔ ترجمه‌شده هدایت می‌شوند؛ در نبود ترجمه، پیوند خانهٔ همان زبان یا متن پیش‌فرض نمایش داده می‌شود.
+- افزونهٔ UNDO Elements به نگارش 0.1.1 رسید و زبان فایل برنامه‌ریز را با زبان محتوا هماهنگ می‌کند. نمایش موبایل و فاصله‌گذاری فارسی و راست‌چین نیز بهبود یافت.
+
+### Validation
+
+- Isolated PHP translation tests, local responsive English/Persian visual checks, and package checks are part of this release. Live Polylang, Elementor template translation, and staging upgrade checks remain to be recorded.
+
 ## [0.11.0] - 2026-11-14
 
 ### UNDO Elements addon milestone

@@ -3,7 +3,7 @@
  * Plugin Name: UNDO Elements
  * Plugin URI: https://github.com/ashkankhalili/undo-theme
  * Description: Elementor widgets and a private, browser-only project planner for UNDO websites.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Requires at least: 6.2
  * Requires PHP: 7.4
  * Author: UNDO Web Developments
@@ -16,7 +16,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'UNDO_ELEMENTS_VERSION', '0.1.0' );
+define( 'UNDO_ELEMENTS_VERSION', '0.1.1' );
 define( 'UNDO_ELEMENTS_FILE', __FILE__ );
 define( 'UNDO_ELEMENTS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'UNDO_ELEMENTS_URL', plugin_dir_url( __FILE__ ) );
@@ -32,6 +32,8 @@ add_action( 'init', 'undo_elements_load_textdomain' );
 function undo_elements_register_assets() {
     wp_register_style( 'undo-elements', UNDO_ELEMENTS_URL . 'assets/elements.css', array(), UNDO_ELEMENTS_VERSION );
     wp_register_script( 'undo-elements-planner', UNDO_ELEMENTS_URL . 'assets/planner.js', array(), UNDO_ELEMENTS_VERSION, true );
+    $content_language = function_exists( 'pll_current_language' ) ? pll_current_language( 'slug' ) : '';
+    $planner_language = in_array( $content_language, array( 'en', 'fa' ), true ) ? $content_language : substr( determine_locale(), 0, 2 );
     wp_localize_script( 'undo-elements-planner', 'undoElementsPlanner', array(
         'briefTitle' => __( 'Project brief', 'undo-elements' ),
         'project' => __( 'Project', 'undo-elements' ),
@@ -42,7 +44,7 @@ function undo_elements_register_assets() {
         'toDiscuss' => __( 'To discuss', 'undo-elements' ),
         'downloaded' => __( 'Your brief has been downloaded.', 'undo-elements' ),
         'filename' => __( 'undo-project-brief.txt', 'undo-elements' ),
-        'language' => substr( determine_locale(), 0, 2 ),
+        'language' => $planner_language,
     ) );
     // Queue the native Home and shortcode before wp_head; Elementor uses widget dependencies.
     $post_id = get_queried_object_id();

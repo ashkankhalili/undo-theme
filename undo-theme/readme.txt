@@ -3,14 +3,14 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.11.0
+Stable tag: 0.12.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, three blog layouts, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. The single-save settings dashboard controls layout, colors, typography, header, pages, posts, blog, sidebar, and a configurable footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.
 
 == Features ==
-* Initial language follows WordPress Site Language; Persian and English visitor overrides, compiled translations, and dedicated RTL stylesheet are included.
+* Initial language follows WordPress Site Language; Persian and English visitor overrides, compiled translations, and dedicated RTL stylesheet are included. Optional Polylang support sends visitors to translated content and language-specific Home pages.
 * Responsive UNDO landing page with section navigation, adjustable section order and visibility, linked published-page titles and excerpts per language, and a project brief download.
 * Standalone, full-width UNDO Theme Settings page with a joined vertical sidebar. Switching sections keeps unsaved values in place; Save all changes stores every section at once.
 * Separate layout, colors, and typography sections. Site content width accepts pixels or percent. Typography shows each text role on a single row with its original language-aware font named explicitly, plus size, weight, style, line height, word and letter spacing, and color controls. Google, system, and uploaded WOFF2 font families are available; Google font loading can be disabled. Header options include light/dark styles, logo variants, centered navigation, search, and mobile action visibility.
@@ -20,11 +20,11 @@ A bilingual WordPress theme for creative agencies and studios. The initial langu
 * Physical left/right or hidden widget sidebar with lined or panel styling, adjustable width and spacing, context visibility, and optional sticky behavior that stops when the widget area is too tall. On small screens the sidebar follows the main content.
 * Editorial list, image grid, and journal grid for blog indexes, archives, and search results; grid column count is configurable. Blog Settings can choose a published WordPress posts page, which follows Settings > Reading.
 * Footer stage: responsive statement and action, two optional menu columns, email/phone/location, validated social links, copyright with a current-year token, the configured WordPress Privacy Policy link, and three optional widget areas. Text settings have Persian and English values; Elementor Pro's footer template can replace the built-in footer.
-* Elementor Free page layouts and Elementor Pro Theme Builder locations with native fallbacks. Old builder metadata no longer hides normal page chrome when Elementor is disabled. Importable English/Persian Home starters work with Elementor Free; Header, Footer and Blog Archive starters work with Elementor Pro. They are in elementor-templates/ and are not applied during theme updates.
+* Elementor Free page layouts and Elementor Pro Theme Builder locations with native fallbacks. Old builder metadata no longer hides normal page chrome when Elementor is disabled. Importable English/Persian Home starters work with Elementor Free; Header, Footer and Blog Archive starters work with Elementor Pro. They are in elementor-templates/ and are not applied during theme updates. The separately installed UNDO Elements addon supplies three Elementor widgets and a reusable project planner.
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
 == Limitations ==
-Elementor is optional; Elementor Pro is needed for Theme Builder location replacement and the Header, Footer and Blog Archive starters. Elementor widgets with explicit colors or fonts keep their own styling. The language switcher does not translate Elementor-authored page or template content; production bilingual content requires a multilingual content solution. Dedicated UNDO Elementor widgets are planned and are not included yet. Imported starter behavior still needs live staging verification. This theme is still a pre-release under staging validation.
+Elementor is optional; Elementor Pro is needed for Theme Builder location replacement and the Header, Footer and Blog Archive starters. Elementor widgets with explicit colors or fonts keep their own styling. The theme does not translate customer-authored pages, posts, menus, or Elementor templates by itself. Polylang is the first supported content translation workflow; Elementor template translations additionally need an integration plugin. Imported starter behavior and the multilingual workflow still need live staging validation. This theme is still a pre-release.
 
 == Installation ==
 Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Theme Settings in the main admin menu.
@@ -33,6 +33,9 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.12.0 =
+* Added optional Polylang-aware language links, Home URLs, and translated Homepage references while keeping the WordPress Site Language and visitor switcher behavior when Polylang is absent.
+* Polished 320px header spacing, Persian type rhythm, and mixed-direction planner input in the separately versioned UNDO Elements addon.
 = 0.11.0 =
 * The native Home uses the UNDO Elements plugin planner when available and retains its existing browser-only planner when the addon is inactive.
 * The separate UNDO Elements package adds Project Planner, Service Card and Project Invitation Elementor widgets.

@@ -107,7 +107,7 @@ function undo_settings_sections() {
             'google_fonts_enabled' => array( __( 'Load Google Fonts', 'undo-theme' ), 'checkbox', '1' ),
             'custom_fonts' => array( __( 'Custom font families', 'undo-theme' ), 'font_collection', array() ),
         ), undo_typography_role_fields() ) ),
-        'header' => array( __( 'Header', 'undo-theme' ), __( 'Built-in header settings. Elementor Theme Builder can replace this template.', 'undo-theme' ), array(
+        'header' => array( __( 'Header', 'undo-theme' ), __( 'Built-in header settings. Elementor Theme Builder can replace this template. With Polylang, the language switcher follows translated content URLs.', 'undo-theme' ), array(
             'header_logo_id' => array( __( 'Header logo', 'undo-theme' ), 'media', '0' ),
             'header_logo_light_id' => array( __( 'Light logo for dark header', 'undo-theme' ), 'media', '0' ),
             'header_logo_width' => array( __( 'Maximum logo width in pixels', 'undo-theme' ), 'number', '220', array( 60, 360 ) ),

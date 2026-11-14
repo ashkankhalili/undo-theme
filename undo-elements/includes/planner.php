@@ -42,9 +42,9 @@ function undo_elements_render_planner( $args = array() ) {
             </div>
           </fieldset>
           <label for="<?php echo esc_attr( $prefix ); ?>-name"><?php esc_html_e( 'Project or business name', 'undo-elements' ); ?></label>
-          <input id="<?php echo esc_attr( $prefix ); ?>-name" name="projectName" type="text" maxlength="120" autocomplete="organization" placeholder="<?php esc_attr_e( 'Name of your project', 'undo-elements' ); ?>">
+          <input id="<?php echo esc_attr( $prefix ); ?>-name" name="projectName" type="text" dir="auto" maxlength="120" autocomplete="organization" placeholder="<?php esc_attr_e( 'Name of your project', 'undo-elements' ); ?>">
           <label for="<?php echo esc_attr( $prefix ); ?>-goal"><?php esc_html_e( 'What should it help you do?', 'undo-elements' ); ?></label>
-          <textarea id="<?php echo esc_attr( $prefix ); ?>-goal" name="goal" rows="4" maxlength="1200" placeholder="<?php esc_attr_e( 'Describe the problem or the result you want', 'undo-elements' ); ?>"></textarea>
+          <textarea id="<?php echo esc_attr( $prefix ); ?>-goal" name="goal" dir="auto" rows="4" maxlength="1200" placeholder="<?php esc_attr_e( 'Describe the problem or the result you want', 'undo-elements' ); ?>"></textarea>
           <button type="submit"><?php echo esc_html( $args['button'] ); ?><span aria-hidden="true">↗</span></button>
           <p class="undo-elements-planner__status" role="status" aria-live="polite"></p>
         </form>

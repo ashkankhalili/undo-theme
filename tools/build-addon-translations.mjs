@@ -66,7 +66,7 @@ const ids=[...refs.keys()].sort((a,b)=>Buffer.compare(Buffer.from(a),Buffer.from
 const missing=ids.filter(id=>!Object.hasOwn(fa,id));
 if(missing.length) throw new Error('Missing Persian translations: '+missing.join(' | '));
 const header=locale=>[
-  'Project-Id-Version: UNDO Elements 0.1.0','Report-Msgid-Bugs-To: UNDO Web Developments',
+  'Project-Id-Version: UNDO Elements 0.1.1','Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8','Content-Transfer-Encoding: 8bit',
   'Language: '+locale,'Plural-Forms: nplurals=2; plural=(n != 1);'
 ].join('\n')+'\n';

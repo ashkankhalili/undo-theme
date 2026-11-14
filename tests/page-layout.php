@@ -26,6 +26,7 @@ function get_post_ancestors( $id ) { return array( 2, 1 ); }
 function get_post_status( $id ) { return 'publish'; }
 function get_permalink( $id ) { return 'https://example.test/' . $id . '/'; }
 function home_url( $path ) { return 'https://example.test' . $path; }
+function undo_home_url() { return home_url( '/' ); }
 function post_class( $class = '' ) { echo 'class="' . esc_attr( $class ) . '"'; }
 function has_post_thumbnail() { return true; }
 function the_post_thumbnail( $size ) { echo '<img src="featured.jpg" alt="">'; }

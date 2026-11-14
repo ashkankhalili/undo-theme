@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Elements 0.1.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Elements 0.1.1\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: includes/planner.php:25
 msgid "A clearer starting point"
@@ -41,7 +41,7 @@ msgstr ""
 msgid "Eyebrow"
 msgstr ""
 
-#: undo-elements.php:40
+#: undo-elements.php:42
 msgid "Goal"
 msgstr ""
 
@@ -73,11 +73,11 @@ msgstr ""
 msgid "Plan a project"
 msgstr ""
 
-#: undo-elements.php:37
+#: undo-elements.php:39
 msgid "Project"
 msgstr ""
 
-#: undo-elements.php:36
+#: undo-elements.php:38
 msgid "Project brief"
 msgstr ""
 
@@ -97,7 +97,7 @@ msgstr ""
 msgid "Put the essentials in one place. Download your brief when you are done, so it is ready to share when we connect."
 msgstr ""
 
-#: undo-elements.php:38
+#: undo-elements.php:40
 msgid "Service"
 msgstr ""
 
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Something new"
 msgstr ""
 
-#: undo-elements.php:39
+#: undo-elements.php:41
 msgid "Starting point"
 msgstr ""
 
@@ -125,15 +125,15 @@ msgstr ""
 msgid "The UNDO Elements update failed its checksum check."
 msgstr ""
 
-#: undo-elements.php:42
+#: undo-elements.php:44
 msgid "To discuss"
 msgstr ""
 
-#: undo-elements.php:68
+#: undo-elements.php:70
 msgid "UNDO Elements"
 msgstr ""
 
-#: undo-elements.php:89
+#: undo-elements.php:91
 msgid "UNDO Elements needs Elementor for its widgets. The project planner shortcode remains available."
 msgstr ""
 
@@ -141,7 +141,7 @@ msgstr ""
 msgid "Unable to verify the UNDO Elements update package."
 msgstr ""
 
-#: undo-elements.php:41
+#: undo-elements.php:43
 msgid "Untitled project"
 msgstr ""
 
@@ -173,10 +173,10 @@ msgstr ""
 msgid "Your answers stay in this browser. The brief downloads to your device."
 msgstr ""
 
-#: undo-elements.php:43
+#: undo-elements.php:45
 msgid "Your brief has been downloaded."
 msgstr ""
 
-#: undo-elements.php:44
+#: undo-elements.php:46
 msgid "undo-project-brief.txt"
 msgstr ""

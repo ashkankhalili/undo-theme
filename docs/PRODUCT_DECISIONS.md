@@ -17,7 +17,7 @@ Use this log before changing product scope. "Confirmed" comes from the user's in
 | Sales channel | Working assumption | Sell from UNDO's own site first | Confirm storefront, support and refund terms |
 | WordPress.org listing | Open | Possible later, not part of first commercial release | Review directory rules and move planner out of theme |
 | WordPress/PHP/Elementor versions | Open | Current theme header is provisional | Set support matrix after live compatibility tests |
-| Multilingual content system | Open | Use a compatible content translation plugin | Choose and test translated URLs, templates, menus, SEO, cache |
+| Multilingual content system | Working assumption | Optional Polylang bridge in 0.12.0; WordPress Site Language and theme visitor switcher remain when it is absent. Elementor translated templates require Polylang Connect for Elementor and Elementor Pro Theme Builder. | Confirm provider on staging, assign languages to existing content, and test translated URLs, templates, menus, SEO and cache before customer release |
 | Customer updates | Confirmed | Public GitHub Release ZIPs appear in WordPress Updates from theme version 0.2.3; an admin installs them | Verify 0.2.3-to-0.2.4 on staging; license-gated downloads remain open |
 | Licensing | Open | Never disable customer content or rendering on license expiry | Define update/support eligibility and renewal terms |
 | Demo import | Working assumption | One Persian demo with an English counterpart; reversible import | Confirm licensed assets and import behavior |

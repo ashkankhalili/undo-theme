@@ -1,6 +1,6 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.11.0' );
+define( 'UNDO_THEME_VERSION', '0.12.0' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/page-layout.php';
 require_once get_template_directory() . '/inc/github-updater.php';
@@ -93,15 +93,23 @@ function undo_language_override() {
     return '';
 }
 
+function undo_uses_polylang() {
+    return function_exists( 'pll_current_language' ) && function_exists( 'pll_the_languages' );
+}
+
 function undo_requested_language() {
+    if ( undo_uses_polylang() ) {
+        $language = pll_current_language( 'slug' );
+        if ( in_array( $language, array( 'en', 'fa' ), true ) ) { return $language; }
+    }
     $override = undo_language_override();
-    if ( $override ) { return $override; }
+    if ( $override && ! undo_uses_polylang() ) { return $override; }
     return 0 === strpos( strtolower( str_replace( '-', '_', get_locale() ) ), 'fa' ) ? 'fa' : 'en';
 }
 
 function undo_boot_locale() {
     load_theme_textdomain( 'undo-theme', get_template_directory() . '/languages' );
-    if ( is_admin() || wp_doing_ajax() || wp_doing_cron() ) { return; }
+    if ( is_admin() || wp_doing_ajax() || wp_doing_cron() || undo_uses_polylang() ) { return; }
     $override = undo_language_override();
     if ( ! $override ) { return; }
     if ( isset( $_GET['undo_lang'] ) && ! headers_sent() ) {
@@ -112,13 +120,20 @@ function undo_boot_locale() {
 add_action( 'init', 'undo_boot_locale', 1 );
 
 function undo_language() { return 'fa' === undo_requested_language() ? 'fa' : 'en'; }
+function undo_home_url() {
+    if ( undo_uses_polylang() && function_exists( 'pll_home_url' ) ) {
+        $url = pll_home_url( undo_language() );
+        if ( is_string( $url ) && '' !== $url ) { return $url; }
+    }
+    return home_url( '/' );
+}
 function undo_cta_url() {
     $url = undo_setting( 'cta_url' );
-    return '#' === substr( $url, 0, 1 ) && ! is_front_page() ? home_url( '/' ) . $url : $url;
+    return '#' === substr( $url, 0, 1 ) && ! is_front_page() ? undo_home_url() . $url : $url;
 }
 function undo_footer_action_url() {
     $url = undo_setting( 'footer_action_url' );
-    return '#' === substr( $url, 0, 1 ) && ! is_front_page() ? home_url( '/' ) . $url : $url;
+    return '#' === substr( $url, 0, 1 ) && ! is_front_page() ? undo_home_url() . $url : $url;
 }
 function undo_footer_copyright() {
     $text = undo_content( 'footer_copyright', '© {year} UNDO Web Developments' );
@@ -141,7 +156,12 @@ function undo_home_reference( $slot, $fallback_title, $fallback_description ) {
     $result = array( 'title' => $fallback_title, 'description' => $fallback_description, 'url' => '' );
     $allowed = array( 'overview', 'service_web', 'service_plugin', 'service_app', 'approach', 'redesign' );
     if ( ! in_array( $slot, $allowed, true ) ) { return $result; }
-    $id = absint( undo_setting( 'home_' . $slot . '_page_' . undo_language() ) );
+    $language = undo_language();
+    $id = absint( undo_setting( 'home_' . $slot . '_page_' . $language ) );
+    if ( undo_uses_polylang() && function_exists( 'pll_get_post' ) ) {
+        if ( ! $id ) { $id = absint( undo_setting( 'home_' . $slot . '_page_' . ( 'fa' === $language ? 'en' : 'fa' ) ) ); }
+        if ( $id ) { $id = absint( pll_get_post( $id, $language ) ); }
+    }
     if ( ! $id || $id === absint( get_option( 'page_on_front', 0 ) ) || 'page' !== get_post_type( $id ) || 'publish' !== get_post_status( $id ) ) { return $result; }
     $page = get_post( $id );
     if ( ! $page ) { return $result; }
@@ -153,7 +173,22 @@ function undo_home_reference( $slot, $fallback_title, $fallback_description ) {
     if ( $url ) { $result['url'] = $url; }
     return $result;
 }
-function undo_language_url( $language ) { return add_query_arg( 'undo_lang', $language ); }
+function undo_language_url( $language ) {
+    if ( ! in_array( $language, array( 'en', 'fa' ), true ) ) { return ''; }
+    if ( undo_uses_polylang() ) {
+        $languages = pll_the_languages( array( 'raw' => true, 'hide_if_empty' => false, 'hide_if_no_translation' => false ) );
+        if ( is_array( $languages ) && isset( $languages[ $language ] ) ) {
+            $url = isset( $languages[ $language ]['url'] ) && is_string( $languages[ $language ]['url'] ) ? $languages[ $language ]['url'] : '';
+            if ( '' !== $url ) { return $url; }
+            if ( function_exists( 'pll_home_url' ) ) {
+                $home = pll_home_url( $language );
+                return is_string( $home ) ? $home : '';
+            }
+        }
+        return '';
+    }
+    return add_query_arg( 'undo_lang', $language );
+}
 
 function undo_font_css_family( $choice, $custom_fonts ) {
     $built_in = array(
@@ -317,7 +352,7 @@ function undo_nav_fallback( $args ) {
     if ( undo_setting_enabled( 'home_show_approach' ) ) { $items[ __( 'Approach', 'undo-theme' ) ] = '#approach'; }
     $items[ __( 'Project planner', 'undo-theme' ) ] = '#project-planner';
     echo '<ul class="nav-list">';
-    foreach ( $items as $label => $anchor ) { echo '<li><a href="' . esc_url( home_url( '/' ) . $anchor ) . '">' . esc_html( $label ) . '</a></li>'; }
+    foreach ( $items as $label => $anchor ) { echo '<li><a href="' . esc_url( undo_home_url() . $anchor ) . '">' . esc_html( $label ) . '</a></li>'; }
     echo '</ul>';
 }
 

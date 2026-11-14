@@ -32,6 +32,7 @@ jobs:
           php tests/sidebar.php
           php tests/footer-settings.php
           php tests/undo-elements.php
+          php tests/polylang-bridge.php
 
   package:
     name: Translation and package integrity

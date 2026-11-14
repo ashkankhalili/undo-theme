@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Elements 0.1.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Elements 0.1.1\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: includes/planner.php:25
 msgid "A clearer starting point"
@@ -41,7 +41,7 @@ msgstr "ابزارک‌های المنتور و خلاصهٔ پروژهٔ خصو
 msgid "Eyebrow"
 msgstr "عنوان کوچک"
 
-#: undo-elements.php:40
+#: undo-elements.php:42
 msgid "Goal"
 msgstr "هدف"
 
@@ -73,11 +73,11 @@ msgstr "نام پروژهٔ شما"
 msgid "Plan a project"
 msgstr "برنامه‌ریزی پروژه"
 
-#: undo-elements.php:37
+#: undo-elements.php:39
 msgid "Project"
 msgstr "پروژه"
 
-#: undo-elements.php:36
+#: undo-elements.php:38
 msgid "Project brief"
 msgstr "خلاصهٔ پروژه"
 
@@ -97,7 +97,7 @@ msgstr "برنامه‌ریز پروژه"
 msgid "Put the essentials in one place. Download your brief when you are done, so it is ready to share when we connect."
 msgstr "اطلاعات اصلی را در یک جا جمع کنید. پس از پایان، خلاصهٔ پروژه را دریافت کنید تا برای گفت‌وگو آماده باشد."
 
-#: undo-elements.php:38
+#: undo-elements.php:40
 msgid "Service"
 msgstr "خدمت"
 
@@ -109,7 +109,7 @@ msgstr "کارت خدمات"
 msgid "Something new"
 msgstr "یک پروژهٔ تازه"
 
-#: undo-elements.php:39
+#: undo-elements.php:41
 msgid "Starting point"
 msgstr "نقطهٔ شروع"
 
@@ -125,15 +125,15 @@ msgstr "بگویید چه می‌خواهید بسازید."
 msgid "The UNDO Elements update failed its checksum check."
 msgstr "اعتبارسنجی کد SHA-256 به‌روزرسانی UNDO Elements ناموفق بود."
 
-#: undo-elements.php:42
+#: undo-elements.php:44
 msgid "To discuss"
 msgstr "برای گفت‌وگو"
 
-#: undo-elements.php:68
+#: undo-elements.php:70
 msgid "UNDO Elements"
 msgstr "المان‌های UNDO"
 
-#: undo-elements.php:89
+#: undo-elements.php:91
 msgid "UNDO Elements needs Elementor for its widgets. The project planner shortcode remains available."
 msgstr "ابزارک‌های UNDO Elements به المنتور نیاز دارند. کد کوتاه برنامه‌ریز پروژه همچنان در دسترس است."
 
@@ -141,7 +141,7 @@ msgstr "ابزارک‌های UNDO Elements به المنتور نیاز دار�
 msgid "Unable to verify the UNDO Elements update package."
 msgstr "امکان اعتبارسنجی بستهٔ به‌روزرسانی UNDO Elements وجود ندارد."
 
-#: undo-elements.php:41
+#: undo-elements.php:43
 msgid "Untitled project"
 msgstr "پروژهٔ بدون نام"
 
@@ -173,10 +173,10 @@ msgstr "افزونهٔ وردپرس"
 msgid "Your answers stay in this browser. The brief downloads to your device."
 msgstr "پاسخ‌های شما در همین مرورگر می‌مانند. خلاصهٔ پروژه روی دستگاه شما دریافت می‌شود."
 
-#: undo-elements.php:43
+#: undo-elements.php:45
 msgid "Your brief has been downloaded."
 msgstr "خلاصهٔ پروژه دریافت شد."
 
-#: undo-elements.php:44
+#: undo-elements.php:46
 msgid "undo-project-brief.txt"
 msgstr "undo-project-brief-fa.txt"

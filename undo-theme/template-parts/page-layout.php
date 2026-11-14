@@ -23,7 +23,7 @@ $title_style = 'compact' === undo_setting( 'page_title_style' ) ? 'compact' : 'e
 <header class="page-header page-header--<?php echo esc_attr( $title_style ); ?><?php echo $show_title ? '' : ' page-header--path-only'; ?>">
 <?php if ( $show_breadcrumbs ) : ?>
 <nav class="page-breadcrumbs" aria-label="<?php esc_attr_e( 'Page path', 'undo-theme' ); ?>"><ol>
-<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'undo-theme' ); ?></a></li>
+<li><a href="<?php echo esc_url( undo_home_url() ); ?>"><?php esc_html_e( 'Home', 'undo-theme' ); ?></a></li>
 <?php foreach ( $ancestors as $ancestor_id ) : if ( 'publish' !== get_post_status( $ancestor_id ) ) { continue; } ?><li><a href="<?php echo esc_url( get_permalink( $ancestor_id ) ); ?>"><?php echo esc_html( get_the_title( $ancestor_id ) ); ?></a></li><?php endforeach; ?>
 <li aria-current="page"><?php echo esc_html( $page_title ); ?></li>
 </ol></nav>

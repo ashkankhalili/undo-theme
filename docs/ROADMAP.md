@@ -15,7 +15,7 @@ Each stage is complete only after template behavior, Persian and English copy, R
 | 8. Homepage | Editable sections, content model, accessible motion, Elementor starter layout | 0.9.0 adds native section order, visibility and published-page references; 0.8.0 ships editable English/Persian Elementor Home starters; live staging and import validation remain |
 | 9. Elementor integration | Elementor Free/Pro/absent-plugin scenarios, page templates and location fallbacks | 0.10.0 guards disabled-plugin pages, scopes native landing styles, adds Free/Pro/absent routing checks and a compatibility guide; live import and fallback matrix pending |
 | 10. UNDO Elements addon | Separate plugin, first Elementor widget set, planner migration | 0.11.0 theme and 0.1.0 addon add three widgets, a reusable browser-only planner, fallback routing, translations and independent ZIP updates; live Elementor and updater validation pending |
-| 11. Localization and polish | Content translation integration, complete RTL/LTR visual pass | Planned |
+| 11. Localization and polish | Content translation integration, complete RTL/LTR visual pass | 0.12.0 adds optional Polylang URL/content integration and 0.1.1 addon language alignment; local 320px, 390px and desktop RTL/LTR checks done. Live translated Elementor/template, menu, cache and staging checks pending. See [CONTENT_TRANSLATION.md](CONTENT_TRANSLATION.md). |
 | 12. Release candidate | Theme Check, Plugin Check, WPCS, accessibility, browser matrix, asset licensing, staging install/upgrade | Pending |
 | 13. Customer release | GitHub tag, exact tested theme/addon ZIPs, checksums, release notes, customer update test | Pending |
 

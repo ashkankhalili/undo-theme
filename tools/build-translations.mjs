@@ -463,13 +463,18 @@ for (const file of files) {
     refs.get(id).push(`${path.relative(root, file).replaceAll('\\', '/')}:${line}`);
   }
 }
-for (const id of ['UNDO Web Developments', 'A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Includes a responsive landing page, three blog layouts, editorial posts, and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls pixel or percentage site width, colors, typography, Google and uploaded WOFF2 fonts, header, pages, posts, blog, physical sidebar position or visibility, and footer. Supports Elementor page templates and Theme Builder locations, with GitHub dashboard updates.']) refs.set(id, ['style.css:1']);
+const description = fs.readFileSync(path.join(root, 'style.css'), 'utf8').match(/^Description:\s*(.+)$/m)?.[1];
+if (!description) throw new Error('Theme description missing from style.css');
+refs.set('UNDO Web Developments', ['style.css:2']);
+refs.set(description, ['style.css:5']);
+fa[description] = 'پوسته وردپرس دوزبانه برای آژانس‌ها و استودیوهای خلاق. زبان اولیه از تنظیم زبان سایت وردپرس پیروی می‌کند؛ تغییر زبان فارسی و انگلیسی و استایل راست‌چین دارد. اتصال اختیاری به Polylang پیوند صفحه‌های ترجمه‌شده و خانهٔ هر زبان را فراهم می‌کند. صفحهٔ اصلی قابل ویرایش، سه چیدمان وبلاگ، قالب‌های متنوع صفحه، پیشخوان تنظیمات مستقل، ابزارک‌های اختیاری UNDO Elements، پشتیبانی از المنتور و به‌روزرسانی از پیشخوان وردپرس را شامل می‌شود.';
+fa['Built-in header settings. Elementor Theme Builder can replace this template. With Polylang, the language switcher follows translated content URLs.'] = 'تنظیمات سربرگ داخلی. قالب‌ساز المنتور می‌تواند این قالب را جایگزین کند. با Polylang، تغییر زبان به نشانی محتوای ترجمه‌شده می‌رود.';
 const ids = [...refs.keys()].sort((a, b) => Buffer.compare(Buffer.from(a), Buffer.from(b)));
 const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.11.0',
+  'Project-Id-Version: UNDO Web Developments 0.12.0',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

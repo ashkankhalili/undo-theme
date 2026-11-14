@@ -1,5 +1,10 @@
 # UNDO Elements changelog
 
+## [0.1.1] - 2026-11-14
+
+- The planner brief follows Polylang's active language when that content translation plugin is present.
+- Improved Persian heading rhythm and RTL arrow direction. Name and goal fields now choose text direction from the visitor's input.
+
 ## [0.1.0] - 2026-11-14
 
 - Released the Project Planner, Service Card, and Project Invitation widgets for Elementor Free.
