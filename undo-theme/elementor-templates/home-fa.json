@@ -228,8 +228,7 @@
           "elType": "container",
           "isInner": false,
           "settings": {
-            "_css_classes": "undo-starter-close",
-            "_element_id": "project-planner"
+            "_css_classes": "undo-starter-close"
           },
           "elements": [
             {
@@ -270,6 +269,17 @@
               "elements": []
             }
           ]
+        },
+        {
+          "id": "a2a93285",
+          "elType": "widget",
+          "widgetType": "shortcode",
+          "isInner": false,
+          "settings": {
+            "shortcode": "[undo_home_planner]",
+            "_css_classes": "undo-starter-planner"
+          },
+          "elements": []
         }
       ]
     }

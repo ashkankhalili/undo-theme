@@ -13,6 +13,7 @@ function esc_attr_e( $value, $domain = 'default' ) { echo esc_attr( $value ); }
 function esc_html_e( $value, $domain = 'default' ) { echo esc_html( $value ); }
 function elementor_theme_do_location( $location ) { return ! empty( $GLOBALS['elementor_location'] ); }
 function undo_is_elementor_page() { return ! empty( $GLOBALS['elementor_page'] ); }
+function undo_is_generated_starter( $post_id, $type ) { return ! empty( $GLOBALS['generated_home'] ) && 'home' === $type; }
 function is_active_sidebar( $id ) { return true; }
 function undo_has_sidebar( $key ) { return undo_setting_enabled( $key ) && is_active_sidebar( 'primary-sidebar' ); }
 function get_queried_object_id() { return 3; }
@@ -96,6 +97,11 @@ ob_start();
 include dirname( __DIR__ ) . '/undo-theme/front-page.php';
 $front = ob_get_clean();
 expect( false !== strpos( $front, 'template-parts/page-layout:' ) && false === strpos( $front, 'template-parts/landing:' ), 'Elementor Free front pages must render their editable content through the page layout' );
+$GLOBALS['generated_home'] = true;
+ob_start();
+include dirname( __DIR__ ) . '/undo-theme/front-page.php';
+$front = ob_get_clean();
+expect( false !== strpos( $front, 'template-parts/page-layout:full' ), 'Generated Elementor Home uses its full-width starter layout' );
 $GLOBALS['elementor_page'] = false;
 ob_start();
 include dirname( __DIR__ ) . '/undo-theme/front-page.php';

@@ -1,6 +1,6 @@
 # Elementor compatibility and validation
 
-UNDO is a classic WordPress theme. It works without Elementor. Elementor Free can edit page content; Elementor Pro can replace the theme's Header, Footer, Single and Archive locations when a published Theme Builder template has a matching display condition. The theme keeps its PHP template when no matching Pro template renders. The bundled English and Persian JSON files are optional starter content and are never imported or rewritten by a theme update.
+UNDO is a classic WordPress theme. It works without Elementor. Elementor Free can edit page content; Elementor Pro can replace the theme's Header, Footer, Single and Archive locations when a published Theme Builder template has a matching display condition. The theme keeps its PHP template when no matching Pro template renders. Version 0.13.0 creates four English/Persian Home and Blog pages once when Elementor is active; later updates never rewrite them. The remaining Pro JSON starters stay available for manual import.
 
 ## Page layout ownership
 
@@ -10,7 +10,7 @@ UNDO is a classic WordPress theme. It works without Elementor. Elementor Free ca
 | Elementor Full Width | Elementor owns the page content and full-width layout. The UNDO page width presets do not constrain it. | Theme header/footer, or matching Pro replacements. |
 | Elementor Canvas | Elementor owns the whole canvas. | Canvas omits the theme header and footer. |
 
-An Elementor-authored page suppresses the theme's page title, breadcrumbs, featured image and built-in page sidebar while Elementor is active. The page's own Elementor widgets can supply those elements. If Elementor is disabled, saved builder metadata no longer suppresses the standard WordPress page layout. The ordinary WordPress content field is shown; Elementor widgets need the plugin to render and are not converted into block content. A static Elementor Home with no explicit UNDO template returns to the native UNDO landing when Elementor is disabled. An explicit UNDO front-page template still takes precedence.
+An Elementor-authored page suppresses the theme's page title, breadcrumbs, featured image and built-in page sidebar while Elementor is active. The page's own Elementor widgets can supply those elements. If Elementor is disabled, saved builder metadata no longer suppresses the standard WordPress page layout. The ordinary WordPress content field is shown; Elementor widgets need the plugin to render and are not converted into block content. A static generated UNDO Elementor Home returns to the native UNDO landing when Elementor is disabled. An explicit UNDO front-page template still takes precedence for other pages.
 
 ## Theme Builder locations
 
@@ -21,7 +21,7 @@ An Elementor-authored page suppresses the theme's page title, breadcrumbs, featu
 | Single | Built-in page or post content, or native 404 content. |
 | Archive | Built-in blog, archive, and search layouts with pagination and sidebar settings. |
 
-The theme registers all four core locations. Elementor Pro owns its display conditions; a template without a matching condition does not replace the theme. Imported Pro starters require review of their widgets and display conditions. The header starter needs a WordPress menu chosen after import. The archive starter uses dynamic Archive Posts, so use it as an Archive Theme Builder template rather than as a normal posts page.
+The theme registers all four core locations. Elementor Pro owns its display conditions; a template without a matching condition does not replace the theme. Imported Pro starters require review of their widgets and display conditions. The header starter needs a WordPress menu chosen after import. The archive starter uses dynamic Archive Posts. The generated Elementor Free Blog page uses `[undo_blog_posts]` and can be selected as the Reading posts page; the theme renders that saved Elementor document because WordPress normally ignores the posts page body.
 
 ## Staging matrix
 

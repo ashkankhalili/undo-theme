@@ -33,6 +33,7 @@ jobs:
           php tests/footer-settings.php
           php tests/undo-elements.php
           php tests/polylang-bridge.php
+          php tests/starter-pages.php
 
   package:
     name: Translation and package integrity
@@ -83,6 +84,7 @@ jobs:
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-boxed.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-custom-width.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/inc/page-layout.php'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/inc/starter-pages.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-parts/page-layout.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-parts/home/hero.php'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/template-parts/home/project-planner.php'
@@ -90,6 +92,7 @@ jobs:
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/assets/css/admin-page-width.css'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/assets/js/admin-page-width.js'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/elementor-templates/home-en.json'
+          unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/elementor-templates/blog-page-fa.json'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/elementor-templates/blog-archive-fa.json'
           sha256sum -c undo-elements-*.zip.sha256
           unzip -t undo-elements-*.zip

@@ -4,6 +4,24 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.13.0] - 2026-11-14
+
+### Elementor Home and Blog setup
+
+- On the first administrator load with Elementor Free or Pro active, create four published, editable UNDO starter pages: Home and Blog in English and Persian. Existing pages, Reading assignments, and previously created starter content are never overwritten. When Elementor is unavailable, no pages are created and native Home/blog rendering continues.
+- Save starter content through Elementor's document API. The Home starter now includes a working planner with the native fallback; the new Blog Page starter uses a live, paginated posts shortcode. On the WordPress Reading posts page, the theme renders the selected Elementor page; Elementor Pro archive locations retain precedence, and the native post loop returns when Elementor is disabled.
+- Link the generated language pairs when Polylang is configured with English and Persian. Keep all ten JSON starters in the theme for manual import or recovery.
+- Add isolated provisioning tests and update the setup, staging, and release workflow documentation.
+
+### فارسی
+
+- با فعال بودن المنتور، چهار صفحهٔ آمادهٔ قابل ویرایش برای خانه و وبلاگ به فارسی و انگلیسی فقط یک‌بار ساخته می‌شوند. صفحه‌ها و تنظیمات مطالعهٔ موجود تغییر نمی‌کنند.
+- صفحهٔ خانهٔ المنتوری برنامه‌ریز پروژه و صفحهٔ وبلاگ فهرست زندهٔ نوشته‌ها را دارد. در نبود المنتور، چیدمان داخلی پوسته نمایش داده می‌شود.
+
+### Validation
+
+- PHP provisioning checks cover creation, idempotence, Reading preservation, multilingual linking, and disabled-Elementor fallback. Live Elementor editor and Reading-page behavior require staging validation.
+
 ## [0.12.0] - 2026-11-14
 
 ### Localization and RTL milestone

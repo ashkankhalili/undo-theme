@@ -2,8 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 
-// Elementor's documented 0.4 template structure. The files are importable starters,
-// never installed into a customer's content database during a theme update.
+// Elementor's documented 0.4 template structure. The four Free page starters are
+// provisioned once; other files stay available for manual import.
 const output = path.resolve('undo-theme/elementor-templates');
 fs.mkdirSync(output, { recursive: true });
 let index = 0;
@@ -14,6 +14,10 @@ const container = (className, elements, settings = {}) => ({
 });
 const widget = (widgetType, settings = {}) => ({
   id: id(), elType: 'widget', widgetType, isInner: false, settings, elements: [],
+});
+const fixedWidget = (key, widgetType, settings = {}) => ({
+  id: crypto.createHash('sha1').update(`undo-starter-${key}`).digest('hex').slice(0, 8),
+  elType: 'widget', widgetType, isInner: false, settings, elements: [],
 });
 const heading = (title, className, size = 'h2') => widget('heading', { title, header_size: size, _css_classes: className });
 const text = (editor, className = '') => widget('text-editor', { editor, _css_classes: className });
@@ -65,7 +69,8 @@ for (const [language, c] of Object.entries(copy)) {
         ]),
       ]),
       container('undo-starter-method', [heading(c.method, 'undo-starter-section-title'), text(c.methodText, 'undo-starter-lead')]),
-      container('undo-starter-close', [heading(c.close, 'undo-starter-section-title'), text(c.closeText, 'undo-starter-lead'), button(c.action, '#project-planner')], { _element_id: 'project-planner' }),
+      container('undo-starter-close', [heading(c.close, 'undo-starter-section-title'), text(c.closeText, 'undo-starter-lead'), button(c.action, '#project-planner')]),
+      fixedWidget(`home-planner-${language}`, 'shortcode', { shortcode: '[undo_home_planner]', _css_classes: 'undo-starter-planner' }),
     ]),
   ]);
 
@@ -92,6 +97,14 @@ for (const [language, c] of Object.entries(copy)) {
       heading(c.blog, 'undo-starter-display', 'h1'),
       text(c.blogText, 'undo-starter-lead'),
       widget('archive-posts', { _css_classes: 'undo-starter-archive-posts' }),
+    ]),
+  ]);
+
+  write(`blog-page-${language}`, `${c.blog} — ${language.toUpperCase()}`, 'page', [
+    container(`undo-starter-archive ${langClass}`, [
+      heading(c.blog, 'undo-starter-display', 'h1'),
+      text(c.blogText, 'undo-starter-lead'),
+      widget('shortcode', { shortcode: '[undo_blog_posts]', _css_classes: 'undo-starter-archive-posts' }),
     ]),
   ]);
 }

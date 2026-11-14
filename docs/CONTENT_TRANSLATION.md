@@ -8,6 +8,7 @@ Theme 0.12.0 includes an **optional** Polylang bridge. Without Polylang, the ini
 2. Install and configure Polylang with English and Persian; set the desired default in Polylang. Assign a language to existing pages, posts, categories, tags, and menus. Link translations in the WordPress editor. See [Polylang's page and post guide](https://polylang.pro/documentation/support/getting-started/translating-pages-posts-categories-and-tags/).
 3. Create and link published Home pages in both languages and use Polylang's language-specific front-page settings. Translate the navigation menu and set the language-specific menu locations.
 4. For Elementor-built pages, install the Polylang Connect for Elementor integration described in [Polylang's Elementor guide](https://polylang.pro/how-to-translate-elementor-with-polylang/). Elementor Pro is needed to translate Theme Builder header/footer/archive templates. The theme still provides native template fallbacks when a Pro location is unavailable.
+   When Elementor is active, UNDO also creates English/Persian Home and Blog starter pages once. After both languages are configured, it links the corresponding page pairs. Review their copy and choose the language-specific front pages in Polylang before using them publicly.
 5. In **UNDO Theme Settings → Homepage**, assign relevant published pages for each language. If one assignment points to a linked Polylang translation, UNDO resolves the corresponding page for the current language. A missing translation shows the built-in section text.
 
 ## Behavior to verify

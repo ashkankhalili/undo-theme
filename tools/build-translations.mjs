@@ -469,12 +469,13 @@ refs.set('UNDO Web Developments', ['style.css:2']);
 refs.set(description, ['style.css:5']);
 fa[description] = 'پوسته وردپرس دوزبانه برای آژانس‌ها و استودیوهای خلاق. زبان اولیه از تنظیم زبان سایت وردپرس پیروی می‌کند؛ تغییر زبان فارسی و انگلیسی و استایل راست‌چین دارد. اتصال اختیاری به Polylang پیوند صفحه‌های ترجمه‌شده و خانهٔ هر زبان را فراهم می‌کند. صفحهٔ اصلی قابل ویرایش، سه چیدمان وبلاگ، قالب‌های متنوع صفحه، پیشخوان تنظیمات مستقل، ابزارک‌های اختیاری UNDO Elements، پشتیبانی از المنتور و به‌روزرسانی از پیشخوان وردپرس را شامل می‌شود.';
 fa['Built-in header settings. Elementor Theme Builder can replace this template. With Polylang, the language switcher follows translated content URLs.'] = 'تنظیمات سربرگ داخلی. قالب‌ساز المنتور می‌تواند این قالب را جایگزین کند. با Polylang، تغییر زبان به نشانی محتوای ترجمه‌شده می‌رود.';
+fa['Posts navigation'] = 'پیمایش نوشته‌ها';
 const ids = [...refs.keys()].sort((a, b) => Buffer.compare(Buffer.from(a), Buffer.from(b)));
 const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.12.0',
+  'Project-Id-Version: UNDO Web Developments 0.13.0',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

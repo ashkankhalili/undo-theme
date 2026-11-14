@@ -590,3 +590,14 @@ html[dir="rtl"] .footer-action svg{transform:scaleX(-1)}
 
 /* Keep brand, both languages, search, and navigation usable on narrow phones. */
 @media(max-width:380px){.site-header{height:104px}.site-header .header-inner{height:104px;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:52px 52px;column-gap:8px;row-gap:0}.site-header .header-tools{display:contents}.site-header .brand{grid-column:1;grid-row:1;justify-self:start}.site-header .menu-toggle{grid-column:2;grid-row:1;justify-self:end}.site-header .language-switcher{grid-column:1;grid-row:2;justify-self:start;margin-inline-start:0}.site-header .header-search-toggle{grid-column:2;grid-row:2;justify-self:end}.site-header .mobile-nav:not([hidden]){max-height:calc(100dvh - 104px)}}
+
+/* Editable Elementor Home and Reading posts page keep the native planner and blog rhythm. */
+.undo-starter-home .undo-starter-planner .planner{padding:clamp(72px,8vw,130px) max(24px,calc((100vw - 1440px)/2))}
+.undo-starter-home .undo-starter-planner .planner-grid{max-width:1440px;margin-inline:auto}
+.undo-elementor-blog{min-height:60svh}
+.undo-starter-posts{min-width:0}
+.undo-starter-pagination{margin-block-start:40px}
+.undo-starter-pagination .page-numbers{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.undo-starter-pagination a,.undo-starter-pagination .current{display:inline-flex;min-width:40px;min-height:40px;align-items:center;justify-content:center;padding:8px 12px;border:1px solid var(--line);color:var(--ink);text-decoration:none}
+.undo-starter-pagination .current{background:var(--ink);color:#fff}
+@media(max-width:760px){.undo-starter-home .undo-starter-planner .planner{padding:72px 20px}}

@@ -1,0 +1,52 @@
+{
+  "title": "UNDO یادداشت‌ها — FA",
+  "type": "page",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "fdf82eeb",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "_css_classes": "undo-starter-archive undo-starter--fa"
+      },
+      "elements": [
+        {
+          "id": "c2742d26",
+          "elType": "widget",
+          "widgetType": "heading",
+          "isInner": false,
+          "settings": {
+            "title": "یادداشت‌ها",
+            "header_size": "h1",
+            "_css_classes": "undo-starter-display"
+          },
+          "elements": []
+        },
+        {
+          "id": "c0e30464",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "isInner": false,
+          "settings": {
+            "editor": "دربارهٔ طراحی، ساخت و بهتر کردن چیزهای کاربردی.",
+            "_css_classes": "undo-starter-lead"
+          },
+          "elements": []
+        },
+        {
+          "id": "1820402c",
+          "elType": "widget",
+          "widgetType": "shortcode",
+          "isInner": false,
+          "settings": {
+            "shortcode": "[undo_blog_posts]",
+            "_css_classes": "undo-starter-archive-posts"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ]
+}

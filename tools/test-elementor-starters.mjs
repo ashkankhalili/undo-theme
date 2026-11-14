@@ -3,7 +3,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 
 const directory = path.resolve('undo-theme/elementor-templates');
-const expected = { home: 'page', header: 'header', footer: 'footer', 'blog-archive': 'archive' };
+const expected = { home: 'page', 'blog-page': 'page', header: 'header', footer: 'footer', 'blog-archive': 'archive' };
 for (const [slug, type] of Object.entries(expected)) {
   for (const language of ['en', 'fa']) {
     const name = `${slug}-${language}.json`;
@@ -27,8 +27,9 @@ for (const [slug, type] of Object.entries(expected)) {
     check(document.content);
     assert.ok(widgets.some(widget => widget.widgetType === 'heading'), `${name}: editable heading`);
     if (slug === 'blog-archive') assert.ok(widgets.some(widget => widget.widgetType === 'archive-posts'), `${name}: dynamic archive loop`);
+    if (slug === 'blog-page') assert.ok(widgets.some(widget => widget.widgetType === 'shortcode' && widget.settings.shortcode === '[undo_blog_posts]'), `${name}: Free posts loop`);
     if (slug === 'footer') assert.ok(widgets.some(widget => widget.widgetType === 'shortcode' && widget.settings.shortcode === '[undo_footer_widgets]'), `${name}: optional WordPress widget areas`);
-    if (slug === 'home') assert.ok(JSON.stringify(document.content).includes('"_element_id":"project-planner"'), `${name}: working project link target`);
+    if (slug === 'home') assert.ok(widgets.some(widget => widget.widgetType === 'shortcode' && widget.settings.shortcode === '[undo_home_planner]'), `${name}: working project planner`);
   }
 }
-console.log('Eight Elementor starter templates have the expected editable structure.');
+console.log('Ten Elementor starter templates have the expected editable structure.');

@@ -1,11 +1,11 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.12.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.13.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
 msgstr "% دیدگاه"
 
-#: functions.php:259
+#: functions.php:260
 msgid "%s%% of the earlier layout visible"
 msgstr "%s٪ از طرح قبلی دیده می‌شود"
 
@@ -14,10 +14,10 @@ msgid "A better site or product should help people understand, decide, and act. 
 msgstr "یک وب‌سایت یا محصول بهتر باید به مردم کمک کند بفهمند، تصمیم بگیرند و اقدام کنند. طراحی در خدمت همین هدف است."
 
 #: style.css:5
-msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Optional Polylang integration links translated pages and language-specific home URLs. Includes an editable landing page with section ordering, visibility, and published-page references; three blog layouts; editorial posts; and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls layout, colors, language-aware typography, header, pages, posts, blog, sidebar, and a configurable footer with menus, contact, social, legal and three optional widget areas. Includes Elementor Free page layouts, Elementor Pro Theme Builder locations with native fallbacks, importable English/Persian starters, optional UNDO Elements widgets, and GitHub dashboard updates."
+msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Optional Polylang integration links translated pages and language-specific home URLs. Includes an editable landing page with section ordering, visibility, and published-page references; three blog layouts; editorial posts; and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls layout, colors, language-aware typography, header, pages, posts, blog, sidebar, and a configurable footer with menus, contact, social, legal and three optional widget areas. With Elementor Free or Pro active, creates editable English/Persian Home and Blog starter pages once without replacing Reading choices; native pages remain when Elementor is absent. Includes Elementor Pro Theme Builder locations with fallbacks, optional UNDO Elements widgets, and GitHub dashboard updates."
 msgstr "پوسته وردپرس دوزبانه برای آژانس‌ها و استودیوهای خلاق. زبان اولیه از تنظیم زبان سایت وردپرس پیروی می‌کند؛ تغییر زبان فارسی و انگلیسی و استایل راست‌چین دارد. اتصال اختیاری به Polylang پیوند صفحه‌های ترجمه‌شده و خانهٔ هر زبان را فراهم می‌کند. صفحهٔ اصلی قابل ویرایش، سه چیدمان وبلاگ، قالب‌های متنوع صفحه، پیشخوان تنظیمات مستقل، ابزارک‌های اختیاری UNDO Elements، پشتیبانی از المنتور و به‌روزرسانی از پیشخوان وردپرس را شامل می‌شود."
 
-#: functions.php:275 template-parts/home/project-planner.php:3
+#: functions.php:276 template-parts/home/project-planner.php:3
 msgid "A redesign"
 msgstr "بازطراحی"
 
@@ -45,7 +45,7 @@ msgstr "متن دکمه اقدام (انگلیسی)"
 msgid "Action label (Persian)"
 msgstr "متن دکمه اقدام (فارسی)"
 
-#: functions.php:42
+#: functions.php:43
 msgid "Add blocks or widgets here to show them above the footer wordmark."
 msgstr "بلوک‌ها یا ابزارک‌ها را اینجا اضافه کنید تا بالای نشان بزرگ پایین صفحه نمایش داده شوند."
 
@@ -61,7 +61,7 @@ msgstr "افزودن خانواده قلم"
 msgid "After"
 msgstr "بعد"
 
-#: functions.php:352 inc/settings.php:58
+#: functions.php:353 inc/settings.php:58
 msgid "Approach"
 msgstr "روش کار"
 
@@ -169,11 +169,11 @@ msgstr "یک فایل WOFF2 معتبر از کتابخانه رسانه انتخ
 msgid "Clear"
 msgstr "پاک کردن"
 
-#: functions.php:256
+#: functions.php:257
 msgid "Close menu"
 msgstr "بستن منو"
 
-#: functions.php:258
+#: functions.php:259
 msgid "Close search"
 msgstr "بستن جست‌وجو"
 
@@ -361,7 +361,7 @@ msgstr "پس‌زمینه پانوشت"
 msgid "Footer colors"
 msgstr "رنگ‌های پانوشت"
 
-#: functions.php:24
+#: functions.php:25
 msgid "Footer menu"
 msgstr "فهرست پایین صفحه"
 
@@ -369,7 +369,7 @@ msgstr "فهرست پایین صفحه"
 msgid "Footer navigation"
 msgstr "ناوبری پایین صفحه"
 
-#: functions.php:24
+#: functions.php:25
 msgid "Footer secondary menu"
 msgstr "فهرست دوم پایین صفحه"
 
@@ -389,11 +389,11 @@ msgstr "شعار پایین صفحه (فارسی)"
 msgid "Footer text"
 msgstr "متن پانوشت"
 
-#: functions.php:40
+#: functions.php:41
 msgid "Footer widget area %d"
 msgstr "ناحیهٔ ابزارک پایین صفحهٔ %d"
 
-#: functions.php:66
+#: functions.php:67
 msgid "Footer widgets"
 msgstr "ابزارک‌های پایین صفحه"
 
@@ -413,7 +413,7 @@ msgstr "شروع کنید"
 msgid "GitHub URL"
 msgstr "نشانی گیت‌هاب"
 
-#: functions.php:264
+#: functions.php:265
 msgid "Goal"
 msgstr "هدف"
 
@@ -641,7 +641,7 @@ msgstr "ستون‌های فهرست"
 msgid "Minimum side margin in pixels"
 msgstr "کمینه فاصله کناره‌ها به پیکسل"
 
-#: functions.php:271 template-parts/home/project-planner.php:2
+#: functions.php:272 template-parts/home/project-planner.php:2
 msgid "Mobile app"
 msgstr "اپلیکیشن موبایل"
 
@@ -709,7 +709,7 @@ msgstr "بدون صفحهٔ ویژهٔ نوشته‌ها"
 msgid "No file selected"
 msgstr "فایلی انتخاب نشده است"
 
-#: archive.php:8 index.php:7 search.php:8
+#: archive.php:8 inc/starter-pages.php:122 index.php:12 search.php:8
 msgid "No posts found."
 msgstr "نوشته‌ای پیدا نشد."
 
@@ -737,11 +737,11 @@ msgstr "باز کردن فهرست‌ها"
 msgid "Open Widgets"
 msgstr "باز کردن ابزارک‌ها"
 
-#: functions.php:255 header.php:43
+#: functions.php:256 header.php:43
 msgid "Open menu"
 msgstr "باز کردن منو"
 
-#: functions.php:257 header.php:39
+#: functions.php:258 header.php:39
 msgid "Open search"
 msgstr "باز کردن جست‌وجو"
 
@@ -849,6 +849,10 @@ msgstr "صفحه‌های نوشته"
 msgid "Post titles"
 msgstr "عنوان نوشته‌ها"
 
+#: inc/starter-pages.php:119
+msgid "Posts navigation"
+msgstr "پیمایش نوشته‌ها"
+
 #: inc/settings.php:158
 msgid "Posts page"
 msgstr "صفحهٔ نوشته‌ها"
@@ -857,11 +861,11 @@ msgstr "صفحهٔ نوشته‌ها"
 msgid "Previous post"
 msgstr "نوشته قبلی"
 
-#: functions.php:24
+#: functions.php:25
 msgid "Primary menu"
 msgstr "فهرست اصلی"
 
-#: functions.php:30 sidebar.php:7
+#: functions.php:31 sidebar.php:7
 msgid "Primary sidebar"
 msgstr "نوار کناری اصلی"
 
@@ -873,7 +877,7 @@ msgstr "متن اصلی"
 msgid "Privacy Policy"
 msgstr "سیاست حفظ حریم خصوصی"
 
-#: functions.php:261
+#: functions.php:262
 msgid "Project"
 msgstr "پروژه"
 
@@ -881,7 +885,7 @@ msgstr "پروژه"
 msgid "Project or business name"
 msgstr "نام پروژه یا کسب‌وکار"
 
-#: functions.php:353 template-parts/landing.php:7
+#: functions.php:354 template-parts/landing.php:7
 msgid "Project planner"
 msgstr "برنامه‌ریز پروژه"
 
@@ -981,11 +985,11 @@ msgstr "انتخاب نشان سربرگ"
 msgid "Select image"
 msgstr "انتخاب تصویر"
 
-#: functions.php:262
+#: functions.php:263
 msgid "Service"
 msgstr "خدمت"
 
-#: functions.php:351 inc/settings.php:57
+#: functions.php:352 inc/settings.php:57
 msgid "Services"
 msgstr "خدمات"
 
@@ -1201,7 +1205,7 @@ msgstr "اندازه (پیکسل)"
 msgid "Skip to content"
 msgstr "رفتن به محتوای اصلی"
 
-#: functions.php:274 template-parts/home/project-planner.php:3
+#: functions.php:275 template-parts/home/project-planner.php:3
 msgid "Something new"
 msgstr "پروژه‌ای تازه"
 
@@ -1217,7 +1221,7 @@ msgstr "استاندارد"
 msgid "Start here"
 msgstr "از اینجا شروع کنید"
 
-#: functions.php:263
+#: functions.php:264
 msgid "Starting point"
 msgstr "نقطه شروع"
 
@@ -1309,11 +1313,11 @@ msgstr "به‌روزرسانی پوسته"
 msgid "This width applies only when the page template is UNDO Custom Width. Leave the field blank for 1200px."
 msgstr "این عرض فقط با قالب UNDO Custom Width اعمال می‌شود. اگر کادر را خالی بگذارید، عرض ۱۲۰۰ پیکسل استفاده می‌شود."
 
-#: functions.php:266
+#: functions.php:267
 msgid "To be discussed"
 msgstr "در گفت‌وگو مشخص می‌شود"
 
-#: functions.php:361
+#: functions.php:362
 msgid "Toggle submenu for %s"
 msgstr "باز یا بسته کردن زیرمنوی %s"
 
@@ -1349,7 +1353,7 @@ msgstr "تنظیمات پوسته UNDO"
 msgid "UNDO Web Developments"
 msgstr "توسعه وب UNDO"
 
-#: functions.php:260
+#: functions.php:261
 msgid "UNDO Web Developments — Project brief"
 msgstr "توسعه وب UNDO — خلاصه پروژه"
 
@@ -1389,7 +1393,7 @@ msgstr "تغییرات ذخیره‌نشده"
 msgid "Untitled page"
 msgstr "صفحه بدون عنوان"
 
-#: functions.php:265
+#: functions.php:266
 msgid "Untitled project"
 msgstr "پروژه بدون نام"
 
@@ -1465,7 +1469,7 @@ msgstr "برای نیازهای شما راهکار داریم"
 msgid "Web Developments"
 msgstr "توسعه وب"
 
-#: functions.php:269 template-parts/home/project-planner.php:2
+#: functions.php:270 template-parts/home/project-planner.php:2
 msgid "Website"
 msgstr "وب‌سایت"
 
@@ -1537,7 +1541,7 @@ msgstr "سبک ابزارک‌ها"
 msgid "Widget titles"
 msgstr "عنوان ابزارک‌ها"
 
-#: functions.php:32
+#: functions.php:33
 msgid "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings."
 msgstr "ابزارک‌هایی که با فعال‌سازی در تنظیمات پوسته UNDO کنار نوشته‌ها، صفحه‌ها یا بایگانی‌ها نمایش داده می‌شوند."
 
@@ -1553,7 +1557,7 @@ msgstr "واژه"
 msgid "Word spacing in pixels (0 = theme default)"
 msgstr "فاصلهٔ واژه‌ها بر حسب پیکسل (۰ = پیش‌فرض پوسته)"
 
-#: functions.php:270 template-parts/home/project-planner.php:2
+#: functions.php:271 template-parts/home/project-planner.php:2
 msgid "WordPress plugin"
 msgstr "افزونه وردپرس"
 
@@ -1597,7 +1601,7 @@ msgstr "نشانی یوتیوب"
 msgid "Your answers stay in this browser. The brief downloads to your device."
 msgstr "پاسخ‌های شما در همین مرورگر می‌ماند. خلاصه پروژه روی دستگاهتان دانلود می‌شود."
 
-#: functions.php:267
+#: functions.php:268
 msgid "Your project brief has been downloaded."
 msgstr "خلاصه پروژه شما دانلود شد."
 

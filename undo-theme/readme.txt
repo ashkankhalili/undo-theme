@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.12.0
+Stable tag: 0.13.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,11 +20,11 @@ A bilingual WordPress theme for creative agencies and studios. The initial langu
 * Physical left/right or hidden widget sidebar with lined or panel styling, adjustable width and spacing, context visibility, and optional sticky behavior that stops when the widget area is too tall. On small screens the sidebar follows the main content.
 * Editorial list, image grid, and journal grid for blog indexes, archives, and search results; grid column count is configurable. Blog Settings can choose a published WordPress posts page, which follows Settings > Reading.
 * Footer stage: responsive statement and action, two optional menu columns, email/phone/location, validated social links, copyright with a current-year token, the configured WordPress Privacy Policy link, and three optional widget areas. Text settings have Persian and English values; Elementor Pro's footer template can replace the built-in footer.
-* Elementor Free page layouts and Elementor Pro Theme Builder locations with native fallbacks. Old builder metadata no longer hides normal page chrome when Elementor is disabled. Importable English/Persian Home starters work with Elementor Free; Header, Footer and Blog Archive starters work with Elementor Pro. They are in elementor-templates/ and are not applied during theme updates. The separately installed UNDO Elements addon supplies three Elementor widgets and a reusable project planner.
+* With Elementor Free or Pro active, the theme creates editable English/Persian Home and Blog starter pages once, without changing Settings > Reading or existing pages. The Reading posts page renders the Elementor Blog starter and its live post loop; Elementor Pro archive templates take precedence. Without Elementor, native Home and blog layouts remain. Header, Footer and Blog Archive starters for Pro remain manual imports. Theme updates never rewrite created pages. The separately installed UNDO Elements addon supplies three Elementor widgets and a reusable project planner.
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
 == Limitations ==
-Elementor is optional; Elementor Pro is needed for Theme Builder location replacement and the Header, Footer and Blog Archive starters. Elementor widgets with explicit colors or fonts keep their own styling. The theme does not translate customer-authored pages, posts, menus, or Elementor templates by itself. Polylang is the first supported content translation workflow; Elementor template translations additionally need an integration plugin. Imported starter behavior and the multilingual workflow still need live staging validation. This theme is still a pre-release.
+Elementor is optional; Elementor Pro is needed for Theme Builder location replacement and the Header, Footer and Blog Archive starters. The automatically created Free pages are published but are not assigned in Settings > Reading; review and select the matching Home and Blog pair. Elementor widgets with explicit colors or fonts keep their own styling. The theme does not translate customer-authored pages, posts, menus, or Elementor templates by itself. Polylang is the first supported content translation workflow; Elementor template translations additionally need an integration plugin. Automatic starter creation and the multilingual workflow still need live staging validation. This theme is still a pre-release.
 
 == Installation ==
 Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Theme Settings in the main admin menu.
@@ -33,6 +33,9 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.13.0 =
+* Creates editable English and Persian Elementor Home and Blog pages once when Elementor Free or Pro is active, without changing existing Reading choices or customer pages.
+* Adds a live blog posts shortcode for the Elementor Free Reading posts page and keeps the native fallback when Elementor is disabled.
 = 0.12.0 =
 * Added optional Polylang-aware language links, Home URLs, and translated Homepage references while keeping the WordPress Site Language and visitor switcher behavior when Polylang is absent.
 * Polished 320px header spacing, Persian type rhythm, and mixed-direction planner input in the separately versioned UNDO Elements addon.
