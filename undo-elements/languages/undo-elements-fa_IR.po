@@ -1,0 +1,182 @@
+msgid ""
+msgstr "Project-Id-Version: UNDO Elements 0.1.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: includes/planner.php:25
+msgid "A clearer starting point"
+msgstr "نقطهٔ شروعی روشن‌تر"
+
+#: includes/planner.php:41
+msgid "A redesign"
+msgstr "بازطراحی"
+
+#: includes/widgets/class-planner.php:16 includes/widgets/class-project-cta.php:15
+msgid "Button"
+msgstr "دکمه"
+
+#: includes/widgets/class-service-card.php:15
+msgid "Clear, useful digital experiences built around your business."
+msgstr "تجربه‌های دیجیتال روشن و کاربردی، متناسب با کسب‌وکار شما."
+
+#: includes/widgets/class-planner.php:13 includes/widgets/class-project-cta.php:12 includes/widgets/class-service-card.php:12
+msgid "Content"
+msgstr "محتوا"
+
+#: includes/planner.php:47
+msgid "Describe the problem or the result you want"
+msgstr "مسئله یا نتیجه‌ای را که می‌خواهید شرح دهید"
+
+#: includes/widgets/class-planner.php:15 includes/widgets/class-service-card.php:15
+msgid "Description"
+msgstr "توضیحات"
+
+#: includes/planner.php:12 includes/widgets/class-planner.php:16
+msgid "Download project brief"
+msgstr "دریافت خلاصهٔ پروژه"
+
+#: includes/github-updater.php:69
+msgid "Elementor widgets and a browser-only project brief for UNDO websites."
+msgstr "ابزارک‌های المنتور و خلاصهٔ پروژهٔ خصوصی برای وب‌سایت‌های UNDO."
+
+#: includes/widgets/class-project-cta.php:13
+msgid "Eyebrow"
+msgstr "عنوان کوچک"
+
+#: undo-elements.php:40
+msgid "Goal"
+msgstr "هدف"
+
+#: includes/widgets/class-planner.php:14 includes/widgets/class-project-cta.php:14 includes/widgets/class-service-card.php:14
+msgid "Heading"
+msgstr "عنوان"
+
+#: includes/widgets/class-service-card.php:13
+msgid "Index"
+msgstr "شماره"
+
+#: includes/widgets/class-project-cta.php:14
+msgid "Let us make it better."
+msgstr "بیایید بهترش کنیم."
+
+#: includes/widgets/class-project-cta.php:16 includes/widgets/class-service-card.php:16
+msgid "Link"
+msgstr "پیوند"
+
+#: includes/planner.php:35
+msgid "Mobile app"
+msgstr "اپلیکیشن موبایل"
+
+#: includes/planner.php:45
+msgid "Name of your project"
+msgstr "نام پروژهٔ شما"
+
+#: includes/widgets/class-project-cta.php:15
+msgid "Plan a project"
+msgstr "برنامه‌ریزی پروژه"
+
+#: undo-elements.php:37
+msgid "Project"
+msgstr "پروژه"
+
+#: undo-elements.php:36
+msgid "Project brief"
+msgstr "خلاصهٔ پروژه"
+
+#: includes/widgets/class-project-cta.php:6
+msgid "Project invitation"
+msgstr "دعوت به پروژه"
+
+#: includes/planner.php:44
+msgid "Project or business name"
+msgstr "نام پروژه یا کسب‌وکار"
+
+#: includes/widgets/class-planner.php:6
+msgid "Project planner"
+msgstr "برنامه‌ریز پروژه"
+
+#: includes/planner.php:11 includes/widgets/class-planner.php:15
+msgid "Put the essentials in one place. Download your brief when you are done, so it is ready to share when we connect."
+msgstr "اطلاعات اصلی را در یک جا جمع کنید. پس از پایان، خلاصهٔ پروژه را دریافت کنید تا برای گفت‌وگو آماده باشد."
+
+#: undo-elements.php:38
+msgid "Service"
+msgstr "خدمت"
+
+#: includes/widgets/class-service-card.php:6
+msgid "Service card"
+msgstr "کارت خدمات"
+
+#: includes/planner.php:40
+msgid "Something new"
+msgstr "یک پروژهٔ تازه"
+
+#: undo-elements.php:39
+msgid "Starting point"
+msgstr "نقطهٔ شروع"
+
+#: includes/widgets/class-project-cta.php:13
+msgid "THE NEXT VERSION STARTS HERE"
+msgstr "نسخهٔ بعدی از اینجا آغاز می‌شود"
+
+#: includes/planner.php:10 includes/widgets/class-planner.php:14
+msgid "Tell us what you want to make."
+msgstr "بگویید چه می‌خواهید بسازید."
+
+#: includes/github-updater.php:86
+msgid "The UNDO Elements update failed its checksum check."
+msgstr "اعتبارسنجی کد SHA-256 به‌روزرسانی UNDO Elements ناموفق بود."
+
+#: undo-elements.php:42
+msgid "To discuss"
+msgstr "برای گفت‌وگو"
+
+#: undo-elements.php:68
+msgid "UNDO Elements"
+msgstr "المان‌های UNDO"
+
+#: undo-elements.php:89
+msgid "UNDO Elements needs Elementor for its widgets. The project planner shortcode remains available."
+msgstr "ابزارک‌های UNDO Elements به المنتور نیاز دارند. کد کوتاه برنامه‌ریز پروژه همچنان در دسترس است."
+
+#: includes/github-updater.php:79
+msgid "Unable to verify the UNDO Elements update package."
+msgstr "امکان اعتبارسنجی بستهٔ به‌روزرسانی UNDO Elements وجود ندارد."
+
+#: undo-elements.php:41
+msgid "Untitled project"
+msgstr "پروژهٔ بدون نام"
+
+#: includes/planner.php:33
+msgid "Website"
+msgstr "وب‌سایت"
+
+#: includes/widgets/class-service-card.php:14
+msgid "Websites"
+msgstr "وب‌سایت‌ها"
+
+#: includes/planner.php:31
+msgid "What do you need?"
+msgstr "به چه چیزی نیاز دارید؟"
+
+#: includes/planner.php:46
+msgid "What should it help you do?"
+msgstr "قرار است به چه کاری کمک کند؟"
+
+#: includes/planner.php:38
+msgid "Where are you starting?"
+msgstr "از کجا شروع می‌کنید؟"
+
+#: includes/planner.php:34
+msgid "WordPress plugin"
+msgstr "افزونهٔ وردپرس"
+
+#: includes/planner.php:28
+msgid "Your answers stay in this browser. The brief downloads to your device."
+msgstr "پاسخ‌های شما در همین مرورگر می‌مانند. خلاصهٔ پروژه روی دستگاه شما دریافت می‌شود."
+
+#: undo-elements.php:43
+msgid "Your brief has been downloaded."
+msgstr "خلاصهٔ پروژه دریافت شد."
+
+#: undo-elements.php:44
+msgid "undo-project-brief.txt"
+msgstr "undo-project-brief-fa.txt"

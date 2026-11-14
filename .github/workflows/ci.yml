@@ -23,14 +23,15 @@ jobs:
           php-version: ${{ matrix.php }}
           tools: none
           coverage: none
-      - name: Lint theme PHP
+      - name: Lint theme, addon and test PHP
         run: |
-          find undo-theme tests -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+          find undo-theme undo-elements tests -type f -name '*.php' -print0 | xargs -0 -n1 php -l
           php tests/github-updater.php
           php tests/header-settings.php
           php tests/page-layout.php
           php tests/sidebar.php
           php tests/footer-settings.php
+          php tests/undo-elements.php
 
   package:
     name: Translation and package integrity
@@ -46,20 +47,26 @@ jobs:
           node --check undo-theme/assets/js/admin-settings.js
           node --check undo-theme/assets/js/admin-page-width.js
           node --check tools/build-translations.mjs
+          node --check tools/build-addon-translations.mjs
           node --check tools/build-elementor-starters.mjs
           node --check tools/test-elementor-starters.mjs
           node --check tools/package-theme.mjs
+          node --check undo-elements/assets/planner.js
       - name: Verify translation catalogs are current
         run: |
           node tools/build-translations.mjs
           git diff --exit-code -- undo-theme/languages
+          node tools/build-addon-translations.mjs
+          git diff --exit-code -- undo-elements/languages
       - name: Verify Elementor starter templates
         run: |
           node tools/build-elementor-starters.mjs
           git diff --exit-code -- undo-theme/elementor-templates
           node tools/test-elementor-starters.mjs
-      - name: Build installable theme ZIP
-        run: node tools/package-theme.mjs
+      - name: Build installable theme and addon ZIPs
+        run: |
+          node tools/package-theme.mjs
+          node tools/package-theme.mjs --addon
       - name: Verify ZIP and checksum
         run: |
           cd dist
@@ -83,6 +90,13 @@ jobs:
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/assets/js/admin-page-width.js'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/elementor-templates/home-en.json'
           unzip -Z1 undo-theme-*.zip | grep -Fx 'undo-theme/elementor-templates/blog-archive-fa.json'
+          sha256sum -c undo-elements-*.zip.sha256
+          unzip -t undo-elements-*.zip
+          unzip -Z1 undo-elements-*.zip | awk '$0 !~ /^undo-elements\// { bad=1; print "Unexpected ZIP path: " $0 } END { exit bad }'
+          unzip -Z1 undo-elements-*.zip | grep -Fx 'undo-elements/undo-elements.php'
+          unzip -Z1 undo-elements-*.zip | grep -Fx 'undo-elements/includes/github-updater.php'
+          unzip -Z1 undo-elements-*.zip | grep -Fx 'undo-elements/includes/widgets/class-planner.php'
+          unzip -Z1 undo-elements-*.zip | grep -Fx 'undo-elements/languages/undo-elements-fa_IR.mo'
       - uses: actions/upload-artifact@v4
         with:
           name: theme-pre-release
@@ -112,11 +126,15 @@ jobs:
         run: |
           set -euo pipefail
           version=$(sed -n 's/^Version: //p' undo-theme/style.css | head -1)
+          addon_version=$(sed -n 's/^ \* Version: //p' undo-elements/undo-elements.php | head -1)
           tag="v${version}"
           zip="dist/undo-theme-${version}.zip"
           checksum="${zip}.sha256"
-          test -f "$zip" && test -f "$checksum"
+          addon_zip="dist/undo-elements-${addon_version}.zip"
+          addon_checksum="${addon_zip}.sha256"
+          test -f "$zip" && test -f "$checksum" && test -f "$addon_zip" && test -f "$addon_checksum"
           (cd dist && sha256sum -c "undo-theme-${version}.zip.sha256")
+          (cd dist && sha256sum -c "undo-elements-${addon_version}.zip.sha256")
 
           current_main=$(gh api "repos/${GITHUB_REPOSITORY}/branches/main" --jq '.commit.sha')
           if [ "$current_main" != "$GITHUB_SHA" ]; then
@@ -128,15 +146,18 @@ jobs:
           if ! gh release view "$tag" --json tagName >/dev/null 2>&1; then
             awk -v v="$version" 'index($0, "## [" v "]") == 1 { found=1; next } found && /^## \[/ { exit } found { print }' CHANGELOG.md > dist/release-notes.md
             test -s dist/release-notes.md
-            gh release create "$tag" "$zip" "$checksum" --target "$GITHUB_SHA" --title "UNDO Theme $tag" --notes-file dist/release-notes.md
+            gh release create "$tag" "$zip" "$checksum" "$addon_zip" "$addon_checksum" --target "$GITHUB_SHA" --title "UNDO Theme $tag / Elements ${addon_version}" --notes-file dist/release-notes.md
             created=1
           fi
 
           expected=$(awk '{ print $1 }' "$checksum")
           actual=$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${tag}" --jq ".assets[] | select(.name == \"undo-theme-${version}.zip\") | .digest")
           test "$actual" = "sha256:${expected}"
+          addon_expected=$(awk '{ print $1 }' "$addon_checksum")
+          addon_actual=$(gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${tag}" --jq ".assets[] | select(.name == \"undo-elements-${addon_version}.zip\") | .digest")
+          test "$addon_actual" = "sha256:${addon_expected}"
           if [ "$created" = 1 ]; then
             tag_commit=$(gh api "repos/${GITHUB_REPOSITORY}/git/ref/tags/${tag}" --jq '.object.sha')
             test "$tag_commit" = "$GITHUB_SHA"
           fi
-          echo "Verified $tag with SHA-256 $expected"
+          echo "Verified $tag with theme SHA-256 $expected and addon SHA-256 $addon_expected"

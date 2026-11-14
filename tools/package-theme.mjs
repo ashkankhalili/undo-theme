@@ -3,18 +3,21 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 
 const project = process.cwd();
-const theme = path.join(project, 'undo-theme');
+const addon = process.argv.includes('--addon');
+const theme = path.join(project, addon ? 'undo-elements' : 'undo-theme');
 const slug = path.basename(theme);
-const stylesheet = fs.readFileSync(path.join(theme, 'style.css'), 'utf8');
-const version = stylesheet.match(/^Version:\s*([^\r\n]+)/m)?.[1];
-const textDomain = stylesheet.match(/^Text Domain:\s*([^\r\n]+)/m)?.[1];
-const phpVersion = fs.readFileSync(path.join(theme, 'functions.php'), 'utf8').match(/UNDO_THEME_VERSION',\s*'([^']+)'/)?.[1];
+const stylesheet = fs.readFileSync(path.join(theme, addon ? 'undo-elements.php' : 'style.css'), 'utf8');
+const version = stylesheet.match(/^\s*\*?\s*Version:\s*([^\r\n]+)/m)?.[1];
+const textDomain = stylesheet.match(/^\s*\*?\s*Text Domain:\s*([^\r\n]+)/m)?.[1];
+const phpVersion = fs.readFileSync(path.join(theme, addon ? 'undo-elements.php' : 'functions.php'), 'utf8').match(addon ? /UNDO_ELEMENTS_VERSION',\s*'([^']+)'/ : /UNDO_THEME_VERSION',\s*'([^']+)'/)?.[1];
 const stableTag = fs.readFileSync(path.join(theme, 'readme.txt'), 'utf8').match(/^Stable tag:\s*([^\r\n]+)/m)?.[1];
-if (!version || version !== phpVersion || version !== stableTag) throw new Error('Theme version mismatch');
-if (textDomain !== slug) throw new Error(`Theme text domain must match folder: ${slug}`);
-const changelog = fs.readFileSync(path.join(project, 'CHANGELOG.md'));
-const packagedChangelog = path.join(theme, 'CHANGELOG.md');
-if (!fs.existsSync(packagedChangelog) || !fs.readFileSync(packagedChangelog).equals(changelog)) fs.writeFileSync(packagedChangelog, changelog);
+if (!version || version !== phpVersion || version !== stableTag) throw new Error(`${slug} version mismatch`);
+if (textDomain !== slug) throw new Error(`${slug} text domain must match folder`);
+if (!addon) {
+  const changelog = fs.readFileSync(path.join(project, 'CHANGELOG.md'));
+  const packagedChangelog = path.join(theme, 'CHANGELOG.md');
+  if (!fs.existsSync(packagedChangelog) || !fs.readFileSync(packagedChangelog).equals(changelog)) fs.writeFileSync(packagedChangelog, changelog);
+}
 const outputDir = path.join(project, 'dist');
 fs.mkdirSync(outputDir, { recursive: true });
 const output = path.join(outputDir, `${slug}-${version}.zip`);

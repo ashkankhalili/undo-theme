@@ -4,6 +4,25 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.11.0] - 2026-11-14
+
+### UNDO Elements addon milestone
+
+- Added a separate `undo-elements` plugin ZIP with three Elementor Free widgets: Project Planner, Service Card, and Project Invitation. The widgets work with any theme; the planner shortcode also works when Elementor is inactive.
+- The native UNDO Home renders the addon planner when installed. Its original browser-only planner remains the fallback, so existing Home pages and `#project-planner` links continue to work without the plugin.
+- The planner produces a local text download without submitting or storing answers. Added independent plugin updater checks, English/Persian PO and MO catalogs, RTL-aware styling, and package verification.
+- The release pipeline now publishes both installable ZIPs and their SHA-256 files under the theme release tag. The addon version is independent of the theme version.
+
+### فارسی
+
+- افزونهٔ جداگانهٔ UNDO Elements با سه ابزارک المنتور شامل برنامه‌ریز پروژه، کارت خدمات و دعوت به پروژه اضافه شد.
+- صفحهٔ اصلی پوسته در صورت فعال بودن افزونه از برنامه‌ریز آن استفاده می‌کند و در غیر این صورت برنامه‌ریز قبلی را نمایش می‌دهد.
+- پاسخ‌های فرم فقط در مرورگر پردازش می‌شوند. بستهٔ مستقل افزونه، ترجمه‌های فارسی و انگلیسی و بررسی کد SHA-256 به‌روزرسانی اضافه شد.
+
+### Validation
+
+- CI checks PHP syntax on PHP 7.4 and 8.3, both translation catalogs, JavaScript syntax, installable ZIP structure, and both checksums. Live Elementor and WordPress updater tests on staging remain pending until both packages are installed.
+
 ## [0.10.0] - 2026-11-12
 
 ### Elementor integration milestone

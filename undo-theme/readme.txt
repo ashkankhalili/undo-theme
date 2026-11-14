@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.10.0
+Stable tag: 0.11.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,9 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.11.0 =
+* The native Home uses the UNDO Elements plugin planner when available and retains its existing browser-only planner when the addon is inactive.
+* The separate UNDO Elements package adds Project Planner, Service Card and Project Invitation Elementor widgets.
 = 0.10.0 =
 * Improved the Elementor Free, Pro and disabled-plugin paths: builder page styling is used only while Elementor is loaded, and the native front page returns when an Elementor page is unavailable.
 * Scoped native landing heading and section styles to the built-in homepage so Elementor content can retain its own headings and layout.
