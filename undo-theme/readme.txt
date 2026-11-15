@@ -3,7 +3,7 @@ Contributors: undowebdevelopments
 Tags: translation-ready, rtl-language-support, custom-logo, custom-menu, featured-images
 Requires at least: 6.2
 Requires PHP: 7.4
-Stable tag: 0.14.0
+Stable tag: 0.15.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +22,7 @@ A bilingual WordPress theme for creative agencies and studios. The initial langu
 * Editorial list, image grid, and journal grid for blog indexes, archives, and search results; grid column count is configurable. Blog Settings can choose a published WordPress posts page, which follows Settings > Reading.
 * Footer stage: responsive statement and action, two optional menu columns, email/phone/location, validated social links, copyright with a current-year token, the configured WordPress Privacy Policy link, and three optional widget areas. Text settings have Persian and English values; Elementor Pro's footer template can replace the built-in footer.
 * With Elementor Free or Pro active, the theme creates editable English/Persian Home and Blog starter pages once, without changing Settings > Reading or existing pages. Home starters use the native homepage section structure, comparison mockup, service rows, process board, section rail, and project planner. The Reading posts page renders the Elementor Blog starter and its live post loop; Elementor Pro archive templates take precedence. Without Elementor, native Home and blog layouts remain. Header, Footer and Blog Archive starters for Pro remain manual imports. Theme updates never rewrite created pages. The separately installed UNDO Elements addon supplies three Elementor widgets and a reusable project planner.
+* Four Elementor Home widgets are built into the theme: Section Navigation, Process Board, Visual Icon, and Before/After Comparison. Edit their content, colors, typography, sizes, spacing, and RTL/LTR layout in Elementor. The separate UNDO Elements plugin still supplies its planner, service-card, and invitation widgets.
 * GitHub Releases updates from the WordPress dashboard with an installable ZIP and SHA-256 verification.
 
 == Limitations ==
@@ -34,6 +35,9 @@ Upload the theme ZIP under Appearance > Themes, activate it, then open UNDO Them
 Starting with version 0.2.3, installed sites can discover newer versions through WordPress Dashboard > Updates. Starting with version 0.2.5, the update details popup displays release notes inside WordPress. The exact GitHub Release ZIP is checked against its SHA-256 digest before installation.
 
 == Changelog ==
+= 0.15.0 =
+* Added four built-in Elementor Home widgets: editable section navigation, process board, visual icon, and before/after comparison. Their content and design controls support English, Persian, RTL and LTR.
+* Rebuilt both bundled Home starters without raw HTML widgets. Existing generated pages are preserved until their owner updates them after installing the theme.
 = 0.14.0 =
 * Rebuilt the English and Persian Elementor Home starters with the native homepage layout, visual comparison, service rows, process board, section navigation, and planner. The published staging Home pages are updated separately so existing customer pages remain protected.
 * Removed standard page-template spacing from generated Elementor Home pages and enabled the same section navigation behavior as the native homepage.

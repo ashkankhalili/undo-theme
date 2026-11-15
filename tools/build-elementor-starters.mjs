@@ -26,7 +26,6 @@ const fixedContainer = (key, className, elements, settings = {}) => ({
 });
 const heading = (title, className, size = 'h2') => widget('heading', { title, header_size: size, _css_classes: className });
 const text = (editor, className = '') => widget('text-editor', { editor, _css_classes: className });
-const html = (markup, className = '') => widget('html', { html: markup, _css_classes: className });
 const button = (label, url) => widget('button', { text: label, link: { url }, _css_classes: 'undo-starter-button' });
 const write = (slug, name, type, content) => {
   const data = { title: `UNDO ${name}`, type, version: '0.4', page_settings: [], content };
@@ -64,25 +63,41 @@ const copy = {
   },
 };
 
-// The Home page uses the same section classes, visual markup, and interaction hooks
-// as the native PHP homepage. Copy remains in normal Elementor widgets.
-function homeVisual(c) {
-  return `<div class="hero-stage" aria-label="${c.visualAria}"><div class="stage-label">${c.compare}</div><div class="browser"><div class="browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-address">undo / ${c.newPerspective}</span><span class="browser-menu">•••</span></div><div class="mock-site"><div class="mock-nav"><span class="mock-mark">U.</span><span>${c.workNav}</span></div><div class="mock-body"><div class="mock-kicker">${c.mockKicker}</div><div class="mock-heading">${c.mockHeading}</div><div class="mock-line"></div><div class="mock-button">${c.mockAction} ↗</div></div><div class="mock-blocks"><div></div><div></div><div></div></div></div><div class="before-site" aria-hidden="true"><div class="before-top"><span>${c.beforeName}</span><span>${c.beforeNav}</span></div><div class="before-banner">${c.beforeBanner}</div><div class="before-content"><div class="before-heading">${c.beforeHeading}</div><div class="before-lines"><i></i><i></i><i></i><i></i></div><div class="before-boxes"><i></i><i></i><i></i></div></div></div><span class="comparison-label comparison-label--before" aria-hidden="true">${c.before}</span><span class="comparison-label comparison-label--after" aria-hidden="true">${c.after}</span><div class="comparison-divider" aria-hidden="true"><span><svg><use href="#icon-horizontal"></use></svg></span></div><input class="comparison-range" type="range" min="0" max="100" value="38" aria-label="${c.comparisonAria}"></div><div class="phone"><div class="phone-notch"></div><div class="phone-inner"><div class="phone-top">U. <span>☰</span></div><div class="phone-title">${c.phoneTitle}</div><div class="phone-shape"></div><div class="phone-lines"><span></span><span></span></div><div class="phone-cta">${c.phoneAction} ↗</div></div></div><span class="stage-stamp">${c.stamp}</span></div>`;
+// Home uses first-class Elementor widgets for each custom visual. The native
+// section classes remain so the template and PHP fallback share one design.
+function comparisonWidget(c, language) {
+  return fixedWidget(`home-${language}-comparison`, 'undo-comparison', {
+    _css_classes: 'undo-home-visual', visual_label: c.visualAria, comparison_label: c.comparisonAria,
+    drag_label: c.compare, perspective: c.newPerspective, mock_navigation: c.workNav,
+    mock_kicker: c.mockKicker, mock_heading: c.mockHeading, mock_action: c.mockAction,
+    before_name: c.beforeName, before_navigation: c.beforeNav, before_banner: c.beforeBanner,
+    before_heading: c.beforeHeading, before_label: c.before, after_label: c.after,
+    phone_heading: c.phoneTitle, phone_action: c.phoneAction, stamp: c.stamp,
+    show_phone: 'yes', split: { size: 38, unit: '%' },
+  });
 }
 function serviceRow(language, number, title, description, glyph) {
-  const symbols = {
-    web: '<span class="web-glyph"><i></i><i></i><i></i></span>',
-    plugin: '<span class="plugin-glyph"><i></i><i></i><i></i><i></i></span>',
-    app: '<span class="app-glyph"><i></i></span>',
-  };
   return fixedContainer(`home-${language}-service-${number}`, 'service-row', [
-    html(`<div class="service-number">${number}</div>`, 'undo-home-number'),
+    heading(number, 'service-number', 'span'),
     fixedContainer(`home-${language}-service-copy-${number}`, 'service-name', [heading(title, '', 'h3'), text(description)]),
-    html(`<div class="service-symbol" aria-hidden="true">${symbols[glyph]}</div>`, 'undo-home-symbol'),
+    fixedWidget(`home-${language}-icon-${number}`, 'undo-visual-icon', { icon_type: glyph, decorative: 'yes', _css_classes: 'undo-home-symbol' }),
   ], { html_tag: 'article', content_width: 'full' });
 }
-function processBoard(c) {
-  return `<div class="process-board" aria-label="${c.processAria}"><div class="process-top">${c.processLabel} <span>UNDO / 04</span></div>${c.steps.map(([title, detail], index) => `<div class="process-step"><span>${String(index + 1).padStart(2, '0')}</span><strong>${title}</strong><small>${detail}</small></div>`).join('')}</div>`;
+function processWidget(c, language) {
+  return fixedWidget(`home-${language}-process`, 'undo-process-board', {
+    _css_classes: 'undo-home-process', eyebrow: c.processLabel, brand_code: 'UNDO / 04', aria_label: c.processAria,
+    steps: c.steps.map(([title, detail], index) => ({ _id: crypto.createHash('sha1').update(`undo-${language}-step-${index}`).digest('hex').slice(0, 7), number: String(index + 1).padStart(2, '0'), title, detail })),
+  });
+}
+function railWidget(language) {
+  const labels = language === 'fa'
+    ? [['top', 'خانه'], ['overview', 'درباره'], ['services', 'خدمات'], ['approach', 'روش کار'], ['redesign', 'بازطراحی'], ['project-planner', 'برنامه‌ریز پروژه'], ['finish', 'UNDO']]
+    : [['top', 'Home'], ['overview', 'Overview'], ['services', 'Services'], ['approach', 'Approach'], ['redesign', 'Redesign'], ['project-planner', 'Project planner'], ['finish', 'UNDO']];
+  return fixedWidget(`home-${language}-rail`, 'undo-section-rail', {
+    _css_classes: 'undo-home-rail', nav_label: language === 'fa' ? 'بخش‌های صفحه' : 'Page sections',
+    sections: labels.map(([anchor, label], index) => ({ _id: crypto.createHash('sha1').update(`undo-${language}-rail-${anchor}`).digest('hex').slice(0, 7), anchor, label, number: String(index + 1).padStart(2, '0') })),
+    guided_scroll: 'yes', show_desktop: 'yes', show_mobile: 'yes', show_current: 'yes', show_tooltips: 'yes', side: 'start', marker_style: 'number',
+  });
 }
 function nativeHome(c, language) {
   const section = (key, className, elements) => fixedContainer(`home-${language}-${key}`, className, elements, { _element_id: key, html_tag: 'section', content_width: 'full' });
@@ -90,12 +105,12 @@ function nativeHome(c, language) {
     section('top', 'hero', [
       container('wrap hero-grid', [
         container('hero-copy', [heading(c.hero, '', 'h1'), text(c.intro, 'hero-description'), widget('button', { text: c.action, link: { url: '#project-planner' }, _css_classes: 'undo-home-cta' })], { content_width: 'full' }),
-        html(homeVisual(c), 'undo-home-visual'),
+        comparisonWidget(c, language),
       ], { content_width: 'full' }),
       container('wrap hero-bottom', [text(c.footerTitle, 'undo-home-slogan')], { content_width: 'full' }),
     ]),
     section('overview', 'intro section', [container('wrap intro-grid', [
-      html('<div class="intro-mark" aria-hidden="true"><svg><use href="#icon-undo"></use></svg></div>', 'undo-home-mark'),
+      fixedWidget(`home-${language}-mark`, 'undo-visual-icon', { icon_type: 'undo', decorative: 'yes', _css_classes: 'undo-home-mark' }),
       container('intro-copy', [heading(c.overview), text(c.overviewText)], { content_width: 'full' }),
     ], { content_width: 'full' })]),
     section('services', 'services section', [container('wrap', [
@@ -104,10 +119,11 @@ function nativeHome(c, language) {
     ], { content_width: 'full' })]),
     section('approach', 'approach section', [container('wrap approach-grid', [
       container('approach-copy', [heading(c.method), text(c.methodText), widget('button', { text: c.action, link: { url: '#project-planner' }, _css_classes: 'undo-home-text-link' })], { content_width: 'full' }),
-      html(processBoard(c), 'undo-home-process'),
+      processWidget(c, language),
     ], { content_width: 'full' })]),
     section('redesign', 'statement section', [container('wrap', [heading(c.redesign), text(c.redesignText)], { content_width: 'full' })]),
     fixedWidget(`home-planner-${language}`, 'shortcode', { shortcode: '[undo_home_planner]', _css_classes: 'undo-home-planner' }),
+    railWidget(language),
   ], { content_width: 'full' })];
 }
 
@@ -115,6 +131,8 @@ for (const [language, c] of Object.entries(copy)) {
   index = 0;
   const langClass = `undo-starter--${language}`;
   write(`home-${language}`, c.home, 'page', nativeHome(c, language));
+  // Preserve IDs in the other eight starter files when Home's widget count changes.
+  index = 38;
 
   write(`header-${language}`, c.header, 'header', [
     container(`undo-starter-header ${langClass}`, [

@@ -25,7 +25,7 @@
           },
           "elements": [
             {
-              "id": "6299b4a6",
+              "id": "db67332b",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -82,20 +82,41 @@
                   ]
                 },
                 {
-                  "id": "db67332b",
+                  "id": "47f15d76",
                   "elType": "widget",
-                  "widgetType": "html",
+                  "widgetType": "undo-comparison",
                   "isInner": false,
                   "settings": {
-                    "html": "<div class=\"hero-stage\" aria-label=\"نمونهٔ تعاملی وب‌سایت پیش و پس از بازطراحی\"><div class=\"stage-label\">برای مقایسه بکشید</div><div class=\"browser\"><div class=\"browser-bar\"><span class=\"browser-dots\"><i></i><i></i><i></i></span><span class=\"browser-address\">undo / نگاهی تازه</span><span class=\"browser-menu\">•••</span></div><div class=\"mock-site\"><div class=\"mock-nav\"><span class=\"mock-mark\">U.</span><span>نمونه‌کار  درباره  تماس</span></div><div class=\"mock-body\"><div class=\"mock-kicker\">وب‌سایتی با هدف روشن.</div><div class=\"mock-heading\">اولین برخورد را ماندگار کنید.</div><div class=\"mock-line\"></div><div class=\"mock-button\">از اینجا شروع کنید ↗</div></div><div class=\"mock-blocks\"><div></div><div></div><div></div></div></div><div class=\"before-site\" aria-hidden=\"true\"><div class=\"before-top\"><span>نام شرکت</span><span>خانه  درباره  خدمات  تماس</span></div><div class=\"before-banner\">به وب‌سایت ما خوش آمدید</div><div class=\"before-content\"><div class=\"before-heading\">برای نیازهای شما راه‌حل داریم</div><div class=\"before-lines\"><i></i><i></i><i></i><i></i></div><div class=\"before-boxes\"><i></i><i></i><i></i></div></div></div><span class=\"comparison-label comparison-label--before\" aria-hidden=\"true\">قبل</span><span class=\"comparison-label comparison-label--after\" aria-hidden=\"true\">بعد</span><div class=\"comparison-divider\" aria-hidden=\"true\"><span><svg><use href=\"#icon-horizontal\"></use></svg></span></div><input class=\"comparison-range\" type=\"range\" min=\"0\" max=\"100\" value=\"38\" aria-label=\"مقایسهٔ طرح قدیمی و بازطراحی‌شدهٔ وب‌سایت\"></div><div class=\"phone\"><div class=\"phone-notch\"></div><div class=\"phone-inner\"><div class=\"phone-top\">U. <span>☰</span></div><div class=\"phone-title\">برای هر صفحه ساخته شده.</div><div class=\"phone-shape\"></div><div class=\"phone-lines\"><span></span><span></span></div><div class=\"phone-cta\">شروع کنید ↗</div></div></div><span class=\"stage-stamp\">طراحی / ساخت / بازطراحی</span></div>",
-                    "_css_classes": "undo-home-visual"
+                    "_css_classes": "undo-home-visual",
+                    "visual_label": "نمونهٔ تعاملی وب‌سایت پیش و پس از بازطراحی",
+                    "comparison_label": "مقایسهٔ طرح قدیمی و بازطراحی‌شدهٔ وب‌سایت",
+                    "drag_label": "برای مقایسه بکشید",
+                    "perspective": "نگاهی تازه",
+                    "mock_navigation": "نمونه‌کار  درباره  تماس",
+                    "mock_kicker": "وب‌سایتی با هدف روشن.",
+                    "mock_heading": "اولین برخورد را ماندگار کنید.",
+                    "mock_action": "از اینجا شروع کنید",
+                    "before_name": "نام شرکت",
+                    "before_navigation": "خانه  درباره  خدمات  تماس",
+                    "before_banner": "به وب‌سایت ما خوش آمدید",
+                    "before_heading": "برای نیازهای شما راه‌حل داریم",
+                    "before_label": "قبل",
+                    "after_label": "بعد",
+                    "phone_heading": "برای هر صفحه ساخته شده.",
+                    "phone_action": "شروع کنید",
+                    "stamp": "طراحی / ساخت / بازطراحی",
+                    "show_phone": "yes",
+                    "split": {
+                      "size": 38,
+                      "unit": "%"
+                    }
                   },
                   "elements": []
                 }
               ]
             },
             {
-              "id": "8b1e64ee",
+              "id": "5bad6fe7",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -104,7 +125,7 @@
               },
               "elements": [
                 {
-                  "id": "5bad6fe7",
+                  "id": "6299b4a6",
                   "elType": "widget",
                   "widgetType": "text-editor",
                   "isInner": false,
@@ -130,7 +151,7 @@
           },
           "elements": [
             {
-              "id": "b1faa9ac",
+              "id": "9d518462",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -139,18 +160,19 @@
               },
               "elements": [
                 {
-                  "id": "cc617167",
+                  "id": "4250922a",
                   "elType": "widget",
-                  "widgetType": "html",
+                  "widgetType": "undo-visual-icon",
                   "isInner": false,
                   "settings": {
-                    "html": "<div class=\"intro-mark\" aria-hidden=\"true\"><svg><use href=\"#icon-undo\"></use></svg></div>",
+                    "icon_type": "undo",
+                    "decorative": "yes",
                     "_css_classes": "undo-home-mark"
                   },
                   "elements": []
                 },
                 {
-                  "id": "2e0750af",
+                  "id": "1def38fd",
                   "elType": "container",
                   "isInner": false,
                   "settings": {
@@ -159,7 +181,7 @@
                   },
                   "elements": [
                     {
-                      "id": "1def38fd",
+                      "id": "8b1e64ee",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -170,7 +192,7 @@
                       "elements": []
                     },
                     {
-                      "id": "9d518462",
+                      "id": "cc617167",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -198,7 +220,7 @@
           },
           "elements": [
             {
-              "id": "b4e3f187",
+              "id": "578f07f3",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -207,7 +229,7 @@
               },
               "elements": [
                 {
-                  "id": "41c2cdd8",
+                  "id": "b1faa9ac",
                   "elType": "container",
                   "isInner": false,
                   "settings": {
@@ -216,7 +238,7 @@
                   },
                   "elements": [
                     {
-                      "id": "a1e3c516",
+                      "id": "2e0750af",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -229,7 +251,7 @@
                   ]
                 },
                 {
-                  "id": "0cb3680f",
+                  "id": "0b353b8c",
                   "elType": "container",
                   "isInner": false,
                   "settings": {
@@ -248,13 +270,14 @@
                       },
                       "elements": [
                         {
-                          "id": "0266d1e5",
+                          "id": "a1e3c516",
                           "elType": "widget",
-                          "widgetType": "html",
+                          "widgetType": "heading",
                           "isInner": false,
                           "settings": {
-                            "html": "<div class=\"service-number\">01</div>",
-                            "_css_classes": "undo-home-number"
+                            "title": "01",
+                            "header_size": "span",
+                            "_css_classes": "service-number"
                           },
                           "elements": []
                         },
@@ -267,7 +290,7 @@
                           },
                           "elements": [
                             {
-                              "id": "d43d7037",
+                              "id": "41c2cdd8",
                               "elType": "widget",
                               "widgetType": "heading",
                               "isInner": false,
@@ -279,7 +302,7 @@
                               "elements": []
                             },
                             {
-                              "id": "ce0d8cb0",
+                              "id": "0266d1e5",
                               "elType": "widget",
                               "widgetType": "text-editor",
                               "isInner": false,
@@ -292,12 +315,13 @@
                           ]
                         },
                         {
-                          "id": "ab8880ea",
+                          "id": "ddc86e18",
                           "elType": "widget",
-                          "widgetType": "html",
+                          "widgetType": "undo-visual-icon",
                           "isInner": false,
                           "settings": {
-                            "html": "<div class=\"service-symbol\" aria-hidden=\"true\"><span class=\"web-glyph\"><i></i><i></i><i></i></span></div>",
+                            "icon_type": "web",
+                            "decorative": "yes",
                             "_css_classes": "undo-home-symbol"
                           },
                           "elements": []
@@ -315,13 +339,14 @@
                       },
                       "elements": [
                         {
-                          "id": "37f1ed87",
+                          "id": "d43d7037",
                           "elType": "widget",
-                          "widgetType": "html",
+                          "widgetType": "heading",
                           "isInner": false,
                           "settings": {
-                            "html": "<div class=\"service-number\">02</div>",
-                            "_css_classes": "undo-home-number"
+                            "title": "02",
+                            "header_size": "span",
+                            "_css_classes": "service-number"
                           },
                           "elements": []
                         },
@@ -334,7 +359,7 @@
                           },
                           "elements": [
                             {
-                              "id": "e974fd40",
+                              "id": "ce0d8cb0",
                               "elType": "widget",
                               "widgetType": "heading",
                               "isInner": false,
@@ -346,7 +371,7 @@
                               "elements": []
                             },
                             {
-                              "id": "eb2f655b",
+                              "id": "ab8880ea",
                               "elType": "widget",
                               "widgetType": "text-editor",
                               "isInner": false,
@@ -359,12 +384,13 @@
                           ]
                         },
                         {
-                          "id": "0b353b8c",
+                          "id": "abadd9cc",
                           "elType": "widget",
-                          "widgetType": "html",
+                          "widgetType": "undo-visual-icon",
                           "isInner": false,
                           "settings": {
-                            "html": "<div class=\"service-symbol\" aria-hidden=\"true\"><span class=\"plugin-glyph\"><i></i><i></i><i></i><i></i></span></div>",
+                            "icon_type": "plugin",
+                            "decorative": "yes",
                             "_css_classes": "undo-home-symbol"
                           },
                           "elements": []
@@ -382,13 +408,14 @@
                       },
                       "elements": [
                         {
-                          "id": "578f07f3",
+                          "id": "37f1ed87",
                           "elType": "widget",
-                          "widgetType": "html",
+                          "widgetType": "heading",
                           "isInner": false,
                           "settings": {
-                            "html": "<div class=\"service-number\">03</div>",
-                            "_css_classes": "undo-home-number"
+                            "title": "03",
+                            "header_size": "span",
+                            "_css_classes": "service-number"
                           },
                           "elements": []
                         },
@@ -401,7 +428,7 @@
                           },
                           "elements": [
                             {
-                              "id": "a95af9fe",
+                              "id": "e974fd40",
                               "elType": "widget",
                               "widgetType": "heading",
                               "isInner": false,
@@ -413,7 +440,7 @@
                               "elements": []
                             },
                             {
-                              "id": "a3bdc675",
+                              "id": "eb2f655b",
                               "elType": "widget",
                               "widgetType": "text-editor",
                               "isInner": false,
@@ -426,12 +453,13 @@
                           ]
                         },
                         {
-                          "id": "df7dc820",
+                          "id": "fe789c52",
                           "elType": "widget",
-                          "widgetType": "html",
+                          "widgetType": "undo-visual-icon",
                           "isInner": false,
                           "settings": {
-                            "html": "<div class=\"service-symbol\" aria-hidden=\"true\"><span class=\"app-glyph\"><i></i></span></div>",
+                            "icon_type": "app",
+                            "decorative": "yes",
                             "_css_classes": "undo-home-symbol"
                           },
                           "elements": []
@@ -456,7 +484,7 @@
           },
           "elements": [
             {
-              "id": "075338c1",
+              "id": "b4e3f187",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -465,7 +493,7 @@
               },
               "elements": [
                 {
-                  "id": "8fa245c1",
+                  "id": "0cb3680f",
                   "elType": "container",
                   "isInner": false,
                   "settings": {
@@ -474,7 +502,7 @@
                   },
                   "elements": [
                     {
-                      "id": "1e0f25cd",
+                      "id": "a95af9fe",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -485,7 +513,7 @@
                       "elements": []
                     },
                     {
-                      "id": "f91d16b4",
+                      "id": "a3bdc675",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -496,7 +524,7 @@
                       "elements": []
                     },
                     {
-                      "id": "2333353c",
+                      "id": "df7dc820",
                       "elType": "widget",
                       "widgetType": "button",
                       "isInner": false,
@@ -512,13 +540,41 @@
                   ]
                 },
                 {
-                  "id": "40221dea",
+                  "id": "248c55ce",
                   "elType": "widget",
-                  "widgetType": "html",
+                  "widgetType": "undo-process-board",
                   "isInner": false,
                   "settings": {
-                    "html": "<div class=\"process-board\" aria-label=\"فرایند ما: شناخت، طراحی، ساخت و اصلاح\"><div class=\"process-top\">روش کار ما <span>UNDO / 04</span></div><div class=\"process-step\"><span>01</span><strong>شناخت</strong><small>هدف‌ها، کاربران، محدودیت‌ها</small></div><div class=\"process-step\"><span>02</span><strong>طراحی</strong><small>ساختار، محتوا، رابط</small></div><div class=\"process-step\"><span>03</span><strong>ساخت</strong><small>محصول کارآمد</small></div><div class=\"process-step\"><span>04</span><strong>اصلاح</strong><small>جزئیاتی که ماندگارند</small></div></div>",
-                    "_css_classes": "undo-home-process"
+                    "_css_classes": "undo-home-process",
+                    "eyebrow": "روش کار ما",
+                    "brand_code": "UNDO / 04",
+                    "aria_label": "فرایند ما: شناخت، طراحی، ساخت و اصلاح",
+                    "steps": [
+                      {
+                        "_id": "5d86ea9",
+                        "number": "01",
+                        "title": "شناخت",
+                        "detail": "هدف‌ها، کاربران، محدودیت‌ها"
+                      },
+                      {
+                        "_id": "434fcc4",
+                        "number": "02",
+                        "title": "طراحی",
+                        "detail": "ساختار، محتوا، رابط"
+                      },
+                      {
+                        "_id": "0998c8f",
+                        "number": "03",
+                        "title": "ساخت",
+                        "detail": "محصول کارآمد"
+                      },
+                      {
+                        "_id": "fd89e51",
+                        "number": "04",
+                        "title": "اصلاح",
+                        "detail": "جزئیاتی که ماندگارند"
+                      }
+                    ]
                   },
                   "elements": []
                 }
@@ -538,7 +594,7 @@
           },
           "elements": [
             {
-              "id": "29bae7c8",
+              "id": "2333353c",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -547,7 +603,7 @@
               },
               "elements": [
                 {
-                  "id": "798932f1",
+                  "id": "1e0f25cd",
                   "elType": "widget",
                   "widgetType": "heading",
                   "isInner": false,
@@ -558,7 +614,7 @@
                   "elements": []
                 },
                 {
-                  "id": "13e1b347",
+                  "id": "f91d16b4",
                   "elType": "widget",
                   "widgetType": "text-editor",
                   "isInner": false,
@@ -580,6 +636,68 @@
           "settings": {
             "shortcode": "[undo_home_planner]",
             "_css_classes": "undo-home-planner"
+          },
+          "elements": []
+        },
+        {
+          "id": "2cbc1238",
+          "elType": "widget",
+          "widgetType": "undo-section-rail",
+          "isInner": false,
+          "settings": {
+            "_css_classes": "undo-home-rail",
+            "nav_label": "بخش‌های صفحه",
+            "sections": [
+              {
+                "_id": "a1fc4c9",
+                "anchor": "top",
+                "label": "خانه",
+                "number": "01"
+              },
+              {
+                "_id": "be48962",
+                "anchor": "overview",
+                "label": "درباره",
+                "number": "02"
+              },
+              {
+                "_id": "69578b0",
+                "anchor": "services",
+                "label": "خدمات",
+                "number": "03"
+              },
+              {
+                "_id": "b3a3076",
+                "anchor": "approach",
+                "label": "روش کار",
+                "number": "04"
+              },
+              {
+                "_id": "d331921",
+                "anchor": "redesign",
+                "label": "بازطراحی",
+                "number": "05"
+              },
+              {
+                "_id": "bc692b4",
+                "anchor": "project-planner",
+                "label": "برنامه‌ریز پروژه",
+                "number": "06"
+              },
+              {
+                "_id": "55ad4cb",
+                "anchor": "finish",
+                "label": "UNDO",
+                "number": "07"
+              }
+            ],
+            "guided_scroll": "yes",
+            "show_desktop": "yes",
+            "show_mobile": "yes",
+            "show_current": "yes",
+            "show_tooltips": "yes",
+            "side": "start",
+            "marker_style": "number"
           },
           "elements": []
         }

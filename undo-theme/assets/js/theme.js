@@ -30,29 +30,30 @@ header?.querySelectorAll('.submenu-toggle').forEach((button,index)=>{const subme
 document.addEventListener('pointerdown',event=>{if(header&&!header.contains(event.target)){closeMobile();closeSearch();header.querySelectorAll('.menu-item-has-children.is-open').forEach(item=>{item.classList.remove('is-open');item.querySelector(':scope > .submenu-toggle')?.setAttribute('aria-expanded','false')})}});
 document.addEventListener('keydown',event=>{if(event.key!=='Escape'||!header)return;const active=searchToggle?.getAttribute('aria-expanded')==='true'?searchToggle:toggle?.getAttribute('aria-expanded')==='true'?toggle:null;closeMobile();closeSearch();header.querySelectorAll('.menu-item-has-children.is-open').forEach(item=>{item.classList.remove('is-open');item.querySelector(':scope > .submenu-toggle')?.setAttribute('aria-expanded','false')});active?.focus()});
 window.matchMedia('(min-width: 1200px)').addEventListener('change',event=>{if(event.matches)closeMobile()});
-const comparison=document.querySelector('.comparison-range');
-const comparisonBrowser=document.querySelector('.browser');
-function updateComparison(){if(!comparison||!comparisonBrowser)return;const amount=Number(comparison.value);comparisonBrowser.style.setProperty('--split',`${amount}%`);comparisonBrowser.dataset.compare=amount<=4?'after':amount>=96?'before':'split';comparison.setAttribute('aria-valuetext',String(ui.comparisonValue||'%s%% of the earlier layout visible').replace('%s%%',amount+'%').replace('%s',amount))}
-comparison?.addEventListener('input',updateComparison);
-updateComparison();
+function updateComparison(comparison){const browser=comparison.closest('.browser');if(!browser)return;const amount=Number(comparison.value);browser.style.setProperty('--split',`${amount}%`);browser.dataset.compare=amount<=4?'after':amount>=96?'before':'split';comparison.setAttribute('aria-valuetext',String(ui.comparisonValue||'%s%% of the earlier layout visible').replace('%s%%',amount+'%').replace('%s',amount))}
+document.querySelectorAll('.comparison-range').forEach(updateComparison);
+document.addEventListener('input',event=>{if(event.target.matches('.comparison-range'))updateComparison(event.target)});
 document.getElementById('brief-form')?.addEventListener('submit',event=>{event.preventDefault();const data=new FormData(event.currentTarget);const name=String(data.get('projectName')||'').trim()||ui.untitled;const goal=String(data.get('goal')||'').trim()||ui.toDiscuss;const service=ui.serviceLabels?.[data.get('service')]||data.get('service');const stage=ui.stageLabels?.[data.get('stage')]||data.get('stage');const lines=[ui.briefTitle,'',`${ui.project}: ${name}`,`${ui.service}: ${service}`,`${ui.startingPoint}: ${stage}`,`${ui.goal}: ${goal}`];const body=(ui.language==='fa'?'\uFEFF':'')+lines.join('\n');const file=new Blob([body],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(file);const link=document.createElement('a');link.href=url;link.download=ui.language==='fa'?'undo-project-brief-fa.txt':'undo-project-brief.txt';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);document.getElementById('form-status').textContent=ui.downloaded});
 const elementorHome=document.querySelector('main#main .undo-elementor-home');
-const pageSections=elementorHome
+const sectionRail=document.querySelector('.section-rail');
+const allRailLinks=[...document.querySelectorAll('[data-rail-for]')];
+const linkedSections=allRailLinks.map(link=>document.getElementById(link.dataset.railFor)).filter(Boolean);
+const pageSections=linkedSections.length?linkedSections:elementorHome
   ? [...elementorHome.querySelectorAll(':scope > section[id]'),...elementorHome.querySelectorAll('.undo-home-planner section#project-planner')]
   : [...document.querySelectorAll('main#main > section[id]')];
 const footerSection=document.getElementById('finish');
-if(footerSection)pageSections.push(footerSection);
+if(footerSection&&!pageSections.includes(footerSection))pageSections.push(footerSection);
 const isLandingPage=pageSections[0]?.id==='top'&&pageSections[0].classList.contains('hero')&&pageSections.some(section=>section.id==='project-planner');
-const sectionRail=document.querySelector('.section-rail');
-const allRailLinks=[...document.querySelectorAll('[data-rail-for]')];
 const railLinks=allRailLinks.filter(link=>pageSections.some(section=>section.id===link.dataset.railFor));
 allRailLinks.filter(link=>!railLinks.includes(link)).forEach(link=>link.remove());
-sectionRail?.style.setProperty('--rail-track-height',`${Math.max(0,railLinks.length-1)*42}px`);
+if(sectionRail?.classList.contains('undo-section-rail'))sectionRail.style.setProperty('--undo-rail-count',String(Math.max(0,railLinks.length-1)));
+else sectionRail?.style.setProperty('--rail-track-height',`${Math.max(0,railLinks.length-1)*42}px`);
 const railCurrent=document.querySelector('.section-rail__current');
 const mobileProgress=document.querySelector('.mobile-section-progress');
 const progressSegments=[...document.querySelectorAll('.mobile-section-progress span')];
 progressSegments.slice(pageSections.length).forEach(segment=>segment.remove());
 const guidedMotion=window.matchMedia('(min-width: 1024px) and (prefers-reduced-motion: no-preference)');
+const guidedScrolling=()=>guidedMotion.matches&&sectionRail?.dataset.guidedScroll!=='no'&&(isLandingPage||sectionRail?.dataset.guidedScroll==='yes');
 let activeSectionIndex=0;
 let sectionFramePending=false;
 function updateCurrentSection(){
@@ -75,11 +76,11 @@ function updateCurrentSection(){
   pageSections.forEach(section=>section.classList.toggle('is-current',section===current));
 }
 function queueSectionUpdate(){if(sectionFramePending)return;sectionFramePending=true;requestAnimationFrame(updateCurrentSection)}
-if(isLandingPage){
+if(pageSections.length){
   window.addEventListener('scroll',queueSectionUpdate,{passive:true});
   window.addEventListener('resize',queueSectionUpdate);
   updateCurrentSection();
-  document.body.classList.add('has-section-motion');
+  if(isLandingPage)document.body.classList.add('has-section-motion');
 }
 
 const headerOffset=()=>header&&getComputedStyle(header).position==='sticky'?header.getBoundingClientRect().height:0;
@@ -89,8 +90,9 @@ function goToSection(index){
   if(!target)return;
   movingUntil=performance.now()+690;
   const top=target.id==='top'?0:window.scrollY+target.getBoundingClientRect().top-headerOffset();
-  window.scrollTo({top,behavior:guidedMotion.matches?'smooth':'instant'});
+  window.scrollTo({top,behavior:guidedScrolling()?'smooth':'instant'});
 }
+railLinks.forEach(link=>link.addEventListener('click',event=>{const index=pageSections.findIndex(section=>section.id===link.dataset.railFor);if(index<0)return;event.preventDefault();goToSection(index);history.replaceState(null,'',link.hash)}));
 
 let wheelTotal=0;
 let wheelConsumed=false;
@@ -98,7 +100,7 @@ let wheelReset;
 function resetWheelGesture(){wheelTotal=0;wheelConsumed=false}
 function queueWheelReset(){clearTimeout(wheelReset);wheelReset=setTimeout(resetWheelGesture,190)}
 window.addEventListener('wheel',event=>{
-  if(!isLandingPage||!guidedMotion.matches||event.ctrlKey||event.target.closest('input,textarea,select,[contenteditable="true"]'))return;
+  if(!guidedScrolling()||event.ctrlKey||event.target.closest('input,textarea,select,[contenteditable="true"]'))return;
   const direction=Math.sign(event.deltaY);
   if(!direction)return;
   if(performance.now()<movingUntil){event.preventDefault();wheelConsumed=true;queueWheelReset();return}
@@ -116,7 +118,7 @@ window.addEventListener('wheel',event=>{
 },{passive:false});
 
 window.addEventListener('keydown',event=>{
-  if(!isLandingPage||!guidedMotion.matches||event.altKey||event.ctrlKey||event.metaKey||event.target.closest('input,textarea,select,button,[contenteditable="true"]'))return;
+  if(!guidedScrolling()||event.altKey||event.ctrlKey||event.metaKey||event.target.closest('input,textarea,select,button,[contenteditable="true"]'))return;
   const down=['ArrowDown','PageDown',' '].includes(event.key);
   const up=['ArrowUp','PageUp'].includes(event.key);
   if(!down&&!up&&event.key!=='Home'&&event.key!=='End')return;

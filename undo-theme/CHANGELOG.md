@@ -4,6 +4,17 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.15.0] - 2026-11-15
+
+- Added four built-in Elementor Home widgets: Section Navigation, Process Board, Visual Icon, and Before/After Comparison. Each exposes content and visual controls, with logical positioning and Persian/English RTL/LTR support.
+- Replaced all raw HTML widgets in the bundled English and Persian Home templates. The scroll rail now belongs to the Elementor page and can be restyled there; older generated pages keep the native rail until refreshed.
+- Extended the homepage script to handle multiple comparison widgets and an editable guided-scroll setting. Theme updates still preserve customer-authored Elementor pages.
+
+### فارسی
+
+- چهار ابزارک داخلی المنتور برای راهبری بخش‌ها، مراحل کار، نمادها و مقایسهٔ قبل و بعد با تنظیمات محتوا و ظاهر و پشتیبانی راست‌به‌چپ و چپ‌به‌راست اضافه شد.
+- کدهای HTML خام از الگوهای صفحهٔ اصلی فارسی و انگلیسی حذف شدند. صفحه‌های ساخته‌شدهٔ قبلی تا زمان بازآوری دستی تغییر نمی‌کنند.
+
 ## [0.14.0] - 2026-11-14
 
 - Rebuilt the English and Persian Elementor Home starters around the native homepage's full-screen sections, interactive before/after concept, service rows, process board, project planner, and section rail. Main copy, headings, and actions remain editable in Elementor.

@@ -1,11 +1,11 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.14.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.15.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
 msgstr ""
 
-#: functions.php:262
+#: functions.php:263
 msgid "%s%% of the earlier layout visible"
 msgstr ""
 
@@ -14,23 +14,43 @@ msgid "A better site or product should help people understand, decide, and act. 
 msgstr ""
 
 #: style.css:5
-msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Optional Polylang integration links translated pages and language-specific home URLs. Includes an editable landing page with section ordering, visibility, and published-page references; three blog layouts; editorial posts; and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls layout, colors, language-aware typography, header, pages, posts, blog, sidebar, and a configurable footer with menus, contact, social, legal and three optional widget areas. With Elementor Free or Pro active, creates editable English/Persian Home and Blog starter pages once without replacing Reading choices; native pages remain when Elementor is absent. Includes Elementor Pro Theme Builder locations with fallbacks, optional UNDO Elements widgets, and GitHub dashboard updates."
+msgid "A bilingual WordPress theme for creative agencies and studios. The initial language follows WordPress Site Language, with a visitor switcher for Persian and English and dedicated RTL styles. Optional Polylang integration links translated pages and language-specific home URLs. Includes an editable landing page with section ordering, visibility, and published-page references; three blog layouts; editorial posts; and reading, wide, boxed, and full-width page templates with configurable width and spacing. Custom page widths are set per page. The single-save settings dashboard controls layout, colors, language-aware typography, header, pages, posts, blog, sidebar, and a configurable footer with menus, contact, social, legal and three optional widget areas. With Elementor Free or Pro active, creates editable English/Persian Home and Blog starter pages once without replacing Reading choices; native pages remain when Elementor is absent. Includes four built-in Elementor Home widgets, Elementor Pro Theme Builder locations with fallbacks, optional UNDO Elements widgets, and GitHub dashboard updates."
 msgstr ""
 
-#: functions.php:278 template-parts/home/project-planner.php:3
+#: functions.php:279 template-parts/home/project-planner.php:3
 msgid "A redesign"
 msgstr ""
 
-#: template-parts/home/hero.php:7
+#: inc/elementor/class-comparison.php:18 template-parts/home/hero.php:7
 msgid "A website with purpose."
 msgstr ""
 
-#: inc/settings.php:90
+#: inc/elementor/class-comparison.php:49 inc/elementor/class-process-board.php:42 inc/elementor/class-visual-icon.php:25 inc/settings.php:90
 msgid "Accent color"
 msgstr ""
 
 #: inc/settings.php:32
 msgid "Accent text"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:18
+msgid "Accessible description"
+msgstr ""
+
+#: inc/elementor/class-visual-icon.php:19
+msgid "Accessible label"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:16
+msgid "Accessible navigation name"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:14
+msgid "Accessible slider description"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:13
+msgid "Accessible visual description"
 msgstr ""
 
 #: inc/settings.php:124
@@ -45,7 +65,27 @@ msgstr ""
 msgid "Action label (Persian)"
 msgstr ""
 
-#: functions.php:44
+#: inc/elementor/class-section-rail.php:67
+msgid "Active color"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:49
+msgid "Active marker background"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:51
+msgid "Active marker on dark section"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:50
+msgid "Active marker text"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:52
+msgid "Active text on dark section"
+msgstr ""
+
+#: functions.php:45
 msgid "Add blocks or widgets here to show them above the footer wordmark."
 msgstr ""
 
@@ -57,11 +97,23 @@ msgstr ""
 msgid "Add font family"
 msgstr ""
 
-#: template-parts/home/hero.php:9
+#: inc/elementor/class-comparison.php:26 template-parts/home/hero.php:9
 msgid "After"
 msgstr ""
 
-#: functions.php:355 inc/settings.php:58
+#: inc/elementor/class-comparison.php:26
+msgid "After label"
+msgstr ""
+
+#: inc/elementor/class-visual-icon.php:29
+msgid "Alignment"
+msgstr ""
+
+#: inc/elementor/class-visual-icon.php:22
+msgid "Appearance"
+msgstr ""
+
+#: functions.php:356 inc/elementor/class-section-rail.php:24 inc/settings.php:58
 msgid "Approach"
 msgstr ""
 
@@ -81,8 +133,28 @@ msgstr ""
 msgid "Back to WordPress Updates"
 msgstr ""
 
-#: template-parts/home/hero.php:9
+#: inc/elementor/class-process-board.php:32 inc/elementor/class-visual-icon.php:23
+msgid "Background"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:68
+msgid "Bar height"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:69
+msgid "Bar width"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:25 template-parts/home/hero.php:9
 msgid "Before"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:7
+msgid "Before and after comparison"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:25
+msgid "Before label"
 msgstr ""
 
 #: inc/settings.php:157
@@ -91,6 +163,14 @@ msgstr ""
 
 #: inc/settings.php:159
 msgid "Blog design"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:31
+msgid "Board"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:17
+msgid "Board code"
 msgstr ""
 
 #: inc/settings.php:31
@@ -113,11 +193,27 @@ msgstr ""
 msgid "Bottom padding in pixels"
 msgstr ""
 
+#: inc/elementor/class-visual-icon.php:26
+msgid "Box size"
+msgstr ""
+
 #: inc/settings.php:86 inc/settings.php:144
 msgid "Boxed"
 msgstr ""
 
-#: template-parts/home/approach.php:6
+#: inc/elementor/class-comparison.php:16
+msgid "Browser address"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:41
+msgid "Browser corner radius"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:40
+msgid "Browser width"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:25 template-parts/home/approach.php:6
 msgid "Build"
 msgstr ""
 
@@ -125,7 +221,7 @@ msgstr ""
 msgid "Build the footer with menus, contact details, social links, and legal copy. Elementor Theme Builder can replace it."
 msgstr ""
 
-#: template-parts/home/hero.php:10
+#: inc/elementor/class-comparison.php:27 template-parts/home/hero.php:10
 msgid "Built for every screen."
 msgstr ""
 
@@ -145,8 +241,12 @@ msgstr ""
 msgid "By %s"
 msgstr ""
 
-#: template-parts/home/hero.php:8
+#: inc/elementor/class-comparison.php:21 template-parts/home/hero.php:8
 msgid "COMPANY NAME"
+msgstr ""
+
+#: inc/elementor/class-visual-icon.php:31
+msgid "Center"
 msgstr ""
 
 #: inc/settings.php:115
@@ -165,15 +265,19 @@ msgstr ""
 msgid "Choose a valid WOFF2 file from the Media Library."
 msgstr ""
 
+#: inc/elementor/class-visual-icon.php:17
+msgid "Choose icon"
+msgstr ""
+
 #: inc/settings.php:480
 msgid "Clear"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:260
 msgid "Close menu"
 msgstr ""
 
-#: functions.php:261
+#: functions.php:262
 msgid "Close search"
 msgstr ""
 
@@ -185,11 +289,15 @@ msgstr ""
 msgid "Colors"
 msgstr ""
 
+#: inc/elementor/class-comparison.php:45 inc/elementor/class-section-rail.php:47
+msgid "Colors and type"
+msgstr ""
+
 #: inc/settings.php:141
 msgid "Compact"
 msgstr ""
 
-#: template-parts/home/hero.php:9
+#: inc/elementor/class-comparison.php:14 template-parts/home/hero.php:9
 msgid "Compare earlier and redesigned website concept"
 msgstr ""
 
@@ -217,6 +325,10 @@ msgstr ""
 msgid "Contact phone"
 msgstr ""
 
+#: inc/elementor/class-comparison.php:11 inc/elementor/class-process-board.php:15
+msgid "Content"
+msgstr ""
+
 #: inc/settings.php:559
 msgid "Content colors"
 msgstr ""
@@ -233,8 +345,16 @@ msgstr ""
 msgid "Copyright line (Persian)"
 msgstr ""
 
+#: inc/elementor/class-process-board.php:36 inc/elementor/class-visual-icon.php:28
+msgid "Corner radius"
+msgstr ""
+
 #: template-parts/home/approach.php:3
 msgid "Create new. Redo what exists."
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:57
+msgid "Current section color"
 msgstr ""
 
 #: inc/settings.php:108
@@ -245,7 +365,7 @@ msgstr ""
 msgid "Custom tools that add the features your website and workflow actually need."
 msgstr ""
 
-#: template-parts/home/hero.php:10
+#: inc/elementor/class-comparison.php:29 template-parts/home/hero.php:10
 msgid "DESIGN / BUILD / REDO"
 msgstr ""
 
@@ -261,6 +381,10 @@ msgstr ""
 msgid "Dark header text"
 msgstr ""
 
+#: inc/elementor/class-visual-icon.php:18
+msgid "Decorative icon"
+msgstr ""
+
 #: inc/settings.php:144
 msgid "Default page layout"
 msgstr ""
@@ -269,12 +393,24 @@ msgstr ""
 msgid "Describe the problem or the result you want"
 msgstr ""
 
-#: template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:44
+msgid "Description color"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:24 template-parts/home/approach.php:6
 msgid "Design"
 msgstr ""
 
-#: template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:26 template-parts/home/approach.php:6
 msgid "Details that make it last"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:43
+msgid "Divider color"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:39
+msgid "Dots"
 msgstr ""
 
 #: inc/settings.php:508
@@ -285,8 +421,12 @@ msgstr ""
 msgid "Download project brief"
 msgstr ""
 
-#: template-parts/home/hero.php:6
+#: inc/elementor/class-comparison.php:15 template-parts/home/hero.php:6
 msgid "Drag to compare"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:29
+msgid "Edge caption"
 msgstr ""
 
 #: inc/settings.php:141
@@ -297,8 +437,16 @@ msgstr ""
 msgid "Editorial list"
 msgstr ""
 
+#: inc/elementor/class-visual-icon.php:14
+msgid "Elementor icon library"
+msgstr ""
+
 #: inc/settings.php:549
 msgid "Elementor pages using a UNDO page template follow the widths and spacing below. Elementor Full Width and Canvas use Elementor layouts instead; Canvas also omits the theme header and footer."
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:38 inc/elementor/class-visual-icon.php:32
+msgid "End"
 msgstr ""
 
 #: inc/settings.php:164
@@ -307,6 +455,10 @@ msgstr ""
 
 #: footer.php:26
 msgid "Explore"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:16
+msgid "Eyebrow"
 msgstr ""
 
 #: inc/settings.php:475
@@ -361,7 +513,7 @@ msgstr ""
 msgid "Footer colors"
 msgstr ""
 
-#: functions.php:26
+#: functions.php:27
 msgid "Footer menu"
 msgstr ""
 
@@ -369,7 +521,7 @@ msgstr ""
 msgid "Footer navigation"
 msgstr ""
 
-#: functions.php:26
+#: functions.php:27
 msgid "Footer secondary menu"
 msgstr ""
 
@@ -389,11 +541,11 @@ msgstr ""
 msgid "Footer text"
 msgstr ""
 
-#: functions.php:42
+#: functions.php:43
 msgid "Footer widget area %d"
 msgstr ""
 
-#: functions.php:68
+#: functions.php:69
 msgid "Footer widgets"
 msgstr ""
 
@@ -405,7 +557,7 @@ msgstr ""
 msgid "Full width"
 msgstr ""
 
-#: template-parts/home/hero.php:10
+#: inc/elementor/class-comparison.php:28 template-parts/home/hero.php:10
 msgid "Get started"
 msgstr ""
 
@@ -413,11 +565,15 @@ msgstr ""
 msgid "GitHub URL"
 msgstr ""
 
-#: functions.php:267
+#: inc/elementor/class-visual-icon.php:27
+msgid "Glyph scale"
+msgstr ""
+
+#: functions.php:268
 msgid "Goal"
 msgstr ""
 
-#: template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:23 template-parts/home/approach.php:6
 msgid "Goals, users, constraints"
 msgstr ""
 
@@ -437,7 +593,11 @@ msgstr ""
 msgid "Grid columns"
 msgstr ""
 
-#: template-parts/home/approach.php:5
+#: inc/elementor/class-section-rail.php:30
+msgid "Guided section scrolling"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:16 template-parts/home/approach.php:5
 msgid "HOW WE WORK"
 msgstr ""
 
@@ -459,6 +619,10 @@ msgstr ""
 
 #: inc/settings.php:111
 msgid "Header logo"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:41
+msgid "Heading and steps"
 msgstr ""
 
 #: inc/settings.php:31
@@ -489,11 +653,11 @@ msgstr ""
 msgid "Hidden"
 msgstr ""
 
-#: template-parts/home/section-rail.php:5 template-parts/home/section-rail.php:14 template-parts/page-layout.php:28
+#: inc/elementor/class-section-rail.php:21 template-parts/home/section-rail.php:5 template-parts/home/section-rail.php:14 template-parts/page-layout.php:34
 msgid "Home"
 msgstr ""
 
-#: template-parts/home/hero.php:8
+#: inc/elementor/class-comparison.php:22 template-parts/home/hero.php:8
 msgid "Home  About  Services  Contact"
 msgstr ""
 
@@ -505,15 +669,39 @@ msgstr ""
 msgid "Homepage sections"
 msgstr ""
 
+#: inc/elementor/class-visual-icon.php:11
+msgid "Icon"
+msgstr ""
+
+#: inc/elementor/class-visual-icon.php:13
+msgid "Icon design"
+msgstr ""
+
 #: inc/settings.php:159
 msgid "Image grid"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:66
+msgid "Inactive color"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:35
+msgid "Initial comparison split"
 msgstr ""
 
 #: inc/settings.php:184
 msgid "Instagram URL"
 msgstr ""
 
-#: template-parts/home/hero.php:6
+#: inc/elementor/class-comparison.php:15
+msgid "Instruction"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:51
+msgid "Instruction color"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:13 template-parts/home/hero.php:6
 msgid "Interactive concept showing a website before and after a redesign"
 msgstr ""
 
@@ -533,8 +721,28 @@ msgstr ""
 msgid "Keep what works. Redo what does not."
 msgstr ""
 
+#: inc/elementor/class-section-rail.php:55
+msgid "Label background"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:61
+msgid "Label corner radius"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:62
+msgid "Label padding"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:56
+msgid "Label text"
+msgstr ""
+
 #: header.php:41
 msgid "Language"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:38 inc/elementor/class-section-rail.php:37
+msgid "Layout"
 msgstr ""
 
 #: inc/settings.php:459
@@ -609,6 +817,10 @@ msgstr ""
 msgid "Local and system fonts"
 msgstr ""
 
+#: inc/elementor/class-visual-icon.php:24
+msgid "Main color"
+msgstr ""
+
 #: inc/settings.php:172
 msgid "Main menu heading (English)"
 msgstr ""
@@ -621,15 +833,35 @@ msgstr ""
 msgid "Main navigation"
 msgstr ""
 
-#: template-parts/home/hero.php:7
+#: inc/elementor/class-comparison.php:19 template-parts/home/hero.php:7
 msgid "Make the first impression count."
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:42
+msgid "Marker border width"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:48
+msgid "Marker color"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:41
+msgid "Marker size"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:43
+msgid "Marker spacing"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:39
+msgid "Marker style"
 msgstr ""
 
 #: inc/settings.php:113
 msgid "Maximum logo width in pixels"
 msgstr ""
 
-#: inc/settings.php:18
+#: inc/elementor/class-process-board.php:35 inc/settings.php:18
 msgid "Maximum width"
 msgstr ""
 
@@ -641,7 +873,7 @@ msgstr ""
 msgid "Minimum side margin in pixels"
 msgstr ""
 
-#: functions.php:274 template-parts/home/project-planner.php:2
+#: functions.php:275 inc/elementor/class-visual-icon.php:14 template-parts/home/project-planner.php:2
 msgid "Mobile app"
 msgstr ""
 
@@ -663,6 +895,10 @@ msgstr ""
 
 #: header.php:47
 msgid "Mobile navigation"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:65
+msgid "Mobile progress"
 msgstr ""
 
 #: footer.php:32
@@ -687,6 +923,30 @@ msgstr ""
 
 #: inc/settings.php:32
 msgid "Navigation"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:13
+msgid "Navigation label"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:20
+msgid "New site action"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:46
+msgid "New site background"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:18
+msgid "New site eyebrow"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:19 inc/elementor/class-comparison.php:48
+msgid "New site heading"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:17
+msgid "New site navigation"
 msgstr ""
 
 #: template-parts/home/services.php:2
@@ -721,6 +981,42 @@ msgstr ""
 msgid "Normal"
 msgstr ""
 
+#: inc/elementor/class-process-board.php:12
+msgid "Number"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:39
+msgid "Numbers"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:30
+msgid "Off"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:47
+msgid "Old site background"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:23
+msgid "Old site banner"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:24
+msgid "Old site heading"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:21
+msgid "Old site name"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:22
+msgid "Old site navigation"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:30
+msgid "On"
+msgstr ""
+
 #: inc/settings.php:555
 msgid "On screens under 760px, side margins and padding are capped at 20px; top and bottom padding are capped at 58px and 90px."
 msgstr ""
@@ -737,12 +1033,16 @@ msgstr ""
 msgid "Open Widgets"
 msgstr ""
 
-#: functions.php:258 header.php:43
+#: functions.php:259 header.php:43
 msgid "Open menu"
 msgstr ""
 
-#: functions.php:260 header.php:39
+#: functions.php:261 header.php:39
 msgid "Open search"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:14
+msgid "Optional number"
 msgstr ""
 
 #: inc/settings.php:564
@@ -761,11 +1061,11 @@ msgstr ""
 msgid "Original: Space Grotesk / Vazirmatn"
 msgstr ""
 
-#: template-parts/home/approach.php:5
+#: inc/elementor/class-process-board.php:18 template-parts/home/approach.php:5
 msgid "Our process: understand, design, build, refine"
 msgstr ""
 
-#: inc/settings.php:56
+#: inc/elementor/class-section-rail.php:22 inc/settings.php:56
 msgid "Overview"
 msgstr ""
 
@@ -775,6 +1075,10 @@ msgstr ""
 
 #: inc/settings.php:211
 msgid "Overview page (Persian)"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:34
+msgid "Padding"
 msgstr ""
 
 #: inc/settings.php:101
@@ -793,7 +1097,7 @@ msgstr ""
 msgid "Page display"
 msgstr ""
 
-#: template-parts/page-layout.php:37
+#: template-parts/page-layout.php:43
 msgid "Page navigation"
 msgstr ""
 
@@ -801,11 +1105,11 @@ msgstr ""
 msgid "Page not found"
 msgstr ""
 
-#: template-parts/page-layout.php:27
+#: template-parts/page-layout.php:33
 msgid "Page path"
 msgstr ""
 
-#: template-parts/home/section-rail.php:12
+#: inc/elementor/class-section-rail.php:16 template-parts/home/section-rail.php:12
 msgid "Page sections"
 msgstr ""
 
@@ -825,8 +1129,28 @@ msgstr ""
 msgid "Panel"
 msgstr ""
 
+#: inc/elementor/class-comparison.php:28
+msgid "Phone action"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:50
+msgid "Phone background"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:27
+msgid "Phone heading"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:42
+msgid "Phone width"
+msgstr ""
+
 #: footer.php:19 header.php:42 header.php:47 template-parts/home/approach.php:5 template-parts/home/hero.php:5
 msgid "Plan a project"
+msgstr ""
+
+#: inc/elementor/class-visual-icon.php:14
+msgid "Plugin"
 msgstr ""
 
 #: inc/settings.php:157
@@ -861,11 +1185,11 @@ msgstr ""
 msgid "Previous post"
 msgstr ""
 
-#: functions.php:26
+#: functions.php:27
 msgid "Primary menu"
 msgstr ""
 
-#: functions.php:32 sidebar.php:7
+#: functions.php:33 sidebar.php:7
 msgid "Primary sidebar"
 msgstr ""
 
@@ -877,7 +1201,19 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr ""
 
-#: functions.php:264
+#: inc/elementor/class-process-board.php:7
+msgid "Process board"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:20
+msgid "Process steps"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:54
+msgid "Progress color"
+msgstr ""
+
+#: functions.php:265
 msgid "Project"
 msgstr ""
 
@@ -885,7 +1221,7 @@ msgstr ""
 msgid "Project or business name"
 msgstr ""
 
-#: functions.php:356 template-parts/home/section-rail.php:9
+#: functions.php:357 inc/elementor/class-section-rail.php:26 template-parts/home/section-rail.php:9
 msgid "Project planner"
 msgstr ""
 
@@ -897,7 +1233,7 @@ msgstr ""
 msgid "Reading"
 msgstr ""
 
-#: inc/settings.php:59
+#: inc/elementor/class-section-rail.php:25 inc/settings.php:59
 msgid "Redesign"
 msgstr ""
 
@@ -909,7 +1245,7 @@ msgstr ""
 msgid "Redesign page (Persian)"
 msgstr ""
 
-#: template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:26 template-parts/home/approach.php:6
 msgid "Refine"
 msgstr ""
 
@@ -969,8 +1305,28 @@ msgstr ""
 msgid "Secondary text"
 msgstr ""
 
+#: inc/elementor/class-section-rail.php:13
+msgid "Section"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:12
+msgid "Section ID"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:18
+msgid "Section links"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:7
+msgid "Section navigation"
+msgstr ""
+
 #: inc/settings.php:206
 msgid "Section order"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:15
+msgid "Sections"
 msgstr ""
 
 #: inc/github-updater.php:131
@@ -985,11 +1341,11 @@ msgstr ""
 msgid "Select image"
 msgstr ""
 
-#: functions.php:265
+#: functions.php:266
 msgid "Service"
 msgstr ""
 
-#: functions.php:354 inc/settings.php:57
+#: functions.php:355 inc/elementor/class-section-rail.php:23 inc/settings.php:57
 msgid "Services"
 msgstr ""
 
@@ -1069,8 +1425,16 @@ msgstr ""
 msgid "Show copyright"
 msgstr ""
 
+#: inc/elementor/class-section-rail.php:33
+msgid "Show current section name"
+msgstr ""
+
 #: inc/settings.php:129
 msgid "Show date"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:31
+msgid "Show desktop rail"
 msgstr ""
 
 #: inc/settings.php:162
@@ -1101,6 +1465,10 @@ msgstr ""
 msgid "Show header search"
 msgstr ""
 
+#: inc/elementor/class-section-rail.php:34
+msgid "Show labels on hover and focus"
+msgstr ""
+
 #: inc/settings.php:119
 msgid "Show language switcher"
 msgstr ""
@@ -1115,6 +1483,14 @@ msgstr ""
 
 #: inc/settings.php:128
 msgid "Show manually written excerpt"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:34
+msgid "Show mobile mockup"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:32
+msgid "Show mobile progress"
 msgstr ""
 
 #: inc/settings.php:154
@@ -1169,6 +1545,14 @@ msgstr ""
 msgid "Show tags"
 msgstr ""
 
+#: inc/elementor/class-section-rail.php:38
+msgid "Side"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:40
+msgid "Side offset"
+msgstr ""
+
 #: inc/settings.php:22
 msgid "Side padding in pixels"
 msgstr ""
@@ -1205,7 +1589,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: functions.php:277 template-parts/home/project-planner.php:3
+#: functions.php:278 template-parts/home/project-planner.php:3
 msgid "Something new"
 msgstr ""
 
@@ -1217,16 +1601,32 @@ msgstr ""
 msgid "Standard"
 msgstr ""
 
-#: template-parts/home/hero.php:7
+#: inc/elementor/class-section-rail.php:38 inc/elementor/class-visual-icon.php:30
+msgid "Start"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:20 template-parts/home/hero.php:7
 msgid "Start here"
 msgstr ""
 
-#: functions.php:266
+#: functions.php:267
 msgid "Starting point"
 msgstr ""
 
 #: inc/settings.php:574
 msgid "Statement and action"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:14
+msgid "Step description"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:48
+msgid "Step padding"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:13
+msgid "Step title"
 msgstr ""
 
 #: inc/settings.php:116
@@ -1237,7 +1637,7 @@ msgstr ""
 msgid "Sticky sidebar top gap in pixels"
 msgstr ""
 
-#: template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:24 template-parts/home/approach.php:6
 msgid "Structure, content, interface"
 msgstr ""
 
@@ -1263,6 +1663,10 @@ msgstr ""
 
 #: template-parts/home/project-planner.php:1
 msgid "Tell us what you want to make."
+msgstr ""
+
+#: inc/elementor/class-process-board.php:33
+msgid "Text color"
 msgstr ""
 
 #: inc/settings.php:49
@@ -1313,11 +1717,11 @@ msgstr ""
 msgid "This width applies only when the page template is UNDO Custom Width. Leave the field blank for 1200px."
 msgstr ""
 
-#: functions.php:269
+#: functions.php:270
 msgid "To be discussed"
 msgstr ""
 
-#: functions.php:364
+#: functions.php:365
 msgid "Toggle submenu for %s"
 msgstr ""
 
@@ -1327,6 +1731,10 @@ msgstr ""
 
 #: inc/settings.php:23
 msgid "Top padding in pixels"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:53
+msgid "Track color"
 msgstr ""
 
 #: inc/settings.php:106
@@ -1341,6 +1749,10 @@ msgstr ""
 msgid "UNDO Full Width"
 msgstr ""
 
+#: inc/elementor.php:6
+msgid "UNDO Home"
+msgstr ""
+
 #: inc/settings.php:7
 msgid "UNDO Reading"
 msgstr ""
@@ -1353,7 +1765,7 @@ msgstr ""
 msgid "UNDO Web Developments"
 msgstr ""
 
-#: functions.php:263
+#: functions.php:264
 msgid "UNDO Web Developments — Project brief"
 msgstr ""
 
@@ -1373,6 +1785,10 @@ msgstr ""
 msgid "UNDO custom page width"
 msgstr ""
 
+#: inc/elementor/class-visual-icon.php:14
+msgid "UNDO mark"
+msgstr ""
+
 #: inc/github-updater.php:128
 msgid "UNDO theme update details"
 msgstr ""
@@ -1381,7 +1797,7 @@ msgstr ""
 msgid "Unable to verify the UNDO theme update package."
 msgstr ""
 
-#: template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:13 inc/elementor/class-process-board.php:23 template-parts/home/approach.php:6
 msgid "Understand"
 msgstr ""
 
@@ -1389,11 +1805,11 @@ msgstr ""
 msgid "Unsaved changes"
 msgstr ""
 
-#: template-parts/page-layout.php:18
+#: template-parts/page-layout.php:24
 msgid "Untitled page"
 msgstr ""
 
-#: functions.php:268
+#: functions.php:269
 msgid "Untitled project"
 msgstr ""
 
@@ -1449,19 +1865,31 @@ msgstr ""
 msgid "Uses the WordPress posts page. Select a static homepage in Settings → Reading to show posts on this page."
 msgstr ""
 
+#: inc/elementor/class-section-rail.php:44
+msgid "Vertical position"
+msgstr ""
+
 #: inc/github-updater.php:134
 msgid "View the GitHub release"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:39
+msgid "Visual height"
+msgstr ""
+
+#: inc/elementor/class-visual-icon.php:7
+msgid "Visual icon"
 msgstr ""
 
 #: footer.php:17 template-parts/home/hero.php:10
 msgid "WE REDO IT FOR YOU."
 msgstr ""
 
-#: template-parts/home/hero.php:8
+#: inc/elementor/class-comparison.php:23 template-parts/home/hero.php:8
 msgid "WELCOME TO OUR WEBSITE"
 msgstr ""
 
-#: template-parts/home/hero.php:8
+#: inc/elementor/class-comparison.php:24 template-parts/home/hero.php:8
 msgid "We provide solutions for your needs"
 msgstr ""
 
@@ -1469,7 +1897,7 @@ msgstr ""
 msgid "Web Developments"
 msgstr ""
 
-#: functions.php:272 template-parts/home/project-planner.php:2
+#: functions.php:273 inc/elementor/class-visual-icon.php:14 template-parts/home/project-planner.php:2
 msgid "Website"
 msgstr ""
 
@@ -1541,7 +1969,7 @@ msgstr ""
 msgid "Widget titles"
 msgstr ""
 
-#: functions.php:34
+#: functions.php:35
 msgid "Widgets shown beside posts, pages, or archives when enabled in UNDO Theme Settings."
 msgstr ""
 
@@ -1557,7 +1985,7 @@ msgstr ""
 msgid "Word spacing in pixels (0 = theme default)"
 msgstr ""
 
-#: functions.php:273 template-parts/home/project-planner.php:2
+#: functions.php:274 template-parts/home/project-planner.php:2
 msgid "WordPress plugin"
 msgstr ""
 
@@ -1573,11 +2001,11 @@ msgstr ""
 msgid "WordPress plugins page (Persian)"
 msgstr ""
 
-#: template-parts/home/hero.php:7
+#: inc/elementor/class-comparison.php:17 template-parts/home/hero.php:7
 msgid "Work  About  Contact"
 msgstr ""
 
-#: template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:25 template-parts/home/approach.php:6
 msgid "Working product"
 msgstr ""
 
@@ -1601,11 +2029,11 @@ msgstr ""
 msgid "Your answers stay in this browser. The brief downloads to your device."
 msgstr ""
 
-#: functions.php:270
+#: functions.php:271
 msgid "Your project brief has been downloaded."
 msgstr ""
 
-#: template-parts/home/hero.php:6
+#: inc/elementor/class-comparison.php:16 template-parts/home/hero.php:6
 msgid "new perspective"
 msgstr ""
 

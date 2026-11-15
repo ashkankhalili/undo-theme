@@ -7,7 +7,13 @@ $has_sidebar = ! $elementor_page && 'full' !== $layout && undo_has_sidebar( 'pag
 $layout_style = undo_page_layout_style( $layout, get_queried_object_id() );
 $title_style = 'compact' === undo_setting( 'page_title_style' ) ? 'compact' : 'editorial';
 $starter_home = $elementor_page && undo_is_generated_starter( get_queried_object_id(), 'home' );
-if ( $starter_home ) { get_template_part( 'template-parts/home/section-rail', null, array( 'sections' => array( 'overview', 'services', 'approach', 'redesign' ) ) ); }
+// Older generated pages still need the theme rail. New pages own an Elementor
+// rail widget and may remove it intentionally, so do not inject a duplicate.
+if ( $starter_home ) {
+    $home_data = (string) get_post_meta( get_queried_object_id(), '_elementor_data', true );
+    $has_home_widgets = (bool) preg_match( '/"widgetType"\s*:\s*"undo-(?:section-rail|comparison|process-board|visual-icon)"/', $home_data );
+    if ( ! $has_home_widgets ) { get_template_part( 'template-parts/home/section-rail', null, array( 'sections' => array( 'overview', 'services', 'approach', 'redesign' ) ) ); }
+}
 ?>
 <div class="content-layout page-layout page-layout--<?php echo esc_attr( $layout ); ?><?php echo $elementor_page ? ' page-layout--elementor' : ''; ?><?php echo $starter_home ? ' page-layout--elementor-home' : ''; ?><?php echo $has_sidebar ? ' has-sidebar sidebar-' . esc_attr( undo_sidebar_position() ) : ''; ?>" style="<?php echo esc_attr( $layout_style ); ?>">
 <?php if ( $elementor_page ) : ?>

@@ -660,3 +660,25 @@ html:not([lang^="fa"]) .undo-elementor-home--fa{--body:Vazirmatn,Tahoma,sans-ser
 @media(max-width:760px){.undo-elementor-home .wrap{width:calc(100% - 40px)}.undo-elementor-home .hero-grid,.undo-elementor-home .intro-grid,.undo-elementor-home .section-head,.undo-elementor-home .approach-grid{display:block}.undo-elementor-home .hero-grid{padding:57px 0 45px}.undo-elementor-home .hero-visual{margin-top:20px}.undo-elementor-home .service-row{grid-template-columns:30px 1fr}.undo-elementor-home .undo-home-symbol{display:none}.undo-elementor-home .undo-home-process{margin-top:55px}}
 @media(max-width:520px){.undo-elementor-home .hero-grid{padding:30px 0 20px}.undo-elementor-home .hero-visual{margin-top:0}.undo-elementor-home .service-name{display:block}}
 @media(prefers-reduced-motion:reduce){.undo-elementor-home .undo-home-cta .elementor-button{transition:none}.undo-elementor-home .undo-home-cta .elementor-button:hover{transform:none}}
+
+/* Built-in Elementor Home widgets keep native defaults until a designer sets a control. */
+.undo-elementor-home .service-number .elementor-heading-title{font:inherit;letter-spacing:inherit}
+.elementor-widget-undo-section-rail{height:0;min-height:0;overflow:visible}
+.elementor-widget-undo-section-rail .undo-section-rail{left:auto;right:auto;inset-inline-start:var(--undo-rail-offset,2px)}
+.elementor-widget-undo-section-rail .undo-section-rail--end{inset-inline-start:auto;inset-inline-end:var(--undo-rail-offset,2px)}
+.elementor-widget-undo-section-rail .undo-section-rail--hidden{display:none!important}
+.elementor-widget-undo-section-rail .undo-section-rail a{height:var(--undo-rail-step,42px)}
+.elementor-widget-undo-section-rail .undo-section-rail a>span{width:var(--undo-rail-marker,28px);height:var(--undo-rail-marker,28px)}
+.elementor-widget-undo-section-rail .undo-section-rail--dot{--undo-rail-marker:10px}
+.elementor-widget-undo-section-rail .undo-section-rail--dot a>span{font-size:0;border-radius:50%}
+.elementor-widget-undo-section-rail .undo-section-rail--no-tooltips em{display:none}
+.elementor-widget-undo-section-rail .undo-section-rail:before,.elementor-widget-undo-section-rail .undo-section-rail:after{top:calc(var(--undo-rail-step,42px)/2)}
+html[dir="ltr"] .undo-section-rail--end em,html[dir="rtl"] .undo-section-rail--start em{left:auto;right:43px}
+html[dir="rtl"] .undo-section-rail--end em{right:auto;left:43px}
+.elementor-widget-undo-section-rail .mobile-section-progress{pointer-events:none}
+.undo-process-board .process-top span,.undo-process-board .process-step>span{color:var(--undo-board-accent,var(--red))}
+.undo-visual-icon{display:flex;width:100%;min-width:0}
+.undo-visual-icon .service-symbol{color:var(--ink)}
+.undo-visual-icon .service-symbol>span{scale:var(--undo-glyph-scale,1)}
+.undo-visual-icon .intro-mark{width:100%}
+.undo-visual-icon--library .service-symbol svg,.undo-visual-icon--library .service-symbol i{width:36px;height:36px;color:var(--ink)}

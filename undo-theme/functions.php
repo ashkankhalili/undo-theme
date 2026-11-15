@@ -1,10 +1,11 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'UNDO_THEME_VERSION', '0.14.0' );
+define( 'UNDO_THEME_VERSION', '0.15.0' );
 require_once get_template_directory() . '/inc/settings.php';
 require_once get_template_directory() . '/inc/page-layout.php';
 require_once get_template_directory() . '/inc/github-updater.php';
 require_once get_template_directory() . '/inc/starter-pages.php';
+require_once get_template_directory() . '/inc/elementor.php';
 
 function undo_theme_setup() {
     add_theme_support( 'title-tag' );

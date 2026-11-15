@@ -42,11 +42,17 @@ for (const [slug, type] of Object.entries(expected)) {
         assert.equal(section.settings.html_tag, 'section', `${name}: semantic Home section`);
         assert.ok(section.settings.css_classes, `${name}: rendered native section class`);
       }
-      const html = widgets.filter(widget => widget.widgetType === 'html').map(widget => widget.settings.html).join('\n');
-      for (const feature of ['hero-stage', 'comparison-range', 'before-site', 'phone', 'intro-mark', 'service-number', 'web-glyph', 'plugin-glyph', 'app-glyph', 'process-board', 'process-step']) {
-        assert.ok(html.includes(feature), `${name}: native ${feature} markup`);
-      }
-      assert.equal((html.match(/class="process-step"/g) || []).length, 4, `${name}: four process steps`);
+      assert.ok(!widgets.some(widget => widget.widgetType === 'html'), `${name}: no raw HTML widgets`);
+      const typeCount = type => widgets.filter(widget => widget.widgetType === type).length;
+      assert.equal(typeCount('undo-comparison'), 1, `${name}: editable comparison visual`);
+      assert.equal(typeCount('undo-process-board'), 1, `${name}: editable process board`);
+      assert.equal(typeCount('undo-visual-icon'), 4, `${name}: service icons and UNDO mark`);
+      assert.equal(typeCount('undo-section-rail'), 1, `${name}: editable scroll navigation`);
+      const process = widgets.find(widget => widget.widgetType === 'undo-process-board');
+      assert.equal(process.settings.steps.length, 4, `${name}: four editable process steps`);
+      const rail = widgets.find(widget => widget.widgetType === 'undo-section-rail');
+      assert.deepEqual(rail.settings.sections.map(item => item.anchor), ['top', 'overview', 'services', 'approach', 'redesign', 'project-planner', 'finish'], `${name}: navigation destinations`);
+      assert.equal(rail.settings.guided_scroll, 'yes', `${name}: guided scroll default`);
       assert.equal(document.content[0].elements[2].elements[0].elements[1].elements.length, 3, `${name}: three editable service rows`);
       assert.ok(widgets.some(widget => widget.widgetType === 'button' && widget.settings.link?.url === '#project-planner'), `${name}: planner action`);
     }

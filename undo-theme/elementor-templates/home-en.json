@@ -25,7 +25,7 @@
           },
           "elements": [
             {
-              "id": "6299b4a6",
+              "id": "db67332b",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -82,20 +82,41 @@
                   ]
                 },
                 {
-                  "id": "db67332b",
+                  "id": "9b3b676e",
                   "elType": "widget",
-                  "widgetType": "html",
+                  "widgetType": "undo-comparison",
                   "isInner": false,
                   "settings": {
-                    "html": "<div class=\"hero-stage\" aria-label=\"Interactive concept showing a website before and after a redesign\"><div class=\"stage-label\">Drag to compare</div><div class=\"browser\"><div class=\"browser-bar\"><span class=\"browser-dots\"><i></i><i></i><i></i></span><span class=\"browser-address\">undo / new perspective</span><span class=\"browser-menu\">•••</span></div><div class=\"mock-site\"><div class=\"mock-nav\"><span class=\"mock-mark\">U.</span><span>Work  About  Contact</span></div><div class=\"mock-body\"><div class=\"mock-kicker\">A website with purpose.</div><div class=\"mock-heading\">Make the first impression count.</div><div class=\"mock-line\"></div><div class=\"mock-button\">Start here ↗</div></div><div class=\"mock-blocks\"><div></div><div></div><div></div></div></div><div class=\"before-site\" aria-hidden=\"true\"><div class=\"before-top\"><span>COMPANY NAME</span><span>Home  About  Services  Contact</span></div><div class=\"before-banner\">WELCOME TO OUR WEBSITE</div><div class=\"before-content\"><div class=\"before-heading\">We provide solutions for your needs</div><div class=\"before-lines\"><i></i><i></i><i></i><i></i></div><div class=\"before-boxes\"><i></i><i></i><i></i></div></div></div><span class=\"comparison-label comparison-label--before\" aria-hidden=\"true\">Before</span><span class=\"comparison-label comparison-label--after\" aria-hidden=\"true\">After</span><div class=\"comparison-divider\" aria-hidden=\"true\"><span><svg><use href=\"#icon-horizontal\"></use></svg></span></div><input class=\"comparison-range\" type=\"range\" min=\"0\" max=\"100\" value=\"38\" aria-label=\"Compare earlier and redesigned website concept\"></div><div class=\"phone\"><div class=\"phone-notch\"></div><div class=\"phone-inner\"><div class=\"phone-top\">U. <span>☰</span></div><div class=\"phone-title\">Built for every screen.</div><div class=\"phone-shape\"></div><div class=\"phone-lines\"><span></span><span></span></div><div class=\"phone-cta\">Get started ↗</div></div></div><span class=\"stage-stamp\">DESIGN / BUILD / REDO</span></div>",
-                    "_css_classes": "undo-home-visual"
+                    "_css_classes": "undo-home-visual",
+                    "visual_label": "Interactive concept showing a website before and after a redesign",
+                    "comparison_label": "Compare earlier and redesigned website concept",
+                    "drag_label": "Drag to compare",
+                    "perspective": "new perspective",
+                    "mock_navigation": "Work  About  Contact",
+                    "mock_kicker": "A website with purpose.",
+                    "mock_heading": "Make the first impression count.",
+                    "mock_action": "Start here",
+                    "before_name": "COMPANY NAME",
+                    "before_navigation": "Home  About  Services  Contact",
+                    "before_banner": "WELCOME TO OUR WEBSITE",
+                    "before_heading": "We provide solutions for your needs",
+                    "before_label": "Before",
+                    "after_label": "After",
+                    "phone_heading": "Built for every screen.",
+                    "phone_action": "Get started",
+                    "stamp": "DESIGN / BUILD / REDO",
+                    "show_phone": "yes",
+                    "split": {
+                      "size": 38,
+                      "unit": "%"
+                    }
                   },
                   "elements": []
                 }
               ]
             },
             {
-              "id": "8b1e64ee",
+              "id": "5bad6fe7",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -104,7 +125,7 @@
               },
               "elements": [
                 {
-                  "id": "5bad6fe7",
+                  "id": "6299b4a6",
                   "elType": "widget",
                   "widgetType": "text-editor",
                   "isInner": false,
@@ -130,7 +151,7 @@
           },
           "elements": [
             {
-              "id": "b1faa9ac",
+              "id": "9d518462",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -139,18 +160,19 @@
               },
               "elements": [
                 {
-                  "id": "cc617167",
+                  "id": "ea1e0973",
                   "elType": "widget",
-                  "widgetType": "html",
+                  "widgetType": "undo-visual-icon",
                   "isInner": false,
                   "settings": {
-                    "html": "<div class=\"intro-mark\" aria-hidden=\"true\"><svg><use href=\"#icon-undo\"></use></svg></div>",
+                    "icon_type": "undo",
+                    "decorative": "yes",
                     "_css_classes": "undo-home-mark"
                   },
                   "elements": []
                 },
                 {
-                  "id": "2e0750af",
+                  "id": "1def38fd",
                   "elType": "container",
                   "isInner": false,
                   "settings": {
@@ -159,7 +181,7 @@
                   },
                   "elements": [
                     {
-                      "id": "1def38fd",
+                      "id": "8b1e64ee",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -170,7 +192,7 @@
                       "elements": []
                     },
                     {
-                      "id": "9d518462",
+                      "id": "cc617167",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -198,7 +220,7 @@
           },
           "elements": [
             {
-              "id": "b4e3f187",
+              "id": "578f07f3",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -207,7 +229,7 @@
               },
               "elements": [
                 {
-                  "id": "41c2cdd8",
+                  "id": "b1faa9ac",
                   "elType": "container",
                   "isInner": false,
                   "settings": {
@@ -216,7 +238,7 @@
                   },
                   "elements": [
                     {
-                      "id": "a1e3c516",
+                      "id": "2e0750af",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -229,7 +251,7 @@
                   ]
                 },
                 {
-                  "id": "0cb3680f",
+                  "id": "0b353b8c",
                   "elType": "container",
                   "isInner": false,
                   "settings": {
@@ -248,13 +270,14 @@
                       },
                       "elements": [
                         {
-                          "id": "0266d1e5",
+                          "id": "a1e3c516",
                           "elType": "widget",
-                          "widgetType": "html",
+                          "widgetType": "heading",
                           "isInner": false,
                           "settings": {
-                            "html": "<div class=\"service-number\">01</div>",
-                            "_css_classes": "undo-home-number"
+                            "title": "01",
+                            "header_size": "span",
+                            "_css_classes": "service-number"
                           },
                           "elements": []
                         },
@@ -267,7 +290,7 @@
                           },
                           "elements": [
                             {
-                              "id": "d43d7037",
+                              "id": "41c2cdd8",
                               "elType": "widget",
                               "widgetType": "heading",
                               "isInner": false,
@@ -279,7 +302,7 @@
                               "elements": []
                             },
                             {
-                              "id": "ce0d8cb0",
+                              "id": "0266d1e5",
                               "elType": "widget",
                               "widgetType": "text-editor",
                               "isInner": false,
@@ -292,12 +315,13 @@
                           ]
                         },
                         {
-                          "id": "ab8880ea",
+                          "id": "2854e0c2",
                           "elType": "widget",
-                          "widgetType": "html",
+                          "widgetType": "undo-visual-icon",
                           "isInner": false,
                           "settings": {
-                            "html": "<div class=\"service-symbol\" aria-hidden=\"true\"><span class=\"web-glyph\"><i></i><i></i><i></i></span></div>",
+                            "icon_type": "web",
+                            "decorative": "yes",
                             "_css_classes": "undo-home-symbol"
                           },
                           "elements": []
@@ -315,13 +339,14 @@
                       },
                       "elements": [
                         {
-                          "id": "37f1ed87",
+                          "id": "d43d7037",
                           "elType": "widget",
-                          "widgetType": "html",
+                          "widgetType": "heading",
                           "isInner": false,
                           "settings": {
-                            "html": "<div class=\"service-number\">02</div>",
-                            "_css_classes": "undo-home-number"
+                            "title": "02",
+                            "header_size": "span",
+                            "_css_classes": "service-number"
                           },
                           "elements": []
                         },
@@ -334,7 +359,7 @@
                           },
                           "elements": [
                             {
-                              "id": "e974fd40",
+                              "id": "ce0d8cb0",
                               "elType": "widget",
                               "widgetType": "heading",
                               "isInner": false,
@@ -346,7 +371,7 @@
                               "elements": []
                             },
                             {
-                              "id": "eb2f655b",
+                              "id": "ab8880ea",
                               "elType": "widget",
                               "widgetType": "text-editor",
                               "isInner": false,
@@ -359,12 +384,13 @@
                           ]
                         },
                         {
-                          "id": "0b353b8c",
+                          "id": "457a828d",
                           "elType": "widget",
-                          "widgetType": "html",
+                          "widgetType": "undo-visual-icon",
                           "isInner": false,
                           "settings": {
-                            "html": "<div class=\"service-symbol\" aria-hidden=\"true\"><span class=\"plugin-glyph\"><i></i><i></i><i></i><i></i></span></div>",
+                            "icon_type": "plugin",
+                            "decorative": "yes",
                             "_css_classes": "undo-home-symbol"
                           },
                           "elements": []
@@ -382,13 +408,14 @@
                       },
                       "elements": [
                         {
-                          "id": "578f07f3",
+                          "id": "37f1ed87",
                           "elType": "widget",
-                          "widgetType": "html",
+                          "widgetType": "heading",
                           "isInner": false,
                           "settings": {
-                            "html": "<div class=\"service-number\">03</div>",
-                            "_css_classes": "undo-home-number"
+                            "title": "03",
+                            "header_size": "span",
+                            "_css_classes": "service-number"
                           },
                           "elements": []
                         },
@@ -401,7 +428,7 @@
                           },
                           "elements": [
                             {
-                              "id": "a95af9fe",
+                              "id": "e974fd40",
                               "elType": "widget",
                               "widgetType": "heading",
                               "isInner": false,
@@ -413,7 +440,7 @@
                               "elements": []
                             },
                             {
-                              "id": "a3bdc675",
+                              "id": "eb2f655b",
                               "elType": "widget",
                               "widgetType": "text-editor",
                               "isInner": false,
@@ -426,12 +453,13 @@
                           ]
                         },
                         {
-                          "id": "df7dc820",
+                          "id": "91bf969a",
                           "elType": "widget",
-                          "widgetType": "html",
+                          "widgetType": "undo-visual-icon",
                           "isInner": false,
                           "settings": {
-                            "html": "<div class=\"service-symbol\" aria-hidden=\"true\"><span class=\"app-glyph\"><i></i></span></div>",
+                            "icon_type": "app",
+                            "decorative": "yes",
                             "_css_classes": "undo-home-symbol"
                           },
                           "elements": []
@@ -456,7 +484,7 @@
           },
           "elements": [
             {
-              "id": "075338c1",
+              "id": "b4e3f187",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -465,7 +493,7 @@
               },
               "elements": [
                 {
-                  "id": "8fa245c1",
+                  "id": "0cb3680f",
                   "elType": "container",
                   "isInner": false,
                   "settings": {
@@ -474,7 +502,7 @@
                   },
                   "elements": [
                     {
-                      "id": "1e0f25cd",
+                      "id": "a95af9fe",
                       "elType": "widget",
                       "widgetType": "heading",
                       "isInner": false,
@@ -485,7 +513,7 @@
                       "elements": []
                     },
                     {
-                      "id": "f91d16b4",
+                      "id": "a3bdc675",
                       "elType": "widget",
                       "widgetType": "text-editor",
                       "isInner": false,
@@ -496,7 +524,7 @@
                       "elements": []
                     },
                     {
-                      "id": "2333353c",
+                      "id": "df7dc820",
                       "elType": "widget",
                       "widgetType": "button",
                       "isInner": false,
@@ -512,13 +540,41 @@
                   ]
                 },
                 {
-                  "id": "40221dea",
+                  "id": "0fe799ca",
                   "elType": "widget",
-                  "widgetType": "html",
+                  "widgetType": "undo-process-board",
                   "isInner": false,
                   "settings": {
-                    "html": "<div class=\"process-board\" aria-label=\"Our process: understand, design, build, refine\"><div class=\"process-top\">HOW WE WORK <span>UNDO / 04</span></div><div class=\"process-step\"><span>01</span><strong>Understand</strong><small>Goals, users, constraints</small></div><div class=\"process-step\"><span>02</span><strong>Design</strong><small>Structure, content, interface</small></div><div class=\"process-step\"><span>03</span><strong>Build</strong><small>Working product</small></div><div class=\"process-step\"><span>04</span><strong>Refine</strong><small>Details that make it last</small></div></div>",
-                    "_css_classes": "undo-home-process"
+                    "_css_classes": "undo-home-process",
+                    "eyebrow": "HOW WE WORK",
+                    "brand_code": "UNDO / 04",
+                    "aria_label": "Our process: understand, design, build, refine",
+                    "steps": [
+                      {
+                        "_id": "6570b19",
+                        "number": "01",
+                        "title": "Understand",
+                        "detail": "Goals, users, constraints"
+                      },
+                      {
+                        "_id": "186564c",
+                        "number": "02",
+                        "title": "Design",
+                        "detail": "Structure, content, interface"
+                      },
+                      {
+                        "_id": "1e50039",
+                        "number": "03",
+                        "title": "Build",
+                        "detail": "Working product"
+                      },
+                      {
+                        "_id": "779f4eb",
+                        "number": "04",
+                        "title": "Refine",
+                        "detail": "Details that make it last"
+                      }
+                    ]
                   },
                   "elements": []
                 }
@@ -538,7 +594,7 @@
           },
           "elements": [
             {
-              "id": "29bae7c8",
+              "id": "2333353c",
               "elType": "container",
               "isInner": false,
               "settings": {
@@ -547,7 +603,7 @@
               },
               "elements": [
                 {
-                  "id": "798932f1",
+                  "id": "1e0f25cd",
                   "elType": "widget",
                   "widgetType": "heading",
                   "isInner": false,
@@ -558,7 +614,7 @@
                   "elements": []
                 },
                 {
-                  "id": "13e1b347",
+                  "id": "f91d16b4",
                   "elType": "widget",
                   "widgetType": "text-editor",
                   "isInner": false,
@@ -580,6 +636,68 @@
           "settings": {
             "shortcode": "[undo_home_planner]",
             "_css_classes": "undo-home-planner"
+          },
+          "elements": []
+        },
+        {
+          "id": "34c87038",
+          "elType": "widget",
+          "widgetType": "undo-section-rail",
+          "isInner": false,
+          "settings": {
+            "_css_classes": "undo-home-rail",
+            "nav_label": "Page sections",
+            "sections": [
+              {
+                "_id": "c7dc223",
+                "anchor": "top",
+                "label": "Home",
+                "number": "01"
+              },
+              {
+                "_id": "6167b18",
+                "anchor": "overview",
+                "label": "Overview",
+                "number": "02"
+              },
+              {
+                "_id": "292ec18",
+                "anchor": "services",
+                "label": "Services",
+                "number": "03"
+              },
+              {
+                "_id": "bf3dd9a",
+                "anchor": "approach",
+                "label": "Approach",
+                "number": "04"
+              },
+              {
+                "_id": "a84539b",
+                "anchor": "redesign",
+                "label": "Redesign",
+                "number": "05"
+              },
+              {
+                "_id": "74d7d60",
+                "anchor": "project-planner",
+                "label": "Project planner",
+                "number": "06"
+              },
+              {
+                "_id": "47c4592",
+                "anchor": "finish",
+                "label": "UNDO",
+                "number": "07"
+              }
+            ],
+            "guided_scroll": "yes",
+            "show_desktop": "yes",
+            "show_mobile": "yes",
+            "show_current": "yes",
+            "show_tooltips": "yes",
+            "side": "start",
+            "marker_style": "number"
           },
           "elements": []
         }

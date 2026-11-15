@@ -17,6 +17,7 @@ The two generated Home pages had not been modified since initial creation. Befor
 
 ## Still to verify
 
+- Version 0.15.0 built-in Home widgets require a theme update on staging before the two generated Home pages can be refreshed with their new Elementor layout. The 0.14.0 pages remain published and functional until then.
 - Installed theme and UNDO Elements versions, exact active theme, and update result on staging. The connected WordPress app does not expose these values.
 - Public frontend visual rendering after the v0.14.0 theme update, planner interaction, posts pagination, and both language directions. The Elementor render preview verified HTML structure; direct public browser access from this environment could not resolve the site.
 - Elementor Free only, Elementor disabled, Elementor Pro archive precedence, and Polylang translation links on staging.
