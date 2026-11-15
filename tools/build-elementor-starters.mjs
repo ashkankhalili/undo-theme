@@ -86,7 +86,8 @@ function serviceRow(language, number, title, description, glyph) {
 function processWidget(c, language) {
   return fixedWidget(`home-${language}-process`, 'undo-process-board', {
     _css_classes: 'undo-home-process', eyebrow: c.processLabel, brand_code: 'UNDO / 04', aria_label: c.processAria,
-    steps: c.steps.map(([title, detail], index) => ({ _id: crypto.createHash('sha1').update(`undo-${language}-step-${index}`).digest('hex').slice(0, 7), number: String(index + 1).padStart(2, '0'), title, detail })),
+    board_direction: language === 'fa' ? 'rtl' : 'ltr', heading_align: 'start',
+    steps: c.steps.map(([title, detail], index) => ({ _id: crypto.createHash('sha1').update(`undo-${language}-step-${index}`).digest('hex').slice(0, 7), number: String(index + 1).padStart(2, '0'), marker: 'icon', icon: { value: ['fas fa-search', 'fas fa-pencil-alt', 'fas fa-code', 'fas fa-check'][index], library: 'fa-solid' }, direction: language === 'fa' ? 'rtl' : 'ltr', title_align: 'start', detail_align: 'start', title, detail })),
   });
 }
 function railWidget(language) {
@@ -95,8 +96,8 @@ function railWidget(language) {
     : [['top', 'Home'], ['overview', 'Overview'], ['services', 'Services'], ['approach', 'Approach'], ['redesign', 'Redesign'], ['project-planner', 'Project planner'], ['finish', 'UNDO']];
   return fixedWidget(`home-${language}-rail`, 'undo-section-rail', {
     _css_classes: 'undo-home-rail', nav_label: language === 'fa' ? 'بخش‌های صفحه' : 'Page sections',
-    sections: labels.map(([anchor, label], index) => ({ _id: crypto.createHash('sha1').update(`undo-${language}-rail-${anchor}`).digest('hex').slice(0, 7), anchor, label, number: String(index + 1).padStart(2, '0') })),
-    guided_scroll: 'yes', show_desktop: 'yes', show_mobile: 'yes', show_current: 'yes', show_tooltips: 'yes', side: 'start', marker_style: 'number',
+    sections: labels.map(([anchor, label], index) => ({ _id: crypto.createHash('sha1').update(`undo-${language}-rail-${anchor}`).digest('hex').slice(0, 7), anchor, label, number: String(index + 1).padStart(2, '0'), icon: { value: ['fas fa-home', 'fas fa-info', 'fas fa-laptop-code', 'fas fa-tasks', 'fas fa-sync-alt', 'fas fa-edit', 'fas fa-flag'][index], library: 'fa-solid' } })),
+    guided_scroll: 'yes', show_desktop: 'yes', show_mobile: 'yes', show_current: 'yes', show_tooltips: 'yes', side: 'start', marker_style: 'icon', marker_shape: 'rounded',
   });
 }
 function nativeHome(c, language) {
@@ -161,11 +162,20 @@ for (const [language, c] of Object.entries(copy)) {
   ]);
 
   write(`blog-page-${language}`, `${c.blog} — ${language.toUpperCase()}`, 'page', [
-    container(`undo-starter-archive ${langClass}`, [
-      heading(c.blog, 'undo-starter-display', 'h1'),
-      text(c.blogText, 'undo-starter-lead'),
-      widget('shortcode', { shortcode: '[undo_blog_posts]', _css_classes: 'undo-starter-archive-posts' }),
-    ]),
+    fixedContainer(`blog-${language}-root`, `undo-starter-archive undo-starter-journal ${langClass}`, [
+      fixedContainer(`blog-${language}-intro`, 'undo-starter-journal-hero', [
+        heading(c.blog, 'undo-starter-display', 'h1'),
+        fixedWidget(`blog-${language}-icon`, 'undo-visual-icon', { icon_type: 'undo', decorative: 'yes', title: language === 'fa' ? 'طراحی، کد و آنچه میان آن‌هاست.' : 'Design, code, and the work between.', description: c.blogText, title_tag: 'h2', content_direction: language === 'fa' ? 'rtl' : 'ltr', _css_classes: 'undo-starter-journal-intro' }),
+      ], { _element_id: 'journal', html_tag: 'section', content_width: 'full' }),
+      fixedContainer(`blog-${language}-entries`, 'undo-starter-journal-feed', [
+        heading(language === 'fa' ? 'تازه‌ترین نوشته‌ها' : 'Latest writing', 'undo-starter-journal-feed-title', 'h2'),
+        widget('shortcode', { shortcode: '[undo_blog_posts]', _css_classes: 'undo-starter-archive-posts' }),
+      ], { _element_id: 'entries', html_tag: 'section', content_width: 'full' }),
+      fixedWidget(`blog-${language}-rail`, 'undo-section-rail', { nav_label: language === 'fa' ? 'بخش‌های وبلاگ' : 'Journal sections', sections: [
+        { _id: crypto.createHash('sha1').update(`blog-${language}-journal`).digest('hex').slice(0, 7), anchor: 'journal', label: c.blog, number: '01', icon: { value: 'fas fa-book-open', library: 'fa-solid' } },
+        { _id: crypto.createHash('sha1').update(`blog-${language}-entries`).digest('hex').slice(0, 7), anchor: 'entries', label: language === 'fa' ? 'نوشته‌ها' : 'Writing', number: '02', icon: { value: 'fas fa-list', library: 'fa-solid' } },
+      ], guided_scroll: 'no', show_desktop: 'yes', show_mobile: 'no', show_current: 'yes', show_tooltips: 'yes', side: 'start', marker_style: 'icon', marker_shape: 'square' }),
+    ], { content_width: 'full' }),
   ]);
 }
 console.log(`Built ${fs.readdirSync(output).filter(name => name.endsWith('.json')).length} Elementor starter templates.`);

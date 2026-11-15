@@ -31,7 +31,13 @@ for (const [slug, type] of Object.entries(expected)) {
     check(document.content);
     assert.ok(widgets.some(widget => widget.widgetType === 'heading'), `${name}: editable heading`);
     if (slug === 'blog-archive') assert.ok(widgets.some(widget => widget.widgetType === 'archive-posts'), `${name}: dynamic archive loop`);
-    if (slug === 'blog-page') assert.ok(widgets.some(widget => widget.widgetType === 'shortcode' && widget.settings.shortcode === '[undo_blog_posts]'), `${name}: Free posts loop`);
+    if (slug === 'blog-page') {
+      assert.ok(widgets.some(widget => widget.widgetType === 'shortcode' && widget.settings.shortcode === '[undo_blog_posts]'), `${name}: Free posts loop`);
+      assert.ok(widgets.some(widget => widget.widgetType === 'undo-visual-icon' && widget.settings.title && widget.settings.description), `${name}: editable icon-led introduction`);
+      const rail = widgets.find(widget => widget.widgetType === 'undo-section-rail');
+      assert.deepEqual(rail?.settings.sections.map(item => item.anchor), ['journal', 'entries'], `${name}: journal destinations`);
+      assert.equal(rail.settings.marker_shape, 'square', `${name}: square icon markers`);
+    }
     if (slug === 'footer') assert.ok(widgets.some(widget => widget.widgetType === 'shortcode' && widget.settings.shortcode === '[undo_footer_widgets]'), `${name}: optional WordPress widget areas`);
     if (slug === 'home') {
       assert.ok(widgets.some(widget => widget.widgetType === 'shortcode' && widget.settings.shortcode === '[undo_home_planner]'), `${name}: working project planner`);
@@ -50,9 +56,12 @@ for (const [slug, type] of Object.entries(expected)) {
       assert.equal(typeCount('undo-section-rail'), 1, `${name}: editable scroll navigation`);
       const process = widgets.find(widget => widget.widgetType === 'undo-process-board');
       assert.equal(process.settings.steps.length, 4, `${name}: four editable process steps`);
+      assert.ok(process.settings.steps.every(step => step.marker === 'icon' && step.icon.value && step.direction === (language === 'fa' ? 'rtl' : 'ltr')), `${name}: directed icon steps`);
       const rail = widgets.find(widget => widget.widgetType === 'undo-section-rail');
       assert.deepEqual(rail.settings.sections.map(item => item.anchor), ['top', 'overview', 'services', 'approach', 'redesign', 'project-planner', 'finish'], `${name}: navigation destinations`);
       assert.equal(rail.settings.guided_scroll, 'yes', `${name}: guided scroll default`);
+      assert.equal(rail.settings.marker_style, 'icon', `${name}: icon rail default`);
+      assert.ok(rail.settings.sections.every(item => item.icon.value), `${name}: complete rail icon set`);
       assert.equal(document.content[0].elements[2].elements[0].elements[1].elements.length, 3, `${name}: three editable service rows`);
       assert.ok(widgets.some(widget => widget.widgetType === 'button' && widget.settings.link?.url === '#project-planner'), `${name}: planner action`);
     }

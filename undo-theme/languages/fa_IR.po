@@ -1,9 +1,25 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.15.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.16.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: fa_IR\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
 msgstr "% دیدگاه"
+
+#: inc/elementor/class-comparison.php:57
+msgid "%s image fit"
+msgstr "نحوه نمایش تصویر %s"
+
+#: inc/elementor/class-comparison.php:56
+msgid "%s image height"
+msgstr "ارتفاع تصویر %s"
+
+#: inc/elementor/class-comparison.php:58
+msgid "%s image position"
+msgstr "موقعیت تصویر %s"
+
+#: inc/elementor/class-comparison.php:55
+msgid "%s image width"
+msgstr "عرض تصویر %s"
 
 #: functions.php:263
 msgid "%s%% of the earlier layout visible"
@@ -25,7 +41,7 @@ msgstr "بازطراحی"
 msgid "A website with purpose."
 msgstr "وب‌سایتی با هدف روشن."
 
-#: inc/elementor/class-comparison.php:49 inc/elementor/class-process-board.php:42 inc/elementor/class-visual-icon.php:25 inc/settings.php:90
+#: inc/elementor/class-comparison.php:68 inc/elementor/class-process-board.php:49 inc/elementor/class-visual-icon.php:29 inc/settings.php:90
 msgid "Accent color"
 msgstr "رنگ تأکیدی"
 
@@ -33,7 +49,7 @@ msgstr "رنگ تأکیدی"
 msgid "Accent text"
 msgstr "متن تأکیدی"
 
-#: inc/elementor/class-process-board.php:18
+#: inc/elementor/class-process-board.php:23
 msgid "Accessible description"
 msgstr "توضیح دسترس‌پذیر"
 
@@ -41,7 +57,7 @@ msgstr "توضیح دسترس‌پذیر"
 msgid "Accessible label"
 msgstr "برچسب دسترس‌پذیر"
 
-#: inc/elementor/class-section-rail.php:16
+#: inc/elementor/class-section-rail.php:17
 msgid "Accessible navigation name"
 msgstr "نام دسترس‌پذیر راهبری"
 
@@ -65,23 +81,23 @@ msgstr "متن دکمه اقدام (انگلیسی)"
 msgid "Action label (Persian)"
 msgstr "متن دکمه اقدام (فارسی)"
 
-#: inc/elementor/class-section-rail.php:67
+#: inc/elementor/class-section-rail.php:70
 msgid "Active color"
 msgstr "رنگ فعال"
 
-#: inc/elementor/class-section-rail.php:49
+#: inc/elementor/class-section-rail.php:52
 msgid "Active marker background"
 msgstr "پس‌زمینه نشانگر فعال"
 
-#: inc/elementor/class-section-rail.php:51
+#: inc/elementor/class-section-rail.php:54
 msgid "Active marker on dark section"
 msgstr "نشانگر فعال روی بخش تیره"
 
-#: inc/elementor/class-section-rail.php:50
+#: inc/elementor/class-section-rail.php:53
 msgid "Active marker text"
 msgstr "متن نشانگر فعال"
 
-#: inc/elementor/class-section-rail.php:52
+#: inc/elementor/class-section-rail.php:55
 msgid "Active text on dark section"
 msgstr "متن فعال روی بخش تیره"
 
@@ -97,23 +113,31 @@ msgstr "بلوک‌ها را در نمایش ← ابزارک‌ها به ناح
 msgid "Add font family"
 msgstr "افزودن خانواده قلم"
 
-#: inc/elementor/class-comparison.php:26 template-parts/home/hero.php:9
+#: inc/elementor/class-comparison.php:26 inc/elementor/class-comparison.php:53 template-parts/home/hero.php:9
 msgid "After"
 msgstr "بعد"
+
+#: inc/elementor/class-comparison.php:44
+msgid "After image"
+msgstr "تصویر بعد"
+
+#: inc/elementor/class-comparison.php:45
+msgid "After image alternative text"
+msgstr "متن جایگزین تصویر بعد"
 
 #: inc/elementor/class-comparison.php:26
 msgid "After label"
 msgstr "برچسب بعد"
 
-#: inc/elementor/class-visual-icon.php:29
+#: inc/elementor/class-visual-icon.php:33
 msgid "Alignment"
 msgstr "تراز"
 
-#: inc/elementor/class-visual-icon.php:22
+#: inc/elementor/class-visual-icon.php:26
 msgid "Appearance"
 msgstr "ظاهر"
 
-#: functions.php:356 inc/elementor/class-section-rail.php:24 inc/settings.php:58
+#: functions.php:356 inc/elementor/class-section-rail.php:25 inc/settings.php:58
 msgid "Approach"
 msgstr "روش کار"
 
@@ -133,25 +157,33 @@ msgstr "جایگاه فهرست‌های پایین صفحه و فهرست دو�
 msgid "Back to WordPress Updates"
 msgstr "بازگشت به به‌روزرسانی‌های وردپرس"
 
-#: inc/elementor/class-process-board.php:32 inc/elementor/class-visual-icon.php:23
+#: inc/elementor/class-process-board.php:39 inc/elementor/class-visual-icon.php:27
 msgid "Background"
 msgstr "پس‌زمینه"
 
-#: inc/elementor/class-section-rail.php:68
+#: inc/elementor/class-section-rail.php:71
 msgid "Bar height"
 msgstr "ارتفاع نوار"
 
-#: inc/elementor/class-section-rail.php:69
+#: inc/elementor/class-section-rail.php:72
 msgid "Bar width"
 msgstr "عرض نوار"
 
-#: inc/elementor/class-comparison.php:25 template-parts/home/hero.php:9
+#: inc/elementor/class-comparison.php:25 inc/elementor/class-comparison.php:53 template-parts/home/hero.php:9
 msgid "Before"
 msgstr "قبل"
 
 #: inc/elementor/class-comparison.php:7
 msgid "Before and after comparison"
 msgstr "مقایسه قبل و بعد"
+
+#: inc/elementor/class-comparison.php:42
+msgid "Before image"
+msgstr "تصویر قبل"
+
+#: inc/elementor/class-comparison.php:43
+msgid "Before image alternative text"
+msgstr "متن جایگزین تصویر قبل"
 
 #: inc/elementor/class-comparison.php:25
 msgid "Before label"
@@ -165,13 +197,17 @@ msgstr "وبلاگ"
 msgid "Blog design"
 msgstr "طرح وبلاگ"
 
-#: inc/elementor/class-process-board.php:31
+#: inc/elementor/class-process-board.php:38
 msgid "Board"
 msgstr "تابلو"
 
-#: inc/elementor/class-process-board.php:17
+#: inc/elementor/class-process-board.php:22
 msgid "Board code"
 msgstr "کد تابلو"
+
+#: inc/elementor/class-process-board.php:24
+msgid "Board direction"
+msgstr "جهت تابلو"
 
 #: inc/settings.php:31
 msgid "Body text"
@@ -185,6 +221,10 @@ msgstr "قلم ضخیم WOFF2 (اختیاری)"
 msgid "Border color"
 msgstr "رنگ حاشیه"
 
+#: inc/elementor/class-comparison.php:58
+msgid "Bottom"
+msgstr "پایین"
+
 #: inc/settings.php:21
 msgid "Bottom margin in pixels"
 msgstr "فاصله بیرونی پایین به پیکسل"
@@ -193,7 +233,7 @@ msgstr "فاصله بیرونی پایین به پیکسل"
 msgid "Bottom padding in pixels"
 msgstr "فاصله درونی پایین به پیکسل"
 
-#: inc/elementor/class-visual-icon.php:26
+#: inc/elementor/class-visual-icon.php:30
 msgid "Box size"
 msgstr "اندازه کادر"
 
@@ -205,15 +245,15 @@ msgstr "محدود"
 msgid "Browser address"
 msgstr "نشانی مرورگر"
 
-#: inc/elementor/class-comparison.php:41
+#: inc/elementor/class-comparison.php:60
 msgid "Browser corner radius"
 msgstr "گردی گوشه مرورگر"
 
-#: inc/elementor/class-comparison.php:40
+#: inc/elementor/class-comparison.php:50
 msgid "Browser width"
 msgstr "عرض مرورگر"
 
-#: inc/elementor/class-process-board.php:25 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:32 template-parts/home/approach.php:6
 msgid "Build"
 msgstr "ساخت"
 
@@ -245,7 +285,7 @@ msgstr "نوشته %s"
 msgid "COMPANY NAME"
 msgstr "نام شرکت"
 
-#: inc/elementor/class-visual-icon.php:31
+#: inc/elementor/class-comparison.php:58 inc/elementor/class-process-board.php:18 inc/elementor/class-process-board.php:19 inc/elementor/class-process-board.php:25 inc/elementor/class-visual-icon.php:35 inc/elementor/class-visual-icon.php:38
 msgid "Center"
 msgstr "وسط"
 
@@ -269,6 +309,10 @@ msgstr "یک فایل WOFF2 معتبر از کتابخانه رسانه انتخ
 msgid "Choose icon"
 msgstr "انتخاب نماد"
 
+#: inc/elementor/class-section-rail.php:41
+msgid "Circle"
+msgstr "دایره"
+
 #: inc/settings.php:480
 msgid "Clear"
 msgstr "پاک کردن"
@@ -289,7 +333,7 @@ msgstr "رنگ"
 msgid "Colors"
 msgstr "رنگ‌ها"
 
-#: inc/elementor/class-comparison.php:45 inc/elementor/class-section-rail.php:47
+#: inc/elementor/class-comparison.php:64 inc/elementor/class-section-rail.php:50
 msgid "Colors and type"
 msgstr "رنگ‌ها و قلم"
 
@@ -325,7 +369,11 @@ msgstr "موقعیت تماس (فارسی)"
 msgid "Contact phone"
 msgstr "تلفن تماس"
 
-#: inc/elementor/class-comparison.php:11 inc/elementor/class-process-board.php:15
+#: inc/elementor/class-comparison.php:57
+msgid "Contain"
+msgstr "نمایش کامل"
+
+#: inc/elementor/class-comparison.php:11 inc/elementor/class-process-board.php:20
 msgid "Content"
 msgstr "محتوا"
 
@@ -345,15 +393,19 @@ msgstr "متن حق نشر (انگلیسی)"
 msgid "Copyright line (Persian)"
 msgstr "متن حق نشر (فارسی)"
 
-#: inc/elementor/class-process-board.php:36 inc/elementor/class-visual-icon.php:28
+#: inc/elementor/class-process-board.php:43 inc/elementor/class-visual-icon.php:32
 msgid "Corner radius"
 msgstr "گردی گوشه"
+
+#: inc/elementor/class-comparison.php:57
+msgid "Cover"
+msgstr "پوشاندن کادر"
 
 #: template-parts/home/approach.php:3
 msgid "Create new. Redo what exists."
 msgstr "از صفر بسازید. موجود را بازطراحی کنید."
 
-#: inc/elementor/class-section-rail.php:57
+#: inc/elementor/class-section-rail.php:60
 msgid "Current section color"
 msgstr "رنگ بخش کنونی"
 
@@ -393,23 +445,31 @@ msgstr "چیدمان پیش‌فرض صفحه"
 msgid "Describe the problem or the result you want"
 msgstr "مسئله یا نتیجه دلخواهتان را توضیح دهید"
 
-#: inc/elementor/class-process-board.php:44
+#: inc/elementor/class-visual-icon.php:21
+msgid "Description"
+msgstr "توضیح"
+
+#: inc/elementor/class-process-board.php:19
+msgid "Description alignment"
+msgstr "تراز توضیح"
+
+#: inc/elementor/class-process-board.php:51 inc/elementor/class-visual-icon.php:41
 msgid "Description color"
 msgstr "رنگ توضیح"
 
-#: inc/elementor/class-process-board.php:24 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:31 template-parts/home/approach.php:6
 msgid "Design"
 msgstr "طراحی"
 
-#: inc/elementor/class-process-board.php:26 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:33 template-parts/home/approach.php:6
 msgid "Details that make it last"
 msgstr "جزئیاتی که ماندگارند"
 
-#: inc/elementor/class-process-board.php:43
+#: inc/elementor/class-process-board.php:50
 msgid "Divider color"
 msgstr "رنگ جداکننده"
 
-#: inc/elementor/class-section-rail.php:39
+#: inc/elementor/class-section-rail.php:40
 msgid "Dots"
 msgstr "نقطه‌ها"
 
@@ -445,7 +505,7 @@ msgstr "کتابخانه نمادهای المنتور"
 msgid "Elementor pages using a UNDO page template follow the widths and spacing below. Elementor Full Width and Canvas use Elementor layouts instead; Canvas also omits the theme header and footer."
 msgstr "صفحه‌های المنتوری که قالب صفحهٔ UNDO دارند از عرض و فاصله‌های زیر پیروی می‌کنند. Elementor Full Width و Canvas از چیدمان المنتور استفاده می‌کنند؛ Canvas سربرگ و پایین صفحهٔ پوسته را نیز نمایش نمی‌دهد."
 
-#: inc/elementor/class-section-rail.php:38 inc/elementor/class-visual-icon.php:32
+#: inc/elementor/class-process-board.php:18 inc/elementor/class-process-board.php:19 inc/elementor/class-process-board.php:25 inc/elementor/class-section-rail.php:39 inc/elementor/class-visual-icon.php:36 inc/elementor/class-visual-icon.php:38
 msgid "End"
 msgstr "انتهای جهت نوشتار"
 
@@ -457,13 +517,17 @@ msgstr "طول خلاصه به واژه"
 msgid "Explore"
 msgstr "کاوش"
 
-#: inc/elementor/class-process-board.php:16
+#: inc/elementor/class-process-board.php:21
 msgid "Eyebrow"
 msgstr "متن بالای عنوان"
 
 #: inc/settings.php:475
 msgid "Family name"
 msgstr "نام خانواده قلم"
+
+#: inc/elementor/class-comparison.php:57
+msgid "Fill"
+msgstr "پر کردن کادر"
 
 #: footer.php:46
 msgid "Follow"
@@ -565,7 +629,7 @@ msgstr "شروع کنید"
 msgid "GitHub URL"
 msgstr "نشانی گیت‌هاب"
 
-#: inc/elementor/class-visual-icon.php:27
+#: inc/elementor/class-visual-icon.php:31
 msgid "Glyph scale"
 msgstr "مقیاس نماد"
 
@@ -573,7 +637,7 @@ msgstr "مقیاس نماد"
 msgid "Goal"
 msgstr "هدف"
 
-#: inc/elementor/class-process-board.php:23 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:30 template-parts/home/approach.php:6
 msgid "Goals, users, constraints"
 msgstr "هدف‌ها، کاربران، محدودیت‌ها"
 
@@ -593,13 +657,25 @@ msgstr "وقتی بارگذاری قلم‌های گوگل خاموش است، �
 msgid "Grid columns"
 msgstr "ستون‌های شبکه"
 
-#: inc/elementor/class-section-rail.php:30
+#: inc/elementor/class-section-rail.php:31
 msgid "Guided section scrolling"
 msgstr "پیمایش هدایت‌شده بخش‌ها"
 
-#: inc/elementor/class-process-board.php:16 template-parts/home/approach.php:5
+#: inc/elementor/class-process-board.php:21 template-parts/home/approach.php:5
 msgid "HOW WE WORK"
 msgstr "روند کار ما"
+
+#: inc/elementor/class-comparison.php:72
+msgid "Handle arrows"
+msgstr "پیکان‌های دستگیره"
+
+#: inc/elementor/class-comparison.php:71
+msgid "Handle background"
+msgstr "پس‌زمینه دستگیره"
+
+#: inc/elementor/class-comparison.php:73
+msgid "Handle size"
+msgstr "اندازه دستگیره"
 
 #: inc/settings.php:110
 msgid "Header"
@@ -621,7 +697,11 @@ msgstr "چیدمان سربرگ"
 msgid "Header logo"
 msgstr "نشان سربرگ"
 
-#: inc/elementor/class-process-board.php:41
+#: inc/elementor/class-process-board.php:25
+msgid "Heading alignment"
+msgstr "تراز سربرگ"
+
+#: inc/elementor/class-process-board.php:48
 msgid "Heading and steps"
 msgstr "عنوان و مراحل"
 
@@ -653,7 +733,15 @@ msgstr "عنوان بخش آغازین (فارسی)"
 msgid "Hidden"
 msgstr "پنهان"
 
-#: inc/elementor/class-section-rail.php:21 template-parts/home/section-rail.php:5 template-parts/home/section-rail.php:14 template-parts/page-layout.php:34
+#: inc/elementor/class-comparison.php:53
+msgid "Holder"
+msgstr "نگهدارنده"
+
+#: inc/elementor/class-comparison.php:41
+msgid "Holder background image"
+msgstr "تصویر پس‌زمینه نگهدارنده"
+
+#: inc/elementor/class-section-rail.php:22 template-parts/home/section-rail.php:5 template-parts/home/section-rail.php:14 template-parts/page-layout.php:34
 msgid "Home"
 msgstr "خانه"
 
@@ -669,7 +757,7 @@ msgstr "صفحه اصلی"
 msgid "Homepage sections"
 msgstr "بخش‌های صفحهٔ اصلی"
 
-#: inc/elementor/class-visual-icon.php:11
+#: inc/elementor/class-process-board.php:13 inc/elementor/class-visual-icon.php:11
 msgid "Icon"
 msgstr "نماد"
 
@@ -677,15 +765,35 @@ msgstr "نماد"
 msgid "Icon design"
 msgstr "طرح نماد"
 
+#: inc/elementor/class-section-rail.php:42
+msgid "Icon size"
+msgstr "اندازه نماد"
+
+#: inc/elementor/class-visual-icon.php:39
+msgid "Icon to text spacing"
+msgstr "فاصله نماد تا متن"
+
+#: inc/elementor/class-section-rail.php:40
+msgid "Icons"
+msgstr "نمادها"
+
 #: inc/settings.php:159
 msgid "Image grid"
 msgstr "شبکه تصویری"
 
-#: inc/elementor/class-section-rail.php:66
+#: inc/elementor/class-comparison.php:40
+msgid "Images"
+msgstr "تصاویر"
+
+#: inc/elementor/class-section-rail.php:69
 msgid "Inactive color"
 msgstr "رنگ غیرفعال"
 
-#: inc/elementor/class-comparison.php:35
+#: inc/elementor/class-process-board.php:17 inc/elementor/class-process-board.php:18 inc/elementor/class-process-board.php:19 inc/elementor/class-process-board.php:24 inc/elementor/class-visual-icon.php:23
+msgid "Inherit"
+msgstr "پیروی از صفحه"
+
+#: inc/elementor/class-comparison.php:37
 msgid "Initial comparison split"
 msgstr "موقعیت آغازین مقایسه"
 
@@ -697,7 +805,7 @@ msgstr "نشانی اینستاگرام"
 msgid "Instruction"
 msgstr "راهنما"
 
-#: inc/elementor/class-comparison.php:51
+#: inc/elementor/class-comparison.php:70
 msgid "Instruction color"
 msgstr "رنگ راهنما"
 
@@ -721,19 +829,19 @@ msgstr "ثابت ماندن نوار کناری هنگام پیمایش"
 msgid "Keep what works. Redo what does not."
 msgstr "خوب‌ها را نگه دارید. بقیه را از نو بسازید."
 
-#: inc/elementor/class-section-rail.php:55
+#: inc/elementor/class-section-rail.php:58
 msgid "Label background"
 msgstr "پس‌زمینه برچسب"
 
-#: inc/elementor/class-section-rail.php:61
+#: inc/elementor/class-section-rail.php:64
 msgid "Label corner radius"
 msgstr "گردی گوشه برچسب"
 
-#: inc/elementor/class-section-rail.php:62
+#: inc/elementor/class-section-rail.php:65
 msgid "Label padding"
 msgstr "فاصله داخلی برچسب"
 
-#: inc/elementor/class-section-rail.php:56
+#: inc/elementor/class-section-rail.php:59
 msgid "Label text"
 msgstr "متن برچسب"
 
@@ -741,7 +849,7 @@ msgstr "متن برچسب"
 msgid "Language"
 msgstr "زبان"
 
-#: inc/elementor/class-comparison.php:38 inc/elementor/class-section-rail.php:37
+#: inc/elementor/class-comparison.php:48 inc/elementor/class-section-rail.php:38
 msgid "Layout"
 msgstr "چیدمان"
 
@@ -749,7 +857,7 @@ msgstr "چیدمان"
 msgid "Leave blank to inherit the theme color."
 msgstr "برای استفاده از رنگ پیش‌فرض پوسته خالی بگذارید."
 
-#: inc/settings.php:148
+#: inc/elementor/class-comparison.php:58 inc/settings.php:148
 msgid "Left"
 msgstr "چپ"
 
@@ -817,7 +925,7 @@ msgstr "بارگذاری قلم‌های گوگل"
 msgid "Local and system fonts"
 msgstr "قلم‌های محلی و سیستم"
 
-#: inc/elementor/class-visual-icon.php:24
+#: inc/elementor/class-visual-icon.php:28
 msgid "Main color"
 msgstr "رنگ اصلی"
 
@@ -837,31 +945,39 @@ msgstr "ناوبری اصلی"
 msgid "Make the first impression count."
 msgstr "تأثیر اول را ماندگار کنید."
 
-#: inc/elementor/class-section-rail.php:42
+#: inc/elementor/class-section-rail.php:45
 msgid "Marker border width"
 msgstr "ضخامت کادر نشانگر"
 
-#: inc/elementor/class-section-rail.php:48
+#: inc/elementor/class-section-rail.php:51
 msgid "Marker color"
 msgstr "رنگ نشانگر"
 
+#: inc/elementor/class-section-rail.php:40
+msgid "Marker content"
+msgstr "محتوای نشانگر"
+
+#: inc/elementor/class-section-rail.php:15
+msgid "Marker icon"
+msgstr "نماد نشانگر"
+
 #: inc/elementor/class-section-rail.php:41
+msgid "Marker shape"
+msgstr "شکل نشانگر"
+
+#: inc/elementor/class-section-rail.php:44
 msgid "Marker size"
 msgstr "اندازه نشانگر"
 
-#: inc/elementor/class-section-rail.php:43
+#: inc/elementor/class-section-rail.php:46
 msgid "Marker spacing"
 msgstr "فاصله نشانگرها"
-
-#: inc/elementor/class-section-rail.php:39
-msgid "Marker style"
-msgstr "سبک نشانگر"
 
 #: inc/settings.php:113
 msgid "Maximum logo width in pixels"
 msgstr "بیشترین عرض نشان به پیکسل"
 
-#: inc/elementor/class-process-board.php:35 inc/settings.php:18
+#: inc/elementor/class-process-board.php:42 inc/settings.php:18
 msgid "Maximum width"
 msgstr "بیشینه عرض"
 
@@ -897,7 +1013,7 @@ msgstr "تجربه‌های موبایلی که با نیاز کسانی طرا�
 msgid "Mobile navigation"
 msgstr "ناوبری موبایل"
 
-#: inc/elementor/class-section-rail.php:65
+#: inc/elementor/class-section-rail.php:68
 msgid "Mobile progress"
 msgstr "پیشرفت در موبایل"
 
@@ -933,7 +1049,7 @@ msgstr "برچسب راهبری"
 msgid "New site action"
 msgstr "دکمه سایت جدید"
 
-#: inc/elementor/class-comparison.php:46
+#: inc/elementor/class-comparison.php:65
 msgid "New site background"
 msgstr "پس‌زمینه سایت جدید"
 
@@ -941,7 +1057,7 @@ msgstr "پس‌زمینه سایت جدید"
 msgid "New site eyebrow"
 msgstr "متن بالای عنوان سایت جدید"
 
-#: inc/elementor/class-comparison.php:19 inc/elementor/class-comparison.php:48
+#: inc/elementor/class-comparison.php:19 inc/elementor/class-comparison.php:67
 msgid "New site heading"
 msgstr "عنوان سایت جدید"
 
@@ -981,19 +1097,19 @@ msgstr "برای این نسخه یادداشت انتشار ثبت نشده ا�
 msgid "Normal"
 msgstr "معمولی"
 
-#: inc/elementor/class-process-board.php:12
+#: inc/elementor/class-process-board.php:12 inc/elementor/class-process-board.php:13
 msgid "Number"
 msgstr "شماره"
 
-#: inc/elementor/class-section-rail.php:39
+#: inc/elementor/class-section-rail.php:40
 msgid "Numbers"
 msgstr "شماره‌ها"
 
-#: inc/elementor/class-section-rail.php:30
+#: inc/elementor/class-section-rail.php:31
 msgid "Off"
 msgstr "خاموش"
 
-#: inc/elementor/class-comparison.php:47
+#: inc/elementor/class-comparison.php:66
 msgid "Old site background"
 msgstr "پس‌زمینه سایت قدیمی"
 
@@ -1013,7 +1129,7 @@ msgstr "نام سایت قدیمی"
 msgid "Old site navigation"
 msgstr "راهبری سایت قدیمی"
 
-#: inc/elementor/class-section-rail.php:30
+#: inc/elementor/class-section-rail.php:31
 msgid "On"
 msgstr "روشن"
 
@@ -1061,11 +1177,11 @@ msgstr "اصلی: Instrument Serif / Vazirmatn"
 msgid "Original: Space Grotesk / Vazirmatn"
 msgstr "اصلی: Space Grotesk / Vazirmatn"
 
-#: inc/elementor/class-process-board.php:18 template-parts/home/approach.php:5
+#: inc/elementor/class-process-board.php:23 template-parts/home/approach.php:5
 msgid "Our process: understand, design, build, refine"
 msgstr "روند کار ما: شناخت، طراحی، ساخت و بهبود"
 
-#: inc/elementor/class-section-rail.php:22 inc/settings.php:56
+#: inc/elementor/class-section-rail.php:23 inc/settings.php:56
 msgid "Overview"
 msgstr "معرفی"
 
@@ -1077,7 +1193,7 @@ msgstr "صفحهٔ معرفی (انگلیسی)"
 msgid "Overview page (Persian)"
 msgstr "صفحهٔ معرفی (فارسی)"
 
-#: inc/elementor/class-process-board.php:34
+#: inc/elementor/class-process-board.php:41
 msgid "Padding"
 msgstr "فاصله داخلی"
 
@@ -1109,7 +1225,7 @@ msgstr "صفحه پیدا نشد"
 msgid "Page path"
 msgstr "مسیر صفحه"
 
-#: inc/elementor/class-section-rail.php:16 template-parts/home/section-rail.php:12
+#: inc/elementor/class-section-rail.php:17 template-parts/home/section-rail.php:12
 msgid "Page sections"
 msgstr "بخش‌های صفحه"
 
@@ -1133,7 +1249,7 @@ msgstr "کادربندی‌شده"
 msgid "Phone action"
 msgstr "دکمه تلفن همراه"
 
-#: inc/elementor/class-comparison.php:50
+#: inc/elementor/class-comparison.php:69
 msgid "Phone background"
 msgstr "پس‌زمینه تلفن همراه"
 
@@ -1141,7 +1257,7 @@ msgstr "پس‌زمینه تلفن همراه"
 msgid "Phone heading"
 msgstr "عنوان تلفن همراه"
 
-#: inc/elementor/class-comparison.php:42
+#: inc/elementor/class-comparison.php:61
 msgid "Phone width"
 msgstr "عرض تلفن همراه"
 
@@ -1205,11 +1321,11 @@ msgstr "سیاست حفظ حریم خصوصی"
 msgid "Process board"
 msgstr "تابلوی مراحل کار"
 
-#: inc/elementor/class-process-board.php:20
+#: inc/elementor/class-process-board.php:27
 msgid "Process steps"
 msgstr "مراحل کار"
 
-#: inc/elementor/class-section-rail.php:54
+#: inc/elementor/class-section-rail.php:57
 msgid "Progress color"
 msgstr "رنگ پیشرفت"
 
@@ -1221,7 +1337,7 @@ msgstr "پروژه"
 msgid "Project or business name"
 msgstr "نام پروژه یا کسب‌وکار"
 
-#: functions.php:357 inc/elementor/class-section-rail.php:26 template-parts/home/section-rail.php:9
+#: functions.php:357 inc/elementor/class-section-rail.php:27 template-parts/home/section-rail.php:9
 msgid "Project planner"
 msgstr "برنامه‌ریز پروژه"
 
@@ -1233,7 +1349,7 @@ msgstr "اطلاعات اصلی را یک‌جا بنویسید. وقتی تما
 msgid "Reading"
 msgstr "مناسب مطالعه"
 
-#: inc/elementor/class-section-rail.php:25 inc/settings.php:59
+#: inc/elementor/class-section-rail.php:26 inc/settings.php:59
 msgid "Redesign"
 msgstr "بازطراحی"
 
@@ -1245,7 +1361,7 @@ msgstr "صفحهٔ بازطراحی (انگلیسی)"
 msgid "Redesign page (Persian)"
 msgstr "صفحهٔ بازطراحی (فارسی)"
 
-#: inc/elementor/class-process-board.php:26 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:33 template-parts/home/approach.php:6
 msgid "Refine"
 msgstr "بهبود"
 
@@ -1277,9 +1393,13 @@ msgstr "حذف تصویر"
 msgid "Return home"
 msgstr "بازگشت به خانه"
 
-#: inc/settings.php:148
+#: inc/elementor/class-comparison.php:58 inc/settings.php:148
 msgid "Right"
 msgstr "راست"
+
+#: inc/elementor/class-section-rail.php:41
+msgid "Rounded square"
+msgstr "مربع گوشه‌گرد"
 
 #: inc/settings.php:601
 msgid "Save all changes"
@@ -1313,7 +1433,7 @@ msgstr "بخش"
 msgid "Section ID"
 msgstr "شناسه بخش"
 
-#: inc/elementor/class-section-rail.php:18
+#: inc/elementor/class-section-rail.php:19
 msgid "Section links"
 msgstr "پیوندهای بخش‌ها"
 
@@ -1325,7 +1445,7 @@ msgstr "راهبری بخش‌ها"
 msgid "Section order"
 msgstr "ترتیب بخش‌ها"
 
-#: inc/elementor/class-section-rail.php:15
+#: inc/elementor/class-section-rail.php:16
 msgid "Sections"
 msgstr "بخش‌ها"
 
@@ -1345,7 +1465,7 @@ msgstr "انتخاب تصویر"
 msgid "Service"
 msgstr "خدمت"
 
-#: functions.php:355 inc/elementor/class-section-rail.php:23 inc/settings.php:57
+#: functions.php:355 inc/elementor/class-section-rail.php:24 inc/settings.php:57
 msgid "Services"
 msgstr "خدمات"
 
@@ -1401,6 +1521,10 @@ msgstr "نمایش دکمه اقدام در فهرست موبایل"
 msgid "Show author"
 msgstr "نمایش نویسنده"
 
+#: inc/elementor/class-comparison.php:35
+msgid "Show before and after labels"
+msgstr "نمایش برچسب‌های قبل و بعد"
+
 #: inc/settings.php:161
 msgid "Show card dates"
 msgstr "نمایش تاریخ کارت‌ها"
@@ -1425,7 +1549,7 @@ msgstr "نمایش اطلاعات تماس"
 msgid "Show copyright"
 msgstr "نمایش حق نشر"
 
-#: inc/elementor/class-section-rail.php:33
+#: inc/elementor/class-section-rail.php:34
 msgid "Show current section name"
 msgstr "نمایش نام بخش کنونی"
 
@@ -1433,9 +1557,13 @@ msgstr "نمایش نام بخش کنونی"
 msgid "Show date"
 msgstr "نمایش تاریخ"
 
-#: inc/elementor/class-section-rail.php:31
+#: inc/elementor/class-section-rail.php:32
 msgid "Show desktop rail"
 msgstr "نمایش راهبری در دسکتاپ"
+
+#: inc/elementor/class-comparison.php:36
+msgid "Show drag instruction"
+msgstr "نمایش راهنمای کشیدن"
 
 #: inc/settings.php:162
 msgid "Show excerpts"
@@ -1465,7 +1593,7 @@ msgstr "نمایش ناحیه‌های ابزارک پایین صفحه"
 msgid "Show header search"
 msgstr "نمایش جست‌وجو در سربرگ"
 
-#: inc/elementor/class-section-rail.php:34
+#: inc/elementor/class-section-rail.php:35
 msgid "Show labels on hover and focus"
 msgstr "نمایش برچسب با اشاره یا فوکوس"
 
@@ -1489,7 +1617,7 @@ msgstr "نمایش خلاصه نوشته‌شده"
 msgid "Show mobile mockup"
 msgstr "نمایش نمای تلفن همراه"
 
-#: inc/elementor/class-section-rail.php:32
+#: inc/elementor/class-section-rail.php:33
 msgid "Show mobile progress"
 msgstr "نمایش پیشرفت در موبایل"
 
@@ -1545,11 +1673,11 @@ msgstr "نمایش پیوندهای اجتماعی"
 msgid "Show tags"
 msgstr "نمایش برچسب‌ها"
 
-#: inc/elementor/class-section-rail.php:38
+#: inc/elementor/class-section-rail.php:39
 msgid "Side"
 msgstr "سمت"
 
-#: inc/elementor/class-section-rail.php:40
+#: inc/elementor/class-section-rail.php:43
 msgid "Side offset"
 msgstr "فاصله از لبه"
 
@@ -1597,11 +1725,15 @@ msgstr "پروژه‌ای تازه"
 msgid "Spacing (px)"
 msgstr "فاصله‌گذاری (پیکسل)"
 
+#: inc/elementor/class-section-rail.php:41
+msgid "Square"
+msgstr "مربع"
+
 #: inc/settings.php:115
 msgid "Standard"
 msgstr "استاندارد"
 
-#: inc/elementor/class-section-rail.php:38 inc/elementor/class-visual-icon.php:30
+#: inc/elementor/class-process-board.php:18 inc/elementor/class-process-board.php:19 inc/elementor/class-process-board.php:25 inc/elementor/class-section-rail.php:39 inc/elementor/class-visual-icon.php:34 inc/elementor/class-visual-icon.php:38
 msgid "Start"
 msgstr "ابتدای جهت نوشتار"
 
@@ -1617,15 +1749,31 @@ msgstr "نقطه شروع"
 msgid "Statement and action"
 msgstr "پیام و اقدام"
 
-#: inc/elementor/class-process-board.php:14
+#: inc/elementor/class-process-board.php:16
 msgid "Step description"
 msgstr "توضیح مرحله"
 
-#: inc/elementor/class-process-board.php:48
+#: inc/elementor/class-process-board.php:14
+msgid "Step icon"
+msgstr "نماد مرحله"
+
+#: inc/elementor/class-process-board.php:55
+msgid "Step icon size"
+msgstr "اندازه نماد مرحله"
+
+#: inc/elementor/class-process-board.php:13
+msgid "Step marker"
+msgstr "نشانگر مرحله"
+
+#: inc/elementor/class-process-board.php:56
 msgid "Step padding"
 msgstr "فاصله داخلی مرحله"
 
-#: inc/elementor/class-process-board.php:13
+#: inc/elementor/class-process-board.php:17
+msgid "Step text direction"
+msgstr "جهت متن مرحله"
+
+#: inc/elementor/class-process-board.php:15
 msgid "Step title"
 msgstr "عنوان مرحله"
 
@@ -1637,7 +1785,7 @@ msgstr "سربرگ چسبان"
 msgid "Sticky sidebar top gap in pixels"
 msgstr "فاصله نوار کناری چسبان از بالای صفحه به پیکسل"
 
-#: inc/elementor/class-process-board.php:24 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:31 template-parts/home/approach.php:6
 msgid "Structure, content, interface"
 msgstr "ساختار، محتوا، رابط کاربری"
 
@@ -1665,13 +1813,21 @@ msgstr "نشانی تلگرام"
 msgid "Tell us what you want to make."
 msgstr "از پروژه‌ای که در ذهن دارید بگویید."
 
-#: inc/elementor/class-process-board.php:33
+#: inc/elementor/class-visual-icon.php:38
+msgid "Text alignment"
+msgstr "تراز متن"
+
+#: inc/elementor/class-process-board.php:40
 msgid "Text color"
 msgstr "رنگ متن"
 
 #: inc/settings.php:49
 msgid "Text color (blank = theme default)"
 msgstr "رنگ متن (خالی = پیش‌فرض پوسته)"
+
+#: inc/elementor/class-visual-icon.php:23
+msgid "Text direction"
+msgstr "جهت متن"
 
 #: inc/settings.php:565
 msgid "Text role"
@@ -1717,6 +1873,22 @@ msgstr "به‌روزرسانی پوسته"
 msgid "This width applies only when the page template is UNDO Custom Width. Leave the field blank for 1200px."
 msgstr "این عرض فقط با قالب UNDO Custom Width اعمال می‌شود. اگر کادر را خالی بگذارید، عرض ۱۲۰۰ پیکسل استفاده می‌شود."
 
+#: inc/elementor/class-visual-icon.php:20
+msgid "Title"
+msgstr "عنوان"
+
+#: inc/elementor/class-visual-icon.php:22
+msgid "Title HTML tag"
+msgstr "برچسب HTML عنوان"
+
+#: inc/elementor/class-process-board.php:18
+msgid "Title alignment"
+msgstr "تراز عنوان"
+
+#: inc/elementor/class-visual-icon.php:40
+msgid "Title color"
+msgstr "رنگ عنوان"
+
 #: functions.php:270
 msgid "To be discussed"
 msgstr "در گفت‌وگو مشخص می‌شود"
@@ -1724,6 +1896,10 @@ msgstr "در گفت‌وگو مشخص می‌شود"
 #: functions.php:365
 msgid "Toggle submenu for %s"
 msgstr "باز یا بسته کردن زیرمنوی %s"
+
+#: inc/elementor/class-comparison.php:58
+msgid "Top"
+msgstr "بالا"
 
 #: inc/settings.php:20
 msgid "Top margin in pixels"
@@ -1733,7 +1909,7 @@ msgstr "فاصله بیرونی بالا به پیکسل"
 msgid "Top padding in pixels"
 msgstr "فاصله درونی بالا به پیکسل"
 
-#: inc/elementor/class-section-rail.php:53
+#: inc/elementor/class-section-rail.php:56
 msgid "Track color"
 msgstr "رنگ مسیر"
 
@@ -1797,7 +1973,7 @@ msgstr "جزئیات به‌روزرسانی پوسته UNDO"
 msgid "Unable to verify the UNDO theme update package."
 msgstr "اعتبار فایل به‌روزرسانی پوسته UNDO تأیید نشد."
 
-#: inc/elementor/class-process-board.php:13 inc/elementor/class-process-board.php:23 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:15 inc/elementor/class-process-board.php:30 template-parts/home/approach.php:6
 msgid "Understand"
 msgstr "شناخت"
 
@@ -1865,7 +2041,7 @@ msgstr "برای نمایش سال جاری در متن حق نشر از {year} 
 msgid "Uses the WordPress posts page. Select a static homepage in Settings → Reading to show posts on this page."
 msgstr "از صفحهٔ نوشته‌های وردپرس استفاده می‌کند. برای نمایش نوشته‌ها در این صفحه، در تنظیمات ← خواندن یک صفحهٔ اصلی ایستا انتخاب کنید."
 
-#: inc/elementor/class-section-rail.php:44
+#: inc/elementor/class-section-rail.php:47
 msgid "Vertical position"
 msgstr "موقعیت عمودی"
 
@@ -1873,7 +2049,7 @@ msgstr "موقعیت عمودی"
 msgid "View the GitHub release"
 msgstr "مشاهده انتشار در گیت‌هاب"
 
-#: inc/elementor/class-comparison.php:39
+#: inc/elementor/class-comparison.php:49
 msgid "Visual height"
 msgstr "ارتفاع تصویر"
 
@@ -2005,7 +2181,7 @@ msgstr "صفحهٔ افزونه‌های وردپرس (فارسی)"
 msgid "Work  About  Contact"
 msgstr "نمونه‌کارها  درباره ما  تماس"
 
-#: inc/elementor/class-process-board.php:25 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:32 template-parts/home/approach.php:6
 msgid "Working product"
 msgstr "محصولی که کار می‌کند"
 

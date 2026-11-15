@@ -5,44 +5,128 @@
   "page_settings": [],
   "content": [
     {
-      "id": "62439a81",
+      "id": "9f998bb0",
       "elType": "container",
       "isInner": false,
       "settings": {
-        "css_classes": "undo-starter-archive undo-starter--en"
+        "css_classes": "undo-starter-archive undo-starter-journal undo-starter--en",
+        "content_width": "full"
       },
       "elements": [
         {
-          "id": "6cc6021b",
-          "elType": "widget",
-          "widgetType": "heading",
+          "id": "98882301",
+          "elType": "container",
           "isInner": false,
           "settings": {
-            "title": "Journal",
-            "header_size": "h1",
-            "_css_classes": "undo-starter-display"
+            "css_classes": "undo-starter-journal-hero",
+            "_element_id": "journal",
+            "html_tag": "section",
+            "content_width": "full"
           },
-          "elements": []
+          "elements": [
+            {
+              "id": "6cc6021b",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Journal",
+                "header_size": "h1",
+                "_css_classes": "undo-starter-display"
+              },
+              "elements": []
+            },
+            {
+              "id": "45d40002",
+              "elType": "widget",
+              "widgetType": "undo-visual-icon",
+              "isInner": false,
+              "settings": {
+                "icon_type": "undo",
+                "decorative": "yes",
+                "title": "Design, code, and the work between.",
+                "description": "Notes on designing, building, and making useful things better.",
+                "title_tag": "h2",
+                "content_direction": "ltr",
+                "_css_classes": "undo-starter-journal-intro"
+              },
+              "elements": []
+            }
+          ]
         },
         {
-          "id": "4d9e5fd9",
-          "elType": "widget",
-          "widgetType": "text-editor",
+          "id": "d20016da",
+          "elType": "container",
           "isInner": false,
           "settings": {
-            "editor": "Notes on designing, building, and making useful things better.",
-            "_css_classes": "undo-starter-lead"
+            "css_classes": "undo-starter-journal-feed",
+            "_element_id": "entries",
+            "html_tag": "section",
+            "content_width": "full"
           },
-          "elements": []
+          "elements": [
+            {
+              "id": "4d9e5fd9",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "Latest writing",
+                "header_size": "h2",
+                "_css_classes": "undo-starter-journal-feed-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "55017198",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "isInner": false,
+              "settings": {
+                "shortcode": "[undo_blog_posts]",
+                "_css_classes": "undo-starter-archive-posts"
+              },
+              "elements": []
+            }
+          ]
         },
         {
-          "id": "55017198",
+          "id": "f6b36805",
           "elType": "widget",
-          "widgetType": "shortcode",
+          "widgetType": "undo-section-rail",
           "isInner": false,
           "settings": {
-            "shortcode": "[undo_blog_posts]",
-            "_css_classes": "undo-starter-archive-posts"
+            "nav_label": "Journal sections",
+            "sections": [
+              {
+                "_id": "c650220",
+                "anchor": "journal",
+                "label": "Journal",
+                "number": "01",
+                "icon": {
+                  "value": "fas fa-book-open",
+                  "library": "fa-solid"
+                }
+              },
+              {
+                "_id": "7a734a3",
+                "anchor": "entries",
+                "label": "Writing",
+                "number": "02",
+                "icon": {
+                  "value": "fas fa-list",
+                  "library": "fa-solid"
+                }
+              }
+            ],
+            "guided_scroll": "no",
+            "show_desktop": "yes",
+            "show_mobile": "no",
+            "show_current": "yes",
+            "show_tooltips": "yes",
+            "side": "start",
+            "marker_style": "icon",
+            "marker_shape": "square"
           },
           "elements": []
         }

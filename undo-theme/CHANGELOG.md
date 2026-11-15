@@ -4,6 +4,22 @@ All changes to the customer theme are recorded here. Use a version number in `st
 
 ## [Unreleased]
 
+## [0.16.0] - 2026-11-15
+
+- Added icon markers and circle, rounded-square and square shapes to Section Navigation. The English and Persian Home starters now demonstrate icon markers.
+- Added per-step icon or number, text direction, title alignment and description alignment controls to Process Board. The Home starters use editable step icons.
+- Added optional title and description content with typography, color, spacing, alignment and direction controls to Visual Icon.
+- Added holder, before and after image pickers, responsive image dimensions in px, %, vw and vh, fit and position controls to Before/After Comparison. The center handle now accepts pointer drag; the slider remains keyboard accessible. Corrected the browser positioning so the split stays inside its frame.
+- Redesigned the English and Persian Blog Page starters with an editorial intro, live post list and section navigation. Bundled starter changes do not overwrite customer pages automatically.
+
+### فارسی
+
+- راهبری بخش‌ها دارای نشانگر نمادی و شکل‌های دایره، مربع گوشه‌گرد و مربع شد. صفحه‌های اصلی نمونه از نمادها استفاده می‌کنند.
+- در تابلوی مراحل، نماد یا شماره و جهت و تراز جداگانهٔ متن هر مرحله قابل تنظیم شد.
+- برای ابزارک نماد تصویری، عنوان و توضیح اختیاری همراه با تنظیمات قلم، رنگ، فاصله، تراز و جهت اضافه شد.
+- مقایسهٔ قبل و بعد اکنون تصویر پس‌زمینه، تصویر قبل و بعد، اندازه‌های واکنش‌گرا و دستگیرهٔ قابل کشیدن دارد؛ کنترل صفحه‌کلید نیز حفظ شد.
+- الگوهای وبلاگ فارسی و انگلیسی با ابزارک‌های تازه بازطراحی شدند؛ صفحه‌های مشتری خودکار بازنویسی نمی‌شوند.
+
 ## [0.15.0] - 2026-11-15
 
 - Added four built-in Elementor Home widgets: Section Navigation, Process Board, Visual Icon, and Before/After Comparison. Each exposes content and visual controls, with logical positioning and Persian/English RTL/LTR support.

@@ -1,8 +1,24 @@
 msgid ""
-msgstr "Project-Id-Version: UNDO Web Developments 0.15.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: UNDO Web Developments 0.16.0\nReport-Msgid-Bugs-To: UNDO Web Developments\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nLanguage: \nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: comments.php:4
 msgid "% comments"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:57
+msgid "%s image fit"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:56
+msgid "%s image height"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:58
+msgid "%s image position"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:55
+msgid "%s image width"
 msgstr ""
 
 #: functions.php:263
@@ -25,7 +41,7 @@ msgstr ""
 msgid "A website with purpose."
 msgstr ""
 
-#: inc/elementor/class-comparison.php:49 inc/elementor/class-process-board.php:42 inc/elementor/class-visual-icon.php:25 inc/settings.php:90
+#: inc/elementor/class-comparison.php:68 inc/elementor/class-process-board.php:49 inc/elementor/class-visual-icon.php:29 inc/settings.php:90
 msgid "Accent color"
 msgstr ""
 
@@ -33,7 +49,7 @@ msgstr ""
 msgid "Accent text"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:18
+#: inc/elementor/class-process-board.php:23
 msgid "Accessible description"
 msgstr ""
 
@@ -41,7 +57,7 @@ msgstr ""
 msgid "Accessible label"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:16
+#: inc/elementor/class-section-rail.php:17
 msgid "Accessible navigation name"
 msgstr ""
 
@@ -65,23 +81,23 @@ msgstr ""
 msgid "Action label (Persian)"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:67
+#: inc/elementor/class-section-rail.php:70
 msgid "Active color"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:49
+#: inc/elementor/class-section-rail.php:52
 msgid "Active marker background"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:51
+#: inc/elementor/class-section-rail.php:54
 msgid "Active marker on dark section"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:50
+#: inc/elementor/class-section-rail.php:53
 msgid "Active marker text"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:52
+#: inc/elementor/class-section-rail.php:55
 msgid "Active text on dark section"
 msgstr ""
 
@@ -97,23 +113,31 @@ msgstr ""
 msgid "Add font family"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:26 template-parts/home/hero.php:9
+#: inc/elementor/class-comparison.php:26 inc/elementor/class-comparison.php:53 template-parts/home/hero.php:9
 msgid "After"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:44
+msgid "After image"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:45
+msgid "After image alternative text"
 msgstr ""
 
 #: inc/elementor/class-comparison.php:26
 msgid "After label"
 msgstr ""
 
-#: inc/elementor/class-visual-icon.php:29
+#: inc/elementor/class-visual-icon.php:33
 msgid "Alignment"
 msgstr ""
 
-#: inc/elementor/class-visual-icon.php:22
+#: inc/elementor/class-visual-icon.php:26
 msgid "Appearance"
 msgstr ""
 
-#: functions.php:356 inc/elementor/class-section-rail.php:24 inc/settings.php:58
+#: functions.php:356 inc/elementor/class-section-rail.php:25 inc/settings.php:58
 msgid "Approach"
 msgstr ""
 
@@ -133,24 +157,32 @@ msgstr ""
 msgid "Back to WordPress Updates"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:32 inc/elementor/class-visual-icon.php:23
+#: inc/elementor/class-process-board.php:39 inc/elementor/class-visual-icon.php:27
 msgid "Background"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:68
+#: inc/elementor/class-section-rail.php:71
 msgid "Bar height"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:69
+#: inc/elementor/class-section-rail.php:72
 msgid "Bar width"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:25 template-parts/home/hero.php:9
+#: inc/elementor/class-comparison.php:25 inc/elementor/class-comparison.php:53 template-parts/home/hero.php:9
 msgid "Before"
 msgstr ""
 
 #: inc/elementor/class-comparison.php:7
 msgid "Before and after comparison"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:42
+msgid "Before image"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:43
+msgid "Before image alternative text"
 msgstr ""
 
 #: inc/elementor/class-comparison.php:25
@@ -165,12 +197,16 @@ msgstr ""
 msgid "Blog design"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:31
+#: inc/elementor/class-process-board.php:38
 msgid "Board"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:17
+#: inc/elementor/class-process-board.php:22
 msgid "Board code"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:24
+msgid "Board direction"
 msgstr ""
 
 #: inc/settings.php:31
@@ -185,6 +221,10 @@ msgstr ""
 msgid "Border color"
 msgstr ""
 
+#: inc/elementor/class-comparison.php:58
+msgid "Bottom"
+msgstr ""
+
 #: inc/settings.php:21
 msgid "Bottom margin in pixels"
 msgstr ""
@@ -193,7 +233,7 @@ msgstr ""
 msgid "Bottom padding in pixels"
 msgstr ""
 
-#: inc/elementor/class-visual-icon.php:26
+#: inc/elementor/class-visual-icon.php:30
 msgid "Box size"
 msgstr ""
 
@@ -205,15 +245,15 @@ msgstr ""
 msgid "Browser address"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:41
+#: inc/elementor/class-comparison.php:60
 msgid "Browser corner radius"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:40
+#: inc/elementor/class-comparison.php:50
 msgid "Browser width"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:25 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:32 template-parts/home/approach.php:6
 msgid "Build"
 msgstr ""
 
@@ -245,7 +285,7 @@ msgstr ""
 msgid "COMPANY NAME"
 msgstr ""
 
-#: inc/elementor/class-visual-icon.php:31
+#: inc/elementor/class-comparison.php:58 inc/elementor/class-process-board.php:18 inc/elementor/class-process-board.php:19 inc/elementor/class-process-board.php:25 inc/elementor/class-visual-icon.php:35 inc/elementor/class-visual-icon.php:38
 msgid "Center"
 msgstr ""
 
@@ -269,6 +309,10 @@ msgstr ""
 msgid "Choose icon"
 msgstr ""
 
+#: inc/elementor/class-section-rail.php:41
+msgid "Circle"
+msgstr ""
+
 #: inc/settings.php:480
 msgid "Clear"
 msgstr ""
@@ -289,7 +333,7 @@ msgstr ""
 msgid "Colors"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:45 inc/elementor/class-section-rail.php:47
+#: inc/elementor/class-comparison.php:64 inc/elementor/class-section-rail.php:50
 msgid "Colors and type"
 msgstr ""
 
@@ -325,7 +369,11 @@ msgstr ""
 msgid "Contact phone"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:11 inc/elementor/class-process-board.php:15
+#: inc/elementor/class-comparison.php:57
+msgid "Contain"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:11 inc/elementor/class-process-board.php:20
 msgid "Content"
 msgstr ""
 
@@ -345,15 +393,19 @@ msgstr ""
 msgid "Copyright line (Persian)"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:36 inc/elementor/class-visual-icon.php:28
+#: inc/elementor/class-process-board.php:43 inc/elementor/class-visual-icon.php:32
 msgid "Corner radius"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:57
+msgid "Cover"
 msgstr ""
 
 #: template-parts/home/approach.php:3
 msgid "Create new. Redo what exists."
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:57
+#: inc/elementor/class-section-rail.php:60
 msgid "Current section color"
 msgstr ""
 
@@ -393,23 +445,31 @@ msgstr ""
 msgid "Describe the problem or the result you want"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:44
+#: inc/elementor/class-visual-icon.php:21
+msgid "Description"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:19
+msgid "Description alignment"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:51 inc/elementor/class-visual-icon.php:41
 msgid "Description color"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:24 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:31 template-parts/home/approach.php:6
 msgid "Design"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:26 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:33 template-parts/home/approach.php:6
 msgid "Details that make it last"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:43
+#: inc/elementor/class-process-board.php:50
 msgid "Divider color"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:39
+#: inc/elementor/class-section-rail.php:40
 msgid "Dots"
 msgstr ""
 
@@ -445,7 +505,7 @@ msgstr ""
 msgid "Elementor pages using a UNDO page template follow the widths and spacing below. Elementor Full Width and Canvas use Elementor layouts instead; Canvas also omits the theme header and footer."
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:38 inc/elementor/class-visual-icon.php:32
+#: inc/elementor/class-process-board.php:18 inc/elementor/class-process-board.php:19 inc/elementor/class-process-board.php:25 inc/elementor/class-section-rail.php:39 inc/elementor/class-visual-icon.php:36 inc/elementor/class-visual-icon.php:38
 msgid "End"
 msgstr ""
 
@@ -457,12 +517,16 @@ msgstr ""
 msgid "Explore"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:16
+#: inc/elementor/class-process-board.php:21
 msgid "Eyebrow"
 msgstr ""
 
 #: inc/settings.php:475
 msgid "Family name"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:57
+msgid "Fill"
 msgstr ""
 
 #: footer.php:46
@@ -565,7 +629,7 @@ msgstr ""
 msgid "GitHub URL"
 msgstr ""
 
-#: inc/elementor/class-visual-icon.php:27
+#: inc/elementor/class-visual-icon.php:31
 msgid "Glyph scale"
 msgstr ""
 
@@ -573,7 +637,7 @@ msgstr ""
 msgid "Goal"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:23 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:30 template-parts/home/approach.php:6
 msgid "Goals, users, constraints"
 msgstr ""
 
@@ -593,12 +657,24 @@ msgstr ""
 msgid "Grid columns"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:30
+#: inc/elementor/class-section-rail.php:31
 msgid "Guided section scrolling"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:16 template-parts/home/approach.php:5
+#: inc/elementor/class-process-board.php:21 template-parts/home/approach.php:5
 msgid "HOW WE WORK"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:72
+msgid "Handle arrows"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:71
+msgid "Handle background"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:73
+msgid "Handle size"
 msgstr ""
 
 #: inc/settings.php:110
@@ -621,7 +697,11 @@ msgstr ""
 msgid "Header logo"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:41
+#: inc/elementor/class-process-board.php:25
+msgid "Heading alignment"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:48
 msgid "Heading and steps"
 msgstr ""
 
@@ -653,7 +733,15 @@ msgstr ""
 msgid "Hidden"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:21 template-parts/home/section-rail.php:5 template-parts/home/section-rail.php:14 template-parts/page-layout.php:34
+#: inc/elementor/class-comparison.php:53
+msgid "Holder"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:41
+msgid "Holder background image"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:22 template-parts/home/section-rail.php:5 template-parts/home/section-rail.php:14 template-parts/page-layout.php:34
 msgid "Home"
 msgstr ""
 
@@ -669,7 +757,7 @@ msgstr ""
 msgid "Homepage sections"
 msgstr ""
 
-#: inc/elementor/class-visual-icon.php:11
+#: inc/elementor/class-process-board.php:13 inc/elementor/class-visual-icon.php:11
 msgid "Icon"
 msgstr ""
 
@@ -677,15 +765,35 @@ msgstr ""
 msgid "Icon design"
 msgstr ""
 
+#: inc/elementor/class-section-rail.php:42
+msgid "Icon size"
+msgstr ""
+
+#: inc/elementor/class-visual-icon.php:39
+msgid "Icon to text spacing"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:40
+msgid "Icons"
+msgstr ""
+
 #: inc/settings.php:159
 msgid "Image grid"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:66
+#: inc/elementor/class-comparison.php:40
+msgid "Images"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:69
 msgid "Inactive color"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:35
+#: inc/elementor/class-process-board.php:17 inc/elementor/class-process-board.php:18 inc/elementor/class-process-board.php:19 inc/elementor/class-process-board.php:24 inc/elementor/class-visual-icon.php:23
+msgid "Inherit"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:37
 msgid "Initial comparison split"
 msgstr ""
 
@@ -697,7 +805,7 @@ msgstr ""
 msgid "Instruction"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:51
+#: inc/elementor/class-comparison.php:70
 msgid "Instruction color"
 msgstr ""
 
@@ -721,19 +829,19 @@ msgstr ""
 msgid "Keep what works. Redo what does not."
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:55
+#: inc/elementor/class-section-rail.php:58
 msgid "Label background"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:61
+#: inc/elementor/class-section-rail.php:64
 msgid "Label corner radius"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:62
+#: inc/elementor/class-section-rail.php:65
 msgid "Label padding"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:56
+#: inc/elementor/class-section-rail.php:59
 msgid "Label text"
 msgstr ""
 
@@ -741,7 +849,7 @@ msgstr ""
 msgid "Language"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:38 inc/elementor/class-section-rail.php:37
+#: inc/elementor/class-comparison.php:48 inc/elementor/class-section-rail.php:38
 msgid "Layout"
 msgstr ""
 
@@ -749,7 +857,7 @@ msgstr ""
 msgid "Leave blank to inherit the theme color."
 msgstr ""
 
-#: inc/settings.php:148
+#: inc/elementor/class-comparison.php:58 inc/settings.php:148
 msgid "Left"
 msgstr ""
 
@@ -817,7 +925,7 @@ msgstr ""
 msgid "Local and system fonts"
 msgstr ""
 
-#: inc/elementor/class-visual-icon.php:24
+#: inc/elementor/class-visual-icon.php:28
 msgid "Main color"
 msgstr ""
 
@@ -837,31 +945,39 @@ msgstr ""
 msgid "Make the first impression count."
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:42
+#: inc/elementor/class-section-rail.php:45
 msgid "Marker border width"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:48
+#: inc/elementor/class-section-rail.php:51
 msgid "Marker color"
 msgstr ""
 
+#: inc/elementor/class-section-rail.php:40
+msgid "Marker content"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:15
+msgid "Marker icon"
+msgstr ""
+
 #: inc/elementor/class-section-rail.php:41
+msgid "Marker shape"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:44
 msgid "Marker size"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:43
+#: inc/elementor/class-section-rail.php:46
 msgid "Marker spacing"
-msgstr ""
-
-#: inc/elementor/class-section-rail.php:39
-msgid "Marker style"
 msgstr ""
 
 #: inc/settings.php:113
 msgid "Maximum logo width in pixels"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:35 inc/settings.php:18
+#: inc/elementor/class-process-board.php:42 inc/settings.php:18
 msgid "Maximum width"
 msgstr ""
 
@@ -897,7 +1013,7 @@ msgstr ""
 msgid "Mobile navigation"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:65
+#: inc/elementor/class-section-rail.php:68
 msgid "Mobile progress"
 msgstr ""
 
@@ -933,7 +1049,7 @@ msgstr ""
 msgid "New site action"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:46
+#: inc/elementor/class-comparison.php:65
 msgid "New site background"
 msgstr ""
 
@@ -941,7 +1057,7 @@ msgstr ""
 msgid "New site eyebrow"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:19 inc/elementor/class-comparison.php:48
+#: inc/elementor/class-comparison.php:19 inc/elementor/class-comparison.php:67
 msgid "New site heading"
 msgstr ""
 
@@ -981,19 +1097,19 @@ msgstr ""
 msgid "Normal"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:12
+#: inc/elementor/class-process-board.php:12 inc/elementor/class-process-board.php:13
 msgid "Number"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:39
+#: inc/elementor/class-section-rail.php:40
 msgid "Numbers"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:30
+#: inc/elementor/class-section-rail.php:31
 msgid "Off"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:47
+#: inc/elementor/class-comparison.php:66
 msgid "Old site background"
 msgstr ""
 
@@ -1013,7 +1129,7 @@ msgstr ""
 msgid "Old site navigation"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:30
+#: inc/elementor/class-section-rail.php:31
 msgid "On"
 msgstr ""
 
@@ -1061,11 +1177,11 @@ msgstr ""
 msgid "Original: Space Grotesk / Vazirmatn"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:18 template-parts/home/approach.php:5
+#: inc/elementor/class-process-board.php:23 template-parts/home/approach.php:5
 msgid "Our process: understand, design, build, refine"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:22 inc/settings.php:56
+#: inc/elementor/class-section-rail.php:23 inc/settings.php:56
 msgid "Overview"
 msgstr ""
 
@@ -1077,7 +1193,7 @@ msgstr ""
 msgid "Overview page (Persian)"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:34
+#: inc/elementor/class-process-board.php:41
 msgid "Padding"
 msgstr ""
 
@@ -1109,7 +1225,7 @@ msgstr ""
 msgid "Page path"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:16 template-parts/home/section-rail.php:12
+#: inc/elementor/class-section-rail.php:17 template-parts/home/section-rail.php:12
 msgid "Page sections"
 msgstr ""
 
@@ -1133,7 +1249,7 @@ msgstr ""
 msgid "Phone action"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:50
+#: inc/elementor/class-comparison.php:69
 msgid "Phone background"
 msgstr ""
 
@@ -1141,7 +1257,7 @@ msgstr ""
 msgid "Phone heading"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:42
+#: inc/elementor/class-comparison.php:61
 msgid "Phone width"
 msgstr ""
 
@@ -1205,11 +1321,11 @@ msgstr ""
 msgid "Process board"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:20
+#: inc/elementor/class-process-board.php:27
 msgid "Process steps"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:54
+#: inc/elementor/class-section-rail.php:57
 msgid "Progress color"
 msgstr ""
 
@@ -1221,7 +1337,7 @@ msgstr ""
 msgid "Project or business name"
 msgstr ""
 
-#: functions.php:357 inc/elementor/class-section-rail.php:26 template-parts/home/section-rail.php:9
+#: functions.php:357 inc/elementor/class-section-rail.php:27 template-parts/home/section-rail.php:9
 msgid "Project planner"
 msgstr ""
 
@@ -1233,7 +1349,7 @@ msgstr ""
 msgid "Reading"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:25 inc/settings.php:59
+#: inc/elementor/class-section-rail.php:26 inc/settings.php:59
 msgid "Redesign"
 msgstr ""
 
@@ -1245,7 +1361,7 @@ msgstr ""
 msgid "Redesign page (Persian)"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:26 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:33 template-parts/home/approach.php:6
 msgid "Refine"
 msgstr ""
 
@@ -1277,8 +1393,12 @@ msgstr ""
 msgid "Return home"
 msgstr ""
 
-#: inc/settings.php:148
+#: inc/elementor/class-comparison.php:58 inc/settings.php:148
 msgid "Right"
+msgstr ""
+
+#: inc/elementor/class-section-rail.php:41
+msgid "Rounded square"
 msgstr ""
 
 #: inc/settings.php:601
@@ -1313,7 +1433,7 @@ msgstr ""
 msgid "Section ID"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:18
+#: inc/elementor/class-section-rail.php:19
 msgid "Section links"
 msgstr ""
 
@@ -1325,7 +1445,7 @@ msgstr ""
 msgid "Section order"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:15
+#: inc/elementor/class-section-rail.php:16
 msgid "Sections"
 msgstr ""
 
@@ -1345,7 +1465,7 @@ msgstr ""
 msgid "Service"
 msgstr ""
 
-#: functions.php:355 inc/elementor/class-section-rail.php:23 inc/settings.php:57
+#: functions.php:355 inc/elementor/class-section-rail.php:24 inc/settings.php:57
 msgid "Services"
 msgstr ""
 
@@ -1401,6 +1521,10 @@ msgstr ""
 msgid "Show author"
 msgstr ""
 
+#: inc/elementor/class-comparison.php:35
+msgid "Show before and after labels"
+msgstr ""
+
 #: inc/settings.php:161
 msgid "Show card dates"
 msgstr ""
@@ -1425,7 +1549,7 @@ msgstr ""
 msgid "Show copyright"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:33
+#: inc/elementor/class-section-rail.php:34
 msgid "Show current section name"
 msgstr ""
 
@@ -1433,8 +1557,12 @@ msgstr ""
 msgid "Show date"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:31
+#: inc/elementor/class-section-rail.php:32
 msgid "Show desktop rail"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:36
+msgid "Show drag instruction"
 msgstr ""
 
 #: inc/settings.php:162
@@ -1465,7 +1593,7 @@ msgstr ""
 msgid "Show header search"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:34
+#: inc/elementor/class-section-rail.php:35
 msgid "Show labels on hover and focus"
 msgstr ""
 
@@ -1489,7 +1617,7 @@ msgstr ""
 msgid "Show mobile mockup"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:32
+#: inc/elementor/class-section-rail.php:33
 msgid "Show mobile progress"
 msgstr ""
 
@@ -1545,11 +1673,11 @@ msgstr ""
 msgid "Show tags"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:38
+#: inc/elementor/class-section-rail.php:39
 msgid "Side"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:40
+#: inc/elementor/class-section-rail.php:43
 msgid "Side offset"
 msgstr ""
 
@@ -1597,11 +1725,15 @@ msgstr ""
 msgid "Spacing (px)"
 msgstr ""
 
+#: inc/elementor/class-section-rail.php:41
+msgid "Square"
+msgstr ""
+
 #: inc/settings.php:115
 msgid "Standard"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:38 inc/elementor/class-visual-icon.php:30
+#: inc/elementor/class-process-board.php:18 inc/elementor/class-process-board.php:19 inc/elementor/class-process-board.php:25 inc/elementor/class-section-rail.php:39 inc/elementor/class-visual-icon.php:34 inc/elementor/class-visual-icon.php:38
 msgid "Start"
 msgstr ""
 
@@ -1617,15 +1749,31 @@ msgstr ""
 msgid "Statement and action"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:14
+#: inc/elementor/class-process-board.php:16
 msgid "Step description"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:48
-msgid "Step padding"
+#: inc/elementor/class-process-board.php:14
+msgid "Step icon"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:55
+msgid "Step icon size"
 msgstr ""
 
 #: inc/elementor/class-process-board.php:13
+msgid "Step marker"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:56
+msgid "Step padding"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:17
+msgid "Step text direction"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:15
 msgid "Step title"
 msgstr ""
 
@@ -1637,7 +1785,7 @@ msgstr ""
 msgid "Sticky sidebar top gap in pixels"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:24 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:31 template-parts/home/approach.php:6
 msgid "Structure, content, interface"
 msgstr ""
 
@@ -1665,12 +1813,20 @@ msgstr ""
 msgid "Tell us what you want to make."
 msgstr ""
 
-#: inc/elementor/class-process-board.php:33
+#: inc/elementor/class-visual-icon.php:38
+msgid "Text alignment"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:40
 msgid "Text color"
 msgstr ""
 
 #: inc/settings.php:49
 msgid "Text color (blank = theme default)"
+msgstr ""
+
+#: inc/elementor/class-visual-icon.php:23
+msgid "Text direction"
 msgstr ""
 
 #: inc/settings.php:565
@@ -1717,12 +1873,32 @@ msgstr ""
 msgid "This width applies only when the page template is UNDO Custom Width. Leave the field blank for 1200px."
 msgstr ""
 
+#: inc/elementor/class-visual-icon.php:20
+msgid "Title"
+msgstr ""
+
+#: inc/elementor/class-visual-icon.php:22
+msgid "Title HTML tag"
+msgstr ""
+
+#: inc/elementor/class-process-board.php:18
+msgid "Title alignment"
+msgstr ""
+
+#: inc/elementor/class-visual-icon.php:40
+msgid "Title color"
+msgstr ""
+
 #: functions.php:270
 msgid "To be discussed"
 msgstr ""
 
 #: functions.php:365
 msgid "Toggle submenu for %s"
+msgstr ""
+
+#: inc/elementor/class-comparison.php:58
+msgid "Top"
 msgstr ""
 
 #: inc/settings.php:20
@@ -1733,7 +1909,7 @@ msgstr ""
 msgid "Top padding in pixels"
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:53
+#: inc/elementor/class-section-rail.php:56
 msgid "Track color"
 msgstr ""
 
@@ -1797,7 +1973,7 @@ msgstr ""
 msgid "Unable to verify the UNDO theme update package."
 msgstr ""
 
-#: inc/elementor/class-process-board.php:13 inc/elementor/class-process-board.php:23 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:15 inc/elementor/class-process-board.php:30 template-parts/home/approach.php:6
 msgid "Understand"
 msgstr ""
 
@@ -1865,7 +2041,7 @@ msgstr ""
 msgid "Uses the WordPress posts page. Select a static homepage in Settings → Reading to show posts on this page."
 msgstr ""
 
-#: inc/elementor/class-section-rail.php:44
+#: inc/elementor/class-section-rail.php:47
 msgid "Vertical position"
 msgstr ""
 
@@ -1873,7 +2049,7 @@ msgstr ""
 msgid "View the GitHub release"
 msgstr ""
 
-#: inc/elementor/class-comparison.php:39
+#: inc/elementor/class-comparison.php:49
 msgid "Visual height"
 msgstr ""
 
@@ -2005,7 +2181,7 @@ msgstr ""
 msgid "Work  About  Contact"
 msgstr ""
 
-#: inc/elementor/class-process-board.php:25 template-parts/home/approach.php:6
+#: inc/elementor/class-process-board.php:32 template-parts/home/approach.php:6
 msgid "Working product"
 msgstr ""
 

@@ -557,6 +557,54 @@ Object.assign(fa, {
   'Visual icon': 'نماد تصویری',
 });
 
+Object.assign(fa, {
+  '%s image fit': 'نحوه نمایش تصویر %s',
+  '%s image height': 'ارتفاع تصویر %s',
+  '%s image position': 'موقعیت تصویر %s',
+  '%s image width': 'عرض تصویر %s',
+  'After image': 'تصویر بعد',
+  'After image alternative text': 'متن جایگزین تصویر بعد',
+  'Before image': 'تصویر قبل',
+  'Before image alternative text': 'متن جایگزین تصویر قبل',
+  'Board direction': 'جهت تابلو',
+  'Bottom': 'پایین',
+  'Circle': 'دایره',
+  'Contain': 'نمایش کامل',
+  'Cover': 'پوشاندن کادر',
+  'Description': 'توضیح',
+  'Description alignment': 'تراز توضیح',
+  'Fill': 'پر کردن کادر',
+  'Handle arrows': 'پیکان‌های دستگیره',
+  'Handle background': 'پس‌زمینه دستگیره',
+  'Handle size': 'اندازه دستگیره',
+  'Heading alignment': 'تراز سربرگ',
+  'Holder': 'نگهدارنده',
+  'Holder background image': 'تصویر پس‌زمینه نگهدارنده',
+  'Icon size': 'اندازه نماد',
+  'Icon to text spacing': 'فاصله نماد تا متن',
+  'Icons': 'نمادها',
+  'Images': 'تصاویر',
+  'Inherit': 'پیروی از صفحه',
+  'Marker content': 'محتوای نشانگر',
+  'Marker icon': 'نماد نشانگر',
+  'Marker shape': 'شکل نشانگر',
+  'Rounded square': 'مربع گوشه‌گرد',
+  'Show before and after labels': 'نمایش برچسب‌های قبل و بعد',
+  'Show drag instruction': 'نمایش راهنمای کشیدن',
+  'Square': 'مربع',
+  'Step icon': 'نماد مرحله',
+  'Step icon size': 'اندازه نماد مرحله',
+  'Step marker': 'نشانگر مرحله',
+  'Step text direction': 'جهت متن مرحله',
+  'Text alignment': 'تراز متن',
+  'Text direction': 'جهت متن',
+  'Title': 'عنوان',
+  'Title HTML tag': 'برچسب HTML عنوان',
+  'Title alignment': 'تراز عنوان',
+  'Title color': 'رنگ عنوان',
+  'Top': 'بالا',
+});
+
 const files = [];
 function walk(dir) { for (const name of fs.readdirSync(dir)) { const file = path.join(dir, name); if (fs.statSync(file).isDirectory()) walk(file); else if (file.endsWith('.php')) files.push(file); } }
 walk(root);
@@ -583,7 +631,7 @@ const missing = ids.filter(id => !fa[id]);
 if (missing.length) throw new Error('Missing Persian translations: ' + missing.join(' | '));
 const quote = value => JSON.stringify(value);
 const header = locale => [
-  'Project-Id-Version: UNDO Web Developments 0.15.0',
+  'Project-Id-Version: UNDO Web Developments 0.16.0',
   'Report-Msgid-Bugs-To: UNDO Web Developments',
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',

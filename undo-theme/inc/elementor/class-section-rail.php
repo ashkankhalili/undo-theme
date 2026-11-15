@@ -12,6 +12,7 @@ class Undo_Home_Section_Rail_Widget extends Undo_Home_Widget_Base {
         $repeater->add_control( 'anchor', array( 'label' => __( 'Section ID', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => 'overview', 'label_block' => true ) );
         $repeater->add_control( 'label', array( 'label' => __( 'Navigation label', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __( 'Section', 'undo-theme' ), 'label_block' => true ) );
         $repeater->add_control( 'number', array( 'label' => __( 'Optional number', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => '' ) );
+        $repeater->add_control( 'icon', array( 'label' => __( 'Marker icon', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::ICONS ) );
         $this->start_controls_section( 'rail_content', array( 'label' => __( 'Sections', 'undo-theme' ) ) );
         $this->add_control( 'nav_label', array( 'label' => __( 'Accessible navigation name', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __( 'Page sections', 'undo-theme' ) ) );
         $this->add_control( 'sections', array(
@@ -36,7 +37,9 @@ class Undo_Home_Section_Rail_Widget extends Undo_Home_Widget_Base {
 
         $this->start_controls_section( 'rail_layout', array( 'label' => __( 'Layout', 'undo-theme' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ) );
         $this->add_control( 'side', array( 'label' => __( 'Side', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::SELECT, 'options' => array( 'start' => __( 'Start', 'undo-theme' ), 'end' => __( 'End', 'undo-theme' ) ), 'default' => 'start' ) );
-        $this->add_control( 'marker_style', array( 'label' => __( 'Marker style', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::SELECT, 'options' => array( 'number' => __( 'Numbers', 'undo-theme' ), 'dot' => __( 'Dots', 'undo-theme' ) ), 'default' => 'number' ) );
+        $this->add_control( 'marker_style', array( 'label' => __( 'Marker content', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::SELECT, 'options' => array( 'number' => __( 'Numbers', 'undo-theme' ), 'dot' => __( 'Dots', 'undo-theme' ), 'icon' => __( 'Icons', 'undo-theme' ) ), 'default' => 'number' ) );
+        $this->add_control( 'marker_shape', array( 'label' => __( 'Marker shape', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::SELECT, 'options' => array( 'circle' => __( 'Circle', 'undo-theme' ), 'rounded' => __( 'Rounded square', 'undo-theme' ), 'square' => __( 'Square', 'undo-theme' ) ), 'default' => 'circle' ) );
+        $this->add_responsive_control( 'rail_icon_size', array( 'label' => __( 'Icon size', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::SLIDER, 'size_units' => array( 'px' ), 'range' => array( 'px' => array( 'min' => 8, 'max' => 42 ) ), 'selectors' => array( '{{WRAPPER}} .section-rail a>span svg,{{WRAPPER}} .section-rail a>span i' => 'width:{{SIZE}}{{UNIT}};height:{{SIZE}}{{UNIT}};font-size:{{SIZE}}{{UNIT}};' ) ) );
         $this->add_responsive_control( 'rail_offset', array( 'label' => __( 'Side offset', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::SLIDER, 'size_units' => array( 'px' ), 'range' => array( 'px' => array( 'min' => 0, 'max' => 120 ) ), 'selectors' => array( '{{WRAPPER}} .section-rail' => '--undo-rail-offset:{{SIZE}}{{UNIT}};' ) ) );
         $this->add_responsive_control( 'rail_marker_size', array( 'label' => __( 'Marker size', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::SLIDER, 'size_units' => array( 'px' ), 'range' => array( 'px' => array( 'min' => 10, 'max' => 60 ) ), 'selectors' => array( '{{WRAPPER}} .section-rail' => '--undo-rail-marker:{{SIZE}}{{UNIT}};' ) ) );
         $this->add_responsive_control( 'rail_marker_border', array( 'label' => __( 'Marker border width', 'undo-theme' ), 'type' => \Elementor\Controls_Manager::SLIDER, 'size_units' => array( 'px' ), 'range' => array( 'px' => array( 'min' => 0, 'max' => 6 ) ), 'selectors' => array( '{{WRAPPER}} .section-rail a>span' => 'border-width:{{SIZE}}{{UNIT}};' ) ) );
@@ -77,15 +80,22 @@ class Undo_Home_Section_Rail_Widget extends Undo_Home_Widget_Base {
         foreach ( $sections as $item ) {
             $anchor = isset( $item['anchor'] ) ? sanitize_html_class( $item['anchor'] ) : '';
             if ( '' === $anchor ) { continue; }
-            $items[] = array( 'anchor' => $anchor, 'label' => isset( $item['label'] ) ? $item['label'] : $anchor, 'number' => isset( $item['number'] ) ? $item['number'] : '' );
+            $items[] = array( 'anchor' => $anchor, 'label' => isset( $item['label'] ) ? $item['label'] : $anchor, 'number' => isset( $item['number'] ) ? $item['number'] : '', 'icon' => isset( $item['icon'] ) ? $item['icon'] : array() );
         }
         if ( ! $items ) { return; }
         $side = 'end' === $s['side'] ? 'end' : 'start';
-        $marker = 'dot' === $s['marker_style'] ? 'dot' : 'number';
-        echo '<nav class="section-rail undo-section-rail undo-section-rail--' . esc_attr( $side ) . ' undo-section-rail--' . esc_attr( $marker ) . ( 'yes' === $s['show_tooltips'] ? '' : ' undo-section-rail--no-tooltips' ) . ( 'yes' === $s['show_desktop'] ? '' : ' undo-section-rail--hidden' ) . '" style="--undo-rail-count:' . esc_attr( count( $items ) - 1 ) . ';--rail-track-height:calc(var(--undo-rail-count) * var(--undo-rail-step,42px))" data-guided-scroll="' . ( 'yes' === $s['guided_scroll'] ? 'yes' : 'no' ) . '" aria-label="' . esc_attr( $s['nav_label'] ) . '">';
+        $marker = in_array( $s['marker_style'], array( 'dot', 'icon' ), true ) ? $s['marker_style'] : 'number';
+        $shape = isset( $s['marker_shape'] ) && in_array( $s['marker_shape'], array( 'rounded', 'square' ), true ) ? $s['marker_shape'] : 'circle';
+        echo '<nav class="section-rail undo-section-rail undo-section-rail--' . esc_attr( $side ) . ' undo-section-rail--' . esc_attr( $marker ) . ' undo-section-rail--' . esc_attr( $shape ) . ( 'yes' === $s['show_tooltips'] ? '' : ' undo-section-rail--no-tooltips' ) . ( 'yes' === $s['show_desktop'] ? '' : ' undo-section-rail--hidden' ) . '" style="--undo-rail-count:' . esc_attr( count( $items ) - 1 ) . ';--rail-track-height:calc(var(--undo-rail-count) * var(--undo-rail-step,42px))" data-guided-scroll="' . ( 'yes' === $s['guided_scroll'] ? 'yes' : 'no' ) . '" aria-label="' . esc_attr( $s['nav_label'] ) . '">';
             foreach ( $items as $index => $item ) {
                 $number = '' !== $item['number'] ? $item['number'] : sprintf( '%02d', $index + 1 );
-                echo '<a href="#' . esc_attr( $item['anchor'] ) . '" data-rail-for="' . esc_attr( $item['anchor'] ) . '" aria-label="' . esc_attr( $item['label'] ) . '"' . ( 0 === $index ? ' aria-current="location"' : '' ) . '><span>' . esc_html( $number ) . '</span><em>' . esc_html( $item['label'] ) . '</em></a>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- All dynamic values escaped.
+                echo '<a href="#' . esc_attr( $item['anchor'] ) . '" data-rail-for="' . esc_attr( $item['anchor'] ) . '" aria-label="' . esc_attr( $item['label'] ) . '"' . ( 0 === $index ? ' aria-current="location"' : '' ) . '><span aria-hidden="true">';
+                if ( 'icon' === $marker && ! empty( $item['icon']['value'] ) ) {
+                    \Elementor\Icons_Manager::render_icon( $item['icon'], array( 'aria-hidden' => 'true' ) );
+                } elseif ( 'dot' !== $marker ) {
+                    echo esc_html( $number );
+                }
+                echo '</span><em>' . esc_html( $item['label'] ) . '</em></a>';
             }
             if ( 'yes' === $s['show_current'] ) { echo '<span class="section-rail__current" aria-hidden="true">' . esc_html( $items[0]['label'] ) . '</span>'; }
         echo '</nav>';

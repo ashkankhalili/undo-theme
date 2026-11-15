@@ -682,3 +682,53 @@ html[dir="rtl"] .undo-section-rail--end em{right:auto;left:43px}
 .undo-visual-icon .service-symbol>span{scale:var(--undo-glyph-scale,1)}
 .undo-visual-icon .intro-mark{width:100%}
 .undo-visual-icon--library .service-symbol svg,.undo-visual-icon--library .service-symbol i{width:36px;height:36px;color:var(--ink)}
+
+/* Widget controls: marker shapes, aligned process content and editorial icon copy. */
+.undo-section-rail--rounded a>span{border-radius:8px}
+.undo-section-rail--square a>span{border-radius:0}
+.elementor-widget-undo-section-rail .undo-section-rail--dot.undo-section-rail--square a>span{border-radius:0}
+.elementor-widget-undo-section-rail .undo-section-rail--dot.undo-section-rail--rounded a>span{border-radius:8px}
+.elementor-widget-undo-section-rail .undo-section-rail--dot a>span{font-size:0}
+.undo-section-rail--icon a>span :is(svg,i){display:block;width:15px;height:15px;font-size:15px;fill:currentColor}
+.undo-process-board .process-top--center{justify-content:center;gap:1.5rem}
+.undo-process-board .process-top--end{justify-content:flex-end;gap:1.5rem}
+.undo-process-board .process-step__marker :is(svg,i){display:block;width:18px;height:18px;font-size:18px;fill:currentColor}
+.undo-process-board .undo-align-start{text-align:start}
+.undo-process-board .undo-align-center{text-align:center}
+.undo-process-board .undo-align-end{text-align:end}
+.undo-visual-icon__glyph{display:flex;min-width:0}
+.undo-visual-icon--with-content{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.undo-visual-icon__content{min-width:0;width:100%}
+.undo-visual-icon__title{margin:0;font:500 clamp(1.45rem,2vw,2rem)/1.2 var(--display);letter-spacing:-.025em}
+.undo-visual-icon__description{margin:.55rem 0 0;color:var(--muted);font-size:1rem;line-height:1.6;max-width:65ch}
+.undo-visual-icon--with-content .intro-mark{width:auto}
+
+/* The browser is the clipping and interaction boundary for both concepts. */
+.hero-stage .browser{position:relative}
+.undo-comparison-widget .browser{isolation:isolate}
+.undo-comparison-widget .mock-site.undo-comparison-image-mode{position:relative;padding:0}
+.undo-comparison-widget .before-site.undo-comparison-image-mode{overflow:hidden}
+.undo-comparison-widget :is(.undo-comparison-before-image,.undo-comparison-after-image){display:block;width:100%;height:100%;object-fit:cover;object-position:center;max-width:none}
+.undo-comparison-widget .undo-comparison-before-image{position:absolute;inset:0}
+.undo-comparison-widget .undo-comparison-holder-image{position:absolute;inset:50% auto auto 50%;width:100%;height:100%;transform:translate(-50%,-50%);object-fit:cover;object-position:center;pointer-events:none}
+.undo-comparison-widget .stage-label,.undo-comparison-widget .stage-stamp,.undo-comparison-widget .phone{z-index:2}
+.undo-comparison-widget .comparison-divider{z-index:6;pointer-events:none}
+.undo-comparison-widget .comparison-handle{pointer-events:auto;cursor:ew-resize;touch-action:none;user-select:none}
+.undo-comparison-widget .comparison-handle:active{box-shadow:0 4px 10px rgba(0,0,0,.24)}
+.undo-comparison-widget .comparison-range{z-index:5}
+.undo-comparison-widget .comparison-range:focus-visible{outline:0}
+.undo-comparison-widget .browser:focus-within .comparison-handle{outline:3px solid var(--red);outline-offset:3px}
+
+/* Editorial Blog Page starter uses the same widgets without turning posts into cards. */
+.undo-starter-journal{padding:0}
+.undo-starter-journal-hero,.undo-starter-journal-feed{padding:clamp(80px,9vw,140px) max(24px,calc((100vw - 1440px)/2))}
+.undo-starter-journal-hero{min-height:70svh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end;gap:8%;background:var(--paper)}
+.undo-starter-journal-hero .undo-starter-display h1{margin:0}
+.undo-starter-journal-intro .undo-visual-icon{max-width:460px}
+.undo-starter-journal-intro .intro-mark svg{width:64px;height:64px}
+.undo-starter-journal-intro .undo-visual-icon__title{font-size:clamp(1.8rem,2.4vw,2.7rem)}
+.undo-starter-journal-feed{min-height:60svh;background:var(--white)}
+.undo-starter-journal-feed-title h2{margin:0 0 42px;font:500 clamp(2rem,4vw,3.7rem)/1.13 var(--display);letter-spacing:-.035em}
+.undo-starter-journal .undo-starter-archive-posts{margin-block-start:0}
+.undo-starter-journal.undo-starter--fa{direction:rtl}
+@media(max-width:760px){.undo-starter-journal-hero,.undo-starter-journal-feed{padding:80px 20px}.undo-starter-journal-hero{min-height:auto;grid-template-columns:1fr;gap:50px}.undo-starter-journal-feed{min-height:0}}

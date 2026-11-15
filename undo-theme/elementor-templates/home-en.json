@@ -549,28 +549,62 @@
                     "eyebrow": "HOW WE WORK",
                     "brand_code": "UNDO / 04",
                     "aria_label": "Our process: understand, design, build, refine",
+                    "board_direction": "ltr",
+                    "heading_align": "start",
                     "steps": [
                       {
                         "_id": "6570b19",
                         "number": "01",
+                        "marker": "icon",
+                        "icon": {
+                          "value": "fas fa-search",
+                          "library": "fa-solid"
+                        },
+                        "direction": "ltr",
+                        "title_align": "start",
+                        "detail_align": "start",
                         "title": "Understand",
                         "detail": "Goals, users, constraints"
                       },
                       {
                         "_id": "186564c",
                         "number": "02",
+                        "marker": "icon",
+                        "icon": {
+                          "value": "fas fa-pencil-alt",
+                          "library": "fa-solid"
+                        },
+                        "direction": "ltr",
+                        "title_align": "start",
+                        "detail_align": "start",
                         "title": "Design",
                         "detail": "Structure, content, interface"
                       },
                       {
                         "_id": "1e50039",
                         "number": "03",
+                        "marker": "icon",
+                        "icon": {
+                          "value": "fas fa-code",
+                          "library": "fa-solid"
+                        },
+                        "direction": "ltr",
+                        "title_align": "start",
+                        "detail_align": "start",
                         "title": "Build",
                         "detail": "Working product"
                       },
                       {
                         "_id": "779f4eb",
                         "number": "04",
+                        "marker": "icon",
+                        "icon": {
+                          "value": "fas fa-check",
+                          "library": "fa-solid"
+                        },
+                        "direction": "ltr",
+                        "title_align": "start",
+                        "detail_align": "start",
                         "title": "Refine",
                         "detail": "Details that make it last"
                       }
@@ -652,43 +686,71 @@
                 "_id": "c7dc223",
                 "anchor": "top",
                 "label": "Home",
-                "number": "01"
+                "number": "01",
+                "icon": {
+                  "value": "fas fa-home",
+                  "library": "fa-solid"
+                }
               },
               {
                 "_id": "6167b18",
                 "anchor": "overview",
                 "label": "Overview",
-                "number": "02"
+                "number": "02",
+                "icon": {
+                  "value": "fas fa-info",
+                  "library": "fa-solid"
+                }
               },
               {
                 "_id": "292ec18",
                 "anchor": "services",
                 "label": "Services",
-                "number": "03"
+                "number": "03",
+                "icon": {
+                  "value": "fas fa-laptop-code",
+                  "library": "fa-solid"
+                }
               },
               {
                 "_id": "bf3dd9a",
                 "anchor": "approach",
                 "label": "Approach",
-                "number": "04"
+                "number": "04",
+                "icon": {
+                  "value": "fas fa-tasks",
+                  "library": "fa-solid"
+                }
               },
               {
                 "_id": "a84539b",
                 "anchor": "redesign",
                 "label": "Redesign",
-                "number": "05"
+                "number": "05",
+                "icon": {
+                  "value": "fas fa-sync-alt",
+                  "library": "fa-solid"
+                }
               },
               {
                 "_id": "74d7d60",
                 "anchor": "project-planner",
                 "label": "Project planner",
-                "number": "06"
+                "number": "06",
+                "icon": {
+                  "value": "fas fa-edit",
+                  "library": "fa-solid"
+                }
               },
               {
                 "_id": "47c4592",
                 "anchor": "finish",
                 "label": "UNDO",
-                "number": "07"
+                "number": "07",
+                "icon": {
+                  "value": "fas fa-flag",
+                  "library": "fa-solid"
+                }
               }
             ],
             "guided_scroll": "yes",
@@ -697,7 +759,8 @@
             "show_current": "yes",
             "show_tooltips": "yes",
             "side": "start",
-            "marker_style": "number"
+            "marker_style": "icon",
+            "marker_shape": "rounded"
           },
           "elements": []
         }

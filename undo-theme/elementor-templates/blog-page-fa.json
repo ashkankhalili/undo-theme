@@ -5,44 +5,128 @@
   "page_settings": [],
   "content": [
     {
-      "id": "62439a81",
+      "id": "ba7365ff",
       "elType": "container",
       "isInner": false,
       "settings": {
-        "css_classes": "undo-starter-archive undo-starter--fa"
+        "css_classes": "undo-starter-archive undo-starter-journal undo-starter--fa",
+        "content_width": "full"
       },
       "elements": [
         {
-          "id": "6cc6021b",
-          "elType": "widget",
-          "widgetType": "heading",
+          "id": "75c0472e",
+          "elType": "container",
           "isInner": false,
           "settings": {
-            "title": "یادداشت‌ها",
-            "header_size": "h1",
-            "_css_classes": "undo-starter-display"
+            "css_classes": "undo-starter-journal-hero",
+            "_element_id": "journal",
+            "html_tag": "section",
+            "content_width": "full"
           },
-          "elements": []
+          "elements": [
+            {
+              "id": "6cc6021b",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "یادداشت‌ها",
+                "header_size": "h1",
+                "_css_classes": "undo-starter-display"
+              },
+              "elements": []
+            },
+            {
+              "id": "858faa46",
+              "elType": "widget",
+              "widgetType": "undo-visual-icon",
+              "isInner": false,
+              "settings": {
+                "icon_type": "undo",
+                "decorative": "yes",
+                "title": "طراحی، کد و آنچه میان آن‌هاست.",
+                "description": "دربارهٔ طراحی، ساخت و بهتر کردن چیزهای کاربردی.",
+                "title_tag": "h2",
+                "content_direction": "rtl",
+                "_css_classes": "undo-starter-journal-intro"
+              },
+              "elements": []
+            }
+          ]
         },
         {
-          "id": "4d9e5fd9",
-          "elType": "widget",
-          "widgetType": "text-editor",
+          "id": "abc6f184",
+          "elType": "container",
           "isInner": false,
           "settings": {
-            "editor": "دربارهٔ طراحی، ساخت و بهتر کردن چیزهای کاربردی.",
-            "_css_classes": "undo-starter-lead"
+            "css_classes": "undo-starter-journal-feed",
+            "_element_id": "entries",
+            "html_tag": "section",
+            "content_width": "full"
           },
-          "elements": []
+          "elements": [
+            {
+              "id": "4d9e5fd9",
+              "elType": "widget",
+              "widgetType": "heading",
+              "isInner": false,
+              "settings": {
+                "title": "تازه‌ترین نوشته‌ها",
+                "header_size": "h2",
+                "_css_classes": "undo-starter-journal-feed-title"
+              },
+              "elements": []
+            },
+            {
+              "id": "55017198",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "isInner": false,
+              "settings": {
+                "shortcode": "[undo_blog_posts]",
+                "_css_classes": "undo-starter-archive-posts"
+              },
+              "elements": []
+            }
+          ]
         },
         {
-          "id": "55017198",
+          "id": "5379ea41",
           "elType": "widget",
-          "widgetType": "shortcode",
+          "widgetType": "undo-section-rail",
           "isInner": false,
           "settings": {
-            "shortcode": "[undo_blog_posts]",
-            "_css_classes": "undo-starter-archive-posts"
+            "nav_label": "بخش‌های وبلاگ",
+            "sections": [
+              {
+                "_id": "35838c9",
+                "anchor": "journal",
+                "label": "یادداشت‌ها",
+                "number": "01",
+                "icon": {
+                  "value": "fas fa-book-open",
+                  "library": "fa-solid"
+                }
+              },
+              {
+                "_id": "0468d0a",
+                "anchor": "entries",
+                "label": "نوشته‌ها",
+                "number": "02",
+                "icon": {
+                  "value": "fas fa-list",
+                  "library": "fa-solid"
+                }
+              }
+            ],
+            "guided_scroll": "no",
+            "show_desktop": "yes",
+            "show_mobile": "no",
+            "show_current": "yes",
+            "show_tooltips": "yes",
+            "side": "start",
+            "marker_style": "icon",
+            "marker_shape": "square"
           },
           "elements": []
         }

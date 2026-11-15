@@ -1,10 +1,16 @@
 # Elementor starter templates
 
-## Built-in Home widgets in 0.15.0
+## Built-in widgets in 0.16.0
+
+**Section Navigation:** Choose numbers, dots or an Elementor icon for each destination. Set circle, rounded-square or square markers, plus size, colors, location and desktop/mobile visibility. Links require a matching section ID. **Process Board:** Set an icon or number and text direction/alignment for each step; style the board and all type. **Visual Icon:** The glyph can stand alone or carry a title and description, with direction, alignment, color, type and spacing controls. **Before and After Comparison:** Keep the editable mockup or choose uploaded holder, before and after images. Image width and height accept px, %, vw and vh, with fit and position settings. Drag the center handle with mouse or touch, or use the range input with a keyboard.
+
+The 0.16.0 Home starters use icon markers and steps. The Blog Page starters now include an icon-led editorial introduction, live `[undo_blog_posts]` feed and two-stop section navigation. These files are installation/import examples; theme updates do not replace an existing Elementor document. For staging refresh, back up the generated pages, check for customer edits, install 0.16.0, then replace only the four unchanged UNDO-generated Home and Blog layouts. Elementor's image controls begin empty because no customer imagery was supplied; the existing illustrative mockup remains until images are selected.
+
+## Original widget baseline in 0.15.0
 
 The theme registers four widgets in Elementor's **UNDO Home** category when Elementor Free or Pro is active. **Section Navigation** controls anchor links, labels, numbered or dotted markers, guided scrolling, desktop and mobile visibility, placement, colors, spacing, and type. **Process Board** controls its heading, code, repeatable steps, background, border, shadow, spacing, and typography. **Visual Icon** supplies website, plugin, app, UNDO, and Elementor library icons with color and size controls. **Before and After Comparison** controls its mockup text, slider start, mobile mockup, colors, and dimensions. All use logical positioning for RTL/LTR pages.
 
-The English and Persian `home-*.json` files now use these widgets in place of raw HTML. A theme update never rewrites a customer's Elementor document. On staging, first update the theme to 0.15.0 so Elementor recognizes the new widget types, then refresh only the generated Home pages after backing up and checking for edits. The native Home and older generated pages remain available during that step. Keep the `undo-section-rail` widget in the layout if you want its Elementor design controls; removing it intentionally removes the rail on the refreshed page.
+The English and Persian `home-*.json` files use these widgets in place of raw HTML. A theme update never rewrites a customer's Elementor document. Keep the `undo-section-rail` widget in the layout if you want its Elementor design controls; removing it intentionally removes the rail on the refreshed page.
 
 For template precedence, page width behavior, and Free/Pro/disabled-plugin checks, see [Elementor compatibility](ELEMENTOR_COMPATIBILITY.md).
 
